@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T18:33:55+0400
-updated: 2024-01-28T18:39:21+0400
+updated: 2024-01-28T21:48:03+0400
 version: 1.1.1
 @end
 
@@ -27,4 +27,4 @@ Run-time assurance in drones and Unmanned Aerial Vehicles (UAVs) are quite diver
 ___
 * Links 
 
-  {:./index:}[< return] -  {:$/index:}[index]
+  {:./srta:}[< return] -  {:$/index:}[index]
