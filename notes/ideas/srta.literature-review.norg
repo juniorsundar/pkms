@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T21:48:57+0400
-updated: 2024-01-28T22:09:31+0400
+updated: 2024-01-28T22:12:25+0400
 version: 1.1.1
 @end
 
@@ -34,9 +34,9 @@ version: 1.1.1
 
    ~ Input assurance - Ensures that not only do monitoring and backup functions receive trusted inputs, but also that they receive the right inputs.
    ~ Monitoring - Detects safety-related deviations/violations by observing an SUO
-   -- emergent interactions at system boundary,
-   -- violations or incorrect function inputs or assumptions of environmental conditions,
-   -- computational deviations from required internal states, state changes, and guards in state transitions, or undesired state transitions.
+       -- emergent interactions at system boundary,
+       -- violations or incorrect function inputs or assumptions of environmental conditions,
+       -- computational deviations from required internal states, state changes, and guards in state transitions, or undesired state transitions.
    ~ Switching decision logic - Risk mitigation intervention triggered by monitor to disconnect **complex function** and engage the **backup function**. Can be a simple or more sophisticated protocol.
    ~ Backup function - RTA includes one or more that serve to replace or failover from the primary complex function. Is generally a copy of primary with reduced service and capability but robust safety.
 
