@@ -1,0 +1,23 @@
+@document.meta
+title: Digital Twin 
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-28T18:12:40+0400
+updated: 2024-01-28T18:12:51+0400
+version: 1.1.1
+@end
+
+* Definition
+
+  A digital twin is a dynamic, up-to-date virtual replica of physical assets or systems that can be used to simulate, monitor, and analyze performance over time.
+
+  This digital model is updated with real-time data, and it simulates the physical object's behavior in various scenarios and conditions. By integrating technologies like IoT (Internet of Things), AI (Artificial Intelligence), and big data analytics, digital twins allow for continuous monitoring, diagnosis, and optimization of their physical counterparts.
+
+  They are used in various industries, such as manufacturing, healthcare, and urban planning, for purposes like performance analysis, predictive maintenance, and process optimization.
+
+  ===
+___
+* Links 
+
+  {:$/technical/terminologies:}[< return] - {:$/index:}[index]

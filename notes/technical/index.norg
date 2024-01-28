@@ -1,0 +1,29 @@
+@document.meta
+title: Technical
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-27T20:01:24+0400
+updated: 2024-01-28T18:17:02+0400
+version: 1.1.1
+@end
+
+* Summary
+
+  ===
+___
+* Links 
+
+  ~ {:$/technical/frameworks:}[Frameworks]
+      ~~ {:$/technical/frameworks.px4:}[PX4- Autopilot]
+      ~~ {:$/technical/frameworks.ros:}[Robot Operating System (ROS)]
+  ~ {:$/technical/libraries:}[Libraries]
+      ~~ {:$/technical/libraries.mavsdk:}[MAVSDK]
+  ~ {:$/technical/terminologies:}[Terminologies]
+      ~~ {:$/technical/terminologies.api:}[Application Programming Interface (API)]
+      ~~ {:$/technical/terminologies.digital-twin:}[Digital Twin]
+      ~~ {:$/technical/terminologies.hardware-in-the-loop:}[Hardware in the Loop]
+      ~~ {:$/technical/terminologies.software-in-the-loop:}[Software in the Loop]
+
+
+  {:$/index:}[index]
