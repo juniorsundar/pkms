@@ -4,17 +4,20 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T14:21:15+0400
-updated: 2024-01-28T15:38:05+0400
+updated: 2024-01-29T14:33:20+0400
 version: 1.1.1
 @end
 
 * Messages
 
-All available uORB messages can be obtained from the hyperlink to the {https://docs.px4.io/main/en/msg_docs/#uorb-message-reference}[PX4 documentation].
+  All available uORB messages can be obtained from the hyperlink to the
+  {https://docs.px4.io/main/en/msg_docs/#uorb-message-reference}[PX4 documentation].
 
 * Reference
 
-  Each uORB message is basically like a `struct` that carries different grouping of data and types that mean something. For instance, accessing the {https://docs.px4.io/main/en/msg_docs/SensorGps.html}[SensorGps] will reveal the following.
+  Each uORB message is basically like a `struct` that carries different
+  grouping of data and types that mean something. For instance, accessing the
+  {https://docs.px4.io/main/en/msg_docs/SensorGps.html}[SensorGps] will reveal the following.
 
   > *EXAMPLE:* SensorGps
   > 
@@ -87,7 +90,9 @@ All available uORB messages can be obtained from the hyperlink to the {https://d
   > 
   > @end
 
-  These message label and types are important because these are also the same labels and types accessible through ROS 2 topics as they are exposed by the μXRCE-DDS Client.
+  These message label and types are important because these are also the same
+  labels and types accessible through ROS 2 topics as they are exposed by the
+  μXRCE-DDS Client.
 
   ===
 ___

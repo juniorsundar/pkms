@@ -1,0 +1,87 @@
+@document.meta
+title: 29 January 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-28T22:29:57+0400
+updated: 2024-01-29T16:22:09+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+** Work
+
+   - (x) Simulation testing with the changed Gaussian Noise generator
+   - (x) Adding recorder for the EKF outputs (kinematics data)
+   - ( ) See if it is possible to run simulation stack with HITL
+
+   - (-) Solita - Contact point for the person who knows most about how the ROS
+         2 sub/pub is taking place in existing architecture.
+   - (x) Use Samridha's dataset from ARRC to edit the way they are being
+         recorded.
+   - (x) Look into:
+       -- (x) Continual task learning
+       -- (x) Catastrophic forgetting
+
+** Personal
+
+ - ( ) Write something
+
+  ___
+
+* Scratch
+
+** Continual Task Learning
+
+   Continual task learning is referred to in the context of artificial
+   intelligence and machine learning. It is where the model continuously learns
+   or adapts to new tasks while retaining its performance on previously learned
+   tasks. This contrasts with traditional machine learning methods, where model
+   is trained on fixed set of tasks and may struggle to adapt to new ones
+   without retaining from scratch.
+
+   Key aspects of task learning include:
+
+   ~ *Learning new tasks* - Model should be able to acquire new knowledge or
+     skills as it is exposed to new data or tasks.
+   ~ *Avoiding catastrophic forgetting* - This occurs when a model learns a new
+     task at the expense of forgetting how to previously learned tasks.
+     Effective continual learning models need mechanisms to retain or
+     consolidate knowledge gained from past tasks.
+   ~ *Transfer learning* - Knowledge gained from previous tasks can often be
+     leveraged to help learn new tasks more effectively.
+   ~ *Scalability and efficiency* - Model should scale and be efficient with
+     growing number of tasks.
+   ~ *Task identification and adaptation* - Model must identify when a task is
+     different from previously encountered ones and adapt its learning strategy.
+   ~ *Memory and replay mechanisms* - Some approaches use memory systems or
+     replay mechanisms to store and revisit old data, which helps in retaining
+     knowledge of past tasks.
+
+   Continual task learning is particularly relevant in dynamic environments
+   where the data distribution or the tasks themselves change over time. It's
+   crucial in applications like robotics, where a robot might need to learn new
+   skills over its operational life, or in personalized AI systems that adapt to
+   the evolving preferences and needs of individual users.
+
+  ___
+
+* MEETING NAME 
+
+** Attendees
+
+   | Names
+
+** Goals
+
+
+** Agenda
+
+   - ( ) 
+
+** Minutes
+
+
+** Action Items
+

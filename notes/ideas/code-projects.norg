@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T20:34:13+0400
-updated: 2024-01-28T20:39:58+0400
+updated: 2024-01-29T14:47:35+0400
 version: 1.1.1
 @end
 
@@ -12,9 +12,13 @@ version: 1.1.1
 
   ** Concept
 
-     I don't want to have to rely on VSCode of VSCodium to manage my research and notes. Having some sort of Rust implementation that acts as a server, and then integrating it with Neovim would be preferable.
+     I don't want to have to rely on VSCode of VSCodium to manage my research
+     and notes. Having some sort of Rust implementation that acts as a server,
+     and then integrating it with Neovim would be preferable.
 
-     And rather than using plain Zettel or Obsidian as my baseline, it would be preferable to have something similar to the way Dendron manages information in a hierarchical manner.
+     And rather than using plain Zettel or Obsidian as my baseline, it would be
+     preferable to have something similar to the way Dendron manages
+     information in a hierarchical manner.
 
 ** Breakdown
 

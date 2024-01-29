@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T16:51:19+0400
-updated: 2024-01-28T16:55:08+0400
+updated: 2024-01-29T14:35:21+0400
 version: 1.1.1
 @end
 
@@ -21,7 +21,8 @@ version: 1.1.1
 
 * Tutorials and Examples
 
-  Sample codes for usage of this library can be found in the repository under the {https://github.com/mavlink/MAVSDK-Python/tree/main/examples}[examples] directory.
+  Sample codes for usage of this library can be found in the repository under
+  the {https://github.com/mavlink/MAVSDK-Python/tree/main/examples}[examples] directory.
 
 ** Boilerplate
 
@@ -59,13 +60,25 @@ version: 1.1.1
 
 * Asynchronicity
 
-  As seen in the section {:$/technical/libraries.mavsdk.python:** Boilerplate}[above], the MAVSDK Python library uses asynchronous functions. This is primarily due to the nature of communication and control in drone operations.
+  As seen in the section {:$/technical/libraries.mavsdk.python:** Boilerplate}[above], the MAVSDK Python library uses asynchronous functions.
+  This is primarily due to the nature of communication and control in drone
+  operations.
 
-  ~ *Non-blocking Operations* - Drone control involves a lot of real-time operations, like sending commands to the drone, receiving telemetry data, and processing sensor inputs. Async functions allow these operations to occur without blocking the execution of other parts of the program.
-  ~ *Concurrency* - Drones need to handle multiple tasks simultaneously, such as flying, capturing images, and communicating with the control station.
-  ~ *Network Communication* - MAVSDK is used for interacting with drones over a network (often wireless). Network communication is inherently asynchronous, as it involves waiting for responses without knowing the exact timing.
-  ~ *Improved Performance* -  By using async functions, MAVSDK can manage multiple drones or multiple tasks for a single drone without the overhead of traditional multi-threading or multi-processing.
-  ~ *Scalability* - Asynchronous programming provides better scalability, enabling MAVSDK to handle more complex operations and larger numbers of drones without a significant increase in resource usage.
+  ~ *Non-blocking Operations* - Drone control involves a lot of real-time
+    operations, like sending commands to the drone, receiving telemetry data,
+    and processing sensor inputs. Async functions allow these operations to
+    occur without blocking the execution of other parts of the program.
+  ~ *Concurrency* - Drones need to handle multiple tasks simultaneously, such
+    as flying, capturing images, and communicating with the control station.
+  ~ *Network Communication* - MAVSDK is used for interacting with drones over a
+    network (often wireless). Network communication is inherently asynchronous,
+    as it involves waiting for responses without knowing the exact timing.
+  ~ *Improved Performance* -  By using async functions, MAVSDK can manage
+    multiple drones or multiple tasks for a single drone without the overhead
+    of traditional multi-threading or multi-processing.
+  ~ *Scalability* - Asynchronous programming provides better scalability,
+    enabling MAVSDK to handle more complex operations and larger numbers of
+    drones without a significant increase in resource usage.
 
   ===
 ___

@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-27T22:38:54+0400
-updated: 2024-01-28T00:59:53+0400
+updated: 2024-01-29T14:44:27+0400
 version: 1.1.1
 @end
 
@@ -12,9 +12,15 @@ version: 1.1.1
 
 ** Download
 
-   ROS 2 comes installed with some basic packages. A ROS package is a directory or folder that contains code, data, and configuration files that provide a specific functionality or module. For instance, the “`sensor_msgs`” package contains common ROS 2 message types used to transfer sensor data such as PointCloud2, Image, DepthCloud, and so on.
+   ROS 2 comes installed with some basic packages. A ROS package is a directory
+   or folder that contains code, data, and configuration files that provide a
+   specific functionality or module. For instance, the “`sensor_msgs`” package
+   contains common ROS 2 message types used to transfer sensor data such as
+   PointCloud2, Image, DepthCloud, and so on.
 
-   For local installations, we need to set up a ROS Workspace. A ROS workspace is needed in this particular case because we need to install the `px4_msgs` and `px4_ros_coms` packages.
+   For local installations, we need to set up a ROS Workspace. A ROS workspace
+   is needed in this particular case because we need to install the `px4_msgs`
+   and `px4_ros_coms` packages.
 
    @code bash
    # Create a workspace folder
@@ -25,7 +31,11 @@ version: 1.1.1
    git clone https://github.com/PX4/px4_ros_com.git
    @end
 
-   The `px4_msgs` is important for the ROS interface between controller and processor. All the uORB topics sent from the controller and repackaged into ROS 2 topics. In order for this to happen, there needs to be the appropriate message types in the companion processor which are inside the px4_msgs package.
+   The `px4_msgs` is important for the ROS interface between controller and
+   processor. All the uORB topics sent from the controller and repackaged into
+   ROS 2 topics. In order for this to happen, there needs to be the appropriate
+   message types in the companion processor which are inside the px4_msgs
+   package.
 
    Finally, we need to build the packages. ROS 2 uses the colcon build tool.
 
@@ -38,7 +48,9 @@ version: 1.1.1
    colcon build
    @end
 
-   This should take some time at first run as the tool generates all the message files. Once finished, the workspace should have the following structure:
+   This should take some time at first run as the tool generates all the
+   message files. Once finished, the workspace should have the following
+   structure:
 
    @code bash
    L px4_ws/
@@ -56,9 +68,12 @@ version: 1.1.1
 
 ** Source
 
-   Finally, since this is a local installation, we need to source this workspace so that we can access the locally installed packages. Refer to {:$/technical/frameworks.ros.ros2:** Sourcing the Environment}[this] for more explanation.
+   Finally, since this is a local installation, we need to source this
+   workspace so that we can access the locally installed packages. Refer to
+   {:$/technical/frameworks.ros.ros2:** Sourcing the Environment}[this] for more explanation.
 
-   In every new terminal that requires you to access packages from this local installation, run:
+   In every new terminal that requires you to access packages from this local
+   installation, run:
 
    @code bash
    source ~/px4_ws/install/local_setup.bash
@@ -68,16 +83,20 @@ version: 1.1.1
 
 ** Launch Simulation
 
-   The first step of this process requires us to launch the simulation through either Gazebo or JMavSim (i.e. simulator of choice). This is described in the following {:$/technical/frameworks.px4.simulation:}[section].
+   The first step of this process requires us to launch the simulation through
+   either Gazebo or JMavSim (i.e. simulator of choice). This is described in
+   the following {:$/technical/frameworks.px4.simulation:}[section].
 
-   For this case, we will go with Gazebo. Upon building for SITL, the following window should open up:
+   For this case, we will go with Gazebo. Upon building for SITL, the following
+   window should open up:
 
-   {/ technical/assets/frameworks.px4.ros21.png}[Gazebo simulation screen with a x500 drone]
+   {/ technical/assets/frameworks.px4.ros21.png}[Figure: Gazebo simulation screen with a x500 drone]
 
 
 ** Initialise μXRCE-DDS Agent 
 
-   After than, ensure that the DDS agent is running so that the uORB topics are exposed to the ROS 2 framework. In a separate terminal run:
+   After than, ensure that the DDS agent is running so that the uORB topics are
+   exposed to the ROS 2 framework. In a separate terminal run:
 
    @code bash
    MicroXRCEAgent udp4 -p 8888 
@@ -85,9 +104,15 @@ version: 1.1.1
 
 ** Subscribing to ROS 2 Topics
 
-   As explained before, data from the PX4 is obtained from the ULog. The information is packaged into uORB topics inside the controller and transmitted to the companion processor through the μXRCE-DDS channel. At the agent side, the computer, this information is shared with ROS 2 as topics. The uORB topics are directly translated into ROS 2 topics once you activate the MicroXRCEAgent.
+   As explained before, data from the PX4 is obtained from the ULog. The
+   information is packaged into uORB topics inside the controller and
+   transmitted to the companion processor through the μXRCE-DDS channel. At the
+   agent side, the computer, this information is shared with ROS 2 as topics.
+   The uORB topics are directly translated into ROS 2 topics once you activate
+   the MicroXRCEAgent.
 
-   To see the topics available, open a new terminal and {:$/technical/frameworks.px4.ros2:** Source}[source] the local installation of `px4_msgs`. After that, run:
+   To see the topics available, open a new terminal and {:$/technical/frameworks.px4.ros2:** Source}[source] the local installation
+   of `px4_msgs`. After that, run:
 
    @code bash
    ros2 topic list
@@ -124,13 +149,15 @@ version: 1.1.1
    /fmu/out/vehicle_status
    @end
 
-   All subscribable topics can be observed in the terminal itself with the following command:
+   All subscribable topics can be observed in the terminal itself with the
+   following command:
 
    @code bash
    ros2 topic echo /fmu/out/<topic_name>
    @end
 
-   *NOTE* that if you don’t have the local installation sourced, the following error might pop up:
+   *NOTE* that if you don’t have the local installation sourced, the following
+   error might pop up:
 
    @code bash
    The message type '<message_name>' is invalid
@@ -144,7 +171,9 @@ version: 1.1.1
    ros2 topic info /fmu/out/<topic_name>
    @end
 
-   The following subscribable topics are available out-of-the-box. A brief explanation of the data that is structured inside them is provided alongside.
+   The following subscribable topics are available out-of-the-box. A brief
+   explanation of the data that is structured inside them is provided
+   alongside.
 
    @code markdown
    | Topic Name                        | Description                                                                                    |
@@ -164,25 +193,44 @@ version: 1.1.1
 
 ** Exposing More Topics
 
-   {:$/technical/frameworks.px4.uorb:* Messages}[These] are the messages being actively exchanged inside the PX4 through uORB topics. Nearly all of them can also be accessed in ROS 2 as long as the Micro XRCE-DDS agent is active. You can find a list of message types available in ROS 2 [here](https://github.com/PX4/px4_msgs/tree/main/msg). You can cross-reference the uORB messages with the ROS 2 messages.
+   {:$/technical/frameworks.px4.uorb:* Messages}[These] are the messages being actively exchanged inside 
+   the PX4 through uORB topics. Nearly all of them can also be accessed 
+   in ROS 2 as long as the Micro XRCE-DDS agent is active.
+   You can find a list of message types available in ROS 2
+   [here](https://github.com/PX4/px4_msgs/tree/main/msg). You can
+   cross-reference the uORB messages with the ROS 2 messages.
 
-   However, you can see that only a few out of this list are actually available when you call up the topic list. This is because it is possible to only passthrough selective topics through the Micro XRCE-DDS bridge. If you want to access more topics that aren’t in ROS 2 but available in the PX4 controller, add them to the [`dds_topics.yaml`](https://github.com/PX4/PX4-Autopilot/blob/main/src/modules/uxrce_dds_client/dds_topics.yaml) file in `~/PX4-Autopilot/blob/main/src/modules/uxrce_dds_client/`. You may need to build again after making this change.
+   However, you can see that only a few out of this list are actually available
+   when you call up the topic list. This is because it is possible to only
+   passthrough selective topics through the Micro XRCE-DDS bridge. If you want
+   to access more topics that aren’t in ROS 2 but available in the PX4
+   controller, add them to the {https://github.com/PX4/PX4-Autopilot/blob/main/src/modules/uxrce_dds_client/dds_topics.yaml}[`dds_topics.yaml`] file in 
+   `~/PX4-Autopilot/blob/main/src/modules/uxrce_dds_client/`. 
+   You may need to build again after making this change.
 
-   Instructions on exposing additional topics through the DDS connection can be found {https://docs.px4.io/main/en/middleware/uxrce_dds.html#dds-topics-yaml}[here].
+   Instructions on exposing additional topics through the DDS connection can be
+   found {https://docs.px4.io/main/en/middleware/uxrce_dds.html#dds-topics-yaml}[here].
 
 * Controling Drone
 
 ** Offboard Mode
 
-   Control of PX4 through ROS 2 requires the drone to be set to offboard mode. The vehicle obeys position, velocity, acceleration, attitude, attitude rates or thrust/torque setpoints provided by some source that is external to the flight stack, such as a companion computer.
+   Control of PX4 through ROS 2 requires the drone to be set to offboard mode.
+   The vehicle obeys position, velocity, acceleration, attitude, attitude rates
+   or thrust/torque setpoints provided by some source that is external to the
+   flight stack, such as a companion computer.
 
-   IMPORTANT: PX4 requires a steady (minimum) 2Hz “proof-of-life“ signal. This is either any of the MAVLink supported commands or ROS 2 messages. If this is not satisfied, the controller will exit offboard control.
+   *IMPORTANT*: PX4 requires a steady (minimum) 2Hz “proof-of-life“ signal. This
+   is either any of the MAVLink supported commands or ROS 2 messages. If this
+   is not satisfied, the controller will exit offboard control.
 
 ** Create Package
 
-   Control scripts for PX4 can be written in C++ or Python and launch as ROS 2 nodes. Here, we will only focus on the Python implementations.
+   Control scripts for PX4 can be written in C++ or Python and launch as ROS 2
+   nodes. Here, we will only focus on the Python implementations.
 
-   The nodes that will control the drone will be added to a new ROS 2 package inside the pre-existing workspace made {:$/technical/frameworks.px4.ros2:** Download}[here]. First, navigate to the workspace root:
+   The nodes that will control the drone will be added to a new ROS 2 package
+   inside the pre-existing workspace made {:$/technical/frameworks.px4.ros2:** Download}[here]. First, navigate to the workspace root:
 
    @code bash
    # If the following workspace does not exist, refer to the hyperlinked page to create the workspace.
@@ -190,7 +238,12 @@ version: 1.1.1
    cd ~/px4_ws
    @end
 
-   The source files for packages inside this workspace are in the `/src` directory. In here, we will create a new package called `px4_control_py`. This is where all the Python nodes will be added. This package will have a set of dependencies:  `rclpy`, `px4_msgs`, `std_msgs`,  `sensor_msgs`, `geometry_msgs`. This package will use the `ament_python` build system since the nodes are primarily in Python.
+   The source files for packages inside this workspace are in the `/src`
+   directory. In here, we will create a new package called `px4_control_py`.
+   This is where all the Python nodes will be added. This package will have a
+   set of dependencies:  `rclpy`, `px4_msgs`, `std_msgs`,  `sensor_msgs`,
+   `geometry_msgs`. This package will use the `ament_python` build system since
+   the nodes are primarily in Python.
 
    @code bash
    cd ./src
@@ -198,7 +251,8 @@ version: 1.1.1
    ros2 pkg create --build-type ament_python px4_control_py --dependencies rclpy px4_msgs std_msgs sensor_msgs geometry_msgs
    @end
 
-   This should create a new folder inside the directory. Observe the directory tree:
+   This should create a new folder inside the directory. Observe the directory
+   tree:
 
     @code bash
     L px4_ws/
@@ -223,7 +277,8 @@ version: 1.1.1
 
 ** Writing a Control Node
 
-   The node will be a Python script, and will be located inside `px4_control_py` package.
+   The node will be a Python script, and will be located inside
+   `px4_control_py` package.
 
    @code bash
    touch ~/px4_ws/src/px4_control_py/px4_control_py/px4_control_node.py
@@ -379,9 +434,14 @@ version: 1.1.1
            print(e)
    @end
 
-   This  node will activate offboard control mode and publish a offboard control signal (`self.publish_offboard_control_heartbeat_signal()`) to the UAV at a 10Hz frequency to ensure that it doesn’t leave the offboard control mode.
+   This  node will activate offboard control mode and publish a offboard
+   control signal (`self.publish_offboard_control_heartbeat_signal()`) to the
+   UAV at a 10Hz frequency to ensure that it doesn’t leave the offboard control
+   mode.
 
-   It will then arm the drone, cause it to takeoff to a height of 5m, and then land safely. Edit the following segment of the code to match your control needs:
+   It will then arm the drone, cause it to takeoff to a height of 5m, and then
+   land safely. Edit the following segment of the code to match your control
+   needs:
 
 
    @code python
@@ -450,7 +510,8 @@ version: 1.1.1
    source install/local_setup.bash
    @end
 
-   Now, we can launch this node alongside our simulation. Run the following sequence of terminal command.
+   Now, we can launch this node alongside our simulation. Run the following
+   sequence of terminal command.
 
    @code bash
    # in Terminal 1

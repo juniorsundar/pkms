@@ -4,20 +4,27 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-27T23:14:46+0400
-updated: 2024-01-28T13:02:39+0400
+updated: 2024-01-29T14:41:05+0400
 version: 1.1.1
 @end
 
 * Introduction
 
-  Simulators allow PX4 flight code to control a computer modeled vehicle in a simulated environment, with the same level of software interactability as the real drone. PX4 supports both {:$/technical/terminologies.software-in-the-loop:}[Software in the Loop] (SITL) and {:$/technical/terminologies.hardware-in-the-loop:}[Hardware in the Loop] (HITL).
+  Simulators allow PX4 flight code to control a computer modeled vehicle in a
+  simulated environment, with the same level of software interactability as the
+  real drone. PX4 supports both {:$/technical/terminologies.software-in-the-loop:}[Software in the Loop] (SITL) and {:$/technical/terminologies.hardware-in-the-loop:}[Hardware in the
+  Loop] (HITL).
 
-  There are few supported simulators by the PX4 flight controller, these are listed below with their advantages and disadvantages.
+  There are few supported simulators by the PX4 flight controller, these are
+  listed below with their advantages and disadvantages.
 
 * Simulators
 
-  Since the PX4 is an important component in the system's design, it is used as the starting point for this search. While simulation can take place with a wide variety of softwares and physics environments, it is best to start from a point where PX4 is supported out-of-the-box. PX4's dev {https://dev.px4.io/v1.11_noredirect/en/simulation/}[documentation] lists the following simulation options:
-
+  Since the PX4 is an important component in the system's design, it is used as
+  the starting point for this search. While simulation can take place with a
+  wide variety of softwares and physics environments, it is best to start from
+  a point where PX4 is supported out-of-the-box. PX4's dev {https://dev.px4.io/v1.11_noredirect/en/simulation/}[documentation] lists the
+  following simulation options:
   ~ Gazebo
   ~ jMAVSim
   ~ FlightGear
@@ -28,11 +35,14 @@ version: 1.1.1
    /Access documentation {https://dev.px4.io/v1.11_noredirect/en/simulation/gazebo.html}[here]./
 
    - *Advantages*
-       -- Wide variety of sensor support through plugins. Useful when use cases extend into sensor data streams. 
-       -- Able to simulate multiple vehicles at the same time. More scalable than the other options.
+       -- Wide variety of sensor support through plugins. Useful when use cases
+          extend into sensor data streams. 
+       -- Able to simulate multiple vehicles at the same time. More scalable
+          than the other options.
        -- Comes with ROS/ROS2 support out-of-the-box
    - *Disadvantages*
-       -- Preferred if ROS is being used. Otherwise, there are cheaper (resource use wise) options.
+       -- Preferred if ROS is being used. Otherwise, there are cheaper
+          (resource use wise) options.
        -- Less accurate (only marginally) in replicating flight behaviour.
 
 ** jMAVSim
@@ -40,13 +50,18 @@ version: 1.1.1
    /Access documentation {https://dev.px4.io/v1.11_noredirect/en/simulation/jmavsim.html}[here]./
 
    - *Advantages*
-       -- Able to simulate multiple vehicles at the same time. Most scalable as it is lightweight.
-       -- Simulation responds appropriately to various fail conditions (GPS failure, {https://www.researchgate.net/publication/353541566_Experimental_Implementation_of_an_Adaptive_Digital_Autopilot}[adversarial flight conditions], etc.) 
+       -- Able to simulate multiple vehicles at the same time. Most scalable as
+          it is lightweight.
+       -- Simulation responds appropriately to various fail conditions (GPS
+          failure, {https://www.researchgate.net/publication/353541566_Experimental_Implementation_of_an_Adaptive_Digital_Autopilot}[adversarial flight conditions], etc.) 
        -- Comes with ROS/ROS2 support out-of-the-box.
        -- Extremely lightweight (resource use wise).
        -- Easy to set-up.
    - *Disadvantages*
-       -- No ROS 2 support. Limited out-of-the-box ROS 1 support. It is stated here that it is possible to set up ROS interface onboard the same way as with a real vehicle. No examples available, so will have to test this out separately.
+       -- No ROS 2 support. Limited out-of-the-box ROS 1 support. It is stated
+          here that it is possible to set up ROS interface onboard the same way
+          as with a real vehicle. No examples available, so will have to test
+          this out separately.
        -- Least accurate option to replicate drone behaviour.
        -- Limited to only multi-rotor/quadrotor setups.
        -- More difficult to set-up multi-vehicle simulation than Gazebo.
@@ -56,13 +71,16 @@ version: 1.1.1
    /Access documentation {https://dev.px4.io/v1.11_noredirect/en/simulation/flightgear.html}[here]./
 
    - *Advantages*
-       -- Most accurate simulator. Able to replicate weather conditions very close to reality.
+       -- Most accurate simulator. Able to replicate weather conditions very
+          close to reality.
        -- Able to simulate multiple vehicles at the same time.
 
    - *Disadvantages*
-       -- Limited support available with ROS. No indication if there is ROS 2 support.
+       -- Limited support available with ROS. No indication if there is ROS 2
+          support.
        -- Very heavy in resource usage. Excessive for most application cases.
-       -- Due to resource usage, there is a limit on how many drones can be simulated at the same time.
+       -- Due to resource usage, there is a limit on how many drones can be
+          simulated at the same time.
 
 ** Microsoft AirSim
 
@@ -71,7 +89,8 @@ version: 1.1.1
    - *Advantages*
        -- Built on Unreal Engine. Realistic physics simulation.
    - *Disadvantages*
-       -- Limited support available with ROS. No indication if there is ROS 2 support.
+       -- Limited support available with ROS. No indication if there is ROS 2
+          support.
        -- No indication of support with latest Linux kernels.
        -- No support for multiple vehicle simulations at the same time.
        -- Very high resource usage.
@@ -82,7 +101,8 @@ version: 1.1.1
 
 ** Set-Up
 
-   To run the simulations, you need to first enter the PX4-Autopilot toolchain directory that was cloned. This is explained in this {:$/technical/frameworks.px4:*** Autopilot Installation}[section].
+   To run the simulations, you need to first enter the PX4-Autopilot toolchain
+   directory that was cloned. This is explained in this {:$/technical/frameworks.px4:*** Autopilot Installation}[section].
 
    @code bash
    cd ./PX4-Autopilot
@@ -90,7 +110,8 @@ version: 1.1.1
 
 ** Launch Simulation
 
-   From there, we can build the code for which ever simulation environment that we want as long as it exists within the build tags.
+   From there, we can build the code for which ever simulation environment that
+   we want as long as it exists within the build tags.
 
    @code bash
    # For Gazebo Simulation
@@ -100,16 +121,20 @@ version: 1.1.1
    make px4_sitl jmavsim
    @end
 
-   From here, in a separate terminal, if you run {:$/technical/frameworks.px4:*** QGroundControl}[QGroundControl], you should be able to control the drone through that.
+   From here, in a separate terminal, if you run {:$/technical/frameworks.px4:*** QGroundControl}[QGroundControl], you should
+   be able to control the drone through that.
 
 ** Low-Level Control
 
-   The out-of-the-box set-up for SITL does not provide access to PWM inputs into the actuators. This is because the simulation does not have an ESC model. As a result direct control of the simulated motors is not possible.
+   The out-of-the-box set-up for SITL does not provide access to PWM inputs
+   into the actuators. This is because the simulation does not have an ESC
+   model. As a result direct control of the simulated motors is not possible.
 
    There is a repository that offers a way to achieve this low-level control:
    {https://github.com/SaxionMechatronics/px4_offboard_lowlevel}[SaxionMechatronics/px4_offboard_lowlevel]
 
-   In this code, they are using a commonly used "quadratic approximation" that maps RPM to PWM:
+   In this code, they are using a commonly used "quadratic approximation" that
+   maps RPM to PWM:
 
    $| \text{PWM} = c_2 \text{RPM}^2 + c_1 \text{RPM} + c_0|$
 

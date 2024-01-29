@@ -4,19 +4,22 @@ description:
 authors: juniorsundar
 categories:
 created: 2024-01-27T21:25:33+0400
-updated: 2024-01-28T20:29:10+0400
+updated: 2024-01-29T14:47:22+0400
 version: 1.1.1
 @end
 
 * Introduction
 
-  It is a professional autopilot that can be used to power all kinds of vehicles, ranging from drones to ground vehicle and submarines.
+  It is a professional autopilot that can be used to power all kinds of
+  vehicles, ranging from drones to ground vehicle and submarines.
 
   /Access the documentation {https://docs.px4.io/main/en/}[here]./
 
 * Flight Controller
 
-  Brains of the unmanned vehicle. PX4 can run on many flight controller boards. Selection of board must suit physical and sensor constraints of the vehicle as well as the type of function the vehicle has.
+  Brains of the unmanned vehicle. PX4 can run on many flight controller boards.
+  Selection of board must suit physical and sensor constraints of the vehicle
+  as well as the type of function the vehicle has.
 
 ** Pixhawk Series
 
@@ -30,28 +33,41 @@ version: 1.1.1
    
    | /Access {:$/technical/frameworks.px4.uorb:}[reference]/
 
-   It is an asynchronous publish() / subscribe() messaging API used for inter-thread/inter-process communication. It is automatically started early on bootup.
+   It is an asynchronous publish() / subscribe() messaging API used for
+   inter-thread/inter-process communication. It is automatically started early
+   on bootup.
 
-   In the controller, the desired data is being logged by ULog (PX4's flight logging system). This data is packaged into messages that are transmitted through uORB topics.
+   In the controller, the desired data is being logged by ULog (PX4's flight
+   logging system). This data is packaged into messages that are transmitted
+   through uORB topics.
 
    /Read advanced notes on this {https://docs.px4.io/main/en/middleware/uorb.html}[here]./
 
 ** μXRCE-DDS (PX4-ROS 2/DDS Bridge)
 
-   This is the middleware that allows the uORB messages to be published and subscribed on the companion computer as though they were ROS 2 topics.
+   This is the middleware that allows the uORB messages to be published and
+   subscribed on the companion computer as though they were ROS 2 topics.
 
    The architecture is defined in the below image:
-   !{https://docs.px4.io/main/assets/img/architecture_xrce-dds_ros2.fed61809.svg}[Image]
 
-   The client runs on the flight controller, while the agent is on the companion processor. The client reveals the uORB topics active the flight controller to the agent, and the agent decides which of these are to exposed as ROS 2 topics that can then be accessed through nodes running on the local system.
+   {https://docs.px4.io/main/assets/img/architecture_xrce-dds_ros2.fed61809.svg}[Figure: DDS Communication with ROS 2]
+
+   The client runs on the flight controller, while the agent is on the
+   companion processor. The client reveals the uORB topics active the flight
+   controller to the agent, and the agent decides which of these are to exposed
+   as ROS 2 topics that can then be accessed through nodes running on the local
+   system.
 
    /Read advanced notes on this {https://docs.px4.io/main/en/middleware/uxrce_dds.html}[here]./
 
 ** MAVLink
 
-   It is a lightweight messaging protocol that is designed to be used in the drone ecosystem. It is designed for efficiently sending messages over unreliable low-bandwidth radio links.
+   It is a lightweight messaging protocol that is designed to be used in the
+   drone ecosystem. It is designed for efficiently sending messages over
+   unreliable low-bandwidth radio links.
 
-   PX4 uses MAVLink to communicate with ground stations and apps built with {:$/technical/libraries.mavsdk:}[MAVLink SDKs] such as {:$/technical/frameworks.px4:*** QGroundControl}[QGroundControl].
+   PX4 uses MAVLink to communicate with ground stations and apps built with
+   {:$/technical/libraries.mavsdk:}[MAVLink SDKs] such as {:$/technical/frameworks.px4:*** QGroundControl}[QGroundControl].
 
 * Development
 
@@ -59,7 +75,8 @@ version: 1.1.1
 
 *** Autopilot Installation
 
-    To install the PX4-Autopilot toolchain for the Ubuntu system, run the following.
+    To install the PX4-Autopilot toolchain for the Ubuntu system, run the
+    following.
 
     @code bash
     # For Ubuntu
@@ -76,7 +93,8 @@ version: 1.1.1
 
 *** μXRCE-DDS Agent Installation
 
-    The agent needs to be built on the companion processor, with the following steps.
+    The agent needs to be built on the companion processor, with the following
+    steps.
 
     @code bash
     # For Ubuntu
@@ -93,7 +111,8 @@ version: 1.1.1
 
 *** QGroundControl
 
-    This software provides full flight control and mission planning for any MAVLink enabled drone.
+    This software provides full flight control and mission planning for any
+    MAVLink enabled drone.
 
     To install this, do the following:
 
@@ -108,7 +127,7 @@ version: 1.1.1
 
     Log out and log in to enable user changes.
 
-    Download the application from [here](https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html).
+    Download the application from {https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html}[here].
 
     Install using teminal commands.
 
@@ -122,24 +141,37 @@ version: 1.1.1
     
     | /Access {:$/technical/frameworks.px4.simulation:}[reference]/
 
-    Simulation is a quick, easy, and most importantly, safe way to test changes to PX4 code before attempting to fly in the real world. It is also a good way to start flying with PX4 when you haven't yet got a vehicle to experiment with.
+    Simulation is a quick, easy, and most importantly, safe way to test changes
+    to PX4 code before attempting to fly in the real world. It is also a good
+    way to start flying with PX4 when you haven't yet got a vehicle to
+    experiment with.
 
-    PX4 supports both Software In the Loop (SITL) simulation, where the flight stack runs on computer (either the same computer or another computer on the same network) and Hardware In the Loop (HITL) simulation using a simulation firmware on a real flight controller board. HITL is only community supported.
+    PX4 supports both Software In the Loop (SITL) simulation, where the flight
+    stack runs on computer (either the same computer or another computer on the
+    same network) and Hardware In the Loop (HITL) simulation using a simulation
+    firmware on a real flight controller board. HITL is only community
+    supported.
 
 *** ROS
 
     | /Access {:$/technical/frameworks.px4.ros2:}[reference]/
 
-    Limited only to ROS 2 since ROS 1 is slowly reaching deprecation. Through the {:$/technical/frameworks.px4:*** μXRCE-DDS Agent Installation}[μXRCE-DDS] client-agent, it is possible to expose the uORB messages in the flight controller to the ROS 2 framework. This facilitates forward and backwards communication.
+    Limited only to ROS 2 since ROS 1 is slowly reaching deprecation. Through
+    the {:$/technical/frameworks.px4:*** μXRCE-DDS Agent Installation}[μXRCE-DDS] client-agent, it is possible to expose the uORB
+    messages in the flight controller to the ROS 2 framework. This facilitates
+    forward and backwards communication.
 
 ** Fault Injection
 
-   It is possible to inject faults into the flight controller. This methodology is observed in {:$/ideas/srta.literature-review:* Fault Injector For Autonomous Quadrotors}[[literature review | ]]. The strategy can be applied by introducing faults into the source code itself.
+   It is possible to inject faults into the flight controller. This methodology
+   is observed in {:$/ideas/srta.literature-review:* Fault Injector For Autonomous Quadrotors}[literature review]. The strategy can be applied by
+   introducing faults into the source code itself.
 
 *** Example: IMU
 
-    To introduce a dynamic way to inject and remove faults from this module, we can take advantage of the parameter server in the FC (by launching custom parameters).
-
+    To introduce a dynamic way to inject and remove faults from this module, we
+    can take advantage of the parameter server in the FC (by launching custom
+    parameters).
 
     @code cpp
     /**
@@ -292,8 +324,9 @@ version: 1.1.1
 
 *** Example: GPS
 
-    Some cases are different when working with the SITL or the actual drone. For instance, the GPS fault injection requires affecting the data generated from the simulation side itself. 
-
+    Some cases are different when working with the SITL or the actual drone.
+    For instance, the GPS fault injection requires affecting the data generated
+    from the simulation side itself. 
 
     @code cpp
     /**

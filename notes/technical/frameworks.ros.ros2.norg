@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T16:33:02+0400
-updated: 2024-01-28T16:38:59+0400
+updated: 2024-01-29T14:36:29+0400
 version: 1.1.1
 @end
 
@@ -14,7 +14,9 @@ version: 1.1.1
 
 * Set Locale
 
-  Make sure there is a locale which supports UTF-8. If in a minimal environment (such as a docker container), the locale may be something minimal like POSIX. Test with the following settings.
+  Make sure there is a locale which supports UTF-8. If in a minimal environment
+  (such as a docker container), the locale may be something minimal like POSIX.
+  Test with the following settings.
 
   @code bash
   locale  # check for UTF-8
@@ -29,7 +31,8 @@ version: 1.1.1
 
 ** Set up Sources
 
-   Add ROS 2 `apt` repository to the system. First ensure that Ubuntu Universe repository is enabled.
+   Add ROS 2 `apt` repository to the system. First ensure that Ubuntu Universe
+   repository is enabled.
 
    @code bash
    sudo apt install software-properties-common
@@ -58,7 +61,8 @@ version: 1.1.1
    sudo apt upgrade
    @end
 
-   For the Desktop Install (Recommended) which includes ROS, RViz, demos, tutorials.
+   For the Desktop Install (Recommended) which includes ROS, RViz, demos,
+   tutorials.
 
    @code bash
    sudo apt install ros-humble-desktop
@@ -74,7 +78,8 @@ version: 1.1.1
 
 ** Sourcing the Environment
 
-   Referring to the previous section on ROS {:$/technical/frameworks.ros:** Packages}[packages], we can permanently source the ROS installation by running:
+   Referring to the previous section on ROS {:$/technical/frameworks.ros:** Packages}[packages], we can permanently
+   source the ROS installation by running:
 
    @code bash
    echo "source /opt/ros/humble/setup.bash" >> .bashrc
@@ -82,12 +87,30 @@ version: 1.1.1
 
 * Distributed System
 
-  DDS (Data Distribution Service) plays a crucial role in ROS (Robot Operating System), especially in ROS 2. It acts as the underlying connectivity framework that facilitates communication between different parts of a ROS-based system.
+  DDS (Data Distribution Service) plays a crucial role in ROS (Robot Operating
+  System), especially in ROS 2. It acts as the underlying connectivity
+  framework that facilitates communication between different parts of a
+  ROS-based system.
 
-  ~ *Middleware Layer* - DDS is used as the default middleware. This means that DDS is responsible for the efficient and reliable exchange of information between different nodes (components) of a ROS 2 system. It's a layer that sits between the ROS application layer and the network, managing data exchange and communication.
-  ~ *Vendor Agnosticism* - Is designed to be DDS vendor-agnostic. This means it can work with different DDS implementations, such as eProsima's Fast DDS, RTI’s Connext DDS, Eclipse Cyclone DDS, and GurumNetworks GurumDDS. This flexibility allows users to choose a DDS implementation that best fits their specific requirements.
-  ~ *Key Functions Provided by DDS* - DDS provides several essential services in ROS 2, including discovery (finding and connecting to other nodes in the network), message serialization (converting data to a format suitable for transmission), and publish-subscribe transport (managing how messages are sent and received).
-  ~ *Enhanced Features* - Brings enhanced features compared to ROS 1, such as distributed discovery (eliminating the need for a central master for node discovery), more granular quality of service settings, and potentially more efficient intra-process communication through shared memory.
+  ~ *Middleware Layer* - DDS is used as the default middleware. This means that
+    DDS is responsible for the efficient and reliable exchange of information
+    between different nodes (components) of a ROS 2 system. It's a layer that
+    sits between the ROS application layer and the network, managing data
+    exchange and communication.
+  ~ *Vendor Agnosticism* - Is designed to be DDS vendor-agnostic. This means it
+    can work with different DDS implementations, such as eProsima's Fast DDS,
+    RTI’s Connext DDS, Eclipse Cyclone DDS, and GurumNetworks GurumDDS. This
+    flexibility allows users to choose a DDS implementation that best fits
+    their specific requirements.
+  ~ *Key Functions Provided by DDS* - DDS provides several essential services
+    in ROS 2, including discovery (finding and connecting to other nodes in the
+    network), message serialization (converting data to a format suitable for
+    transmission), and publish-subscribe transport (managing how messages are
+    sent and received).
+  ~ *Enhanced Features* - Brings enhanced features compared to ROS 1, such as
+    distributed discovery (eliminating the need for a central master for node
+    discovery), more granular quality of service settings, and potentially more
+    efficient intra-process communication through shared memory.
 
   ===
 ___
