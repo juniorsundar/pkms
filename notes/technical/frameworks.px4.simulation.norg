@@ -97,6 +97,7 @@ version: 1.1.1
        -- No support for multiple vehicle simulations at the same time.
 
 * Software-in-the-Loop (SITL)
+
     | /Access {:$/technical/terminologies.software-in-the-loop:}[reference]/
 
 ** Set-Up
