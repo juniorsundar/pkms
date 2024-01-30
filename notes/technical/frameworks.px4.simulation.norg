@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-27T23:14:46+0400
-updated: 2024-01-29T14:41:05+0400
+updated: 2024-01-30T14:31:20+0400
 version: 1.1.1
 @end
 
@@ -137,10 +137,6 @@ version: 1.1.1
    maps RPM to PWM:
 
    $| \text{PWM} = c_2 \text{RPM}^2 + c_1 \text{RPM} + c_0|$
-
-   @math
-   \text{PWM} = c_2 \text{RPM}^2 + c_1 \text{RPM} + c_0
-   @end
 
    In this application:
    @code yaml

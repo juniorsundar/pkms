@@ -4,7 +4,7 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-01-29T22:02:31+0400
+updated: 2024-01-30T14:26:32+0400
 version: 1.1.1
 @end
 
@@ -12,18 +12,25 @@ version: 1.1.1
 
 ** Work
 
-   - ( ) tasks
+   - ( ) See if it is possible to run simulation stack with HITL
+   - (x) Push the PX4-Autopilot code to the tiiuae GitHub repo
+   - (x) Test if the pushed tiiuae code works as expected. If not then run diagnostics
+   - (-) Solita - Contact point for the person who knows most about how the ROS
+         2 sub/pub is taking place in existing architecture.
 
 ** Personal
 
+   - ( ) Write something
 
-  ___
+   ===
+___
 
 * Scratch
 
   /scratch/
 
-  ___
+  ===
+___
 
 * MEETING NAME 
 
