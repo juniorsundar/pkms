@@ -2,9 +2,9 @@
 title: Chapter 1 - Prologue
 description: 
 authors: juniorsundar
-categories: 
+categories: Volume 1
 created: 2024-01-29T23:04:52+0400
-updated: 2024-01-29T23:05:36+0400
+updated: 2024-01-31T22:06:19+0400
 version: 1.1.1
 @end
 
@@ -285,4 +285,4 @@ With that said, the man disappeared into the shrubbery, leaving Kratos alone. He
 
 ____
 
-**Next**: [[volume-1.chapter-2]]
+{:$/volume-1/index:}[< return] - {:$/index:}[index] - {:$/volume-1/chapter-2:}[next >]

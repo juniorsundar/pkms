@@ -1,7 +1,21 @@
----
-id: rm335ht9qr8lgo3lheaywuw
+@document.meta
 title: Volume 1
-desc: ''
-updated: 1705252482147
-created: 1705252482147
----
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-31T22:04:17+0400
+updated: 2024-01-31T22:42:18+0400
+version: 1.1.1
+@end
+
+* Summary
+
+
+  ===
+___
+* Index
+
+  - {:$/volume-1/chapter-1:}[Chapter 1 - Prologue]
+  - {:$/volume-1/chapter-2:}[Chapter 2 - Crawl First, Walk Next, Run Later]
+
+{:$/index:}[< return]
