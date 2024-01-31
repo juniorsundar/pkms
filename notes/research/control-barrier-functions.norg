@@ -8,7 +8,7 @@ updated: 2024-01-31T14:57:06+0400
 version: 1.1.1
 @end
 
-* Key terms
+* Key Terms
 
 ** Barrier Functions
 
@@ -27,8 +27,8 @@ version: 1.1.1
 
 *** Advantages and Disadvantages
 
-    Barrier functions allow for the conversion of a constrained problem into an
-    unconstrained one, simplifying the optimization process.
+    Barrier functions allow for the conversion of a *constrained problem* into
+    an *unconstrained* one, simplifying the optimization process.
 
     However, the choice of barrier function and its parameters can
     significantly impact the convergence and performance of the optimization
@@ -109,6 +109,52 @@ version: 1.1.1
     They are valuable because they provide a way to prove stability without
     solving system's differential equation directly. Useful if equation is too
     complex to solve analytically.
+
+*** Characteristics
+
+**** Positive Definiteness
+
+     A Lyapunov function $V(x)$ is typically required to be positive definite.
+     i.e. $V(x)>0$ for all $|x \neq 0|$ and $|V(0) = 0|$. This means that the
+     function has a minimum value at the equilibrium point. Kind of like a
+     bowl.
+
+**** Derivative Sign
+
+     The derivative of the Lyapunov function along the trajectories of the
+     system, $|\dot{V}(x) \leq 0|$ for all $x$ in the region of interest. This
+     means that the function does not increase in value over time, suggests
+     stability. 
+
+*** Types of Stability Analysis
+
+**** Stability
+
+     If $|\dot{V}(x) \leq 0|$ the equilibrium point is stable. Small
+     perturbations from equilibrium will not cause system to diverge
+     significantly.
+
+**** Asymptotic Stability
+
+     If $|\dot{V}(x) < 0|$ the equilibrium is asymptotically stable.
+     Perturbations will not only stay bounded but will also decay to zero over
+     time.
+
+**** Global Stability
+
+     If Lyapunov function and its derivative conditions are valid for all $x$
+     in the system, then global stability is implied, meaning the stability
+     conditions hold for any initial state of the system.
+
+** Barrier Certificates
+
+*** Definition and Purpose
+
+    Barrier certificate is a function $B(x)$ that separates the state space of
+    a dynaical system into safe and unsafe regions. Function is constructed
+    such that its level sets define a boundary between safe and unsafe states.
+
+    They are used to certify that trajectories of the system starting
 
 * Paper - Control Barrier Functions: Theory and Application
 
