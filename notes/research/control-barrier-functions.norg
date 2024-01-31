@@ -97,6 +97,19 @@ version: 1.1.1
       by a sequence of optimization problems with decreasing values of a
       parameter in the barrier function.
 
+** Lyapunov Function
+
+*** Definition and Purpose
+
+    Lyapunov function is a scalar function that helps to determine stability of
+    an equlibrium point in a dynamical system. The function is analogous to a
+    potential energy function in physics, where its value represents a measure
+    of the system's potential for change.
+
+    They are valuable because they provide a way to prove stability without
+    solving system's differential equation directly. Useful if equation is too
+    complex to solve analytically.
+
 * Paper - Control Barrier Functions: Theory and Application
 
   | /Access {https://coogan.ece.gatech.edu/papers/pdf/amesecc19.pdf}[reference]/

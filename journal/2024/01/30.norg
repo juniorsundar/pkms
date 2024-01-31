@@ -23,7 +23,7 @@ version: 1.1.1
              this move
    - ( ) See if it is possible to run simulation stack with HITL
    - ( ) Determine how to add the faulty flight controller to dronsole launch
-   - ( ) Update {https://ssrc.atlassian.net/wiki/spaces/ML/pages/928120863/Drone+ML+Feature+Tracker}[ML Feature Tracker] so that we know where to obtain data
+   - (x) Update {https://ssrc.atlassian.net/wiki/spaces/ML/pages/928120863/Drone+ML+Feature+Tracker}[ML Feature Tracker] so that we know where to obtain data
 
 ** Personal
 
