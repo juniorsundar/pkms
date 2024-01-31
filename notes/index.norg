@@ -15,11 +15,11 @@ ___
 * Links 
 
   ~ {:./technical/index:}[Technical]
-      ~~ {:./technical/frameworks:}[Frameworks]
-      ~~ {:./technical/libraries:}[Libraries]
-      ~~ {:./technical/terminologies:}[Terminologies]
+     ~~ {:./technical/frameworks:}[Frameworks]
+     ~~ {:./technical/libraries:}[Libraries]
+     ~~ {:./technical/terminologies:}[Terminologies]
   ~ {:./ideas/index:}[Ideas]
-      ~~ {:./ideas/srta:}[Secure Run-Time Assurance]
-      ~~ {:./ideas/useful-links:}[Useful Links]
-      ~~ {:./ideas/code-projects:}[Code Projects]
-
+     ~~ {:./ideas/useful-links:}[Useful Links]
+     ~~ {:./ideas/code-projects:}[Code Projects]
+  ~ {:./srta/index:}[Secure Run-Time Assurance]
+  ~ {:./research/index:}[Research]

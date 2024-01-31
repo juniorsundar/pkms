@@ -35,7 +35,7 @@ version: 1.1.1
 
 ** Overview
 
-   {/ assets/srta.literature-review1.png}[Figure: Architecture of RTA]
+   {/ assets/literature-review1.png}[Figure: Architecture of RTA]
 
    RTA functions an be decomposed into the following implicitly runtime
    functions:
@@ -144,7 +144,7 @@ version: 1.1.1
    there is a shift towards the MicroXRCE-DDS firmware over the previous
    methodology).
 
-   {/ assets/srta.literature-review2.png}[Figure: PX4 High-Level Software Architecture Diagram]
+   {/ assets/literature-review2.png}[Figure: PX4 High-Level Software Architecture Diagram]
 
    The report defines 6 kinds of faults that can potentially injected into the
    system.
@@ -163,7 +163,7 @@ version: 1.1.1
 
    These faults can potentially be implemented as follows:
 
-   {/ assets/srta.literature-review3.png}[Figure: High Level Diagram of Simulated Environment with Targets for Fault Implementation]
+   {/ assets/literature-review3.png}[Figure: High Level Diagram of Simulated Environment with Targets for Fault Implementation]
 
    Although the report lists a range of methods to implement faults, it limits
    its work to the GPS module in order to map and observe the behaviour before,
@@ -265,4 +265,4 @@ version: 1.1.1
 ___
 * Links 
 
-  {:./srta:}[< return] -  {:$/index:}[index]
+  {:./index:}[< return] -  {:$/index:}[index]

@@ -15,15 +15,14 @@ ___
 * Links 
 
   ~ {:$/technical/frameworks:}[Frameworks]
-      ~~ {:$/technical/frameworks.px4:}[PX4- Autopilot]
-      ~~ {:$/technical/frameworks.ros:}[Robot Operating System (ROS)]
+     ~~ {:$/technical/frameworks.px4:}[PX4- Autopilot]
+     ~~ {:$/technical/frameworks.ros:}[Robot Operating System (ROS)]
   ~ {:$/technical/libraries:}[Libraries]
-      ~~ {:$/technical/libraries.mavsdk:}[MAVSDK]
+     ~~ {:$/technical/libraries.mavsdk:}[MAVSDK]
   ~ {:$/technical/terminologies:}[Terminologies]
-      ~~ {:$/technical/terminologies.api:}[Application Programming Interface (API)]
-      ~~ {:$/technical/terminologies.digital-twin:}[Digital Twin]
-      ~~ {:$/technical/terminologies.hardware-in-the-loop:}[Hardware in the Loop]
-      ~~ {:$/technical/terminologies.software-in-the-loop:}[Software in the Loop]
-
+     ~~ {:$/technical/terminologies.api:}[Application Programming Interface (API)]
+     ~~ {:$/technical/terminologies.digital-twin:}[Digital Twin]
+     ~~ {:$/technical/terminologies.hardware-in-the-loop:}[Hardware in the Loop]
+     ~~ {:$/technical/terminologies.software-in-the-loop:}[Software in the Loop]
 
   {:$/index:}[index]

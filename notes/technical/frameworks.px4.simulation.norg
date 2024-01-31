@@ -8,7 +8,7 @@ updated: 2024-01-30T14:31:20+0400
 version: 1.1.1
 @end
 
-* Introduction
+          * Introduction
 
   Simulators allow PX4 flight code to control a computer modeled vehicle in a
   simulated environment, with the same level of software interactability as the
