@@ -154,7 +154,63 @@ version: 1.1.1
     a dynaical system into safe and unsafe regions. Function is constructed
     such that its level sets define a boundary between safe and unsafe states.
 
-    They are used to certify that trajectories of the system starting
+    They are used to certify that trajectories of the system starting from a
+    safe initial condition will not enter unsafe regions over time.
+
+*** Characteristics
+
+**** Non-negativity
+
+     Typically $B(x)$ is designed such that it is non-negative in the safe
+     region and negative in the unsafe region.
+
+**** Derivative Condition
+
+     Along the trajectories of the system, the derivative of $B(x)$, denoted as
+     $|\dot{B}(x)|$, must satisfy certain conditions to ensure safety. Common
+     requirement is that it should be non-positive whenever $B(x)=0$. This
+     ensures that the system's trajectory cannot cross from safe into unsafe
+     regions.
+
+*** Example
+
+    Consider a simple robotic system where the goal is to ensure the robot does
+    not collide with an obstacle. Let's define the state of the robot as $x$
+    and the unsafe region as a particular area around the obstacle.
+
+    A barrier certificate $B(x)$ can be designed such that the $|B(x) \geq 0|$
+    represents the safe rgion (away from teh obstacle) and $|B(x)<0|$
+    represents the unsafe region (close to or in the obstacle).
+
+    If we can show that for all initial states $x_0$ in teh safe region and for
+    all times $|t \geq 0, B(x(t)) \geq 0|$ holds (the certificate's value
+    remains non-negative along system trajectory) then we have certified that
+    the robot will not collide with the obstace.
+
+*** Application
+
+    Barrier certificates are used extensively in the verification of safety
+    properties in autonomous systems, including robots and self-driving cars.
+    They are crucial in scenarios where it is not feasible to test all possible
+    trajectories for safety, which is often the case in complex or
+    high-dimensional systems. By providing a mathematical proof of safety,
+    barrier certificates play a vital role in the design and implementation of
+    reliable and secure autonomous systems.
+
+** Locally Lipschitz
+
+   Refers to a property of a function in context of differential equations and
+   control theory. A function $f(x)$ is said to be locally Lipschitz if, for
+   every point in its domain, there exists a neighbourhood around that point
+   where the function does not change too rapidly.
+
+   In more technical terms, within this neighbourhood, the difference in the
+   function's values at any two points is bounded by a constant (Lipschitz
+   constant) times the distance between the two points.
+
+   This property is important to ensure that the well-behavedness of solutions
+   to differential equations and is often a requirement for applying certain
+   mathematical theorems and techniques.
 
 * Paper - Control Barrier Functions: Theory and Application
 
@@ -173,3 +229,73 @@ version: 1.1.1
    discussion on safety by introducing control barrier functions that play a
    role equivalent to Lyapunov functions in study of liveness property.
 
+   Paper aims to establish basic theory of safety-critical control and
+   highlight some important applications.
+
+** Fundamentals
+
+   Always consider a nonlinear affine control system:
+
+   $|\dot{x} = f(x) + g(x) u|$
+
+*** Control Lyapunov Function (CLF)
+
+**** Definition and Purpose
+
+     CLFs are used to ensure the stability of a system. They help in designing
+     a control input that drives the system towards a desired stable state.
+
+     A function $V(x)$ is a CLF if it satisfies all the rules as defined by a
+     regular {** Lyapunov Function}[Lyapunov Function], with regards to its positive definiteness
+     and negative definiteness of its derivative. 
+
+**** Difference between CLF and regular Lyapunov Function
+
+***** Regular LF
+
+      Primarily used to analyse stablity of an equilibrium point of a system.
+      If such a function decreases over time, it implies that the system's
+      state will converge to the equilibrium, indicating stability.
+
+      Consider simple system:
+      
+      $|\dot{x} = -x|$
+      
+      A potential LF could be 
+      
+      $|V(x) = \frac{1}{2} x^2|$
+
+      Take time derivative:
+
+      $|\dot{V}(x) = \frac{dV}{dx} \frac{dx}{dt} = x(-x) = -x^2|$ 
+
+      It abides to all the rules of a LF. Now at $x=0$ the $|\dot{V}(x)=0|$
+      thus the system is stable.
+
+***** CLF
+
+      Extends the concept to systems with control inputs. It is designed not
+      just to assert stability but to actively guide the selection of control
+      inputs that ensure the system's convergence to a stable state.
+      Essentially, a CLF helps in designing a controller for stabilizing the
+      system.
+
+      For a control system described:
+
+      $|\dot{x} = u|$
+
+      A CLF might also be:
+
+      $|V(x) = \frac{1}{2} x^2|$
+      
+      However, we can use the CLF to design a control law. For example, by
+      choosing:
+
+      $|u = -kx, k > 0|$
+
+      We find the derivative (note that it is being done w.r.t. time variable):
+
+      $|\dot{V}(x) = \frac{dV}{dx} \frac{dx}{dt} = x \dot{x} = x(-kx) = -kx^2|$
+
+      Which is negative definite. Thus the control law can stabilise the system
+      at $x=0$ 
