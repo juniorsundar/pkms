@@ -4,17 +4,21 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T18:21:39+0400
-updated: 2024-01-28T20:39:36+0400
+updated: 2024-02-01T21:46:28+0400
 version: 1.1.1
 @end
+
+* Index  
+
+  ~ {:./useful-links:}[Useful Links]
+  ~ {:./code-projects:}[Code Projects]
+
+  ===
+___
 
 * Summary
 
   ===
 ___
-* Links 
 
-  ~ {:./useful-links:}[Useful Links]
-  ~ {:./code-projects:}[Code Projects]
-
-  {:$/index:}[index]
+  {:$/index:}[< return] -  {:$/index:}[index]

@@ -4,9 +4,19 @@ description:
 authors: juniorsundar
 categories:
 created: 2024-01-27T21:25:33+0400
-updated: 2024-01-29T14:47:22+0400
+updated: 2024-02-01T22:08:36+0400
 version: 1.1.1
 @end
+
+* Index 
+
+  ~ {:$/technical/frameworks/px4.ros2:}[PX4-ROS 2 Integration]
+  ~ {:$/technical/frameworks/px4.simulation:}[Simulation]
+  ~ {:$/technical/frameworks/px4.uorb:}[uORB]
+
+  ===
+___
+
 
 * Introduction
 
@@ -31,7 +41,7 @@ version: 1.1.1
 
 ** uORB
    
-   | /Access {:$/technical/frameworks.px4.uorb:}[reference]/
+   | /Access {:$/technical/frameworks/px4.uorb:}[reference]/
 
    It is an asynchronous publish() / subscribe() messaging API used for
    inter-thread/inter-process communication. It is automatically started early
@@ -67,7 +77,7 @@ version: 1.1.1
    unreliable low-bandwidth radio links.
 
    PX4 uses MAVLink to communicate with ground stations and apps built with
-   {:$/technical/libraries.mavsdk:}[MAVLink SDKs] such as {:$/technical/frameworks.px4:*** QGroundControl}[QGroundControl].
+   {:$/technical/libraries.mavsdk:}[MAVLink SDKs] such as {:$/technical/frameworks/px4:*** QGroundControl}[QGroundControl].
 
 * Development
 
@@ -139,7 +149,7 @@ version: 1.1.1
 
 *** Simulation (SITL)
     
-    | /Access {:$/technical/frameworks.px4.simulation:}[reference]/
+    | /Access {:$/technical/frameworks/px4.simulation:}[reference]/
 
     Simulation is a quick, easy, and most importantly, safe way to test changes
     to PX4 code before attempting to fly in the real world. It is also a good
@@ -154,10 +164,10 @@ version: 1.1.1
 
 *** ROS
 
-    | /Access {:$/technical/frameworks.px4.ros2:}[reference]/
+    | /Access {:$/technical/frameworks/px4.ros2:}[reference]/
 
     Limited only to ROS 2 since ROS 1 is slowly reaching deprecation. Through
-    the {:$/technical/frameworks.px4:*** μXRCE-DDS Agent Installation}[μXRCE-DDS] client-agent, it is possible to expose the uORB
+    the {:$/technical/frameworks/px4:*** μXRCE-DDS Agent Installation}[μXRCE-DDS] client-agent, it is possible to expose the uORB
     messages in the flight controller to the ROS 2 framework. This facilitates
     forward and backwards communication.
 
@@ -400,10 +410,5 @@ version: 1.1.1
     
     ===
 ___
-* Links 
 
-  ~ {:$/technical/frameworks.px4.ros2:}[PX4-ROS 2 Integration]
-  ~ {:$/technical/frameworks.px4.simulation:}[Simulation]
-  ~ {:$/technical/frameworks.px4.uorb:}[uORB]
-
-  {:$/technical/frameworks:}[< return] - {:$/index:}[index]
+{:$/technical/frameworks/index:}[< return] - {:$/index:}[index]

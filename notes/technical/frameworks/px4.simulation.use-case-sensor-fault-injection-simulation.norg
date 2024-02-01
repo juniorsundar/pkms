@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-27T23:47:54+0400
-updated: 2024-01-29T13:06:15+0400
+updated: 2024-02-01T22:13:02+0400
 version: 1.1.1
 @end
 
@@ -101,7 +101,7 @@ version: 1.1.1
    @end
 
    *NOTE*: This shell script also installs and builds the faulty PX4-Autopilot
-   firmware from {:$/technical/frameworks.px4.simulation.use-case-sensor-fault-injection-simulation:** Flight Controller}[this section]. So it is best if you don't install and
+   firmware from {:$/technical/frameworks/px4.simulation.use-case-sensor-fault-injection-simulation:** Flight Controller}[this section]. So it is best if you don't install and
    build the flight controller separately.
 
 ** Launch
@@ -133,7 +133,7 @@ version: 1.1.1
 
 ** Architecture
 
-   {/ technical/assets/frameworks.px4.simulation.use-case-sensor-fault-injection-simulation1.png}[Figure: Platform architecture]
+   {/ assets/px4.simulation.use-case-sensor-fault-injection-simulation1.png}[Figure: Platform architecture]
 
    @code
    # Project structure
@@ -378,7 +378,7 @@ version: 1.1.1
      The transitions between states is based off of the inputs received from
      the two `/state` topics.
 
-     {/ technical/assets/frameworks.px4.simulation.use-case-sensor-fault-injection-simulation2.png}[Figure: State machine for mission management]
+     {/ assets/px4.simulation.use-case-sensor-fault-injection-simulation2.png}[Figure: State machine for mission management]
 
 **** fault_manager.py
 
@@ -415,6 +415,5 @@ version: 1.1.1
 
    ===
 ___
-* Links 
 
-  {:$/technical/frameworks.px4.simulation:}[< return] - {:$/index:}[index]
+  {:$/technical/frameworks/px4.simulation:}[< return] - {:$/index:}[index]

@@ -4,16 +4,21 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-01-31T14:55:28+0400
-updated: 2024-01-31T14:55:28+0400
+updated: 2024-02-01T21:44:53+0400
 version: 1.1.1
 @end
+
+
+* Links 
+
+  ~ {:./control-barrier-functions:}[Control Barrier Functions]
+
+  ===
+___
 
 * Summary
 
   ===
 ___
-* Links 
-
-  ~ {:./control-barrier-functions:}[Control Barrier Functions]
 
   {:$/index:}[< return] -  {:$/index:}[index]

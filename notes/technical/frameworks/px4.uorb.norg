@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T14:21:15+0400
-updated: 2024-01-29T14:33:20+0400
+updated: 2024-02-01T22:01:22+0400
 version: 1.1.1
 @end
 
@@ -96,6 +96,5 @@ version: 1.1.1
 
   ===
 ___
-* Links 
 
-  {:$/technical/frameworks.px4:}[< return] - {:$/index:}[index]
+  {:$/technical/frameworks/px4:}[< return] - {:$/index:}[index]

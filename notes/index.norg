@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T19:20:38+0400
-updated: 2024-01-30T15:08:34+0400
+updated: 2024-02-01T22:09:06+0400
 version: 1.1.1
 @end
 
@@ -15,9 +15,9 @@ ___
 * Links 
 
   ~ {:./technical/index:}[Technical]
-     ~~ {:./technical/frameworks:}[Frameworks]
-     ~~ {:./technical/libraries:}[Libraries]
-     ~~ {:./technical/terminologies:}[Terminologies]
+     ~~ {:$/technical/frameworks/index:}[Frameworks]
+     ~~ {:$/technical/libraries:}[Libraries]
+     ~~ {:$/technical/terminologies:}[Terminologies]
   ~ {:./ideas/index:}[Ideas]
      ~~ {:./ideas/useful-links:}[Useful Links]
      ~~ {:./ideas/code-projects:}[Code Projects]

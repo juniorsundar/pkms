@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T20:39:22+0400
-updated: 2024-01-28T22:15:12+0400
+updated: 2024-02-01T21:45:53+0400
 version: 1.1.1
 @end
 
@@ -15,6 +15,5 @@ version: 1.1.1
 
   ===
 ___
-* Links 
 
   {:./index:}[< return] -  {:$/index:}[index]

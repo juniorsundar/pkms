@@ -4,9 +4,16 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T16:48:14+0400
-updated: 2024-01-29T14:35:29+0400
+updated: 2024-02-01T21:39:46+0400
 version: 1.1.1
 @end
+
+* Index 
+
+  ~ {:$/technical/libraries.mavsdk.python:}[MAVSDK Python]
+
+  ===
+___
 
 * Introduction
 
@@ -31,8 +38,5 @@ version: 1.1.1
 
   ===
 ___
-* Links 
-
-  ~ {:$/technical/libraries.mavsdk.python:}[MAVSDK Python]
 
   {:$/technical/libraries:}[< return] - {:$/index:}[index]
