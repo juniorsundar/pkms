@@ -25,6 +25,20 @@ version: 1.1.1
     the objective function that *becomes large as the solution approaches the
     boundary* of the feasible region defined by the constraints.
 
+*** Nagumo's Theorem
+
+    Defines necessary and sufficient conditions for set invariance (safety).
+    
+    Theorem defines a safe set 'C' (like a safe driving path) using a
+    mathematical function '$h$'. If the system's state is described by '$x$',
+    the safe set includes all states where $h(x)$ is non-negative (safe
+    states). The theorem states that the system remains in this safe set if the
+    rate of change of $h$ along the path's boundary is never negative. This
+    ensures that the system doesn't cross from safe to unsafe.
+
+    *C is invariant \<=\> $|\dot{h}(x) \geq 0|$ for all $x$ on the boundary of
+    set C*
+
 *** Advantages and Disadvantages
 
     Barrier functions allow for the conversion of a *constrained problem* into
@@ -62,7 +76,7 @@ version: 1.1.1
 
     By applying a logarithmic barrier function, the modified objective
     function becomes:
-
+    
     $|F(x, c) = x^2 - c ln(1-x)|$
 
     As $x$ approaches 1, the logarithmic term, becomes large, penalising
@@ -126,6 +140,35 @@ version: 1.1.1
      means that the function does not increase in value over time, suggests
      stability. 
 
+*** Choosing a Lyapunov Function
+
+    Choosing a Lyapunov function for a dynamical system is more of an art than
+    an exact science, as there's no universal method applicable to all systems.
+    However, some general guidelines can help in the selection process:
+
+    - *Positive Definiteness*
+    - *Negative Definite Derivative*
+    - *Intuition and System Knowledge* - Understanding the physics or mechanics
+      of the system can guide the choice. For mechanical systems, energy-like
+      functions (kinetic plus potential energy) often serve as good candidates.
+    - *Simplicity and Computability* - Prefer simpler functions that make it
+      easier to compute the derivative and analyze the system.
+    - *Trial and Error* - Sometimes, selecting a Lyapunov function involves
+      trial and error, testing different functions to see which one satisfies
+      the necessary conditions for the particular system being analyzed.
+
+    It is possible for one Lyapunov function to prove stability for a system
+    while another does not. This can occur because the effectiveness of a
+    Lyapunov function in proving stability depends on its specific form and how
+    well it captures the dynamics of the system. A Lyapunov function that fails
+    to prove stability doesn't necessarily mean the system is unstable; it
+    might simply be that the particular function chosen isn't suitable for
+    demonstrating stability for that system.
+
+    Therefore, finding a Lyapunov function that proves stability can sometimes
+    be a matter of trial and error, and the inability of one function to prove
+    stability doesn't preclude the existence of another function that can.
+
 *** Types of Stability Analysis
 
 **** Stability
@@ -151,7 +194,7 @@ version: 1.1.1
 *** Definition and Purpose
 
     Barrier certificate is a function $B(x)$ that separates the state space of
-    a dynaical system into safe and unsafe regions. Function is constructed
+    a dynamical system into safe and unsafe regions. Function is constructed
     such that its level sets define a boundary between safe and unsafe states.
 
     They are used to certify that trajectories of the system starting from a
@@ -179,7 +222,7 @@ version: 1.1.1
     and the unsafe region as a particular area around the obstacle.
 
     A barrier certificate $B(x)$ can be designed such that the $|B(x) \geq 0|$
-    represents the safe rgion (away from teh obstacle) and $|B(x)<0|$
+    represents the safe region (away from the obstacle) and $|B(x)<0|$
     represents the unsafe region (close to or in the obstacle).
 
     If we can show that for all initial states $x_0$ in teh safe region and for
@@ -222,7 +265,7 @@ version: 1.1.1
    > that "good" things eventually happen.
 
    Asymptotic stability is an example of a liveness property since it is seen
-   as "equilibrium is eventually reached".
+   as "equilibrium is eventually reached". Invariance is analogous to safety.
 
    Usually Lyapunov functions have played a predominant role in the
    investigation of liveness properties. This paper aims to refocus the
@@ -299,3 +342,16 @@ version: 1.1.1
 
       Which is negative definite. Thus the control law can stabilise the system
       at $x=0$ 
+
+**** Theorem 1
+
+     For the nonlinear control system, if there exists a control Lyapunov
+     function positive definite function satisfying (3), then any Lipschitz
+     continuous feedback controller $|u(x) \in K_{clf}(x)|$ asymptotically
+     stabilizes the system to $|x^∗ = 0|$.
+
+*** Control Barrier Function (CBF)
+
+    Unlike stability which involves driving a system to a point (or set),
+    safety can be framed in the context of enforcing invariance of a set (i.e.
+    not to leave a safe set)
