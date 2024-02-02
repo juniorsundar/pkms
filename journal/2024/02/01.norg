@@ -4,7 +4,7 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-01-30T14:27:01+0400
+updated: 2024-02-02T13:35:19+0400
 version: 1.1.1
 @end
 
@@ -18,7 +18,7 @@ version: 1.1.1
    - ( ) Look into how the Saluki can be set up
 
    - (!) Update the Initial Requirements Excel as needed
-      -- ( ) Add limitations
+      -- (!) Add limitations
    - ( ) 22nd Feb, get a few PPT slides ready for the university syncup
    - ( ) Look up what is RISC-V
    - ( ) Check up on how the Saluki V3 works
@@ -81,3 +81,7 @@ version: 1.1.1
    - ( ) Look up what is RISC-V
    - ( ) Check up on how the Saluki V3 works
 
+===
+___
+
+{:$/2024/01/31:}[< previous] - {:$/index:}[index] - {:$/2024/02/02:}[next >]
