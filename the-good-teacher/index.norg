@@ -4,11 +4,11 @@ description:
 authors: juniorsundar
 categories:
 created: 1649916401463
-updated: 2024-02-01T22:26:54+0400
+updated: 2024-02-03T15:18:33+0400
 version: 1.1.1
 @end
 
-![Front_Cover](./assets/images/TGT_JUL2021.jpg)
+{/ assets/TGT_JUL2021.jpg}[Figure: Front Cover]
 
 * Summary
 
