@@ -1,0 +1,49 @@
+@document.meta
+title: Profit Calculator
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-02-04T19:31:34+0400
+updated: 2024-02-04T19:57:45+0400
+version: 1.1.1
+@end
+
+@code gomod
+module example.com/profit-calculator
+
+go 1.21.6
+@end
+
+@code go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var revenue, expenses, taxRate float64
+
+	fmt.Print("Revenue: ")
+	fmt.Scan(&revenue)
+
+	fmt.Print("Expenses: ")
+	fmt.Scan(&expenses)
+
+	fmt.Print("Tax Rate: ")
+	fmt.Scan(&taxRate)
+
+	var earnBeforeTax float64 = revenue - expenses
+	var earnAfterTax float64 = earnBeforeTax * (1 - taxRate/100)
+	var ratio float64 = earnBeforeTax / earnAfterTax
+
+	fmt.Println("EBT:", earnBeforeTax)
+	fmt.Println("Profit:", earnAfterTax)
+	fmt.Println("Ratio:", ratio)
+}
+@end
+
+   ===
+___
+
+{:$/technical/programming-languages/go:}[< return] - {:$/index:}[index]
