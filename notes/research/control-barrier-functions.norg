@@ -4,7 +4,7 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-01-31T14:57:06+0400
-updated: 2024-02-02T11:54:05+0400
+updated: 2024-02-04T22:13:32+0400
 version: 1.1.1
 @end
 
@@ -36,8 +36,8 @@ version: 1.1.1
     rate of change of $h$ along the path's boundary is never negative. This
     ensures that the system doesn't cross from safe to unsafe.
 
-    C is invariant $\iff \dot{h}(x) \geq 0$ for all $x$ on the boundary of
-    set C
+    $C \text{ is invariant}\iff \dot{h}(x) \geq 0$ for all $x$ on the boundary
+    of set C
 
 *** Advantages and Disadvantages
 
