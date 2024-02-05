@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T18:13:55+0400
-updated: 2024-02-01T21:40:50+0400
+updated: 2024-02-05T20:30:20+0400
 version: 1.1.1
 @end
 
@@ -24,4 +24,4 @@ version: 1.1.1
   ===
 ___
 
-  {:$/technical/terminologies/index:}[< return] - {:$/index:}[index]
+{:$/technical/terminologies/index:}[< return] - {:$/index:}[index]
