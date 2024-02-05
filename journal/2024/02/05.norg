@@ -1,0 +1,52 @@
+@document.meta
+title: template
+description: 
+authors: juniorsundar-unikie
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-01-30T14:27:01+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+** Work
+
+   - ( ) tasks
+
+** Personal
+
+
+===
+  ___
+
+* Scratch
+
+  /scratch/
+
+===
+  ___
+
+* MEETING NAME 
+
+** Attendees
+
+   | Names
+
+** Goals
+
+
+** Agenda
+
+   - ( ) 
+
+** Minutes
+
+
+** Action Items
+
+===
+___
+
+{:./2024/:}[< previous] - {:$/index:}[index] - {:./2024/:}[next >]
+
