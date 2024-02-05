@@ -1,0 +1,28 @@
+@document.meta
+title: Terminologies 
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-28T17:56:54+0400
+updated: 2024-02-02T14:03:13+0400
+version: 1.1.1
+@end
+
+* Index 
+
+  ~ {:$/technical/terminologies/api:}[Application Programming Interface (API)]
+  ~ {:$/technical/terminologies/digital-twin:}[Digital Twin]
+  ~ {:$/technical/terminologies/hardware-in-the-loop:}[Hardware in the Loop]
+  ~ {:$/technical/terminologies/software-in-the-loop:}[Software in the Loop]
+  ~ {:$/technical/terminologies/continual-task-learning:}[Continual Task Learning]
+  ~ {:$/technical/terminologies/risc-v:}[RISC-V]
+
+  ===
+___
+
+* Summary
+
+  ===
+___
+
+{:$/technical/index:}[< return] - {:$/index:}[index]

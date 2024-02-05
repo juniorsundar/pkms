@@ -1,0 +1,154 @@
+@document.meta
+title: Go
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-02-04T17:13:21+0400
+updated: 2024-02-04T20:19:06+0400
+version: 1.1.1
+@end
+
+* Index
+
+  ~ {:$/technical/programming-languages/go.investment-calculator:}[Example: Investment Calculator]
+  ~ {:$/technical/programming-languages/go.profit-calculator:}[Example: Profit Calculator]
+
+  ===
+___
+
+* Introduction
+
+** About Go
+
+   It is an open-source programming language developed and published by Google.
+
+   ~ Focus on simplicity, clarity and scalability
+      -- inspired by languages like Python
+      -- aims to provide a clean, understandable syntax
+   ~ High performance and focus on concurrency
+      -- similar to C or C++
+      -- popular for tasks that benefit from multi-threading
+   ~ Batteries included
+      -- Go comes with a standard library
+      -- many core features are built-in
+   ~ Statically typed
+      -- it is type-safe language
+      -- allows you to catch many errors early
+
+   Popular uses of Go include:
+
+   - Networking and APIs
+   - Microservices
+   - CLI Tools
+
+** Installation
+
+   - Download the latest version of Go from their {https://go.dev/doc/install}[website].
+
+   - Remove any previous Go installation by deleting the `/usr/local/go` folder
+     (if it exists), then extract the archive you just downloaded into
+     `/usr/local`, creating a fresh Go tree in `/usr/local/go`.  Do not untar
+     the archive into an existing `/usr/local/go` tree. This is known to
+     produce broken Go installations.
+
+   @code bash
+   sudo rm -rf /usr/local/go && tar -C /usr/local -xzf go<version>linux-amd64.tar.gz
+   @end
+
+   - Add `/usr/local/go/bin` to the `PATH` environment variable. You can do this by
+     adding the following line to your `$HOME/.profile` or `/etc/profile` (for a
+     system-wide installation):
+
+   @code bash
+   export PATH=$PATH:/usr/local/go/bin
+   @end
+
+   - *Note:* Changes made to a profile file may not apply until the next time
+     you log into your computer. To apply the changes immediately, just run the
+     shell commands directly or execute them from the profile using a command
+     such as source `$HOME/.profile`.
+
+   - Verify that you've installed Go by opening a command prompt and typing the
+     following command:
+
+   @code bash
+   go version
+   @end
+
+   - Confirm that the command prints the installed version of Go.
+
+** Simple Program
+
+   You can initialise a Go module as follows:
+
+   @code bash
+   go mod init example.com/first-package
+   @end
+
+   A simple go program can be written as follows:
+
+   @code go
+   // app.go
+   package main
+   // "package" clause
+   // main is a special package name as it tells the compiler that it is the
+   // entry point
+   // Every project needs to have a main package in place.
+
+   import "fmt" // importing the "fmt" package from the standard library
+
+   func main() {
+       fmt.Print("Hello World")
+   }
+   @end
+
+   We should also declare a module file and call it `go.mod`:
+
+   @code gomod
+   module example.com/first-app
+
+   go 1.21.6
+   @end
+
+   In terminal, running the following command will then run this code:
+
+   @code bash
+   $ go run app.go
+   > Hello World
+   @end
+
+* Packages and Modules
+
+  - Go projects are also called modules.
+  - A package is a collection of similarly themed functions and .go files.
+  - A module consists of multiplee packages.
+
+* Values and Types
+
+  {:$/technical/programming-languages/go.investment-calculator:}[Example: Investment Calculator]
+  {:$/technical/programming-languages/go.profit-calculator:}[Example: Profit Calculator]
+
+** Basic Types
+
+   Go comes with a couple of built-in basic types:
+
+   - `int` - a number *WITHOUT* decimal places (eg. -5, 10, 12, etc.)
+   - `float64` - a number *WITH* decimal places (eg. -4.2, 10.012, 12.0, etc.)
+   - `string` - a text value c1reated via double quotes or backticks (eg.
+     "Hello World" or \`Hello World\`)
+   - `bool` - `true` or `false`
+
+** Limitations of `fmt.Scan()`
+
+   The fmt.Scan() function is a great function for easily fetching & using user
+   input through the command line.
+
+   But this function also has an *important limitation*: You can't (easily)
+   fetch *multi-word input values*. Fetching text that consists of more than a
+   single word is tricky with this function.
+
+
+   ===
+___
+
+{:$/technical/programming-languages/index:}[< return] - {:$/index:}[index]

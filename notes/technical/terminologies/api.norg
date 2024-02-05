@@ -4,15 +4,15 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T18:13:55+0400
-updated: 2024-01-29T14:34:37+0400
+updated: 2024-02-01T21:40:50+0400
 version: 1.1.1
 @end
 
 * Definition
 
   API is a set of definitions and protocols for building and integrating
-  application software. It is referred to as a contract between an _information
-  provider_ and _information user_:
+  application software. It is referred to as a contract between an *information
+  provider* and *information user*:
   ~ Call - establishes content required from consumer.
   ~ Response - content required by the producer.
 
@@ -23,6 +23,5 @@ version: 1.1.1
 
   ===
 ___
-* Links 
 
-  {:$/technical/terminologies:}[< return] - {:$/index:}[index]
+  {:$/technical/terminologies/index:}[< return] - {:$/index:}[index]

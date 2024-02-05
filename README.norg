@@ -4,12 +4,13 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T23:02:16+0400
-updated: 2024-01-28T23:04:32+0400
+updated: 2024-02-04T14:46:11+0400
 version: 1.1.1
 @end
 
 * Index
-** {:./books/index:}[Books]
+** {:./the-good-teacher/index:}[The Good Teacher]
+** {:./god-of-war/index:}[God of War]
 ** {:./journal/index:}[Journal]
 ** {:./notes/index:}[Notes]
 
