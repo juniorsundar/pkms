@@ -1,6 +1,6 @@
 @document.meta
 title: template
-description: 
+description: 5 February 2024 
 authors: juniorsundar-unikie
 categories: 
 created: 2024-01-29T11:08:22+0400
@@ -12,7 +12,15 @@ version: 1.1.1
 
 ** Work
 
-   - ( ) tasks
+   - (?) See if it is possible to run simulation stack with HITL
+   - ( ) Determine how to add the faulty flight controller to dronsole launch
+   - ( ) Add the fault sources to the HITL build
+   - ( ) Look into how the Saluki can be set up
+
+   - ( ) 22nd Feb, get a few PPT slides ready for the university syncup
+   - ( ) Data recording for Samridha
+   - (!) There is a mismatch between uORB topics and px4_msgs in latest commit
+      -- Implement a way so that this doesn't cause problems to the other users
 
 ** Personal
 
@@ -27,26 +35,35 @@ version: 1.1.1
 ===
   ___
 
-* MEETING NAME 
+* Luana / Junior
 
 ** Attendees
 
-   | Names
+   | Junior Sundar
+   | Luana Rocha
 
 ** Goals
 
+   - Discuss logistics and details regarding travel approval
 
 ** Agenda
 
-   - ( ) 
+   - ( ) Go through procedure
+   - ( ) Get questions answered
 
 ** Minutes
 
+   - Need to get confirmation email from Martin with Luana CC'd with start date
+     and duration of trip
+   - Need to confirm what all will be managed from TII side regarding travel
+      -- Martin has to do this possibly through Oksana
+   - Visa details
 
 ** Action Items
+   
+   - (x) Update Martin
 
 ===
 ___
 
-{:./2024/:}[< previous] - {:$/index:}[index] - {:./2024/:}[next >]
-
+{:$/2024/02/02:}[< previous] - {:$/index:}[index] - {:$/2024/02/06:}[next >]
