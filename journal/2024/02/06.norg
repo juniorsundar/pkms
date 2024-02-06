@@ -1,10 +1,10 @@
 @document.meta
 title: template
-description: 5 February 2024 
+description: 
 authors: juniorsundar-unikie
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-01-30T14:27:01+0400
+updated: 2024-02-06T11:14:59+0400
 version: 1.1.1
 @end
 
@@ -14,7 +14,7 @@ version: 1.1.1
 
    - (?) See if it is possible to run simulation stack with HITL
    - ( ) Determine how to add the faulty flight controller to dronsole launch
-   - ( ) Add the fault sources to the HITL build
+   - (x) Add the fault sources to the HITL build
    - ( ) Look into how the Saluki can be set up
 
    - ( ) 22nd Feb, get a few PPT slides ready for the university syncup
@@ -35,35 +35,48 @@ version: 1.1.1
 ===
   ___
 
-* Luana / Junior
+* HiTL Simulation for PX4
 
 ** Attendees
 
+   | Yashrajsinh Parmar
+   | Aravindaraja Puthiyavinayagam
    | Junior Sundar
-   | Luana Rocha
 
 ** Goals
 
-   - Discuss logistics and details regarding travel approval
 
 ** Agenda
 
-   - (x) Go through procedure
-   - (x) Get questions answered
+   - ( ) 
 
 ** Minutes
 
-   - Need to get confirmation email from Martin with Luana CC'd with start date
-     and duration of trip
-   - Need to confirm what all will be managed from TII side regarding travel
-      -- Martin has to do this possibly through Oksana
-   - Visa details
 
 ** Action Items
-   
-   - (x) Update Martin
+
+
+* SSRC - Georgia Tech ML Syncup
+
+** Attendees
+
+   | SRTA-AD
+   | GATech
+
+** Goals
+
+
+** Agenda
+
+   - ( ) 
+
+** Minutes
+
+
+** Action Items
+
 
 ===
 ___
 
-{:$/2024/02/02:}[< previous] - {:$/index:}[index] - {:$/2024/02/06:}[next >]
+{:$/2024/02/05:}[< previous] - {:$/index:}[index] - {:$/2024/:}[next >]
