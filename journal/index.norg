@@ -1,10 +1,10 @@
 @document.meta
-title: Index
+title: Journal
 description: Journal index
 authors: juniorsundar
 categories: 
 created: 2024-01-27T19:57:08+0400
-updated: 2024-02-03T21:31:01+0400
+updated: 2024-02-07T09:40:58+0400
 version: 1.1.1
 @end
 
@@ -23,3 +23,4 @@ version: 1.1.1
     - {:$/2024/02/02:}[2]
     - {:$/2024/02/05:}[5]
     - {:$/2024/02/06:}[6]
+    - {:$/2024/02/07:}[7]
