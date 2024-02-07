@@ -4,7 +4,7 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-07T15:47:12+0400
+updated: 2024-02-07T16:02:48+0400
 version: 1.1.1
 @end
 
@@ -44,7 +44,8 @@ ___
 
 * Scratch
 
-  /scratch/
+  -  Make changes to the launch sequence for Dronsole {https://github.com/tiiuae/sim_system/tree/main}[Here]
+  -  Dronsole repo is {https://github.com/tiiuae/dronsole}[Here]
 
 ===
   ___
