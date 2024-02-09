@@ -1,0 +1,126 @@
+@document.meta
+title: 9 February 2024
+description: 
+authors: juniorsundar-unikie
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-02-09T16:35:31+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+** Work
+
+   - (x) Research: Look into bootloaders (whatever they are)
+   - (x) Data recording for Samridha
+   - ( ) Determine how to add the faulty flight controller to dronsole launch
+      -- ( ) Continue conversation with Ilkka Siiki, Jarmo Hakala, and Lassi
+             Laiho from Solita
+   - (-) Look into how the Saluki can be set up
+      -- FPGA Binaries
+      -- Bootloader
+      -- Saluki Firmware
+      -- Preparation before meeting Steve:
+         --- Install dependencies
+         --- Get the Flashpro
+   - (-) 22nd Feb, get a few PPT slides ready for the university syncup
+
+** Personal
+
+
+   ===
+___
+
+* Scratch
+
+** System Firmware for Hardware Initialisation
+
+*** Basic Input/Output System (BIOS)
+
+
+    ===
+___
+
+* Interview: Andrea Franceshetti 
+
+** Attendees
+
+   | Andrea Franceshetti
+   | Martin Andreoni
+   | Junior Sundar
+   | Ba Nabila (Mike)
+
+** Goals
+
+   - Interview candidate
+
+** Agenda
+
+   - ( ) Ask question
+   - ( ) Offer review
+
+** Minutes
+
+   /Junior Sundar/
+   - Do you any experience working with drones or UAVs?
+   - How did you implement safety into the autonomous navigation system?
+      -- Did you implement some of run-time assurance into your system?
+      -- If so describe it. If no, then could you propose a strategy to
+         implement this system.
+   - Could you outline your general approach to research. Using your Master's
+     Thesis as an example could you take me through an overview/outline of your
+     process?
+   - 
+
+
+** Action Items
+
+* Interview: Harshit Kumar
+
+** Attendees
+
+   | Harshit Kumar
+   | Martin Andreoni
+   | Junior Sundar
+   | Ba Nabila (Mike)
+
+** Goals
+
+   - Interview candidate
+
+** Agenda
+
+   - ( ) Ask question
+   - ( ) Offer review
+
+** Minutes
+
+   /Harshit Kumar/
+   - Mechatronics and CS background
+   - Research process
+      -- Problem statement
+      -- Find out technology out there
+   -- /Did you ever apply algorithms that you researched and test it out?/
+
+   /Junior Sundar/
+   - What aspects of safety would have to take into consideration when
+     considering a system such as a single drone or a swarm of drones
+      -- Do you know what run-time assurance means? Can you express it in the
+         context of a drone or a swarm of drones?
+      -- Can you list up to two possible failure modes a drone can experience
+         during run-time, try to list one that is internal and another that is
+         external to the system. How do you think we can detect these failure
+         modes and what maneouvres can the system execute to react to these
+         modes?
+   - Could you outline your general approach to research. Using your Master's
+     Thesis as an example could you take me through an overview/outline of your
+     process?
+
+** Action Items
+
+
+   ===
+___
+
+{:$/2024/:}[< previous] - {:$/index:}[index] - {:$/2024/:}[next >]
