@@ -4,7 +4,7 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-09T16:35:31+0400
+updated: 2024-02-09T18:32:20+0400
 version: 1.1.1
 @end
 
@@ -18,12 +18,9 @@ version: 1.1.1
       -- ( ) Continue conversation with Ilkka Siiki, Jarmo Hakala, and Lassi
              Laiho from Solita
    - (-) Look into how the Saluki can be set up
-      -- FPGA Binaries
-      -- Bootloader
-      -- Saluki Firmware
-      -- Preparation before meeting Steve:
-         --- Install dependencies
-         --- Get the Flashpro
+      -- (x) Install dependencies
+      -- ( ) Meet Aravindaraja to get access to private repository
+      -- ( ) Meet with Steve to build and flash the firmware
    - (-) 22nd Feb, get a few PPT slides ready for the university syncup
 
 ** Personal
@@ -33,10 +30,6 @@ version: 1.1.1
 ___
 
 * Scratch
-
-** System Firmware for Hardware Initialisation
-
-*** Basic Input/Output System (BIOS)
 
 
     ===
