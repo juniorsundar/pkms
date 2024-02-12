@@ -4,7 +4,7 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-01-31T14:57:06+0400
-updated: 2024-02-12T19:39:38+0400
+updated: 2024-02-12T20:01:50+0400
 version: 1.1.1
 @end
 
@@ -364,7 +364,7 @@ version: 1.1.1
 
      $\text{sup}_{u\in U} [L_f h(x)+L_g h(x)u] \geq -\alpha (h(x))$ 
 
-   Control Lyapunov Functions (CLFs) are powerful tools for ensuring
+     Control Lyapunov Functions (CLFs) are powerful tools for ensuring
      stability in control systems. They help define regions (sublevel sets)
      where the system is guaranteed to remain.
 

@@ -1,0 +1,70 @@
+@document.meta
+title: Runtime Assurance of Aeronautical Products: Preliminary Recommendations
+description: 
+authors: juniorsundar-unikie
+categories: 
+created: 2024-02-12T20:12:14+0400
+updated: 2024-02-12T21:30:16+0400
+version: 1.1.1
+@end
+
+| /Access {https://ntrs.nasa.gov/api/citations/20220015734/downloads/tm-rta-guidance.pdf}[reference]/
+
+* Introduction
+
+  Runtime assurance (RTA) affords an operational layer of protection against
+  safety hazards to systems that may include less trusted or untrusted
+  functions. To that end, the RTA scheme must itself be trusted before it can
+  be deployed into use:
+  ~ It must fit the intended purpose.
+  ~ It must not itself introduce safety hazards.
+
+* Definitions
+
+  - Runtime Monitoring (RTM) - observation of an executing system of interest,
+    its functions, or its environment.
+  - Runtime Verification (RV) - specialisation of RTM, where response of
+    monitor is result of an online verification procedure applied to monitor
+    inputs.
+  - Runtime Assurance (RTM) - combinatin of RTM and one or more functions
+    triggered by RTM, such as recovery, failover, warning, or shutdown.
+  - System Under Observation (SUO) - system of interest for RTA.
+  - Integrated System - SUO that includes RTA.
+
+* Overview
+
+  {/ assets/literature-review1.png}[Figure: Architecture of RTA]
+
+  RTA functions an be decomposed into the following implicitly runtime
+  functions:
+  ~ *Input assurance* - Ensures that not only do monitoring and backup functions
+    receive trusted inputs, but also that they receive the right inputs.
+  ~ *Monitoring* - Detects safety-related deviations/violations by observing an
+    SUO
+     -- emergent interactions at system boundary,
+     -- violations or incorrect function inputs or assumptions of
+        environmental conditions,
+     -- computational deviations from required internal states, state
+        changes, and guards in state transitions, or undesired state
+        transitions.
+  ~ *Switching decision logic* - Risk mitigation intervention triggered by
+    monitor to disconnect /complex function/ and engage the /backup
+  function/. Can be a simple or more sophisticated protocol.
+  ~ *Backup function* - RTA includes one or more that serve to replace or
+    failover from the primary complex function. Is generally a copy of primary
+    with reduced service and capability but robust safety.
+
+* Design
+
+  Trusted RTA is:
+
+  ~ Simple
+  ~ Benign
+  ~ Realisable
+  ~ Verifiable
+  ~ Dependable
+
+  ===
+___
+
+{:$/srta/literature-review/index:}[< return] -  {:$/index:}[index]

@@ -4,14 +4,14 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T18:30:19+0400
-updated: 2024-02-01T21:44:10+0400
+updated: 2024-02-12T21:30:31+0400
 version: 1.1.1
 @end
 
 * Index 
 
-  ~ {:./raw-thoughts:}[Raw Thoughts]
-  ~ {:./literature-review:}[Literature Review]
+  ~ {:$/srta/raw-thoughts:}[Raw Thoughts]
+  ~ {:$/srta/literature-review/index:}[Literature Review]
 
   ===
 ___

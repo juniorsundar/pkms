@@ -1,0 +1,31 @@
+@document.meta
+title: Digital Twin for UAV Anomaly Detection
+description: 
+authors: juniorsundar-unikie
+categories: 
+created: 2024-02-12T20:14:04+0400
+updated: 2024-02-12T21:30:18+0400
+version: 1.1.1
+@end
+
+* Summary
+
+  | /Access {https://www.duo.uio.no/bitstream/handle/10852/93934/1/DTAnomally.pdf}[reference]/
+
+  The thesis explores the use of unmanned aerial vehicles (UAVs), emphasizing
+  their rising popularity due to their low cost and simplicity compared to
+  manned aircraft, particularly in dangerous or remote areas. It focuses on
+  ensuring UAV safety and reliability in sensitive airspace by detecting sudden
+  and anomalous behaviors. The study investigates the use of Inertial
+  Measurement Units (IMU) and vibration analysis for monitoring UAV health.
+
+  A {:../technical/terminologies.digital-twin:}[Digital Twin] is employed to simulate physical system
+  operations, generating data to identify normal UAV
+  operation modes. Real-time operational data is compared against this to
+  detect anomalies, using TimeGAN, a GAN variant for time series data, and
+  k-Means clustering algorithm.
+
+  ===
+___
+
+{:$/srta/literature-review/index:}[< return] -  {:$/index:}[index]
