@@ -4,7 +4,7 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-01-31T14:57:06+0400
-updated: 2024-02-04T22:13:32+0400
+updated: 2024-02-12T19:39:38+0400
 version: 1.1.1
 @end
 
@@ -28,7 +28,7 @@ version: 1.1.1
 *** Nagumo's Theorem
 
     Defines necessary and sufficient conditions for set invariance (safety).
-    
+
     Theorem defines a safe set 'C' (like a safe driving path) using a
     mathematical function '$h$'. If the system's state is described by '$x$',
     the safe set includes all states where $h(x)$ is non-negative (safe
@@ -76,7 +76,7 @@ version: 1.1.1
 
     By applying a logarithmic barrier function, the modified objective
     function becomes:
-    
+
     $F(x, c) = x^2 - c ln(1-x)$
 
     As $x$ approaches 1, the logarithmic term, becomes large, penalising
@@ -301,11 +301,11 @@ version: 1.1.1
       state will converge to the equilibrium, indicating stability.
 
       Consider simple system:
-      
+
       $\dot{x} = -x$
-      
+
       A potential LF could be 
-      
+
       $V(x) = \frac{1}{2} x^2$
 
       Take time derivative:
@@ -330,7 +330,7 @@ version: 1.1.1
       A CLF might also be:
 
       $V(x) = \frac{1}{2} x^2$
-      
+
       However, we can use the CLF to design a control law. For example, by
       choosing:
 
@@ -352,6 +352,22 @@ version: 1.1.1
 
 *** Control Barrier Function (CBF)
 
-    Unlike stability which involves driving a system to a point (or set),
-    safety can be framed in the context of enforcing invariance of a set (i.e.
-    not to leave a safe set)
+**** Definition and Purpose
+
+     CBFs provide a more flexible way to define safety in control systems. It
+     defines a safe region (C), and the system is controlled to stay within C
+     without requiring every possible state within C to always remain within C.
+
+     Unlike stability which involves driving a system to a point (or set),
+     safety can be framed in the context of enforcing invariance of a set (i.e.
+     not to leave a safe set).
+
+     $\text{sup}_{u\in U} [L_f h(x)+L_g h(x)u] \geq -\alpha (h(x))$ 
+
+   Control Lyapunov Functions (CLFs) are powerful tools for ensuring
+     stability in control systems. They help define regions (sublevel sets)
+     where the system is guaranteed to remain.
+
+     However, CLFs can be overly restrictive for defining safety in systems.
+     Applying CLF concepts directly would prevent a system from ever leaving a
+     defined safe region, which might be too limiting in practice.
