@@ -4,7 +4,7 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-02-13T14:43:07+0400
-updated: 2024-02-13T15:07:58+0400
+updated: 2024-02-13T21:06:06+0400
 version: 1.1.1
 @end
 
@@ -56,7 +56,8 @@ version: 1.1.1
 
 *** Process
 
-    - `cd` into the folder all the files above. Ensure that the Saluki V2 is connected through USB.
+    - `cd` into the folder all the files above. Ensure that the Saluki V2 is
+      connected through USB.
     - Run:
 
     @code bash
@@ -69,7 +70,8 @@ version: 1.1.1
     python3 cert_tool.py px4_bin_ed25519_private.pem
     @end
 
-    - If successful, then the Saluki V2 will be mounted as USB device with 3 partitions.
+    - If successful, then the Saluki V2 will be mounted as USB device with 3
+      partitions.
 
 ** Flashing Firmware
 
@@ -80,7 +82,8 @@ version: 1.1.1
 
 *** Process
 
-    - Basically, we can only flash this pre-built firmware since it is compatible with the secure keys.
+    - Basically, we can only flash this pre-built firmware since it is
+      compatible with the secure keys.
     - `cd` into the directory with the above two files.
     - Run:
 
@@ -93,4 +96,4 @@ version: 1.1.1
     ===
 ___
 
-{:./index:}[< return] -  {:$/index:}[index]
+{:$/srta/index:}[< return] -  {:$/index:}[index]

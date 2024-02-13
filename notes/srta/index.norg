@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T18:30:19+0400
-updated: 2024-02-13T14:43:52+0400
+updated: 2024-02-13T20:12:51+0400
 version: 1.1.1
 @end
 
@@ -13,6 +13,7 @@ version: 1.1.1
   ~ {:$/srta/raw-thoughts:}[Raw Thoughts]
   ~ {:$/srta/literature-review/index:}[Literature Review]
   ~ {:$/srta/saluki-v2:}[Saluki V2]
+  ~ {:$/srta/dronsole:}[Dronsole]
 
   ===
 ___
