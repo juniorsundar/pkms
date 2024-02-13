@@ -4,7 +4,7 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-02-13T14:43:07+0400
-updated: 2024-02-13T21:06:06+0400
+updated: 2024-02-13T21:12:32+0400
 version: 1.1.1
 @end
 
@@ -14,7 +14,7 @@ version: 1.1.1
 
 *** Requirements
 
-    - {https://ww1.microchip.com/downloads/secure/aemdocuments/documents/fpga/media-content/fpga/v2023-1/program_debug_v2023.1_lin.zip}[FPExpress]
+    - {http://tinyurl.com/yzhycfch}[FPExpress]
     - FlashPro Programmer V5 or V6
     - Saluki V2 with SysCon Adapter 2 with PolarFire JTAG Connector (ribbon
       cable as well)
