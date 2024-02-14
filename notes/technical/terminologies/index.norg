@@ -4,29 +4,61 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T17:56:54+0400
-updated: 2024-02-14T16:14:43+0400
+updated: 2024-02-14T16:26:34+0400
 version: 1.1.1
 @end
 
 * Index 
 
-  ~ {:$/technical/terminologies/api:}[Application Programming Interface (API)]
-  ~ {:$/technical/terminologies/bootloader:}[Bootloader]
-  ~ {:$/technical/terminologies/continual-task-learning:}[Continual Task Learning]
-  ~ {:$/technical/terminologies/digital-twin:}[Digital Twin]
-  ~ {:$/technical/terminologies/guid-partition-table:}[GUID Partition Table (GPT)]
-  ~ {:$/technical/terminologies/hardware-in-the-loop:}[Hardware in the Loop]
-  ~ {:$/technical/terminologies/master-boot-record:}[Master Boot Record (MBR)]
-  ~ {:$/technical/terminologies/risc-v:}[RISC-V]
-  ~ {:$/technical/terminologies/secure-boot-validation:}[Secure Boot Validation]
-  ~ {:$/technical/terminologies/software-in-the-loop:}[Software in the Loop]
-  ~ {:$/technical/terminologies/system-firmware-for-hardware-initialisation:}[System Firmware for Hardware Initialisation]
-     ~~ {:$/technical/terminologies/system-firmware-for-hardware-initialisation:* Basic Input/Output System (BIOS)}[BIOS]
-     ~~ {:$/technical/terminologies/system-firmware-for-hardware-initialisation:* Unified Extensible Firmware Interface (UEFI)}[UEFI]
-  ~ {:$/technical/terminologies/tcp:}[Transmission Control Protocol (TCP)]
-  ~ {:$/technical/terminologies/udp:}[User Datagram Protocol (UDP)]
+** A
 
-  ===
+   - {:$/technical/terminologies/api:}[Application Programming Interface (API)]
+
+** B
+
+   - {:$/technical/terminologies/bootloader:}[Bootloader]
+
+** C
+
+   - {:$/technical/terminologies/continual-task-learning:}[Continual Task Learning]
+
+** D
+
+   - {:$/technical/terminologies/digital-twin:}[Digital Twin]
+
+** G
+
+   - {:$/technical/terminologies/guid-partition-table:}[GUID Partition Table (GPT)]
+
+** H
+
+   - {:$/technical/terminologies/hardware-in-the-loop:}[Hardware in the Loop]
+
+** M
+
+   - {:$/technical/terminologies/master-boot-record:}[Master Boot Record (MBR)]
+
+** R
+
+   - {:$/technical/terminologies/risc-v:}[RISC-V]
+
+** S
+
+   - {:$/technical/terminologies/secure-boot-validation:}[Secure Boot Validation]
+   - {:$/technical/terminologies/software-in-the-loop:}[Software in the Loop]
+   - {:$/technical/terminologies/system-firmware-for-hardware-initialisation:}[System Firmware for Hardware Initialisation]
+      -- {:$/technical/terminologies/system-firmware-for-hardware-initialisation:* Basic Input/Output System (BIOS)}[BIOS]
+      -- {:$/technical/terminologies/system-firmware-for-hardware-initialisation:* Unified Extensible Firmware Interface (UEFI)}[UEFI]
+
+** T
+
+   - {:$/technical/terminologies/tcp:}[Transmission Control Protocol (TCP)]
+
+** U
+
+   - {:$/technical/terminologies/udp:}[User Datagram Protocol (UDP)]
+
+   ===
 ___
 
 * Summary
