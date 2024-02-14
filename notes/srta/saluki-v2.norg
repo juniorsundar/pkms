@@ -4,7 +4,7 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-02-13T14:43:07+0400
-updated: 2024-02-13T21:12:32+0400
+updated: 2024-02-14T16:20:40+0400
 version: 1.1.1
 @end
 
@@ -73,7 +73,7 @@ version: 1.1.1
     - If successful, then the Saluki V2 will be mounted as USB device with 3
       partitions.
 
-** Flashing Firmware
+** Flashing Firmware (Pre-Built Firmware)
 
 *** Requirements
 
@@ -93,7 +93,30 @@ version: 1.1.1
 
     - If successful, then the Saluki V2 can be worked as a regular Pixhawk.
 
-    ===
+** Flashing Firmware (Custom Firmware)
+
+   In this case, we need to build firmware with a new set of keys that can be
+   verified with the keys in the bootloader and the FPGA (refer to {:$/technical/terminologies/secure-boot-validation:}[this]).
+
+   We apply a patch that signs the keys into the firmware, and then build the
+   px4 firmware.
+
+   @code bash
+   # Clone using SSH to avoid getting permission errors   
+   git clone --recursive git@github.com:tiiuae/px4-firmware-fc-only.git -b v1.13.3-1.0.0-rc5
+
+   # Patch has to be applied to introduce the keys
+   cd px4-firmware-fc-only/Tools/saluki-sec-scripts
+   git am 0002-custom-keys-for-saluki-v2.patch
+
+   # Build with the keys signed
+   cd ../../
+   export SIGNING_ARGS=Tools/saluki-sec-scripts/uae_tii_custom_keys/saluki-v2/px4_bin_ed25519_private.pem
+   ./build.sh ./build saluki-v2_custom_keys
+   @end
+
+
+   ===
 ___
 
 {:$/srta/index:}[< return] -  {:$/index:}[index]
