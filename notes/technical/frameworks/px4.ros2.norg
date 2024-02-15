@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-27T22:38:54+0400
-updated: 2024-02-01T22:13:08+0400
+updated: 2024-02-15T12:40:55+0400
 version: 1.1.1
 @end
 
@@ -197,8 +197,7 @@ version: 1.1.1
    the PX4 through uORB topics. Nearly all of them can also be accessed 
    in ROS 2 as long as the Micro XRCE-DDS agent is active.
    You can find a list of message types available in ROS 2
-   [here](https://github.com/PX4/px4_msgs/tree/main/msg). You can
-   cross-reference the uORB messages with the ROS 2 messages.
+   {https://github.com/PX4/px4_msgs/tree/main/msg}[here]. You can cross-reference the uORB messages with the ROS 2 messages.
 
    However, you can see that only a few out of this list are actually available
    when you call up the topic list. This is because it is possible to only
@@ -434,7 +433,7 @@ version: 1.1.1
            print(e)
    @end
 
-   This  node will activate offboard control mode and publish a offboard
+   This node will activate offboard control mode and publish a offboard
    control signal (`self.publish_offboard_control_heartbeat_signal()`) to the
    UAV at a 10Hz frequency to ensure that it doesn’t leave the offboard control
    mode.

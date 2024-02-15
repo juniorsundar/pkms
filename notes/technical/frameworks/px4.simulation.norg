@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-27T23:14:46+0400
-updated: 2024-02-01T22:04:13+0400
+updated: 2024-02-15T12:37:57+0400
 version: 1.1.1
 @end
 
@@ -19,7 +19,7 @@ ___
 
   Simulators allow PX4 flight code to control a computer modeled vehicle in a
   simulated environment, with the same level of software interactability as the
-  real drone. PX4 supports both {:$/technical/terminologies.software-in-the-loop:}[Software in the Loop] (SITL) and {:$/technical/terminologies.hardware-in-the-loop:}[Hardware in the
+  real drone. PX4 supports both {:$/technical/terminologies/software-in-the-loop:}[Software in the Loop] (SITL) and {:$/technical/terminologies/hardware-in-the-loop:}[Hardware in the
   Loop] (HITL).
 
   There are few supported simulators by the PX4 flight controller, these are
@@ -105,7 +105,7 @@ ___
 
 * Software-in-the-Loop (SITL)
 
-  | /Access {:$/technical/terminologies.software-in-the-loop:}[reference]/
+  | /Access {:$/technical/terminologies/software-in-the-loop:}[reference]/
 
 ** Set-Up
 

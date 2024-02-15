@@ -4,7 +4,7 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-15T12:11:52+0400
+updated: 2024-02-15T15:55:16+0400
 version: 1.1.1
 @end
 
@@ -12,7 +12,12 @@ version: 1.1.1
 
 ** Work
 
-   - ( ) Flash custom firmware into Saluki V2
+   - (-) Flash custom firmware into Saluki V2
+      -- (x) Obtain industrial ethernet cable from Sreejith
+      -- (x) Set up HiTL with unedited firmware
+      -- (x) Build firmware with faults
+      -- (-) Flash faulty-firmware and set up HiTL
+      -- ( ) Test
    - ( ) Discuss how to implement the fault injection functionality in dronsole
    - (-) Meeting with Siva
       -- (x) Background study
