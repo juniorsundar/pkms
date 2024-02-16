@@ -4,29 +4,29 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-16T17:32:02+0400
+updated: 2024-02-17T01:05:49+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-   - (-) Flash custom firmware into Saluki V2
-      -- (-) Flash faulty-firmware and set up HiTL
-      -- ( ) Test
-   - ( ) Discuss how to implement the fault injection functionality in dronsole
-   - (-) Meeting with Siva
-      -- (-) Background study
-      -- ( ) Hold meeting
-   - (x) 22nd Feb, get a few PPT slides ready for the university syncup
-   - ( ) 23 February, Share Objectives (meet | exceed | percentage)
+  - (-) Flash custom firmware into Saluki V2
+     -- (-) Flash faulty-firmware and set up HiTL
+     -- ( ) Test
+  - ( ) Discuss how to implement the fault injection functionality in dronsole
+  - (-) Meeting with Siva
+     -- (x) Background study
+     -- ( ) Hold meeting
+  - (x) 22nd Feb, get a few PPT slides ready for the university syncup
+  - ( ) 23 February, Share Objectives (meet | exceed | percentage)
+
+
+  ===
+___
 
 
 ===
-  ___
-
-
-===
-  ___
+___
 
 
 ===
