@@ -4,7 +4,7 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-02-12T20:15:34+0400
-updated: 2024-02-12T21:30:25+0400
+updated: 2024-02-16T13:13:08+0400
 version: 1.1.1
 @end
 
@@ -68,6 +68,7 @@ version: 1.1.1
    there is a shift towards the MicroXRCE-DDS firmware over the previous
    methodology).
 
+  .image assets/literature-review2.png
    {/ assets/literature-review2.png}[Figure: PX4 High-Level Software Architecture Diagram]
 
    The report defines 6 kinds of faults that can potentially injected into the
@@ -87,6 +88,7 @@ version: 1.1.1
 
    These faults can potentially be implemented as follows:
 
+  .image assets/literature-review3.png
    {/ assets/literature-review3.png}[Figure: High Level Diagram of Simulated Environment with Targets for Fault Implementation]
 
    Although the report lists a range of methods to implement faults, it limits

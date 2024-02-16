@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories:
 created: 2024-01-27T21:25:33+0400
-updated: 2024-02-15T12:41:00+0400
+updated: 2024-02-16T13:11:17+0400
 version: 1.1.1
 @end
 
@@ -174,7 +174,7 @@ ___
 ** Fault Injection
 
    It is possible to inject faults into the flight controller. This methodology
-   is observed in {:$/ideas/srta.literature-review:* Fault Injector For Autonomous Quadrotors}[literature review]. The strategy can be applied by
+   is observed in {:$/srta/literature-review/coutinho2021:}[literature review]. The strategy can be applied by
    introducing faults into the source code itself.
 
 *** Example: IMU
