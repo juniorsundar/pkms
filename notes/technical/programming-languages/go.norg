@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-02-04T17:13:21+0400
-updated: 2024-02-18T17:58:24+0400
+updated: 2024-02-18T21:51:25+0400
 version: 1.1.1
 @end
 
@@ -141,7 +141,7 @@ ___
 
 ** Limitations of `fmt.Scan()`
 
-   The fmt.Scan() function is a great function for easily fetching & using user
+   The `fmt.Scan()` function is a great function for easily fetching & using user
    input through the command line.
 
    But this function also has an *important limitation*: You can't (easily)
@@ -169,6 +169,7 @@ ___
   @end
 
   and finally as:
+
   @code go
   for someCondition {
 
@@ -177,7 +178,7 @@ ___
 
   `someCondition` is an expression that yields a boolean value or variable that
   contains a boolean value. In that case, the loop will continue to execute the
-  code nested in the loop until the codition/variable yields `false`
+  code nested in the loop until the codition/variable yields `false`.
 
   ===
 ___
