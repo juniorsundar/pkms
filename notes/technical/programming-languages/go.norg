@@ -4,15 +4,16 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-02-04T17:13:21+0400
-updated: 2024-02-04T20:19:06+0400
+updated: 2024-02-18T17:58:24+0400
 version: 1.1.1
 @end
 
 * Index
 
-  ~ {:$/technical/programming-languages/go.investment-calculator:}[Example: Investment Calculator]
-  ~ {:$/technical/programming-languages/go.profit-calculator:}[Example: Profit Calculator]
-
+  ~ {:$/technical/programming-languages/go.investment-calculator:}[Example - Investment Calculator]
+  ~ {:$/technical/programming-languages/go.profit-calculator:}[Example - Profit Calculator]
+  ~ {:$/technical/programming-languages/go.bank:}[Example - Bank]
+  
   ===
 ___
 
@@ -125,8 +126,8 @@ ___
 
 * Values and Types
 
-  {:$/technical/programming-languages/go.investment-calculator:}[Example: Investment Calculator]
-  {:$/technical/programming-languages/go.profit-calculator:}[Example: Profit Calculator]
+  {:$/technical/programming-languages/go.investment-calculator:}[Example - Investment Calculator]
+  {:$/technical/programming-languages/go.profit-calculator:}[Example - Profit Calculator]
 
 ** Basic Types
 
@@ -147,8 +148,38 @@ ___
    fetch *multi-word input values*. Fetching text that consists of more than a
    single word is tricky with this function.
 
+* Conditional and `for` Loops
 
-   ===
+  {:$/technical/programming-languages/go.bank:}[Example - Bank]
+
+  The `for` loop in Go comes in a few variations. Some basic ones are:
+
+  @code go
+  for i := 0; i < n; i++ {
+
+  }
+  @end
+
+  or as an infinite loop, which replaces `while` in Go:
+
+  @code go
+  for {
+
+  }
+  @end
+
+  and finally as:
+  @code go
+  for someCondition {
+
+  }
+  @end
+
+  `someCondition` is an expression that yields a boolean value or variable that
+  contains a boolean value. In that case, the loop will continue to execute the
+  code nested in the loop until the codition/variable yields `false`
+
+  ===
 ___
 
 {:$/technical/programming-languages/index:}[< return] - {:$/index:}[index]

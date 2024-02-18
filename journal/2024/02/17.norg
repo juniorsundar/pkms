@@ -4,7 +4,7 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-17T17:32:17+0400
+updated: 2024-02-18T14:12:13+0400
 version: 1.1.1
 @end
 
@@ -18,11 +18,11 @@ version: 1.1.1
    - ( ) Discuss how to implement the fault injection functionality in dronsole
    - (-) Meeting with Siva
       -- ( ) Hold meeting
-   - (x) 22nd February, PPT slides CalTech syncup
+   - (-) 22nd February, PPT slides CalTech syncup
       -- (x) Get few PPT slides ready
       -- (-) Trim PPT
       -- ( ) Prepare script
-   - ( ) 23 February, Share Objectives (meet | exceed | percentage)
+   - ( ) 23rd February, Share Objectives (meet | exceed | percentage)
 
 ** Personal
 
