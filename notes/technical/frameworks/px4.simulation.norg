@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-27T23:14:46+0400
-updated: 2024-02-19T11:57:07+0400
+updated: 2024-02-19T20:31:04+0400
 version: 1.1.1
 @end
 
@@ -21,9 +21,6 @@ ___
   simulated environment, with the same level of software interactability as the
   real drone. PX4 supports both {:$/notes/technical/terminologies/software-in-the-loop:}[Software in the Loop] (SITL) and {:$/notes/technical/terminologies/hardware-in-the-loop:}[Hardware in the
   Loop] (HITL).
-
-  There are few supported simulators by the PX4 flight controller, these are
-  listed below with their advantages and disadvantages.
 
 * Simulators
 
@@ -43,7 +40,7 @@ ___
 
    - *Advantages*
       -- Wide variety of sensor support through plugins. Useful when use cases
-         extend into sensor data streams. 
+         extend into sensor data streams.
       -- Able to simulate multiple vehicles at the same time. More scalable
          than the other options.
       -- Comes with ROS/ROS2 support out-of-the-box
@@ -60,7 +57,7 @@ ___
       -- Able to simulate multiple vehicles at the same time. Most scalable as
          it is lightweight.
       -- Simulation responds appropriately to various fail conditions (GPS
-         failure, {https://www.researchgate.net/publication/353541566_Experimental_Implementation_of_an_Adaptive_Digital_Autopilot}[adversarial flight conditions], etc.) 
+         failure, {https://www.researchgate.net/publication/353541566_Experimental_Implementation_of_an_Adaptive_Digital_Autopilot}[adversarial flight conditions], etc.)
       -- Comes with ROS/ROS2 support out-of-the-box.
       -- Extremely lightweight (resource use wise).
       -- Easy to set-up.

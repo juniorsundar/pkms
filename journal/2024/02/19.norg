@@ -4,7 +4,7 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-19T15:55:56+0400
+updated: 2024-02-19T20:11:38+0400
 version: 1.1.1
 @end
 
@@ -20,7 +20,7 @@ version: 1.1.1
   - (-) Meeting with Siva
      -- ( ) Hold meeting
   - (-) Collect data for Samridha
-     -- (-) {* Bug Fix in SITL Pipeline}[Fix bug] with the fault-state being active even when no faults are present
+     -- (x) {* Bug Fix in SITL Pipeline}[Fix bug] with the fault-state being active even when no faults are present
      -- ( ) Produce some data that causes crashing of drone
   - (-) 22nd February, PPT slides CalTech syncup
      -- (-) Trim PPT
@@ -87,13 +87,13 @@ ___
 
 ** Agenda
 
-   - ( ) What is Datahub
-   - ( ) Datahub building blocks
-   - ( ) Datahub overall architecture
-   - ( ) Query data
-   - ( ) Datahub metadata and use cases
-   - ( ) NATSAPI usage
-   - ( ) SRTA and MLOps
+   - (x) What is Datahub
+   - (x) Datahub building blocks
+   - (x) Datahub overall architecture
+   - (x) Query data
+   - (x) Datahub metadata and use cases
+   - (x) NATSAPI usage
+   - (x) SRTA and MLOps
 
 ** Minutes
 
@@ -116,7 +116,7 @@ ___
    - {https://ssrc.atlassian.net/wiki/spaces/ML/pages/963903933/DataHub+Use+Cases}[DataHub Use Cases]
    - Method of querying the data more efficiently. Crash by crash, etc...
 
-   /Rodolfo Pedraza & Rodolfo Pedraza/
+   /Jarmo Hakala & Rodolfo Pedraza/
    - {https://github.com/tiiuae/platform-ml-rta-sample-model}[Model Development]
    - mlflow model registry?
    - Data preprocessing from NATS and ROS interface
