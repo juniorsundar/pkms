@@ -103,4 +103,4 @@ func calculateFutureValues(investmentAmount float64, expectedReturnRate float64,
 ===
 ___
 
-{:$/technical/programming-languages/go:}[< return] - {:$/index:}[index]
+{:$/notes/technical/programming-languages/go:}[< return] - {:$/notes/index:}[index]

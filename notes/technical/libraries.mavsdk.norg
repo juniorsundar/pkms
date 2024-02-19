@@ -10,7 +10,7 @@ version: 1.1.1
 
 * Index 
 
-  ~ {:$/technical/libraries.mavsdk.python:}[MAVSDK Python]
+  ~ {:$/notes/technical/libraries.mavsdk.python:}[MAVSDK Python]
 
   ===
 ___
@@ -30,7 +30,7 @@ ___
 
   Currently, there is use-in-production support for:
   - C++
-  - {:$/technical/libraries.mavsdk.python:}[Python]
+  - {:$/notes/technical/libraries.mavsdk.python:}[Python]
   - Swift
   - Java
 
@@ -39,4 +39,4 @@ ___
   ===
 ___
 
-  {:$/technical/libraries:}[< return] - {:$/index:}[index]
+  {:$/notes/technical/libraries:}[< return] - {:$/notes/index:}[index]

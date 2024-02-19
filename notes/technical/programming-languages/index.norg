@@ -10,7 +10,7 @@ version: 1.1.1
 
 * Index
 
-  ~ {:$/technical/programming-languages/go:}[Go]
+  ~ {:$/notes/technical/programming-languages/go:}[Go]
 
      ===
 ___
@@ -20,4 +20,4 @@ ___
   ===
 ___
 
-{:$/technical/index:}[< return] - {:$/index:}[index]
+{:$/notes/technical/index:}[< return] - {:$/notes/index:}[index]

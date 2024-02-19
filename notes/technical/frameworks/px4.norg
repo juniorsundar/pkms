@@ -10,9 +10,9 @@ version: 1.1.1
 
 * Index 
 
-  ~ {:$/technical/frameworks/px4.ros2:}[PX4-ROS 2 Integration]
-  ~ {:$/technical/frameworks/px4.simulation:}[Simulation]
-  ~ {:$/technical/frameworks/px4.uorb:}[uORB]
+  ~ {:$/notes/technical/frameworks/px4.ros2:}[PX4-ROS 2 Integration]
+  ~ {:$/notes/technical/frameworks/px4.simulation:}[Simulation]
+  ~ {:$/notes/technical/frameworks/px4.uorb:}[uORB]
 
   ===
 ___
@@ -41,7 +41,7 @@ ___
 
 ** uORB
    
-   | /Access {:$/technical/frameworks/px4.uorb:}[reference]/
+   | /Access {:$/notes/technical/frameworks/px4.uorb:}[reference]/
 
    It is an asynchronous publish() / subscribe() messaging API used for
    inter-thread/inter-process communication. It is automatically started early
@@ -77,7 +77,7 @@ ___
    unreliable low-bandwidth radio links.
 
    PX4 uses MAVLink to communicate with ground stations and apps built with
-   {:$/technical/libraries.mavsdk:}[MAVLink SDKs] such as {:$/technical/frameworks/px4:*** QGroundControl}[QGroundControl].
+   {:$/notes/technical/libraries.mavsdk:}[MAVLink SDKs] such as {:$/notes/technical/frameworks/px4:*** QGroundControl}[QGroundControl].
 
 * Development
 
@@ -149,7 +149,7 @@ ___
 
 *** Simulation (SITL)
     
-    | /Access {:$/technical/frameworks/px4.simulation:* Software-in-the-Loop (SITL)}[reference]/
+    | /Access {:$/notes/technical/frameworks/px4.simulation:* Software-in-the-Loop (SITL)}[reference]/
 
     Simulation is a quick, easy, and most importantly, safe way to test changes
     to PX4 code before attempting to fly in the real world. It is also a good
@@ -164,17 +164,17 @@ ___
 
 *** ROS
 
-    | /Access {:$/technical/frameworks/px4.ros2:}[reference]/
+    | /Access {:$/notes/technical/frameworks/px4.ros2:}[reference]/
 
     Limited only to ROS 2 since ROS 1 is slowly reaching deprecation. Through
-    the {:$/technical/frameworks/px4:*** μXRCE-DDS Agent Installation}[μXRCE-DDS] client-agent, it is possible to expose the uORB
+    the {:$/notes/technical/frameworks/px4:*** μXRCE-DDS Agent Installation}[μXRCE-DDS] client-agent, it is possible to expose the uORB
     messages in the flight controller to the ROS 2 framework. This facilitates
     forward and backwards communication.
 
 ** Fault Injection
 
    It is possible to inject faults into the flight controller. This methodology
-   is observed in {:$/srta/literature-review/coutinho2021:}[literature review]. The strategy can be applied by
+   is observed in {:$/notes/srta/literature-review/coutinho2021:}[literature review]. The strategy can be applied by
    introducing faults into the source code itself.
 
 *** Example: IMU
@@ -411,4 +411,4 @@ ___
     ===
 ___
 
-{:$/technical/frameworks/index:}[< return] - {:$/index:}[index]
+{:$/notes/technical/frameworks/index:}[< return] - {:$/notes/index:}[index]

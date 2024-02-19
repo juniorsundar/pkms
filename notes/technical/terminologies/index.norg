@@ -12,53 +12,53 @@ version: 1.1.1
 
 ** A
 
-   - {:$/technical/terminologies/api:}[Application Programming Interface (API)]
+   - {:$/notes/technical/terminologies/api:}[Application Programming Interface (API)]
 
 ** B
 
-   - {:$/technical/terminologies/bootloader:}[Bootloader]
+   - {:$/notes/technical/terminologies/bootloader:}[Bootloader]
 
 ** C
 
-   - {:$/technical/terminologies/continual-task-learning:}[Continual Task Learning]
+   - {:$/notes/technical/terminologies/continual-task-learning:}[Continual Task Learning]
 
 ** D
 
-   - {:$/technical/terminologies/data-exfiltration:}[Data Exfiltration]
-   - {:$/technical/terminologies/digital-twin:}[Digital Twin]
+   - {:$/notes/technical/terminologies/data-exfiltration:}[Data Exfiltration]
+   - {:$/notes/technical/terminologies/digital-twin:}[Digital Twin]
 
 ** G
 
-   - {:$/technical/terminologies/guid-partition-table:}[GUID Partition Table (GPT)]
+   - {:$/notes/technical/terminologies/guid-partition-table:}[GUID Partition Table (GPT)]
 
 ** H
 
-   - {:$/technical/terminologies/hardware-in-the-loop:}[Hardware in the Loop]
-   - {:$/technical/terminologies/hids:}[Host-Based Intrusion Detection (HIDS)]
+   - {:$/notes/technical/terminologies/hardware-in-the-loop:}[Hardware in the Loop]
+   - {:$/notes/technical/terminologies/hids:}[Host-Based Intrusion Detection (HIDS)]
 
 ** M
 
-   - {:$/technical/terminologies/master-boot-record:}[Master Boot Record (MBR)]
+   - {:$/notes/technical/terminologies/master-boot-record:}[Master Boot Record (MBR)]
 
 ** R
 
-   - {:$/technical/terminologies/risc-v:}[RISC-V]
+   - {:$/notes/technical/terminologies/risc-v:}[RISC-V]
 
 ** S
 
-   - {:$/technical/terminologies/secure-boot-validation:}[Secure Boot Validation]
-   - {:$/technical/terminologies/software-in-the-loop:}[Software in the Loop]
-   - {:$/technical/terminologies/sffhi:}[System Firmware for Hardware Initialisation]
-      -- {:$/technical/terminologies/sffhi:* Basic Input/Output System (BIOS)}[BIOS]
-      -- {:$/technical/terminologies/sffhi:* Unified Extensible Firmware Interface (UEFI)}[UEFI]
+   - {:$/notes/technical/terminologies/secure-boot-validation:}[Secure Boot Validation]
+   - {:$/notes/technical/terminologies/software-in-the-loop:}[Software in the Loop]
+   - {:$/notes/technical/terminologies/sffhi:}[System Firmware for Hardware Initialisation]
+      -- {:$/notes/technical/terminologies/sffhi:* Basic Input/Output System (BIOS)}[BIOS]
+      -- {:$/notes/technical/terminologies/sffhi:* Unified Extensible Firmware Interface (UEFI)}[UEFI]
 
 ** T
 
-   - {:$/technical/terminologies/tcp:}[Transmission Control Protocol (TCP)]
+   - {:$/notes/technical/terminologies/tcp:}[Transmission Control Protocol (TCP)]
 
 ** U
 
-   - {:$/technical/terminologies/udp:}[User Datagram Protocol (UDP)]
+   - {:$/notes/technical/terminologies/udp:}[User Datagram Protocol (UDP)]
 
    ===
 ___
@@ -68,4 +68,4 @@ ___
   ===
 ___
 
-{:$/technical/index:}[< return] - {:$/index:}[index]
+{:$/notes/technical/index:}[< return] - {:$/notes/index:}[index]
