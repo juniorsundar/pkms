@@ -1,0 +1,59 @@
+@document.meta
+title: 19 February 2024
+description: 
+authors: juniorsundar-unikie
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-02-19T11:58:55+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+   - (-) Flash custom firmware into Saluki V2
+     -- (x) Flash faulty-firmware and {:$/notes/technical/frameworks/px4.simulation:* Hardware-in-the-Loop (HITL)}[set up HiTL]
+      -- (-) Test Fault Injection
+      -- ( ) Test control of flight through MAVSDK
+      -- ( ) Touch base with Yashraj to determine what is needed from the HiTL
+   - ( ) Discuss how to implement the fault injection functionality in dronsole
+      -- ( ) Check if Esko and Ilkka need to be invited to Meeting
+  - (-) Meeting with Siva
+      -- ( ) Hold meeting
+   - (-) Collect data for Samridha
+      -- (-) Fix bug with the fault-state being active even when no faults are present
+      -- ( ) Produce some data that causes crashing of drone
+   - (-) 22nd February, PPT slides CalTech syncup
+      -- (-) Trim PPT
+      -- ( ) Prepare script
+   - ( ) 23rd February, Share Objectives (meet | exceed | percentage)
+
+   ===
+___
+
+
+
+  ===
+___
+
+* MEETING NAME 
+
+** Attendees
+
+   | Names
+
+** Goals
+
+
+** Agenda
+
+   - ( ) 
+
+** Minutes
+
+
+** Action Items
+
+   ===
+___
+
+{:$/journal/2024/02/18:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/19:}[next >]

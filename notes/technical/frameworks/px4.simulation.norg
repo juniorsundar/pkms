@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-27T23:14:46+0400
-updated: 2024-02-15T12:37:57+0400
+updated: 2024-02-19T11:57:07+0400
 version: 1.1.1
 @end
 
@@ -170,6 +170,62 @@ ___
            PWM_MAX: 1950
            input_scaling: 1000
            zero_position_armed: 10
+   @end
+
+* Hardware-in-the-Loop (HITL)
+
+  | /Access {:$/notes/technical/terminologies/hardware-in-the-loop:}[reference]/
+
+** Set-Up with Saluki V2
+
+   In order to connect via ethernet, need to provide the following details for
+   eth0 connection:
+
+   > *IPv4 Method*: Manual
+   > *Addresses*:
+   > - *Address*: 192.168.200.100
+   > - *Netmask*: 255.255.255.0
+   > - *Gateway*: 192.168.200.1
+
+   The drone should now connect to `/dev/ttyACM1` after rebooting drone. Can
+   confirm in QGroundControl by connecting to that channel.
+
+** Launch Simulation
+
+   Then, to launch HiTL, run:
+
+   @code bash
+   # From px4-firmware root
+   # Confirmed to work with github.com/tiiuae/px4-firmware -b faulty-controller-hitl
+   ./Tools/simulation/jmavsim/jmavsim_run.sh -q -s -d /dev/ttyACM1 -b 921600 -r 250
+   @end
+
+** Access ROS 2 Topics
+
+   To launch the DDS-Agent for accessing ROS 2 Topics:
+
+   @code bash
+   docker pull ghcr.io/tiiuae/tii-microxrce-agent:sha-9e67fa5
+   docker run -it --rm --network=host ghcr.io/tiiuae/tii-microxrce-agent:sha-9e67fa5
+   @end
+
+   Also possible to run from local installation with open-source MicroXRCE-DDS Agent:
+
+   @code bash
+   MicroXRCEAgent udp4 --port 2020 --send_port 2019 --refs ./agent.refs
+   @end
+
+   Where `agents.refs` file is defined:
+
+   @code refs
+   <profiles>
+       <participant profile_name="default_xrce_participant">
+           <domainId>0</domainId>
+           <rtps>
+               <name>default_xrce_participant</name>
+           </rtps>
+       </participant>
+   </profiles>
    @end
 
    ===
