@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-27T23:47:54+0400
-updated: 2024-02-01T22:13:02+0400
+updated: 2024-02-19T12:09:14+0400
 version: 1.1.1
 @end
 
@@ -159,12 +159,12 @@ version: 1.1.1
    │     ├─ sensor_recorder_unsync.py
    │     └─ simulation_manager.py
    └─ scripts/
-       ├─ build.sh
-       ├─ configure.py
-       ├─ create_session.sh
-       ├─ kill_session.sh
-       ├─ launch_sim.sh
-       └─ update.sh
+   ├─ build.sh
+   ├─ configure.py
+   ├─ create_session.sh
+   ├─ kill_session.sh
+   ├─ launch_sim.sh
+   └─ update.sh
    @end
 
 *** Configuration
@@ -184,9 +184,9 @@ version: 1.1.1
      - number of iterations
      - fault begin time/duration/off-time
      - sensors:
-         -- recorded
-         -- faulted
-         -- type and nature of faults
+        -- recorded
+        -- faulted
+        -- type and nature of faults
 
      This file is accessed by a lot of nodes in the simulation platform.
      However it doesn't have to be edited manually as a simpler configuration
@@ -298,11 +298,11 @@ version: 1.1.1
 
      # Check if the PID was found
      if [ -z "$PID" ]; then
-         echo "No process found with name $PROCESS_NAME"
+     echo "No process found with name $PROCESS_NAME"
      else
      # Kill the process
-         kill $PID
-         echo "Process $PROCESS_NAME (PID $PID) has been killed."
+     kill $PID
+     echo "Process $PROCESS_NAME (PID $PID) has been killed."
      fi
 
      # Kill the tmux session
@@ -322,9 +322,9 @@ version: 1.1.1
        “IDLE“ is simulation on with drone connection inactive, while “ACTIVE”
        is simulation on with drone fully controllable.
      - `/drone_controller`:
-         -- `/initialise`
-         -- `/activate`
-         -- `/deactivate`
+        -- `/initialise`
+        -- `/activate`
+        -- `/deactivate`
 
 **** drone_state_monitor.py
 
@@ -370,9 +370,9 @@ version: 1.1.1
 
      This node publishes to:
      - `/iteration`:
-     -- `/current`: carries a `std_msgs/Int8` message that indicates the current iteration number.
-     -- `/waypoints`: carries a `std_msgs/Float32MultiArray` that is a 1D list
-        of length 4 times the number of waypoints in current iteration.
+        -- `/current`: carries a `std_msgs/Int8` message that indicates the current iteration number.
+        -- `/waypoints`: carries a `std_msgs/Float32MultiArray` that is a 1D list
+           of length 4 times the number of waypoints in current iteration.
 
      The mission sequence is managed through a state machine with four states.
      The transitions between states is based off of the inputs received from
@@ -384,13 +384,13 @@ version: 1.1.1
 
      This node subscribes to:
      - `/iteration`
-     -- `/current`: When a new iteration is started, a new thread is
-        initialised that will basically activate the defined faults in
-        `circuit_params.yaml` randomly. The time of start, and type and nature
-        of faults is recorded in a .csv file. The thread is exited when
-        iteration is COMPLETED or PREEMPTED.
-     -- `/state`: When the iteration is COMPLETED, the .csv file is dumped and
-        all the faults are deactivated.
+        -- `/current`: When a new iteration is started, a new thread is
+           initialised that will basically activate the defined faults in
+           `circuit_params.yaml` randomly. The time of start, and type and nature
+           of faults is recorded in a .csv file. The thread is exited when
+           iteration is COMPLETED or PREEMPTED.
+        -- `/state`: When the iteration is COMPLETED, the .csv file is dumped and
+           all the faults are deactivated.
      - `/gazebo/state`: Waits to see if simulation moves from ACTIVE to IDLE or
        KILLED. In that case, the current iteration is PREEMPTED. If the
        simulation is KILLED while still in iteration, the data collection is
@@ -398,8 +398,8 @@ version: 1.1.1
 
      This node publishes to:
      - `/drone_controller`: Set the params for faults randomly
-     -- `/set_param_int`
-     -- `/set_param_int`
+        -- `/set_param_int`
+        -- `/set_param_int`
 
 **** sensor_recorder.py
 
@@ -413,7 +413,7 @@ version: 1.1.1
     `/install` folders. Each mission is labelled by timestamp, with
     subdirectories corresponding to the iteration number.
 
-   ===
+    ===
 ___
 
-  {:$/notes/technical/frameworks/px4.simulation:}[< return] - {:$/notes/index:}[index]
+{:$/notes/technical/frameworks/px4.simulation:}[< return] - {:$/notes/index:}[index]
