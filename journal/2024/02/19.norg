@@ -4,14 +4,14 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-19T21:32:43+0400
+updated: 2024-02-20T14:49:02+0400
 version: 1.1.1
 @end
 
 * To-Do
 
   - (-) Flash custom firmware into Saluki V2
-     -- (x) Flash faulty-firmware and {:$/notes/technical/frameworks/px4.simulation:* Hardware-in-the-Loop (HITL)}[set up HiTL]
+     -- (x) Flash faulty-firmware and set up HITL
      -- (-) Test Fault Injection
      -- ( ) Test control of flight through MAVSDK
      -- ( ) Touch base with Yashraj to determine what is needed from the HiTL
@@ -20,12 +20,21 @@ version: 1.1.1
   - (-) Meeting with Siva
      -- ( ) Hold meeting
   - (-) Collect data for Samridha
-     -- (x) {* Bug Fix in SITL Pipeline}[Fix bug] with the fault-state being active even when no faults are present
+     -- (x) Fix bug with the fault-state being active even when no faults are present
      -- ( ) Produce some data that causes crashing of drone
   - (-) 22nd February, PPT slides CalTech syncup
      -- (-) Trim PPT
      -- ( ) Prepare script
   - ( ) 23rd February, Share Objectives (meet | exceed | percentage)
+
+* Journal
+
+  - {:$/notes/technical/frameworks/px4.simulation:* Hardware-in-the-Loop (HITL)}[HITL set up] with Saluki V2
+  - {* Bug Fix in SITL Pipeline}[Fixed bug] in SITL pipeline
+  - Updated {:$/tgt/index:}[The Good Teacher]
+     -- Completed {:$/tgt/volume-6/chapter-422:}[Chapter 422 - Fear, Uncertainty, Doubt]
+     -- Uploaded {:$/tgt/volume-6/chapter-410:}[Chapter 410 - Regrouping]
+
 
   ===
 ___
@@ -64,8 +73,6 @@ ___
                   self.out_string += f"{random_value},"
       self.out_string = self.out_string[:-1] + "\n"
   @end
-
-
 
   ===
 ___
@@ -122,10 +129,10 @@ ___
    - Data preprocessing from NATS and ROS interface
 
 ** Action Items
-   - ( ) Check how the data is being received and recorded so that it can be used by ML models. The format, processing, etc.
+   - (x) Check how the data is being received and recorded so that it can be used by ML models. The format, processing, etc.
    - ( ) Check if it is possible to automate ROS node generation.
 
    ===
 ___
 
-{:$/journal/2024/02/18:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/19:}[next >]
+{:$/journal/2024/02/18:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/20:}[next >]

@@ -1,0 +1,110 @@
+@document.meta
+title: 20 February 2024
+description: 
+authors: juniorsundar-unikie
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-02-20T15:53:59+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+  - (-) Flash custom firmware into Saluki V2
+     -- (x) Test Fault Injection
+     -- (?) Check if through MAVLink is possible
+     -- (?) Check if Gazebo is possible in HITL
+     -- ( ) Test control of flight through MAVSDK
+     -- ( ) Touch base with Yashraj to determine what is needed from the HiTL
+  - ( ) Discuss how to implement the fault injection functionality in dronsole
+     -- ( ) Check if Esko and Ilkka need to be invited to Meeting
+  - (-) Meeting with Siva
+     -- ( ) Hold meeting
+  - (x) Collect data for Samridha
+     -- (x) Produce some data that causes crashing of drone
+  - (-) 22nd February, PPT slides CalTech syncup
+     -- (x) Trim PPT
+     -- (x) Prepare script
+     -- (-) Practise and update for 5 minutes
+  - ( ) 23rd February, Share Objectives (meet | exceed | percentage)
+  - ( ) #RESEARCH Check if it is possible to automate ROS node generation.
+
+* Journal
+
+  - Collected failing runs with gyro shifting for Samridha
+  - Trimmed PPT and wrote a script
+  - Fault injection is possible through QGroundControl GUI.
+  - 
+
+  ===
+___
+
+/scratch/
+
+===
+___
+
+* Meeting: MLOps and Safe Landing
+
+** Attendees
+
+   | SRTA-AD
+   | | Willian Lunardi
+   | Solita
+   | | Moamen Ibrahim
+   | | Jarmo Hakala
+   | | Philip Schmalen
+
+** Goals
+
+   - MLOps
+   - Safe Landing
+
+** Agenda
+
+   - (x) MLOps expectations from Solita and TII
+   - (x) Data recording Format
+   - ( ) Safe landing
+
+** Minutes
+
+   /Willian Lunardi/
+   - Roles discussion
+      -- R&D - TII
+      -- Optimisation and Deployment (Hybrid TII/Solita)
+      -- MLOps (Solita/TII)
+   - MLOps Expectations
+      -- Data management
+      -- Periodic retraining pipeline with minimal human intervention
+      -- Model monitoring and versioning
+      -- Automation and CI/CD
+      -- Documentation and Compliance
+
+   /Moamen Ibrahim/
+   - {https://github.com/foxglove/mcap}[MCAP] Format for data recording (for ROSBAGs)
+
+   /Jarmo Hakala/
+   - Continue on template repository
+
+   /Philip Schmalen/
+   - Terminology
+      -- Normal Landing: Drone lands at specified spot according to mission
+      -- Safe Landing: Drone cannot land at specified landing spot, still functional (has free resources to execute workload)
+      -- Emergency Landing: Drone has a major failure so flight controller forces landing
+   - Main tasks
+      -- Dataset and model selection
+      -- Replicating results: Using open-source data and code
+      -- Finetuning
+      -- Deployment and related tasks
+
+
+** Action Items
+
+   - ( ) Research into "Rule-Based Decision Engine"
+   - ( ) Try dumping the fault data as MCAP
+   - ( ) Explore emergency landing trigger with GPS issues
+
+   ===
+___
+
+{:$/journal/2024/02/19:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/21:}[next >]
