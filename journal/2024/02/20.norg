@@ -4,7 +4,7 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-20T15:53:59+0400
+updated: 2024-02-20T16:27:47+0400
 version: 1.1.1
 @end
 
@@ -12,14 +12,15 @@ version: 1.1.1
 
   - (-) Flash custom firmware into Saluki V2
      -- (x) Test Fault Injection
-     -- (?) Check if through MAVLink is possible
-     -- (?) Check if Gazebo is possible in HITL
-     -- ( ) Test control of flight through MAVSDK
+     -- (x) Check if through MAVLink is possible
+     -- (x) Check if Gazebo is possible in HITL
+     -- (x) Test control of flight through MAVSDK
      -- ( ) Touch base with Yashraj to determine what is needed from the HiTL
-  - ( ) Discuss how to implement the fault injection functionality in dronsole
-     -- ( ) Check if Esko and Ilkka need to be invited to Meeting
-  - (-) Meeting with Siva
-     -- ( ) Hold meeting
+  - (-) Discuss how to implement the fault injection functionality in dronsole
+     -- (x) Check if Esko and Ilkka need to be invited to Meeting
+     -- (-) Prepare for meeting with Esko and Ilkka
+  - (_) -Meeting with Siva-
+     -- (_) -Hold meeting-
   - (x) Collect data for Samridha
      -- (x) Produce some data that causes crashing of drone
   - (-) 22nd February, PPT slides CalTech syncup
@@ -34,7 +35,9 @@ version: 1.1.1
   - Collected failing runs with gyro shifting for Samridha
   - Trimmed PPT and wrote a script
   - Fault injection is possible through QGroundControl GUI.
-  - 
+  - MAVLink connection is not necessary for HITL since it is possible through MAVSDK.
+  - New Gazebo not possible with HITL
+  - Meeting with Siva placed on tentative cancel until Siva finalises the tasks for himself.
 
   ===
 ___
@@ -64,7 +67,7 @@ ___
 
    - (x) MLOps expectations from Solita and TII
    - (x) Data recording Format
-   - ( ) Safe landing
+   - (x) Safe landing
 
 ** Minutes
 
@@ -96,7 +99,13 @@ ___
       -- Replicating results: Using open-source data and code
       -- Finetuning
       -- Deployment and related tasks
-
+   - Simplifying assumptions for early iteration
+      -- Functioning drone able to execute workloads
+      -- Operable camera
+      -- Camera pointing down
+      -- Clear, unblurred view, static position
+      -- Landing spot is within field of vision
+      -- Single drone
 
 ** Action Items
 
