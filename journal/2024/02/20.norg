@@ -4,7 +4,7 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-20T16:27:47+0400
+updated: 2024-02-20T20:17:35+0400
 version: 1.1.1
 @end
 
@@ -35,9 +35,11 @@ version: 1.1.1
   - Collected failing runs with gyro shifting for Samridha
   - Trimmed PPT and wrote a script
   - Fault injection is possible through QGroundControl GUI.
-  - MAVLink connection is not necessary for HITL since it is possible through MAVSDK.
+  - MAVLink connection is not necessary for HITL since it is possible through
+    MAVSDK.
   - New Gazebo not possible with HITL
-  - Meeting with Siva placed on tentative cancel until Siva finalises the tasks for himself.
+  - Meeting with Siva placed on tentative cancel until Siva finalises the tasks
+    for himself.
 
   ===
 ___
@@ -92,8 +94,10 @@ ___
    /Philip Schmalen/
    - Terminology
       -- Normal Landing: Drone lands at specified spot according to mission
-      -- Safe Landing: Drone cannot land at specified landing spot, still functional (has free resources to execute workload)
-      -- Emergency Landing: Drone has a major failure so flight controller forces landing
+      -- Safe Landing: Drone cannot land at specified landing spot, still
+         functional (has free resources to execute workload)
+      -- Emergency Landing: Drone has a major failure so flight controller
+         forces landing
    - Main tasks
       -- Dataset and model selection
       -- Replicating results: Using open-source data and code

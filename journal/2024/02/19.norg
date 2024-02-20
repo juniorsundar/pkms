@@ -4,7 +4,7 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-20T14:49:02+0400
+updated: 2024-02-20T20:17:36+0400
 version: 1.1.1
 @end
 
@@ -105,20 +105,26 @@ ___
 ** Minutes
 
    /Moamen Ibrahim/
-   - Datahub aggregates metadata from missions and devices. Provides centralised system for data.
+   - Datahub aggregates metadata from missions and devices. Provides
+     centralised system for data.
    - Can see data flows.
    - Collects and shares data in variety of formats.
-   - Track data collected by devices and build relationship between those entities.
+   - Track data collected by devices and build relationship between those
+     entities.
    - Datahub:
-      ~~ Gateway aggregator: Listens to mission and telemetry data and publish them for storing mission info
+      ~~ Gateway aggregator: Listens to mission and telemetry data and publish
+         them for storing mission info
       ~~ NATS-API: Like FAST-API but for NATS based applications
       ~~ Datahub UI: User-friendly access to data
       ~~ Database: Stores in PostGRESQL
    - Datahub offline only has access to metadata
    - Datahub cannot truly be real-time
    - Data Ingestion: ROSBag decryption pipeline
-   - Data Recorder: Define which topics are to be recorded and what size/parameter. It will record and dump ROSBags according to that provision.
-   - /Every drone in swarm is sending data to cloud. Not using the current swarm architecture of micro-, meso-, macro-level./
+   - Data Recorder: Define which topics are to be recorded and what
+     size/parameter. It will record and dump ROSBags according to that
+     provision.
+   - /Every drone in swarm is sending data to cloud. Not using the current
+   swarm architecture of micro-, meso-, macro-level./
    - *Data format for being processed and used by ML Models??*
    - {https://ssrc.atlassian.net/wiki/spaces/ML/pages/963903933/DataHub+Use+Cases}[DataHub Use Cases]
    - Method of querying the data more efficiently. Crash by crash, etc...
