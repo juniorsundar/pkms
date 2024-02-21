@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-21T12:23:22+0400
+updated: 2024-02-21T16:13:53+0400
 version: 1.1.1
 @end
 
@@ -27,8 +27,11 @@ version: 1.1.1
   - Checked out the failsafe and emergency landing triggers for PX4
      -- {https://docs.px4.io/main/en/config/safety.html}[Documentation on PX4-Autopilot]
      -- {:$/notes/technical/frameworks/px4.safety-configuration:}[Notes]
-  - Sat in on {* Interview: Internship - Akram Khairi - SSRC}[interview] 
+  - Sat in on {* Interview: Internship - Akram Khairi - SSRC}[Interview of Intern] 
+  - Sent mail to Oksana Sandulenko with Intern Recommendation
+     -- Sent to Systems Testing Team
   - Attended {* RTA Meeting}[RTA Meeting]
+  - Attended {* Architecture and UI}[Architecture and UI] syncup with Solita
 
   ===
 ___
@@ -70,7 +73,7 @@ ___
    | | Rayana Boubezari
    | | Junior Sundar
 
-** Goals
+** JaGoals
 
    - Discuss progress
 
@@ -92,6 +95,77 @@ ___
 ** Action Items
 
    - (!) Update Jira
+
+* Architecture and UI
+
+** Attendees
+
+   | SRTA-AD
+   | | Martin Andreoni
+   | | Willian Lunardi
+   | Solita
+   | | Moamen Ibrahim
+   | | Jarmo Hakala
+   | | Philip Schmalen
+
+** Goals
+
+   - Dronsole
+   - Mission UI
+
+** Agenda
+
+   - (x) Dronsole demo
+   - (x) Mission UI
+   - (?) Deployment
+
+** Minutes
+
+   /Jarmo Hakala/
+   - Brief demo of Dronsole
+   - Complete documentation for {https://github.com/tiiuae/airoplatform-docs}[Dronsole].
+   - Mission UI Internal workshop
+   - SRTA Dashboard (Safety dashboard)
+   - Preflight checks
+   - Model or product deployment
+
+   /Willian Lunardi/
+   - Speed up simulation?
+   - Iterative missions?
+
+   /Martin Andreoni/
+   - Jamming location in UI
+   - Human intervention or fully autonomous?
+   - How much information and how to provide the information?
+   - Display improvements.
+
+** Action Items
+
+
+* Syncup with Martin Saska
+
+** Attendees
+
+   | Martin Saska
+   | Martin Andreoni
+   | Willian Lunardi
+   | Junior Sundar
+
+** Goals
+    
+   - 
+
+** Agenda
+
+   - ( ) 
+
+** Minutes
+
+   - 
+
+
+** Action Items
+
 
    ===
 ___
