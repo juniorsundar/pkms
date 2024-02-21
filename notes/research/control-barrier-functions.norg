@@ -4,7 +4,7 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-01-31T14:57:06+0400
-updated: 2024-02-12T20:01:50+0400
+updated: 2024-02-20T20:34:15+0400
 version: 1.1.1
 @end
 
@@ -20,7 +20,7 @@ version: 1.1.1
 
 *** How it works
 
-    In essence, a barrier funciton incorporates constraints of optimisation
+    In essence, a barrier function incorporates constraints of optimisation
     problem into objective function. This is done by adding a *penalty term* to
     the objective function that *becomes large as the solution approaches the
     boundary* of the feasible region defined by the constraints.
