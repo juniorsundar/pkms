@@ -4,15 +4,16 @@ description:
 authors: juniorsundar
 categories:
 created: 2024-01-27T21:25:33+0400
-updated: 2024-02-16T13:11:17+0400
+updated: 2024-02-21T11:56:13+0400
 version: 1.1.1
 @end
 
 * Index 
 
-  ~ {:$/notes/technical/frameworks/px4.ros2:}[PX4-ROS 2 Integration]
-  ~ {:$/notes/technical/frameworks/px4.simulation:}[Simulation]
-  ~ {:$/notes/technical/frameworks/px4.uorb:}[uORB]
+  ~ {:$/notes/technical/frameworks/px4.ros2:}[PX4 - ROS 2 Integration]
+  ~ {:$/notes/technical/frameworks/px4.safety-configuration:}[PX4 - Safety Configuration]
+  ~ {:$/notes/technical/frameworks/px4.simulation:}[PX4 - Simulation]
+  ~ {:$/notes/technical/frameworks/px4.uorb:}[PX4 - uORB]
 
   ===
 ___
@@ -40,7 +41,7 @@ ___
 * Middleware
 
 ** uORB
-   
+
    | /Access {:$/notes/technical/frameworks/px4.uorb:}[reference]/
 
    It is an asynchronous publish() / subscribe() messaging API used for
@@ -148,7 +149,7 @@ ___
     @end
 
 *** Simulation (SITL)
-    
+
     | /Access {:$/notes/technical/frameworks/px4.simulation:* Software-in-the-Loop (SITL)}[reference]/
 
     Simulation is a quick, easy, and most importantly, safe way to test changes
@@ -407,7 +408,7 @@ ___
         }
     }
     @end
-    
+
     ===
 ___
 

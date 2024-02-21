@@ -1,0 +1,96 @@
+@document.meta
+title: 21 February 2023
+description: 
+authors: juniorsundar-unikie
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-02-21T12:14:10+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+  - (-) Flash custom firmware into Saluki V2
+     -- ( ) Touch base with Yashraj to determine what is needed from the HiTL
+  - (-) Discuss how to implement the fault injection functionality in dronsole
+     -- (-) Prepare for meeting with Esko and Ilkka
+  - (-) 22nd February, PPT slides CalTech syncup
+     -- (-) Practise and update for 5 minutes
+  - ( ) 23rd February, Share Objectives (meet | exceed | percentage)
+  - ( ) #RESEARCH Is it possible to automate ROS node generation.
+  - ( ) #RESEARCH "Rule-Based Decision Engine"
+  - ( ) Try dumping the fault data as MCAP
+  - (x) Explore emergency landing trigger with GPS issues
+
+* Journal
+
+  - Checked out the failsafe and emergency landing triggers for PX4
+     -- {https://docs.px4.io/main/en/config/safety.html}[Documentation on PX4-Autopilot]
+     -- {:$/notes/technical/frameworks/px4.safety-configuration:}[Notes]
+  - Sat in on {* Interview: Internship - Akram Khairi - SSRC}[interview] 
+  - Attended {* RTA Meeting}[RTA Meeting]
+
+  ===
+___
+
+
+===
+___
+
+* Interview: Internship - Akram Khairi - SSRC  
+
+** Attendees
+
+   | Akram Khairi
+   | SSRC
+   | | Willian Lunardi
+   | | Junior Sundar
+   | | Oksana Sandulenko
+   | | John Durotifa-Babatunde
+
+** Minutes
+
+   - Specialises in Mechanical engineer and Robotics (hardware mainly)
+   - Some experience with Pixhawk/PX-4 for controlling motors of a land/water rower
+   - Only some experience with generative AI
+      -- Text-to-2D --> 2D-to-3D
+   - Not suitable for team. May find it too out of the way.
+
+   /Junior Sundar/
+   - Applied research
+   - Interest in creative problem solving while working within set limitations.
+   - Working in existing frameworks and platforms.
+
+* RTA Meeting
+
+** Attendees
+
+   | SRTA-AD
+
+** Goals
+
+   - Discuss progress
+
+** Agenda
+
+   - (x) Updates from above
+   - (x) Discuss progress
+   - (-) Update JIRA
+
+** Minutes
+
+   /Martin Andreoni/
+   - Finish slides by today.
+
+   /Rayana Boubezari/
+   - If any hardware or people are needed plan in advance.
+
+
+** Action Items
+
+   - (!) Update Jira
+
+   ===
+___
+
+{:$/journal/2024/02/20:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/22:}[next >]
