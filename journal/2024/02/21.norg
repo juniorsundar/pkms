@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-21T16:13:53+0400
+updated: 2024-02-21T17:27:04+0400
 version: 1.1.1
 @end
 
@@ -146,23 +146,49 @@ ___
 
 ** Attendees
 
-   | Martin Saska
-   | Martin Andreoni
-   | Willian Lunardi
-   | Junior Sundar
+   | Fly4Future
+   | | Martin Saska
+   | SRTA-AD
+   | | Martin Andreoni
+   | | Willian Lunardi
+   | | Junior Sundar
 
 ** Goals
     
-   - 
+   - Introducing project
+   - Obtain feedback
+   - Suggestions
 
 ** Agenda
 
-   - ( ) 
+   - (x) Presentation for SRTA
+   - ( ) Feedback
 
 ** Minutes
 
-   - 
+   /Martin Andreoni/
+   - How SRTA differs from RTA (ML models to detect anomalies)
 
+   /Martin Saska/
+   - Reliable swarming works in {https://mrs.felk.cvut.cz/people/martin-saska}[CVUT].
+   - LiDAR-based, IMU-based attacks, ...?
+      -- Better to not call it "attacks".
+      -- /Environment found to be a more problematic issue./
+      -- GNSS-denied condition when LiDAR is lost and suddenly you don't have visual features. Have to rely on other sensors here.
+      -- /Rather than human-driven conditions, this is the more common cases, which is also important to consider for reliable systems./
+   - If talking about fully autonomous drones, fusing multiple sensor modalities for safe flying is the only solution he sees right now.
+   - Security w.r.t. weather conditions? Testing in one condition but operating in another.
+   - Sensor redundancies to take over if one is failed.
+   - State estimation is tough in single drone, but with swarms it becomes worse.
+   - Relative state of neighbours with onboard sensors.
+   - Human induced faults cannot always replicate what the actual.
+   - *ideas* Found that there can be some cases where swarm can help if another drone is stuck.
+   -- Cooperative state estimation above featureles environments
+
+   /Willian Lunardi/
+   - There is a scarcity of data with anomalies. Not possible to secure against the whole gamut of anomalies.
+   - Self-supervised and unsupervised approach to detect instances that characterises anomalies.
+   - Could we launch drones with inherent faults? Yes, should be possible.
 
 ** Action Items
 
