@@ -1,10 +1,10 @@
 @document.meta
 title: 21 February 2023
 description: 
-authors: juniorsundar-unikie
+authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-21T12:14:10+0400
+updated: 2024-02-21T12:23:22+0400
 version: 1.1.1
 @end
 
@@ -19,7 +19,7 @@ version: 1.1.1
   - ( ) 23rd February, Share Objectives (meet | exceed | percentage)
   - ( ) #RESEARCH Is it possible to automate ROS node generation.
   - ( ) #RESEARCH "Rule-Based Decision Engine"
-  - ( ) Try dumping the fault data as MCAP
+  - ( ) Try dumping the fault data as {https://github.com/foxglove/mcap}[MCAP]
   - (x) Explore emergency landing trigger with GPS issues
 
 * Journal
@@ -66,6 +66,9 @@ ___
 ** Attendees
 
    | SRTA-AD
+   | | Martin Andreoni
+   | | Rayana Boubezari
+   | | Junior Sundar
 
 ** Goals
 
