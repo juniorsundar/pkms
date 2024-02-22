@@ -222,13 +222,13 @@ version: 1.1.1
     and the unsafe region as a particular area around the obstacle.
 
     A barrier certificate $B(x)$ can be designed such that the $B(x) \geq 0$
-    represents the safe region (away from the obstacle) and $B(x)<0$
-    represents the unsafe region (close to or in the obstacle).
+    represents the safe region (away from the obstacle) and $B(x)<0$ represents
+    the unsafe region (close to or in the obstacle).
 
     If we can show that for all initial states $x_0$ in teh safe region and for
-    all times $t \geq 0, B(x(t)) \geq 0$ holds (the certificate's value
-    remains non-negative along system trajectory) then we have certified that
-    the robot will not collide with the obstace.
+    all times $t \geq 0, B(x(t)) \geq 0$ holds (the certificate's value remains
+    non-negative along system trajectory) then we have certified that the robot
+    will not collide with the obstace.
 
 *** Application
 
