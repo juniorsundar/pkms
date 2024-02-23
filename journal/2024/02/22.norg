@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-22T21:34:32+0400
+updated: 2024-02-23T10:05:40+0400
 version: 1.1.1
 @end
 
@@ -16,12 +16,12 @@ version: 1.1.1
      -- (x) Prepare for meeting with Esko and Ilkka
   - (x) 22nd February, PPT slides CalTech syncup
      -- (x) Practise and update for 5 minutes
-  - ( ) 23rd February, Share Objectives (meet | exceed | percentage)
+  - (x) 23rd February, Share Objectives (meet | exceed | percentage)
   - ( ) #RESEARCH Is it possible to automate ROS node generation.
   - ( ) #RESEARCH "Rule-Based Decision Engine"
   - ( ) Try dumping the fault data as {https://github.com/foxglove/mcap}[MCAP]
   - ( ) Update feature tracker for Shamsa battery consumption project
-  - ( ) Sign the Bank contract from Federal
+  - (x) Sign the Bank contract from Federal
 
 * Journal
   - Yashraj asked a question about sensor sampling rates
@@ -88,7 +88,7 @@ ___
 
    - ( ) Dronsole groundwork
       -- ( ) Troubleshoot issue with the docker port being occupied
-      -- ( ) Investigate process to reset drone at failure. Check {:$/journal/2024/02/22:* Fault Injection UI and Swarm Controls}[here].
+      -- ( ) Investigate process to reset drone at failure. Check {:$/journal/2024/02/22:* Fault Injection UI and Swarm Controls}[here]
       -- ( ) Investigate the strategy to send waypoints through the NATS topic for path worker
       -- ( ) Test the DataHub method for obtaining data
          --- ( ) Syncup with Moamen as well
