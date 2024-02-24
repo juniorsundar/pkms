@@ -1,0 +1,46 @@
+@document.meta
+title: 24 February 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-02-24T16:00:40+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+  - (-) Flash custom firmware into Saluki V2
+     -- ( ) Touch base with Yashraj to determine what is needed from the HiTL
+  - ( ) #RESEARCH Is it possible to automate ROS node generation.
+  - ( ) #RESEARCH "Rule-Based Decision Engine"
+  - (-) Try dumping the fault data as {https://github.com/foxglove/mcap}[MCAP]
+  - (-) Update feature tracker for Shamsa battery consumption project
+  - (-) Dronsole groundwork
+     -- (-) Troubleshoot issue with the docker port being occupied
+     -- ( ) Investigate process to reset drone at failure. Check {:$/journal/2024/02/22:* Fault Injection UI and Swarm Controls}[here]
+     -- ( ) Investigate the strategy to send waypoints through the NATS topic
+            for path worker
+     -- ( ) Test the DataHub method for obtaining data
+        --- ( ) Syncup with Moamen as well
+     -- ( ) Syncup with Ilkka for the swarm NATS implementation
+  - ( ) Plan for Fault Injector Interface
+
+* Journal
+
+  - Went shopping (Lulu and Al-Adil)
+  - Retrieved Nissan from servicing
+
+===
+  ___
+
+  /scratch/
+
+===
+  ___
+
+
+===
+___
+
+{:$/journal/2024/02/23:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/25:}[next >]
