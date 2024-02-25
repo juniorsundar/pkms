@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-02-04T17:13:21+0400
-updated: 2024-02-18T21:51:25+0400
+updated: 2024-02-25T17:03:08+0400
 version: 1.1.1
 @end
 
@@ -13,7 +13,9 @@ version: 1.1.1
   ~ {:$/notes/technical/programming-languages/go.investment-calculator:}[Example - Investment Calculator]
   ~ {:$/notes/technical/programming-languages/go.profit-calculator:}[Example - Profit Calculator]
   ~ {:$/notes/technical/programming-languages/go.bank:}[Example - Bank]
-  
+  ~ {:$/notes/technical/programming-languages/go.bank-packages:}[Example - Bank Packages]
+  ~ {:$/notes/technical/programming-languages/go.pointers:}[Example - Pointers]
+
   ===
 ___
 
@@ -99,7 +101,7 @@ ___
    import "fmt" // importing the "fmt" package from the standard library
 
    func main() {
-       fmt.Print("Hello World")
+   fmt.Print("Hello World")
    }
    @end
 
@@ -180,7 +182,84 @@ ___
   contains a boolean value. In that case, the loop will continue to execute the
   code nested in the loop until the codition/variable yields `false`.
 
-  ===
+* Files and Packages
+
+
+  {:$/notes/technical/programming-languages/go.bank_packages:}[Example - Bank Packages]
+
+  image assets/files-and-packages.png
+
+  Every package must go into its own subfolder in a project (which you can call
+  the root folder).
+
+  Only variables and functions with a *capital letter first can be exported* from
+  one package and used in another package.
+
+  Can find third-party packages in the Go's package {https://pkg.go.dev/}[library]. You can install
+  them by using the following command.
+
+  @code bash
+  go get <third-party-package-source-link>
+  @end
+
+  If this is called from within a package, then it will add the installed
+  third-party package to the `go.mod` file. The third-party package, though, is
+  stored globally.
+
+  It also adds a `go.sum` file which contains information about how the current
+  package can access the third-party package. In case the file does not exist,
+  run the below command while inside the root directory.
+
+  @code bash
+  go get <current-package-source-link>
+  @end
+
+* Pointers
+
+  {:$/notes/technical/programming-languages/go.pointers:}[Example - Pointers]
+
+** Introduction
+
+   Variables that store value addresses instead of values. Any value
+   initialised in code is stored in memory at a respective address. Pointers
+   target the address instead of the value itself. the `&` operater retrieves
+   the value in the memory address.
+
+** Purpose
+
+   *It avoids unnecessary value copies*. By default, Go creates a copy when
+   passing values to functions. It is removed from memory by the garbage
+   collector at the end of a function. For very large and complex values, this
+   may take up too much memory and space unnecessarily. By sending the address
+   to a function, it doesn't create compies, instead the function uses the
+   originally stored value. Hence, only one value is stored in memory.
+
+   *It directly mutates values*. This also means that you don't need to return a
+   copy, as the function can directly operate on the value through the pointer.
+   This leads to less code, but it also means that the code can become less
+   understandable, and result in unexpeceted behaviour as values can be mutated
+   by one function while another is in the middle of a thread.
+
+   $ Garbage collector
+   Routine that removes unused values from memory as they exit the scope of a
+   program
+
+** Pointer's Null Value
+
+   All values in Go have a so-called "Null Value" i.e. the value that's set as
+   default if no value is assigned to a variable.
+
+   For example, the null value of an `int` is `0`. Of a `float64` is `0.0`. Of a
+   `string` is `""`,
+
+   For a point, it is `nil` - a special value built into Go.
+
+   `nil` represents the absence of an address value i.e. a pointer pointing at
+   no address/value in memory.
+
+
+
+   ===
 ___
 
 {:$/notes/technical/programming-languages/index:}[< return] - {:$/notes/index:}[index]
