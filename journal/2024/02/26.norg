@@ -1,0 +1,230 @@
+@document.meta
+title: 26 February 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-02-26T16:33:18+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+  - (-) Flash custom firmware into Saluki V2
+     -- (-) Touch base with Yashraj to determine what is needed from the HiTL
+  - ( ) #RESEARCH Is it possible to automate ROS node generation.
+  - ( ) #RESEARCH "Rule-Based Decision Engine"
+  - (-) Try dumping the fault data as {https://github.com/foxglove/mcap}[MCAP]
+  - (x) Update feature tracker for Shamsa battery consumption project
+  - (-) Dronsole groundwork
+     -- (x) Troubleshoot issue with the docker port being occupied
+        --- (x) Try the `alias` solution by Ilkka
+     -- (?) Investigate process to reset drone at failure. Check {:$/journal/2024/02/22:* Fault Injection UI and Swarm Controls}[here]
+     -- ( ) Investigate the strategy to send waypoints through the NATS topic
+            for path worker
+     -- ( ) Test the DataHub method for obtaining data
+        --- ( ) Syncup with Moamen as well
+     -- ( ) Syncup with Ilkka for the swarm NATS implementation
+  - (-) Plan for Fault Injector Interface
+  - (x) Add Confluence documentation on launching HITL
+
+* Journal
+
+  - Feature macros/Feature flags to add the fault injection container to
+    launch:
+     -- Reference in {https://github.com/tiiuae/fog_system/pull/158/commits/20dad5eeb7351bfa51c74941bdc5298a31a6199b}[GitHub]
+
+  - The `dronsole` alias was blocking the ports. By removing it, the `sh`
+    command was possible.
+    @code bash
+    alias dronsole-sh='docker run --rm -it -v $(pwd):/workspace -v $HOME/.dronsole:/root/.dronsole --entrypoint /bin/dronsole ghcr.io/tiiuae/tii-dronsole:latest'
+    @end  
+  
+  - There is no existing strategy to publish and execute shell commands without
+    first attaching into the dronsole simulation instance.
+     -- This means I cannot create a frontend that triggers faults or other
+        shell commands on the local computer.
+     -- {https://github.com/tiiuae/dronsole/blob/main/cmd/sim/simulation.go}[This] is where the shell commands are in dronsole.
+  
+  - Relaunching a crashed drone doesn't work efficiently.
+     -- I have tried resetting Gazebo model. Although the drone is stable, it
+        cannot take anymore commands. I think the connection between px4 and
+        model is broken here.
+     -- I have tried restarting the pod:
+        @code bash
+        `kubectl rollout restart deploy/drone-alpha-core`).
+        @end
+        This is causing the `fog-navigation` container to crash and relaunch
+        repeatedly. The GPS signal is also lost.
+
+  ===
+___
+
+* Implementing a Shell Command Forwarding Process in Dronsole
+
+** Brainstorm
+
+   The modules that are the ones where this changes will most likely have to be
+   made are:
+
+   -  {https://github.com/tiiuae/dronsole/blob/172327cb350183918cbd84a6fc85e651932930a1/cmd/sim/simulation.go#L201}[dronsole/cmd/sim/simulation.go:L201]
+
+   @code go
+   func shSimulations(cmd *cobra.Command, args []string) error {
+       name := args[0]
+       conn, coordinator, err := backend.NewSimulationContext(cmd.Context())
+       if err != nil {
+           return fmt.Errorf("failed to connect server: %v", err)
+       }
+       defer conn.Close()
+
+       shellClient, err := coordinator.Shell(cmd.Context())
+       if err != nil {
+           panic(err)
+       }
+
+       return runShell(shellClient, "sh", []string{name})
+   }
+   @end
+
+   -  {https://github.com/tiiuae/dronsole/blob/172327cb350183918cbd84a6fc85e651932930a1/cmd/sim/shell.go#L14}[dronsole/cmd/sim/shell.go:L14]
+
+   @code go
+   func runShell(shellClient pb.SimulationCoordinator_ShellClient, command string, args []string) error {
+       _, isTerminal := mt.GetFdInfo(os.Stdout)
+       if isTerminal {
+           err := runShellTerminal(shellClient, command, args)
+           if err != nil {
+               return err
+           }
+       } else {
+           err := runShellNoTerminal(shellClient, command, args)
+           if err != nil {
+               return err
+           }
+       }
+       return nil
+   }
+   //...
+   func runShellTerminal(shellClient pb.SimulationCoordinator_ShellClient, command string, args []string) error {
+   
+       ts, err := getTerminalSize()
+       if err != nil {
+           return err
+       }
+   
+       oldState, err := term.MakeRaw(int(os.Stdin.Fd()))
+       if err != nil {
+           return err
+       }
+   
+       result := make(chan string)
+       requests := make(chan *pb.ShellRequest)
+   
+       go func() {
+           for {
+               res, err := shellClient.Recv()
+               if errors.Is(err, io.EOF) {
+                   result <- "disconnected"
+                   break
+               }
+               if err != nil {
+                   result <- fmt.Sprintf("disconnected: %v", err)
+                   break
+               }
+   
+               fmt.Printf("%s", res.Data)
+           }
+       }()
+       go func() {
+           for r := range requests {
+               err = shellClient.Send(r)
+               if err != nil {
+                   result <- fmt.Sprintf("unable to connect server: %v", err)
+               }
+           }
+       }()
+       go func() {
+           buf := make([]byte, 4096)
+   
+           for {
+               n, err := os.Stdin.Read(buf)
+               if err != nil {
+                   result <- fmt.Sprintf("unable to read stdin: %v", err)
+                   break
+               }
+   
+               requests <- &pb.ShellRequest{
+                   Command: "",
+                   Args:    nil,
+                   Width:   0,
+                   Height:  0,
+                   Data:    buf[:n],
+               }
+           }
+       }()
+       go func() {
+           requests <- &pb.ShellRequest{
+               Command: command,
+               Args:    args,
+               Width:   ts.Width,
+               Height:  ts.Height,
+           }
+       }()
+   
+       stopResizeMonitor := make(chan struct{})
+       onResize := onResizeTerminal(stopResizeMonitor)
+       go func() {
+           for ts := range onResize {
+               requests <- &pb.ShellRequest{
+                   Command: "",
+                   Args:    nil,
+                   Width:   ts.Width,
+                   Height:  ts.Height,
+               }
+           }
+       }()
+   
+       res := <-result
+       close(stopResizeMonitor)
+       term.Restore(int(os.Stdin.Fd()), oldState) //nolint:errcheck
+       fmt.Println()
+       fmt.Println(res)
+   
+       return nil
+   }
+   @end
+
+   ===
+___
+
+* Yashrajsinh / Junior 
+
+** Attendees
+
+   | Yashrajsinh Parmar
+   | Junior Sundar
+
+** Goals
+
+   - RTA performance analysis
+
+** Agenda
+
+   - ( ) Discuss the HITL needs
+   - ( ) Create plan of action
+
+** Minutes
+
+   - Analyse end-to-end latency of the PX4 FC stack
+   - Latency: Delay between I/O
+      -- Graph Inputs and Outputs. Inject fault. Qualitatively identify time to reaction.
+   - Run multiple simulations dumping data from all sensor topics.
+   - Inject fault and observe how it changes.
+
+** Action Items
+
+   ===
+___
+
+{:$/journal/2024/02/25:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/27:}[next >]

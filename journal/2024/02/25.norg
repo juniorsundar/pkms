@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-25T21:35:39+0400
+updated: 2024-02-26T09:22:30+0400
 version: 1.1.1
 @end
 
@@ -31,7 +31,6 @@ version: 1.1.1
 
   - Covered some ground in {https://www.udemy.com/course/go-the-complete-guide/}[Go - The Complete Guide]
      -- Updates in {:$/notes/technical/programming-languages/go:}[Go Notes]
-  - This is it
 
   ===
 ___
