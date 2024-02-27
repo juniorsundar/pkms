@@ -187,7 +187,7 @@ ___
 
   {:$/notes/technical/programming-languages/go.bank_packages:}[Example - Bank Packages]
 
-  image assets/files-and-packages.png
+  .image assets/files-and-packages.png
 
   Every package must go into its own subfolder in a project (which you can call
   the root folder).

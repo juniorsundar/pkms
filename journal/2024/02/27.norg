@@ -1,0 +1,138 @@
+@document.meta
+title: 27 February 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-02-27T16:19:16+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+  - (-) Flash custom firmware into Saluki V2
+     -- (x) Touch base with Yashraj to determine what is needed from the HiTL
+     -- (-) Set up simulation in HITL for data collection
+     -- ( ) Collect data
+  - ( ) #RESEARCH Is it possible to automate ROS node generation.
+  - ( ) #RESEARCH "Rule-Based Decision Engine"
+  - (-) Try dumping the fault data as {https://github.com/foxglove/mcap}[MCAP]
+  - (-) Dronsole groundwork
+     -- (x) Investigate process to reset drone at failure. Check {:$/journal/2024/02/22:* Fault Injection UI and Swarm Controls}[here]
+     -- (x) Investigate the strategy to send waypoints through the NATS topic
+            for path worker
+     -- ( ) Test the DataHub method for obtaining data
+        --- ( ) Syncup with Moamen as well
+     -- (-) Continue discussion with Miika to properly understand the
+            redeployment procedure
+     -- ( ) Syncup with Ilkka for the swarm NATS implementation
+  - (-) Plan for Fault Injector Interface
+  - (!) 28 February, Prepare items for the Saluki V3 Demo
+
+* Journal
+
+  - Discussed with Ilkka about what is and isn't possible. Check {* Requirements for Dronsole Integration}[below].
+  - Met with Yashrajsinh to clarify scope of HITL. {* Requirements for HITL Data Collection}[Check below].
+  - Started talks with Miika to understand how to reset simulation.
+  - Submitted timesheet
+
+  ===
+___
+
+* Requirements for HITL Data Collection
+
+** Review of Meeting
+
+   - Drone is running
+      -- In Hover mode
+      -- Take one test in Path mode
+   - Recording topics (refer to PPT)
+      -- Timestamped and only pertinent data required
+   - Fault activation
+      -- All 5 sensors
+      -- negative $\infty$ -- 0 -- positive $\infty$ 
+   - Run till failure or set time point
+      -- Failure defined by crash, sudden landing, out of bounds
+      -- Out of bounds in 2 levels: unacceptable, and failure (1m, 5m)
+   - Dump data for analysis
+
+** Plan of Action
+
+   - First have to change the scripts in `simulation_manager.py`
+      -- Since it is a hardware in the loop launch, it needs to kill jMavSim
+      -- Identify how it interacts with the QGroundControl (is it even needed?)
+      -- Only needs to kill the simulation, as I can manage the clean relaunch by myself (for now)
+   - The mission is only to launch and hover, so activate `commander takeoff` manually
+   - Activate data recording and fault timers with a single command
+      -- Need to rework the `fault_manager.py` as well as `sensor_recorder_unsync.py`
+
+* Requirements for Dronsole Integration
+
+  -  Ability to forward shell commands without having to attach to the dronsole shell
+     -- This is not possible yet in dronsole.
+     -- Refer {:$/journal/2024/02/26:* Implementing a Shell Command Forwarding Process in Dronsole}[here] for possible implementation strategy.
+     -- Can do `kubectl exec` directly if the computer has the token to connect
+        directly to the platform instead of through dronsole commands.
+     -- ^*Hasn't yet been implemented.*^
+
+  - Being able to reset the drone at failure
+     -- Not possible to simply reset the Gazebo model, as the PX4 controller
+        does not update
+     -- Not possible to just relaunch the px4-sitl container as the
+        fog-navigation container breaks
+     -- ^*As of now, there isn't a valid way to reset drone at failure.*^
+     -- Contact Miika for simulation relaunch.
+        --- One way is to remove the simulation completely and recreate it <- ^How?^
+        --- Other way would be to scale all of the px4 deployments to 0 and
+            then restarting the Gazebo simulation container. After than the px4
+            containers can be scaled back to 1.
+
+  - Being able to send waypoints through shell commands for path worker without UI
+     -- Need `nats-cli` installed locally, and the NATS port being forwarded.
+  @code bash
+  did=beta
+  mid=${1:-$(uuidgen)}
+
+  read -p "Press enter to setup mission"
+
+  nats pub mission.path.$mid.events.$did '{"type":"PathSet", "body":{"path":[{"lat":47.39806354374117,"lon":8.54524089303674,"alt":5},{"lat":47.39725378459287,"lon":8.544945850049395,"alt":5}]}}'
+
+  read -p "Press enter to activate"
+
+  nats request mission.path.$mid.request.activate.$did ''
+
+  read -p "Press enter to start mission"
+
+  nats pub mission.path.$mid.commands '{"type":"StartMission"}'
+  @end
+
+  ===
+___
+
+* Yashrajsinh / Junior 
+
+** Attendees
+
+   | Yashrajsinh Parmar
+   | Junior Sundar
+
+** Goals
+
+   - RTA performance analysis
+
+** Agenda
+
+   - (x) Discuss the HITL needs
+   - (x) Create plan of action
+
+** Minutes
+
+
+** Action Items
+
+   - Look {* Requirements for HITL Data Collection}[above]
+
+   ===
+___
+
+{:$/journal/2024/02/26:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/28:}[next >]
