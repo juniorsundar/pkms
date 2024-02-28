@@ -1,0 +1,60 @@
+@document.meta
+title: 28 February 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-02-28T09:44:39+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+  - (-) Flash custom firmware into Saluki V2
+     -- (-) Edit firmware for the faults needed
+     -- ( ) Set up simulation in HITL for data collection
+     -- ( ) Collect data
+  - ( ) #RESEARCH Is it possible to automate ROS node generation.
+  - ( ) #RESEARCH "Rule-Based Decision Engine"
+  - (-) Try dumping the fault data as {https://github.com/foxglove/mcap}[MCAP]
+  - (-) Dronsole groundwork
+     -- (-) Continue discussion with Miika to properly understand the
+            redeployment procedure
+     -- ( ) Test the DataHub method for obtaining data
+        --- ( ) Syncup with Moamen as well
+     -- ( ) Syncup with Ilkka for the swarm NATS implementation
+  - (-) Plan for Fault Injector Interface
+  - (!) 28 February, Prepare items for the Saluki V3 Demo
+
+* Journal
+
+===
+  ___
+
+  /scratch/
+
+===
+  ___
+
+* MEETING NAME 
+
+** Attendees
+
+   | Names
+
+** Goals
+
+
+** Agenda
+
+   - ( ) 
+
+** Minutes
+
+
+** Action Items
+
+===
+___
+
+{:$/journal/2024/02/27:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/29:}[next >]
