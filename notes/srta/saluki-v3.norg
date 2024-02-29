@@ -165,6 +165,27 @@ version: 1.1.1
    Make sure that the PF MM switch is in the UP Position (it is the switch
    above {*** Flashing Jetson Orin NX}[the one here]).
 
+   First zeroise with the V2 `MPFS_ICICLE_KIT_BASE_DESIGN.job`.
+
+   Second program with the V3 `MPFS_ICICLE_KIT_BASE_DESIGN.job`.
+
+   Third flash the bootloader `ssrc_saluki-v3_bootloader-1.1-23-g8e44177.elf`:
+   @code bash
+   export SC_INSTALL_DIR=~/Microchip/SoftConsole-v2022.2-RISC-V-747
+
+   sudo SC_INSTALL_DIR=~/Microchip/SoftConsole-v2022.2-RISC-V-747 FPGENPROG=/usr/local/microchip/Program_Debug_v2023.1/Program_Debug_Tool/bin64/fpgenprog java -jar $SC_INSTALL_DIR/extras/mpfs/mpfsBootmodeProgrammer.jar --bootmode 1 --die MPFS250T ssrc_saluki-v3_bootloader-1.1-23-g8e44177.elf
+   @end
+
+   Next certify with the RnD test keys:
+   @code bash
+   python3 saluki-sec-scripts/cert_tool.py -s -k saluki-sec-scripts/test_keys/saluki-v3/ed25519_test_key.pem
+   @end
+
+   And finally flash the firmware:
+   @code bash
+   python3 ./tools/px_uploader.py ssrc_saluki-v3_default-1.14.0-308-g9f4fbbdc61.px4
+   @end
+
    ===
 ___
 
