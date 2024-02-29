@@ -1,0 +1,62 @@
+@document.meta
+title: 29 February 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-02-29T15:34:09+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+  - (-) Flash custom firmware into Saluki V2
+     -- (-) Set up simulation in HITL for data collection
+     -- ( ) Collect data
+  - ( ) #RESEARCH Is it possible to automate ROS node generation.
+  - ( ) #RESEARCH "Rule-Based Decision Engine"
+  - (-) Try dumping the fault data as {https://github.com/foxglove/mcap}[MCAP]
+  - (-) Dronsole groundwork
+     -- (-) Continue discussion with Miika to properly understand the
+            redeployment procedure
+     -- ( ) Test the DataHub method for obtaining data
+        --- ( ) Syncup with Moamen as well
+     -- ( ) Syncup with Ilkka for the swarm NATS implementation
+  - (-) Plan for Fault Injector Interface
+  - (x) 28 February, Prepare items for the Saluki V3 Demo
+     -- (x) Fix the issue of flashing firmware into Saluki Pi
+
+* Journal
+
+  - Updated JIRA
+  - Need to read {https://en.wikipedia.org/wiki/Free-space_path_loss}[FSPL]
+
+  ===
+___
+
+* Topics to subscribe to for the HITL Test
+
+  - sensor_gyro
+  - sensor_accel
+  - sensor_mag
+  - sensor_baro
+  - sensor_gps
+
+  - vehicle_angular_velocity
+  - vehicle_acceleration
+
+  - vehicle_attitude
+  - vehicle_local_position
+  - vehicle_global_position
+
+  - actuator_outputs
+  - actuator_controls
+
+===
+___
+
+
+   ===
+___
+
+{:$/journal/2024/02/28:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/03/01:}[next >]
