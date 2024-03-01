@@ -78,7 +78,7 @@ ___
    unreliable low-bandwidth radio links.
 
    PX4 uses MAVLink to communicate with ground stations and apps built with
-   {:$/technical/libraries.mavsdk:}[MAVLink SDKs] such as {:$/technical/frameworks/px4:*** QGroundControl}[QGroundControl].
+   {:$/technical/mavsdk:}[MAVLink SDKs] such as {:$/technical/frameworks/px4:*** QGroundControl}[QGroundControl].
 
 * Development
 

@@ -127,7 +127,7 @@ version: 1.1.1
    the companion processor. Furthermore, it is taken that it will also make it
    easier to extend the implementation into the final product.
 
-   We are also using {:$/technical/libraries.mavsdk.python:}[MAVSDK with Python wrappings] in order to control
+   We are also using {:$/technical/mavsdk-python:}[MAVSDK with Python wrappings] in order to control
    the drone and also publish parameters to the drone’s parameter server. This
    is the method through which the faults are injected into the system.
 
