@@ -10,10 +10,10 @@ version: 1.1.1
 
 * Index 
 
-  ~ {:$/technical/px4-ros2:}[PX4 - ROS 2 Integration]
-  ~ {:$/technical/px4-safety-configuration:}[PX4 - Safety Configuration]
-  ~ {:$/technical/px4-simulation:}[PX4 - Simulation]
-  ~ {:$/technical/px4-uorb:}[PX4 - uORB]
+  ~ {:$/technical/ros2:}[PX4 - ROS 2 Integration]
+  ~ {:$/technical/safety-configuration:}[PX4 - Safety Configuration]
+  ~ {:$/technical/simulation:}[PX4 - Simulation]
+  ~ {:$/technical/uorb:}[PX4 - uORB]
 
   ===
 ___
@@ -42,7 +42,7 @@ ___
 
 ** uORB
 
-   | /Access {:$/technical/px4-uorb:}[reference]/
+   | /Access {:$/technical/uorb:}[reference]/
 
    It is an asynchronous publish() / subscribe() messaging API used for
    inter-thread/inter-process communication. It is automatically started early
@@ -150,7 +150,7 @@ ___
 
 *** Simulation (SITL)
 
-    | /Access {:$/technical/px4-simulation:* Software-in-the-Loop (SITL)}[reference]/
+    | /Access {:$/technical/simulation:* Software-in-the-Loop (SITL)}[reference]/
 
     Simulation is a quick, easy, and most importantly, safe way to test changes
     to PX4 code before attempting to fly in the real world. It is also a good
@@ -165,7 +165,7 @@ ___
 
 *** ROS
 
-    | /Access {:$/technical/px4-ros2:}[reference]/
+    | /Access {:$/technical/ros2:}[reference]/
 
     Limited only to ROS 2 since ROS 1 is slowly reaching deprecation. Through
     the {:$/technical/px4:*** μXRCE-DDS Agent Installation}[μXRCE-DDS] client-agent, it is possible to expose the uORB

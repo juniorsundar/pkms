@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-27T23:47:54+0400
-updated: 2024-02-19T12:09:14+0400
+updated: 2024-03-01T22:37:28+0400
 version: 1.1.1
 @end
 
@@ -12,7 +12,7 @@ version: 1.1.1
 
 ** Concept
 
-   /Access {:$/ideas/srta.literature-review:* Runtime Assurance of Aeronautical Products: Preliminary Recommendations}[reference]/
+   /Access {:$/research/literature-review/brat2023:}[reference]/
 
 ** Summary
 
@@ -36,15 +36,15 @@ version: 1.1.1
    `/src/modules/sensors/sensor_params.c` file that can be edited through
    Mavlink protocol or through QGroundControl. General form of these params
    are:
-   - `SENS\_{SENSOR_ABBR}\_FAULT` - INT (1 or 0) - Activates fault injection to
+   - `SENS_{SENSOR_ABBR}_FAULT` - INT (1 or 0) - Activates fault injection to
      sensor module.
-   - `SENS\_{SENSOR_ABBR}\_NOISE` - FLOAT - Activates Gaussian noise fault with
+   - `SENS_{SENSOR_ABBR}_NOISE` - FLOAT - Activates Gaussian noise fault with
      given standard deviation.
-   - `SENS\_{SENSOR_ABBR}\_SHIF` - FLOAT - Activates sensor shift of constant
+   - `SENS_{SENSOR_ABBR}_SHIF` - FLOAT - Activates sensor shift of constant
      value based on percent provided of original value (as decimal).
-   - `SENS\_{SENSOR_ABBR}\_SCAL` - FLOAT - Activates sensor scaling based on
+   - `SENS_{SENSOR_ABBR}_SCAL` - FLOAT - Activates sensor scaling based on
      factor provided.
-   - `SENS\_{SENSOR_ABBR}\_DRIFT` - FLOAT - Activates sensor drifting based on
+   - `SENS_{SENSOR_ABBR}_DRIFT` - FLOAT - Activates sensor drifting based on
      constant value provided that grows linearly with time.
 
 ** Simulation and Mission Management
@@ -101,7 +101,7 @@ version: 1.1.1
    @end
 
    *NOTE*: This shell script also installs and builds the faulty PX4-Autopilot
-   firmware from {:$/technical/px4-simulation.use-case-sensor-fault-injection-simulation:** Flight Controller}[this section]. So it is best if you don't install and
+   firmware from {:$/technical/px4/simulation.use-case-sensor-fault-injection-simulation:** Flight Controller}[this section]. So it is best if you don't install and
    build the flight controller separately.
 
 ** Launch
@@ -416,4 +416,4 @@ version: 1.1.1
     ===
 ___
 
-{:$/technical/px4-simulation:}[< return] - {:$/index:}[index]
+{:$/technical/px4/simulation:}[< return] - {:$/index:}[index]

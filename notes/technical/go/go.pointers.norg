@@ -52,4 +52,4 @@ func getAdultYears(age *int) int {
 ===
 ___
 
-{:$/technical/programming-languages/go:}[< return] - {:$/index:}[index]
+{:$/technical/go/go:}[< return] - {:$/index:}[index]

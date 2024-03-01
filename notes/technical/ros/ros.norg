@@ -10,8 +10,8 @@ version: 1.1.1
 
 * Index 
 
-  ~ {:$/technical/frameworks/ros.ros1:}[ROS 1]
-  ~ {:$/technical/frameworks/ros.ros2:}[ROS 2]
+  ~ {:$/technical/ros/ros1:}[ROS 1]
+  ~ {:$/technical/ros/ros2:}[ROS 2]
 
   ===
 ___
@@ -32,7 +32,7 @@ ___
 
 ** ROS 1 vs ROS 2
 
-   | /Access reference for {:$/technical/frameworks/ros.ros1:}[ROS 1] and {:$/technical/frameworks/ros.ros2:}[ROS 2]/
+   | /Access reference for {:$/technical/ros/ros1:}[ROS 1] and {:$/technical/ros/ros2:}[ROS 2]/
 
 *** Differences
 
@@ -73,7 +73,7 @@ ___
 
     The key difference can be narrowed down to the way in which the
     communication between nodes is facilitated in the two different systems.
-    ROS 1 uses {:$/technical/frameworks.ros.ros1:* Centralised System}[TCP/IP] primarily while ROS 2 uses {:$/technical/frameworks.ros.ros2:* Distributed System}[DDS]. The links will
+    ROS 1 uses {:$/technical/frameworks.ros1:* Centralised System}[TCP/IP] primarily while ROS 2 uses {:$/technical/frameworks.ros2:* Distributed System}[DDS]. The links will
     expound on this implementation in more detail.
 
 * Distributions
