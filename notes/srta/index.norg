@@ -4,15 +4,15 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T18:30:19+0400
-updated: 2024-02-13T20:12:51+0400
+updated: 2024-03-01T15:16:40+0400
 version: 1.1.1
 @end
 
 * Index 
 
   ~ {:$/notes/srta/raw-thoughts:}[Raw Thoughts]
-  ~ {:$/notes/srta/literature-review/index:}[Literature Review]
   ~ {:$/notes/srta/saluki-v2:}[Saluki V2]
+  ~ {:$/notes/srta/saluki-v3:}[Saluki V3]
   ~ {:$/notes/srta/dronsole:}[Dronsole]
 
   ===

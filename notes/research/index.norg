@@ -4,12 +4,13 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-31T14:55:28+0400
-updated: 2024-02-12T20:42:59+0400
+updated: 2024-03-01T15:13:14+0400
 version: 1.1.1
 @end
 
 * Links 
 
+  ~ {:$/notes/research/literature-review/index:}[Literature Review]
   ~ {:./control-barrier-functions:}[Control Barrier Functions]
 
   ===

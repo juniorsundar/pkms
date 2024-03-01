@@ -175,7 +175,7 @@ ___
 ** Fault Injection
 
    It is possible to inject faults into the flight controller. This methodology
-   is observed in {:$/notes/srta/literature-review/coutinho2021:}[literature review]. The strategy can be applied by
+   is observed in {:$/notes/research/literature-review/coutinho2021:}[literature review]. The strategy can be applied by
    introducing faults into the source code itself.
 
 *** Example: IMU

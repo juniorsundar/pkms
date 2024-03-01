@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T17:56:54+0400
-updated: 2024-02-15T12:13:42+0400
+updated: 2024-03-01T15:29:51+0400
 version: 1.1.1
 @end
 
@@ -27,6 +27,10 @@ version: 1.1.1
    - {:$/notes/technical/terminologies/data-exfiltration:}[Data Exfiltration]
    - {:$/notes/technical/terminologies/digital-twin:}[Digital Twin]
 
+** F
+
+   - {:$/notes/technical/terminologies/federated-learning:}[Federated Learning]
+
 ** G
 
    - {:$/notes/technical/terminologies/guid-partition-table:}[GUID Partition Table (GPT)]
@@ -39,6 +43,10 @@ version: 1.1.1
 ** M
 
    - {:$/notes/technical/terminologies/master-boot-record:}[Master Boot Record (MBR)]
+
+** N
+
+   - {:$/notes/technical/terminologies/nash-equilibrium:}[Nash Equilibrium]
 
 ** R
 
