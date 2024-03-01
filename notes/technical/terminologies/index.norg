@@ -12,61 +12,61 @@ version: 1.1.1
 
 ** A
 
-   - {:$/notes/technical/terminologies/api:}[Application Programming Interface (API)]
+   - {:$/technical/terminologies/api:}[Application Programming Interface (API)]
 
 ** B
 
-   - {:$/notes/technical/terminologies/bootloader:}[Bootloader]
+   - {:$/technical/terminologies/bootloader:}[Bootloader]
 
 ** C
 
-   - {:$/notes/technical/terminologies/continual-task-learning:}[Continual Task Learning]
+   - {:$/technical/terminologies/continual-task-learning:}[Continual Task Learning]
 
 ** D
 
-   - {:$/notes/technical/terminologies/data-exfiltration:}[Data Exfiltration]
-   - {:$/notes/technical/terminologies/digital-twin:}[Digital Twin]
+   - {:$/technical/terminologies/data-exfiltration:}[Data Exfiltration]
+   - {:$/technical/terminologies/digital-twin:}[Digital Twin]
 
 ** F
 
-   - {:$/notes/technical/terminologies/federated-learning:}[Federated Learning]
+   - {:$/technical/terminologies/federated-learning:}[Federated Learning]
 
 ** G
 
-   - {:$/notes/technical/terminologies/guid-partition-table:}[GUID Partition Table (GPT)]
+   - {:$/technical/terminologies/guid-partition-table:}[GUID Partition Table (GPT)]
 
 ** H
 
-   - {:$/notes/technical/terminologies/hardware-in-the-loop:}[Hardware in the Loop]
-   - {:$/notes/technical/terminologies/hids:}[Host-Based Intrusion Detection (HIDS)]
+   - {:$/technical/terminologies/hardware-in-the-loop:}[Hardware in the Loop]
+   - {:$/technical/terminologies/hids:}[Host-Based Intrusion Detection (HIDS)]
 
 ** M
 
-   - {:$/notes/technical/terminologies/master-boot-record:}[Master Boot Record (MBR)]
+   - {:$/technical/terminologies/master-boot-record:}[Master Boot Record (MBR)]
 
 ** N
 
-   - {:$/notes/technical/terminologies/nash-equilibrium:}[Nash Equilibrium]
+   - {:$/technical/terminologies/nash-equilibrium:}[Nash Equilibrium]
 
 ** R
 
-   - {:$/notes/technical/terminologies/risc-v:}[RISC-V]
+   - {:$/technical/terminologies/risc-v:}[RISC-V]
 
 ** S
 
-   - {:$/notes/technical/terminologies/secure-boot-validation:}[Secure Boot Validation]
-   - {:$/notes/technical/terminologies/software-in-the-loop:}[Software in the Loop]
-   - {:$/notes/technical/terminologies/sffhi:}[System Firmware for Hardware Initialisation]
-      -- {:$/notes/technical/terminologies/sffhi:* Basic Input/Output System (BIOS)}[BIOS]
-      -- {:$/notes/technical/terminologies/sffhi:* Unified Extensible Firmware Interface (UEFI)}[UEFI]
+   - {:$/technical/terminologies/secure-boot-validation:}[Secure Boot Validation]
+   - {:$/technical/terminologies/software-in-the-loop:}[Software in the Loop]
+   - {:$/technical/terminologies/sffhi:}[System Firmware for Hardware Initialisation]
+      -- {:$/technical/terminologies/sffhi:* Basic Input/Output System (BIOS)}[BIOS]
+      -- {:$/technical/terminologies/sffhi:* Unified Extensible Firmware Interface (UEFI)}[UEFI]
 
 ** T
 
-   - {:$/notes/technical/terminologies/tcp:}[Transmission Control Protocol (TCP)]
+   - {:$/technical/terminologies/tcp:}[Transmission Control Protocol (TCP)]
 
 ** U
 
-   - {:$/notes/technical/terminologies/udp:}[User Datagram Protocol (UDP)]
+   - {:$/technical/terminologies/udp:}[User Datagram Protocol (UDP)]
 
    ===
 ___
@@ -76,4 +76,4 @@ ___
   ===
 ___
 
-{:$/notes/technical/index:}[< return] - {:$/notes/index:}[index]
+{:$/technical/index:}[< return] - {:$/index:}[index]

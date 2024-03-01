@@ -12,7 +12,7 @@ version: 1.1.1
 
 ** Concept
 
-   /Access {:$/notes/ideas/srta.literature-review:* Runtime Assurance of Aeronautical Products: Preliminary Recommendations}[reference]/
+   /Access {:$/ideas/srta.literature-review:* Runtime Assurance of Aeronautical Products: Preliminary Recommendations}[reference]/
 
 ** Summary
 
@@ -101,7 +101,7 @@ version: 1.1.1
    @end
 
    *NOTE*: This shell script also installs and builds the faulty PX4-Autopilot
-   firmware from {:$/notes/technical/frameworks/px4.simulation.use-case-sensor-fault-injection-simulation:** Flight Controller}[this section]. So it is best if you don't install and
+   firmware from {:$/technical/frameworks/px4.simulation.use-case-sensor-fault-injection-simulation:** Flight Controller}[this section]. So it is best if you don't install and
    build the flight controller separately.
 
 ** Launch
@@ -127,7 +127,7 @@ version: 1.1.1
    the companion processor. Furthermore, it is taken that it will also make it
    easier to extend the implementation into the final product.
 
-   We are also using {:$/notes/technical/libraries.mavsdk.python:}[MAVSDK with Python wrappings] in order to control
+   We are also using {:$/technical/libraries.mavsdk.python:}[MAVSDK with Python wrappings] in order to control
    the drone and also publish parameters to the drone’s parameter server. This
    is the method through which the faults are injected into the system.
 
@@ -416,4 +416,4 @@ version: 1.1.1
     ===
 ___
 
-{:$/notes/technical/frameworks/px4.simulation:}[< return] - {:$/notes/index:}[index]
+{:$/technical/frameworks/px4.simulation:}[< return] - {:$/index:}[index]

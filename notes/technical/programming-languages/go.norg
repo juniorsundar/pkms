@@ -10,11 +10,11 @@ version: 1.1.1
 
 * Index
 
-  ~ {:$/notes/technical/programming-languages/go.investment-calculator:}[Example - Investment Calculator]
-  ~ {:$/notes/technical/programming-languages/go.profit-calculator:}[Example - Profit Calculator]
-  ~ {:$/notes/technical/programming-languages/go.bank:}[Example - Bank]
-  ~ {:$/notes/technical/programming-languages/go.bank-packages:}[Example - Bank Packages]
-  ~ {:$/notes/technical/programming-languages/go.pointers:}[Example - Pointers]
+  ~ {:$/technical/programming-languages/go.investment-calculator:}[Example - Investment Calculator]
+  ~ {:$/technical/programming-languages/go.profit-calculator:}[Example - Profit Calculator]
+  ~ {:$/technical/programming-languages/go.bank:}[Example - Bank]
+  ~ {:$/technical/programming-languages/go.bank-packages:}[Example - Bank Packages]
+  ~ {:$/technical/programming-languages/go.pointers:}[Example - Pointers]
 
   ===
 ___
@@ -128,8 +128,8 @@ ___
 
 * Values and Types
 
-  {:$/notes/technical/programming-languages/go.investment-calculator:}[Example - Investment Calculator]
-  {:$/notes/technical/programming-languages/go.profit-calculator:}[Example - Profit Calculator]
+  {:$/technical/programming-languages/go.investment-calculator:}[Example - Investment Calculator]
+  {:$/technical/programming-languages/go.profit-calculator:}[Example - Profit Calculator]
 
 ** Basic Types
 
@@ -152,7 +152,7 @@ ___
 
 * Conditional and `for` Loops
 
-  {:$/notes/technical/programming-languages/go.bank:}[Example - Bank]
+  {:$/technical/programming-languages/go.bank:}[Example - Bank]
 
   The `for` loop in Go comes in a few variations. Some basic ones are:
 
@@ -185,7 +185,7 @@ ___
 * Files and Packages
 
 
-  {:$/notes/technical/programming-languages/go.bank_packages:}[Example - Bank Packages]
+  {:$/technical/programming-languages/go.bank_packages:}[Example - Bank Packages]
 
   .image assets/files-and-packages.png
 
@@ -216,7 +216,7 @@ ___
 
 * Pointers
 
-  {:$/notes/technical/programming-languages/go.pointers:}[Example - Pointers]
+  {:$/technical/programming-languages/go.pointers:}[Example - Pointers]
 
 ** Introduction
 
@@ -262,4 +262,4 @@ ___
    ===
 ___
 
-{:$/notes/technical/programming-languages/index:}[< return] - {:$/notes/index:}[index]
+{:$/technical/programming-languages/index:}[< return] - {:$/index:}[index]

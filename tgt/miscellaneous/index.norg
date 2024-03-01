@@ -14,6 +14,6 @@ version: 1.1.1
 ___
 * Index
 
-  - {:$/tgt/miscellaneous/cultivation-levels:}[Cultivation Levels]
+  - {:$/miscellaneous/cultivation-levels:}[Cultivation Levels]
 
-  {:$/tgt/index:}[< return] - {:$/tgt/index:}[index]
+  {:$/index:}[< return] - {:$/index:}[index]

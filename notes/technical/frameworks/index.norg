@@ -10,13 +10,13 @@ version: 1.1.1
 
 * Index
 
-  ~ {:$/notes/technical/frameworks/px4:}[PX4 - Autopilot]
-      ~~ {:$/notes/technical/frameworks/px4.ros2:}[PX4-ROS 2 Integration]
-      ~~ {:$/notes/technical/frameworks/px4.simulation:}[Simulation]
-      ~~ {:$/notes/technical/frameworks/px4.uorb:}[uORB]
-  ~ {:$/notes/technical/frameworks/ros:}[Robot Operating System (ROS)]
-      ~~ {:$/notes/technical/frameworks/ros.ros1:}[ROS 1]
-      ~~ {:$/notes/technical/frameworks/ros.ros2:}[ROS 2]
+  ~ {:$/technical/frameworks/px4:}[PX4 - Autopilot]
+      ~~ {:$/technical/frameworks/px4.ros2:}[PX4-ROS 2 Integration]
+      ~~ {:$/technical/frameworks/px4.simulation:}[Simulation]
+      ~~ {:$/technical/frameworks/px4.uorb:}[uORB]
+  ~ {:$/technical/frameworks/ros:}[Robot Operating System (ROS)]
+      ~~ {:$/technical/frameworks/ros.ros1:}[ROS 1]
+      ~~ {:$/technical/frameworks/ros.ros2:}[ROS 2]
 
       ===
 ___
@@ -26,4 +26,4 @@ ___
   ===
 ___
 
-  {:$/notes/technical/index:}[< return] - {:$/notes/index:}[index]
+  {:$/technical/index:}[< return] - {:$/index:}[index]

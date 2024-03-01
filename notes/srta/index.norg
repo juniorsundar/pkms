@@ -10,10 +10,10 @@ version: 1.1.1
 
 * Index 
 
-  ~ {:$/notes/srta/raw-thoughts:}[Raw Thoughts]
-  ~ {:$/notes/srta/saluki-v2:}[Saluki V2]
-  ~ {:$/notes/srta/saluki-v3:}[Saluki V3]
-  ~ {:$/notes/srta/dronsole:}[Dronsole]
+  ~ {:$/srta/raw-thoughts:}[Raw Thoughts]
+  ~ {:$/srta/saluki-v2:}[Saluki V2]
+  ~ {:$/srta/saluki-v3:}[Saluki V3]
+  ~ {:$/srta/dronsole:}[Dronsole]
 
   ===
 ___
@@ -23,4 +23,4 @@ ___
   ===
 ___
 
-{:$/notes/index:}[< return] -  {:$/notes/index:}[index]
+{:$/index:}[< return] -  {:$/index:}[index]

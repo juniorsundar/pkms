@@ -78,7 +78,7 @@ version: 1.1.1
 
 ** Sourcing the Environment
 
-   Referring to the previous section on ROS {:$/notes/technical/frameworks/ros:** Packages}[packages], we can permanently
+   Referring to the previous section on ROS {:$/technical/frameworks/ros:** Packages}[packages], we can permanently
    source the ROS installation by running:
 
    @code bash
@@ -115,4 +115,4 @@ version: 1.1.1
   ===
 ___
 
-  {:$/notes/technical/frameworks/ros:}[< return] - {:$/notes/index:}[index]
+  {:$/technical/frameworks/ros:}[< return] - {:$/index:}[index]

@@ -142,4 +142,4 @@ func GetFloatFromFile(fileName string) (float64, error) {
 ===
 ___
 
-{:$/notes/technical/programming-languages/go:}[< return] - {:$/notes/index:}[index]
+{:$/technical/programming-languages/go:}[< return] - {:$/index:}[index]

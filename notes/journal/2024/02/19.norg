@@ -29,7 +29,7 @@ version: 1.1.1
 
 * Journal
 
-  - {:$/notes/technical/frameworks/px4.simulation:* Hardware-in-the-Loop (HITL)}[HITL set up] with Saluki V2
+  - {:$/technical/frameworks/px4.simulation:* Hardware-in-the-Loop (HITL)}[HITL set up] with Saluki V2
   - {* Bug Fix in SITL Pipeline}[Fixed bug] in SITL pipeline
   - Updated {:$/tgt/index:}[The Good Teacher]
      -- Completed {:$/tgt/volume-6/chapter-422:}[Chapter 422 - Fear, Uncertainty, Doubt]
@@ -43,7 +43,7 @@ ___
 
   The fault was being recorded as activated since the trigger did not check to
   see if there were any active faults to begin with. The issue was identified
-  in {:$/notes/technical/frameworks/px4.simulation.use-case-sensor-fault-injection-simulation:**** fault_manager.py}[fault_manager.py].
+  in {:$/technical/frameworks/px4.simulation.use-case-sensor-fault-injection-simulation:**** fault_manager.py}[fault_manager.py].
 
   This was fixed by checking if there were any faults to activate before
   appending the active flag to `.csv`. Observe relative lines 10-14 below:

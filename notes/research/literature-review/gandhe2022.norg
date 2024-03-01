@@ -112,17 +112,17 @@ version: 1.1.1
   If $(r_i, r_j) \in E$ then the two robots can communicate with each other.
 
   Imposing symmetry while not true in reality, therefore:
-  $(r_i, r_j) \in E <=> (r_j, r_i) \in E$
+  $(r_i, r_j) \in E \iff (r_j, r_i) \in E$
 
   To emulate reality, $r_j$ drops message from $r_i$ when $d_{ij} > d_{max}$
 
   Hence:
-  $((r_i, r_j) \in E <=> (r_j, r_i) \in E )=> d_{ij} = d_{ji} < d for d \leq d_{max}$
+  $((r_i, r_j) \in E \iff (r_j, r_i) \in E )\implies d_{ij} = d_{ji} < d$ for $d \leq d_{max}$
 
-  Let $E_d = {(i, j) | d_{ij} \leq d}$ be set of all edges of length $d$ or
+  Let $E_d = \{(i, j) | d_{ij} \leq d\}$ be set of all edges of length $d$ or
   less. Define $G_d = (V, E_d)$. This guarantees:
 
-  $((r_i, r_j) \in E_d) \wedge (d \leq d_{max}) => ((r_j, r_i) \in E_d)$
+  $((r_i, r_j) \in E_d) \wedge (d \leq d_{max}) \implies ((r_j, r_i) \in E_d)$
 
 ** Problem Statements
 
@@ -164,9 +164,9 @@ version: 1.1.1
 
   Algorithm creates a $d$-disk graph, such that a particular node's neighbour set $N$ has all nodes within $d$ distance of that node.
 
-  Nodes are defined as internal if $\abs{N} \geq m$ neighbours 
-  Nodes are defined as boundary if $m > \abs{N} \geq 1$
-  Nodes are outlier if $\abs{N} = 0$
+  Nodes are defined as internal if $|N| \geq m$ neighbours 
+  Nodes are defined as boundary if $m > |N| \geq 1$
+  Nodes are outlier if $|N| = 0$
 
   > {Page 6} ... DBSCAN defines that neighboring internal nodes are in the same
   > cluster, boundary nodes are allowed to join any one of their neighbor’s
@@ -189,8 +189,92 @@ version: 1.1.1
   > considered unique erroneously believe that they are part of a single larger
   > cluster.
 
-  Implemented IDRS by having each node maintain a list of malicious actors that don't change their values over multiple communication.
+  Implemented IDRS by having each node maintain a list of malicious actors that
+  don't change their values over multiple communication.
 
   > {Page 7} ... A main goal of our research is to evaluate the extent to which
   > using a distributed IDRS can increase a swarm’s resilience to malicious
   > attacks—assuming that malicious robots can be detected
+
+* Distributed Swarm k-Means: Algorithm, Attack, IDRS
+
+  Designed for use with robot swarm that uses (only) local communication and
+  local distance information.
+
+  Each k clusters associated with a cluster "root" robot - analogous to cluster
+  centres used in k-Means.
+
+  Initial k root robots chosen randomly (for unsupervised clustering) or
+  selected by user (semi-supervised). Cluster membership determined by closest
+  root robot.
+
+  Algorithm is iterative at swarm level. In each iteration, two processes are
+  run:
+  ~ Determine current cluster membership of all robots
+  ~ Transfer each cluster's root toward middle of that cluster
+  > {Page 9} ... First, all nodes participate in a distributed calculation that
+  > provides each node with the size of its current sub-tree and those of its
+  > children. Next, each of the k cluster roots determines which of its own
+  > children has the largest sub-tree, and selects that child to become its
+  > cluster’s new root. This causes the cluster root to move one hop toward the
+  > cluster’s middle.
+
+  This hop is like gradient ascent. Makes sense if swarm only has local
+  communication. Sometimes root location will settle into small cycles in the
+  vicinity of local optima. Stopping criteria needed to stop looping.
+
+  User parameter $z_{max}$ defines maximum number of times a node may pass root
+  responsibility to another robot.
+
+  Malicious robot tricks swarm by advertising it has a large sub-tree.
+  Guaranteed to become root in next iteration.
+
+  Implemented IDRS by having each robot send IDS of all nodes in its sub-trees
+  instead of only sub-tree size.
+  > {Page 10} ... If two robots on different branches claim to have the same
+  > robot as part of their sub-tree, then the other robots add both
+  > (potentially malicious) robots to a malicious robot list. This reduces the
+  > damage a single malicious robot can cause.
+
+  > {Page 10} ... This particular IDRS requires an increase in message size
+  > from $O(1)$ to $O(n)$, which may not be appropriate in all cases.
+
+* Experiments
+
+  - In simulation and in hardware test bed
+  - Homogeneous swarm of 25 Kilobots
+  - Infrared LEDs and sensors to communicate within 100mm radius
+  - Convey information through RGB LED
+
+** Silhouette Coefficient Performance Metric
+
+   > {Page 13} ... The final silhouette coefficient, summarizing the clustering
+   > accuracy for all nodes, is the maximum of the $n$ silhouette values. If
+   > the whole swarm is classified as a single cluster, the silhouette
+   > coefficient is zero.
+
+* Discussion of Results
+
+  > {Page 14} ... We find that Distributed Swarm DBSCAN tends to produce more
+  > accurate clustering than the Distributed Swarm k-Means Algorithm.
+
+  > {Page 14} ... Swarm k-Means, with its top-down tree structure, appears more
+  > vulnerable to disruption than the bottom-up DBSCAN. This reinforces the
+  > idea that potential for disruption by a malicious robot increases with
+  > centralization.
+
+  > {Page 15} ... A single malicious robot has the potential to hijack all
+  > three roots, and so adding more adversarial robots did not increase its
+  > potential for disruption. In contrast, each additional malicious robot
+  > present during DBSCAN Algorithm’s caused a notable drop in accuracy and a
+  > greater variation in performance.
+
+* Conclusion
+
+  > {Page 15} ... We find that the Distributed Swarm k-Means Algorithm is more
+  > susceptible to attack the Distributed Swarm DBSCAN Algorithm. Results also
+  > show that increasing the number of adversarial robots caused larger
+  > disturbances in the DBSCAN Attack, while more adversaries had less effect
+  > on the k-Means Attack. Finally, we find that distributed IDRS can largely
+  > restore the swarm’s performance.
+

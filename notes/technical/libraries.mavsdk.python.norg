@@ -60,7 +60,7 @@ version: 1.1.1
 
 * Asynchronicity
 
-  As seen in the section {:$/notes/technical/libraries.mavsdk.python:** Boilerplate}[above], the MAVSDK Python library uses asynchronous functions.
+  As seen in the section {:$/technical/libraries.mavsdk.python:** Boilerplate}[above], the MAVSDK Python library uses asynchronous functions.
   This is primarily due to the nature of communication and control in drone
   operations.
 
@@ -83,4 +83,4 @@ version: 1.1.1
     ===
 ___
 
-{:$/notes/technical/libraries.mavsdk:}[< return] - {:$/notes/index:}[index]
+{:$/technical/libraries.mavsdk:}[< return] - {:$/index:}[index]

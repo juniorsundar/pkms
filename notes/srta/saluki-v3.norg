@@ -160,7 +160,7 @@ version: 1.1.1
 
 ** Polarfire Flight Controller Setup
 
-   This is more or less similar to {:$/notes/srta/saluki-v2:}[setting up the Saluki V2].
+   This is more or less similar to {:$/srta/saluki-v2:}[setting up the Saluki V2].
 
    Make sure that the PF MM switch is in the UP Position (it is the switch
    above {*** Flashing Jetson Orin NX}[the one here]).
@@ -189,4 +189,4 @@ version: 1.1.1
    ===
 ___
 
-{:$/notes/srta/index:}[< return] -  {:$/notes/index:}[index]
+{:$/srta/index:}[< return] -  {:$/index:}[index]

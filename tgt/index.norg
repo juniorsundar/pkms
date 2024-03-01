@@ -32,13 +32,13 @@ version: 1.1.1
 
 ** State of Story
 
-   - {:$/tgt/miscellaneous/index:}[Miscellaneous]
-   - {:$/tgt/volume-1/index:}[Volume 1 - A Whole New World]
-   - {:$/tgt/volume-2/index:}[Volume 2 - Starting Anew
-   - {:$/tgt/volume-3/index:}[Volume 3 - The Grand Experiment]
-   - {:$/tgt/volume-4/index:}[Volume 4 - Birth Of The True World Sect]
-   - {:$/tgt/volume-5/index:}[Volume 5 - Legacy Of The True World Sect]
-   - {:$/tgt/volume-6/index:}[Volume 6 - Worlds Beyond]
+   - {:$/miscellaneous/index:}[Miscellaneous]
+   - {:$/volume-1/index:}[Volume 1 - A Whole New World]
+   - {:$/volume-2/index:}[Volume 2 - Starting Anew
+   - {:$/volume-3/index:}[Volume 3 - The Grand Experiment]
+   - {:$/volume-4/index:}[Volume 4 - Birth Of The True World Sect]
+   - {:$/volume-5/index:}[Volume 5 - Legacy Of The True World Sect]
+   - {:$/volume-6/index:}[Volume 6 - Worlds Beyond]
 
 ** Extras
 
@@ -88,4 +88,4 @@ ____
 
 ___
 
-* {:$/tgt/the-good-teacher/scratch:}[SCRATCH SPACE]
+* {:$/the-good-teacher/scratch:}[SCRATCH SPACE]

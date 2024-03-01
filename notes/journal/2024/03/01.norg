@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-01T17:54:33+0400
+updated: 2024-03-01T21:15:39+0400
 version: 1.1.1
 @end
 
@@ -28,10 +28,15 @@ version: 1.1.1
 
   - Need to read {https://en.wikipedia.org/wiki/Free-space_path_loss}[FSPL]
   - Read article:
-     -- {:$/notes/research/literature-review/liu2024:}[Generative AI for Unmanned Vehicle Swarms: Challenges, Applications and Opportunities]
+     -- Generative AI for Unmanned Vehicle Swarms: Challenges, Applications and
+        Opportunities
+        {:$/research/literature-review/liu2024:}[here]
+     -- Decentralised Robot Swarm Clustering: Adding Resilience to Malicious
+        Masquerade Attacks
+        {:$/research/literature-review/gandhe2022:}[here]
   - Fill in:
-     -- {:$/notes/technical/terminologies/nash-equilibrium:}[Nash Equilibrium]
-     -- {:$/notes/technical/terminologies/federated-learning:}[Federated Learning]
+     -- {:$/technical/terminologies/nash-equilibrium:}[Nash Equilibrium]
+     -- {:$/technical/terminologies/federated-learning:}[Federated Learning]
 
      ===
 ___

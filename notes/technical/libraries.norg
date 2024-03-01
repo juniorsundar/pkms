@@ -10,8 +10,8 @@ version: 1.1.1
 
 * Index 
 
-  ~ {:$/notes/technical/libraries.mavsdk:}[MAVSDK]
-      ~~ {:$/notes/technical/libraries.mavsdk.python:}[MAVSDK Python]
+  ~ {:$/technical/libraries.mavsdk:}[MAVSDK]
+      ~~ {:$/technical/libraries.mavsdk.python:}[MAVSDK Python]
 
       ===
 ___
@@ -22,4 +22,4 @@ ___
 ___
 
 
-  {:$/notes/technical/index:}[< return] - {:$/notes/index:}[index]
+  {:$/technical/index:}[< return] - {:$/index:}[index]
