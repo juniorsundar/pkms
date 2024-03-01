@@ -12,7 +12,8 @@ version: 1.1.1
 
 ** 2020
 
-   {:$/research/literature-review/bagchi2020:}[Vision Paper: Grand Challenges in Resilience: Autonomous System Resilience through Design and Runtime Measures]
+   - Vision Paper: Grand Challenges in Resilience: Autonomous System Resilience through Design and Runtime Measures
+     {:$/research/literature-review/bagchi2020:}[link]
 
 ** 2021
 
