@@ -19,7 +19,7 @@ ___
 
   Simulators allow PX4 flight code to control a computer modeled vehicle in a
   simulated environment, with the same level of software interactability as the
-  real drone. PX4 supports both {:$/technical/terminologies/software-in-the-loop:}[Software in the Loop] (SITL) and {:$/technical/terminologies/hardware-in-the-loop:}[Hardware in the
+  real drone. PX4 supports both {:$/terminologies/software-in-the-loop:}[Software in the Loop] (SITL) and {:$/terminologies/hardware-in-the-loop:}[Hardware in the
   Loop] (HITL).
 
 * Simulators
@@ -102,7 +102,7 @@ ___
 
 * Software-in-the-Loop (SITL)
 
-  | /Access {:$/technical/terminologies/software-in-the-loop:}[reference]/
+  | /Access {:$/terminologies/software-in-the-loop:}[reference]/
 
 ** Set-Up
 
@@ -171,7 +171,7 @@ ___
 
 * Hardware-in-the-Loop (HITL)
 
-  | /Access {:$/technical/terminologies/hardware-in-the-loop:}[reference]/
+  | /Access {:$/terminologies/hardware-in-the-loop:}[reference]/
 
 ** Set-Up with Saluki V2
 

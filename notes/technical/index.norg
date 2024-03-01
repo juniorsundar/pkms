@@ -15,7 +15,7 @@ version: 1.1.1
      ~~ {:$/technical/frameworks/ros:}[Robot Operating System (ROS)]
   ~ {:$/technical/libraries:}[Libraries]
      ~~ {:$/technical/libraries.mavsdk:}[MAVSDK]
-  ~ {:$/technical/terminologies/index:}[Terminologies]
+  ~ {:$/terminologies/index:}[Terminologies]
   ~ {:$/technical/programming-languages/index:}[Programming Languages]
 
      ===

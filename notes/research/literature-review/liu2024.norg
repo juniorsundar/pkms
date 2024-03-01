@@ -96,7 +96,7 @@ unmannedAerialVehicles
    - Training two networks (generator and discriminator) simultaneously:
       -- generator produces data to mimic reality.
       -- discriminator classifies.
-   - {:$/technical/terminologies/nash-equilibrium:}[Nash Equilibrium]
+   - {:$/terminologies/nash-equilibrium:}[Nash Equilibrium]
    - Issues:
       -- achieving local Nash equilibria
       -- mode collapse
@@ -323,7 +323,7 @@ unmannedAerialVehicles
    > communication range.
 
    > {Page 17} ... One potential direction is to design distributed GAI
-   > architectures based on {:$/technical/terminologies/federated-learning:}[federated learning] for collaborations between
+   > architectures based on {:$/terminologies/federated-learning:}[federated learning] for collaborations between
    > different groups of unmanned swarms, instead of relying on a single
    > server/swarm leader.
 

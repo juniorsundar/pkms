@@ -35,8 +35,8 @@ version: 1.1.1
         Masquerade Attacks
         {:$/research/literature-review/gandhe2022:}[here]
   - Fill in:
-     -- {:$/technical/terminologies/nash-equilibrium:}[Nash Equilibrium]
-     -- {:$/technical/terminologies/federated-learning:}[Federated Learning]
+     -- {:$/terminologies/nash-equilibrium:}[Nash Equilibrium]
+     -- {:$/terminologies/federated-learning:}[Federated Learning]
 
      ===
 ___

@@ -17,7 +17,7 @@ ___
   ~ {:./technical/index:}[Technical]
      ~~ {:$/technical/frameworks/index:}[Frameworks]
      ~~ {:$/technical/libraries:}[Libraries]
-     ~~ {:$/technical/terminologies/index:}[Terminologies]
+     ~~ {:$/terminologies/index:}[Terminologies]
      ~~ {:$/technical/programming-languages/index:}[Programming Languages]
   ~ {:$/ideas/index:}[Ideas]
      ~~ {:./ideas/useful-links:}[Useful Links]
