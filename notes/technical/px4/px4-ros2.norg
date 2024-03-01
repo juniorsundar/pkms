@@ -85,12 +85,12 @@ version: 1.1.1
 
    The first step of this process requires us to launch the simulation through
    either Gazebo or JMavSim (i.e. simulator of choice). This is described in
-   the following {:$/technical/frameworks/px4.simulation:}[section].
+   the following {:$/technical/px4-simulation:}[section].
 
    For this case, we will go with Gazebo. Upon building for SITL, the following
    window should open up:
 
-   {/ assets/px4.ros21.png}[Figure: Gazebo simulation screen with a x500 drone]
+   {/ assets/px4-ros21.png}[Figure: Gazebo simulation screen with a x500 drone]
 
 
 ** Initialise μXRCE-DDS Agent 
@@ -111,7 +111,7 @@ version: 1.1.1
    The uORB topics are directly translated into ROS 2 topics once you activate
    the MicroXRCEAgent.
 
-   To see the topics available, open a new terminal and {:$/technical/frameworks/px4.ros2:** Source}[source] the local installation
+   To see the topics available, open a new terminal and {:$/technical/px4-ros2:** Source}[source] the local installation
    of `px4_msgs`. After that, run:
 
    @code bash
@@ -163,7 +163,7 @@ version: 1.1.1
    The message type '<message_name>' is invalid
    @end
 
-   In that case, simply {:$/technical/frameworks/px4.ros2:** Source}[source] the local installation for the terminal and try again.
+   In that case, simply {:$/technical/px4-ros2:** Source}[source] the local installation for the terminal and try again.
 
    To get information about the message type being sent through these topics, run:
 
@@ -193,7 +193,7 @@ version: 1.1.1
 
 ** Exposing More Topics
 
-   {:$/technical/frameworks/px4.uorb:* Messages}[These] are the messages being actively exchanged inside 
+   {:$/technical/px4-uorb:* Messages}[These] are the messages being actively exchanged inside 
    the PX4 through uORB topics. Nearly all of them can also be accessed 
    in ROS 2 as long as the Micro XRCE-DDS agent is active.
    You can find a list of message types available in ROS 2
@@ -229,7 +229,7 @@ version: 1.1.1
    nodes. Here, we will only focus on the Python implementations.
 
    The nodes that will control the drone will be added to a new ROS 2 package
-   inside the pre-existing workspace made {:$/technical/frameworks/px4.ros2:** Download}[here]. First, navigate to the workspace root:
+   inside the pre-existing workspace made {:$/technical/px4-ros2:** Download}[here]. First, navigate to the workspace root:
 
    @code bash
    # If the following workspace does not exist, refer to the hyperlinked page to create the workspace.
@@ -526,4 +526,4 @@ version: 1.1.1
    ===
 ___
 
-{:$/technical/frameworks/px4:}[< return] - {:$/index:}[index]
+{:$/technical/px4:}[< return] - {:$/index:}[index]

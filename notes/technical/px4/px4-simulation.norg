@@ -10,7 +10,7 @@ version: 1.1.1
 
 * Index 
 
-  ~ {:$/technical/frameworks/px4.simulation.use-case-sensor-fault-injection-simulation:}[Use Case - Sensor Fault Injection Simulation]
+  ~ {:$/technical/px4-simulation.use-case-sensor-fault-injection-simulation:}[Use Case - Sensor Fault Injection Simulation]
 
   ===
 ___
@@ -107,7 +107,7 @@ ___
 ** Set-Up
 
    To run the simulations, you need to first enter the PX4-Autopilot toolchain
-   directory that was cloned. This is explained in this {:$/technical/frameworks/px4:*** Autopilot Installation}[section].
+   directory that was cloned. This is explained in this {:$/technical/px4:*** Autopilot Installation}[section].
 
    @code bash
    cd ./PX4-Autopilot
@@ -228,4 +228,4 @@ ___
    ===
 ___
 
-{:$/technical/frameworks/px4:}[< return] - {:$/index:}[index]
+{:$/technical/px4:}[< return] - {:$/index:}[index]

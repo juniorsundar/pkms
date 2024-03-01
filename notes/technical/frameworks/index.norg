@@ -10,10 +10,10 @@ version: 1.1.1
 
 * Index
 
-  ~ {:$/technical/frameworks/px4:}[PX4 - Autopilot]
-      ~~ {:$/technical/frameworks/px4.ros2:}[PX4-ROS 2 Integration]
-      ~~ {:$/technical/frameworks/px4.simulation:}[Simulation]
-      ~~ {:$/technical/frameworks/px4.uorb:}[uORB]
+  ~ {:$/technical/px4:}[PX4 - Autopilot]
+      ~~ {:$/technical/px4-ros2:}[PX4-ROS 2 Integration]
+      ~~ {:$/technical/px4-simulation:}[Simulation]
+      ~~ {:$/technical/px4-uorb:}[uORB]
   ~ {:$/technical/frameworks/ros:}[Robot Operating System (ROS)]
       ~~ {:$/technical/frameworks/ros.ros1:}[ROS 1]
       ~~ {:$/technical/frameworks/ros.ros2:}[ROS 2]

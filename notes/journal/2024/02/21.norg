@@ -27,7 +27,7 @@ version: 1.1.1
 
   - Checked out the failsafe and emergency landing triggers for PX4
      -- {https://docs.px4.io/main/en/config/safety.html}[Documentation on PX4-Autopilot]
-     -- {:$/technical/frameworks/px4.safety-configuration:}[Notes]
+     -- {:$/technical/px4-safety-configuration:}[Notes]
   - Sat in on {* Interview: Internship - Akram Khairi - SSRC}[Interview of Intern] 
   - Sent mail to Oksana Sandulenko with Intern Recommendation
      -- Sent to Systems Testing Team

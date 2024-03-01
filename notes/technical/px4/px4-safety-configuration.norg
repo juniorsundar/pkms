@@ -99,7 +99,7 @@ version: 1.1.1
 *** Offboard Loss
 
     Triggered if offboard link is lost while under offboard control mode.
-    Refer to {:$/technical/frameworks/px4.ros2:** Offboard Mode}[this section] to understand what the offboard control signal
+    Refer to {:$/technical/px4-ros2:** Offboard Mode}[this section] to understand what the offboard control signal
     rate signifies.
 
 *** Traffic Avoidance
@@ -134,4 +134,4 @@ version: 1.1.1
    ===
 ___
 
-{:$/technical/frameworks/px4:}[< return] - {:$/index:}[index]
+{:$/technical/px4:}[< return] - {:$/index:}[index]
