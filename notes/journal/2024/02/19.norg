@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-20T20:17:36+0400
+updated: 2024-03-02T23:09:37+0400
 version: 1.1.1
 @end
 
@@ -43,7 +43,7 @@ ___
 
   The fault was being recorded as activated since the trigger did not check to
   see if there were any active faults to begin with. The issue was identified
-  in {:$/technical/px4/simulation.use-case-sensor-fault-injection-simulation:**** fault_manager.py}[fault_manager.py].
+  in {:$/srta/sensor-fault-injection:**** fault_manager.py}[fault_manager.py].
 
   This was fixed by checking if there were any faults to activate before
   appending the active flag to `.csv`. Observe relative lines 10-14 below:

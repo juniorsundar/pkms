@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-27T23:47:54+0400
-updated: 2024-03-01T22:37:28+0400
+updated: 2024-03-02T23:11:43+0400
 version: 1.1.1
 @end
 
@@ -70,7 +70,7 @@ version: 1.1.1
    The iterations will be executed sequentially, and during execution the
    predefined sensors that are being listened to will be recorded. During the
    iteration, it is possible to activate and deactivate faults at random
-   intervals (which can also be set in the mission parameters .yaml file).
+   intervals (which can also be set in the mission parameters `.yaml` file).
 
    If the drone fails catastrophically during iteration execution, the
    iteration will be preempted, and the mission continues to the next iteration
@@ -101,7 +101,7 @@ version: 1.1.1
    @end
 
    *NOTE*: This shell script also installs and builds the faulty PX4-Autopilot
-   firmware from {:$/technical/px4/simulation.use-case-sensor-fault-injection-simulation:** Flight Controller}[this section]. So it is best if you don't install and
+   firmware from {:$/srta/sensor-fault-injection:** Flight Controller}[this section]. So it is best if you don't install and
    build the flight controller separately.
 
 ** Launch
@@ -133,7 +133,8 @@ version: 1.1.1
 
 ** Architecture
 
-   {/ assets/px4-simulation.use-case-sensor-fault-injection-simulation1.png}[Figure: Platform architecture]
+   .image assets/sensor-fault-injection1.png
+   [Figure: Platform architecture]
 
    @code
    # Project structure
@@ -194,7 +195,7 @@ version: 1.1.1
 
 **** fault_label_descriptors.yaml
 
-     Describes the faults injected into the sensors (as defined in {:./technical/frameworks.px4.simulation.use-case-sensor-fault-injection-simulation:** Flight Controller}[this section]).
+     Describes the faults injected into the sensors (as defined in {:$/srta/sensor-fault-injection:** Flight Controller}[this section]).
 
      Does not have to be edited unless you want to change the way in which the
      faults are labelled in merged file.
@@ -378,7 +379,8 @@ version: 1.1.1
      The transitions between states is based off of the inputs received from
      the two `/state` topics.
 
-     {/ assets/px4-simulation.use-case-sensor-fault-injection-simulation2.png}[Figure: State machine for mission management]
+     .image assets/sensor-fault-injection2.png
+     [Figure: State machine for mission management]
 
 **** fault_manager.py
 

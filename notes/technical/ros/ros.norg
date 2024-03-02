@@ -4,11 +4,11 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T15:39:32+0400
-updated: 2024-02-01T22:21:53+0400
+updated: 2024-03-02T18:39:23+0400
 version: 1.1.1
 @end
 
-* Index 
+* Links 
 
   ~ {:$/technical/ros/ros1:}[ROS 1]
   ~ {:$/technical/ros/ros2:}[ROS 2]
@@ -37,26 +37,26 @@ ___
 *** Differences
 
     - *Introduction and Legacy*
-        -- ROS 1: First version, introduced in 2007. Used in academia and
-           hobbyist projects.
-        -- ROS 2: Launched in 2017 as an overhaul of ROS 1.
+       -- ROS 1: First version, introduced in 2007. Used in academia and
+          hobbyist projects.
+       -- ROS 2: Launched in 2017 as an overhaul of ROS 1.
     - *Communication Infrastructure*
-        -- ROS 1: Master-salve architecture with ROS Master.
-        -- ROS 2: Distributed graph architecture without central master.
+       -- ROS 1: Master-salve architecture with ROS Master.
+       -- ROS 2: Distributed graph architecture without central master.
     - *Networking and Security*
-        -- Limited networking features. Not security-focused.
-        -- Enhanced networking with DDS support. Built-in security features.
+       -- Limited networking features. Not security-focused.
+       -- Enhanced networking with DDS support. Built-in security features.
     - *Real-Time Support*
-        -- Limited support for real-time processes.
-        -- Improved real-time computing support.
+       -- Limited support for real-time processes.
+       -- Improved real-time computing support.
     - *Client Libraries and Languages*
-        -- Primarily supports C++ and Python.
-        -- Supports more languages; modular architecture.
+       -- Primarily supports C++ and Python.
+       -- Supports more languages; modular architecture.
     - *Community and Ecosystem*
-        -- Large community with many packages and tools. Focus shifting to ROS
-           2.
-        -- Growing community; ongoing development for robustness and enterprise
-           features.
+       -- Large community with many packages and tools. Focus shifting to ROS
+          2.
+       -- Growing community; ongoing development for robustness and enterprise
+          features.
 
 *** Key Considerations
 
@@ -149,4 +149,4 @@ ___
    ===
 ___
 
-  {:$/technical/frameworks/index:}[< return] - {:$/index:}[index]
+{:$/technical/frameworks/index:}[< return] - {:$/index:}[index]

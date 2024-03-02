@@ -4,16 +4,16 @@ description:
 authors: juniorsundar
 categories:
 created: 2024-01-27T21:25:33+0400
-updated: 2024-02-21T11:56:13+0400
+updated: 2024-03-02T18:43:47+0400
 version: 1.1.1
 @end
 
-* Index 
+* Links 
 
-  ~ {:$/technical/ros2:}[PX4 - ROS 2 Integration]
-  ~ {:$/technical/safety-configuration:}[PX4 - Safety Configuration]
-  ~ {:$/technical/simulation:}[PX4 - Simulation]
-  ~ {:$/technical/uorb:}[PX4 - uORB]
+  ~ {:$/technical/px4/ros2:}[PX4 - ROS 2 Integration]
+  ~ {:$/technical/px4/safety-configuration:}[PX4 - Safety Configuration]
+  ~ {:$/technical/px4/simulation:}[PX4 - Simulation]
+  ~ {:$/technical/px4/uorb:}[PX4 - uORB]
 
   ===
 ___
@@ -42,7 +42,7 @@ ___
 
 ** uORB
 
-   | /Access {:$/technical/uorb:}[reference]/
+   | /Access {:$/technical/px4/uorb:}[reference]/
 
    It is an asynchronous publish() / subscribe() messaging API used for
    inter-thread/inter-process communication. It is automatically started early
@@ -61,7 +61,8 @@ ___
 
    The architecture is defined in the below image:
 
-   {https://docs.px4.io/main/assets/img/architecture_xrce-dds_ros2.fed61809.svg}[Figure: DDS Communication with ROS 2]
+   .image https://docs.px4.io/main/assets/img/architecture_xrce-dds_ros2.fed61809.svg
+   [Figure: DDS Communication with ROS 2]
 
    The client runs on the flight controller, while the agent is on the
    companion processor. The client reveals the uORB topics active the flight
@@ -78,7 +79,7 @@ ___
    unreliable low-bandwidth radio links.
 
    PX4 uses MAVLink to communicate with ground stations and apps built with
-   {:$/technical/mavsdk:}[MAVLink SDKs] such as {:$/technical/px4:*** QGroundControl}[QGroundControl].
+   {:$/technical/px4/mavsdk:}[MAVLink SDKs] such as {:$/technical/px4/px4:*** QGroundControl}[QGroundControl].
 
 * Development
 
@@ -150,7 +151,7 @@ ___
 
 *** Simulation (SITL)
 
-    | /Access {:$/technical/simulation:* Software-in-the-Loop (SITL)}[reference]/
+    | /Access {:$/technical/px4/simulation:* Software-in-the-Loop (SITL)}[reference]/
 
     Simulation is a quick, easy, and most importantly, safe way to test changes
     to PX4 code before attempting to fly in the real world. It is also a good
@@ -165,10 +166,10 @@ ___
 
 *** ROS
 
-    | /Access {:$/technical/ros2:}[reference]/
+    | /Access {:$/technical/px4/ros2:}[reference]/
 
     Limited only to ROS 2 since ROS 1 is slowly reaching deprecation. Through
-    the {:$/technical/px4:*** μXRCE-DDS Agent Installation}[μXRCE-DDS] client-agent, it is possible to expose the uORB
+    the {:$/technical/px4/px4:*** μXRCE-DDS Agent Installation}[μXRCE-DDS] client-agent, it is possible to expose the uORB
     messages in the flight controller to the ROS 2 framework. This facilitates
     forward and backwards communication.
 
