@@ -1,0 +1,49 @@
+@document.meta
+title: 2 March 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-03-02T16:11:48+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+  - (-) Flash custom firmware into Saluki V2
+     -- (-) Set up simulation in HITL for data collection
+     -- ( ) Collect data
+  - ( ) #RESEARCH Is it possible to automate ROS node generation.
+  - ( ) #RESEARCH "Rule-Based Decision Engine"
+  - (-) Try dumping the fault data as {https://github.com/foxglove/mcap}[MCAP]
+  - (-) Dronsole groundwork
+     -- (-) Continue discussion with Miika to properly understand the
+            redeployment procedure
+     -- ( ) Test the DataHub method for obtaining data
+        --- ( ) Syncup with Moamen as well
+     -- ( ) Syncup with Ilkka for the swarm NATS implementation
+  - (-) Plan for Fault Injector Interface
+
+* Journal
+
+  - Went shopping at Lulu
+  - Tried building firmware for Pixhawk v5x, however it failed saying that the
+    memory wasn't enough. 
+     -- It seems that adding all these changes has caused the size to balloon a
+        little bit.
+     -- However, the build was successful for the Saluki V2. Need to test if
+        the parameters are now editable for GPS and Magnetometer.
+
+===
+  ___
+
+  /scratch/
+
+===
+  ___
+
+
+===
+___
+
+{:$/journal/2024/02/01:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/03:}[next >]
