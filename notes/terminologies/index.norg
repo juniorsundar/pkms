@@ -1,0 +1,79 @@
+@document.meta
+title: Terminologies 
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-28T17:56:54+0400
+updated: 2024-03-02T00:12:26+0400
+version: 1.1.1
+@end
+
+* Links 
+
+** A
+
+   - {:$/terminologies/api:}[Application Programming Interface (API)]
+
+** B
+
+   - {:$/terminologies/bootloader:}[Bootloader]
+
+** C
+
+   - {:$/terminologies/continual-task-learning:}[Continual Task Learning]
+
+** D
+
+   - {:$/terminologies/data-exfiltration:}[Data Exfiltration]
+   - {:$/terminologies/digital-twin:}[Digital Twin]
+
+** F
+
+   - {:$/terminologies/federated-learning:}[Federated Learning]
+
+** G
+
+   - {:$/terminologies/guid-partition-table:}[GUID Partition Table (GPT)]
+
+** H
+
+   - {:$/terminologies/hardware-in-the-loop:}[Hardware in the Loop]
+   - {:$/terminologies/hids:}[Host-Based Intrusion Detection (HIDS)]
+
+** M
+
+   - {:$/terminologies/master-boot-record:}[Master Boot Record (MBR)]
+
+** N
+
+   - {:$/terminologies/nash-equilibrium:}[Nash Equilibrium]
+
+** R
+
+   - {:$/terminologies/risc-v:}[RISC-V]
+
+** S
+
+   - {:$/terminologies/secure-boot-validation:}[Secure Boot Validation]
+   - {:$/terminologies/software-in-the-loop:}[Software in the Loop]
+   - {:$/terminologies/sffhi:}[System Firmware for Hardware Initialisation]
+      -- {:$/terminologies/sffhi:* Basic Input/Output System (BIOS)}[BIOS]
+      -- {:$/terminologies/sffhi:* Unified Extensible Firmware Interface (UEFI)}[UEFI]
+
+** T
+
+   - {:$/terminologies/tcp:}[Transmission Control Protocol (TCP)]
+
+** U
+
+   - {:$/terminologies/udp:}[User Datagram Protocol (UDP)]
+
+   ===
+___
+
+* Summary
+
+  ===
+___
+
+{:$/technical/index:}[< return] - {:$/index:}[index]

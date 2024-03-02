@@ -1,0 +1,48 @@
+@document.meta
+title: User Datagram Protocol (UDP)
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-02-05T20:28:28+0400
+updated: 2024-02-05T20:36:05+0400
+version: 1.1.1
+@end
+
+* Definition
+
+  Communication protocol used across the Internet for especially time-sensitive
+  transmissions such as video playback or DNS lookups, where dropping packets
+  is preferable to waiting for delayed data.
+
+  Unlike TCP, UDP is connectionless, meaning it does not establish a connection
+  before sending data, does not guarantee delivery and does not ensure that the
+  order of packet delivery is consistent.
+
+  Despite its lack of reliability features, UDP is crucial for situations where
+  the timely delivery of data is more important than the precise delivery of
+  every single packet sent. It offers a trade-off between speed and reliability
+  that is essential for real-time, multimedia, and other latency-sensitive
+  applications.
+
+* Key Features
+
+  - *Connectionless* - There is no handshake process like in TCP, making UDP
+    simpler and faster for scenarios where overhead of stablishing a connection
+    is unncessary or detrimental.
+  - *Speed* - It is suitable for situations where speed is critical and
+    occasional loss of packets is acceptable.
+  - *No Guarantee of Delivery* - Since there is no acknowledgement of receipt,
+    the sender won't know if the packet has been lost or received.
+  - *No Order Guarantee* - Ordering of packets must be managed by the
+    application layer if needed.
+  - *Lightweight* - UDP has a smaller packet header compared to TCP, which
+    reduces amount of data beign transmitted over network, making it a
+    lightweight option for certain applications.
+  - *Broadcast and Multicast* - Allows a single packet to be sent to multiple
+    recipients efficiently.
+
+
+   ===
+___
+
+{:$/terminologies/index:}[< return] - {:$/index:}[index]

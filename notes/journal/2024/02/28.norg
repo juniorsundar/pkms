@@ -1,0 +1,55 @@
+@document.meta
+title: 28 February 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-02-29T09:25:30+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+  - (-) Flash custom firmware into Saluki V2
+     -- (x) Edit firmware for the faults needed
+     -- ( ) Set up simulation in HITL for data collection
+     -- ( ) Collect data
+  - ( ) #RESEARCH Is it possible to automate ROS node generation.
+  - ( ) #RESEARCH "Rule-Based Decision Engine"
+  - (-) Try dumping the fault data as {https://github.com/foxglove/mcap}[MCAP]
+  - (-) Dronsole groundwork
+     -- (-) Continue discussion with Miika to properly understand the
+            redeployment procedure
+     -- ( ) Test the DataHub method for obtaining data
+        --- ( ) Syncup with Moamen as well
+     -- ( ) Syncup with Ilkka for the swarm NATS implementation
+  - (-) Plan for Fault Injector Interface
+  - (-) 28 February, Prepare items for the Saluki V3 Demo
+     -- (-) Fix the issue of flashing firmware into Saluki Pi
+
+* Journal
+
+  - Fixed the false injection code chunks in SITL and HITL
+     -- The codes were in the wrong modules
+     -- Barometer was actually in `GZBridge.cpp`
+     -- Magnetometer refers to a separate `PX4Magnetometer.cpp` library to publish its values
+  - Added zeroes and "set" functionality as well
+  - Attended the Saluki V3 set up workshop
+     -- Performed the Nvidia Jetson Orin Wake Up
+     -- Set up the FOG Drone through provisioning server
+     -- Almost flashed the firmware into Saluki Pi
+     -- Progress is stored {:$/srta/saluki-v3:* Setting up the Saluki V3}[here]
+  - Wrote {:$/tgt/index:}[The Good Teacher]:
+     -- Updated {:$/tgt/volume-6/chapter-424:}[Chapter 424]
+
+     ===
+___
+
+
+===
+___
+
+===
+___
+
+{:$/journal/2024/02/27:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/29:}[next >]

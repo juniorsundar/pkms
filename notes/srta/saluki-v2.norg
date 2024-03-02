@@ -96,7 +96,7 @@ version: 1.1.1
 ** Flashing Firmware (Custom Firmware)
 
    In this case, we need to build firmware with a new set of keys that can be
-   verified with the keys in the bootloader and the FPGA (refer to {:$/notes/technical/terminologies/secure-boot-validation:}[this]).
+   verified with the keys in the bootloader and the FPGA (refer to {:$/terminologies/secure-boot-validation:}[this]).
 
    We apply a patch that signs the keys into the firmware, and then build the
    px4 firmware.
@@ -119,4 +119,4 @@ version: 1.1.1
    ===
 ___
 
-{:$/notes/srta/index:}[< return] -  {:$/notes/index:}[index]
+{:$/srta/index:}[< return] -  {:$/index:}[index]

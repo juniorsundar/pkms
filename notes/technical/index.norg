@@ -10,13 +10,10 @@ version: 1.1.1
 
 * Index
 
-  ~ {:$/notes/technical/frameworks/index:}[Frameworks]
-     ~~ {:$/notes/technical/frameworks/px4:}[PX4- Autopilot]
-     ~~ {:$/notes/technical/frameworks/ros:}[Robot Operating System (ROS)]
-  ~ {:$/notes/technical/libraries:}[Libraries]
-     ~~ {:$/notes/technical/libraries.mavsdk:}[MAVSDK]
-  ~ {:$/notes/technical/terminologies/index:}[Terminologies]
-  ~ {:$/notes/technical/programming-languages/index:}[Programming Languages]
+  ~ {:$/technical/px4/px4:}[PX4- Autopilot]
+  ~ {:$/technical/ros/ros:}[Robot Operating System (ROS)]
+  ~ {:$/technical/mavsdk:}[MAVSDK]
+  ~ {:$/technical/go/go:}[Go - Programming Language]
 
      ===
 ___
@@ -26,4 +23,4 @@ ___
   ===
 ___
 
-{:$/notes/index:}[index]
+{:$/index:}[index]

@@ -1,0 +1,203 @@
+@document.meta
+title: 21 February 2023
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-02-22T09:37:04+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+  - (-) Flash custom firmware into Saluki V2
+     -- ( ) Touch base with Yashraj to determine what is needed from the HiTL
+  - (-) Discuss how to implement the fault injection functionality in dronsole
+     -- (-) Prepare for meeting with Esko and Ilkka
+  - (-) 22nd February, PPT slides CalTech syncup
+     -- (-) Practise and update for 5 minutes
+  - ( ) 23rd February, Share Objectives (meet | exceed | percentage)
+  - ( ) #RESEARCH Is it possible to automate ROS node generation.
+  - ( ) #RESEARCH "Rule-Based Decision Engine"
+  - ( ) Try dumping the fault data as {https://github.com/foxglove/mcap}[MCAP]
+  - (x) Explore emergency landing trigger with GPS issues
+  - ( ) Update feature tracker for Shamsa battery consumption project
+
+* Journal
+
+  - Checked out the failsafe and emergency landing triggers for PX4
+     -- {https://docs.px4.io/main/en/config/safety.html}[Documentation on PX4-Autopilot]
+     -- {:$/technical/px4/safety-configuration:}[Notes]
+  - Sat in on {* Interview: Internship - Akram Khairi - SSRC}[Interview of Intern] 
+  - Sent mail to Oksana Sandulenko with Intern Recommendation
+     -- Sent to Systems Testing Team
+  - Attended {* RTA Meeting}[RTA Meeting]
+  - Attended {* Architecture and UI}[Architecture and UI] syncup with Solita
+  - Meeting with {* Syncup with Martin Saska}[Martin Saska]
+  - Discussing future for Shamsa
+  - Team dinner
+
+  ===
+___
+
+
+===
+___
+
+* Interview: Internship - Akram Khairi - SSRC  
+
+** Attendees
+
+   | Akram Khairi
+   | SSRC
+   | | Willian Lunardi
+   | | Junior Sundar
+   | | Oksana Sandulenko
+   | | John Durotifa-Babatunde
+
+** Minutes
+
+   - Specialises in Mechanical engineer and Robotics (hardware mainly)
+   - Some experience with Pixhawk/PX-4 for controlling motors of a land/water rower
+   - Only some experience with generative AI
+      -- Text-to-2D --> 2D-to-3D
+   - Not suitable for team. May find it too out of the way.
+
+   /Junior Sundar/
+   - Applied research
+   - Interest in creative problem solving while working within set limitations.
+   - Working in existing frameworks and platforms.
+
+* RTA Meeting
+
+** Attendees
+
+   | SRTA-AD
+   | | Martin Andreoni
+   | | Rayana Boubezari
+   | | Junior Sundar
+
+** JaGoals
+
+   - Discuss progress
+
+** Agenda
+
+   - (x) Updates from above
+   - (x) Discuss progress
+   - (-) Update JIRA
+
+** Minutes
+
+   /Martin Andreoni/
+   - Finish slides by today.
+
+   /Rayana Boubezari/
+   - If any hardware or people are needed plan in advance.
+
+
+** Action Items
+
+   - (!) Update Jira
+
+* Architecture and UI
+
+** Attendees
+
+   | SRTA-AD
+   | | Martin Andreoni
+   | | Willian Lunardi
+   | Solita
+   | | Moamen Ibrahim
+   | | Jarmo Hakala
+   | | Philip Schmalen
+
+** Goals
+
+   - Dronsole
+   - Mission UI
+
+** Agenda
+
+   - (x) Dronsole demo
+   - (x) Mission UI
+   - (?) Deployment
+
+** Minutes
+
+   /Jarmo Hakala/
+   - Brief demo of Dronsole
+   - Complete documentation for {https://github.com/tiiuae/airoplatform-docs}[Dronsole].
+   - Mission UI Internal workshop
+   - SRTA Dashboard (Safety dashboard)
+   - Preflight checks
+   - Model or product deployment
+
+   /Willian Lunardi/
+   - Speed up simulation?
+   - Iterative missions?
+
+   /Martin Andreoni/
+   - Jamming location in UI
+   - Human intervention or fully autonomous?
+   - How much information and how to provide the information?
+   - Display improvements.
+
+** Action Items
+
+
+* Syncup with Martin Saska
+
+** Attendees
+
+   | Fly4Future
+   | | Martin Saska
+   | SRTA-AD
+   | | Martin Andreoni
+   | | Willian Lunardi
+   | | Junior Sundar
+
+** Goals
+    
+   - Introducing project
+   - Obtain feedback
+   - Suggestions
+
+** Agenda
+
+   - (x) Presentation for SRTA
+   - (x) Feedback
+
+** Minutes
+
+   /Martin Andreoni/
+   - How SRTA differs from RTA (ML models to detect anomalies)
+
+   /Martin Saska/
+   - Reliable swarming works in {https://mrs.felk.cvut.cz/people/martin-saska}[CVUT].
+   - LiDAR-based, IMU-based attacks, ...?
+      -- Better to not call it "attacks".
+      -- /Environment found to be a more problematic issue./
+      -- GNSS-denied condition when LiDAR is lost and suddenly you don't have visual features. Have to rely on other sensors here.
+      -- /Rather than human-driven conditions, this is the more common cases, which is also important to consider for reliable systems./
+   - If talking about fully autonomous drones, fusing multiple sensor modalities for safe flying is the only solution he sees right now.
+   - Security w.r.t. weather conditions? Testing in one condition but operating in another.
+   - Sensor redundancies to take over if one is failed.
+   - State estimation is tough in single drone, but with swarms it becomes worse.
+   - Relative state of neighbours with onboard sensors.
+   - Human induced faults cannot always replicate what the actual.
+   - *ideas* Found that there can be some cases where swarm can help if another drone is stuck.
+   -- Cooperative state estimation above featureles environments
+
+   /Willian Lunardi/
+   - There is a scarcity of data with anomalies. Not possible to secure against the whole gamut of anomalies.
+   - Self-supervised and unsupervised approach to detect instances that characterises anomalies.
+   - Could we launch drones with inherent faults? Yes, should be possible.
+
+** Action Items
+
+
+   ===
+___
+
+{:$/journal/2024/02/20:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/22:}[next >]

@@ -15,8 +15,8 @@ version: 1.1.1
 ___
 * Index
 
-  - {:$/gow/volume-1/chapter-1:}[Chapter 1 - Prologue]
-  - {:$/gow/volume-1/chapter-2:}[Chapter 2 - Crawl First, Walk Next, Run Later]
-  - {:$/gow/volume-1/chapter-3:}[Chapter 3]
+  - {:$/volume-1/chapter-1:}[Chapter 1 - Prologue]
+  - {:$/volume-1/chapter-2:}[Chapter 2 - Crawl First, Walk Next, Run Later]
+  - {:$/volume-1/chapter-3:}[Chapter 3]
 
-{:$/gow/index:}[< return]
+{:$/index:}[< return]
