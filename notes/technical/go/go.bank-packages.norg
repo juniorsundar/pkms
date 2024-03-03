@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-02-25T16:06:18+0400
-updated: 2024-02-25T16:49:29+0400
+updated: 2024-03-03T14:54:10+0400
 version: 1.1.1
 @end
 
@@ -42,8 +42,8 @@ func main() {
 	for {
 		fmt.Println("=====================")
 
-		//! Can call function from the other file since
-		//! both files belong to same main package
+		// ====Can call function from the other file since====
+		// ====both files belong to same main package====
 		presentOption()
 
 		var choice int
@@ -117,7 +117,7 @@ import (
 	"strconv"
 )
 
-//! Only variables and functions with capital letters can be exported
+// ====Only variables and functions with capital letters can be exported====
 func WriteFloatToFile(float float64, fileName string) {
 	var floatText string = fmt.Sprint(float)
 	os.WriteFile(fileName, []byte(floatText), 0644) // 0644 = read and write

@@ -4,23 +4,23 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-02T16:08:05+0400
+updated: 2024-03-03T11:40:24+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-   - ( ) tasks
+  - ( ) tasks
 
 * Journal
 
-===
-  ___
+  ===
+___
 
-  /scratch/
+/scratch/
 
 ===
-  ___
+___
 
 * MEETING NAME 
 
@@ -40,7 +40,7 @@ version: 1.1.1
 
 ** Action Items
 
-===
+   ===
 ___
 
 {:$/journal/2024/:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/:}[next >]

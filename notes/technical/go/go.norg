@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-02-04T17:13:21+0400
-updated: 2024-03-02T00:56:41+0400
+updated: 2024-03-03T17:22:14+0400
 version: 1.1.1
 @end
 
@@ -15,6 +15,8 @@ version: 1.1.1
   ~ {:$/technical/go/go.bank:}[Example - Bank]
   ~ {:$/technical/go/go.bank-packages:}[Example - Bank Packages]
   ~ {:$/technical/go/go.pointers:}[Example - Pointers]
+  ~ {:$/technical/go/go.structs:}[Example - Structs]
+  ~ {:$/technical/go/go.notes:}[Example - Notes]
 
   ===
 ___
@@ -256,6 +258,50 @@ ___
 
    `nil` represents the absence of an address value i.e. a pointer pointing at
    no address/value in memory.
+
+* Structs
+
+  {:$/technical/go/go.structs:}[Example - Structs]
+  {:$/technical/go/go.notes:}[Example - Notes]
+
+** Introduction
+
+   Receiver arguments essentially turn functions into methods attached to a
+   particular data type.
+
+   When you call a method on an instance of that data type, the receiver
+   argument becomes the instance itself.
+
+   @code go
+   type MyInt int
+
+   func (m MyInt) IsPositive() bool {
+       return m > 0
+   }
+
+   func main() {
+       value := MyInt(5)
+       result := value.IsPositive() // true
+   }
+   @end
+
+   Receiver arguments promote code organization by grouping functionalities
+   alongside the data they operate on.
+
+   They improve readability by allowing you to call methods with a dot notation
+   (e.g. `myInt.IsPositive()`).
+
+** Types
+
+   - *Value receivers* - The method operates on a copy of the value. This is
+     useful when you don't want to modify the original data.
+   - *Pointer receivers* - The method operates on the original data pointed to by
+     the receiver. This is necessary when you want to make changes to the data
+     itself.
+
+* Interfaces
+
+
 
    ===
 ___
