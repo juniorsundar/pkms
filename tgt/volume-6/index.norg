@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: Volume 6
 created: 1701198657781
-updated: 2024-02-29T23:51:20+0400
+updated: 2024-03-03T22:24:27+0400
 version: 1.1.1
 @end
 
@@ -37,5 +37,6 @@ ___
   - {:$/volume-6/chapter-422:}[Chapter 422 - Fear, Uncertainty, Doubt]
   - {:$/volume-6/chapter-423:}[Chapter 423 - Callback]
   - {:$/volume-6/chapter-424:}[Chapter 424 - Another Callback]
+  - {:$/volume-6/chapter-425:}[Chapter 425]
 
   {:$/index:}[< return] - {:$/index:}[index]
