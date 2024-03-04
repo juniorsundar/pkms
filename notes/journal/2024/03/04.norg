@@ -1,0 +1,151 @@
+@document.meta
+title: 4 March 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-03-04T15:23:42+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+** (x) Flash custom firmware into Saluki V2
+
+   Found to be successful.
+
+** (-) HITL simulation and data collection for system latency
+
+*** (x) Syncup with Yashrajsinh to hash out requirements of the HITL simulation
+
+    ==28/02/2024==
+    - Drone is running
+       -- In Hover mode
+       -- Take one test in Path mode
+    - Recording topics (refer to PPT)
+       -- Timestamped and only pertinent data required
+    - Fault activation
+       -- All 5 sensors
+       -- $-\infty$ to 0 to $+\infty$ 
+    - Run till failure or set time point
+       -- Failure defined by crash, sudden landing, out of bounds
+       -- Out of bounds in 2 levels: unacceptable, and failure (1m, 5m)
+    - Dump data for analysis
+
+*** (-) Trigger and be able to observe the faults in HITL
+
+    ==04/03/2024==
+    The modules in SITL and HITL are quite different when considering anything
+    apart from the IMU. Directly porting the SITL into HITL did not work,
+    because the GPS, Magnetometer and Barometer are in different source
+    modules.
+
+    Wasn't able to find these modules. I've tried editing the drivers as well,
+    but it seems that in HITL, the values being published and observed through
+    the ros2 topics aren't reflecting the faults being injected. To expand on
+    this, when addingsome type of fault like setting all values of a particular
+    sensor to zero, only the resulting deviation is observed in the ros2
+    topics. The values aren't actually getting fully set to zero.
+
+*** ( ) Set up automated simulation and data collection pipeline
+
+    ==04/03/2024==
+    *RO2 Node Architecture*
+
+    Keep the `drone_controller.py` node for param setting and drone launching.
+
+    Update the `drone_state_monitor.py` node to ensure system remains within
+    limits.
+
+    Need to edit the `fault_manager.py` such that it triggers a fault after a
+    fixed interval given the sensor that needs to be faulted and the type of
+    fault it needs to experience:
+    - All zeros
+    - All max
+
+    Edit `sensor_recorder_unsync.py` to listen to the below list of topics.
+    This needs to narrowed down a bit:
+    - sensor_gyro
+    - sensor_accel
+    - sensor_mag
+    - sensor_baro
+    - sensor_gps
+    - vehicle_angular_velocity
+    - vehicle_acceleration
+    - vehicle_attitude
+    - vehicle_local_position
+    - vehicle_global_position
+    - actuator_outputs
+    - actuator_controls
+
+    *Simulation and Data Collection Management*
+
+    Since it is a one-off deal, there isn't any necessity to set up an
+    auto-start, kill and relaunch feature. Manual start and kill is sufficient.
+
+    Write a bash script that, once the simulation in HITL is launched, launches
+    above nodes in correct sequence. It should then:
+    ~ Ready drone 
+    ~ Start data recording
+    ~ Trigger fault at fixed time
+       -- Put a tag in data collection when fault is triggered
+    ~ Stop recording when the drone leaves the boundaries
+       -- Also apply a tag when the drone switches from /acceptable/ to
+          /unacceptable/ to /failure/
+    ~ Dump records to `.csv`
+    ~ Reset all applied faults prepare for reset
+    ~ Rince and repeat for next fault
+
+** ( ) #RESEARCH Tasks
+*** ( ) Is it possible to automate ROS node generation
+*** ( ) Rule-Based Decision Engine"
+
+** (-) Try dumping the fault data as {https://github.com/foxglove/mcap}[MCAP]
+
+** (-) Dronsole groundwork
+*** (-) Continue discussion with Miika to properly understand the redeployment procedure
+*** (-) Test out method suggested by Ilkka to run `kubectl` commands directly
+*** ( ) Test the DataHub method for obtaining data
+**** ( ) Syncup with Moamen as well
+*** ( ) Syncup with Ilkka for the swarm NATS implementation
+
+** (-) Plan for Fault Injector Interface
+
+   ===
+___
+
+* Journal
+
+
+  ===
+___
+
+
+
+===
+___
+
+* Meetings
+
+** MEETING NAME
+
+*** Attendees
+
+    | Names
+
+*** Goals
+
+
+*** Agenda
+
+    - ( ) 
+
+*** Minutes
+
+
+*** Action Items
+
+    ===
+___
+
+{:$/journal/2024/03/03:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/03/05:}[next >]
