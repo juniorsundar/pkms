@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-03T11:40:16+0400
+updated: 2024-03-05T11:55:18+0400
 version: 1.1.1
 @end
 
@@ -33,15 +33,6 @@ version: 1.1.1
         little bit.
      -- However, the build was successful for the Saluki V2. Need to test if
         the parameters are now editable for GPS and Magnetometer.
-
-===
-  ___
-
-  /scratch/
-
-===
-  ___
-
 
 ===
 ___
