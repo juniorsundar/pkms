@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-07T00:27:46+0400
+updated: 2024-03-07T00:29:22+0400
 version: 1.1.1
 @end
 
@@ -131,7 +131,6 @@ ___
 
 * Journal
 
-  - Jot down how the mcap recording works (possibly hold a snippet)
   - Wrote {:$/../tgt/index:}[The Good Teacher]
      -- Uploaded {:$/../tgt/volume-6/chapter-413:}[Chapter 413 - The Council's Decision]
      -- Updated {:$/../tgt/volume-6/chapter-426:}[Chapter 426]
