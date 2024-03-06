@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-06T23:50:48+0400
+updated: 2024-03-07T00:27:46+0400
 version: 1.1.1
 @end
 
@@ -97,11 +97,13 @@ version: 1.1.1
 *** ( ) Rule-Based Decision Engine
 *** ( ) Feature Importance Calculation
 
-** (x) Try dumping the fault data as {https://github.com/foxglove/mcap}[MCAP]
+** (-) Try dumping the fault data as {https://github.com/foxglove/mcap}[MCAP]
 
    Tested out the process. Currently there is an issue in reading the file and
    converting it from `.mcap` to `.csv` or other human readable format.
    Currently talking with Moamen for that.
+
+*** (-) Write documentation of how this is done
 
 ** (-) Dronsole groundwork
 *** (-) Continue discussion with Miika to properly understand the redeployment procedure
@@ -122,7 +124,9 @@ version: 1.1.1
 
 *** ( ) Discuss in meeting with Rayana
 
-    ===
+** ( ) Add Yashrajsinh to task in Jira
+
+   ===
 ___
 
 * Journal
@@ -222,9 +226,9 @@ ___
 
     - (x) Update Jira and weekly report
     - -( ) Implement a basic ROS 2 implementation for swarm controls for Saurabh-
-          -to test his algorithms-
+      -to test his algorithms-
     - -( ) Prepare logistics for updating tasks and goal given the meeting with-
-          -{** Technical Syncup / Junior}[Willian]-
+      -{** Technical Syncup / Junior}[Willian]-
        -- -( ) Discuss in meeting with Rayana-
 
        ===
