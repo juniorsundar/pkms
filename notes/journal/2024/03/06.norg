@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-06T16:17:35+0400
+updated: 2024-03-06T23:50:48+0400
 version: 1.1.1
 @end
 
@@ -95,6 +95,7 @@ version: 1.1.1
 ** ( ) #RESEARCH Tasks
 *** ( ) Is it possible to automate ROS node generation
 *** ( ) Rule-Based Decision Engine
+*** ( ) Feature Importance Calculation
 
 ** (x) Try dumping the fault data as {https://github.com/foxglove/mcap}[MCAP]
 
@@ -111,14 +112,27 @@ version: 1.1.1
 
 ** (-) Plan for Fault Injector Interface
 
-   ===
+** ( ) #BRAINSTORM Data generation for publication
+
+** ( ) #PERSONAL Implement a basic ROS 2 implementation for swarm controls for Saurabh to test his algorithms
+
+** ( ) Prepare logistics for updating tasks and goal given the meeting with Willian 
+
+   /Reference {:$/journal/2024/03/06:** Technical Syncup / Junior}[here]/
+
+*** ( ) Discuss in meeting with Rayana
+
+    ===
 ___
 
 * Journal
 
   - Jot down how the mcap recording works (possibly hold a snippet)
+  - Wrote {:$/../tgt/index:}[The Good Teacher]
+     -- Uploaded {:$/../tgt/volume-6/chapter-413:}[Chapter 413 - The Council's Decision]
+     -- Updated {:$/../tgt/volume-6/chapter-426:}[Chapter 426]
 
-  ===
+     ===
 ___
 
 * Meetings 
@@ -163,9 +177,9 @@ ___
 
 *** Action Items
 
-    - ( ) #BRAINSTORM Data generation for publication
+    - -( ) #BRAINSTORM Data generation for publication-
     - ( ) Dummy data set output with varying wind
-    - ( ) #RESEARCH Feature Importance Calculation
+    - -( ) #RESEARCH Feature Importance Calculation-
 
 ** RTA Meeting
 
@@ -206,14 +220,14 @@ ___
 
 *** Action Items
 
-    - ( ) Update Jira and weekly report
-    - ( ) Implement a basic ROS 2 implementation for swarm controls for Saurabh
-          to test his algorithms
-    - ( ) Prepare logistics for updating tasks and goal given the meeting with
-          {** Technical Syncup / Junior}[Willian]
-       -- ( ) Discuss in meeting with Rayana
+    - (x) Update Jira and weekly report
+    - -( ) Implement a basic ROS 2 implementation for swarm controls for Saurabh-
+          -to test his algorithms-
+    - -( ) Prepare logistics for updating tasks and goal given the meeting with-
+          -{** Technical Syncup / Junior}[Willian]-
+       -- -( ) Discuss in meeting with Rayana-
 
-    ===
+       ===
 ___
 
 {:$/journal/2024/03/05:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/03/07:}[next >]
