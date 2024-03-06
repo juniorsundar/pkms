@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-03T11:40:24+0400
+updated: 2024-03-06T09:39:44+0400
 version: 1.1.1
 @end
 
@@ -12,35 +12,35 @@ version: 1.1.1
 
   - ( ) tasks
 
+  ===
+___
+
 * Journal
 
   ===
 ___
 
-/scratch/
+* Meetings
 
-===
-___
+** Meeting Name
 
-* MEETING NAME 
+*** Attendees
 
-** Attendees
+    | Names
 
-   | Names
-
-** Goals
+*** Goals
 
 
-** Agenda
+*** Agenda
 
-   - ( ) 
+    - ( ) 
 
-** Minutes
+*** Minutes
 
 
-** Action Items
+*** Action Items
 
-   ===
+    ===
 ___
 
 {:$/journal/2024/:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/:}[next >]
