@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T16:33:02+0400
-updated: 2024-02-01T22:12:46+0400
+updated: 2024-03-07T14:30:36+0400
 version: 1.1.1
 @end
 
@@ -85,6 +85,31 @@ version: 1.1.1
    echo "source /opt/ros/humble/setup.bash" >> .bashrc
    @end
 
+* Create Local Workspace
+
+  Sometimes, required packages cannot be installed from the ROS repositories.
+  In that case you will have to build from source. Alternatively, you may also
+  be developing packages for ROS, and that will also require building from
+  source. To do this, we need to create a local ROS workspace.
+
+  @code bash
+  mkdir -p ros_workspace/src
+  cd ros_workspace # This is the root
+  cd src # All the packages go in here (clone into this space)
+  cd ..
+  colcon build # The build tool for ROS 2
+  @end
+
+  In the workspace root, there will now be a `build`, `install` and `log`
+  directory.
+
+  To source the workspace so that the binaries can be accessed through the
+  `ros2` CLI, run:
+
+  @code bash
+  source install/local_setup.bash
+  @end
+
 * Distributed System
 
   DDS (Data Distribution Service) plays a crucial role in ROS (Robot Operating
@@ -112,7 +137,7 @@ version: 1.1.1
     discovery), more granular quality of service settings, and potentially more
     efficient intra-process communication through shared memory.
 
-  ===
+    ===
 ___
 
-  {:$/technical/ros/ros:}[< return] - {:$/index:}[index]
+{:$/technical/ros/ros:}[< return] - {:$/index:}[index]

@@ -151,7 +151,7 @@ version: 1.1.1
 
     Run the command: `/home/ghaf/fog-stage1-wrapper.sh`
 
-    *Note:* In the tick box selection, select the first two, leave second
+    *Note:* In the tick box selection, select the first two, leave third
     blank. For the type of FOG installation, only `cm-scan` is possible with
     the devkit.
 

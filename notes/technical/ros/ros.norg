@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T15:39:32+0400
-updated: 2024-03-02T18:39:23+0400
+updated: 2024-03-07T14:28:37+0400
 version: 1.1.1
 @end
 
@@ -12,6 +12,7 @@ version: 1.1.1
 
   ~ {:$/technical/ros/ros1:}[ROS 1]
   ~ {:$/technical/ros/ros2:}[ROS 2]
+  ~ {:$/technical/ros/rosbag2-mcap:}[MCAP (rosbag2)]
 
   ===
 ___
@@ -121,7 +122,8 @@ ___
    Here, Node_1 publishes to Topic_1 with a message of type
    `std_msgs/msg/String`.
 
-   {/ assets/ros.nodes-topics-and-messages1.png}[Figure: Basic pub-sub with two nodes]
+   .image assets/ros.nodes-topics-and-messages1.png
+   [Figure: Basic pub-sub with two nodes]
 
    If another node, Node_3, to this network which also uses the messages
    published in Topic_1 (thus it is a subscriber to Topic_1), it would look
@@ -129,7 +131,8 @@ ___
    image from a sensor and cleans it of noise, and both Node_2 and Node_3 have
    a use for the same cleaned image.
 
-   {/ assets/ros.nodes-topics-and-messages2.png}[Figure: Pub-sub with three nodes]
+   .image assets/ros.nodes-topics-and-messages2.png
+   [Figure: Pub-sub with three nodes]
 
 ** Packages
 
@@ -138,7 +141,8 @@ ___
    distribution as reference. (*NOTE:* the build system for ROS 1 and ROS 2 are
    different. Former uses `catkin`, latter uses `colcon`.)
 
-   {/ assets/ros.nodes-topics-and-messages3.png}[Figure: Package structure - global and local]
+   .image assets/ros.nodes-topics-and-messages3.png
+   [Figure: Package structure - global and local]
 
    If packages are installed from binaries, they are accessible (the nodes,
    interfaces, servers, etc.) globally as long as the ROS environment is
