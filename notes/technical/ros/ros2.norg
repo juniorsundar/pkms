@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T16:33:02+0400
-updated: 2024-03-07T14:30:36+0400
+updated: 2024-03-07T21:09:30+0400
 version: 1.1.1
 @end
 
@@ -12,22 +12,22 @@ version: 1.1.1
 
   *NOTE:* This is being attempted in the Ubuntu 22.04 operating system.
 
-* Set Locale
+** Set Locale
 
-  Make sure there is a locale which supports UTF-8. If in a minimal environment
-  (such as a docker container), the locale may be something minimal like POSIX.
-  Test with the following settings.
+   Make sure there is a locale which supports UTF-8. If in a minimal environment
+   (such as a docker container), the locale may be something minimal like POSIX.
+   Test with the following settings.
 
-  @code bash
-  locale  # check for UTF-8
+   @code bash
+   locale  # check for UTF-8
 
-  sudo apt update && sudo apt install locales
-  sudo locale-gen en_US en_US.UTF-8
-  sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
-  export LANG=en_US.UTF-8
+   sudo apt update && sudo apt install locales
+   sudo locale-gen en_US en_US.UTF-8
+   sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+   export LANG=en_US.UTF-8
 
-  locale  # verify settings
-  @end
+   locale  # verify settings
+   @end
 
 ** Set up Sources
 
@@ -69,7 +69,8 @@ version: 1.1.1
    sudo apt install ros-dev-tools
    @end
 
-   > For on the ROS-Base Install (Bare Bones) which contains Communication libraries, message packages, command line tools. No GUI tools.
+   > For on the ROS-Base Install (Bare Bones) which contains Communication
+   > libraries, message packages, command line tools. No GUI tools.
    > 
    > @code bash
    > sudo apt install ros-humble-ros-base

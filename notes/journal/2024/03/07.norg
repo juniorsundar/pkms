@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-07T14:59:29+0400
+updated: 2024-03-07T21:07:48+0400
 version: 1.1.1
 @end
 
@@ -117,31 +117,12 @@ ___
 * Journal
 
   Created documentation:
-  - {:$/notes/technical/ros/rosbag2-mcap:}[MCAP (rosbag2)]
-  - {:$/notes/technical/ros/ros2:* Create Local Workspace}[Create Local Workspace]
+  - {:$/technical/ros/rosbag2-mcap:}[MCAP (rosbag2)]
+  - {:$/technical/ros/ros2:* Create Local Workspace}[Create Local Workspace]
 
   ===
 ___
 
-* Meetings
-
-** Meeting Name
-
-*** Attendees
-
-    | Names
-
-*** Goals
-
-
-*** Agenda
-
-    - ( ) 
-
-*** Minutes
-
-
-*** Action Items
 
     ===
 ___
