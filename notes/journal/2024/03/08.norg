@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-08T09:48:40+0400
+updated: 2024-03-08T21:36:05+0400
 version: 1.1.1
 @end
 
@@ -12,7 +12,7 @@ version: 1.1.1
 
 ** (-) HITL simulation and data collection for system latency
 
-*** (-) Trigger and be able to observe the faults in HITL
+*** (x) Trigger and be able to observe the faults in HITL
 
     The modules in SITL and HITL are quite different when considering anything
     apart from the IMU. Directly porting the SITL into HITL did not work,
@@ -26,7 +26,7 @@ version: 1.1.1
     sensor to zero, only the resulting deviation is observed in the ros2
     topics. The values aren't actually getting fully set to zero.
 
-*** (-) Set up automated simulation and data collection pipeline
+*** (x) Set up automated simulation and data collection pipeline
 
     *RO2 Node Architecture*
 
@@ -77,29 +77,21 @@ version: 1.1.1
     ~ Reset all applied faults prepare for reset
     ~ Rince and repeat for next fault
 
-** ( ) #RESEARCH Tasks
-*** ( ) Is it possible to automate ROS node generation
-*** ( ) Rule-Based Decision Engine
-*** ( ) Feature Importance Calculation
+    *Evaluation*
+
+    Had to do a bit of hacking about here. Though I did identify a
+    problem/feature that may affect the data collection in the future.
+
+    Basically, the rate at which the drone is being monitored for failure is
+    slower than the rate at which other sensors do their tasks. This means that
+    the time frame between failure occuring is basically just a few time
+    frames.
 
 ** (-) Dronsole groundwork
-*** (-) Continue discussion with Miika to properly understand the redeployment procedure
-*** (-) Test out method suggested by Ilkka to run `kubectl` commands directly
-*** ( ) Test the DataHub method for obtaining data
-**** ( ) Syncup with Moamen as well
+*** (_) Continue discussion with Miika to properly understand the redeployment procedure
 *** (_) Syncup with Ilkka for the swarm NATS implementation
 
-** (-) Plan for Fault Injector Interface
-
-** ( ) #BRAINSTORM Data generation for publication
-
-** ( ) #PERSONAL Implement a basic ROS 2 implementation for swarm controls for Saurabh to test his algorithms
-
-** ( ) Prepare logistics for updating tasks and goal given the meeting with Willian 
-
-   /Reference {:$/journal/2024/03/06:** Technical Syncup / Junior}[here]/
-
-*** ( ) Discuss in meeting with Rayana
+** (_) Plan for Fault Injector Interface
 
     ===
 ___
@@ -115,21 +107,29 @@ ___
 
 * Meetings
 
-** Meeting Name
+** Unikie Town Hall
 
 *** Attendees
 
-    | Names
+    | Unikie MEA
+    | | Luana Rocha
+    | | Rauna Vaani
 
 *** Goals
 
+    Introduce new Employee Handbook for MEA office
 
 *** Agenda
 
-    - ( ) 
+    - ( ) Introduce the handbook for MEA office
+    - ( ) Talks about Ramadan
+    - ( ) Negotiation of Unikie with TII
 
 *** Minutes
 
+    - Current negotiations to end within April
+    - If need to update or modify laptop, need to discuss with Luana
+    - Can post the benefits
 
 *** Action Items
 
