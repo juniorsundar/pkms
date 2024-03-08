@@ -1,0 +1,72 @@
+@document.meta
+title: Bash Code Snippets
+description: 
+authors: juniorsundar-unikie
+categories: 
+created: 2024-03-08T12:35:46+0400
+updated: 2024-03-08T12:40:33+0400
+version: 1.1.1
+@end
+
+* Kill all processes with common name
+
+  @code bash
+  PROCESS_NAME="px4_fault_injection"
+  for PID in $(ps aux | grep "$PROCESS_NAME" | grep -v grep | awk '{print $2}'); do
+      if [ -z "$PID" ]; then
+          echo "No process found with name $PROCESS_NAME"
+      else
+          kill $PID
+          echo "Process $PROCESS_NAME (PID $PID) has been killed."
+      fi
+  done
+  @end
+
+* Create (--help)ful prompts
+
+  @code bash
+  display_help() {
+      echo "Usage: $0 [-s|--sensor SENSOR] [-f|--fault-type TYPE] [-v|--fault-value VALUE] [--help]"
+      echo "Options:"
+      echo "  -s, --sensor       Specify the sensor (all caps, e.g., ACCEL)"
+      echo "  -f, --fault-type   Specify the fault type (all caps, e.g., NOISE)"
+      echo "  -v, --fault-value  Specify the fault value (float value, e.g., 0.2)"
+      echo "  -h, --help         Display this help message"
+      exit 0
+  }
+  
+  while [[ $# -gt 0 ]]; do
+      case "$1" in
+          -s|--sensor)
+              sensor="$2"
+              shift 2
+              ;;
+          -f|--fault-type)
+              type="$2"
+              shift 2
+              ;;
+          -v|--fault-value)
+              value="$2"
+              shift 2
+              ;;
+          -h|--help)
+              display_help
+              ;;
+          *)
+              echo "Unknown argument: $1"
+              exit 1
+              ;;
+      esac
+  done
+  
+  if [ -z "$sensor" ] && [ -z "$type" ] && [ -z "$value" ]; then
+      display_help
+  fi
+  
+  ros2 run px4_fault_injection iteration_runner.py $sensor $type $value
+  @end
+
+  ===
+___
+
+{:$/ideas/index:}[< return] -  {:$/index:}[index]

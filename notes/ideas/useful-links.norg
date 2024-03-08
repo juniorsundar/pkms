@@ -11,9 +11,9 @@ version: 1.1.1
 * Tools
 
   ~ {https://fanurs.github.io/github-ascii-tree-generator/}[GitHub Repository ASCII-Tree Generator]
-      -- Converts a provided GitHub link into an ASCII tree 
+     -- Converts a provided GitHub link into an ASCII tree 
 
-  ===
+     ===
 ___
 
-  {:$/ideas/index:}[< return] -  {:$/index:}[index]
+{:$/ideas/index:}[< return] -  {:$/index:}[index]

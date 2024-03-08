@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T15:39:32+0400
-updated: 2024-03-07T14:28:37+0400
+updated: 2024-03-08T09:48:05+0400
 version: 1.1.1
 @end
 
@@ -74,7 +74,7 @@ ___
 
     The key difference can be narrowed down to the way in which the
     communication between nodes is facilitated in the two different systems.
-    ROS 1 uses {:$/technical/frameworks.ros1:* Centralised System}[TCP/IP] primarily while ROS 2 uses {:$/technical/frameworks.ros2:* Distributed System}[DDS]. The links will
+    ROS 1 uses {:$/technical/ros/ros1:* Centralised System}[TCP/IP] primarily while ROS 2 uses {:$/technical/ros/ros2:* Distributed System}[DDS]. The links will
     expound on this implementation in more detail.
 
 * Distributions
