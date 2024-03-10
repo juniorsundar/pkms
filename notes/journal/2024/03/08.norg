@@ -88,10 +88,10 @@ version: 1.1.1
     frames.
 
 ** (-) Dronsole groundwork
-*** (_) Continue discussion with Miika to properly understand the redeployment procedure
-*** (_) Syncup with Ilkka for the swarm NATS implementation
+*** (_) -Continue discussion with Miika to properly understand the redeployment procedure-
+*** (_) -Syncup with Ilkka for the swarm NATS implementation-
 
-** (_) Plan for Fault Injector Interface
+** (_) -Plan for Fault Injector Interface-
 
     ===
 ___

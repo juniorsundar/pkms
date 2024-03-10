@@ -1,0 +1,41 @@
+@document.meta
+title: LSP Explained
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-03-10T18:20:19+0400
+updated: 2024-03-10T18:28:13+0400
+version: 1.1.1
+@end
+
+/Reference {https://www.youtube.com/watch?v=LaS32vctfOY}[LSP Explained (in 5 Minutes) - by TJ DeVries]/
+
+* History
+
+  Created by Microsoft, alongside collaborations with Red Hat and Codenvy. Open
+  sourced in June 2016. Nowadays most languages have an LSP or viable LSP in
+  the ecosystem. Now they are staple part of the runtime of some languages.
+
+* Definition
+
+  Stands for Language Server Protocol. It defines the protocol used between an
+  editor (client) and a language server that provides languagte features like
+  auto-complete, go-to definition, etc.
+
+* Where and How Does this Occur?
+
+  It occurs in the editor. A language server communicates with the client.
+  Editor spawns the process by itself, it will own that process for the
+  lifetime of the editor session.
+
+  Client can 'request' stuff from the server, and it will respond with an
+  answer that could satisfy this request.
+
+* Why is this needed?
+
+  It is one method of trying to make a large `M x N` problem into a `M + N` problem:
+  - `M` editors
+  - `N` languages
+
+  Each editor needs its own iteration of a language server. With LSP, you have
+  a protocol to define servers for lanugages.

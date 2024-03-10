@@ -1,0 +1,132 @@
+@document.meta
+title: Understanding Tree-sitter
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-03-10T17:51:46+0400
+updated: 2024-03-10T18:19:23+0400
+version: 1.1.1
+@end
+
+/Reference {https://www.youtube.com/watch?v=09-9LltqWLY}[tree-sitter explained - by TJ DeVries]/
+
+* Tree-sitter IS NOT
+
+** Language Server Protocol (LSP)
+
+   LSP tries to understand code at a semantic level. It not just looks at one
+   file, but also the entire project. It analyses projects and code in a way
+   such that it can offer definition, references, and completions that are
+   accurate.
+
+   Tree-sitter looks at one file at a time and provides incremental and quick
+   feedback from that file.
+
+** Compiler
+
+   It doens't know about types, or package.
+
+   It only knows the text.
+
+** Interpreter
+
+   There is nothing running. It is just a library to interact with text.
+
+* Tree-sitter IS
+
+** Parser generator tool
+
+   You can write a grammar, which can be transformed into a parser. Parser is
+   loaded by application embedding tree-sitter and can be used inside the
+   application.
+
+** Incremental parsing library
+
+   Parser automatically get this incremental and error recovering part of that
+   grammar. No need to write that as grammar making process.
+
+** Query engine
+
+   A framework to:
+   - Generate a syntax tree
+   - Ask questions about the tree
+
+* Why Tree-sitter in an Editor?
+
+** Incremental
+
+   Text gets added and removed character by character. It is preferred for the
+   parser to not have to recompute the tree everytime we type.
+
+** Error Recovery
+
+   As you're writing a particular line of code, it is broken until you finish
+   the sentence or phrase. You don't want the parser to throw its hands up as
+   this is understood. You want to find minimal amount of error and keep it
+   local, ensuring the rest of the file is highlighted.
+
+** Queries
+
+   Ask questions to the tree and retrieve that answer for editor or other
+   applications to perform useful tasks with this information.
+
+* How Does Tree-Sitter Work?
+
+** Underlying Stack: `grammar.js`
+
+   Grammars are written in "JavaScript".
+   - JavaScript-like DSL in `grammar.js`file
+   - These are compiled to a `parser.c` via the tree-sitter cli.
+
+** Underlying Stack: Results of `grammar.js`
+
+   @code text
+   |-src
+   |  |- grammar.json
+   |  |- node-types.json
+   |  |- parser.c
+   |  |- scanner.c 
+   |  |- tree_sitter
+   |  |   |- parser.h
+   @end
+
+** Why C?
+
+   Only dependencies is a C Compiler. Most build systems have this.
+
+   Good Foreign Function Interface story for lots of languages with C. Easy to
+   embed tree-sitter into other applications and access them with bindings.
+
+   This makes tree-sitter very portable.
+
+** Compile C Code to Shared Library
+
+   @code bash
+   cc -o ./build/parser.so -I./src src/parser.c src/scanner.c -shared -Os -fPIC
+   @end
+
+   Gets you a `parser.so`
+
+** Shared Library
+
+   You can load that shared library as a parser inside of some applications
+   that support tree-sitter.
+
+* What is Tree-sitter Used For (in an Editor)?
+
+  - Highlighting
+     -- Embedding languages
+  - Indenting
+  - Structural editing
+     -- Text objects (`daf` --> 'D'elete 'A'round 'F'unction)
+     -- Selection
+     -- Move
+  - Code context
+  - Folding
+  - ...
+
+* What is Tree-sitter Used For (outside Editor)?
+
+  - Code Analysis
+  - Code Linter
+  - Code Highlighting
