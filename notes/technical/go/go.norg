@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-02-04T17:13:21+0400
-updated: 2024-03-03T17:22:14+0400
+updated: 2024-03-10T22:27:52+0400
 version: 1.1.1
 @end
 
@@ -301,7 +301,81 @@ ___
 
 * Interfaces
 
+** Introduction
 
+   Interfaces are a way to define a contract of a behaviour. Interface type
+   declares a set of methods that a concrete type must implement to be
+   considered as adhereing to that interface. It is like a blueprint for what a
+   type should be able to do.
+
+** Key Points
+
+   - *Implicit Implementation* - There's no need to explicitly declare that a
+     type implements an interface. If the type has all the necessary methods,
+     Go automatically treats it as fulfilling the interface.
+   - *Type Flexibility* - A variable declared with an interface type can hold
+     values of any concrete type that implements the interface. This is the
+     essence of polymorphism in Go.
+   - *Decoupling* - Using interfaces helps decouple different parts of your
+     code. Functions and components can work with abstractions (interfaces)
+     rather than specific implementations. This makes code more adaptable to
+     change.
+
+** Example
+
+   @code go
+   type Shaper interface {
+       Area() float64
+   }
+
+   type Rectangle struct {
+       width, height float64
+   }
+
+   func (r Rectangle) Area() float64 {
+       return r.width * r.height
+   }
+
+   type Circle struct {
+       radius float64
+   }
+
+   func (c Circle) Area() float64 {
+       return math.Pi * c.radius * c.radius
+   }
+   @end
+
+   ~ We define a `Shaper` interface. Any type with an `Area()` method returning a
+     `float64` will fulfill it.
+   ~ `Rectangle` and `Circle` structs both implement the `Shaper` interface.
+
+   Now a function that accepts `Shaper` can work with both rectangles and
+   circles:
+
+   @code go
+   func calculateTotalArea(shapes []Shaper) float64 {
+       var total float64
+       for _, shape := range shapes {
+           total += shape.Area()
+       }
+       return total
+   }
+   @end
+
+** Empty Interface (`interface{}`)
+
+   Go has a special interface called the empty interface: `interface{}`. It has
+   no methods, meaning all types implicitly implement it. This is useful for
+   generic functions that need to work with values of unknown types.
+
+** Why Interfaces Matter
+
+   - *Abstraction* - They hide implementation details, allowing you to focus on
+     what a type can do rather than how it does it.
+   - *Polymorphism* - You can write functions and methods that operate on
+     common interfaces, making them reusable with different types.
+   - *Testability* - Interfaces make it easier to substitute real
+     implementations with mock objects for testing.
 
    ===
 ___
