@@ -1,0 +1,157 @@
+@document.meta
+title: 11 March 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-03-11T12:58:03+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+** (-) HITL simulation and data collection for system latency
+*** (-) Collect data and compile it for analysis
+
+** (-) #RESEARCH Tasks
+*** (-) Is it possible to automate ROS node generation
+*** ( ) Graph Neural Networks
+*** ( ) Tokenising results
+
+** (-) Dronsole groundwork
+*** (-) Test out method suggested by Ilkka to run `kubectl` commands directly
+*** (-) Explore the DataHub method for obtaining data
+**** (-) Syncup with Moamen as well
+
+** ( ) #PERSONAL Implement a basic ROS 2 implementation for swarm controls for Saurabh to test his algorithms
+
+** (-) Prepare logistics for updating tasks and goal given the meeting with Willian 
+*** (-) #BRAINSTORM Data generation for publication
+**** (-) What is the purpose of the exploration?
+
+     Developing a varied and diverse dataset that can capture the operation of
+     quadcopters over normal and faulty operations.
+
+     The purpose is to provide a sufficiently descriptive dataset that can be
+     used by researchers and engineers to train and test models whose use is to
+     identify these faults in the system.
+
+**** (-) Literature review
+
+     - Is there a shortage in this field?
+     - Are there any existing solutions to this shortage?
+     - How are datasets usually framed in this context?
+
+     One example: {https://www.kaggle.com/datasets/daniaherzalla/tii-ssrc-23}[Dania's Dataset]
+
+*** (x) Discuss in meeting with Rayana
+    /Reference {** Junior - Jira Adjustment}[here]/
+
+** ( ) Update Jira
+*** ( ) RTA-20: Redefine RTA-70 to reflect new objective
+**** ( ) Indicate that the previous sub-tasks are carrying over
+**** ( ) Write comments to explain why changes were made
+*** ( ) RTA-354: Expound on RTA-67/RTA-68 to reflect new objectives
+*** ( ) RTA-22: Reorient for swarm
+**** ( ) Discuss with Saurabh to identify swarm requirements
+**** ( ) Adjust Story title accordingly
+
+     ===
+___
+
+* Journal
+
+  @code bash
+  # Incase you want to search headings only  
+  rg '^(\*\* \( )' | fzf
+  @end
+
+  ===
+___
+
+* Meetings
+
+** Junior - Jira Adjustment
+
+*** Attendees
+
+    | Rayana Boubezari
+    | Junior Sundar
+
+*** Goals
+
+    Adjusting Jira tasks to match new objectives
+
+*** Agenda
+
+    - (x) Discuss status of current tasks
+    - (x) Adjust or move Jira tasks
+
+*** Minutes
+
+    /Junior Sundar/
+    Simulation deployment through `dronsole`
+    - Unnecessary?
+    - Not acheivable given current timeline
+
+    HITL
+    - Will reach closure after current task
+    - Saluki V3? Whill coordinate with Simulatuion and Testing Team
+    - Not an immediate requirement
+
+    Data Generation Task
+    - Brought it up
+    - Currently in lit. review
+
+    Swarm Capabilities
+    - Potential sim env.?
+    - Actual drones?
+
+*** Action Items
+
+    - RTA-20:
+       -- -( ) Redefine RTA-70 to reflect the changes-
+          --- -( ) Indicate that the previous sub-tasks are carrying over-
+          --- -( ) Write comments to explain why changes were made-
+    - RTA-354:
+       -- -( ) Expound on RTA-67/RTA-68 to reflect new objectives-
+    - RTA-22:
+       -- -( ) Discuss with Saurabh to identify swarm requirements-
+       -- -( ) Adjust Story title accordingly-
+
+** RTA/ML/Data Solita/Abu Dhabi Syncup
+
+*** Attendees
+
+    | Soilta
+    | SRTA-AD
+
+*** Goals
+
+    Update
+
+*** Agenda
+
+    - ( ) Touch base on current progress
+    - ( ) Establish new needs or requirements
+
+*** Minutes
+
+    /MLFlow/
+    - MLFlow base for training models is being tested after cloud deployment
+    - Currently running with own data and dummy models.
+
+    /Datahub/
+    - managed to deploy datahub with {https://en.wikipedia.org/wiki/CockroachDB}[CockroachDB]
+    - How to handle ROSBag data?
+    - Currently considering NoSQL as an option since ROSBags don't tend to have stable schemas
+
+*** Action Items
+
+    - ( ) #RESEARCH Graph Neural Networks
+    - ( ) #RESEARCH Tokenising results
+
+    ===
+___
+
+{:$/journal/2024/03/10:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/03/12:}[next >]

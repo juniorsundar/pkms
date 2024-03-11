@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T20:39:22+0400
-updated: 2024-02-01T21:45:53+0400
+updated: 2024-03-11T11:59:10+0400
 version: 1.1.1
 @end
 
@@ -12,6 +12,11 @@ version: 1.1.1
 
   ~ {https://fanurs.github.io/github-ascii-tree-generator/}[GitHub Repository ASCII-Tree Generator]
      -- Converts a provided GitHub link into an ASCII tree 
+        
+* Add-ons
+
+  ~ {https://github.com/ericmurphyxyz/rofi-wifi-menu/blob/master/rofi-wifi-menu.sh}[Rofi WiFi Menu]
+     -- Shows the available access points
 
      ===
 ___
