@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T19:55:40+0400
-updated: 2024-03-03T00:08:02+0400
+updated: 2024-03-11T19:49:03+0400
 version: 1.1.1
 @end
 
@@ -90,4 +90,4 @@ ___
   ===
   ___
 
-* {:$/gow/scratch:}[SCRATCH SPACE]
+* {:$/scratch:}[SCRATCH SPACE]
