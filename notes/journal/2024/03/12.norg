@@ -1,10 +1,10 @@
 @document.meta
-title: template
+title: 12 March 2024
 description: 
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-11T23:22:37+0400
+updated: 2024-03-12T14:57:00+0400
 version: 1.1.1
 @end
 
@@ -12,6 +12,15 @@ version: 1.1.1
 
 ** (-) HITL simulation and data collection for system latency
 *** (-) Collect data and compile it for analysis
+
+    Wrote a data converter and compiler according to the needs of the final
+    data set. Processing is still needed for this, though that can be done at a
+    later date.
+
+    Ready to move on to the HITL setup, since things are working well in SITL.
+    Of course, the issue of whether faults injected will become evident in the
+    data is a question. But as per Yashrajsinh, it shouldn't matter as long as
+    the deviations are being captured.
 
 ** (-) #RESEARCH Tasks
 *** (-) Is it possible to automate ROS node generation
@@ -63,23 +72,35 @@ ___
 
 * Meetings
 
-** Meeting Name
+** Battery Monitor Meeting
 
 *** Attendees
 
-    | Names
+    | Junior Sundar
+    | Shamsa Hamad
+    | Willian Lunardi
 
 *** Goals
 
+    Finalise features for battery prediction data collection
 
 *** Agenda
 
-    - ( ) 
+    - (x) Identify data needs and selecting which result of investigation is to
+          be focused on
+    - (x) Next steps for Shamsa
 
 *** Minutes
 
+    - End result could be a multi-step or end-to-end prediction approach
+    - How to collect data? What is teh nature of data needed?
+    - Are external devices needed? Could they be added?
+    - What other topics should be listened to?
 
 *** Action Items
+
+    - First it is needed to formalise both the approaches
+    - Then to sit and identify what all information is needed for these approaches to be realised
 
     ===
 ___
