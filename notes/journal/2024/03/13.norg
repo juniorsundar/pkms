@@ -4,13 +4,14 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-13T16:18:43+0400
+updated: 2024-03-13T21:24:19+0400
 version: 1.1.1
 @end
 
 * To-Do
 
 ** (-) HITL simulation and data collection for system latency
+
 *** (-) Collect data and compile it for analysis
 
     Wrote a data converter and compiler according to the needs of the final
@@ -28,20 +29,30 @@ version: 1.1.1
     - Redo Mag Max
 
 ** (-) #RESEARCH Tasks
+
 *** (-) Is it possible to automate ROS node generation
+
 *** ( ) Foxglove Data-Dashboard
+
 *** ( ) Graph Neural Networks
+
 *** ( ) Tokenising results
 
 ** (-) Dronsole groundwork
+
 *** (-) Test out method suggested by Ilkka to run `kubectl` commands directly
+
 *** (-) Explore the DataHub method for obtaining data
+
 **** (-) Syncup with Moamen as well
 
-** -(_) #PERSONAL Implement a basic ROS 2 implementation for swarm controls for Saurabh to test his algorithms-
+** -(_) #PERSONAL Implement a basic ROS 2 implementation for swarm controls for-
+   -Saurabh to test his algorithms-
 
 ** (-) Prepare logistics for updating tasks and goal given the meeting with Willian 
+
 *** (-) #BRAINSTORM Data generation for publication
+
 **** (-) What is the purpose of the exploration?
 
      Developing a varied and diverse dataset that can capture the operation of
@@ -60,12 +71,40 @@ version: 1.1.1
      One example: {https://www.kaggle.com/datasets/daniaherzalla/tii-ssrc-23}[Dania's Dataset]
 
 ** (-) Update Jira
+
 *** (x) RTA-20: Redefine RTA-70 to reflect new objective
+
 **** (x) Indicate that the previous sub-tasks are carrying over
+
 **** (x) Write comments to explain why changes were made
+
 *** (x) RTA-354: Expound on RTA-67/RTA-68 to reflect new objectives
+
 *** (-) RTA-22: Reorient for swarm
+
 **** (x) Discuss with Saurabh to identify swarm requirements
+
+     *Communication mode*
+     Many-to-many. Basically, each drone should be able to communicate with
+     other nodes in the swarm. An obfuscation layer/mask can be written atop
+     this that can handle the emulation of distance based signal strength, etc.
+
+     *Swarm behaviour*
+     Basic swarm behaviour in play. Given a random spawn of points and a path,
+     drones need to maintain safe distance away from each other and continually
+     move towards a specific goal. Additionally a move towards centroid can
+     also be implemented.
+
+     *Swarm size*
+     five to ten drones.
+
+     *Connectivity*
+     This needs some thought. So one idea was to have a sort of distributed
+     connectivity matrix that can help the drones in swarm understand when they
+     need to enter RTA mode. For instance, in a scenario with drones A, B, C
+     and D. If C connected to B is disconnected, then how does the information
+     of this propagate through the entire swarm? /some thoughts here/
+
 **** (-) Adjust Story title accordingly
 
      ===
@@ -74,7 +113,6 @@ ___
 * Journal
 
   - Discussed with Shamsa about what is required for Data Collection
-
 
   ===
 ___
@@ -101,6 +139,21 @@ ___
 
 *** Minutes
 
+    /Martin Andreoni/
+    - RTA-presentation next week (introducing the SRTA)
+    - Ticky interested with Generation AI application in SRTA context
+       -- Dynamic UTM with LLMs?
+
+    /Abdulrahman Ba Nabila/
+    > Generative AI models minimise the distance between the distributions. It
+    > is primarily applicable in the context of unsupervised learning.
+
+    /Junior Sundar/
+    - Still in datagen for HITL
+    - Adjusted Jira to reflect pivot from previous meeting
+    - Data gen will be local
+       -- Is it even necessary if the goal is to generate the diverse dataset?
+    - Try to see if it is possible to set up HITL with Saluki V3
 
 *** Action Items
 
