@@ -1,0 +1,110 @@
+@document.meta
+title: 13 March 2023
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-03-13T16:18:43+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+** (-) HITL simulation and data collection for system latency
+*** (-) Collect data and compile it for analysis
+
+    Wrote a data converter and compiler according to the needs of the final
+    data set. Processing is still needed for this, though that can be done at a
+    later date.
+
+    Ready to move on to the HITL setup, since things are working well in SITL.
+    Of course, the issue of whether faults injected will become evident in the
+    data is a question. But as per Yashrajsinh, it shouldn't matter as long as
+    the deviations are being captured.
+
+    *LEFT*:
+    - Baro Max
+    - Baro Min
+    - Redo Mag Max
+
+** (-) #RESEARCH Tasks
+*** (-) Is it possible to automate ROS node generation
+*** ( ) Foxglove Data-Dashboard
+*** ( ) Graph Neural Networks
+*** ( ) Tokenising results
+
+** (-) Dronsole groundwork
+*** (-) Test out method suggested by Ilkka to run `kubectl` commands directly
+*** (-) Explore the DataHub method for obtaining data
+**** (-) Syncup with Moamen as well
+
+** -(_) #PERSONAL Implement a basic ROS 2 implementation for swarm controls for Saurabh to test his algorithms-
+
+** (-) Prepare logistics for updating tasks and goal given the meeting with Willian 
+*** (-) #BRAINSTORM Data generation for publication
+**** (-) What is the purpose of the exploration?
+
+     Developing a varied and diverse dataset that can capture the operation of
+     quadcopters over normal and faulty operations.
+
+     The purpose is to provide a sufficiently descriptive dataset that can be
+     used by researchers and engineers to train and test models whose use is to
+     identify these faults in the system.
+
+**** (-) Literature review
+
+     - Is there a shortage in this field?
+     - Are there any existing solutions to this shortage?
+     - How are datasets usually framed in this context?
+
+     One example: {https://www.kaggle.com/datasets/daniaherzalla/tii-ssrc-23}[Dania's Dataset]
+
+** (-) Update Jira
+*** (x) RTA-20: Redefine RTA-70 to reflect new objective
+**** (x) Indicate that the previous sub-tasks are carrying over
+**** (x) Write comments to explain why changes were made
+*** (x) RTA-354: Expound on RTA-67/RTA-68 to reflect new objectives
+*** (-) RTA-22: Reorient for swarm
+**** (x) Discuss with Saurabh to identify swarm requirements
+**** (-) Adjust Story title accordingly
+
+     ===
+___
+
+* Journal
+
+  - Discussed with Shamsa about what is required for Data Collection
+
+
+  ===
+___
+
+* Meetings
+
+** RTA Meeting
+
+*** Attendees
+
+    | SRTA-AD
+    | | Junior Sundar
+    | | Martin Andreoni
+    | | Willian Lunardi
+
+*** Goals
+
+    Disseminate and update
+
+*** Agenda
+
+    - (x) Updates sent down from above
+    - (x) Updates from below
+
+*** Minutes
+
+
+*** Action Items
+
+    ===
+___
+
+{:$/journal/2024/03/12:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/03/14:}[next >]
