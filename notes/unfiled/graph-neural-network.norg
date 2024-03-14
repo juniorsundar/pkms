@@ -1,0 +1,53 @@
+@document.meta
+title: Graph Neural Network
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-03-14T12:20:32+0400
+updated: 2024-03-14T12:24:58+0400
+version: 1.1.1
+@end
+
+* Definition
+
+  Graph neural networks (GNNs) are a class of deep learning methods designed
+  tow work directly with data structured as graphs.
+
+  Graphs are a powerful way to represent complex relationships between entities
+
+  Traditional neural networks like CNNs excel at processing grid-like data.
+  GNNs unlock analysis of data where relationship between data points is as
+  important as the data itself.
+
+** Key Applications
+
+   - NLP
+   - Drug discovery
+   - Recommender system
+   - Traffic prediction
+   - Computer vision
+
+* Importance
+
+  - *Relational Data Power* -  Many real-world problems have rich connections
+    that GNNs can naturally model, unlike traditional machine learning methods.
+  - *Permutation Invariance* - GNNs are not sensitive to the order in which the
+    graph data is presented, making them very flexible.
+  - *Inductive Learning* - GNNs can generalize to unseen graphs, a key
+    advantage for problems where data structures change over time.
+
+* Function
+
+  - *Node Embeddings* - Each node (entity) in the graph is assigned an initial
+    vector representation called an embedding. This captures its features.
+  - *Message Passing* - Nodes repeatedly exchange messages with their
+    neighbors. These messages update a node's understanding of its place in the
+    graph.
+  - *Aggregation* - A node aggregates messages from its neighbors, combining
+    this information with  its own embedding. This forms a new, refined
+    embedding.
+  - *Iterative Refinement* - Message passing and aggregation happen multiple
+    times. With each teration, a node's representation becomes more informed by
+    its surroundings in the graph.  
+  - *Tasks* - This process leads to highly expressive representations of nodes,
+    edges, or the whole graph, used for tasks.

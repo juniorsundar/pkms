@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-03-10T16:33:17+0400
-updated: 2024-03-10T18:47:46+0400
+updated: 2024-03-14T12:50:30+0400
 version: 1.1.1
 @end
 
@@ -49,7 +49,7 @@ version: 1.1.1
 ** Sensitivity analysis
 
    Measures how small changes in individual features impact the model's output.
-   Larget changes in output indicate higher feature importance.
+   Largest changes in output indicate higher feature importance.
 
    It provides insight into the direction of the feature's impact (positive or
    negative).

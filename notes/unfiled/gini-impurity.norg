@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-03-10T16:53:25+0400
-updated: 2024-03-10T17:06:35+0400
+updated: 2024-03-14T12:54:26+0400
 version: 1.1.1
 @end
 
@@ -42,7 +42,7 @@ version: 1.1.1
   ~ *Selecting Best Split* - Feature that leads to the greatest reduction in
     the weighted average Gini impurity across the child nodes is chosen as the
     split for that node.
-  ~ *Iterative Process* - Process repeats recusrively, creating progressively
+  ~ *Iterative Process* - Process repeats recursively, creating progressively
     smaller and more homogeneous nodes until certain stopping criteria are met
     (e.g. maximum tree depth, minimum impurity reduction).
 
