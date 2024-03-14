@@ -20,7 +20,7 @@
 		   source install/local_setup.bash
 		  ```
 	- ## Compatibility with `px4_msgs`
-		- If you want to record rosbags of topics carrying interfaces from `px4_msgs`, then follow the instructions [[PX4 - ROS 2]] to create a ROS workspace with all the required packages for compatibility with the PX4 frameworks.
+		- If you want to record rosbags of topics carrying interfaces from `px4_msgs`, then follow the instructions [here]([[PX4 - ROS 2 Integration]]) to create a ROS workspace with all the required packages for compatibility with the PX4 frameworks.
 		- Then, you can clone the above repositories inside the same workspace, and run the `colcon build` command as shown above.
 - # Recording data from topic in `.mcap` format
 	- ## Using `ros2` CLI

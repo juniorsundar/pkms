@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-27T22:38:54+0400
-updated: 2024-03-07T21:56:42+0400
+updated: 2024-03-14T19:55:55+0400
 version: 1.1.1
 @end
 
@@ -54,16 +54,16 @@ version: 1.1.1
 
    @code bash
    L px4_ws/
-   L build/
-   L ...
-   L install/
-   L ...
-   L log/
-   L ...
-   L src/
-   L px4_msgs
-   L px4_ros_coms
-   L <add more here>
+       L build/
+           L ...
+       L install/
+           L ...
+       L log/
+           L ...
+       L src/
+           L px4_msgs
+           L px4_ros_coms
+           L <add more here>
    @end
 
 ** Source

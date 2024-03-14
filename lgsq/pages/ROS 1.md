@@ -26,6 +26,7 @@
 		  > sudo apt install ros-noetic-ros-base
 		  > ```
 	- ## Sourcing the Environment
+	  id:: 65f2ddcf-58ff-4e2e-856c-e4a1cb0fa507
 		- Referring to the previous section on ROS [packages](((65e9fb53-c151-422e-9168-44462a8f50bf))) , we can permanently source the ROS installation by running:
 		- ```bash
 		  echo "source /opt/ros/noetic/setup.bash" >> .bashrc
