@@ -74,6 +74,7 @@
 	- Wrote a data converter and compiler according to the needs of the final data set. Processing is still needed for this, though that can be done at a later date.
 	- Ready to move on to the HITL setup, since things are working well in SITL. Of course, the issue of whether faults injected will become evident in the data is a question. But as per Yashrajsinh, it shouldn't matter as long as the deviations are being captured.
 	- **LEFT**:
-		- Baro Max
-		- Baro Min
-		- Redo Mag Max
+		- ~~Baro Max~~
+		- ~~Baro Min~~
+		- ~~Redo Mag Max~~
+	- #IMPORTANT When dumping data, check if data integrity is maintained after each dump. Because sometimes not all data is recorded because of some weird edge case.
