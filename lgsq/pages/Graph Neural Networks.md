@@ -1,6 +1,5 @@
 # Literature
-	- ![Graph neural networks: A review of methods and applications](../assets/zhou2021_1710400525745_0.pdf)
-		- [Annotations]([[hls__zhou2021_1710400525745_0]])
+	- [[Graph neural networks: A review of methods and applications]]
 - # Definition
 	- Graph neural networks (GNNs) are a class of deep learning methods designed tow work directly with data structured as graphs.
 	- Graphs are a powerful way to represent complex relationships between entities

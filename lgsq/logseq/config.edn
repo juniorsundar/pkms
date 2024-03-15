@@ -299,7 +299,7 @@
  ;;  :charge-range    600}   ; Default value: 600
 
  ;; Favorites to list on the left sidebar
- :favorites ["Terminology"]
+ :favorites ["Literature Review" "Terminology"]
 
  ;; Set flashcards interval.
  ;; Expected value:
@@ -419,11 +419,11 @@
  ;;      ;use triple underscore `___` for slash `/` in page title
  ;;      ;use Percent-encoding for other invalid characters
  :file/name-format :triple-lowbar
- :graph/settings {:journal? true
+ :graph/settings {:journal? false
  :builtin-pages? false
  :excluded-pages? true
  :orphan-pages? true}
- :graph/forcesettings {:link-dist 70
+ :graph/forcesettings {:link-dist 170
  :charge-strength -700
  :charge-range 700}
  :publishing/all-pages-public? false}

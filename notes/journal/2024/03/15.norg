@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-15T15:03:55+0400
+updated: 2024-03-15T21:23:47+0400
 version: 1.1.1
 @end
 
@@ -82,28 +82,19 @@ ___
 
 * Journal
 
+  - Provided some data to Samridha for Accelerometer faults with additional
+    processed data available (from the flight controller) like velocity,
+    orientation etc.
+     -- Continuous drone failure causes the simulation respawn to break at
+        points where the parameter flushing interrupts the restart procedure.
+     -- Revisit the respawn procedure and fix this for the final deployment.
+
+  - Awaiting Martin's approval to see if collected HITL data can be published
+    (proprietary data etc.).
+
   ===
 ___
 
-* Meetings
-
-** Meeting Name
-
-*** Attendees
-
-    | Names
-
-*** Goals
-
-
-*** Agenda
-
-    - ( ) 
-
-*** Minutes
-
-
-*** Action Items
 
     ===
 ___

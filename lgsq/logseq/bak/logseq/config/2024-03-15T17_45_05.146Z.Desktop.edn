@@ -299,7 +299,7 @@
  ;;  :charge-range    600}   ; Default value: 600
 
  ;; Favorites to list on the left sidebar
- :favorites []
+ :favorites ["Literature Review" "Terminology"]
 
  ;; Set flashcards interval.
  ;; Expected value:
@@ -424,5 +424,6 @@
  :excluded-pages? true
  :orphan-pages? true}
  :graph/forcesettings {:link-dist 70
- :charge-strength -1000
- :charge-range 500}}
+ :charge-strength -700
+ :charge-range 700}
+ :publishing/all-pages-public? false}
