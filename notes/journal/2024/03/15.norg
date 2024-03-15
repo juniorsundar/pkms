@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-15T10:46:50+0400
+updated: 2024-03-15T15:03:55+0400
 version: 1.1.1
 @end
 
@@ -27,6 +27,10 @@ version: 1.1.1
     - -Baro Max-
     - -Baro Min-
     - -Redo Mag Max-
+
+    #IMPORTANT
+    When dumping data, check if data integrity is maintained after each dump.
+    Because sometimes not all data is recorded because of some weird edge case.
 
 ** (-) #RESEARCH Tasks
 
