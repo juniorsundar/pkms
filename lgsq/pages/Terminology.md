@@ -1,26 +1,39 @@
 # A
+	- [[Application Programming Interface (API)]]
 - # B
+	- [[Bootloader]]
 - # C
+	- [[Continual Task Learning]]
 - # D
+	- [[Data Exfiltration]]
+	- [[Digital Twin]]
 - # E
 - # F
 	- [[Feature Importance Calculation]]
+	- [[Federated Learning]]
 - # G
 	- [[Gini Impurity]]
 	- [[Graph Neural Networks]]
+	- [[GUID Partition Table]]
 - # H
 	- [[Hardware in the Loop]]
+	- [[Host-Based Intrusion Detection (HIDS)]]
 - # I
 - # J
 - # K
 - # L
 - # M
+	- [[Master Boot Record]]
+	  :LOGBOOK:
+	  CLOCK: [2024-03-15 Fri 23:15:04]--[2024-03-15 Fri 23:15:04] =>  00:00:00
+	  :END:
 - # N
+	- [[Nash Equilibrium]]
 - # O
 - # P
 - # Q
 - # R
-	- [[ROS]]
+	- [[RISC-V]]
 - # S
 	- [[Software in the Loop]]
 - # T
