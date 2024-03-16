@@ -51,8 +51,7 @@
 			- No support for multiple vehicle simulations at the same time.
 			- Very high resource usage.
 			- No support for multiple vehicle simulations at the same time.
-- # Software-in-the-Loop (SITL)
-	- *Access [reference]([[Software in the Loop]])*
+- # [Software-in-the-Loop (SITL)]([[Software in the Loop]])
 	- ## Set-Up
 		- To run the simulations, you need to first enter the PX4-Autopilot toolchain directory that was cloned. This is explained in this {:$/technical/px4/px4:*** Autopilot Installation}[section].
 		- ```bash
@@ -98,8 +97,7 @@
 		          input_scaling: 1000
 		          zero_position_armed: 10
 		  ```
-- # Hardware-in-the-Loop (HITL)
-	- *Access [reference]([[Hardware in the Loop]])*
+- # [Hardware-in-the-Loop (HITL)]([[Hardware in the Loop]])
 	- ## Set-Up with Saluki V2
 		- In order to connect via ethernet, need to provide the following details for eth0 connection:
 		- > *IPv4 Method*: Manual

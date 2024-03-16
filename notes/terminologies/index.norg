@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T17:56:54+0400
-updated: 2024-03-02T18:37:38+0400
+updated: 2024-03-16T16:42:40+0400
 version: 1.1.1
 @end
 
@@ -29,10 +29,13 @@ version: 1.1.1
 
 ** F
 
+   - {:$/terminologies/feature-importance-calculation:}[Feature Importance Calculation]
    - {:$/terminologies/federated-learning:}[Federated Learning]
 
 ** G
 
+   - {:$/terminologies/gini-impurity:}[Gini Impurity]
+   - {:$/terminologies/graph-neural-network:}[Graph Neural Network]
    - {:$/terminologies/guid-partition-table:}[GUID Partition Table (GPT)]
 
 ** H
@@ -62,6 +65,7 @@ version: 1.1.1
 
 ** T
 
+   - {:$/terminologies/tokenisation:}[Tokenisation]
    - {:$/terminologies/tcp:}[Transmission Control Protocol (TCP)]
 
 ** U
