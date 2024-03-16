@@ -4,78 +4,13 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-15T21:23:47+0400
+updated: 2024-03-16T21:59:01+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-** (-) HITL simulation and data collection for system latency
-
-*** (-) Collect data and compile it for analysis
-
-    Wrote a data converter and compiler according to the needs of the final
-    data set. Processing is still needed for this, though that can be done at a
-    later date.
-
-    Ready to move on to the HITL setup, since things are working well in SITL.
-    Of course, the issue of whether faults injected will become evident in the
-    data is a question. But as per Yashrajsinh, it shouldn't matter as long as
-    the deviations are being captured.
-
-    *LEFT*:
-    - -Baro Max-
-    - -Baro Min-
-    - -Redo Mag Max-
-
-    #IMPORTANT
-    When dumping data, check if data integrity is maintained after each dump.
-    Because sometimes not all data is recorded because of some weird edge case.
-
-** (-) #RESEARCH Tasks
-
-*** (-) Is it possible to automate ROS node generation
-
-** (-) Dronsole groundwork
-
-*** (-) Test out method suggested by Ilkka to run `kubectl` commands directly
-
-*** (-) Explore the DataHub method for obtaining data
-
-**** (-) Syncup with Moamen as well
-
-** (-) Prepare logistics for updating tasks and goal given the meeting with Willian 
-
-*** (-) #BRAINSTORM Data generation for publication
-
-**** (-) Literature review
-
-     > Is there a shortage in this field?
-     > Are there any existing solutions to this shortage?
-     > How are datasets usually framed in this context?
-
-     One example: {https://www.kaggle.com/datasets/daniaherzalla/tii-ssrc-23}[Dania's Dataset]
-
-     *Reviewed Literature*
-
-     /Pertinent/:
-     - UAV sensor failures dataset: Biomisa arducopter sensory critique (BASiC)
-        -- {:$/research/literature-review/ahmad2024:}[Link to Review] 
-     - ALFA: A Dataset for UAV Fault and Anomaly Detection
-        -- {}[Link to Review]
-
-     /Irrelevant/:
-     - On-board Deep-learning-based Unmanned Aerial Vehicle Fault Cause
-       Detection and Identification
-        -- {https://sci-hub.st/10.1109/icra40945.2020.9197071}[Link to Article]
-     - Research on Drone Fault Detection Based on Failure Mode Databases
-        -- {:$/research/literature-review/hou2023:}[Link to Review]
-
-** (-) Update Jira
-
-*** (-) RTA-22: Reorient for swarm
-
-**** (-) Adjust Story title accordingly
+  /Rolled over/
 
   ===
 ___
