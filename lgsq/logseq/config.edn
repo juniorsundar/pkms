@@ -299,7 +299,7 @@
  ;;  :charge-range    600}   ; Default value: 600
 
  ;; Favorites to list on the left sidebar
- :favorites ["House Hunting Chronicles: 2024" "Literature Review" "Terminology"]
+ :favorites ["Contents" "House Hunting Chronicles: 2024" "Literature Review" "Terminology"]
 
  ;; Set flashcards interval.
  ;; Expected value:
@@ -426,4 +426,4 @@
  :graph/forcesettings {:link-dist 170
  :charge-strength -700
  :charge-range 700}
- :publishing/all-pages-public? false}
+ :publishing/all-pages-public? true}

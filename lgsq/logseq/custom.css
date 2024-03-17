@@ -1,1 +1,13 @@
+/* Customize level 1 headings */
+.heading-level-1 > .bullet-container::before {
+    content: "★ "; /* Replace with your desired level 1 bullet */
+    color: #FF8C00; /* Example color - adjust to your liking */
+}
 
+/* Customize level 2 headings */
+.heading-level-2 > .bullet-container::before {
+    content: "☆ "; /* Replace with your desired level 2 bullet */
+    color: #66CC66; /* Example color */
+}
+
+/* Add more levels as needed, following the pattern */
