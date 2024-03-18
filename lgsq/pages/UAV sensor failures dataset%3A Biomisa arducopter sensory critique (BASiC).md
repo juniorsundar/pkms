@@ -45,6 +45,6 @@ file-path:: ../assets/ahmad2024_1710410276208_0.pdf
 		- 10 different flight locations with unique mission
 		- 7 flights within each location with six sensor failures and one control
 - # Evaluation
-	- SITL means behaviour is model not always real.
+	- Software in the loop means behaviour is model not always real.
 	- Ardupilot was the platform of choice. Others are opined but not attempted.
 	- Individual sensor failures, not combined or multiple.
