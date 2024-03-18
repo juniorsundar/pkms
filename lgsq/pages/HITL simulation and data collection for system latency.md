@@ -66,10 +66,10 @@
 			  logseq.order-list-type:: number
 			- Rinse and repeat for next fault
 			  logseq.order-list-type:: number
-- DOING Collect data and compile it for analysis
+- DONE Collect data and compile it for analysis
   :LOGBOOK:
   CLOCK: [2024-03-14 Thu 15:24:57]
-  CLOCK: [2024-03-14 Thu 15:25:04]
+  CLOCK: [2024-03-14 Thu 15:25:04]--[2024-03-18 Mon 14:19:11] =>  94:54:07
   :END:
 	- Wrote a data converter and compiler according to the needs of the final data set. Processing is still needed for this, though that can be done at a later date.
 	- Ready to move on to the HITL setup, since things are working well in SITL. Of course, the issue of whether faults injected will become evident in the data is a question. But as per Yashrajsinh, it shouldn't matter as long as the deviations are being captured.

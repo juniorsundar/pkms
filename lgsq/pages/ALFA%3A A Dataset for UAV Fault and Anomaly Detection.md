@@ -59,5 +59,24 @@ file-path:: ../assets/keipour2020_1710416688776_0.pdf
 		  | rudder and aileron at zero | 1 | 116 | 27 |
 		  | no fault | 10 | 558 | - |
 		  | **total** | 47 | 3935 | 777 |
-	-
-	-
+	- **Data Description**
+		- Processed file in `.mat` and `.bag` formats contain all available topics. Each `.csv` file includes only one topic.
+		- Topics usually available at 4 Hz or higher.
+		- Since they are using MAVROS, the telemetry, sensor, and commander topics are in `/mavros/nav_info/` prefix.
+		- Ground truth for each control surface is prefixed: `/failure_states/`
+			- `/engines`: true/false
+			- `/aileron`: 1 means failure on right side, 2 means failure on left side, 3 means both ailerons failure. Fails by getting stuck at 0 position.
+			- `/rudder`: 1 means rudder stuck at 0 position, 2 means stuck to leftmost, 3 means stuck to rightmost.
+			- `/elevator`: 1 means elevator stuck in 0 position, 2 means suck all the way down.
+		- Ground truths recorded at 5 Hz.
+	- **Usage:**
+		- No dependency on ROS to read or interpret data as long as the rosbag isn't being read.
+		- Some sample code provided to interpret data on user side, and provide statistics.
+- # Evaluation Metrics
+	- **Maximum detection time** - Delay between time of fault and time of detection.
+	- **Average detection time** - Overall time performance of method in detecting faults.
+	- **Accuracy** - Ratio $\frac{\text{number of correctly classified sequences}}{\text{total number of sequences}}$
+	- **Precision** - Ratio $\frac{\text{sequences with correctly predicted faults}}{\text{total number of detections}}$
+	- **Recall** - Ratio $\frac{\text{sequences with correctly predicted faults}}{\text{total number of sequences containing faults}}$
+- # Evaluation
+	- Sudden control surface failures investigated, but other types of failures are also common in UAVs (sensors, actual errors, etc.)

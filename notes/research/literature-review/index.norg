@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-02-12T20:19:47+0400
-updated: 2024-03-16T16:46:52+0400
+updated: 2024-03-18T14:17:44+0400
 version: 1.1.1
 @end
 
@@ -12,6 +12,7 @@ version: 1.1.1
 
 ** 2020
 
+   {:$/research/literature-review/keipour2020:}[ALFA: A Dataset for UAV Fault and Anomaly Detection]
    {:$/research/literature-review/bagchi2020:}[Vision Paper: Grand Challenges in Resilience: Autonomous System Resilience through Design and Runtime Measures]
 
 ** 2021
