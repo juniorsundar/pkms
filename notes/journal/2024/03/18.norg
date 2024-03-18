@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-18T15:42:59+0400
+updated: 2024-03-18T22:29:29+0400
 version: 1.1.1
 @end
 
@@ -84,8 +84,10 @@ ___
 * Journal
 
   - Created an image to describe the fault injection task for Martin:
-
- # .image ../../assets/drawing.png
+     -- He wanted a way to display the content and extent of the Fault
+        Injection Use Case that I did without having to read through large
+        chunks of texts.
+     -- .image ../../assets/drawing.png
 
   ===
 ___

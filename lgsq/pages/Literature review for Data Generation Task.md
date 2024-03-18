@@ -1,8 +1,8 @@
-- #+BEGIN_COMMENT
+- #+BEGIN_NOTE
   Is there a shortage in this field?
   Are there any existing solutions to this shortage?
   How are datasets usually framed in this context?
-  #+END_COMMENT
+  #+END_NOTE
 - One example: [Dania's Dataset](https://www.kaggle.com/datasets/daniaherzalla/tii-ssrc-23)
 - Reviewed Literature:
 	- Pertinent:
