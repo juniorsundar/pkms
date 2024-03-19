@@ -1,6 +1,7 @@
 title:: UAV sensor failures dataset: Biomisa arducopter sensory critique (BASiC)
 file:: [ahmad2024_1710410276208_0.pdf](../assets/ahmad2024_1710410276208_0.pdf)
 file-path:: ../assets/ahmad2024_1710410276208_0.pdf
+categories:: #uav-fault-dataset
 
 - ![UAV sensor failures dataset: Biomisa arducopter sensory critique (BASiC)](../assets/ahmad2024_1710410276208_0.pdf)
 - # Summary

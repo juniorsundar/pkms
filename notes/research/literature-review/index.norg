@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-02-12T20:19:47+0400
-updated: 2024-03-18T14:17:44+0400
+updated: 2024-03-19T11:02:13+0400
 version: 1.1.1
 @end
 
@@ -13,7 +13,10 @@ version: 1.1.1
 ** 2020
 
    {:$/research/literature-review/keipour2020:}[ALFA: A Dataset for UAV Fault and Anomaly Detection]
+
    {:$/research/literature-review/bagchi2020:}[Vision Paper: Grand Challenges in Resilience: Autonomous System Resilience through Design and Runtime Measures]
+
+   {:$/research/literature-review/whelan2020:}[Novelty-based Intrusion Detection of Sensor Attacks on Unmanned Aerial Vehicles]
 
 ** 2021
 
@@ -26,11 +29,13 @@ version: 1.1.1
 ** 2023
 
    {:$/research/literature-review/hou2023:}[Research on Drone Fault Detection Based on Failure Mode Databases]
+
    {:$/research/literature-review/brat2023:}[Runtime Assurance of Aeronautical Products: Preliminary Recommendations]
 
 ** 2024
 
    {:$/research/literature-review/liu2024:}[Generative AI for Unmanned Vehicle Swarms: Challenges, Applications and Opportunities]
+
    {:$/research/literature-review/ahmad2024:}[UAV sensor failures dataset: Biomisa arducopter sensory critique (BASiC)]
 
    ===

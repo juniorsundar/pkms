@@ -31,6 +31,7 @@
 	- [[Nash Equilibrium]]
 - # O
 - # P
+	- [[Principal Component Analysis]]
 - # Q
 - # R
 	- [[RISC-V]]
