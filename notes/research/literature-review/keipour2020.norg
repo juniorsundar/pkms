@@ -2,9 +2,11 @@
 title: ALFA: A Dataset for UAV Fault and Anomaly Detection
 description: 
 authors: juniorsundar-unikie
-categories: 
+categories: [
+    uav-fault-dataset
+] 
 created: 2024-03-18T14:03:07+0400
-updated: 2024-03-18T14:07:28+0400
+updated: 2024-03-19T11:29:19+0400
 version: 1.1.1
 @end
 

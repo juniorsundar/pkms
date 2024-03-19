@@ -1,0 +1,26 @@
+# Definition
+	- PCA is a technique used to reduce number of variables (dimensions) in a dataset while retaining as much of the original information as possible.
+	- This is by creating new variables called "principal components".
+	- These are linear combinations of original variables and are designed to be uncorrelated with each other.
+	- PCA finds direction of maximum variance in the data. First PC captures highest, second PC captures next highest, and so on.
+	- ## Purpose
+		- Simplifying complex data.
+		- Machine learning efficiency.
+		- Uncovering hidden patterns.
+		- Data compression.
+- # Methodology
+	- **Data Preparation** - standardise features by subtracting mean and scale such that they have unit variance.
+	- **Covariance Matrix** - calculate covariance, revealing relationships between different variables in the dataset.
+	- **Eigenvectors and Eigenvalues**
+		- Eigenvectors represent direction of maximum variance (principal components).
+		- Eigenvalues represent magnitude of variance along each of those directions.
+	- **Feature Selection** - choose top 'k' eigenvectors with highest eigenvalues to form new feature space.
+	- **Projection** - Project original data into new feature space.
+- # Limitations
+	- **Sensitivity to scaling** - non-standardised data can affect results.
+	- **Assumptions of linearity** - PCA works best on datasets where relationships between variables is predominantly linear.
+	- **Interpretability** - interpreting new principal components can sometimes be less intuitive than original features.
+- # Example
+	- Imagine you have data on houses with features like square footage, number of bedrooms, number of bathrooms, distance to a city center, etc.
+		- **Principal Component 1** - A combination mainly representing size (large square footage, more bedrooms, etc.)
+		- **Principal Component 2**- A combination representing location desirability.

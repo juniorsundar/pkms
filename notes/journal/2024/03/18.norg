@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-18T22:29:29+0400
+updated: 2024-03-19T09:35:47+0400
 version: 1.1.1
 @end
 
@@ -32,50 +32,9 @@ version: 1.1.1
     When dumping data, check if data integrity is maintained after each dump.
     Because sometimes not all data is recorded because of some weird edge case.
 
-** (-) #RESEARCH Tasks
-
-*** (-) Is it possible to automate ROS node generation
-
 ** (-) Dronsole groundwork
 
 *** (_) -Test out method suggested by Ilkka to run `kubectl` commands directly-
-
-*** (-) Explore the DataHub method for obtaining data
-
-**** (-) Syncup with Moamen as well
-
-** (-) Prepare logistics for updating tasks and goal given the meeting with Willian 
-
-*** (-) #BRAINSTORM Data generation for publication
-
-**** (-) Literature review
-
-     > Is there a shortage in this field?
-     > Are there any existing solutions to this shortage?
-     > How are datasets usually framed in this context?
-
-     One example: {https://www.kaggle.com/datasets/daniaherzalla/tii-ssrc-23}[Dania's Dataset]
-
-     *Reviewed Literature*
-
-     /Pertinent/:
-     - UAV sensor failures dataset: Biomisa arducopter sensory critique (BASiC)
-        -- {:$/research/literature-review/ahmad2024:}[Link to Review] 
-     - ALFA: A Dataset for UAV Fault and Anomaly Detection
-        -- {:$/research/literature-review/keipour2020:}[Link to Review]
-
-     /Irrelevant/:
-     - On-board Deep-learning-based Unmanned Aerial Vehicle Fault Cause
-       Detection and Identification
-        -- {https://sci-hub.st/10.1109/icra40945.2020.9197071}[Link to Article]
-     - Research on Drone Fault Detection Based on Failure Mode Databases
-        -- {:$/research/literature-review/hou2023:}[Link to Review]
-
-** (-) Update Jira
-
-*** (-) RTA-22: Reorient for swarm
-
-**** (-) Adjust Story title accordingly
 
 
   ===
