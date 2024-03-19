@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-19T14:24:10+0400
+updated: 2024-03-19T15:58:13+0400
 version: 1.1.1
 @end
 
@@ -43,6 +43,7 @@ version: 1.1.1
         -- {:$/research/literature-review/whelan2020:}[Link to Review]
      - Acquisition and Processing of UAV Fault Data Based on Time Line Modeling Method
         -- {:$/research/literature-review/yang2023:}[Link to Review]
+        -- Not that good...
 
      /Irrelevant/:
      - On-board Deep-learning-based Unmanned Aerial Vehicle Fault Cause
@@ -64,30 +65,14 @@ ___
 
 * Journal
 
-  ===
+  - Requested callback with ARENCO Properties (+97144401144) for 2BKH in DIP area.
+     -- No vacant apartments. Placed in waiting list.
+
+     ===
 ___
 
-* Meetings
 
-** Meeting Name
-
-*** Attendees
-
-    | Names
-
-*** Goals
-
-
-*** Agenda
-
-    - ( ) 
-
-*** Minutes
-
-
-*** Action Items
-
-    ===
+===
 ___
 
 {:$/journal/2024/03/18:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/03/20:}[next >]
