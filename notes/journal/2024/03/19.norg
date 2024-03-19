@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-19T10:51:24+0400
+updated: 2024-03-19T14:24:10+0400
 version: 1.1.1
 @end
 
@@ -40,7 +40,9 @@ version: 1.1.1
      - ALFA: A Dataset for UAV Fault and Anomaly Detection
         -- {:$/research/literature-review/keipour2020:}[Link to Review]
      - Novelty-based Intrusion Detection of Sensor Attacks on Unmanned Aerial Vehicles
-     -- {:$/research/literature-review/whelan2020:}[Link to Review]
+        -- {:$/research/literature-review/whelan2020:}[Link to Review]
+     - Acquisition and Processing of UAV Fault Data Based on Time Line Modeling Method
+        -- {:$/research/literature-review/yang2023:}[Link to Review]
 
      /Irrelevant/:
      - On-board Deep-learning-based Unmanned Aerial Vehicle Fault Cause
@@ -48,6 +50,8 @@ version: 1.1.1
         -- {https://sci-hub.st/10.1109/icra40945.2020.9197071}[Link to Article]
      - Research on Drone Fault Detection Based on Failure Mode Databases
         -- {:$/research/literature-review/hou2023:}[Link to Review]
+     - ECU-IoFT: A Dataset for Analysing Cyber-Attacks on Internet of Flying Things
+        -- {:$/research/literature-review/ahmed2022:}[Link to Review]
 
 ** (-) Update Jira
 
@@ -55,7 +59,7 @@ version: 1.1.1
 
 **** (-) Adjust Story title accordingly
 
-  ===
+     ===
 ___
 
 * Journal

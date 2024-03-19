@@ -17,12 +17,16 @@
 		  CLOCK: [2024-03-18 Mon 15:05:11]
 		  CLOCK: [2024-03-18 Mon 15:06:21]--[2024-03-19 Tue 10:37:51] =>  19:31:30
 		  :END:
+		- DONE [[Acquisition and Processing of UAV Fault Data Based on Time Line Modeling Method]]
+		  :LOGBOOK:
+		  CLOCK: [2024-03-19 Tue 12:30:38]--[2024-03-19 Tue 14:30:25] =>  01:59:47
+		  :END:
 	- Irrelevant:
 		- DONE [[Research on Drone Fault Detection Based on Failure Mode Databases]]
 		- DONE [On-board Deep-learning-based Unmanned Aerial Vehicle Fault Cause Detection and Identification](https://sci-hub.st/10.1109/icra40945.2020.9197071)
-	- To-Read:
-		- DOING [[ECU-IoFT: A Dataset for Analysing Cyber-Attacks on Internet of Flying Things]]
+		- DONE [[ECU-IoFT: A Dataset for Analysing Cyber-Attacks on Internet of Flying Things]]
 		  :LOGBOOK:
-		  CLOCK: [2024-03-19 Tue 11:20:36]
+		  CLOCK: [2024-03-19 Tue 11:20:36]--[2024-03-19 Tue 12:21:23] =>  01:00:47
+		  CLOCK: [2024-03-19 Tue 12:21:24]--[2024-03-19 Tue 12:21:33] =>  00:00:09
 		  :END:
-		- TODO [[Acquisition and Processing of UAV Fault Data Based on Time Line Modeling Method]]
+	- To-Read:
