@@ -1,5 +1,48 @@
 title:: Acquisition and Processing of UAV Fault Data Based on Time Line Modeling Method
 file:: [yang2023_1710759996375_0.pdf](../assets/yang2023_1710759996375_0.pdf)
 file-path:: ../assets/yang2023_1710759996375_0.pdf
+categories:: #uav-fault-dataset
 
 - ![Acquisition and Processing of UAV Fault Data Based on Time Line Modeling Method](../assets/yang2023_1710759996375_0.pdf)
+- # Summary
+	- Paper proposes a Time Line Modeling (TLM) method based on UAV SITL simulation environment to obtain and process on-board failure logs of drones.
+	- TLM method includes two stages:
+		- Fault Time Point Anchoring Method
+		- Fault Time Window Stretching Method
+	- Multiple flight missions executed in SITL simulation environment.
+	- Failure of several common components of UAV:
+		- GPS
+		- Accelerometer
+		- Engine
+		- RC
+	- Initial and end location of fault determined by Fault Time Point Anchoring.
+	- In data processing, features that are not universal are removed.
+	- Flight data of UAV is optimised by using data balance method of Time Window Stretching to balance normal and abnormal data.
+	- Applied Sequential Minimal Optimisation, Random Forest, and Convolutional Neural Network to process data.
+- # Rationale
+	- Data volume is large in volume, but volume of abnormal data is less compared to normal data (data imbalance).
+	- Based on Time Line Modeling method to acquire and process UAV fault flight data in sim environment.
+	- Time related features and non-universal features are removed.
+	- Initial and end positions of fault data are determined using Fault Time Point Anchoring method.
+	- Time Window Stretching method used to supplement abnormal data so that the data becomes balanced.
+- # Environment
+	- SITL in ArduPilot to simulate flight of UAV.
+	- QGroundControl to visualise real-time position of UAV.
+	- Python interface of Dronekit used to control drone.
+	- Ubuntu 18.04 based on VMware Workstation 16.2.3.
+	- Ground station is on a Windows 11 laptop (16 GB RAM, 11th Gen Intel(R) Core(TM) i7-11800H @2.30 GHz)
+- # Methodology
+	- Flight path is generated and then the points are linearly interpolated to inject more points. This will be used later.
+	- **Simulation of GPS Fault** - GPS disabled.
+	- **Simulation of Accelerometer Fault** - Accelerometer 1 and 2 disabled.
+	- **Simulation of Engine Faults** - Engine switched off.
+	- **Simulation of RC System Fault** - RC Disabled
+- # Data Processing
+	- Logs converted to `.csv`.
+	- Time dependent features are removed (referring to a particular time anchor that repeats periodically), and so are non-universal features (basically tethered to a particular location or time).
+	- #+BEGIN_CAUTION
+	  "Data is balanced". I don't understand how this is being acheived.
+	  #+END_CAUTION
+- # Evaluation
+	- Producing some arcane strategy to stretch fault window. Doesn't make any sense. Should show some examples, but didn't.
+	- **No dataset provided.**
