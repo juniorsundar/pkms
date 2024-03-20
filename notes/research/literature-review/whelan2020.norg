@@ -6,7 +6,7 @@ categories: [
     uav-fault-dataset
 ] 
 created: 2024-03-19T10:50:28+0400
-updated: 2024-03-19T11:29:29+0400
+updated: 2024-03-20T11:08:39+0400
 version: 1.1.1
 @end
 
@@ -20,7 +20,6 @@ version: 1.1.1
   set => allows for the use of flight-logs as training data.
 
   Dataset: {https://ieee-dataport.org/open-access/uav-attack-dataset}[UAV Attack Dataset]
-
   - Data generated for testing is in SITL and HITL (no real life flights).
   - Data generated for training appears to be with real flights.
 
@@ -78,7 +77,7 @@ version: 1.1.1
    All flights are autonomous survey missions between 10-30 minutes depending
    on UAV's maximum velocity.
 
-*** Attack Simulation:
+*** Attack Simulation
 
     PX4 Autopilot and Gazebo
 
@@ -91,7 +90,7 @@ version: 1.1.1
     Using a plugin for the sim environment, GPS data at higher rate is
     published which the UAV uses. This is spoofed signal.
 
-*** Dataset Creation:
+*** Dataset Creation
 
     Saved flight logs in ULOG format, downloaded after each flight and
     timestamps removed from logs.
