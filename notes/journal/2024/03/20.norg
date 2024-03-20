@@ -1,0 +1,170 @@
+@document.meta
+title: 20 March 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-03-20T16:46:54+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+** (-) #RESEARCH Tasks
+
+*** (-) Is it possible to automate ROS node generation
+
+** (-) Dronsole groundwork
+
+*** (-) Explore the DataHub method for obtaining data
+
+**** (-) Syncup with Moamen as well
+
+** (x) Prepare logistics for updating tasks and goal given the meeting with Willian 
+
+*** (x) #BRAINSTORM Data generation for publication
+
+**** (x) Literature review
+
+     > Is there a shortage in this field?
+     > Are there any existing solutions to this shortage?
+     > How are datasets usually framed in this context?
+
+     One example: {https://www.kaggle.com/datasets/daniaherzalla/tii-ssrc-23}[Dania's Dataset]
+
+***** Reviewed Literature
+
+      /Pertinent/:
+      - UAV sensor failures dataset: Biomisa arducopter sensory critique (BASiC)
+         -- {:$/research/literature-review/ahmad2024:}[Link to Review] 
+      - ALFA: A Dataset for UAV Fault and Anomaly Detection
+         -- {:$/research/literature-review/keipour2020:}[Link to Review]
+      - Novelty-based Intrusion Detection of Sensor Attacks on Unmanned Aerial Vehicles
+         -- {:$/research/literature-review/whelan2020:}[Link to Review]
+      - Acquisition and Processing of UAV Fault Data Based on Time Line Modeling Method
+         -- {:$/research/literature-review/yang2023:}[Link to Review]
+         -- Not that good...
+      - ECU-IoFT: A Dataset for Analysing Cyber-Attacks on Internet of Flying Things
+         -- {:$/research/literature-review/ahmed2022:}[Link to Review]
+
+      /Irrelevant/:
+      - On-board Deep-learning-based Unmanned Aerial Vehicle Fault Cause
+        Detection and Identification
+         -- {https://sci-hub.st/10.1109/icra40945.2020.9197071}[Link to Article]
+      - Research on Drone Fault Detection Based on Failure Mode Databases
+         -- {:$/research/literature-review/hou2023:}[Link to Review]
+
+***** Review
+
+      Most datasets favour SITL or simulated data when it comes to behaviour
+      under fault. Two were found that used real flight data, but one was for
+      fixed-winged UAVs and the other was for intrusion detection use cases.
+
+      The extent of fault cases are also limited in all available datasets.
+      Faults are either binary (engine on/off, sensor on/off, etc.) or spoofing
+      the GPS. Most papers assume that the GPS is the prime target for most
+      attacks, and the one most susceptible to faults.
+
+      Datasets are provided in ULOG format (logs dumped in the autopilot after
+      every mission) or in `.csv`, or both. Some papers also provide rosbags
+      and `.mat` files.
+
+      There is also a raw and processed dataset:
+      - The raw dataset either leaves all columns as is, or drops some columns
+        deemed irrelevant.
+      - The processed dataset renames keys to make it descriptive and further
+        refines the data set by: dropping additional columns deemed irrelevant;
+        interpolating data.
+      - Metadata is also important when providing
+
+      Data is labelled:
+      - Some papers have an overarching indication of if a data set includes
+        fault (is malicious, etc.)
+      - Some papers take it further and mark timestamps where fault is injected
+        and what type of fault it is.
+
+      PX4 or ArduPilot are the commonly used firmwares for the autopilot.
+
+      All reviewed datasets keep number of active faults at a time to one (1).
+
+      Data generation occurs in a constant mission/trajectory (a fixed set of
+      missions or trajectories).
+
+***** Considerations
+
+      Autopilots tend to have failsafes in place in case of certain types of
+      fault scenarios. Should this be deactivated?
+      - {:$/research/literature-review/ahmad2024:}[1] does not deactivate failsafes.
+      - {:$/research/literature-review/keipour2020:}[2] has a human-in-the-loop-ish setup wherein the human takes over during
+        failure. So essentially the failsafe is disabled.
+      - {:$/research/literature-review/yang2023:}[3] seems to have deactivated the failsafes.
+
+      Should the data collection adhere to the methodology used in these public
+      datasets? (Preference of using ULOG files to dump raw data).
+      - Will make simulation automation much easier as there won't be a need to
+        synchronise bag collection and dumping. Can filter out data using
+        timestamps of mission start/end, fault start/end, or other landmark
+        points.
+      - Currently, data is being pre-processed as it is being collected. With
+        this method, the processing can be delayed until all data is collected.
+
+      How to establish a "control" in data collection? Design of experiment.
+      - Is it necessary?
+      - Is there a benefit to having complete randomisation?
+
+** (-) Update Jira
+
+*** (-) RTA-22: Reorient for swarm
+
+**** (-) Adjust Story title accordingly
+
+     ===
+___
+
+* Journal
+
+  ===
+___
+
+* Meetings
+
+** RTA Meeting
+
+*** Attendees
+
+    | SRTA-AD
+    | | Martin Andreoni
+    | | Willian Lunardi
+    | | Rayana Boubezari
+    | | Junior Sundar
+
+*** Goals
+
+    Update progress
+
+*** Agenda
+
+    - (x) Update Jira
+    - (x) Discuss progress
+
+*** Minutes
+
+    - *Rabdan* (previously called Falcon SOC) is going into production.
+    - {:$/journal/2024/03/18:** (x) HITL simulation and data collection for system latency}[HITL simulation and data collection for system latency] task is completed.
+    -  {**** (-) Literature review}[Literature review for Data Generation task] nearly complete
+       -- Need to discuss scope with Willian.
+       -- May need to reorient data collection and processing when moving for
+          publication.
+       -- What makes a dataset stable?
+
+*** Action Items
+
+    - (x) Meet Shamsa to identify the cause of missing datasets in dumped logs
+       -- The driver is not able to capture and publish some of the prescribed
+          data that are part of the message data-structure.
+       -- This results in empty values in that particular key.
+
+       ===
+___
+
+{:$/journal/2024/03/19:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/03/21:}[next >]
