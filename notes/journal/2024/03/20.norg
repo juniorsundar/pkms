@@ -4,21 +4,11 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-20T16:46:54+0400
+updated: 2024-03-21T09:30:15+0400
 version: 1.1.1
 @end
 
 * To-Do
-
-** (-) #RESEARCH Tasks
-
-*** (-) Is it possible to automate ROS node generation
-
-** (-) Dronsole groundwork
-
-*** (-) Explore the DataHub method for obtaining data
-
-**** (-) Syncup with Moamen as well
 
 ** (x) Prepare logistics for updating tasks and goal given the meeting with Willian 
 
@@ -112,16 +102,15 @@ version: 1.1.1
       - Is it necessary?
       - Is there a benefit to having complete randomisation?
 
-** (-) Update Jira
-
-*** (-) RTA-22: Reorient for swarm
-
-**** (-) Adjust Story title accordingly
 
      ===
 ___
 
 * Journal
+
+  - Updates in Confluence:
+     -- Uploaded {***** Reviewed Literature}
+     -- Working to compile {***** Review} and {***** Considerations}
 
   ===
 ___
