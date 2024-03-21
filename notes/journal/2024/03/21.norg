@@ -1,0 +1,61 @@
+@document.meta
+title: 21 March 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-03-21T09:28:33+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+** (-) #RESEARCH Tasks
+
+*** (-) Is it possible to automate ROS node generation
+
+** (-) Dronsole groundwork
+
+*** (-) Explore the DataHub method for obtaining data
+
+**** (-) Syncup with Moamen as well
+
+** (-) Update Jira
+
+*** (-) RTA-22: Reorient for swarm
+
+**** (-) Adjust Story title accordingly
+
+
+  ===
+___
+
+* Journal
+
+  ===
+___
+
+* Meetings
+
+** Meeting Name
+
+*** Attendees
+
+    | Names
+
+*** Goals
+
+
+*** Agenda
+
+    - ( ) 
+
+*** Minutes
+
+
+*** Action Items
+
+    ===
+___
+
+{:$/journal/2024/03/20:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/03/22:}[next >]
