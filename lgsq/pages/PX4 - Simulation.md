@@ -53,7 +53,7 @@
 			- No support for multiple vehicle simulations at the same time.
 - # [Software-in-the-Loop (SITL)]([[Software in the Loop]])
 	- ## Set-Up
-		- To run the simulations, you need to first enter the PX4-Autopilot toolchain directory that was cloned. This is explained in this {:$/technical/px4/px4:*** Autopilot Installation}[section].
+		- To run the simulations, you need to first enter the PX4-Autopilot toolchain directory that was cloned. This is explained in this [section](((65f8249b-a538-46bb-b8eb-8416c2d03f19))).
 		- ```bash
 		  cd ./PX4-Autopilot
 		  ```
@@ -66,7 +66,7 @@
 		  # For jMAVSim simulation
 		  make px4_sitl jmavsim
 		  ```
-		- From here, in a separate terminal, if you run {:$/technical/frameworks.px4:*** QGroundControl}[QGroundControl], you should be able to control the drone through that.
+		- From here, in a separate terminal, if you run [QGroundControl](((65f339db-c87b-4535-be4f-1840d124d265))), you should be able to control the drone through that.
 	- ## Low-Level Control
 		- The out-of-the-box set-up for SITL does not provide access to PWM inputs into the actuators. This is because the simulation does not have an ESC model. As a result direct control of the simulated motors is not possible.
 		- There is a repository that offers a way to achieve this low-level control:[SaxionMechatronics/px4_offboard_lowlevel](https://github.com/SaxionMechatronics/px4_offboard_lowlevel)
@@ -134,3 +134,23 @@
 		      </participant>
 		  </profiles>
 		  ```
+- # Containerised Deployment
+  id:: 65fc12cb-7576-445f-a824-0bce95119dc2
+	- It is possible to deploy the simulation in a containerised environment. The benefit of this is that you no longer need to build or install dependencies in the local machine.
+	- Pre-requisites to this require you to clone the firmware directory:
+	- ```bash
+	  git clone --recursive git@github.com:tiiuae/px4-firmware.git -b faulty-controller
+	  ```
+	- To build and run the simulation in a container:
+	- ```bash
+	  docker run -it --privileged --rm \
+	      -v /path/to/px4-firmware:/home/user/Firmware:rw \
+	      -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
+	      -e DISPLAY=${DISPLAY} \
+	      -e LOCAL_USER_ID="$(id -u)" \
+	      -w /home/user/Firmware \
+	      --network=host  \
+	      --name=container_name px4io/px4-dev-simulation-jammy \
+	      "./Tools/simulation/sitl_docker_run.sh"
+	  ```
+	- The DDS topics can be exposed to ros2 through the same `MicroXRCEAgent` from before as `--network=host`.

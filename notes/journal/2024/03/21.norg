@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-21T09:28:33+0400
+updated: 2024-03-21T15:51:17+0400
 version: 1.1.1
 @end
 
@@ -26,8 +26,26 @@ version: 1.1.1
 
 **** (-) Adjust Story title accordingly
 
+** (-) Data Generation Task
 
-  ===
+*** (x) {:$/journal/2024/03/20:****  Literature review}[Literature review]
+
+*** (-) Generate plan of action
+
+**** (x) Figure out how to make a {:$/technical/px4/simulation:** Containerised Deployment}[Containerised Deployment]
+
+**** (-) Figure out how to set up ROS in a containerised environment
+
+**** ( ) Install and set up mechanism to convert log files.
+
+     *NOTE* that the rate at which data is being recorded is throttled
+
+*** ( ) Setup simulation and data collection system in local machine
+
+*** ( ) Run test batch
+
+
+    ===
 ___
 
 * Journal
