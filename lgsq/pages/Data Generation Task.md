@@ -12,9 +12,17 @@
 	  :END:
 	- DOING Figure out how to set up ROS in a containerised environment
 	  :LOGBOOK:
-	  CLOCK: [2024-03-21 Thu 15:47:06]
+	  CLOCK: [2024-03-21 Thu 15:47:06]--[2024-03-22 Fri 15:59:28] =>  24:12:22
+	  CLOCK: [2024-03-22 Fri 16:00:13]
 	  :END:
-	- TODO Install and set up mechanism to convert log files.
+		- DOING The `.bag` files need to be obtainable as well
+		  :LOGBOOK:
+		  CLOCK: [2024-03-22 Fri 16:00:14]
+		  :END:
+	- DOING Install and set up mechanism to convert log files.
+	  :LOGBOOK:
+	  CLOCK: [2024-03-22 Fri 16:15:18]
+	  :END:
 		- **NOTE** that the rate at which data is being recorded is throttled.
 - TODO Deploy simulation and data collection system in local machine
 - TODO Run test batch

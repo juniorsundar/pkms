@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories:
 created: 2024-01-27T21:25:33+0400
-updated: 2024-03-16T18:09:11+0400
+updated: 2024-03-22T16:22:36+0400
 version: 1.1.1
 @end
 
@@ -410,7 +410,43 @@ ___
     }
     @end
 
-    ===
+* Dockerised ROS 2 CLI
+
+  In case you are working on a system that isn't Ubuntu derived, and you want
+  to have access to ROS. A dockerised deployment may be preferred.
+
+  For this:
+
+  @code bash
+  git clone --recursive git@github.com:tiiuae/px4-sitl-docker.git px4-ros-docker
+  cd px4-ros-docker
+
+  docker built -t px4-ros .
+  @end
+
+  Now commands can be run via the docker container itself.
+	
+  @code bash
+  docker run -it --rm \
+          --network=host -p 14540:14540/udp \
+          --ipc=host --pid=host \
+          --env UID=$(id -u) \
+          --env GID=$(id -g) \
+          px4-ros ros2 <ros cli commands>
+  @end
+
+  Life can be made simpler by creating aliases for this.
+	
+  @code bash
+  alias px4_ros="docker run -it --rm \
+       --network=host -p 14540:14540/udp \
+       --ipc=host --pid=host \
+       --env UID=$(id -u) \
+       --env GID=$(id -g) \
+       px4-ros ros2"
+  @end
+
+  ===
 ___
 
 {:$/technical/frameworks/index:}[< return] - {:$/index:}[index]

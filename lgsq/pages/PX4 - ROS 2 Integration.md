@@ -379,3 +379,30 @@
 		  source ~/px4_ws/install/local_setup.bash
 		  ros2 run px4_control_py px4_control_node
 		  ```
+- # Dockerised ROS 2 CLI
+	- In case you are working on a system that isn't Ubuntu derived, and you want to have access to ROS. A dockerised deployment may be preferred.
+	- For this:
+	- ```bash
+	  git clone --recursive git@github.com:tiiuae/px4-sitl-docker.git px4-ros-docker
+	  cd px4-ros-docker
+	  
+	  docker built -t px4-ros .
+	  ```
+	- Now commands can be run via the docker container itself.
+	- ```bash
+	  docker run -it --rm \
+	      --network=host -p 14540:14540/udp \
+	      --ipc=host --pid=host \
+	      --env UID=$(id -u) \
+	      --env GID=$(id -g) \
+	      px4-ros ros2 <ros cli commands>
+	  ```
+	- Life can be made simpler by creating aliases for this.
+	- ```bash
+	  alias px4_ros="docker run -it --rm \
+	      --network=host -p 14540:14540/udp \
+	      --ipc=host --pid=host \
+	      --env UID=$(id -u) \
+	      --env GID=$(id -g) \
+	      px4-ros ros2"
+	  ```

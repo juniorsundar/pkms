@@ -143,8 +143,13 @@
 	  ```
 	- To build and run the simulation in a container:
 	- ```bash
+	  # Run once to ensure that any remote client (like the container)
+	  # to connect to the X Server. Essentially allows you to run GUI
+	  # apps launched in the container to be forwarded to your local system
+	  xhost +
+	  
 	  docker run -it --privileged --rm \
-	      -v /path/to/px4-firmware:/home/user/Firmware:rw \
+	      -v </path/to>/px4-firmware:/home/user/Firmware:rw \
 	      -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
 	      -e DISPLAY=${DISPLAY} \
 	      -e LOCAL_USER_ID="$(id -u)" \

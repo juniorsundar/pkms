@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-27T23:14:46+0400
-updated: 2024-03-21T15:53:37+0400
+updated: 2024-03-22T16:17:39+0400
 version: 1.1.1
 @end
 
@@ -233,8 +233,10 @@ version: 1.1.1
    To build and run the simulation in a container:
 
    @code bash
+   xhost +
+
    docker run -it --privileged --rm \
-       -v /path/to/px4-firmware:/home/user/Firmware:rw \
+       -v </path/to>/px4-firmware:/home/user/Firmware:rw \
        -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
        -e DISPLAY=${DISPLAY} \
        -e LOCAL_USER_ID="$(id -u)" \
