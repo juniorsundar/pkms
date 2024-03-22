@@ -1,0 +1,59 @@
+@document.meta
+title: 22 March 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-03-22T10:04:48+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+** (-) #RESEARCH Tasks
+
+*** (-) Is it possible to automate ROS node generation
+
+** (-) Dronsole groundwork
+
+*** (-) Explore the DataHub method for obtaining data
+
+**** (-) Syncup with Moamen as well
+
+** (-) Update Jira
+
+*** (-) RTA-22: Reorient for swarm
+
+**** (-) Adjust Story title accordingly
+
+** (-) Data Generation Task
+
+*** (x) {:$/journal/2024/03/20:****  Literature review}[Literature review]
+
+*** (-) Generate plan of action
+
+**** (x) Figure out how to make a {:$/technical/px4/simulation:** Containerised Deployment}[Containerised Deployment]
+
+**** (-) Figure out how to set up ROS in a containerised environment
+
+**** ( ) Install and set up mechanism to convert log files.
+
+     *NOTE* that the rate at which data is being recorded is throttled
+
+*** ( ) Setup simulation and data collection system in local machine
+
+*** ( ) Run test batch
+
+  ===
+___
+
+* Journal
+
+  ===
+___
+
+
+    ===
+___
+
+{:$/journal/2024/03/21:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/03/23:}[next >]
