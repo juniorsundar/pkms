@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-22T10:04:48+0400
+updated: 2024-03-22T16:15:33+0400
 version: 1.1.1
 @end
 
@@ -36,7 +36,9 @@ version: 1.1.1
 
 **** (-) Figure out how to set up ROS in a containerised environment
 
-**** ( ) Install and set up mechanism to convert log files.
+***** (-) The `.bag` files need to be obtainable as well
+
+**** (-) Install and set up mechanism to convert log files.
 
      *NOTE* that the rate at which data is being recorded is throttled
 
