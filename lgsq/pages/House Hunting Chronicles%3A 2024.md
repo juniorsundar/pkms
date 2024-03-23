@@ -19,3 +19,16 @@
 		- Small rooms
 		- Only 1 bathroom
 		- Close to metro
+- **[Sunrise Tower](https://maps.app.goo.gl/8C6RLTQdxruuYhTh8)**
+  date:: 23/03/2024
+  id:: 65fe95e7-0767-43b6-88a1-eca4a71e4785
+	- *Location:* 805, Jumeirah Village Circle
+	- *Rent:* ~AED 75000/yr
+	- *Move in:* April 5
+	- *Comments:*
+		- Very spacious (large front room, kitchen is average size, 2 bedrooms)
+		- 2 Attached bathrooms, 1 maid toilet
+		- Building is owned by single entity, so maintenance is also managed through that
+		- Each apartment has its own AC
+		- Gas is through central line
+	- *Agent:* Asim (0502036156); Tauqeer (0551176016)
