@@ -380,7 +380,9 @@
 		  ros2 run px4_control_py px4_control_node
 		  ```
 - # Dockerised ROS 2 CLI
+  id:: 65fd6a71-d167-47e0-819c-7e3645319411
 	- In case you are working on a system that isn't Ubuntu derived, and you want to have access to ROS. A dockerised deployment may be preferred.
+	  id:: 65fd6a71-6146-492b-9400-81e3966077c6
 	- For this:
 	- ```bash
 	  git clone --recursive git@github.com:tiiuae/px4-sitl-docker.git px4-ros-docker
