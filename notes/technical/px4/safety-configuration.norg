@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-02-21T11:52:28+0400
-updated: 2024-03-02T18:45:03+0400
+updated: 2024-03-25T14:43:14+0400
 version: 1.1.1
 @end
 
@@ -15,10 +15,10 @@ version: 1.1.1
   Failsafes specify areas and conditions in which it is safe to fly. It also
   indicates {* Failsafe Actions}[actions] to be performed if failsafe is triggered.
 
-  Most important failsafe settings are configerd in QGroundControl Safety Setup
+  Most important failsafe settings are configured in QGroundControl Safety Setup
   page. Others are through parameters.
 
-  In remote, can use safety switches to immediately stop motors or returun
+  In remote, can use safety switches to immediately stop motors or return
   vehicle.
 
 * Failsafe Actions
@@ -112,7 +112,7 @@ version: 1.1.1
   Allows a vehicle to take protective action if it unexpectedly flips or if
   notified by external failure detection system.
 
-  Failure detecture during flight is deactivated by default. Enable by setting
+  Failure detector during flight is deactivated by default. Enable by setting
   `CBRK_FLIGHTTERM=0`
 
   Failure detective is active on all vehicle types and modes, except for those

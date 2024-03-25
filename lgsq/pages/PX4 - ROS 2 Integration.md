@@ -119,6 +119,7 @@
 		- Instructions on exposing additional topics through the DDS connection can be found [here](https://docs.px4.io/main/en/middleware/uxrce_dds.html#dds-topics-yaml).
 - # Controlling Drone
 	- ## Offboard Mode
+	  id:: 65f8249b-c869-4d41-9ad6-32ff1e9bce9b
 		- Control of PX4 through ROS 2 requires the drone to be set to offboard mode. The vehicle obeys position, velocity, acceleration, attitude, attitude rates or thrust/torque setpoints provided by some source that is external to the flight stack, such as a companion computer.
 		- **IMPORTANT**: PX4 requires a steady (minimum) 2Hz “proof-of-life“ signal. This is either any of the MAVLink supported commands or ROS 2 messages. If this is not satisfied, the controller will exit offboard control.
 	- ## Create Package
