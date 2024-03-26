@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-26T16:16:44+0400
+updated: 2024-03-26T20:56:12+0400
 version: 1.1.1
 @end
 
@@ -51,16 +51,6 @@ version: 1.1.1
       We may need to be able to dump the bags `.mcap` format. So this means
       that a drive needs to be mounted and exposed when launching the
       container.
-
-      @code bash
-      docker run -it --rm \
-      --network=host -p 14540:14540/udp \
-      --ipc=host --pid=host \
-      --env UID=$(id -u) \
-      --env GID=$(id -g) \
-      -v $HOME/rosbags:/ros_workspace/bags \
-      px4-ros ros2 bag record /parameter_events -s mcap -o ./bags/new
-      @end
 
 **** (x) Install and set up mechanism to convert log files.
 
