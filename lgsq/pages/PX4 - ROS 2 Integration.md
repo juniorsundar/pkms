@@ -409,3 +409,14 @@
 	      --env GID=$(id -g) \
 	      px4-ros ros2"
 	  ```
+	- To record rosbags, we need to first mount a dumping ground in the local machine into the docker container.
+	- id:: 66028b69-abda-4385-a75d-6cee3223fd32
+	  ```bash
+	  docker run -it --rm \
+	      --network=host -p 14540:14540/udp \
+	      --ipc=host --pid=host \
+	      --env UID=$(id -u) \
+	      --env GID=$(id -g) \
+	      -v $HOME/rosbags:/ros_workspace/bags \
+	      px4-ros ros2 bag record -s mcap --all
+	  ```
