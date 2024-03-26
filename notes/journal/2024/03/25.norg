@@ -4,63 +4,15 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-25T15:51:51+0400
+updated: 2024-03-26T09:08:21+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-** (-) #RESEARCH Tasks
-*** (-) Is it possible to automate ROS node generation
-
 ** (x) Dronsole groundwork
 *** (x) Explore the DataHub method for obtaining data
 **** (x) Syncup with Moamen as well
-
-** (-) Update Jira
-*** (-) RTA-22: Reorient for swarm
-**** (-) Adjust Story title accordingly
-
-** ( ) Fly-4-Future data collection logistics
-*** ( ) Confirm who is being sent from Solita side for the data collection event
-*** ( ) Generate list of pertinent data that should be recorded
-
-    - Drone side: flight records, drone
-    - Environment side: atmospheric conditions
-    - Mission side: flight success/failure, mission parameters
-
-*** ( ) What swarm data is being recorded?
-*** ( ) Confirm if this data is being recorded within DataHub
-
-** (-) Data Generation Task
-*** (x) {:$/journal/2024/03/20:****  Literature review}[Literature review]
-*** (-) Generate plan of action
-**** (x) Figure out how to make a {:$/technical/px4/simulation:** Containerised Deployment}[Containerised Deployment]
-**** (x) Figure out how to set up ROS in a containerised environment
-***** (x) Launch ROS in containerised environment
-***** (x) Clone and build ROS 2 workspace into containerised environment
-***** (x) Be able to run {:$/technical/px4/px4:* Dockerised ROS 2 CLI}[Dockerised ROS 2 CLI] as well as launch all the built nodes
-***** (x) The `.bag` files need to be obtainable as well
-
-      We may need to be able to dump the bags `.mcap` format. So this means
-      that a drive needs to be mounted and exposed when launching the
-      container.
-
-      @code bash
-      docker run -it --rm \
-      --network=host -p 14540:14540/udp \
-      --ipc=host --pid=host \
-      --env UID=$(id -u) \
-      --env GID=$(id -g) \
-      -v $HOME/rosbags:/ros_workspace/bags \
-      px4-ros ros2 bag record /parameter_events -s mcap -o ./bags/new
-      @end
-
-**** (-) Install and set up mechanism to convert log files.
-     *NOTE* that the rate at which data is being recorded is throttled
-
-*** ( ) Setup simulation and data collection system in local machine
-*** ( ) Run test batch
 
     ===
 ___
