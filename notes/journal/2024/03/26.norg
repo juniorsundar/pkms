@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-26T09:07:48+0400
+updated: 2024-03-26T16:16:44+0400
 version: 1.1.1
 @end
 
@@ -22,18 +22,25 @@ version: 1.1.1
 
     Lassi Laiho is being sent from Solita side.
 
+    "Hi @Lassi Laiho, I was made to understand that the following sets of data
+    will be collected through each of the flight missions. Could you please
+    confirm if this is correct?"
+
 *** (-) Generate list of pertinent data that should be recorded
 
-    - Drone side: flight records, drone
-    - Environment side: atmospheric conditions
-    - Mission side: flight success/failure, mission parameters
+    - *Drone side*: flight records (topics and logs), drone type and parameters
+      (frame type, mass, sensor+actuator parameters)
+    - *Environment side*: atmospheric conditions (wind speed, temperature,
+      etc.)
+    - *Mission side*: mission success/failure (crashes/failures and type of
+      failure), mission parameters (task coordinates/objectives)
 
 *** ( ) What swarm data is being recorded?
 *** ( ) Confirm if this data is being recorded within DataHub
 
 ** (-) Data Generation Task
 *** (x) {:$/journal/2024/03/20:****  Literature review}[Literature review]
-*** (-) Generate plan of action
+*** (x) Generate plan of action
 **** (x) Figure out how to make a {:$/technical/px4/simulation:** Containerised Deployment}[Containerised Deployment]
 **** (x) Figure out how to set up ROS in a containerised environment
 ***** (x) Launch ROS in containerised environment
@@ -55,19 +62,42 @@ version: 1.1.1
       px4-ros ros2 bag record /parameter_events -s mcap -o ./bags/new
       @end
 
-**** (-) Install and set up mechanism to convert log files.
+**** (x) Install and set up mechanism to convert log files.
 
      *NOTE* that the rate at which data is being recorded is throttled
+
+**** (-) Formalise a PoA
 
 *** ( ) Setup simulation and data collection system in local machine
 *** ( ) Run test batch
 
-  ===
+    ===
 ___
 
 * Journal
 
-  ===
+  - *Finnish Visa for Work*:
+     -- This needs to be undertaken by myself and then reimbursed by TII or
+        Unikie.
+     -- from Samridha:
+        --- Finland embassy visa {https://finlandvisa.fi/checklist}[application checklist]
+        --- Original Passport
+        --- Passport, Residence Visa, and Emirates ID copy
+        --- Flight tickets and hotel reservation tickets
+        --- Salary Certificate (from ERP)
+        --- 3 months' bank statement (stamped by the bank)
+        --- 2 passport-sized photos as per Schengen visa format and
+            {https://www.icao.int/Security/mrtd/Downloads/Technical%20Reports/Annex_A-Photograph_Guidelines.pdf}[photograph guidelines]
+        --- Previous Schengen visa or UK/USA visa copies
+        --- /Business Travel letter signed by CEO/approved by HR (from ERP)/
+        --- /Invitation Letter from Finland/
+        --- Book an appointment with {https://visa.vfsglobal.com/are/en/fin}[VFS Global]
+        --- VISA application form - Fill Online {https://finlandvisa.fi/}, take
+            a printout, add photos, and sign.
+        --- Travel medical insurance: /Daman Card, Travel Certificate, and/
+            /Benefits captured from the Daman website/
+
+        ===
 ___
 
 * Meetings

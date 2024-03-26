@@ -44,10 +44,14 @@
 			      -v $HOME/rosbags:/ros_workspace/bags \
 			  	px4-ros ros2 bag record /parameter_events -s mcap -o ./bags/new
 			  ```
-	- DOING Install and set up mechanism to convert log files.
+	- DONE Install and set up mechanism to convert log files.
 	  :LOGBOOK:
-	  CLOCK: [2024-03-22 Fri 16:15:18]
+	  CLOCK: [2024-03-22 Fri 16:15:18]--[2024-03-26 Tue 16:15:37] =>  96:00:19
 	  :END:
 		- **NOTE** that the rate at which data is being recorded is throttled.
+	- DOING Formalise a PoA
+	  :LOGBOOK:
+	  CLOCK: [2024-03-26 Tue 16:16:38]
+	  :END:
 - TODO Deploy simulation and data collection system in local machine
 - TODO Run test batch
