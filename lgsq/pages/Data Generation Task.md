@@ -1,7 +1,7 @@
 - DONE [[Literature review for Data Generation Task]]
-- DOING Generate plan of action
+- DONE Generate plan of action
   :LOGBOOK:
-  CLOCK: [2024-03-20 Wed 16:21:03]
+  CLOCK: [2024-03-20 Wed 16:21:03]--[2024-03-27 Wed 22:27:29] =>  174:06:26
   :END:
 	- DONE Figure out how to make a ((65fc12cb-7576-445f-a824-0bce95119dc2))
 	  :LOGBOOK:
@@ -49,9 +49,42 @@
 	  CLOCK: [2024-03-22 Fri 16:15:18]--[2024-03-26 Tue 16:15:37] =>  96:00:19
 	  :END:
 		- **NOTE** that the rate at which data is being recorded is throttled.
-	- DOING Formalise a PoA
+	- DONE Formalise a PoA
 	  :LOGBOOK:
-	  CLOCK: [2024-03-26 Tue 16:16:38]
+	  CLOCK: [2024-03-26 Tue 16:16:38]--[2024-03-27 Wed 22:27:08] =>  30:10:30
 	  :END:
-- TODO Deploy simulation and data collection system in local machine
+		- The goal is to generate data sets that are diverse, and sufficiently large to be able to train and test models.
+		- In deployment, the experiment environment must be able to run simulations and record data *ad inifinitum* given a preset list of parameters.
+		- The simulation may cycle through a preset list of movement tasks, or it may generate a randomised movement task.
+		- The simulation will start and end with each iteration for thorough safety during deployment.
+			- Parameters will be cleansed to remove all faults before the simulation is killed.
+			- Data will be recorded in bags, and all pertinent topics will be dumped.
+			- ULOG file must also be copied over.
+			- Fault data must also be copied over (time of injection, type, etc.).
+		- To that end, the following prerequisites are important to get fully set up:
+			- ROS bags being recorded as `.mcap` files and being dumped somewhere safe.
+			- ROS nodes to initiate rosbag records when trigger is received.
+			- Mission controller node to handle generating executing missions.
+			- Fault handler to trigger and record faults.
+			- Drone state monitor that checks if the drone is functioning. If crash, then crash time needs to be recorded.
+		- **How to handle when the mission starts and finishes?**
+			- This is necessary for segregating the bag files, and also to manage the sequencing for continuous mission records.
+			- #+BEGIN_TIP
+			  We could use the termination of the mission thread to signify a end of mission.
+			  #+END_TIP
+			- #+BEGIN_TIP
+			  Should we resort to end of mission in all chases? Even if there is a
+			  crash?
+			  #+END_TIP
+		- Mission finishes normally -->
+			- run through normal cleanup sequence
+			- restart simulation.
+		- Drone crashes -->
+			- trigger a preempt on the requesting thread
+			- run cleanup sequence
+			- restart simulation
+- DOING Deploy simulation and data collection system in local machine
+  :LOGBOOK:
+  CLOCK: [2024-03-27 Wed 22:27:13]
+  :END:
 - TODO Run test batch
