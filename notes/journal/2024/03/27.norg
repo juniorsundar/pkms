@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-27T10:56:33+0400
+updated: 2024-03-27T23:12:11+0400
 version: 1.1.1
 @end
 
@@ -26,7 +26,7 @@ version: 1.1.1
     will be collected through each of the flight missions. Could you please
     confirm if this is correct?"
 
-*** (-) Generate list of pertinent data that should be recorded
+*** (x) Generate list of pertinent data that should be recorded
 
     - *Drone side*: flight records (topics and logs), drone type and parameters
       (frame type, mass, sensor+actuator parameters)
@@ -35,8 +35,8 @@ version: 1.1.1
     - *Mission side*: mission success/failure (crashes/failures and type of
       failure), mission parameters (task coordinates/objectives)
 
-*** ( ) What swarm data is being recorded?
-*** ( ) Confirm if this data is being recorded within DataHub
+*** (x) Confirm if this data is being recorded within DataHub
+*** (-) Talk to Yapa about additional data collection
 
 ** (-) Data Generation Task
 *** (x) {:$/journal/2024/03/20:****  Literature review}[Literature review]
@@ -56,7 +56,7 @@ version: 1.1.1
 
      *NOTE* that the rate at which data is being recorded is throttled
 
-**** (-) Formalise a PoA
+**** (x) Formalise a PoA
 
      The goal is to generate data sets that are diverse, and sufficiently large
      to be able to train and test models.
@@ -102,16 +102,17 @@ version: 1.1.1
      - run cleanup sequence
      - restart simulation
 
-
-*** ( ) Setup simulation and data collection system in local machine
+*** (-) Setup simulation and data collection system in local machine
 *** ( ) Run test batch
 
-    ===
+** ( ) Send the data heards to Willian
+
+** ( ) Update 'DataHub F4F Visit Plan' on Confluence with the required topics
+
+   ===
 ___
 
 * Journal
-
-  *Plan of Action*
 
 
   ===
@@ -119,23 +120,84 @@ ___
 
 * Meetings
 
-** Meeting Name
+** SRTA-MLOps Timeline and Responsibility Discussion
 
 *** Attendees
 
-    | Names
+    | SRTA-AD
+    | Solita
 
 *** Goals
 
+    Establish timelines and deadlines for Q1-Q4
 
 *** Agenda
 
-    - ( ) 
+    - (x) Establish timeline
+    - (x) Expectations and responsibilities
+    - (x) Demos
+    - (x) Sync-up
 
 *** Minutes
 
+    Demo is on June Q2
+
+    SRTA focus work on MLOps
+
+    Safety dashboard is WIP near completion for demo
+
+    Decision module work has started
+
+    MLFlow instance has been deployed to cloud --> being tested
+
+    Broken propeller vs. battery monitor for demo (feasibility)
+    - Hard to collect data for broken propeller and implement RTA modules.
+    - Battery monitor is easier to implement and demo for time being.
+
+    The template for RTA plugins is under development
+
+    *June Demo Focus*
+    - FMO with safety dashboard
+    - SRTA core components
+    - Integration of safe landing spot detection action with segmentation model
+    - Maybe fault injection?
+
+    Supervisor architecture will replace RTA worker switch
+    Support for VTOL and fixed-wing UAVs is incoming
 
 *** Action Items
+
+    Sync-up with Jarmo later if there is a need for fault injection to be
+    demoed
+
+** Sync on Prague Data Collection
+
+*** Attendees
+
+    | Moamen Ibrahi
+    | Lassi Laiho
+    | Junior Sundar
+
+*** Goals
+
+    - Determine which method to record data from the flight tests
+
+*** Agenda
+
+    - Determine what all data can be recorded
+    - What about swarm?
+    - DataHub stuff too!
+
+*** Minutes
+
+    Turns out no one knows shit!
+
+    The data for the flight can only be recorded from rostopics, nothing else
+    is in place at the moment
+
+*** Action Item
+
+    - (x) -Ping Rodolfo asking who the go to person is to answer your damn questions-
 
     ===
 ___
