@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-27T09:11:33+0400
+updated: 2024-03-27T10:56:33+0400
 version: 1.1.1
 @end
 
@@ -58,13 +58,61 @@ version: 1.1.1
 
 **** (-) Formalise a PoA
 
+     The goal is to generate data sets that are diverse, and sufficiently large
+     to be able to train and test models.
+
+     In deployment, the experiment environment must be able to run simulations
+     and record data /ad inifinitum/ given a preset list of parameters.
+
+     The simulation may cycle through a preset list of movement tasks, or it
+     may generate a randomised movement task.
+
+     The simulation will start and end with each iteration for thorough safety
+     during deployment.
+     - Parameters will be cleansed to remove all faults before the simulation
+       is killed.
+     - Data will be recorded in bags, and all pertinent topics will be dumped.
+     - ULOG file must also be copied over.
+     - Fault data must also be copied over (time of injection, type, etc.).
+
+     To that end, the following prerequisites are important to get fully set up:
+     ~ ROS bags being recorded as `.mcap` files and being dumped somewhere safe.
+     ~ ROS nodes to initiate rosbag records when trigger is received.
+     ~ Mission controller node to handle generating executing missions.
+     ~ Fault handler to trigger and record faults.
+     ~ Drone state monitor that checks if the drone is functioning. If crash,
+       then crash time needs to be recorded.
+
+     *How to handle when the mission starts and finishes?*
+
+     This is necessary for segregating the bag files, and also to manage the
+     sequencing for continuous mission records.
+
+     ? We could use the termination of the mission thread to signify a end of
+     mission.
+     ? Should we resort to end of mission in all chases? Even if there is a
+     crash?
+
+     Mission finishes normally -->
+     - run through normal cleanup sequence
+     - restart simulation.
+
+     Drone crashes -->
+     - trigger a preempt on the requesting thread
+     - run cleanup sequence
+     - restart simulation
+
+
 *** ( ) Setup simulation and data collection system in local machine
 *** ( ) Run test batch
 
-  ===
+    ===
 ___
 
 * Journal
+
+  *Plan of Action*
+
 
   ===
 ___
