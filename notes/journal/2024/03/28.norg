@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-28T16:10:28+0400
+updated: 2024-03-28T20:52:22+0400
 version: 1.1.1
 @end
 
@@ -36,11 +36,13 @@ version: 1.1.1
       failure), mission parameters (task coordinates/objectives)
 
 *** (x) Confirm if this data is being recorded within DataHub
-*** (-) Talk to Yapa about additional data collection
+*** (x) Update 'DataHub F4F Visit Plan' on Confluence with the required topics
+*** (x) Talk to Yapa about additional data collection
+*** (-) Sync up with Martin to establish what can be gained from the event
 
 ** (-) Data Generation Task
 *** (x) {:$/journal/2024/03/20:****  Literature review}[Literature review]
-*** (-) Generate plan of action
+*** (x) Generate plan of action
 **** (x) Figure out how to make a {:$/technical/px4/simulation:** Containerised Deployment}[Containerised Deployment]
 **** (x) Figure out how to set up ROS in a containerised environment
 ***** (x) Launch ROS in containerised environment
@@ -56,7 +58,7 @@ version: 1.1.1
 
      *NOTE* that the rate at which data is being recorded is throttled
 
-**** (-) Formalise a PoA
+**** (x) Formalise a PoA
 
      The goal is to generate data sets that are diverse, and sufficiently large
      to be able to train and test models.
@@ -105,9 +107,11 @@ version: 1.1.1
 *** (-) Setup simulation and data collection system in local machine
 *** ( ) Run test batch
 
-** ( ) Send the data heards to Willian
+** ( ) Send the data headers to Willian
 
-** (x) Update 'DataHub F4F Visit Plan' on Confluence with the required topics
+** ( ) Update the Q1 objectives spreadsheet by EOD {:$/journal/2024/03/29:}[29th March]
+
+** ( ) Send data to Samridha (accel and gyro both in fault)
 
    ===
 ___
@@ -119,23 +123,41 @@ ___
 
 * Meetings
 
-** Meeting Name
+** RTA Meeting
 
 *** Attendees
 
-    | Names
+    | SRTA-AD
+    | | Martin Andreoni
+    | | Rayana Boubezari
+    | | Junior Sundar
 
 *** Goals
 
+    - Q1 wrap up
+    - Q2 demo kickoff
 
 *** Agenda
 
-    - ( ) 
+    - (x) Update on current progress
+    - (x) Update Jira
 
 *** Minutes
 
+    This is the last meeting of Q1
 
-*** Action Items
+    Update Jira separately before these round tables, it will no longer happen
+    during the meetings
+
+    {:$/journal/2024/03/28:**  Data Generation Task}[Data Generation Task]
+	- Simulation and rosnodes are containerised
+	- Deploy simulation and data collection system in local machine
+
+    {:$/journal/2024/03/28:** Fly-4-Future data collection logistics}[Fly-4-Future data collection logistics]
+    - Limitations -> only rostopics can be captured in SQLite3 (lack of
+      metadata)
+    - Some stop gaps in play
+    - Now way to record mission success or failure
 
     ===
 ___
