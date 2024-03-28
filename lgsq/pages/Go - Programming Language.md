@@ -105,7 +105,7 @@ link:: https://www.udemy.com/share/109Zo23@44LsCDI3H4cb_JsKRBxWCg5uLP7XPeNIsrCcG
 	- `someCondition` is an expression that yields a boolean value or variable that contains a boolean value. In that case, the loop will continue to execute the code nested in the loop until the codition/variable yields `false`.
 - # Files and Packages
 	- [[Go - Programming Language/Examples/Bank Packages]]
-	- ![files-and-packages.png](../assets/files-and-packages_1710670488729_0.png)
+	- ![files-and-packages.png](../assets/files-and-packages_1710670488729_0.png){:height 426, :width 749}
 	- Every package must go into its own subfolder in a project (which you can call the root folder).
 	- Only variables and functions with a *capital letter first can be exported* from one package and used in another package.
 	- Can find third-party packages in the Go's package [library](https://pkg.go.dev/). You can install them by using the following command.
