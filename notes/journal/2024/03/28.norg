@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-28T20:52:22+0400
+updated: 2024-03-28T21:03:27+0400
 version: 1.1.1
 @end
 
@@ -38,6 +38,18 @@ version: 1.1.1
 *** (x) Confirm if this data is being recorded within DataHub
 *** (x) Update 'DataHub F4F Visit Plan' on Confluence with the required topics
 *** (x) Talk to Yapa about additional data collection
+
+    Currently, the UTM team obtains weather forecast data from open-meteo.org,
+    which as open-source API to obtain weather info provided the coordinates of
+    the location.
+
+    There are limitations to this as it is not on board the drone, furthermore
+    there is a limit to the number of API calls you can make before incurring
+    costs.
+
+    On top of that, Lassi said that it won't be possible to record this with
+    the `mission-data-recorder`
+
 *** (-) Sync up with Martin to establish what can be gained from the event
 
 ** (-) Data Generation Task
@@ -149,9 +161,11 @@ ___
     Update Jira separately before these round tables, it will no longer happen
     during the meetings
 
+    15th May code freeze for Demo
+
     {:$/journal/2024/03/28:**  Data Generation Task}[Data Generation Task]
-	- Simulation and rosnodes are containerised
-	- Deploy simulation and data collection system in local machine
+    - Simulation and rosnodes are containerised
+    - Deploy simulation and data collection system in local machine
 
     {:$/journal/2024/03/28:** Fly-4-Future data collection logistics}[Fly-4-Future data collection logistics]
     - Limitations -> only rostopics can be captured in SQLite3 (lack of
