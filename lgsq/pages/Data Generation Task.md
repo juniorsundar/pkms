@@ -91,4 +91,12 @@
   :LOGBOOK:
   CLOCK: [2024-03-27 Wed 22:27:13]
   :END:
+	- DOING Complete the data recording node with automatic folder dumping
+	  :LOGBOOK:
+	  CLOCK: [2024-03-29 Fri 17:13:58]
+	  :END:
+	- TODO Add auto dumping of whether the mission was completed successfully or failed
+	- TODO Test full pipeline for robustness for a simple deployment
 - TODO Run test batch
+	- TODO Obtain a few data sets
+	- TODO Actively maintain and improve the rosnodes
