@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-29T10:05:42+0400
+updated: 2024-03-29T17:18:04+0400
 version: 1.1.1
 @end
 
@@ -117,13 +117,18 @@ version: 1.1.1
      - restart simulation
 
 *** (-) Setup simulation and data collection system in local machine
+**** (-) Complete the data recording node with automatic folder dumping
+**** ( ) Add auto dumping of whether the mission was completed successfully or failed
+**** ( ) Test full pipeline for robustness for a simple deployment
 *** ( ) Run test batch
+**** ( ) Obtain a few data sets
+**** ( ) Actively maintain and improve the rosnodes
 
 ** ( ) Send the data headers to Willian
 
-** ( ) Update the Q1 objectives spreadsheet by EOD {:$/journal/2024/03/29:}[29th March]
+** (x) Update the Q1 objectives spreadsheet by EOD {:$/journal/2024/03/29:}[29th March]
 
-** ( ) Send data to Samridha (accel and gyro both in fault)
+** (x) Send data to Samridha (accel and gyro both in fault)
 
   ===
 ___
@@ -133,25 +138,6 @@ ___
   ===
 ___
 
-* Meetings
-
-** Meeting Name
-
-*** Attendees
-
-    | Names
-
-*** Goals
-
-
-*** Agenda
-
-    - ( ) 
-
-*** Minutes
-
-
-*** Action Items
 
     ===
 ___
