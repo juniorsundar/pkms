@@ -4,7 +4,7 @@ description: Journal index
 authors: juniorsundar
 categories: 
 created: 2024-01-27T19:57:08+0400
-updated: 2024-03-25T09:29:39+0400
+updated: 2024-03-31T12:07:23+0400
 version: 1.1.1
 @end
 
@@ -39,6 +39,12 @@ version: 1.1.1
     - {:$/journal/2024/03/23:}[23]
     - {:$/journal/2024/03/24:}[24]
     - {:$/journal/2024/03/25:}[25]
+    - {:$/journal/2024/03/26:}[26]
+    - {:$/journal/2024/03/27:}[27]
+    - {:$/journal/2024/03/28:}[28]
+    - {:$/journal/2024/03/29:}[29]
+    - {:$/journal/2024/03/30:}[30]
+    - {:$/journal/2024/03/31:}[31]
 
 *** February
 
