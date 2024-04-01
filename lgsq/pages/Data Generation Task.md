@@ -91,11 +91,18 @@
   :LOGBOOK:
   CLOCK: [2024-03-27 Wed 22:27:13]
   :END:
-	- DOING Complete the data recording node with automatic folder dumping
+	- DONE Complete the data recording node with automatic folder dumping
 	  :LOGBOOK:
-	  CLOCK: [2024-03-29 Fri 17:13:58]
+	  CLOCK: [2024-03-29 Fri 17:13:58]--[2024-04-01 Mon 15:16:17] =>  70:02:19
 	  :END:
-	- TODO Add auto dumping of whether the mission was completed successfully or failed
+	- DONE Add auto dumping of whether the mission was completed successfully or failed
+	- DOING Create a HTTP server to manage the auto-launch and killing of simulation
+	  :LOGBOOK:
+	  CLOCK: [2024-04-01 Mon 15:16:22]
+	  CLOCK: [2024-04-01 Mon 15:16:24]
+	  :END:
+		- Since the simulation runs on a separate container this needs to be achieved through a server call
+	- TODO Expose the records/bag folder for autodump of rosbags
 	- TODO Test full pipeline for robustness for a simple deployment
 - TODO Run test batch
 	- TODO Obtain a few data sets
