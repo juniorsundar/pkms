@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-31T12:07:20+0400
+updated: 2024-04-02T14:44:23+0400
 version: 1.1.1
 @end
 
@@ -12,16 +12,7 @@ version: 1.1.1
 
   /Rolled over/
 
-
   ===
-___
-
-* Journal
-
-  ===
-___
-
-    ===
 ___
 
 {:$/journal/2024/03/29:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/03/31:}[next >]

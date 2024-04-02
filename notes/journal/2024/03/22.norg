@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-22T16:15:33+0400
+updated: 2024-04-02T14:46:19+0400
 version: 1.1.1
 @end
 
@@ -45,15 +45,6 @@ version: 1.1.1
 *** ( ) Setup simulation and data collection system in local machine
 
 *** ( ) Run test batch
-
-  ===
-___
-
-* Journal
-
-  ===
-___
-
 
     ===
 ___
