@@ -96,14 +96,29 @@
 	  CLOCK: [2024-03-29 Fri 17:13:58]--[2024-04-01 Mon 15:16:17] =>  70:02:19
 	  :END:
 	- DONE Add auto dumping of whether the mission was completed successfully or failed
-	- DOING Create a HTTP server to manage the auto-launch and killing of simulation
+	- DONE Create a HTTP server to manage the auto-launch and killing of simulation
 	  :LOGBOOK:
 	  CLOCK: [2024-04-01 Mon 15:16:22]
-	  CLOCK: [2024-04-01 Mon 15:16:24]
+	  CLOCK: [2024-04-01 Mon 15:16:24]--[2024-04-02 Tue 14:57:28] =>  23:41:04
 	  :END:
 		- Since the simulation runs on a separate container this needs to be achieved through a server call
-	- TODO Expose the records/bag folder for autodump of rosbags
-	- TODO Test full pipeline for robustness for a simple deployment
+	- DONE Expose the records/bag folder for autodump of rosbags
+	  :LOGBOOK:
+	  CLOCK: [2024-04-02 Tue 14:57:27]--[2024-04-02 Tue 16:31:20] =>  01:33:53
+	  :END:
+		- ```bash
+		  docker run -it --rm \
+		      --network=host -p 14540:14540/udp \
+		      --ipc=host --pid=host \
+		      --env UID=$(id -u) \
+		      --env GID=$(id -g) \
+		      -v $(pwd)/records:/ros_workspace/records \
+		      px4-ros ros2
+		  ```
+	- DOING Test full pipeline for robustness for a simple deployment
+	  :LOGBOOK:
+	  CLOCK: [2024-04-02 Tue 16:31:26]
+	  :END:
 - TODO Run test batch
 	- TODO Obtain a few data sets
 	- TODO Actively maintain and improve the rosnodes
