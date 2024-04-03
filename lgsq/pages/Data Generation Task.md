@@ -112,7 +112,7 @@
 		      --ipc=host --pid=host \
 		      --env UID=$(id -u) \
 		      --env GID=$(id -g) \
-		      -v $(pwd)/records:/ros_workspace/records \
+		      -v $HOME/records:/ros_workspace/records \
 		      px4-ros ros2
 		  ```
 	- DOING Test full pipeline for robustness for a simple deployment

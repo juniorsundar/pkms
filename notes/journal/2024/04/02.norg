@@ -4,19 +4,11 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-04-02T16:32:25+0400
+updated: 2024-04-03T09:36:53+0400
 version: 1.1.1
 @end
 
 * To-Do
-
-** (-) #RESEARCH Tasks
-*** (-) Is it possible to automate ROS node generation
-*** ( ) What is a Hypervisor?
-
-** (-) Update Jira
-*** (-) RTA-22: Reorient for swarm
-**** (-) Adjust Story title accordingly
 
 ** (x) Fly-4-Future data collection logistics
 *** (x) Confirm who is being sent from Solita side for the data collection event
@@ -56,102 +48,6 @@ version: 1.1.1
     Go ahead with what we have. Confirm if it is possible to mark if a mission
     is failed or passed, if not then leave it.
 
-** (-) Data Generation Task
-*** (x) {:$/journal/2024/03/20:****  Literature review}[Literature review]
-*** (x) Generate plan of action
-**** (x) Figure out how to make a {:$/technical/px4/simulation:** Containerised Deployment}[Containerised Deployment]
-**** (x) Figure out how to set up ROS in a containerised environment
-***** (x) Launch ROS in containerised environment
-***** (x) Clone and build ROS 2 workspace into containerised environment
-***** (x) Be able to run {:$/technical/px4/px4:* Dockerised ROS 2 CLI}[Dockerised ROS 2 CLI] as well as launch all the built nodes
-***** (x) The `.bag` files need to be obtainable as well
-
-      We may need to be able to dump the bags `.mcap` format. So this means
-      that a drive needs to be mounted and exposed when launching the
-      container.
-
-**** (x) Install and set up mechanism to convert log files.
-
-     *NOTE* that the rate at which data is being recorded is throttled
-
-**** (x) Formalise a PoA
-
-     The goal is to generate data sets that are diverse, and sufficiently large
-     to be able to train and test models.
-
-     In deployment, the experiment environment must be able to run simulations
-     and record data /ad inifinitum/ given a preset list of parameters.
-
-     The simulation may cycle through a preset list of movement tasks, or it
-     may generate a randomised movement task.
-
-     The simulation will start and end with each iteration for thorough safety
-     during deployment.
-     - Parameters will be cleansed to remove all faults before the simulation
-       is killed.
-     - Data will be recorded in bags, and all pertinent topics will be dumped.
-     - ULOG file must also be copied over.
-     - Fault data must also be copied over (time of injection, type, etc.).
-
-     To that end, the following prerequisites are important to get fully set up:
-     ~ ROS bags being recorded as `.mcap` files and being dumped somewhere safe.
-     ~ ROS nodes to initiate rosbag records when trigger is received.
-     ~ Mission controller node to handle generating executing missions.
-     ~ Fault handler to trigger and record faults.
-     ~ Drone state monitor that checks if the drone is functioning. If crash,
-       then crash time needs to be recorded.
-
-     *How to handle when the mission starts and finishes?*
-
-     This is necessary for segregating the bag files, and also to manage the
-     sequencing for continuous mission records.
-
-     ? We could use the termination of the mission thread to signify a end of
-     mission.
-     ? Should we resort to end of mission in all chases? Even if there is a
-     crash?
-
-     Mission finishes normally -->
-     - run through normal cleanup sequence
-     - restart simulation.
-
-     Drone crashes -->
-     - trigger a preempt on the requesting thread
-     - run cleanup sequence
-     - restart simulation
-
-*** (-) Setup simulation and data collection system in local machine
-**** (x) Complete the data recording node with automatic folder dumping
-**** (x) Add auto dumping of whether the mission was completed successfully or failed
-**** (x) Create a HTTP server to manage the auto-launch and killing of simulation
-
-     Since the simulation runs on a separate container this needs to be
-     achieved through a server call
-
-**** (x) Expose the records/bag folder for autodump of rosbags
-
-     @code bash
-     docker run -it --rm \
-         --network=host -p 14540:14540/udp \
-         --ipc=host --pid=host \
-         --env UID=$(id -u) \
-         --env GID=$(id -g) \
-         -v $(pwd)/records:/ros_workspace/records \
-         px4-ros ros2
-     @end
-
-**** (-) Test full pipeline for robustness for a simple deployment
-*** ( ) Run test batch
-**** ( ) Obtain a few data sets
-**** ( ) Actively maintain and improve the rosnodes
-
-** (-) Empty data headers for Willian
-*** (x) Send the data headers to Willian
-*** (-) Adjust data headers with more description
-
-    Provide header metadata in spreadsheet formats
-
-*** ( ) Set up a meeting to determine which all data is necessary and which isn't
 
     ===
 ___
@@ -205,7 +101,7 @@ ___
    distributions add patch to link `sshd` to `systemd`, which in turn links to
    `liblzma` which allows `xz` Utils to exert control over `sshd`.
 
-    ===
+   ===
 ___
 
 {:$/journal/2024/04/01:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/04/03:}[next >]
