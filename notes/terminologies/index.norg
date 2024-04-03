@@ -42,6 +42,7 @@ version: 1.1.1
 
    - {:$/terminologies/hardware-in-the-loop:}[Hardware in the Loop]
    - {:$/terminologies/hids:}[Host-Based Intrusion Detection (HIDS)]
+   - {:$/terminologies/hypervisor:}[Hypervisor]
 
 ** M
 
@@ -75,6 +76,10 @@ version: 1.1.1
 ** U
 
    - {:$/terminologies/udp:}[User Datagram Protocol (UDP)]
+
+** V
+
+   - {:$/terminologies/virtualisation:}[Virtualisation]
 
    ===
 ___
