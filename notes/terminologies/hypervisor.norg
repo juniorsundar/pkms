@@ -1,0 +1,100 @@
+@document.meta
+title: Hypervisor
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-04-03T20:56:23+0400
+updated: 2024-04-03T21:06:05+0400
+version: 1.1.1
+@end
+
+* Definition
+
+  A hypervisor or virtual machine monitor (VMM) is a software that creates and
+  runs virtual machines (VMs).
+
+  The physical hardware, when used as a hypervisor, is called the host, while
+  the many VMs that use its resources are guests.
+
+  The hypervisor treats resources—like CPU, memory, and storage—as a pool that
+  can be easily reallocated between existing guests or to new virtual machines.
+
+  It only handles the scheduling of processes, so hardware of host still
+  executes the hardware functions of the guests.
+
+  Multiple different operating systems can run alongside each other and share
+  the same virtualised hardware resources with a hypervisor. This is a key
+  benefit of {:$/terminologies/virtualisation:}[Virtualisation].
+
+* Types of Hypervisors
+
+** Type 1
+
+   Also known as native or bare metal hypervisors run directly on the host's
+   hardware to manage guest operating systems.
+
+   It replaces the host OS and VM resources are scheduled directly to hardware
+   by the hypervisor.
+
+   This is the most common type in enterprise data centres or other
+   server-based environments.
+
+   KVM, Microsoft Hyper-V, and VMware vShpere are examples of type 1. KVM was
+   merged into Linux Kernel since 2007.
+
+** Type 2
+
+   Also known as a hosted hypervisor, and is run on a conventional OS as a
+   software layer or application.
+
+   It abstracts guest OS from host OS, VM resources are then scheduled agains a
+   host OS, which is they executed against the hardware.
+
+   Better for users who want to run multiple OSes on a personal computer.
+
+   VMware Workstation and Oracle VirtualBox are examples of type 2.
+
+* Containers vs. VMs
+
+  Both are packaged computing environments that combine various IT components
+  and isolate them from the rest of the system.
+
+** Container
+
+   Set of 1 or more processes that are isolated from the rest of the system.
+
+   Containers only allow processes to access the resources requested
+   specifically.
+
+   Resource limits ensure that the container is able to run on a node that has
+   enough capacity.
+
+** VM
+
+   Contain their own OS, to allow performing multiple resource-intensive
+   functions at once.
+
+   Increased resources enables abstraction, splitting, duplication and
+   emulation of entire servers, OSs, desktops, databases, and networks.
+
+   ---
+
+  Hyper visor also allows running multiple OSs in VMs, but containers only run
+  single type of OS. Container running on a Linux server can only run a Linux
+  based OS.
+  
+  Containers are sometimes thought of as a replacement for hypervisors, though
+  it isn't accurate definition.
+  
+* Security Considerations
+
+  VM provides an environment that is isolated from the rest of the system. If
+  it is compromised, the system it runs on isn't impacted.
+
+  However, if hypervisor itself is hacked then it can cause problems for all of
+  the VMs managed by the hypervisor.
+
+   ===
+___
+
+{:$/terminologies/index:}[< return] - {:$/index:}[index]

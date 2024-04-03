@@ -4,15 +4,17 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-04-03T09:35:30+0400
+updated: 2024-04-03T21:10:04+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-** (-) #RESEARCH Tasks
-*** (-) Is it possible to automate ROS node generation
-*** ( ) What is a Hypervisor?
+** (-) #RESEARCH Is it possible to automate ROS node generation
+
+** (x) #RESEARCH What is a {:$/terminologies/hypervisor:}[Hypervisor]?
+
+   Also researched {:$/terminologies/virtualisation:}[Virtualisation]
 
 ** (-) Update Jira
 *** (-) RTA-22: Reorient for swarm
@@ -94,12 +96,12 @@ version: 1.1.1
 
      @code bash
      docker run -it --rm \
-         --network=host -p 14540:14540/udp \
-         --ipc=host --pid=host \
-         --env UID=$(id -u) \
-         --env GID=$(id -g) \
-         -v $(pwd)/records:/ros_workspace/records \
-         px4-ros ros2
+     --network=host -p 14540:14540/udp \
+     --ipc=host --pid=host \
+     --env UID=$(id -u) \
+     --env GID=$(id -g) \
+     -v $(pwd)/records:/ros_workspace/records \
+     px4-ros ros2
      @end
 
 **** (-) Test full pipeline for robustness for a simple deployment
@@ -115,7 +117,7 @@ version: 1.1.1
 
 *** ( ) Set up a meeting to determine which all data is necessary and which isn't
 
-  ===
+    ===
 ___
 
 * Journal
@@ -125,23 +127,55 @@ ___
 
 * Meetings
 
-** Meeting Name
+** Solita - SRTA MLOps Syncup
 
 *** Attendees
 
-    | Names
+    | SRTA-AD
+    | Solita
 
 *** Goals
 
+    Bring forward updates for MLOps development.
 
 *** Agenda
 
-    - ( ) 
+    - (x) Establish timeline in Jira
+    - (x) Update towards the Demo
 
 *** Minutes
 
+    MLFlow server working in cloud.
+
+    Template for SRTA modules need to be updated or modded in a case-by-case
+    basis.
+
+    `fog-hyper` manifests will be used for RTA deployment -- people need to be
+    made accustomed to it.
+
+    Do we need to add Jetson into the existing tailnet?
+
+    How to demo safe-landing use case?
+    - 2 mechanisms: from SRTA or from FMO through UI-Dashboard.
+    - Plugin will output safe-landing coordinates every n-intervals.
+
+    Dashboard concept is ready:
+    - Fixed-wing + VTOL is coming out soon.
+    - Front end team is fully booked.
+    - Notifications + messages working.
+    - Implementation can only be started from next week.
+
+    Demo preparation should be added to Jira
+    - Already integrated into existing stories.
+    - Would also help visibility to add it as a separate story.
+
+    FMO and SRTA, how will it all come together?
+
+    Safety dashboard only applies to SRTA not LLM or anything like that.
 
 *** Action Items
+
+    No actionable items this time.
 
     ===
 ___

@@ -1,0 +1,12 @@
+# Definition
+	- Technology that allows you to create multiple simulated environments or dedicated resources from single, physical hardware system.
+	- [[Hypervisor]] connects directly to that hardware and allows splitting 1 system into separate, distinct, and secure environments known as VMs.
+- # Uses
+	- Network functions - isolated, virtual networks can be created from 1 original network.
+	- Server - single server can be made to act like multiple.
+	- OS - 1 computer can run multiple different OSs.
+- # Benefits
+	- Virtualizing resources lets administrators pool their physical resources, so their hardware can truly be commoditized.
+	- Legacy infrastructure that's expensive to maintain, but supports important apps, can be virtualized for optimal use.
+	- No longer necessary to wait for every app to be certified on new hardware.
+	- During regression tests, testbed can be created or copied easily.
