@@ -18,6 +18,7 @@
 - # H
 	- [[Hardware in the Loop]]
 	- [[Host-Based Intrusion Detection (HIDS)]]
+	- [[Hypervisor]]
 - # I
 - # J
 - # K
@@ -47,6 +48,7 @@
 - # U
 	- [[User Datagram Protocol (UDP)]]
 - # V
+	- [[Virtualisation]]
 - # W
 - # X
 - # Y
