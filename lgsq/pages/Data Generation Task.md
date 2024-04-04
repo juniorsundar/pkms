@@ -86,10 +86,10 @@
 			- trigger a preempt on the requesting thread
 			- run cleanup sequence
 			- restart simulation
-- DOING Deploy simulation and data collection system in local machine
+- DONE Deploy simulation and data collection system in local machine
   id:: 65fc53d3-67f7-4f29-891c-c16e8ba9ae0f
   :LOGBOOK:
-  CLOCK: [2024-03-27 Wed 22:27:13]
+  CLOCK: [2024-03-27 Wed 22:27:13]--[2024-04-04 Thu 16:27:40] =>  186:00:27
   :END:
 	- DONE Complete the data recording node with automatic folder dumping
 	  :LOGBOOK:
@@ -115,10 +115,29 @@
 		      -v $HOME/records:/ros_workspace/records \
 		      px4-ros ros2
 		  ```
-	- DOING Test full pipeline for robustness for a simple deployment
+	- DONE Test full pipeline for robustness for a simple deployment
 	  :LOGBOOK:
-	  CLOCK: [2024-04-02 Tue 16:31:26]
+	  CLOCK: [2024-04-02 Tue 16:31:26]--[2024-04-04 Thu 16:27:01] =>  47:55:35
 	  :END:
-- TODO Run test batch
-	- TODO Obtain a few data sets
-	- TODO Actively maintain and improve the rosnodes
+- DOING Deploy to container registry
+	- DONE Test once and observe if it is allowed
+	  :LOGBOOK:
+	  CLOCK: [2024-04-04 Thu 10:36:58]
+	  CLOCK: [2024-04-04 Thu 10:37:05]
+	  :END:
+	- DOING Set up GitHub Actions to do this automatically
+	  :LOGBOOK:
+	  CLOCK: [2024-04-04 Thu 16:27:27]
+	  :END:
+- DOING Run test batch
+  :LOGBOOK:
+  CLOCK: [2024-04-04 Thu 16:27:37]
+  :END:
+	- DOING Obtain a few data sets
+	  :LOGBOOK:
+	  CLOCK: [2024-04-04 Thu 16:27:35]
+	  :END:
+	- DOING Actively maintain and improve the rosnodes
+	  :LOGBOOK:
+	  CLOCK: [2024-04-04 Thu 16:27:36]
+	  :END:
