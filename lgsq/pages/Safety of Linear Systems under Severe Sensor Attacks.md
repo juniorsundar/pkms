@@ -25,4 +25,26 @@ file-path:: ../assets/tan2024_1712303317274_0.pdf
 		- Here, safety refers to the property to limit control system trajectories to remain with in a safe set via feedback
 		- Compromised sensor measures negatively effect or mislead state estimates.
 	- [[Control Barrier Functions]] have been applied to use cases of privacy preservation and safety in presence of faulty sensors. But in case of adversarial omniscient attacker, state estimation error does not satisfy assumptions of CBFs.
-	- This work tries to patch this
+	- This work tries to patch this shortcoming.
+	- Safety guarantee for CPS subject to general sensor attacks described above. We consider scenarios where the solution to the secure state reconstruction problem may not be unique.
+	- Contributions:
+		- Provide exact characterisation of set of possible solutions to the secure state reconstruction problem in linear DT systems.
+		- Outline design principles for safe sets in offline phase. For worst-case attacking scenario under mild sparse observability assumption.
+		- Propose only safe control scheme that provides safety guarantees in presence of possibly unbounded state estimation error.
+	- ## Notation
+		- **Set Notation**:
+			- $[w]$:=${1,2,...,w}$: Denotes the set containing all natural numbers from 1 to $w$.
+			- $∣I∣$: Denotes the cardinality (number of elements) of the set $|I|$.
+		- **Combinations**:
+			- $\mathbb{C}_k^w$: Represents the set of all $k$-combinations from the set [�][*w*], where a �*k*-combination is a subset of [�][*w*] with cardinality �*k*.
+		- **Matrix Operations**:
+			- �Γ*C*Γ​: Denotes a submatrix of �*C* obtained by selecting rows indexed by the set Γ⊆[�]Γ⊆[*w*].
+			- Γ⊆[�]Γ⊆[*w*]: Specifies a subset of indices from [�][*w*].
+		- **Norm and Set Notation**:
+			- ∥�∥�∥*x*∥*X*​: Represents the minimum distance of a point �*x* to a set �*X* under the standard Euclidean norm.
+			- �(�)*A*(*X*): Denotes the image of the set �*X* under the linear transformation represented by the matrix �*A*.
+		- **Minkowski Summation**:
+			- �1+�2*X*1​+*X*2​: Represents the Minkowski sum of two sets �1*X*1​ and �2*X*2​, defined as the set containing all possible sums of elements where one element is chosen from �1*X*1​ and another from �2*X*2​.
+		- **Vector and Singleton Set**:
+			- �∈��*x*∈R*n*: Denotes a vector in �*n*-dimensional real space.
+			- {�}{*x*}: Represents the singleton set containing only the vector �*x*.
