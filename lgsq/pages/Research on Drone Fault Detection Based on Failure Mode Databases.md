@@ -1,9 +1,8 @@
 title:: Research on Drone Fault Detection Based on Failure Mode Databases
-file:: [hou2023_1710413002493_0.pdf](../assets/hou2023_1710413002493_0.pdf)
+file:: ![Research on Drone Fault Detection Based on Failure Mode Databases](../assets/hou2023_1710413002493_0.pdf)
 file-path:: ../assets/hou2023_1710413002493_0.pdf
 categories:: #uav-fault-dataset
 
-- ![Research on Drone Fault Detection Based on Failure Mode Databases](../assets/hou2023_1710413002493_0.pdf)
 - # Summary
 	- Proposes a fault detection method based on a fault mode database and runtime verification.
 	- Large body of historical fault information is analysed to generate summary of fault modes, including fault modes at the system level.

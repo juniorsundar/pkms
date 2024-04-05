@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:00:57+0400
-updated: 2024-04-04T23:09:09+0400
+updated: 2024-04-05T11:34:51+0400
 version: 1.1.1
 @end
 
@@ -95,12 +95,12 @@ version: 1.1.1
 
    @code bash
    docker run -it --rm \
-   --network=host -p 14540:14540/udp \
-   --ipc=host --pid=host \
-   --env UID=$(id -u) \
-   --env GID=$(id -g) \
-   -v $(pwd)/records:/ros_workspace/records \
-   px4-ros ros2
+       --network=host -p 14540:14540/udp \
+       --ipc=host --pid=host \
+       --env UID=$(id -u) \
+       --env GID=$(id -g) \
+       -v $(pwd)/records:/ros_workspace/records \
+       px4-ros ros2
    @end
 
 ** (x) Test full pipeline for robustness for a simple deployment
@@ -114,5 +114,7 @@ version: 1.1.1
 * (-) Run test batch
 
 ** (-) Obtain a few data sets
+
+** (-) Create a convenient `.mcap` converter script
 
 ** (-) Actively maintain and improve the rosnodes

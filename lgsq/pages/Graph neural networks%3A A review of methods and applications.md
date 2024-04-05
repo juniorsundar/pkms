@@ -1,8 +1,7 @@
 title:: Graph neural networks: A review of methods and applications
-file:: [zhou2021_1710400525745_0.pdf](../assets/zhou2021_1710400525745_0.pdf)
+file:: ![Graph neural networks: A review of methods and applications](../assets/zhou2021_1710400525745_0.pdf)
 file-path:: ../assets/zhou2021_1710400525745_0.pdf
 
-- ![Graph neural networks: A review of methods and applications](../assets/zhou2021_1710400525745_0.pdf)
 - # Introduction
 	- As a unique non-Euclidean data structure for machine learning, graph analysis focuses on tasks such as node classiﬁcation, link prediction, and clustering. Graph neural networks (GNNs) are deep learning based methods that operate on graph domain. Due to its convincing performance, GNN has become a widely applied graph analysis method recently
 	  hl-page:: 1

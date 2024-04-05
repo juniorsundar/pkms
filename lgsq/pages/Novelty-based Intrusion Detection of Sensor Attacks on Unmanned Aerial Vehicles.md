@@ -1,9 +1,8 @@
 title:: Novelty-based Intrusion Detection of Sensor Attacks on Unmanned Aerial Vehicles
-file:: [whelan2020_1710759980610_0.pdf](../assets/whelan2020_1710759980610_0.pdf)
+file:: ![Novelty-based Intrusion Detection of Sensor Attacks on Unmanned Aerial Vehicles](../assets/whelan2020_1710759980610_0.pdf)
 file-path:: ../assets/whelan2020_1710759980610_0.pdf
 categories:: #uav-fault-dataset
 
-- ![Novelty-based Intrusion Detection of Sensor Attacks on Unmanned Aerial Vehicles](../assets/whelan2020_1710759980610_0.pdf)
 - # Summary
 	- Novelty-based approach to intrusion detection, using *one-class classifiers*.
 	- One-class classifiers require only non-anomalous data to exist in training set => allows for the use of flight-logs as training data.
