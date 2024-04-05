@@ -4,9 +4,116 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-04-05T12:01:05+0400
-updated: 2024-04-05T12:01:29+0400
+updated: 2024-04-05T23:52:56+0400
 version: 1.1.1
 @end
 
 | Access {/ assets/docs/tan2024.pdf}[reference]
 
+* Summary
+
+  Attacked is omniscient and can spoof several system sensors at will.
+
+  Existing results have derived necessary and sufficient conditions under which
+  the state estimation problem has a unique solution.
+
+  This paper considers severe attacking scenario when such conditions do not
+  hold.
+
+  Derive exact characterisation of set of all possible state estimates.
+
+  Use framework of {:$/research/control-barrier-functions:}[Control Barrier Functions] to propose design principles
+  for system safety in offline and online phases.
+  - *Offline phase* derive conditions on safe sets for all possible sensor
+    attacks encounterable during system deployments.
+  - *Online phase* quadratic program-based safety filter is proposed to
+    enforce system safety.
+
+  Illustrated with 2D-vehicle example.
+
+  Only theoretical results.
+
+* Introduction
+
+  In this paper:
+  - certain measurements of CPS are compromised by attacker.
+  - general attack model in setting of linear systems, imposes no limitations
+    on the magnitude, statistical properties, or temporal evolution
+    requirements on the attack signal.
+  - only assuming upper bound on the number of attacked sensors.
+
+  Existing results focus on recovering system state from compromised
+  measurement data (AKA secure state reconstruction problem).
+
+  To derive necessary and sufficient conditions to find unique solutions to
+  this problem:
+  - In discrete time linear system a condition is posed as a sparse
+    observability property of CPS.
+  - Equivalent condition for continuous time LS shows that finding unique
+    solution is NP-hard in general.
+
+  > "can we ensure safety of the system, and thereby avoid catastrophic results
+  > through active control, even when certain sensors are compromised?"  
+
+  Here, safety refers to the property to limit control system trajectories to
+  remain with in a safe set via feedback
+
+  Compromised sensor measures negatively effect or mislead state estimates.
+
+  {:$/research/control-barrier-functions:}[Control Barrier Functions] have been applied to use cases of privacy
+  preservation and safety in presence of faulty sensors. But in case of
+  adversarial omniscient attacker, state estimation error does not satisfy
+  assumptions of CBFs.
+
+  This work tries to patch this shortcoming.
+
+  Safety guarantee for CPS subject to general sensor attacks described above.
+  We consider scenarios where the solution to the secure state reconstruction
+  problem may not be unique.
+
+  Contributions:
+  - Provide exact characterisation of set of possible solutions to the secure
+    state reconstruction problem in linear DT systems.
+  - Outline design principles for safe sets in offline phase. For worst-case
+    attacking scenario under mild sparse observability assumption.
+  - Propose only safe control scheme that provides safety guarantees in
+    presence of possibly unbounded state estimation error.
+
+** Notation
+
+*** Set Notation
+
+    $[w]$ := ${1,2,...,w}$ : Denotes the set containing all natural numbers
+    from 1 to $w$ .
+
+    $∣I∣$ : Denotes the cardinality (number of elements) of the set.
+
+*** Combinations
+
+    $\mathbb{C}_k^w$ : Represents the set of all $k$ -combinations from the set
+    [ $w$ ], where a $k$ -combination is a subset of [ $w$ ] with cardinality
+    $k$ .
+
+*** Matrix Operations
+
+    For a matrix $C$ of size $w \times n$ and an index set $\Gamma$ that is a
+    subset of [ $w$ ], $C_\Gamma$ represents a matrix obtained from $C$ by
+    removing all the rows with indices not in $\Gamma$ .
+
+*** Norm and Set Notation
+
+    Given a point $x$ in $\mathbb{R}^n$ , a set $X$ that is a subset of
+    $\mathbb{R}^n$ , and a matrix $A$ in $\mathbb{R}^{n\times n}$ , the
+    notation $||x||_X$ represents the minimum distance of $x$ to any point $v$
+    in $X$ . $A(X)$ represents the set of all points in $\mathbb{R}^n$ that can
+    be obtained by multiplying any point $x$ in $X$ by the matrix $A$ .
+
+*** Minkowski Summation
+
+    $X_1 + X_2$: Represents the Minkowski sum of two sets $X_1$ and $X_2$,
+    defined as the set containing all possible sums of elements where one
+    element is chosen from $X_1$ and another from $X_2$ .
+
+*** Vector and Singleton Set
+
+    $x \in \mathbb{R}^n$ : Denotes a vector in $n$ -dimensional real space.
