@@ -137,6 +137,11 @@
 	  :LOGBOOK:
 	  CLOCK: [2024-04-04 Thu 16:27:35]
 	  :END:
+	- DOING Create a convenient `.mcap` converter script
+	  :LOGBOOK:
+	  CLOCK: [2024-04-05 Fri 10:22:55]
+	  CLOCK: [2024-04-05 Fri 10:22:59]
+	  :END:
 	- DOING Actively maintain and improve the rosnodes
 	  :LOGBOOK:
 	  CLOCK: [2024-04-04 Thu 16:27:36]

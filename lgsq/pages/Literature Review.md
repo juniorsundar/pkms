@@ -8,3 +8,4 @@
 	- [[Research on Drone Fault Detection Based on Failure Mode Databases]]
 - # 2024
 	- [[UAV sensor failures dataset: Biomisa arducopter sensory critique (BASiC)]]
+	- [[Safety of Linear Systems under Severe Sensor Attacks]]

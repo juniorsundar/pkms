@@ -6,18 +6,93 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-04-04T23:12:30+0400
+updated: 2024-04-05T13:05:06+0400
 version: 1.1.1
 @end
 
 * (-) First meeting
 
-** (x) Follow up with instructional response
+** (x) Follow up with {* Instructional}[instructional] response
 
-   @code markdown
-   INSERT MARKDOWN HERE
-   @end
-
-** (-) Read (INSERT PDF HERE)
+** (-) Read {:$/research/literature-review/tan2024:}[paper]
 
 * ( ) Prepare a small demonstration for second meeting
+
+  ===
+___
+
+* Instructional
+
+** Running the SITL Simulation
+
+   First pull the repository with the faulty controller implementation.
+
+   @code bash
+   git clone --recursive https://www.github.com/tiiuae/px4-firmware.git -b faulty-controller
+   cd px4-firmware
+   # To make life simpler, export the `FIRMWARE_DIR`
+   # variable so that the simulation can then be launched from anywhere
+   echo export FIRMWARE_DIR=$(pwd) > ~/.bashrc
+   @end
+
+   We can run this simulation in a container, but first we need to pull the
+   appropriate docker image:
+
+   @code bash
+   docker pull px4io/px4-dev-simulation-jammy:latest
+   @end
+
+   The simulation can be launched with the following command:
+
+   @code bash
+   # Run once to ensure that any remote client (like the container)
+   # to connect to the X Server. Essentially allows you to run GUI
+   # apps launched in the container to be forwarded to your local system
+   xhost +
+
+   # This command serves multiple purposes
+   # We mount the firmware root directory into the container to build the SITL environment
+   # We forward the X11 server so that the Gazebo simulator GUI runs on local machine
+   # We set network=host so that we can alter subscribe to the rostopics through the DDS
+   docker run -it --privileged --rm \
+       -v ${FIRMWARE_DIR}:/home/user/Firmware:rw \
+       -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
+       -e DISPLAY=${DISPLAY} \
+       -e LOCAL_USER_ID="$(id -u)" \
+       -w /home/user/Firmware \
+       --network=host  \
+       --name=container_name px4io/px4-dev-simulation-jammy \
+       make px4_sitl gz_x500
+   @end
+
+** Injecting Faults in Accelerometer
+
+   The implementation has the fault injection features built in. In order to
+   inject targeted and specific faults to accelerator sensor modules, you can
+   type the following commands in the MAVLink console running within the same
+   terminal where the SITL simulation is active.
+
+   @code bash
+   param set SENS_ACCEL_FAULT 1
+   param set SENS_ACCEL_SET <Any Float Value>
+   @end
+
+   The first command exposes the fault interface within the firmware, and the
+   second command sets the Accelerometer x, y, and z values to the float value
+   provided.
+
+   *Note:* Before closing the simulator make sure to revert the values:
+   @code bash
+   param set SENS_ACCEL_SET 0
+   param set SENS_ACCEL_FAULT 0
+   @end
+
+*** Imitating an attack
+
+    The plan of action will be to design a program (either a ROS 2 node or a
+    standalone script) that changes the `SENS_ACCEL_SET` parameter according to a
+    predefined behaviour of the malicious agent.
+
+    As the agent will have access to the system's internal dynamics, they will
+    also be a node in the ROS 2 network and will subscribe to the necessary
+    topics being published from the PX4 flight controller.
