@@ -1,4 +1,6 @@
-# Key Terms
+- {{renderer :tocgen2}}
+- ___
+- # Key Terms
 	- ## Barrier Functions
 		- ### Purpose
 			- Barrier functions are designed to penalise or discourage solutions that violate constraints. They are used in constrained optimsation problems, where certain conditions must be satisfied by the solution.
@@ -7,7 +9,7 @@
 		- ### Nagumo's Theorem
 			- Defines necessary and sufficient conditions for set invariance (safety).
 			- Theorem defines a safe set '$C$' (like a safe driving path) using a mathematical function '$h$'. If the system's state is described by '$x$', the safe set includes all states where $h(x)$ is non-negative (safe states). The theorem states that the system remains in this safe set if the rate of change of $h$ along the path's boundary is never negative. This ensures that the system doesn't cross from safe to unsafe.
-			- $C \text{ is invariant} \iff \dot{h}(x) \geq 0$ for all $x$ on the boundary of set $C$.
+			- $C$ is invariant <=> $\dot{h}(x) \geq 0$ for all $x$ on the boundary of set $C$.
 		- ### Advantages and Disadvantages
 			- Barrier functions allow for the conversion of a **constrained problem** into an **unconstrained** one, simplifying the optimization process.
 			- However, the choice of barrier function and its parameters can significantly impact the convergence and performance of the optimization algorithm.
