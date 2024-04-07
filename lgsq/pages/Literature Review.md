@@ -4,7 +4,9 @@
 - # 2021
 	- [[Graph neural networks: A review of methods and applications]]
 - # 2022
+	- [[ECU-IoFT: A Dataset for Analysing Cyber-Attacks on Internet of Flying Things]]
 - # 2023
+	- [[Acquisition and Processing of UAV Fault Data Based on Time Line Modeling Method]]
 	- [[Research on Drone Fault Detection Based on Failure Mode Databases]]
 - # 2024
 	- [[UAV sensor failures dataset: Biomisa arducopter sensory critique (BASiC)]]
