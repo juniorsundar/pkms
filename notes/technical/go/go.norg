@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-02-04T17:13:21+0400
-updated: 2024-03-17T21:10:30+0400
+updated: 2024-04-09T23:18:14+0400
 version: 1.1.1
 @end
 
@@ -276,12 +276,12 @@ ___
    type MyInt int
 
    func (m MyInt) IsPositive() bool {
-       return m > 0
+   return m > 0
    }
 
    func main() {
-       value := MyInt(5)
-       result := value.IsPositive() // true
+   value := MyInt(5)
+   result := value.IsPositive() // true
    }
    @end
 
@@ -325,23 +325,23 @@ ___
 
    @code go
    type Shaper interface {
-       Area() float64
+   Area() float64
    }
 
    type Rectangle struct {
-       width, height float64
+   width, height float64
    }
 
    func (r Rectangle) Area() float64 {
-       return r.width * r.height
+   return r.width * r.height
    }
 
    type Circle struct {
-       radius float64
+   radius float64
    }
 
    func (c Circle) Area() float64 {
-       return math.Pi * c.radius * c.radius
+   return math.Pi * c.radius * c.radius
    }
    @end
 
@@ -354,11 +354,11 @@ ___
 
    @code go
    func calculateTotalArea(shapes []Shaper) float64 {
-       var total float64
-       for _, shape := range shapes {
-           total += shape.Area()
-       }
-       return total
+   var total float64
+   for _, shape := range shapes {
+   total += shape.Area()
+   }
+   return total
    }
    @end
 
@@ -375,23 +375,23 @@ ___
 
     @code go
     func add(a, b interface{}) interface{} {
-        aInt, aIsInt := a.(int)
-        bInt, bIsInt := b.(int)
-        if aIsInt && bIsInt {
-            return aInt + bInt
-        }
+    aInt, aIsInt := a.(int)
+    bInt, bIsInt := b.(int)
+    if aIsInt && bIsInt {
+    return aInt + bInt
+    }
 
-        aFloat, aIsFloat := a.(float64)
-        bFloat, bIsFloat := b.(float64)
-        if aIsFloat && bIsFloat {
-            return aFloat + bFloat
-        }
+    aFloat, aIsFloat := a.(float64)
+    bFloat, bIsFloat := b.(float64)
+    if aIsFloat && bIsFloat {
+    return aFloat + bFloat
+    }
 
-        aString, aIsString := a.(string)
-        bString, bIsString := b.(string)
-        if aIsString && bIsString {
-            return aString + bString
-        }
+    aString, aIsString := a.(string)
+    bString, bIsString := b.(string)
+    if aIsString && bIsString {
+    return aString + bString
+    }
     }
     @end
 
@@ -399,7 +399,7 @@ ___
 
     @code go
     func add[T int|float64|string](a, b T) T {
-        return a + b
+    return a + b
     }
     @end
 
@@ -437,7 +437,79 @@ ___
   of the array, it remembers everything beyond the sliced limit until the
   actual limit of the parent array.
 
-===
+** Operations with Arrays
+
+*** Appending
+
+    @code go
+    prices := [4]float64{10.99, 9.99, 45.99, 20.00}
+    prices = append(prices, 30.00)
+    @end
+
+*** Popping
+
+    @code go
+    prices = append(prices[:2], prices[3:]...)
+    @end
+
+*** Initialise with `make`
+
+    @code go
+    newArray = make([]string, length, capacity)
+    @end
+
+* Maps
+
+  Maps are key-value paired data structures like dictionaries or hash tables.
+
+** Declaring and Initialising
+
+*** `make` Method
+
+    @code go
+    myMap := make(map[keyType]valueType, allocKeySpace)
+    @end
+
+*** Literal Syntax
+
+    @code go
+    myMap := map[string]int{
+        "Alice": 23,
+        "Bob":   30,
+    }
+    @end
+
+** Operations with Maps
+
+*** Adding/Updating Elements
+
+    @code go
+    myMap[key] = value
+    @end
+
+*** Retrieving Values
+
+    @code go
+    value, exists := myMap[key]
+    @end
+
+*** Deleting Elements
+
+    @code go
+    delete(myMap, key)
+    @end
+
+*** Iterating over a Map
+
+    @code go
+    for key, value := range myMap {
+        fmt.Println("Key:", key, "Value:", value)
+    }
+    @end
+
+    The order of iteration over a map is not always guaranteed.
+
+    ===
 ___
 
 {:$/technical/go/index:}[< return] - {:$/index:}[index]

@@ -4,9 +4,16 @@ description: Journal index
 authors: juniorsundar
 categories: 
 created: 2024-01-27T19:57:08+0400
-updated: 2024-04-04T22:36:58+0400
+updated: 2024-04-09T11:24:03+0400
 version: 1.1.1
 @end
+
+* Task Box
+
+** TII
+
+   - (-) {:$/journal/task-box/data-generation-task:}[Data Generation Task]
+   - (-) {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration]
 
 * Entries
 
@@ -20,6 +27,9 @@ version: 1.1.1
     - {:$/journal/2024/04/04:}[4]
     - {:$/journal/2024/04/05:}[5]
     - {:$/journal/2024/04/06:}[6]
+    - {:$/journal/2024/04/07:}[7]
+    - {:$/journal/2024/04/08:}[8]
+    - {:$/journal/2024/04/09:}[9]
 
 *** March
 
