@@ -4,36 +4,13 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-04-13T00:26:00+0400
+updated: 2024-04-14T23:22:25+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-** (-) #RESEARCH Is it possible to automate ROS node generation
-
-** (-) Update Jira
-*** (-) RTA-22: Reorient for swarm
-**** (-) Adjust Story title accordingly
-
-** (-) {:$/journal/task-box/data-generation-task:}[Data Generation Task]
-
-** (-) Empty data headers for Willian
-*** (x) Send the data headers to Willian
-*** (x) Adjust data headers with more description
-
-    Provide header metadata in spreadsheet formats
-
-*** (_) Set up a meeting to determine which all data is necessary and which isn't
-*** (-) Work with Shamsa and others to hash out the names for message fields
-
-** (-) {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration]
-
-
-  ===
-___
-
-* Journal
+  /Rolled over/
 
   ===
 ___
