@@ -1,0 +1,57 @@
+@document.meta
+title: Sparse Observability
+description: 
+authors: juniorsundar-unikie
+categories: 
+created: 2024-04-15T13:31:35+0400
+updated: 2024-04-15T13:34:45+0400
+version: 1.1.1
+@end
+
+* Definition
+
+  *Standard Observability* - A system is observable if you can determine its
+  complete internal state by observing its outputs over a finite time period.
+  This means you have enough sensor measurements to figure out exactly what's
+  happening within the system.
+
+  *Sparse Observability* - A system is sparse observable if you can /determine
+  its internal state even when a limited number of sensors are compromised or
+  unavailable/. It implies a degree of resilience – the ability to reconstruct
+  the system state even with partial information.
+
+  In terms of a number of sensors $s$ , a system is said to be /$s$-sparse
+  observable/ if it remains observable even with the failure or attack of up to
+  $s$ sensors.
+
+* Importance
+
+  *Sensor Failure* - In real-world systems, sensors can malfunction or become
+  unreliable. Sparse observability guarantees that you can still estimate the
+  system's state, crucial for maintaining control and safety.
+
+  *Cybersecurity* - With an increase in cyberattacks on control systems,
+  sensors can be compromised and feed false information. Sparse observability
+  allows for the detection of such attacks and makes the system more robust to
+  them.
+
+  *Cost Reduction* - In some applications, deploying a large number of sensors
+  can be expensive. Sparse observability helps determine the minimum number of
+  sensors needed for reliable state estimation.
+
+* Mitigation
+
+  *Sensor Placement* - Strategically placing sensors within the system can
+  improve sparse observability.
+
+  *State Estimation with Redundant Information* - Combining measurements from
+  multiple sensors and using estimation algorithms helps reconstruct the system
+  state even with missing information.
+
+  *Attack Detection and Isolation* - Algorithms can be designed to detect if
+  sensors have been compromised and isolate them, keeping the system safe.
+
+   ===
+___
+
+{:$/terminologies/index:}[< return] - {:$/index:}[index]

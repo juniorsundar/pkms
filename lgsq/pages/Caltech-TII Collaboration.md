@@ -1,17 +1,24 @@
-- DOING First meeting
+- DONE First meeting
   :LOGBOOK:
-  CLOCK: [2024-04-04 Thu 23:11:09]
+  CLOCK: [2024-04-04 Thu 23:11:09]--[2024-04-15 Mon 13:16:47] =>  254:05:38
   :END:
 	- DONE Follow up with [instructional](((660fab83-c0af-4019-8e61-d168f0f8ff42))) response
-	- DOING Read [[Safety of Linear Systems under Severe Sensor Attacks]]
+	- DONE Read [[Safety of Linear Systems under Severe Sensor Attacks]]
 	  :LOGBOOK:
-	  CLOCK: [2024-04-04 Thu 23:06:46]
+	  CLOCK: [2024-04-04 Thu 23:06:46]--[2024-04-15 Mon 13:15:11] =>  254:08:25
 	  :END:
-- TODO Prepare a small demonstration for second meeting
+- DOING Prepare a small demonstration for second meeting
   :LOGBOOK:
   CLOCK: [2024-04-04 Thu 23:05:41]--[2024-04-04 Thu 23:06:44] =>  00:01:03
   CLOCK: [2024-04-04 Thu 23:11:07]--[2024-04-04 Thu 23:11:07] =>  00:00:00
+  CLOCK: [2024-04-15 Mon 13:16:47]
   :END:
+	- DOING Split the directed attacks to the accelerometer for x, y and z-axis
+	  :LOGBOOK:
+	  CLOCK: [2024-04-15 Mon 13:18:10]
+	  :END:
+	- TODO Create a node spinner that can induce a targeted attack on these axes
+	- TODO Create a visualisation that captures this behaviour
 - ___
 - # Instructional
   id:: 660fab83-c0af-4019-8e61-d168f0f8ff42

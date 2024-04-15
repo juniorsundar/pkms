@@ -46,3 +46,50 @@ file-path:: ../assets/tan2024_1712303317274_0.pdf
 		- **Vector and Singleton Set**:
 			- $x \in \mathbb{R}^n$: Denotes a vector in $n$-dimensional real space.
 			- $\{x\}$: Represents the singleton set containing only the vector $x$.
+- # Problem Formulation
+	- Applied to a discrete-time linear system under sensor attacks:
+		- Dynamics: $x(\tau + 1) = Ax(\tau) + Bu(\tau)$
+		- Measurement: $y(\tau)=Cx(\tau) + e(\tau)$
+			- Here $e(\tau)$ refers to the attacking signal.
+			- It is non-zero whenever a sensor $i\in[p]$ is under attack at that particular $\tau$.
+		- Safe set: $\mathscr{C} = \{x\in\mathbb{R}^n:h(x):=Hx+q\geq 0 \}$
+	- ## Assumption
+		- Attacker has full knowledge of system including state, dynamics, and defense strategy.
+		- Attacker may choose $s$ out of $p$ sensors to attack. And this choice remains unchanged for duration considered.
+		- Attacker can set $e_i(\tau)$ to any value for any of these sensors.
+	- ## Problem
+		- *Worst-case sensor attack* - Derive condition on $H$ and $q$ s.t. system can be rendered safe under all possible sensor attacks.
+		- *Fixed yet unknown sensor attack* - Derive conditions on $H$, $q$ and input sequence $\{ u(\tau) \}_{\tau \geq t}$ s.t. the system is safe.
+- # 2-D Example Use Case
+	- ## System Dynamics and Control
+		- The vehicle is modeled with position and velocity components in both $x$ and $y$ directions ($x_1, x_2, x_3, x_4$), controlled by acceleration inputs ($u_1, u_2$).
+		- The system's dynamics are expressed in continuous-time, which are then discretized using a [[Zero-Order Hold Method]] with a 0.01s sampling time for digital control implementation.
+		- The output of the system includes a component representing an attacking signal ($e$), indicating potential tampering with sensor data.
+	- ## Safety Guarantees and Sensor Attacks
+		- The system's safety verification involves checking for [[Sparse Observability]], ensuring that even with a single sensor attack, the system's state can be inferred from the remaining sensors.
+		- A safe region ($\mathscr{C}$) is defined using constraints on the position and velocity states of the vehicle. The system maintains safety by ensuring the state stays within this region even under sensor attacks.
+	- ## Online Safety and Control
+		- An online control strategy is outlined where the controller dynamically adjusts based on sensor data to mitigate any effects from tampered sensors. The control is designed to maintain the vehicle's state within the predefined safe bounds.
+		- During attacks, the *system assesses sensor integrity by comparing sensor outputs against expected values from a set of plausible vehicle states*, adjusted for potential tampering.
+		- ### Key Features
+			- **Dynamic Safety Set (**$\mathscr{C}$**):**
+				- The system uses a dynamic definition of a safe set, denoted as $\mathscr{C}$, where the boundaries are defined such that all components of the vehicle's state (position and velocity in both $x$ and $y$ directions) must remain within specified limits (e.g., $-4 \leq x_i \leq 4$ for each state variable).
+				- This set ensures that even under the influence of malicious inputs or sensor errors, the control strategy can realign the vehicle back to a safe trajectory.
+			- **Sensor Attack Handling**:
+				- Sensors are susceptible to attacks where their outputs are altered to mislead the control system. In response, the *system evaluates the integrity of sensor data by comparing against a model of expected outputs derived from known vehicle dynamics and previously verified states*.
+				- By considering multiple combinations of sensor outputs and comparing them against theoretical trajectories, the system identifies which sensors are likely compromised.
+			- **State Estimation Under Uncertainty**:
+				- Using a brute-force approach, the system examines all possible combinations of sensor data to estimate the vehicle's state. This involves calculating the least squares solution to the equations representing sensor outputs and checking if the solutions meet predefined error thresholds.
+				- These plausible states are then projected forward using the vehicle dynamics model to predict future states, which helps in planning safe control actions.
+			- **Adaptive Control Strategy**:
+				- The control inputs ($u(t)$) are adjusted based on the estimated states and the requirement to keep the vehicle within the safe set. This involves solving a quadratic programming (QP) problem where the objective is to minimize the deviation from nominal control inputs (based on simple functions like sine and cosine) while ensuring that all calculated future states fall within the safety constraints.
+				- The system employs a parameter ($\gamma$), possibly representing a safety margin or confidence level, which adjusts the strictness of the safety constraint adherence.
+			- **Real-time Validation**:
+				- As part of its ongoing operation, the system continually checks whether the initially estimated plausible states (from when the system was first compromised) remain within the safe bounds over time.
+				- This involves recalculating and projecting the states every few time steps (e.g., $t-3$, $t-2$, $t-1$, $t$) to ensure ongoing compliance with the safety requirements.
+	- ## Simulation and Results
+		- Simulations show the system maintaining safety constraints despite different attack scenarios, though some attacks lead to safety breaches when they cause confusion about certain state variables (e.g., $y$-axis velocity).
+		- The control adjustments closely mirror nominal (intended) controls unless adjustments are necessary to maintain safety.
+	- ## Overall System Performance
+		- The system effectively handles sensor attacks by adjusting control inputs to ensure that both real and potential (fake) states of the vehicle remain within safety limits.
+		- The approach includes robust measures to verify sensor integrity and dynamically adapt to ensure continuous safe operation under potential cyber-attacks.

@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T17:56:54+0400
-updated: 2024-03-19T11:17:16+0400
+updated: 2024-04-15T13:36:18+0400
 version: 1.1.1
 @end
 
@@ -64,6 +64,7 @@ version: 1.1.1
 
    - {:$/terminologies/secure-boot-validation:}[Secure Boot Validation]
    - {:$/terminologies/software-in-the-loop:}[Software in the Loop]
+   - {:$/terminologies/sparse-observability:}[Sparse Observability]
    - {:$/terminologies/sffhi:}[System Firmware for Hardware Initialisation]
       -- {:$/terminologies/sffhi:* Basic Input/Output System (BIOS)}[BIOS]
       -- {:$/terminologies/sffhi:* Unified Extensible Firmware Interface (UEFI)}[UEFI]
@@ -80,6 +81,10 @@ version: 1.1.1
 ** V
 
    - {:$/terminologies/virtualisation:}[Virtualisation]
+
+** Z
+
+   - {:$/terminologies/zoh:}[Zero-Order Hold Method]
 
    ===
 ___

@@ -39,6 +39,7 @@
 - # S
 	- [[Secure Boot Validation]]
 	- [[Software in the Loop]]
+	- [[Sparse Observability]]
 	- [[System Firmware for Hardware Initialisation]]
 		- [BIOS](((65f5abe1-3fd0-4d2c-b140-a209e3e73979)))
 		- [UEFI](((65f5acb6-8065-4120-b6ae-2eefb6328255)))
@@ -53,3 +54,4 @@
 - # X
 - # Y
 - # Z
+	- [[Zero-Order Hold Method]]
