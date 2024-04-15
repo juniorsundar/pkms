@@ -13,11 +13,14 @@
   CLOCK: [2024-04-04 Thu 23:11:07]--[2024-04-04 Thu 23:11:07] =>  00:00:00
   CLOCK: [2024-04-15 Mon 13:16:47]
   :END:
-	- DOING Split the directed attacks to the accelerometer for x, y and z-axis
+	- DONE Split the directed attacks to the accelerometer for x, y and z-axis
 	  :LOGBOOK:
-	  CLOCK: [2024-04-15 Mon 13:18:10]
+	  CLOCK: [2024-04-15 Mon 13:18:10]--[2024-04-15 Mon 16:03:38] =>  02:45:28
 	  :END:
-	- TODO Create a node spinner that can induce a targeted attack on these axes
+	- DOING Create a node spinner that can induce a targeted attack on these axes
+	  :LOGBOOK:
+	  CLOCK: [2024-04-15 Mon 16:03:36]
+	  :END:
 	- TODO Create a visualisation that captures this behaviour
 - ___
 - # Instructional
