@@ -6,19 +6,25 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-04-09T11:25:06+0400
+updated: 2024-04-15T13:40:07+0400
 version: 1.1.1
 @end
 
-* (-) First meeting
+* (x) First meeting
 
 ** (x) Follow up with {* Instructional}[instructional] response
 
-** (-) Read {:$/research/literature-review/tan2024:}[paper]
+** (x) Read {:$/research/literature-review/tan2024:}[paper]
 
-* ( ) Prepare a small demonstration for second meeting
+* (-) Prepare a small demonstration for second meeting
 
-  ===
+** (-) Split the directed attacks to the accelerometer for x, y and z-axis
+
+** ( ) Create a node spinner that can induce a targeted attack on these axes
+
+** ( ) Create a visualisation that captures this behaviour
+
+   ===
 ___
 
 * Instructional

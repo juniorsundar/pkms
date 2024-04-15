@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-04-15T09:46:24+0400
+updated: 2024-04-15T13:38:51+0400
 version: 1.1.1
 @end
 
@@ -18,23 +18,28 @@ version: 1.1.1
 
 ** (-) {:$/journal/task-box/data-generation-task:}[Data Generation Task]
 
-** (-) Empty data headers for Willian
+** (x) Empty data headers for Willian
 *** (x) Send the data headers to Willian
 *** (x) Adjust data headers with more description
 
     Provide header metadata in spreadsheet formats
 
 *** (_) Set up a meeting to determine which all data is necessary and which isn't
-*** (-) Work with Shamsa and others to hash out the names for message fields
+*** (x) Work with Shamsa and others to hash out the names for message fields
+
+    It is decided to just go with `<MESSAGE_NAME>_<FIELD_NAME>`
 
 ** (-) {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration]
 
-  ===
+   ===
 ___
 
 * Journal
 
-  ===
+  - Completed {:$/research/literature-review/tan2024:}[Safety of Linear Systems under Severe Sensor Attacks]
+     -- Added {:$/terminologies/sparse-observability:}[Sparse Observability], {:$/terminologies/zoh:}[Zero-Order Hold Method]
+
+     ===
 ___
 
 * Meetings
