@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-04-15T13:38:51+0400
+updated: 2024-04-15T14:25:41+0400
 version: 1.1.1
 @end
 
@@ -38,29 +38,6 @@ ___
 
   - Completed {:$/research/literature-review/tan2024:}[Safety of Linear Systems under Severe Sensor Attacks]
      -- Added {:$/terminologies/sparse-observability:}[Sparse Observability], {:$/terminologies/zoh:}[Zero-Order Hold Method]
-
-     ===
-___
-
-* Meetings
-
-** Meeting Name
-
-*** Attendees
-
-    | Names
-
-*** Goals
-
-
-*** Agenda
-
-    - ( ) 
-
-*** Minutes
-
-
-*** Action Items
 
     ===
 ___

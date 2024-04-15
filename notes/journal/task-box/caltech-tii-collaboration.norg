@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-04-15T13:40:07+0400
+updated: 2024-04-15T16:04:00+0400
 version: 1.1.1
 @end
 
@@ -18,9 +18,9 @@ version: 1.1.1
 
 * (-) Prepare a small demonstration for second meeting
 
-** (-) Split the directed attacks to the accelerometer for x, y and z-axis
+** (x) Split the directed attacks to the accelerometer for x, y and z-axis
 
-** ( ) Create a node spinner that can induce a targeted attack on these axes
+** (-) Create a node spinner that can induce a targeted attack on these axes
 
 ** ( ) Create a visualisation that captures this behaviour
 
