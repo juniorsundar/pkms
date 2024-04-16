@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-04-16T13:19:37+0400
+updated: 2024-04-16T16:17:55+0400
 version: 1.1.1
 @end
 
@@ -24,6 +24,8 @@ version: 1.1.1
 ___
 
 * Journal
+
+  - {:$/unfiled/rt-2:}[Robotics Transformer 2 (RT-2)]
 
   ===
 ___
