@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: Volume 6
 created: 1701198657781
-updated: 2024-04-15T21:33:18+0400
+updated: 2024-04-17T01:02:44+0400
 version: 1.1.1
 @end
 
@@ -49,5 +49,6 @@ ___
   - {:$/volume-6/chapter-433:}[Chapter 433 - The Basement]
   - {:$/volume-6/chapter-434:}[Chapter 434 - Beast Within]
   - {:$/volume-6/chapter-435:}[Chapter 435 - Break the World]
+  - {:$/volume-6/chapter-436:}[Chapter 436 - Outside the Box]
 
   {:$/index:}[< return] - {:$/index:}[index]
