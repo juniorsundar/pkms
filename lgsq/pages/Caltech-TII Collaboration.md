@@ -26,7 +26,6 @@
 - # Instructional
   id:: 660fab83-c0af-4019-8e61-d168f0f8ff42
 	- ## Running the SITL Simulation
-	  collapsed:: true
 		- First pull the repository with the faulty controller implementation.
 		- ```bash
 		  git clone --recursive https://www.github.com/tiiuae/px4-firmware.git -b faulty-controller
@@ -62,7 +61,6 @@
 		    make px4_sitl gz_x500
 		  ```
 	- ## Injecting Faults in Accelerometer
-	  collapsed:: true
 		- The implementation has the fault injection features built in. In order to inject targeted and specific faults to accelerator sensor modules, you can type the following commands in the MAVLink console running within the same terminal where the SITL simulation is active.
 		- ```bash
 		  param set SENS_ACCEL_FAULT 1
@@ -75,6 +73,5 @@
 		  param set SENS_ACCEL_FAULT 0
 		  ```
 	- ## Imitating an attack
-	  collapsed:: true
 		- The plan of action will be to design a program (either a ROS 2 node or a standalone script) that changes the `SENS_ACCEL_SET` parameter according to a predefined behaviour of the malicious agent.
 		- As the agent will have access to the system's internal dynamics, they will also be a node in the ROS 2 network and will subscribe to the necessary topics being published from the PX4 flight controller.
