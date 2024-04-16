@@ -17,11 +17,14 @@
 	  :LOGBOOK:
 	  CLOCK: [2024-04-15 Mon 13:18:10]--[2024-04-15 Mon 16:03:38] =>  02:45:28
 	  :END:
-	- DOING Create a node spinner that can induce a targeted attack on these axes
+	- DONE Create a node spinner that can induce a targeted attack on these axes
 	  :LOGBOOK:
-	  CLOCK: [2024-04-15 Mon 16:03:36]
+	  CLOCK: [2024-04-15 Mon 16:03:36]--[2024-04-16 Tue 14:31:10] =>  22:27:34
 	  :END:
-	- TODO Create a visualisation that captures this behaviour
+	- DOING Create a visualisation that captures this behaviour
+	  :LOGBOOK:
+	  CLOCK: [2024-04-16 Tue 14:31:08]
+	  :END:
 - ___
 - # Instructional
   id:: 660fab83-c0af-4019-8e61-d168f0f8ff42
