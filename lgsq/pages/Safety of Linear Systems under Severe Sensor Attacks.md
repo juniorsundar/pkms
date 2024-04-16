@@ -1,5 +1,5 @@
 title:: Safety of Linear Systems under Severe Sensor Attacks
-file:: ![Safety of Linear Systems under Severe Sensor Attacks](../assets/tan2024_1712303317274_0.pdf)
+file:: [Safety of Linear Systems under Severe Sensor Attacks](../assets/tan2024_1712303317274_0.pdf)
 file-path:: ../assets/tan2024_1712303317274_0.pdf
 
 - # Summary

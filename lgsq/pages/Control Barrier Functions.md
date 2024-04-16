@@ -39,6 +39,7 @@
 			- **Polynomial Time Complexity**: These methods have a polynomial time complexity, which can make them more efficient for certain large-scale problems compared to other methods like the simplex algorithm.
 			- **Path-Following Algorithms**: They typically follow a path that is defined by a sequence of optimization problems with decreasing values of a parameter in the barrier function.
 	- ## Lyapunov Function
+	  id:: 660fc61a-3a88-4a53-8ab1-4d8fb959c79e
 		- ### Definition and Purpose
 			- Lyapunov function is a scalar function that helps to determine stability of an equlibrium point in a dynamical system. The function is analogous to a potential energy function in physics, where its value represents a measure of the system's potential for change.
 			- They are valuable because they provide a way to prove stability without solving system's differential equation directly. Useful if equation is too complex to solve analytically.
@@ -95,7 +96,7 @@
 		- ### Control Lyapunov Function (CLF)
 			- #### Definition and Purpose
 				- CLFs are used to ensure the stability of a system. They help in designing a control input that drives the system towards a desired stable state.
-				- A function $V(x)$ is a CLF if it satisfies all the rules as defined by a regular [Lyapunov Function](#lyapunov-function), with regards to its positive definiteness and negative definiteness of its derivative.
+				- A function $V(x)$ is a CLF if it satisfies all the rules as defined by a regular [Lyapunov Function](((660fc61a-3a88-4a53-8ab1-4d8fb959c79e))), with regards to its positive definiteness and negative definiteness of its derivative.
 			- #### Difference between CLF and regular Lyapunov Function
 				- **Regular LF**
 					- Primarily used to analyse stablity of an equilibrium point of a system. If such a function decreases over time, it implies that the system's state will converge to the equilibrium, indicating stability.
