@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-04-17T11:19:50+0400
+updated: 2024-04-17T13:19:51+0400
 version: 1.1.1
 @end
 
@@ -20,7 +20,11 @@ version: 1.1.1
 
 ** (-) {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration]
 
-  ===
+** ( ) Meetup with Eyad Shaklab in Testing Team to understand data collection procedure
+*** ( ) Compare FIFO vs. High Rate recording: Is it possible to record this consistently?
+*** ( ) Coordinate with Willian and Jose to streamline data collection procedure in Testing Team's work pipeline
+
+    ===
 ___
 
 * Journal
@@ -32,23 +36,49 @@ ___
 
 * Meetings
 
-** Meeting Name
+** SRTA / Testing Team - Data Collection Discussion
 
 *** Attendees
 
-    | Names
+    | Junior Sundar
+    | Willian Lunardi
+    | Martin Andreoni
+    | Jose Segovia
 
-*** Goals
+*** Goal
 
+    Follow up on earlier meeting where I wasn't present, about the data
+    collection and accumulation strategy
 
 *** Agenda
 
-    - ( ) 
+    - Check how and what data can be collected
+    - Identify ways in which SRTA team can coordinate with Testing Team to get
+      the required data sets
 
 *** Minutes
 
+    9 features of which 2 are being demo'd for Q2 (June)
+
+    Single drone data collection is all that is required (not swarm)
+
+    Possible to schedule a workshop to teach drone flight and data collection
+    process
+
+    Fleet is of non-homogeneous frames
+
+    Current Testing Team strategy is not standardised or logged properly
+
+    Some failures can occur in which the sensor cannot detect the failure
+    happening like spontaneous disconnection of FC power supply due to
+    excessive vibrations
+
+    Brought up the point of `SDLOG_PROFILE` and data collection in FIFO. It
+    seems that it is possible but some discussion needs to take place for this.
+    {https://docs.px4.io/v1.12/en/advanced_config/parameter_reference.html#SDLOG_PROFILE}[Parameter Reference]
 
 *** Action Items
+
 
     ===
 ___

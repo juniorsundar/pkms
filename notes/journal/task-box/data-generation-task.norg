@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:00:57+0400
-updated: 2024-04-09T11:24:46+0400
+updated: 2024-04-17T16:01:28+0400
 version: 1.1.1
 @end
 
@@ -113,7 +113,7 @@ version: 1.1.1
 
 * (-) Run test batch
 
-** (-) Obtain a few data sets
+** (-) Obtain a few data sets with short time-frame large fault injection
 
 ** (-) Create a convenient `.mcap` converter script
 

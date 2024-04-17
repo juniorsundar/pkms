@@ -1,5 +1,6 @@
-file:: [chatgpt-robotics.pdf](../assets/chatgpt-robotics_1713333848816_0.pdf)
 url:: https://www.microsoft.com/en-us/research/group/autonomous-systems-group-robotics/articles/chatgpt-for-robotics/
+file:: [chatgpt-robotics.pdf](../assets/chatgpt-robotics_1713333848816_0.pdf)
+published:: [[Feb 20th, 2023]]
 
 - **IMPORTANT:** Paper written in large part with the help of ChatGPT
 - # Introduction

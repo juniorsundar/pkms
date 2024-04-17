@@ -1,6 +1,7 @@
 url:: https://deepmind.google/discover/blog/rt-2-new-model-translates-vision-and-language-into-action/
 link:: https://robotics-transformer2.github.io/
 file:: [rt2.pdf](../assets/rt2_1713266786953_0.pdf)
+published:: [[Jul 28th, 2023]]
 
 - # Introduction
 	- #+BEGIN_QUOTE

@@ -133,7 +133,7 @@
   :LOGBOOK:
   CLOCK: [2024-04-04 Thu 16:27:37]
   :END:
-	- DOING Obtain a few data sets
+	- DOING Obtain a few data sets with short time-frame large fault injection
 	  :LOGBOOK:
 	  CLOCK: [2024-04-04 Thu 16:27:35]
 	  :END:
