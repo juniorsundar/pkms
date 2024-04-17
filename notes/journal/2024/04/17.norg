@@ -1,16 +1,24 @@
 @document.meta
-title: template
+title: 17 April 2024
 description: 
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-04-17T00:36:43+0400
+updated: 2024-04-17T09:33:15+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-  - ( ) tasks
+** (-) #RESEARCH Is it possible to automate ROS node generation
+
+** (-) Update Jira
+*** (-) RTA-22: Reorient for swarm
+**** (-) Adjust Story title accordingly
+
+** (-) {:$/journal/task-box/data-generation-task:}[Data Generation Task]
+
+** (-) {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration]
 
   ===
 ___
