@@ -4,7 +4,7 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-04-16T16:14:27+0400
-updated: 2024-04-16T17:20:30+0400
+updated: 2024-04-17T11:27:39+0400
 version: 1.1.1
 @end
 
@@ -117,4 +117,3 @@ version: 1.1.1
   PaLM-E /\ PaLI-X -> VLA => improved robotic policies, and significantly
   better generalisation performance and emergent capabilities inherited from
   web-scale vision-language pre-training.
-
