@@ -1,4 +1,4 @@
-- DONE First meeting
+- DONE [First meeting](((660f9803-86fb-4d27-8592-f471e3712eba)))
   :LOGBOOK:
   CLOCK: [2024-04-04 Thu 23:11:09]--[2024-04-15 Mon 13:16:47] =>  254:05:38
   :END:
@@ -25,7 +25,18 @@
 	  :LOGBOOK:
 	  CLOCK: [2024-04-16 Tue 14:31:08]--[2024-04-17 Wed 15:58:32] =>  25:27:24
 	  :END:
-- TODO Second meeting
+- DOING [Second meeting](((66214ed0-8de1-4d80-aa69-b65f4e3be402)))
+  :LOGBOOK:
+  CLOCK: [2024-04-18 Thu 15:52:39]--[2024-04-18 Thu 21:04:48] =>  05:12:09
+  :END:
+	- DOING Read [[Secure State Reconstruction in Differentially Flat Systems Under Sensor Attacks Using Satisfiability Modulo Theory Solving]]
+	  id:: 66215121-a83a-4448-9960-9ddf25ef204f
+	  :LOGBOOK:
+	  CLOCK: [2024-04-18 Thu 21:05:15]--[2024-04-18 Thu 21:05:16] =>  00:00:01
+	  CLOCK: [2024-04-18 Thu 21:05:16]--[2024-04-18 Thu 21:05:17] =>  00:00:01
+	  CLOCK: [2024-04-18 Thu 21:20:49]
+	  :END:
+- TODO Third meeting
 - ___
 - # Instructional
   id:: 660fab83-c0af-4019-8e61-d168f0f8ff42
