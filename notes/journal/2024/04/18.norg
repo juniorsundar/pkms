@@ -1,0 +1,81 @@
+@document.meta
+title: 18 April 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-04-18T20:50:02+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+** (-) #RESEARCH Is it possible to automate ROS node generation
+
+** (-) Update Jira
+*** (-) RTA-22: Reorient for swarm
+**** (-) Adjust Story title accordingly
+
+** (-) {:$/journal/task-box/data-generation-task:}[Data Generation Task]
+
+** (-) {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration]
+
+** ( ) Meetup with Eyad Shaklab in Testing Team to understand data collection procedure
+*** ( ) Compare FIFO vs. High Rate recording: Is it possible to record this consistently?
+*** ( ) Coordinate with Willian and Jose to streamline data collection procedure in Testing Team's work pipeline
+
+  ===
+___
+
+* Journal
+
+  ===
+___
+
+* Meetings
+
+** Xiao Tan / Junior Sundar -- Follow up
+
+*** Attendees
+
+    | Xiao Tan
+    | Junior Sundar
+    | Willian Lunardi
+
+*** Goals
+
+    Follow up on previous discussion to explore scope and range of the project.
+
+*** Agenda
+
+    - Show the demonstration of the attacker to the accelerometer
+    - Discuss whether this is the method required or if something new is in the
+      works?
+
+*** Minutes
+
+    They want to go for a simpler example use case:
+    - EKF is the ground truth
+    - Create a copy of the EKF and the attacker spoofs this value
+    - This is then merged with GT EKF and then sent to the plant which is the
+      drone.
+
+    Easier to only work in the planar case. So drone takes off and moves in
+    the single place in some planar circuit.
+
+    Design of Experiment:
+    - Twin of EKF, so the code can remain within the same module -> Just create
+      a copy of the data output.
+    - Online safe controller also needs to be implemented.
+
+    Future direction:
+    - Some other work undertaken in the lab can use the results from this
+      experiments.
+    - How to fuse state estimation under sensor attacks more efficiently?
+
+*** Action Items
+
+    ===
+___
+
+{:$/journal/2024/04/17:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/04/19:}[next >]

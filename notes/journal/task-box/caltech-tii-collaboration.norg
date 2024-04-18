@@ -6,25 +6,29 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-04-17T15:59:56+0400
+updated: 2024-04-18T21:21:12+0400
 version: 1.1.1
 @end
 
-* (x) First meeting
+* (x) {:$/journal/2024/04/04:** Xiao Tan / Junior Sundar -- X6 Security Collaboration}[First meeting]
 
 ** (x) Follow up with {* Instructional}[instructional] response
 
 ** (x) Read {:$/research/literature-review/tan2024:}[paper]
 
-* (-) Prepare a small demonstration for second meeting
+* (x) Prepare a small demonstration for second meeting
 
 ** (x) Split the directed attacks to the accelerometer for x, y and z-axis
 
-** ( ) Create a node spinner that can induce a targeted attack on these axes
+** (x) Create a node spinner that can induce a targeted attack on these axes
 
 ** (x) Create a visualisation that captures this behaviour
 
-* ( ) Second meeting
+* (-) {:$/journal/2024/04/18:** Xiao Tan / Junior Sundar -- Follow up}[Second meeting]
+
+** (-) Read {:$/research/literature-review/shoukry2015:}[paper]
+
+* ( ) Third meeting
 
    ===
 ___
