@@ -1,0 +1,58 @@
+@document.meta
+title: 19 April 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-04-19T10:10:48+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+** (-) #RESEARCH Is it possible to automate ROS node generation
+
+** (-) Update Jira
+*** (-) RTA-22: Reorient for swarm
+**** (-) Adjust Story title accordingly
+
+** (-) {:$/journal/task-box/data-generation-task:}[Data Generation Task]
+
+** (-) {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration]
+
+** ( ) Meetup with Eyad Shaklab in Testing Team to understand data collection procedure
+*** ( ) Compare FIFO vs. High Rate recording: Is it possible to record this consistently?
+*** ( ) Coordinate with Willian and Jose to streamline data collection procedure in Testing Team's work pipeline
+
+  ===
+___
+
+* Journal
+
+  ===
+___
+
+* Meetings
+
+** Meeting Name
+
+*** Attendees
+
+    | Names
+
+*** Goals
+
+
+*** Agenda
+
+    - ( ) 
+
+*** Minutes
+
+
+*** Action Items
+
+    ===
+___
+
+{:$/journal/2024/04/18:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/04/20:}[next >]
