@@ -338,7 +338,7 @@ version: 1.1.1
 
       We find the derivative (note that it is being done w.r.t. time variable):
 
-      $dot{V}(x) = \frac{dV}{dx}\times \frac{dx}{dt} = x \dot{x} = x(-kx) = -kx^2$
+      $\dot{V}(x) = \frac{dV}{dx}\times \frac{dx}{dt} = x \dot{x} = x(-kx) = -kx^2$
 
       Which is negative definite. Thus the control law can stabilise the system
       at $x=0$ 
