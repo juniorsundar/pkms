@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-04-18T21:21:12+0400
+updated: 2024-04-22T16:22:27+0400
 version: 1.1.1
 @end
 
@@ -28,7 +28,7 @@ version: 1.1.1
 
 ** (-) Read {:$/research/literature-review/shoukry2015:}[paper]
 
-* ( ) Third meeting
+* (-) Third meeting
 
    ===
 ___
