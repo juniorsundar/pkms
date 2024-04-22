@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-04-22T16:22:27+0400
+updated: 2024-04-23T00:06:02+0400
 version: 1.1.1
 @end
 
@@ -28,7 +28,15 @@ version: 1.1.1
 
 ** (-) Read {:$/research/literature-review/shoukry2015:}[paper]
 
-* (-) Third meeting
+* (x) Third meeting
+
+* ( ) Implement simple data extraction and injection module as an external ROS Node
+
+** ( ) Research into how the data pipeline is arranged in the flight controller
+
+** ( ) Research existing strategies to achieve the data interception and injection
+
+** ( ) Test implementation
 
    ===
 ___
