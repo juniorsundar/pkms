@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T17:56:54+0400
-updated: 2024-04-15T13:36:18+0400
+updated: 2024-04-23T11:49:43+0400
 version: 1.1.1
 @end
 
@@ -25,6 +25,7 @@ version: 1.1.1
 ** D
 
    - {:$/terminologies/data-exfiltration:}[Data Exfiltration]
+   - {:$/terminologies/differentially-flat-systems:}[Differentially Flat Systems]
    - {:$/terminologies/digital-twin:}[Digital Twin]
 
 ** F

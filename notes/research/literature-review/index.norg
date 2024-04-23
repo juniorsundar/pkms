@@ -4,11 +4,15 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-02-12T20:19:47+0400
-updated: 2024-04-05T12:01:54+0400
+updated: 2024-04-23T12:02:16+0400
 version: 1.1.1
 @end
 
 * Links
+
+** 2015
+
+   {:$/research/literature-review/shoukry2015:}[Secure State Reconstruction in Differentially Flat Systems Under Sensor Attacks Using Satisfiability Modulo Theory Solving]
 
 ** 2020
 
@@ -23,6 +27,8 @@ version: 1.1.1
    {:$/research/literature-review/coutinho2021:}[Fault Injector for Autonomous Quadrotors]
 
 ** 2022
+
+   {:$/research/literature-review/gandhe2022:}[Decentralised Robot Swarm Clustering: Adding Resilience to Malicious Masquerade Attacks]
 
    {:$/research/literature-review/gebrie2022:}[Digital Twin for UAV Anomaly Detection]
 
