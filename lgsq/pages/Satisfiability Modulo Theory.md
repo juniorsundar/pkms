@@ -1,0 +1,33 @@
+# Introduction
+	- SMT is a problem-solving technique that generalises Boolean satisfiability problem (SAT).
+	- SAT --> Challenge is to determine if there is an assignment of truth values to variables s.t. given Boolean formula becomes true.
+	- SMT --> Extends this by allowing not just Boolean variables and logical relationships, but also variables and predicates from other theories.
+	- It provides a powerful framework for reasoning about mathematical models with rich structures.
+- # Key Components of SMT
+	- ## Theories
+		- They provide structures and operations that are possible on types of data involved.
+		- Some commonly used theories:
+			- Linear Integer Arithmetic
+			- Real Arithmetic
+			- Bit-vectors
+			- Arrays
+			- Uninterpreted Functions
+	- ## Logic
+		- Involves constructing formulae using elements provided by the theories.
+		- Often combines variables and operations from multiple theories within single problem statement.
+- # SMT Solvers
+	- Tool that attempts to determine whether there exists an assignment of values to variables in SMT problem s.t. entire formula evaluates to true.
+	- Problem is considered *satisfiable* if such assignment exists, else *unsatisfiable*.
+	- SMT solvers are crucial in:
+		- Software verification
+		- Hardware verification
+		- Formal methods
+		- AI
+- # Example
+	- Consider simple example involving linear integer arithmetic.
+	- SMT problem is to determine if there exists $x$ and $y$ s.t. following conditions are satisfied:
+	- $$x+y>5$$
+	  $$x<3$$
+	  $$y>1$$
+	- SMT solver would attempt to find values that satisfy all these conditions or report that no such values exist.
+	-

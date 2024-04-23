@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-04-23T00:09:08+0400
+updated: 2024-04-23T11:41:31+0400
 version: 1.1.1
 @end
 
@@ -46,6 +46,8 @@ ___
       then work and feed it back in
 
     Also drew a block diagram:
+
+    .image $/journal/assets/virtual-sensor.png
 
 *** Action Items
 
