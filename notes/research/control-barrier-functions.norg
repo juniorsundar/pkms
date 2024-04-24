@@ -371,3 +371,4 @@ version: 1.1.1
      However, CLFs can be overly restrictive for defining safety in systems.
      Applying CLF concepts directly would prevent a system from ever leaving a
      defined safe region, which might be too limiting in practice.
+

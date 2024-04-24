@@ -39,3 +39,4 @@ version: 1.1.1
 
   Each editor needs its own iteration of a language server. With LSP, you have
   a protocol to define servers for lanugages.
+

@@ -51,3 +51,4 @@ version: 1.1.1
     its surroundings in the graph.  
   - *Tasks* - This process leads to highly expressive representations of nodes,
     edges, or the whole graph, used for tasks.
+

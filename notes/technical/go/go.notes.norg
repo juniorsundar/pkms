@@ -123,3 +123,4 @@ func (note Note) Save() (error) {
 ___
 
 {:$/technical/go/go:}[< return] - {:$/index:}[index]
+

@@ -98,3 +98,4 @@ func writeResultsToFile(earnBeforeTax, earnAfterTax, ratio float64) {
 ___
 
 {:$/technical/go/go:}[< return] - {:$/index:}[index]
+
