@@ -4,26 +4,22 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-04-24T09:19:58+0400
+updated: 2024-04-24T13:24:55+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-** (-) Update Jira
-
-*** (-) RTA-22: Reorient for swarm
-
-**** (-) Adjust Story title accordingly
+** (_) Update Jira
+*** (_) RTA-22: Reorient for swarm
+**** (_) Adjust Story title accordingly
 
 ** (-) {:$/journal/task-box/data-generation-task:}[Data Generation Task]
 
 ** (-) {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration]
 
 ** (x) Meetup with Eyad Shaklab in Testing Team to understand data collection procedure
-
 *** (x) Compare FIFO vs. High Rate recording: Is it possible to record this consistently?
-
     The problem with FIFO is that it is far too high frequency, that not even
     the bagfiles can keep up with it. So in the end, going for the
     high-frequency output from the ULOG files should be sufficient.
@@ -33,7 +29,19 @@ version: 1.1.1
     or gyroscope). So if you have multiple accelerometers, you have to manually
     switch off all except one.
 
-** ( ) Coordinate with Willian and Jose to streamline data collection procedure in Testing Team's work pipeline
+** (x) Coordinate with Willian and Jose to streamline data collection procedure in Testing Team's work pipeline
+
+** (-) Data collection from testing team follow-up --> Awaiting Tintu's go-ahead 
+
+** (-) Camera stream for image segmentation
+*** (-) Which camera is being used for this
+    - ( ) {https://shop.luxonis.com/products/oak-d-s2?variant=42455432233183}[Luxonis OAK-D S2]
+    - ( ) {https://shop.siyi.biz/products/siyi-a8-mini}[SIYI A8 Mini]
+
+*** (-) How is the data being recorded?
+    - It is known that the data is being dumped in ROSbags somewhere, how to
+      extract this?
+    - Is recording happening continuously or is it to be triggered?
 
   ===
 ___
@@ -49,17 +57,41 @@ ___
 
 *** Attendees
 
-    | Names
+    | Jose Segovia
+    | Junior Sundar
+    | Samridha Shreshta
+    | Saeed Alseiari
+    | Willian Lunardi
 
 *** Goals
 
+    Provide update to Jose on the hardware requirements for the Q2 Demo
 
 *** Agenda
 
-    - ( ) 
+    - Point to Confluence page
+    - Propose requirements for additional data streams
 
 *** Minutes
 
+    Autonomous flights can be run in the outdoor arena with $\pm 2$ cm
+
+    Hardware for data recording needs to be synchronised with the demo builds
+
+    There is no temperature sensor in the battery:
+    - Supplier asked for a custom power distribution board, and this does not
+      support temperature readings
+    - Possibly attach thermocouple to the batteries, but not feasible because:
+       -- if connect to FC, then a driver needs to be built for it
+       -- if connect to MC, then the OS is hardened and denies random external
+          connections
+       -- a PDF that accommodates temperature stream will be required and that
+          takes too long.
+
+    GPU enabling is an issue since running ML models requires GPU resources and
+    existing
+
+    Barometer has ambient temperature reading (Informed Shamsa about this)
 
 *** Action Items
 
