@@ -2,6 +2,7 @@
 	- [[Application Programming Interface (API)]]
 - # B
 	- [[Bootloader]]
+	- [[Botnet]]
 - # C
 	- [[Continual Task Learning]]
 - # D
@@ -55,4 +56,5 @@
 - # X
 - # Y
 - # Z
+	- [[Zero-Day Attack]]
 	- [[Zero-Order Hold Method]]

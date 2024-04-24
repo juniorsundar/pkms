@@ -299,7 +299,7 @@
  ;;  :charge-range    600}   ; Default value: 600
 
  ;; Favorites to list on the left sidebar
- :favorites ["Contents" "House Hunting Chronicles: 2024" "Literature Review" "Terminology"]
+ :favorites ["review" "Contents" "Literature Review" "Terminology"]
 
  ;; Set flashcards interval.
  ;; Expected value:
@@ -419,10 +419,10 @@
  ;;      ;use triple underscore `___` for slash `/` in page title
  ;;      ;use Percent-encoding for other invalid characters
  :file/name-format :triple-lowbar
- :graph/settings {:journal? false
+ :graph/settings {:journal? true
  :builtin-pages? false
- :excluded-pages? true
- :orphan-pages? true}
+ :excluded-pages? false
+ :orphan-pages? false}
  :graph/forcesettings {:link-dist 170
  :charge-strength -700
  :charge-range 700}

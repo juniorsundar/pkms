@@ -1,0 +1,6 @@
+- Network of internet-connected devices that have been infected with malicious software and are controlled as a group, typically without owners' knowledge.
+- Infected devices called "bots" or "zombies".
+- Controller of botnet known as "bot herder" or "botmaster" can remotely control bots to carry out various tasks.
+- They are often created through the exploitation of security vulnerabilities in software or by tricking users.
+- Compromised devices are recruited into the botnet and can be used to execute coordinated attacks.
+- Defending against botnets requires combination of proactive measures, software updates, antivirus softwares and practicing safe browsing habits.

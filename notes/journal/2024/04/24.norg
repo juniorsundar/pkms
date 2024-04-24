@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-04-24T13:24:55+0400
+updated: 2024-04-24T22:12:45+0400
 version: 1.1.1
 @end
 
@@ -13,10 +13,6 @@ version: 1.1.1
 ** (_) Update Jira
 *** (_) RTA-22: Reorient for swarm
 **** (_) Adjust Story title accordingly
-
-** (-) {:$/journal/task-box/data-generation-task:}[Data Generation Task]
-
-** (-) {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration]
 
 ** (x) Meetup with Eyad Shaklab in Testing Team to understand data collection procedure
 *** (x) Compare FIFO vs. High Rate recording: Is it possible to record this consistently?
@@ -31,29 +27,97 @@ version: 1.1.1
 
 ** (x) Coordinate with Willian and Jose to streamline data collection procedure in Testing Team's work pipeline
 
-** (-) Data collection from testing team follow-up --> Awaiting Tintu's go-ahead 
-
-** (-) Camera stream for image segmentation
-*** (-) Which camera is being used for this
-    - ( ) {https://shop.luxonis.com/products/oak-d-s2?variant=42455432233183}[Luxonis OAK-D S2]
-    - ( ) {https://shop.siyi.biz/products/siyi-a8-mini}[SIYI A8 Mini]
-
-*** (-) How is the data being recorded?
-    - It is known that the data is being dumped in ROSbags somewhere, how to
-      extract this?
-    - Is recording happening continuously or is it to be triggered?
-
   ===
 ___
 
-* Journal
+* Data Science for Cybersecurity
+  
+  #subtitle An overview focused on networking
+  #speaker {https://homepages.dcc.ufmg.br/~michele/}[Michele Nogueira]
+
+  The 4th industrial revolution is the age of cyber physical systems.
+  Everything is "smart":
+  - cars
+  - homes
+  - farms
+  - etc...
+
+  Trends for the internet:
+  - Ubiquity
+  - Diversity
+  - Big data
+
+  Attackers exploit trends of internet for their own advantage.
+
+  {https://en.wikipedia.org/wiki/Mirai_(malware)}[Mirai DDoS attack] on Dyn Server @2016
+  - Based on IoT devices connected to the internet.
+  - Hacked CCTV cameras to launch DDoS.
+
+  With more edge devices nowadays, vulnerabilities are amplified.
+
+  What is a {:$/terminologies/botnet:}[Botnet]?
+
+  DDoS is one of the top five attacks nowadays.
+
+  Many IoT devices enter market nowadays without sufficient security in place
+
+  Botnets are conventional attack vector nowadays.
+
+  Conventional vs. Mobile botnets:
+  - Diversity | Can exist in manyu forms
+  - Quantity | Are multiple
+  - Mobility | By nature of devices it infects
+
+  Cybersecurity mostly works with unstructured data.
+
+  When attackers want to initiate DDoS, they maximise data use per packet and
+  send more and more packets per second.
+
+  Detecting botnets autonomously using AutoML.
+
+** Security Intelligence
+
+   Information relevant to protect against external and internal threats + the
+   tools, processes and policies designed to gather and analyse the
+   information.
+
+   Must be continuous, adaptive and evolving.
+
+** Defense Lines at Time of Cyberattacks
+
+   - Preventative/Predictive
+   - Reactive
+   - Tolerance
+
+** Challenges and Approaches
+
+   @code markdown
+   |           CHALLENGES           |     APPROACHES     |
+   |--------------------------------|--------------------|
+   | Diversity of detection models  | Protocol diversity |
+   | Parameter calibration          | Unbalanced data    |
+   | Solution management deployment | Architecture type  |
+   |                                | Data preprocessing |
+   @end
+
+** Final Considerations
+
+   - Sophistication of attacks
+   - DDoS attacks and botnets
+   - ...
+
+   ---
+
+  {https://ieeexplore.ieee.org/document/9956892/}[An Intelligent System for DDoS Attack Prediction Based on Early Warning Signals]
+
+  What is a {:$/terminologies/zero-day-attack:}[Zero-Day Attack]?
 
   ===
 ___
 
 * Meetings
 
-** Meeting Name
+** SRTA Demo Requirements
 
 *** Attendees
 
@@ -94,6 +158,40 @@ ___
     Barometer has ambient temperature reading (Informed Shamsa about this)
 
 *** Action Items
+
+** Solita - SRTA MLOps Syncup
+
+*** Attendees
+
+    | Solita
+    | SRTA-AD
+
+*** Goal
+
+    Update on MLOps work
+
+*** Agenda
+
+    - Understand the scope of the demo for Q2
+    - Resolve some of the questions regarding the image segmentation work
+
+*** Minutes
+
+    Using fog-ros base image to build containers as it is yocto build ready
+
+    Currently not possible to access GPU resources as the `ghaf` platform is
+    hardened AF
+
+    Apparently GPU enabling is not priority for the `ghaf` team
+
+    Safe landing and image segmentation cannot be demoed IRL if that is the
+    case
+    - Most likely will be in simulation form with dronsole
+    - This just sounds pointless, but it is sufficient to produce MVOutput
+
+*** Action Items
+
+    Follow up with `ghaf` team about being more involved in their team meetings
 
     ===
 ___

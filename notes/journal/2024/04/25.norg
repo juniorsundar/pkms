@@ -1,0 +1,60 @@
+@document.meta
+title: template
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-04-24T22:11:52+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+** (-) Data collection from testing team follow-up --> Awaiting Tintu's go-ahead 
+
+** (-) Camera stream for image segmentation
+*** (-) Which camera is being used for this
+    - ( ) {https://shop.luxonis.com/products/oak-d-s2?variant=42455432233183}[Luxonis OAK-D S2]
+    - ( ) {https://shop.siyi.biz/products/siyi-a8-mini}[SIYI A8 Mini]
+
+*** (-) How is the data being recorded?
+    - It is known that the data is being dumped in ROSbags somewhere, how to
+      extract this?
+    - Is recording happening continuously or is it to be triggered?
+
+** (-) {:$/journal/task-box/data-generation-task:}[Data Generation Task]
+
+** (-) {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration]
+
+  ===
+___
+
+* Journal
+
+  ===
+___
+
+* Meetings
+
+** Meeting Name
+
+*** Attendees
+
+    | Names
+
+*** Goals
+
+
+*** Agenda
+
+    - ( ) 
+
+*** Minutes
+
+
+*** Action Items
+
+    ===
+___
+
+{:$/journal/2024/04/24:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/04/26:}[next >]
