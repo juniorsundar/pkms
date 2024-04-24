@@ -299,7 +299,7 @@
  ;;  :charge-range    600}   ; Default value: 600
 
  ;; Favorites to list on the left sidebar
- :favorites ["Contents" "Literature Review" "Terminology"]
+ :favorites ["review" "Contents" "Literature Review" "Terminology"]
 
  ;; Set flashcards interval.
  ;; Expected value:
