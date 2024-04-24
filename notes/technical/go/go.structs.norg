@@ -168,3 +168,4 @@ func New(firstName, lastName, birthDate string) (*User, error) {
 ___
 
 {:$/technical/go/go:}[< return] - {:$/index:}[index]
+
