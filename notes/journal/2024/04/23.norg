@@ -4,66 +4,13 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-04-23T15:15:50+0400
+updated: 2024-04-24T09:19:54+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-** (-) #RESEARCH Is it possible to automate ROS node generation
-
-** (-) Update Jira
-
-*** (-) RTA-22: Reorient for swarm
-
-**** (-) Adjust Story title accordingly
-
-** (-) {:$/journal/task-box/data-generation-task:}[Data Generation Task]
-
-** (-) {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration]
-
-** (x) Meetup with Eyad Shaklab in Testing Team to understand data collection procedure
-
-*** (x) Compare FIFO vs. High Rate recording: Is it possible to record this consistently?
-
-    The problem with FIFO is that it is far too high frequency, that not even
-    the bagfiles can keep up with it. So in the end, going for the
-    high-frequency output from the ULOG files should be sufficient.
-
-    For FIFO, additional processing stages are necessary and it can only record
-    the primary sensor (which you have to choose as well between accelerometer
-    or gyroscope). So if you have multiple accelerometers, you have to manually
-    switch off all except one.
-
-** ( ) Coordinate with Willian and Jose to streamline data collection procedure in Testing Team's work pipeline
-
-  ===
-___
-
-* Journal
-
-  ===
-___
-
-* Meetings
-
-** Meeting Name
-
-*** Attendees
-
-    | Names
-
-*** Goals
-
-
-*** Agenda
-
-    - ( ) 
-
-*** Minutes
-
-
-*** Action Items
+** (_) #RESEARCH Is it possible to automate ROS node generation
 
     ===
 ___
