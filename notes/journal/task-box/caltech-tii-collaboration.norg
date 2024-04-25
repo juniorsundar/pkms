@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-04-24T13:21:56+0400
+updated: 2024-04-25T15:21:51+0400
 version: 1.1.1
 @end
 
@@ -26,6 +26,8 @@ version: 1.1.1
 
 * (-) Implement simple data extraction and injection module as an external ROS Node
 ** (-) Research into how the data pipeline is arranged in the flight controller
+   {:$/technical/px4/control:}[PX4 - Control]
+
 ** ( ) Research existing strategies to achieve the data interception and injection
 ** ( ) Test implementation
 

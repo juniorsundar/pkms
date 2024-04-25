@@ -35,7 +35,7 @@
 			- When triggered, it will either Hold or enter Land mode depending on nature of available information.
 			- Can set the duration before failsafe trigger through parameter server.
 		- ### Offboard Loss
-			- Triggered if offboard link is lost while under offboard control mode. Refer to ((65f8249b-c869-4d41-9ad6-32ff1e9bce9b)) to understand what the offboard control signal rate signifies.
+			- Triggered if offboard link is lost while under offboard control mode. Refer to ## [Offboard Control Mode](((e35379dd-34a5-4936-9131-40fa68faba26))) to understand what the offboard control signal rate signifies.
 		- ### Traffic Avoidance
 			- Allows PX4 to respond to transponder data during missions. Can set failsafe actions through parameters.
 - # Failure Detector
