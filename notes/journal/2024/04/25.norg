@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-04-25T14:45:24+0400
+updated: 2024-04-25T21:15:23+0400
 version: 1.1.1
 @end
 
@@ -12,10 +12,12 @@ version: 1.1.1
 
 ** (-) Data collection from testing team follow-up --> Awaiting Tintu's go-ahead 
 
-** (x) Camera stream for image segmentation
+** (x) Q2 June Demo
 *** (x) Which camera is being used for this
     - Forward: {https://shop.luxonis.com/products/oak-d-s2?variant=42455432233183}[Luxonis OAK-D S2]
+      This has been tested with Release12
     - Downward: {https://shop.siyi.biz/products/siyi-a8-mini}[SIYI A8 Mini]
+      This is the model being used in Masdar and in F4F Prague
 
 *** (x) How is the data being recorded?
 **** (x) It is known that the data is being dumped in ROSbags somewhere, how to extract this?
@@ -37,7 +39,9 @@ version: 1.1.1
      @end
 
 *** (-) Verify if this method can be used to record data in the outdoor arena demo -- talk to Jose Segovia
-*** ( ) Demo setup
+*** ( )Confirm if Siyi A8 is supported for Release12
+*** ( )Create Slack channel with all concerned parties
+*** ( ) Fill up the hardware requirements spreadsheet
 
 ** (-) {:$/journal/task-box/data-generation-task:}[Data Generation Task]
 
@@ -47,6 +51,8 @@ version: 1.1.1
 ___
 
 * Journal
+
+  Did some research on {:$/technical/px4/controls:}[PX4 - Controls]
 
   ===
 ___

@@ -3,6 +3,7 @@
 	- [[PX4 - Simulation]]
 	- [[PX4 - uORB]]
 	- [[PX4 - Safety Configuration]]
+	- [[PX4 - Controls]]
 - # Introduction
 	- It is a professional autopilot that can be used to power all kinds of vehicles, ranging from drones to ground vehicle and submarines.
 	- *Access the documentation [here](https://docs.px4.io/main/en/).*

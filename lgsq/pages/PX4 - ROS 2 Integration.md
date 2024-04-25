@@ -157,4 +157,4 @@
 	      -v $HOME/rosbags:/ros_workspace/bags \
 	      px4-ros ros2 bag record -s mcap --all
 	  ```
-- {{embed ((662a3a36-8194-4a09-913a-b5a27851878d))}}
+- # [Example of UAV Control](((662a3a36-8194-4a09-913a-b5a27851878d)))
