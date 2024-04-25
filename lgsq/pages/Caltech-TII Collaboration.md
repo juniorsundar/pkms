@@ -49,6 +49,7 @@
 	  :LOGBOOK:
 	  CLOCK: [2024-04-23 Tue 11:55:13]
 	  :END:
+		- [[PX4 - Controls]]
 	- TODO Research existing strategies to achieve the data interception and injection
 	- TODO Test implementation
 - ___

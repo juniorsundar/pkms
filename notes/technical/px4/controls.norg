@@ -1,0 +1,82 @@
+@document.meta
+title: PX4 - Controls
+description: 
+authors: juniorsundar-unikie
+categories: 
+created: 2024-04-25T15:22:09+0400
+updated: 2024-04-25T15:27:49+0400
+version: 1.1.1
+@end
+
+* Flight Stack
+
+  .image https://docs.px4.io/main/assets/PX4_High-Level_Flight-Stack.CZXi0y2Q.svg
+
+  [PX4 High-Level Flight Stack]
+
+  Guidance + Navigation + Control Algorithms for autonomous drones.
+
+  *Estimator* - Takes one or more sensor inputs, combines them, and computes
+  vehicle state.
+
+  *Controller* - Takes setpoint and measurement/estimated state as input.
+  - It then adjusts value of process variable such that it matches setpoint.
+  - Output is a correction to eventually reach that setpoint.
+  - Position controller takes position setpoints, process variable is current
+    estimated position, output is an attitude and thrust setpoint.
+
+  *Mixer* - Takes force commands and translates them into individual motor
+  commands (specific to vehicle type).
+
+* Offboard Control Mode
+
+  It may be possible to directly control the drone with {https://docs.px4.io/main/en/flight_modes/offboard.html}[Offboard Control].
+
+  Offboard mode is used for controlling vehicle movement and attitude, by
+  setting:
+  - position,
+  - velocity,
+  - acceleration,
+  - attitude,
+  - attitude rates, or
+  - thrust/torque setpoints.
+  
+  Requires 2 Hz "proof of life" signal or it will switch out of offboard mode
+  after `COM_OF_LOSS_T` timeout.
+
+  In ROS 2, POL signal is through `OffboardControlMode` messages. Actual
+  setpoint publish to uORB topics, like `TrajectorySetpoint`.
+
+** [OffboardControlMode](https://github.com/PX4/PX4-Autopilot/blob/main/msg/OffboardControlMode.msg)
+   
+   The fields are ordered in terms of priority => `position` takes precedence
+   over `velocity` and later fields, `velocity` takes precedence over
+   `acceleration`, and so on.
+
+   @code markdown
+   | desired control quantity | required estimate | required message                                |
+   | ------------------------ | ----------------- | ----------------------------------------------- |
+   | position (NED)           | position          | TrajectorySetpoint                              |
+   | velocity (NED)           | velocity          | TrajectorySetpoint                              |
+   | acceleration (NED)       | velocity          | TrajectorySetpoint                              |
+   | attitude (FRD)           | None              | VehicleAttitudeSetpoint                         |
+   | body_rate (FRD)          | None              | VehicleRatesSetpoint                            |
+   | thrust and torque (FRD)  | None              | VehicleAttitudeSetpoint & VehicleTorqueSetpoint |
+   | direct motors and servos | None              | ActuatorMotors & ActuatorServos                 |
+   @end
+
+** [TrajectorySetpoint](https://github.com/PX4/PX4-Autopilot/blob/main/msg/TrajectorySetpoint.msg)
+Position setpoint (`position` different from `NaN`). Non-`NaN` values of velocity and acceleration are used as feedforward terms for the inner loop controllers.
+Velocity setpoint (`velocity` different from `NaN` and `position` set to `NaN`). Non-`NaN` values acceleration are used as feedforward terms for the inner loop controllers.
+Acceleration setpoint (`acceleration` different from `NaN` and `position` and `velocity` set to `NaN`)
+All values in NED system at [m], [m/s] and [m/s^2] respectively.
+** [VehicleAttitudeSetpoint](https://github.com/PX4/PX4-Autopilot/blob/main/msg/VehicleAttitudeSetpoint.msg)
+quaternion `q_d` + thrust setpoint `thrust_body`. Non-`NaN` values of `yaw_sp_move_rate` are used as feedforward terms expressed in Earth frame and in [rad/s].
+Quaternion represents rotation between body FRD (front, right, down) and NED (north, east, down).
+Thrust is in FRD and expressed as normalised [-1, 1] values.
+** [VehicleThrustSetpoint](https://github.com/PX4/PX4-Autopilot/blob/main/msg/VehicleThrustSetpoint.msg) + [VehicleTorqueSetpoint](https://github.com/PX4/PX4-Autopilot/blob/main/msg/VehicleTorqueSetpoint.msg)
+`xyz` for thrust and `xyz` for torque.
+All the values are in the drone body FRD frame and normalized in [-1, 1].
+** [ActuatorMotors](https://github.com/PX4/PX4-Autopilot/blob/main/msg/ActuatorMotors.msg) + [ActuatorServos](https://github.com/PX4/PX4-Autopilot/blob/main/msg/ActuatorServos.msg)
+All the values normalized in [-1, 1]. For outputs that do not support negative values, negative entries map to `NaN`.
+`NaN` maps to disarmed.
