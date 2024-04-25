@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-04-25T21:15:23+0400
+updated: 2024-04-25T21:51:52+0400
 version: 1.1.1
 @end
 
@@ -39,8 +39,8 @@ version: 1.1.1
      @end
 
 *** (-) Verify if this method can be used to record data in the outdoor arena demo -- talk to Jose Segovia
-*** ( )Confirm if Siyi A8 is supported for Release12
-*** ( )Create Slack channel with all concerned parties
+*** ( ) Confirm if Siyi A8 is supported for Release12
+*** ( ) Create Slack channel with all concerned parties
 *** ( ) Fill up the hardware requirements spreadsheet
 
 ** (-) {:$/journal/task-box/data-generation-task:}[Data Generation Task]
