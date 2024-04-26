@@ -1,0 +1,13 @@
+:root {
+  --ls-font-family: CaskaydiaCove Nerd Font;
+}
+
+:root:not(.is-native-android) .ls-block[haschild="false"][level="1"]:not([data-refs-self*="@"]) > div > div > a > .bullet-container {
+    display: none !important;  
+}
+
+* {
+  font-family: CaskaydiaCove Nerd Font, monospace;
+}
+
+@import url('https://logseq.catppuccin.com/ctp-frappe.css');

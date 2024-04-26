@@ -45,12 +45,15 @@
   :LOGBOOK:
   CLOCK: [2024-04-23 Tue 11:55:14]
   :END:
-	- DOING Research into how the data pipeline is arranged in the flight controller
+	- DONE Research into how the data pipeline is arranged in the flight controller
 	  :LOGBOOK:
-	  CLOCK: [2024-04-23 Tue 11:55:13]
+	  CLOCK: [2024-04-23 Tue 11:55:13]--[2024-04-26 Fri 10:17:44] =>  70:22:31
+	  :END:
+	- DOING Research existing strategies to achieve the data interception and injection
+	  :LOGBOOK:
+	  CLOCK: [2024-04-26 Fri 10:17:47]
 	  :END:
 		- [[PX4 - Controls]]
-	- TODO Research existing strategies to achieve the data interception and injection
 	- TODO Test implementation
 - ___
 - # Instructional
