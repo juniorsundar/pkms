@@ -4,7 +4,7 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-04-25T15:22:09+0400
-updated: 2024-04-25T21:26:42+0400
+updated: 2024-04-26T12:38:30+0400
 version: 1.1.1
 @end
 
@@ -103,6 +103,63 @@ version: 1.1.1
    negative values, negative entries map to `NaN`.
 
    `NaN` maps to disarmed.
+
+* MAVLink vs ROS 2 Offboard Control
+
+  {https://youtu.be/3zRCIsq_MCE?feature=shared}[A ROS 2 Library and Interface for External PX4 Flight Modes]
+
+** Limitations of MAVLink method
+
+   - Only a single app can control vehicle.
+   - Requires MAVLink: hard to extend or access other data through this.
+   - Limited integration with failsafe state machine & prearm checks.
+   - Limited set of setpoint types.
+   - Cannot specify displayed mode name in the GCS.
+
+** Modes
+
+   Component that can send one or more setpoints to control vehicle motion.
+
+   It is a passive component so it cannot activate other modes.
+
+   By itself, it can perform a number of tasks.
+
+   A mode can also replace internal PX4 mode.
+
+   It will also register with PX4 on startup.
+
+** Failsafe and Arming Checks
+
+   A mode has a set of requirement flags.
+
+   Non-essential falisafes can be temporarily deferred.
+
+   Unresponsive or crashed modes can trigger a failsafe.
+
+** Mode Executors
+
+   Can be used to change modes.
+
+   State machines that run through different modes, waiting for them to
+   complete (similar to `navigator` module).
+
+   Only works while it is in charge,
+   - Owned mode that serves as activation.
+   - Stays in charge until user/failsafe triggers mode switch.
+   - Allows multiple executors to coexist.
+
+   Is transparent for the user.
+
+** Control Interfaces
+
+   The mode:
+   - decides what to control, how and when,
+   - /streams/ setpoints for controllers to track.
+
+   Mode space: What do I want to do? How do I do it? --> Control space: Control
+   options?
+
+   *ROS 2* mode streams set point for *FMU* controllers to track.
 
 * Example: Offboard with MAVLink API
 
