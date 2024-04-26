@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-04-26T12:03:57+0400
+updated: 2024-04-26T14:41:56+0400
 version: 1.1.1
 @end
 
@@ -12,7 +12,7 @@ version: 1.1.1
 
   /Rolled over/
 
-   ===
+  ===
 ___
 
 * Journal
@@ -65,6 +65,45 @@ ___
     Wait for early next week to get update on this
 
     Fast track the info about the image segmentation demo
+
+** RTA Meeting
+
+*** Attendees
+
+    | SRTA-AD
+
+*** Goals
+
+    Introduce Iraklis as new PM
+
+    Update on work
+
+*** Agenda
+
+    - Demo requirements and updates
+    - Research collaboration update
+
+*** Minutes
+
+    How do we show stuff that must be demo'd? --> Fill up the hardware
+    requirements spreadsheet
+    - Breakdown into steps
+    - Do even if it isn't part of the objectives of this quarter
+    - Hardware details and requirements need to be listed and elaborated upon
+
+    Image segmentation demo idea:
+
+    .image ../../assets/demo-segmentation.png
+
+    Flying license will take upto a week to at least start the process
+
+    LLM to access outputs from RTA modules to decide on drone manouvre
+
+*** Action Items
+
+    Fill up the hardware requirements spreadsheet
+
+    Send Raw GPS data to Siva
 
     ===
 ___
