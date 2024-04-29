@@ -1,0 +1,85 @@
+@document.meta
+title: 29 April 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-04-29T10:12:28+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+** (-) Data collection from testing team follow-up --> Awaiting Tintu's go-ahead 
+
+** (-) Q2 June Demo
+*** (x) Which camera is being used for this
+    - Forward: {https://shop.luxonis.com/products/oak-d-s2?variant=42455432233183}[Luxonis OAK-D S2]
+      This has been tested with Release12
+    - Downward: {https://shop.siyi.biz/products/siyi-a8-mini}[SIYI A8 Mini]
+      This is the model being used in Masdar and in F4F Prague
+
+*** (x) How is the data being recorded?
+**** (x) It is known that the data is being dumped in ROSbags somewhere, how to extract this?
+     It can be recorded using {https://github.com/tiiuae/nats-bag}[`nats-bag`]
+
+     A laptop or GCS that is in the same NATS network can record the data
+     streamed through NATS.
+
+     @code bash
+     nats-bag [-s nats://localhost:4222] record [filename]
+     @end
+
+**** (x) Is recording happening continuously or is it to be triggered?
+     The gimbal stream needs to be activated by opening the stream through
+     `dronsole` UI or running:
+
+     @code bash
+     nats pub video.cmd.<device-id> '{"subscriber": "id1", "subscribe":true}'
+     @end
+
+*** (-) Verify if this method can be used to record data in the outdoor arena demo -- talk to Jose Segovia
+*** (x) Confirm if Siyi A8 is supported for Release12
+    It is supported as as confirmed by the people at F4F
+
+*** (x) Create Slack channel with all concerned parties
+*** (x) Fill up the hardware requirements spreadsheet
+*** ( ) Verify the need for grass patches for the image segmentation demonstration
+
+** (-) {:$/journal/task-box/data-generation-task:}[Data Generation Task]
+
+** (-) {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration]
+
+  ===
+___
+
+* Journal
+
+  ===
+___
+
+* Meetings
+
+** Meeting Name
+
+*** Attendees
+
+    | Names
+
+*** Goals
+
+
+*** Agenda
+
+    - ( ) 
+
+*** Minutes
+
+
+*** Action Items
+
+    ===
+___
+
+{:$/journal/2024/04/28:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/04/30:}[next >]
+
