@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-04-30T21:05:39+0400
+updated: 2024-04-30T22:35:29+0400
 version: 1.1.1
 @end
 
@@ -71,14 +71,14 @@ ___
    # We forward the X11 server so that the Gazebo simulator GUI runs on local machine
    # We set network=host so that we can alter subscribe to the rostopics through the DDS
    docker run -it --privileged --rm \
-   -v ${FIRMWARE_DIR}:/home/user/Firmware:rw \
-   -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
-   -e DISPLAY=${DISPLAY} \
-   -e LOCAL_USER_ID="$(id -u)" \
-   -w /home/user/Firmware \
-   --network=host  \
-   --name=container_name px4io/px4-dev-simulation-jammy \
-   make px4_sitl gz_x500
+           -v ${FIRMWARE_DIR}:/home/user/Firmware:rw \
+           -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
+           -e DISPLAY=${DISPLAY} \
+           -e LOCAL_USER_ID="$(id -u)" \
+           -w /home/user/Firmware \
+           --network=host  \
+           --name=container_name px4io/px4-dev-simulation-jammy \
+           make px4_sitl gz_x500
    @end
 
 ** Injecting Faults in Accelerometer
