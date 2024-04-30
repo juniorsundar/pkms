@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-04-26T12:00:48+0400
+updated: 2024-04-30T21:05:39+0400
 version: 1.1.1
 @end
 
@@ -24,12 +24,15 @@ version: 1.1.1
 
 * (x) Third meeting
 
-* (-) Implement simple data extraction and injection module as an external ROS Node
+* (x) Implement simple data extraction and injection module as an external ROS Node
 ** (x) Research into how the data pipeline is arranged in the flight controller
-** (-) Research existing strategies to achieve the data interception and injection
+** (x) Research existing strategies to achieve the data interception and injection
    {:$/technical/px4/controls:}[PX4 - Controls]
 
-** ( ) Test implementation
+** (x) Test implementation 
+   {* ROS 2 Modular Control}[ROS 2 Modular Control]
+
+* Fourth meeting
 
    ===
 ___
@@ -68,14 +71,14 @@ ___
    # We forward the X11 server so that the Gazebo simulator GUI runs on local machine
    # We set network=host so that we can alter subscribe to the rostopics through the DDS
    docker run -it --privileged --rm \
-       -v ${FIRMWARE_DIR}:/home/user/Firmware:rw \
-       -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
-       -e DISPLAY=${DISPLAY} \
-       -e LOCAL_USER_ID="$(id -u)" \
-       -w /home/user/Firmware \
-       --network=host  \
-       --name=container_name px4io/px4-dev-simulation-jammy \
-       make px4_sitl gz_x500
+   -v ${FIRMWARE_DIR}:/home/user/Firmware:rw \
+   -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
+   -e DISPLAY=${DISPLAY} \
+   -e LOCAL_USER_ID="$(id -u)" \
+   -w /home/user/Firmware \
+   --network=host  \
+   --name=container_name px4io/px4-dev-simulation-jammy \
+   make px4_sitl gz_x500
    @end
 
 ** Injecting Faults in Accelerometer
@@ -109,4 +112,104 @@ ___
     As the agent will have access to the system's internal dynamics, they will
     also be a node in the ROS 2 network and will subscribe to the necessary
     topics being published from the PX4 flight controller.
+
+    ===
+___
+
+* ROS 2 Modular Control
+
+** EKF
+
+   .image assets/ekf.png
+
+   Subscribes to the `vehicle_local_position` topic from the Flight Controller.
+
+   Publishes ground truth (`gt`) and raw copy (`raw`), separately.
+
+** Attacker
+
+   .image assets/attacker.png
+
+   Subscribes to the `raw` position and introduces an attack. In this case it
+   can be a simple halving operation.
+
+   @code cpp
+   void Attacker::attack(VehicleLocalPosition& copy)
+   {
+       if (attack_flag)
+       {
+           copy.x /= 2;
+           copy.y /= 2;
+           copy.z /= 2;
+       } else {
+           copy.x *= 1;
+           copy.y *= 1;
+           copy.z *= 1;
+       }
+   }
+   @end
+
+   It then publishes an `attacked` version of the `gt`.
+
+** Controller
+
+   .image assets/controller.png
+
+   Uses the `attacked` and `gt` versions of `vehicle_local_position` to
+   generate a controller input.
+
+   In this example, we are using a velocity controller - it can also
+   accommodate acceleration controls.
+
+   Basic averaging operation is used to merge the `gt` with the `attacked` EKF
+   outputs.
+
+   @code cpp
+   VehicleLocalPosition reference;
+   this->state_merger(reference); // <-- Standard averaging
+
+   vx = coordinates[target][0] - reference.x;
+   vy = coordinates[target][1] - reference.y;
+   vz = coordinates[target][2] - reference.z;
+
+   if (abs(vx) > 5)
+   {
+       vx = vx / abs(vx) * 5; // Input in x
+   }
+   if (abs(vy) > 5)
+   {
+       vy = vy / abs(vy) * 5; // Input in y
+   }
+   if (abs(vz) > 5)
+   {
+       vz = vz / abs(vz) * 5; // Input in z
+   }
+
+   float vxs = vx * vx;
+   float vys = vy * vy;
+   float vzs = vz * vz;
+   float separation = (float)sqrt(vxs + vys + vzs);
+
+   if (separation < threshold)
+   {
+       target++;
+       if (target > (int)coordinates.size() - 1)
+       {
+           target = 0;
+       }
+   }
+
+   // offboard_control_mode needs to be paired with trajectory_setpoint
+   publish_offboard_control_mode();
+   publish_trajectory_setpoint();
+   @end
+
+   ---
+
+  The mission is square periodic.
+
+  The attack is introduced at a random time point. The results while observing
+  the ground truth are shown below:
+
+  .image assets/results.png
 

@@ -40,10 +40,10 @@
   :LOGBOOK:
   CLOCK: [2024-04-22 Mon 10:45:06]--[2024-04-22 Mon 23:57:52] =>  13:12:46
   :END:
-- DOING Implement simple data extraction and injection module as an external ROS Node
+- DONE Implement simple data extraction and injection module as an external ROS Node
   id:: 6626c020-2327-420e-b629-822e1cb565d4
   :LOGBOOK:
-  CLOCK: [2024-04-23 Tue 11:55:14]
+  CLOCK: [2024-04-23 Tue 11:55:14]--[2024-04-30 Tue 20:59:57] =>  177:04:43
   :END:
 	- DONE Research into how the data pipeline is arranged in the flight controller
 	  :LOGBOOK:
@@ -121,6 +121,7 @@
 		- As the agent will have access to the system's internal dynamics, they will also be a node in the ROS 2 network and will subscribe to the necessary topics being published from the PX4 flight controller.
 - # ROS 2 Modular Control
   id:: 6630d364-3fd7-43f5-9124-1a4b07efaad2
+  collapsed:: true
 	- There are three ROS 2 nodes:
 		- **EKF**
 			- ![ekf.png](../assets/ekf_1714475976448_0.png)
@@ -148,7 +149,7 @@
 		- **Controller**
 			- ![controller.png](../assets/controller_1714475986120_0.png)
 			- Uses the `attacked` and `gt` versions of `vehicle_local_position` to generate a controller input.
-			- Int his example, we are using a velocity controller - it can also accommodate acceleration controls.
+			- In this example, we are using a velocity controller - it can also accommodate acceleration controls.
 			- Basic averaging operation is used to merge the `gt` with the `attacked` EKF outputs.
 			- ```cpp
 			  VehicleLocalPosition reference;
