@@ -1,0 +1,71 @@
+@document.meta
+title: 1 May 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-05-01T15:29:37+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+** (x) Send the F4F data to Shamsa
+
+** (-) {:$/journal/task-box/q2-june-demo:}[Q2 June Demo]
+
+** (-) {:$/journal/task-box/data-generation-task:}[Data Generation Task]
+
+** (-) {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration]
+
+   ===
+___
+
+* Journal
+
+  ===
+___
+
+* Meetings
+
+** RTA Meeting
+
+*** Attendees
+
+    | SRTA-AD
+
+*** Goals
+
+    Discuss who is doing a demo
+
+    Discuss what all are required and what the timeline will be for the demo
+
+*** Agenda
+
+    - (x) Bring up the current bottlenecks for the demo
+    - (x) Update on the progress of current tasks
+
+*** Minutes
+
+    Is the camera driver integration supported?
+    - Apparently we have to develop our own drivers for attachments apart from
+      standard installation.
+    - Luckily the Siyi A8 is supported.
+
+    Check if there is packet loss when recording data on FMO?
+
+    Usually with demos, the flight are first done in Prague F4F before being
+    tested in TII
+
+*** Action Items
+
+    - {** Send the F4F data to Shamsa}[Send the F4F data to Shamsa]
+    - {:$/journal/task-box/q2-june-demo:** Check if video encoding/decoding is happening on the hardware (Siyi A8)}[Check if video encoding/decoding is happening on the hardware (Siyi A8)]
+    - {:$/journal/task-box/q2-june-demo:** Get on Solita about getting camera segmentation demo ready}[Get on Solita about getting camera segmentation demo ready]
+    - {:$/journal/task-box/q2-june-demo:** Triggering the RTA modules}[Triggering the RTA modules]
+
+    ===
+___
+
+{:$/journal/2024/04/30:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/05/02:}[next >]
+
