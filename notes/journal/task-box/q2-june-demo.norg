@@ -1,0 +1,61 @@
+@document.meta
+title: Q2 June Demo
+description: Task pipeline for the June 2024 Q2 Demo
+authors: juniorsundar
+categories: [
+    task
+]
+created: 2024-04-04T23:08:32+0400
+updated: 2024-05-01T15:22:23+0400
+version: 1.1.1
+@end
+
+** (x) Which camera is being used for this
+   - Forward: {https://shop.luxonis.com/products/oak-d-s2?variant=42455432233183}[Luxonis OAK-D S2]
+     This has been tested with Release12
+   - Downward: {https://shop.siyi.biz/products/siyi-a8-mini}[SIYI A8 Mini]
+     This is the model being used in Masdar and in F4F Prague
+
+** (x) How is the data being recorded?
+*** (x) It is known that the data is being dumped in ROSbags somewhere, how to extract this?
+    It can be recorded using {https://github.com/tiiuae/nats-bag}[`nats-bag`]
+
+    A laptop or GCS that is in the same NATS network can record the data
+    streamed through NATS.
+
+    @code bash
+    nats-bag [-s nats://localhost:4222] record [filename]
+    @end
+
+*** (x) Is recording happening continuously or is it to be triggered?
+    The gimbal stream needs to be activated by opening the stream through
+    `dronsole` UI or running:
+
+    @code bash
+    nats pub video.cmd.<device-id> '{"subscriber": "id1", "subscribe":true}'
+    @end
+
+** (x) Confirm if Siyi A8 is supported for Release12
+   It is supported as as confirmed by the people at F4F
+
+** (x) Create Slack channel with all concerned parties
+** (x) Fill up the hardware requirements spreadsheet
+** (x) Verify the need for grass patches for the image segmentation demonstration
+** (x) Data collection from testing team follow-up --> Awaiting Tintu's go-ahead 
+   They don't have enough Saluki V3 to go around, so we will have to affix ours
+   on a drone. Furthermore, we will have to use the x500 Holybro.
+
+   There isn't a set method to attach the Siyi A8 camera to the drone, so we
+   will have to think up some strategy, maybe by trying double tape or
+   something.
+
+** (-) Verify if this method can be used to record data in the outdoor arena demo -- talk to Jose Segovia
+** ( ) Get on Solita about getting camera segmentation demo ready
+*** ( ) How is the video to be retrieved? Is there some code in place for this?
+*** ( ) Determine how the plugin for camera segmentation is to be implemented
+** ( ) Check if video encoding/decoding is happening on the hardware (Siyi A8)
+** ( ) Triggering the RTA modules
+*** ( ) Check first what kind of triggers can be implemented with Solita
+*** ( ) Check with Mehmet if something like this needs to be implemented in the software and control scheme for the drone
+
+
