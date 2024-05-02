@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-05-02T19:22:09+0400
+updated: 2024-05-02T21:18:10+0400
 version: 1.1.1
 @end
 
@@ -19,30 +19,41 @@ version: 1.1.1
   ===
 ___
 
-* Journal
-
-  ===
-___
-
 * Meetings
 
-** Meeting Name
+** Xiao Tan / Junior Sundar -- Feedback on Rough External Controller Implementation
 
 *** Attendees
 
-    | Names
+    Xiao Tan
+    Junior Sundar
+    Martin Andreoni
+    Willian Lunardi
 
-*** Goals
+*** Goal
 
+    Receive feedback and opinion on the rough implementation of the external
+    EKF, Attacker and Controller
 
 *** Agenda
 
-    - ( ) 
+    - (x) Feedback
+    - (x) Next steps
 
 *** Minutes
 
+    Xiao wants the controller to only receive the attacked signal, not both the
+    attacked and the ground truth.
+
+    Rather than sending the `px4_msgs/msg/VehicleLocalPosition` values to the
+    controller, we want to send a custom message type that carries a different
+    set of data inside it.
+
+    Possibly, a matrix?
 
 *** Action Items
+
+    - {:$/journal/task-box/caltech-tii-collaboration:* Verify and validate if the position obtained from the FC's EKF is the same as the actual position of the drone in the simulation environment}[Verify and validate if the position obtained from the FC's EKF is the same as the actual position of the drone in the simulation environment]
 
     ===
 ___
