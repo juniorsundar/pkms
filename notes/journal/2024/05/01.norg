@@ -4,19 +4,13 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-05-01T21:13:05+0400
+updated: 2024-05-02T19:21:50+0400
 version: 1.1.1
 @end
 
 * To-Do
 
 ** (x) Send the F4F data to Shamsa
-
-** (-) {:$/journal/task-box/q2-june-demo:}[Q2 June Demo]
-
-** (-) {:$/journal/task-box/data-generation-task:}[Data Generation Task]
-
-** (-) {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration]
 
    ===
 ___
