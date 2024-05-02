@@ -1,5 +1,5 @@
 title:: ALFA: A Dataset for UAV Fault and Anomaly Detection
-file:: ![ALFA: A Dataset for UAV Fault and Anomaly Detection](../assets/keipour2020_1710416688776_0.pdf)
+file:: [ALFA: A Dataset for UAV Fault and Anomaly Detection](../assets/keipour2020_1710416688776_0.pdf)
 file-path:: ../assets/keipour2020_1710416688776_0.pdf
 categories:: #uav-fault-dataset
 
