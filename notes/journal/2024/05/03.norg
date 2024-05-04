@@ -1,0 +1,74 @@
+@document.meta
+title: 3 May 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-05-04T23:19:26+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+** (-) {:$/journal/task-box/q2-june-demo:}[Q2 June Demo]
+
+** (-) {:$/journal/task-box/data-generation-task:}[Data Generation Task]
+
+** (-) {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration]
+
+** ( ) Swarm simulation
+*** ( ) Obtain Documentation to set up swarm from Wang Haoran
+*** ( ) Research into UAV Decentralised Swarm implementations
+*** ( ) Search around in ARRC for work being done in decentralised control
+
+    ===
+___
+
+* Journal
+
+  ===
+___
+
+* Meetings
+
+** Wang Haoran / Junior -- Swarm Simulation Collaboration
+
+*** Attendees
+
+    | Wang Haoran
+    | Junior Sundar
+    | Willian Lunardi
+    | Martin Andreoni
+
+*** Goals
+
+    Find possible collaboration opportunities for swarm simulation
+
+*** Agenda
+
+    - (x) How is Wang Haoran currently simulating swarms?
+    - (x) Is there a way to build on it or improve it?
+
+*** Minutes
+
+    Current project: Exploring how to detect anomaly within swarms
+    - Uncoordinated behaviuour
+    - Weird behaviour
+    - Communication problems
+
+    No reliable swarm algorithms
+    - What about {https://www.red3d.com/cwr/boids/}[boids]?
+
+    Current implementation:
+    - Docker containers connecting to single port that is where QGroundControl is attached.
+    - Control individually with MAVSDK
+    - Up to 4 drones at the moment.
+    - Possibly design a wrapper to coordinate drone behaviour
+       -- API calls for control swarm
+       -- Swarm algorithms implemented under the hood
+
+    ===
+___
+
+{:$/journal/2024/05/02:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/05/04:}[next >]
+
