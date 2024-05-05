@@ -146,7 +146,7 @@
 	  # Run once to ensure that any remote client (like the container)
 	  # to connect to the X Server. Essentially allows you to run GUI
 	  # apps launched in the container to be forwarded to your local system
-	  xhost +
+	  {{query (or (task DOING) (task TODO) (task WAITING) (task NOW) (task LATER))}}
 	  
 	  docker run -it --privileged --rm \
 	      -v </path/to>/px4-firmware:/home/user/Firmware:rw \
