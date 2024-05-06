@@ -1,9 +1,9 @@
 :root {
-  --ls-font-family: CaskaydiaCove Nerd Font;
+  --ls-font-family: VictorMono NF;
 }
 
 * {
-  font-family: CaskaydiaCove Nerd Font, monospace;
+  font-family: VictorMono NF, monospace;
 }
 
 @import url('https://logseq.catppuccin.com/ctp-frappe.css');

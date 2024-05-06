@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-05-06T16:11:31+0400
+updated: 2024-05-06T23:02:47+0400
 version: 1.1.1
 @end
 
@@ -36,7 +36,11 @@ version: 1.1.1
 
 * (x) Verify and validate if the position obtained from the FC's EKF is the same as the actual position of the drone in the simulation environment
 
-* ( ) Fifth meeting
+* (x) {:$/journal/2024/05/06:** Xiao Tan / Junior Sundar -- State Reconstruction Discussion}[Fifth meeting]
+
+* ( ) Look up MATLAB Cell
+
+* ( ) Try out state reconstruction method with simple example
 
    ===
 ___

@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-05-06T19:53:48+0400
+updated: 2024-05-06T22:16:53+0400
 version: 1.1.1
 @end
 
@@ -28,26 +28,34 @@ ___
 
 * Meetings
 
-** Meeting Name
+** Xiao Tan / Junior Sundar -- State Reconstruction Discussion
 
 *** Attendees
-
-    | Names
+    
+    | Xiao Tan
+    | Junior Sundar
 
 *** Goals
 
+    Understand the secure state reconstruction algorithm
 
 *** Agenda
 
-    - ( ) 
+    - (x) Go through the provided powerpoint
+    - (x) Discuss the MATLAB codes
 
 *** Minutes
 
+    Plant is a Discrete Time state-system A, B, C with attack signal 
+    $e(\tau) \in \mathbb{R}^p$ where $s<p$ sensors are attacked.
 
-*** Action Items
+    Should aim to have something to demonstrate by {:$/journal/2024/05/23:}[23 May 2024].
+
+    No tight deadline for this (as December is expected deadline).
 
     ===
 ___
 
 {:$/journal/2024/05/05:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/05/07:}[next >]
+
 

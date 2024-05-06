@@ -61,7 +61,9 @@
 	  CLOCK: [2024-04-30 Tue 15:18:31]--[2024-04-30 Tue 15:18:33] =>  00:00:02
 	  :END:
 		- ((6630d364-3fd7-43f5-9124-1a4b07efaad2))
-- TODO Fourth meeting
+- DONE Fourth meeting
+- TODO Verify and validate if the position obtained from the FC's EKF is the same as the actual position of the drone in the simulation environment
+  id:: 6633c7e4-1bb7-4a2a-87c6-1d85b1034088
 - ___
 - # Instructional
   id:: 660fab83-c0af-4019-8e61-d168f0f8ff42
