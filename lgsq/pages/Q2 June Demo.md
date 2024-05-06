@@ -65,14 +65,14 @@
   :LOGBOOK:
   CLOCK: [2024-04-25 Thu 14:04:21]--[2024-04-25 Thu 14:04:42] =>  00:00:21
   :END:
-- DOING Triggering the RTA modules
+- DONE Triggering the RTA modules
   id:: f5c16267-b6ca-4126-be07-13ac7b5dcaed
   :LOGBOOK:
-  CLOCK: [2024-05-02 Thu 13:51:05]
+  CLOCK: [2024-05-02 Thu 13:51:05]--[2024-05-06 Mon 11:39:34] =>  93:48:29
   :END:
 	- DONE Check first what kind of triggers can be implemented with Solita.
 		- There is a placeholder in place inside SRTA and it is awaiting the UI implementation on the UI/FMO side of the things.
-	- TODO Check with Mehmet if something like this needs to be implemented in the software and control scheme for the drone
+	- CANCELLED Check with Mehmet if something like this needs to be implemented in the software and control scheme for the drone
 - DOING Printing the mounts and attach it to the drone
   :LOGBOOK:
   CLOCK: [2024-05-02 Thu 12:40:27]

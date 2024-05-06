@@ -36,7 +36,7 @@
 	  CLOCK: [2024-04-18 Thu 21:05:16]--[2024-04-18 Thu 21:05:17] =>  00:00:01
 	  CLOCK: [2024-04-18 Thu 21:20:49]--[2024-04-23 Tue 11:55:09] =>  110:34:20
 	  :END:
-- DONE Third meeting
+- DONE [Third meeting](((66260755-1d06-44fc-a270-ca1cbec2c0e2)))
   :LOGBOOK:
   CLOCK: [2024-04-22 Mon 10:45:06]--[2024-04-22 Mon 23:57:52] =>  13:12:46
   :END:
@@ -61,9 +61,13 @@
 	  CLOCK: [2024-04-30 Tue 15:18:31]--[2024-04-30 Tue 15:18:33] =>  00:00:02
 	  :END:
 		- ((6630d364-3fd7-43f5-9124-1a4b07efaad2))
-- DONE Fourth meeting
-- TODO Verify and validate if the position obtained from the FC's EKF is the same as the actual position of the drone in the simulation environment
+- DONE [Fourth meeting](((66386c1a-c19b-46a9-b6ed-2469fe003da8)))
+- DONE Verify and validate if the position obtained from the FC's EKF is the same as the actual position of the drone in the simulation environment
   id:: 6633c7e4-1bb7-4a2a-87c6-1d85b1034088
+  :LOGBOOK:
+  CLOCK: [2024-05-06 Mon 09:36:05]--[2024-05-06 Mon 14:22:28] =>  04:46:23
+  :END:
+- TODO Fifth meeting
 - ___
 - # Instructional
   id:: 660fab83-c0af-4019-8e61-d168f0f8ff42

@@ -15,3 +15,4 @@
 - # Websites and Blogs
 	- [[ChatGPT for Robotics: Design Principles and Model Abilities]]
 	- [[Robotics Transformer 2 (RT-2)]]
+	- [[DrEureka: Language Model Guided Sim-To-Real Transfer]]

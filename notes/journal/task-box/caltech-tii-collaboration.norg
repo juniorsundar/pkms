@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-05-02T21:07:13+0400
+updated: 2024-05-06T16:11:31+0400
 version: 1.1.1
 @end
 
@@ -22,7 +22,7 @@ version: 1.1.1
 * (x) {:$/journal/2024/04/18:** Xiao Tan / Junior Sundar -- Follow up}[Second meeting]
 ** (x) Read {:$/research/literature-review/shoukry2015:}[paper]
 
-* (x) Third meeting
+* (x) {:$/journal/2024/04/22:** Xiao Tan / Junior Sundar -- Technical Discussion}[Third meeting]
 
 * (x) Implement simple data extraction and injection module as an external ROS Node
 ** (x) Research into how the data pipeline is arranged in the flight controller
@@ -32,9 +32,11 @@ version: 1.1.1
 ** (x) Test implementation 
    {* ROS 2 Modular Control}[ROS 2 Modular Control]
 
-* (x) Fourth meeting
+* (x) {:$/journal/2024/05/02:** Xiao Tan / Junior Sundar -- Feedback on Rough External Controller Implementation}[Fourth meeting]
 
-* ( ) Verify and validate if the position obtained from the FC's EKF is the same as the actual position of the drone in the simulation environment
+* (x) Verify and validate if the position obtained from the FC's EKF is the same as the actual position of the drone in the simulation environment
+
+* ( ) Fifth meeting
 
    ===
 ___
@@ -214,4 +216,7 @@ ___
   the ground truth are shown below:
 
   .image assets/results.png
+
+
+
 

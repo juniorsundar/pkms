@@ -131,13 +131,14 @@
 	  :LOGBOOK:
 	  CLOCK: [2024-04-04 Thu 16:27:27]
 	  :END:
-- DOING Run test batch
+- DONE Run test batch
   :LOGBOOK:
-  CLOCK: [2024-04-04 Thu 16:27:37]
+  CLOCK: [2024-04-04 Thu 16:27:37]--[2024-05-06 Mon 15:04:45] =>  766:37:08
   :END:
-	- DOING Obtain a few data sets with short time-frame large fault injection
+	- DONE Obtain a few data sets with short time-frame large fault injection
 	  :LOGBOOK:
-	  CLOCK: [2024-04-04 Thu 16:27:35]
+	  CLOCK: [2024-04-04 Thu 16:27:35]--[2024-05-06 Mon 15:04:34] =>  766:36:59
+	  CLOCK: [2024-05-06 Mon 15:04:35]--[2024-05-06 Mon 15:04:36] =>  00:00:01
 	  :END:
 	- DONE Create a convenient `.mcap` converter script
 	  collapsed:: true
@@ -245,7 +246,31 @@
 		  if __name__ == "__main__":
 		      main()
 		  ```
-	- DOING Actively maintain and improve the rosnodes
+	- DONE Actively maintain and improve the rosnodes
 	  :LOGBOOK:
-	  CLOCK: [2024-04-04 Thu 16:27:36]
+	  CLOCK: [2024-04-04 Thu 16:27:36]--[2024-05-06 Mon 15:04:44] =>  766:37:08
 	  :END:
+- DOING Organisation/Packaging of datasets
+  :LOGBOOK:
+  CLOCK: [2024-05-06 Mon 15:03:19]
+  CLOCK: [2024-05-06 Mon 15:03:21]
+  CLOCK: [2024-05-06 Mon 15:03:24]
+  :END:
+	- DONE Write script to merge `.ulog` files into one `.csv` file
+	  :LOGBOOK:
+	  CLOCK: [2024-05-06 Mon 15:03:40]--[2024-05-06 Mon 15:05:08] =>  00:01:28
+	  :END:
+	- DOING Some fixes to the merging process:
+	  :LOGBOOK:
+	  CLOCK: [2024-05-06 Mon 15:04:01]
+	  CLOCK: [2024-05-06 Mon 15:04:11]
+	  CLOCK: [2024-05-06 Mon 15:04:11]
+	  :END:
+		- DOING Sort headers alphabetically after merging
+		  :LOGBOOK:
+		  CLOCK: [2024-05-06 Mon 15:04:15]
+		  :END:
+		- TODO Change `label` header --> `filename`
+- TODO Data collection
+	- TODO Hardware datasets
+	- TODO Simulation datasets

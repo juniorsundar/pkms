@@ -6,12 +6,11 @@ categories: [
     task
 ]
 created: 2024-04-04T23:00:57+0400
-updated: 2024-04-24T13:21:35+0400
+updated: 2024-05-06T16:03:20+0400
 version: 1.1.1
 @end
 
 * (x) {:$/journal/2024/03/20:****  Literature review}[Literature review]
-
 * (x) Generate plan of action
 ** (x) Figure out how to make a {:$/technical/px4/simulation:** Containerised Deployment}[Containerised Deployment]
 ** (x) Figure out how to set up ROS in a containerised environment
@@ -81,12 +80,12 @@ version: 1.1.1
 ** (x) Expose the records/bag folder for autodump of rosbags
    @code bash
    docker run -it --rm \
-       --network=host -p 14540:14540/udp \
-       --ipc=host --pid=host \
-       --env UID=$(id -u) \
-       --env GID=$(id -g) \
-       -v $(pwd)/records:/ros_workspace/records \
-       px4-ros ros2
+   --network=host -p 14540:14540/udp \
+   --ipc=host --pid=host \
+   --env UID=$(id -u) \
+   --env GID=$(id -g) \
+   -v $(pwd)/records:/ros_workspace/records \
+   px4-ros ros2
    @end
 
 ** (x) Test full pipeline for robustness for a simple deployment
@@ -95,8 +94,8 @@ version: 1.1.1
 ** (x) Test once and observe if it is allowed
 ** (_) Set up GitHub Actions to do this automatically
 
-* (-) Run test batch
-** (-) Obtain a few data sets with short time-frame large fault injection
+* (x) Run test batch
+** (x) Obtain a few data sets with short time-frame large fault injection
 ** (x) Create a convenient `.mcap` converter script
    @code python
    #!/usr/bin python3
@@ -199,5 +198,18 @@ version: 1.1.1
        main()
    @end
 
-** (-) Actively maintain and improve the rosnodes
+** (x) Actively maintain and improve the rosnodes
+
+*  (-) Organisation/Packaging of datasets
+**  (x) Write script to merge `.ulog` files into one `.csv` file
+**  (-) Some fixes to the merging process:
+***  (-) Sort headers alphabetically after merging
+***  ( ) Change `label` header --> `filename`
+
+*  ( ) Data collection
+**  ( ) Hardware datasets
+**  ( ) Simulation datasets
+
+
+
 
