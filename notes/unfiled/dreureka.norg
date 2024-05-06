@@ -4,9 +4,13 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-05-06T19:53:56+0400
-updated: 2024-05-06T21:52:28+0400
+updated: 2024-05-06T23:15:19+0400
 version: 1.1.1
 @end
+
+| /Access references:/
+| - {https://eureka-research.github.io/dr-eureka/}[LINK] 
+| - {/ assets/dreureka.pdf}[FILE]
 
 * Introduction
 
@@ -39,13 +43,13 @@ version: 1.1.1
   - environment source code.
 
   Tests policy under different simulation conditions to build reward-aware
-  physics prior --> LLM generates set of [[Domain Randomisation]] parameters
+  physics prior --> LLM generates set of {:$/terminologies/domain-randomisation:}[Domain Randomisation] parameters
   (DR).
 
   Trains policies for real-world deployment using synthesised reward and DR
   parameters
 
-  ![image.png](../assets/image_1714975440955_0.png)
+  .image assets/dreureka.png
 
 * Experiments
 

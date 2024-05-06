@@ -67,7 +67,11 @@
   :LOGBOOK:
   CLOCK: [2024-05-06 Mon 09:36:05]--[2024-05-06 Mon 14:22:28] =>  04:46:23
   :END:
-- TODO Fifth meeting
+- DONE [Fifth meeting](((66392067-cc32-4121-922f-0f072aa546e2)))
+- TODO Look up MATLAB Cell
+  id:: 663923ce-a39f-45de-b997-6c7b0cdc97c9
+- TODO Try out state reconstruction method with simple example
+  id:: 6639243a-3acc-4468-a10d-594e60b555ef
 - ___
 - # Instructional
   id:: 660fab83-c0af-4019-8e61-d168f0f8ff42
