@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-05-06T16:00:07+0400
+updated: 2024-05-07T09:44:11+0400
 version: 1.1.1
 @end
 
@@ -39,8 +39,11 @@ version: 1.1.1
   It is supported as as confirmed by the people at F4F
 
 * (x) Create Slack channel with all concerned parties
+
 * (x) Fill up the hardware requirements spreadsheet
+
 * (x) Verify the need for grass patches for the image segmentation demonstration
+
 * (x) Data collection from testing team follow-up --> Awaiting Tintu's go-ahead 
   They don't have enough Saluki V3 to go around, so we will have to affix ours
   on a drone. Furthermore, we will have to use the x500 Holybro.
@@ -71,7 +74,7 @@ version: 1.1.1
 ** (_) Check with Mehmet if something like this needs to be implemented in the software and control scheme for the drone
 
 * (-) Printing the mounts and attach it to the drone
-** (-) Saluki V3 to Drone Mount
+** (x) Saluki V3 to Drone Mount
 ** (-) Siyi A8 and Battery Mount
    .image assets/mounting_siyia8.JPG
 
