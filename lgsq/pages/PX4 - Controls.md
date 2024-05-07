@@ -11,6 +11,7 @@
 	- **Mixer** - Takes force commands and translates them into individual motor commands (specific to vehicle type).
 - # Offboard Control Mode
   id:: e35379dd-34a5-4936-9131-40fa68faba26
+  collapsed:: true
 	- It may be possible to directly control the drone with [Offboard Control](https://docs.px4.io/main/en/flight_modes/offboard.html).
 	- Offboard mode is used for controlling vehicle movement and attitude, by setting:
 		- position,
@@ -51,6 +52,7 @@
 		- All the values normalized in [-1, 1]. For outputs that do not support negative values, negative entries map to `NaN`.
 		- `NaN` maps to disarmed.
 - # MAVLink vs ROS 2 Offboard Control
+  collapsed:: true
 	- {{video https://youtu.be/3zRCIsq_MCE?feature=shared}}
 	- ## Limitations of MAVLink method
 		- Only a single app can control vehicle.

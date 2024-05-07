@@ -250,27 +250,32 @@
 	  :LOGBOOK:
 	  CLOCK: [2024-04-04 Thu 16:27:36]--[2024-05-06 Mon 15:04:44] =>  766:37:08
 	  :END:
-- DOING Organisation/Packaging of datasets
+- DONE Organisation/Packaging of datasets
   :LOGBOOK:
   CLOCK: [2024-05-06 Mon 15:03:19]
   CLOCK: [2024-05-06 Mon 15:03:21]
-  CLOCK: [2024-05-06 Mon 15:03:24]
+  CLOCK: [2024-05-06 Mon 15:03:24]--[2024-05-07 Tue 10:53:24] =>  19:50:00
   :END:
 	- DONE Write script to merge `.ulog` files into one `.csv` file
 	  :LOGBOOK:
 	  CLOCK: [2024-05-06 Mon 15:03:40]--[2024-05-06 Mon 15:05:08] =>  00:01:28
 	  :END:
-	- DOING Some fixes to the merging process:
+	- DONE Some fixes to the merging process:
 	  :LOGBOOK:
 	  CLOCK: [2024-05-06 Mon 15:04:01]
-	  CLOCK: [2024-05-06 Mon 15:04:11]
-	  CLOCK: [2024-05-06 Mon 15:04:11]
+	  CLOCK: [2024-05-06 Mon 15:04:11]--[2024-05-07 Tue 10:53:21] =>  19:49:10
 	  :END:
-		- DOING Sort headers alphabetically after merging
+		- DONE Sort headers alphabetically after merging
 		  :LOGBOOK:
-		  CLOCK: [2024-05-06 Mon 15:04:15]
+		  CLOCK: [2024-05-06 Mon 15:04:15]--[2024-05-07 Tue 10:53:14] =>  19:48:59
 		  :END:
-		- TODO Change `label` header --> `filename`
+		- DONE Change `label` header --> `filename`
+		  :LOGBOOK:
+		  CLOCK: [2024-05-07 Tue 10:53:16]--[2024-05-07 Tue 10:53:17] =>  00:00:01
+		  :END:
 - TODO Data collection
 	- TODO Hardware datasets
-	- TODO Simulation datasets
+	- DOING Simulation datasets
+	  :LOGBOOK:
+	  CLOCK: [2024-05-07 Tue 11:02:58]
+	  :END:

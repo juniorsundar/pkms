@@ -10,18 +10,7 @@ version: 1.1.1
 
 * To-Do
 
-** (-) {:$/journal/task-box/q2-june-demo:}[Q2 June Demo]
-
-** (-) {:$/journal/task-box/data-generation-task:}[Data Generation Task]
-
-** (-) {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration]
-
 ** (x) Read {:$/unfiled/dreureka:}[DrEureka: Language Model Guided Sim-To-Real Transfer]
-
-** ( ) Swarm simulation
-*** ( ) Obtain Documentation to set up swarm from Wang Haoran
-*** ( ) Research into UAV Decentralised Swarm implementations
-*** ( ) Search around in ARRC for work being done in decentralised control
 
   ===
 ___

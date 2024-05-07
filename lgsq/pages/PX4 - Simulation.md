@@ -98,7 +98,7 @@
 		          zero_position_armed: 10
 		  ```
 - # [Hardware-in-the-Loop (HITL)]([[Hardware in the Loop]])
-	- ## Set-Up with Saluki V2
+	- ## Set-Up with [[Saluki V2]]
 		- In order to connect via ethernet, need to provide the following details for eth0 connection:
 		- > *IPv4 Method*: Manual
 		  > *Addresses*:
@@ -143,10 +143,10 @@
 	  ```
 	- To build and run the simulation in a container:
 	- ```bash
+	  xhost +
 	  # Run once to ensure that any remote client (like the container)
 	  # to connect to the X Server. Essentially allows you to run GUI
 	  # apps launched in the container to be forwarded to your local system
-	  {{query (or (task DOING) (task TODO) (task WAITING) (task NOW) (task LATER))}}
 	  
 	  docker run -it --privileged --rm \
 	      -v </path/to>/px4-firmware:/home/user/Firmware:rw \
