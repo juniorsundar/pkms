@@ -68,8 +68,27 @@
   CLOCK: [2024-05-06 Mon 09:36:05]--[2024-05-06 Mon 14:22:28] =>  04:46:23
   :END:
 - DONE [Fifth meeting](((66392067-cc32-4121-922f-0f072aa546e2)))
-- TODO Look up MATLAB Cell
+- DONE Look up MATLAB Cell
   id:: 663923ce-a39f-45de-b997-6c7b0cdc97c9
+	- A flexible data container that can hold different types of data.
+	- It is primarily used for:
+		- storing heterogeneous data,
+		- organising text data, and
+		- creating flexible structures.
+	- Working with:
+		- ```matlab
+		  %% Create
+		  myCellArray = {'Hello', [1 2 3], true};  
+		  myCellArray = cell(3, 2); % Creates a 3x2 cell array  
+		  ```
+		- ```matlab
+		  %% Access
+		  value = myCellArray{1};   % Accesses the content of the first cell
+		  ```
+		- ```matlab
+		  %% Edit
+		  myCellArray(2,1) = 100;   % Changes content within the cell array 
+		  ```
 - TODO Try out state reconstruction method with simple example
   id:: 6639243a-3acc-4468-a10d-594e60b555ef
 - ___

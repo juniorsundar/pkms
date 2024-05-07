@@ -49,6 +49,7 @@
   CLOCK: [2024-05-02 Thu 12:00:17]--[2024-05-02 Thu 12:50:55] =>  00:50:38
   :END:
 	- DONE How is the video to be retrieved? Is there some code in place for this?
+	  collapsed:: true
 	  :LOGBOOK:
 	  CLOCK: [2024-05-02 Thu 12:00:16]--[2024-05-02 Thu 12:50:51] =>  00:50:35
 	  CLOCK: [2024-05-02 Thu 12:50:51]--[2024-05-02 Thu 12:50:52] =>  00:00:01
@@ -56,6 +57,7 @@
 		- Video is going to be retrieved from the NATS channel subscriber.
 		- There will be implementation in place to do this.
 	- DONE Determine how the plugin for camera segmentation is to be implemented
+	  collapsed:: true
 	  :LOGBOOK:
 	  CLOCK: [2024-05-02 Thu 12:00:17]--[2024-05-02 Thu 12:50:52] =>  00:50:35
 	  :END:
@@ -71,15 +73,16 @@
   CLOCK: [2024-05-02 Thu 13:51:05]--[2024-05-06 Mon 11:39:34] =>  93:48:29
   :END:
 	- DONE Check first what kind of triggers can be implemented with Solita.
+	  collapsed:: true
 		- There is a placeholder in place inside SRTA and it is awaiting the UI implementation on the UI/FMO side of the things.
 	- CANCELLED Check with Mehmet if something like this needs to be implemented in the software and control scheme for the drone
 - DOING Printing the mounts and attach it to the drone
   :LOGBOOK:
   CLOCK: [2024-05-02 Thu 12:40:27]
   :END:
-	- DOING Saluki V3 to Drone Mount
+	- DONE Saluki V3 to Drone Mount
 	  :LOGBOOK:
-	  CLOCK: [2024-05-02 Thu 15:45:33]
+	  CLOCK: [2024-05-02 Thu 15:45:33]--[2024-05-07 Tue 09:30:52] =>  113:45:19
 	  :END:
 	- DOING Siyi A8 and Battery Mount
 	  collapsed:: true
