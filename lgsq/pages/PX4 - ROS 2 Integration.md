@@ -35,6 +35,7 @@
 		           L <add more here>
 		  ```
 	- ## Source
+	  id:: 65f8249b-4ccc-487e-bf6d-3e2afa2af6b0
 		- Finally, since this is a local installation, we need to source this workspace so that we can access the locally installed packages. Refer to [this](((65f2ddcf-58ff-4e2e-856c-e4a1cb0fa507))) for more explanation.
 		- In every new terminal that requires you to access packages from this local installation, run:
 		- ```bash
@@ -52,7 +53,7 @@
 		  ```
 	- ## Subscribing to ROS 2 Topics
 		- As explained before, data from the PX4 is obtained from the ULog. The information is packaged into uORB topics inside the controller and transmitted to the companion processor through the μXRCE-DDS channel. At the agent side, the computer, this information is shared with ROS 2 as topics. The uORB topics are directly translated into ROS 2 topics once you activate the MicroXRCEAgent.
-		- To see the topics available, open a new terminal and {:$/technical/px4/ros2:** Source}[source] the local installation of `px4_msgs`. After that, run:
+		- To see the topics available, open a new terminal and [source](((65f8249b-4ccc-487e-bf6d-3e2afa2af6b0))) the local installation of `px4_msgs`. After that, run:
 		- ```bash
 		  ros2 topic list
 		  ```
@@ -94,7 +95,7 @@
 		- ```bash
 		   The message type '<message_name>' is invalid
 		  ```
-		- In that case, simply {:$/technical/px4/ros2:** Source}[source] the local installation for the terminal and try again.
+		- In that case, simply source the local installation for the terminal and try again.
 		- To get information about the message type being sent through these topics, run:
 		- ```bash
 		  ros2 topic info /fmu/out/<topic_name>
