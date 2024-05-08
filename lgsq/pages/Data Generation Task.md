@@ -273,8 +273,21 @@
 		  :LOGBOOK:
 		  CLOCK: [2024-05-07 Tue 10:53:16]--[2024-05-07 Tue 10:53:17] =>  00:00:01
 		  :END:
-- TODO Data collection
-	- TODO Hardware datasets
+- DOING Data collection
+  :LOGBOOK:
+  CLOCK: [2024-05-08 Wed 15:15:19]
+  :END:
+	- DOING Hardware datasets
+	  :LOGBOOK:
+	  CLOCK: [2024-05-08 Wed 15:15:16]
+	  :END:
+		- DOING Set up meeting with F4F to discuss possibility for anomalous tests
+		  id:: 663b5e94-aac1-4c11-91c3-48f6fdf3a1c0
+		  :LOGBOOK:
+		  CLOCK: [2024-05-08 Wed 15:14:33]
+		  :END:
+		- TODO Discuss data collection with broken propeller with F4F
+		  id:: 663b5eaf-de76-4d72-8f3f-9bd0c64025f2
 	- DOING Simulation datasets
 	  :LOGBOOK:
 	  CLOCK: [2024-05-07 Tue 11:02:58]
