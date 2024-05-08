@@ -1,10 +1,10 @@
 @document.meta
-title: template
+title: 8 May 2024
 description: 
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-05-08T09:46:53+0400
+updated: 2024-05-08T15:40:18+0400
 version: 1.1.1
 @end
 
@@ -31,23 +31,71 @@ ___
 
 * Meetings
 
-** Meeting Name
+** RTA Meeting
 
 *** Attendees
 
-    | Names
+    | SRTA-AD
 
 *** Goals
 
+    Establish goals and requirements for {:$/journal/task-box/q2-june-demo:}[Q2 June Demo]
 
 *** Agenda
 
-    - ( ) 
+    - (x) Update from Sakari on GPU accessibility status
+    - (x) Update on data collection and experimentation
 
 *** Minutes
 
+    Emrah and Ilkka have introduced a hack to get GPU passthrough working.
+
+    Passed this to Manuel, but some library dependency (libgstreamer) issue is
+    stopping it from reaching release.
+
+    If we can use T-M690b for flights here over hacking Holybro-X500 it would
+    be better.
+
+    RTA anomaly detection model from template --> may need to provide
+    assistance to set up the ROS nodes for this.
+
+    *Safety island:* at time of total failure, have a backup working
+    - for "Rabdan" SoC.
+    - how to extract data at such cases?
 
 *** Action Items
+
+    - (x) Send data from F4F missions:
+       -- (x) to Shamsa
+       -- (x) to Samridha
+
+** Solita - SRTA MLOps Syncup
+
+*** Attendees
+
+    | Solita
+    | SRTA-AD
+
+*** Goals
+
+    Updates on MLOps
+
+*** Agenda
+
+    - (x) Update on progress to {:$/journal/task-box/q2-june-demo:}[Q2 June Demo]
+
+*** Minutes
+
+    Sample model repository updated to use `fog-ros-base` image for easier
+    deployment and CI/CD.
+
+    SRTA repository updated to communicate with the UI w/ features included in
+    Q2 Demo.
+
+    E2E path mission with safe landing triggered by low battery:
+    - Add more flags (levels 1 -> 4).
+    - Remove the user acceptance trigger as it is supposed to be fully
+      automated.
 
     ===
 ___

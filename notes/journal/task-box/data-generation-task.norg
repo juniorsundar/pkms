@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:00:57+0400
-updated: 2024-05-07T10:54:20+0400
+updated: 2024-05-08T15:36:33+0400
 version: 1.1.1
 @end
 
@@ -207,9 +207,11 @@ version: 1.1.1
 ***  (x) Sort headers alphabetically after merging
 ***  (x) Change `label` header --> `filename`
 
-*  ( ) Data collection
-**  ( ) Hardware datasets
-**  ( ) Simulation datasets
+*  (-) Data collection
+**  (-) Hardware datasets
+*** (-) Set up meeting with F4F to discuss possibility for anomalous test
+*** ( ) Discuss data collection with broken propellor with F4F
+**  (-) Simulation datasets
 
 
 
