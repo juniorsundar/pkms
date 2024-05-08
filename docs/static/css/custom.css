@@ -1,9 +1,9 @@
 :root {
-  --ls-font-family: VictorMono NF;
+  --ls-font-family: JetBrains Mono;
 }
 
 * {
-  font-family: VictorMono NF, monospace;
+  font-family: JetBrains Mono, monospace;
 }
 
 @import url('https://logseq.catppuccin.com/ctp-frappe.css');
