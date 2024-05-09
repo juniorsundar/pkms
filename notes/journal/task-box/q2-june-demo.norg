@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-05-07T09:44:11+0400
+updated: 2024-05-09T20:19:09+0400
 version: 1.1.1
 @end
 
@@ -73,14 +73,16 @@ version: 1.1.1
 
 ** (_) Check with Mehmet if something like this needs to be implemented in the software and control scheme for the drone
 
-* (-) Printing the mounts and attach it to the drone
+* (x) Printing the mounts and attach it to the drone
 ** (x) Saluki V3 to Drone Mount
-** (-) Siyi A8 and Battery Mount
+** (x) Siyi A8 and Battery Mount
    .image assets/mounting_siyia8.JPG
 
 * ( ) Check if video encoding/decoding is happening on the hardware (Siyi A8)
 
-* ( ) Mount Saluki V3 to the Holybro-X500 Drone and get it airborne
+* (-) Mount Saluki V3 to the Holybro-X500 Drone and get it airborne
+** (-) Obtain Saluki V3
+** ( ) Set up Saluki V3 for flight mission
 
 * (-) Verify if this method can be used to record data in the outdoor arena demo -- talk to Jose Segovia
 

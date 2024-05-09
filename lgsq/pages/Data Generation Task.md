@@ -292,3 +292,8 @@
 	  :LOGBOOK:
 	  CLOCK: [2024-05-07 Tue 11:02:58]
 	  :END:
+- DOING Append the `resample` function into the `ulog_converter.py`
+  :LOGBOOK:
+  CLOCK: [2024-05-09 Thu 20:14:26]
+  CLOCK: [2024-05-09 Thu 20:14:30]
+  :END:
