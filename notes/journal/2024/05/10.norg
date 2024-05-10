@@ -1,0 +1,94 @@
+@document.meta
+title: 10 May 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-05-10T18:41:52+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+** (x) {:$/journal/2024/05/10:** Drone Data Collection - F4F}[Drone Data Collection - F4F] Action Items
+*** (x) Write and send mail with meeting minutes
+*** (x) Update GDrive with new folder format
+
+** (-) {:$/journal/task-box/q2-june-demo:}[Q2 June Demo]
+
+** (-) {:$/journal/task-box/data-generation-task:}[Data Generation Task]
+
+** (-) {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration]
+
+** ( ) Swarm simulation
+*** ( ) Obtain Documentation to set up swarm from Wang Haoran
+*** ( ) Research into UAV Decentralised Swarm implementations
+*** ( ) Search around in ARRC for work being done in decentralised control
+
+** ( ) Write up for Yashrajsinh Parmar's conference paper
+   /SCHEDULED:/ {@ Monday 13 May 2024}
+*** ( ) HiTL Experiment setup + Block diagram
+*** ( ) Fault injection methodology
+*** ( ) Flight failure detection
+
+** ( ) Send Appa the invoice Word document
+
+   ===
+___
+
+* Journal
+
+  ===
+___
+
+* Meetings
+
+** Drone Data Collection - F4F
+
+*** Attendees
+
+    | Vojtech Spurny
+    | Henriques Jorge
+    | Junior Sundar
+    | Samridha Sreshta
+    | Willian Lunardi
+    | Martin Andreoni
+
+*** Goals
+
+    Solidify a stable data collection channel for both Demo and Data Collection
+
+*** Agenda
+
+    - (x) Discussion about range of data collection strategies for normal flights
+    - (x) Brainstorming methods to run non-normal flights
+
+*** Minutes
+
+    F4F flies drone every week
+    
+    Currently uploading all the ulogs from flights to the PX4 website under
+    SSRC
+    
+    Willian: Flying over a wide range of terrains like
+    concrete/water/grass/people
+    
+    Discussing new flight class: altitude variation
+
+    Failed flights are usually uploaded to Confluence with a Jira Ticket
+    pointing to it
+
+    Non-normal flight scenarios:
+    - Miscalibration (At start of new day after transportation)
+    - Mistuning (PID controller parameters)
+    - Broken propeller
+    - Misshapen drone
+    - Weight distribution
+    - Pendulum
+    - Magnetometer interference
+
+    ===
+___
+
+{:$/journal/2024/05/09:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/05/11:}[next >]
+

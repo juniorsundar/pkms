@@ -281,19 +281,27 @@
 	  :LOGBOOK:
 	  CLOCK: [2024-05-08 Wed 15:15:16]
 	  :END:
-		- DOING Set up meeting with F4F to discuss possibility for anomalous tests
+		- DONE Set up meeting with F4F to discuss possibility for anomalous tests
 		  id:: 663b5e94-aac1-4c11-91c3-48f6fdf3a1c0
 		  :LOGBOOK:
-		  CLOCK: [2024-05-08 Wed 15:14:33]
+		  CLOCK: [2024-05-08 Wed 15:14:33]--[2024-05-10 Fri 17:56:43] =>  50:42:10
 		  :END:
-		- TODO Discuss data collection with broken propeller with F4F
+		- DONE Discuss data collection with broken propeller with F4F
 		  id:: 663b5eaf-de76-4d72-8f3f-9bd0c64025f2
+		  :LOGBOOK:
+		  CLOCK: [2024-05-10 Fri 17:56:40]--[2024-05-10 Fri 17:56:42] =>  00:00:02
+		  :END:
+		- DOING Collect normal and abnormal flight data from F4F
+		  :LOGBOOK:
+		  CLOCK: [2024-05-10 Fri 17:57:34]
+		  :END:
 	- DOING Simulation datasets
 	  :LOGBOOK:
 	  CLOCK: [2024-05-07 Tue 11:02:58]
 	  :END:
-- DOING Append the `resample` function into the `ulog_converter.py`
+- DONE Append the `resample` function into the `ulog_converter.py`
   :LOGBOOK:
   CLOCK: [2024-05-09 Thu 20:14:26]
-  CLOCK: [2024-05-09 Thu 20:14:30]
+  CLOCK: [2024-05-09 Thu 20:14:30]--[2024-05-10 Fri 17:59:12] =>  21:44:42
+  CLOCK: [2024-05-10 Fri 17:59:13]--[2024-05-10 Fri 17:59:14] =>  00:00:01
   :END:
