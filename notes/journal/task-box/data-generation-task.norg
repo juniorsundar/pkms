@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:00:57+0400
-updated: 2024-05-08T15:36:33+0400
+updated: 2024-05-10T17:59:29+0400
 version: 1.1.1
 @end
 
@@ -209,9 +209,12 @@ version: 1.1.1
 
 *  (-) Data collection
 **  (-) Hardware datasets
-*** (-) Set up meeting with F4F to discuss possibility for anomalous test
-*** ( ) Discuss data collection with broken propellor with F4F
+*** (x) Set up meeting with F4F to discuss possibility for anomalous test
+*** (x) Discuss data collection with broken propellor with F4F
+*** (-) Collect normal and abnormal flight data from F4F
 **  (-) Simulation datasets
+
+* (x) Append the `resample` function into the `ulog_converter.py`
 
 
 
