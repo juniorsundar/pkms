@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-05-10T18:41:52+0400
+updated: 2024-05-11T11:43:10+0400
 version: 1.1.1
 @end
 
@@ -14,24 +14,7 @@ version: 1.1.1
 *** (x) Write and send mail with meeting minutes
 *** (x) Update GDrive with new folder format
 
-** (-) {:$/journal/task-box/q2-june-demo:}[Q2 June Demo]
-
-** (-) {:$/journal/task-box/data-generation-task:}[Data Generation Task]
-
-** (-) {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration]
-
-** ( ) Swarm simulation
-*** ( ) Obtain Documentation to set up swarm from Wang Haoran
-*** ( ) Research into UAV Decentralised Swarm implementations
-*** ( ) Search around in ARRC for work being done in decentralised control
-
-** ( ) Write up for Yashrajsinh Parmar's conference paper
-   /SCHEDULED:/ {@ Monday 13 May 2024}
-*** ( ) HiTL Experiment setup + Block diagram
-*** ( ) Fault injection methodology
-*** ( ) Flight failure detection
-
-** ( ) Send Appa the invoice Word document
+** (x) Send Appa the invoice Word document
 
    ===
 ___
