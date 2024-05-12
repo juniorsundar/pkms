@@ -1,0 +1,35 @@
+@document.meta
+title: 12 March 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-05-12T21:44:57+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+** (-) {:$/journal/task-box/q2-june-demo:}[Q2 June Demo]
+
+** (-) {:$/journal/task-box/data-generation-task:}[Data Generation Task]
+
+** (-) {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration]
+
+** ( ) Swarm simulation
+*** ( ) Obtain Documentation to set up swarm from Wang Haoran
+*** ( ) Research into UAV Decentralised Swarm implementations
+*** ( ) Search around in ARRC for work being done in decentralised control
+
+** (-) Write up for Yashrajsinh Parmar's conference paper
+   /SCHEDULED:/ {@ Monday 13 May 2024}
+*** (-) HiTL Experiment setup + Block diagram
+*** (-) Fault injection methodology
+*** (-) Flight failure detection
+
+    ===
+___
+
+{:$/journal/2024/05/11:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/05/13:}[next >]
+
+
