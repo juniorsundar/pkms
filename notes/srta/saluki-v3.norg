@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-02-13T14:43:07+0400
-updated: 2024-03-08T13:07:15+0400
+updated: 2024-05-13T21:32:19+0400
 version: 1.1.1
 @end
 
@@ -69,7 +69,7 @@ version: 1.1.1
     The Jetson Orin NX can now be flashed with the following command:
     @code bash
     sudo ./tools/kernel_flash/l4t_initrd_flash.sh \
-    -- external-device nvme0n1p1 \
+    --external-device nvme0n1p1 \
     -c tools/kernel_flash/flash_l4t_external.xml -p "-c bootloader/t186ref/cfg/flash_t234_qspi.xml" \
     --showlogs --network usb0 jetson-orin-nano-devkit internal
     @end
@@ -132,7 +132,7 @@ version: 1.1.1
     firmware will be installed:
 
     @code bash
-    sudo fog installer create-media --profile=nvidia-nx --site=uae /dev/ID --confirm
+    sudo fog installer create-media --profile=nvidia-nx --site=uae /dev/<ID> --confirm
     @end
 
 *** Install FOG Software in the drone
@@ -174,6 +174,11 @@ version: 1.1.1
    export SC_INSTALL_DIR=~/Microchip/SoftConsole-v2022.2-RISC-V-747
 
    sudo SC_INSTALL_DIR=~/Microchip/SoftConsole-v2022.2-RISC-V-747 FPGENPROG=/usr/local/microchip/Program_Debug_v2023.1/Program_Debug_Tool/bin64/fpgenprog java -jar $SC_INSTALL_DIR/extras/mpfs/mpfsBootmodeProgrammer.jar --bootmode 1 --die MPFS250T ssrc_saluki-v3_bootloader-1.1-23-g8e44177.elf
+
+   ## OPTION 2
+   export SC_INSTALL_DIR=/home/juniorsundar-unikie/Microchip/SoftConsole-v2022.2-RISC-V-747
+
+   sudo SC_INSTALL_DIR=/home/juniorsundar-unikie/Microchip/SoftConsole-v2022.2-RISC-V-747 FPGENPROG=/usr/local/microchip/Program_Debug_v2023.1/Program_Debug_Tool/bin64/fpgenprog java -jar $SC_INSTALL_DIR/extras/mpfs/mpfsBootmodeProgrammer.jar --bootmode 1 --die MPFS250T ssrc_saluki-v3_bootloader-1.1-23-g8e44177.elf
    @end
 
    Next certify with the RnD test keys:
