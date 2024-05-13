@@ -97,7 +97,11 @@
   CLOCK: [2024-05-09 Thu 20:13:13]
   :END:
 	- DONE Obtain Saluki V3
-	- DOING Set up Saluki V3 for flight mission
+	- DONE Set up Saluki V3 for flight mission
 	  :LOGBOOK:
-	  CLOCK: [2024-05-10 Fri 17:58:18]
+	  CLOCK: [2024-05-10 Fri 17:58:18]--[2024-05-13 Mon 21:27:34] =>  75:29:16
+	  :END:
+	- DOING Mount Saluki V3 to Holybro
+	  :LOGBOOK:
+	  CLOCK: [2024-05-13 Mon 21:27:30]
 	  :END:
