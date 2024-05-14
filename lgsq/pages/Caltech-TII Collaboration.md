@@ -1,97 +1,98 @@
-- DONE [First meeting](((660f9803-86fb-4d27-8592-f471e3712eba)))
-  :LOGBOOK:
-  CLOCK: [2024-04-04 Thu 23:11:09]--[2024-04-15 Mon 13:16:47] =>  254:05:38
-  :END:
-	- DONE Follow up with [instructional](((660fab83-c0af-4019-8e61-d168f0f8ff42))) response
-	- DONE Read [[Safety of Linear Systems under Severe Sensor Attacks]]
+# Tasks
+	- DONE [First meeting](((660f9803-86fb-4d27-8592-f471e3712eba)))
 	  :LOGBOOK:
-	  CLOCK: [2024-04-04 Thu 23:06:46]--[2024-04-15 Mon 13:15:11] =>  254:08:25
+	  CLOCK: [2024-04-04 Thu 23:11:09]--[2024-04-15 Mon 13:16:47] =>  254:05:38
 	  :END:
-- DONE Prepare a small demonstration for second meeting
-  :LOGBOOK:
-  CLOCK: [2024-04-04 Thu 23:05:41]--[2024-04-04 Thu 23:06:44] =>  00:01:03
-  CLOCK: [2024-04-04 Thu 23:11:07]--[2024-04-04 Thu 23:11:07] =>  00:00:00
-  CLOCK: [2024-04-15 Mon 13:16:47]--[2024-04-17 Wed 15:58:33] =>  50:41:46
-  :END:
-	- DONE Split the directed attacks to the accelerometer for x, y and z-axis
+		- DONE Follow up with [instructional](((660fab83-c0af-4019-8e61-d168f0f8ff42))) response
+		- DONE Read [[Safety of Linear Systems under Severe Sensor Attacks]]
+		  :LOGBOOK:
+		  CLOCK: [2024-04-04 Thu 23:06:46]--[2024-04-15 Mon 13:15:11] =>  254:08:25
+		  :END:
+	- DONE Prepare a small demonstration for second meeting
 	  :LOGBOOK:
-	  CLOCK: [2024-04-15 Mon 13:18:10]--[2024-04-15 Mon 16:03:38] =>  02:45:28
+	  CLOCK: [2024-04-04 Thu 23:05:41]--[2024-04-04 Thu 23:06:44] =>  00:01:03
+	  CLOCK: [2024-04-04 Thu 23:11:07]--[2024-04-04 Thu 23:11:07] =>  00:00:00
+	  CLOCK: [2024-04-15 Mon 13:16:47]--[2024-04-17 Wed 15:58:33] =>  50:41:46
 	  :END:
-	- DONE Create a node spinner that can induce a targeted attack on these axes
+		- DONE Split the directed attacks to the accelerometer for x, y and z-axis
+		  :LOGBOOK:
+		  CLOCK: [2024-04-15 Mon 13:18:10]--[2024-04-15 Mon 16:03:38] =>  02:45:28
+		  :END:
+		- DONE Create a node spinner that can induce a targeted attack on these axes
+		  :LOGBOOK:
+		  CLOCK: [2024-04-15 Mon 16:03:36]--[2024-04-16 Tue 14:31:10] =>  22:27:34
+		  :END:
+		- DONE Create a visualisation that captures this behaviour
+		  :LOGBOOK:
+		  CLOCK: [2024-04-16 Tue 14:31:08]--[2024-04-17 Wed 15:58:32] =>  25:27:24
+		  :END:
+	- DONE [Second meeting](((66214ed0-8de1-4d80-aa69-b65f4e3be402)))
 	  :LOGBOOK:
-	  CLOCK: [2024-04-15 Mon 16:03:36]--[2024-04-16 Tue 14:31:10] =>  22:27:34
+	  CLOCK: [2024-04-18 Thu 15:52:39]--[2024-04-18 Thu 21:04:48] =>  05:12:09
 	  :END:
-	- DONE Create a visualisation that captures this behaviour
+		- DONE Read [paper]([[Secure State Reconstruction in Differentially Flat Systems Under Sensor Attacks Using Satisfiability Modulo Theory Solving]])
+		  id:: 66215121-a83a-4448-9960-9ddf25ef204f
+		  :LOGBOOK:
+		  CLOCK: [2024-04-18 Thu 21:05:15]--[2024-04-18 Thu 21:05:16] =>  00:00:01
+		  CLOCK: [2024-04-18 Thu 21:05:16]--[2024-04-18 Thu 21:05:17] =>  00:00:01
+		  CLOCK: [2024-04-18 Thu 21:20:49]--[2024-04-23 Tue 11:55:09] =>  110:34:20
+		  :END:
+	- DONE [Third meeting](((66260755-1d06-44fc-a270-ca1cbec2c0e2)))
 	  :LOGBOOK:
-	  CLOCK: [2024-04-16 Tue 14:31:08]--[2024-04-17 Wed 15:58:32] =>  25:27:24
+	  CLOCK: [2024-04-22 Mon 10:45:06]--[2024-04-22 Mon 23:57:52] =>  13:12:46
 	  :END:
-- DONE [Second meeting](((66214ed0-8de1-4d80-aa69-b65f4e3be402)))
-  :LOGBOOK:
-  CLOCK: [2024-04-18 Thu 15:52:39]--[2024-04-18 Thu 21:04:48] =>  05:12:09
-  :END:
-	- DONE Read [paper]([[Secure State Reconstruction in Differentially Flat Systems Under Sensor Attacks Using Satisfiability Modulo Theory Solving]])
-	  id:: 66215121-a83a-4448-9960-9ddf25ef204f
+	- DONE Implement simple data extraction and injection module as an external ROS Node
+	  id:: 6626c020-2327-420e-b629-822e1cb565d4
 	  :LOGBOOK:
-	  CLOCK: [2024-04-18 Thu 21:05:15]--[2024-04-18 Thu 21:05:16] =>  00:00:01
-	  CLOCK: [2024-04-18 Thu 21:05:16]--[2024-04-18 Thu 21:05:17] =>  00:00:01
-	  CLOCK: [2024-04-18 Thu 21:20:49]--[2024-04-23 Tue 11:55:09] =>  110:34:20
+	  CLOCK: [2024-04-23 Tue 11:55:14]--[2024-04-30 Tue 20:59:57] =>  177:04:43
 	  :END:
-- DONE [Third meeting](((66260755-1d06-44fc-a270-ca1cbec2c0e2)))
-  :LOGBOOK:
-  CLOCK: [2024-04-22 Mon 10:45:06]--[2024-04-22 Mon 23:57:52] =>  13:12:46
-  :END:
-- DONE Implement simple data extraction and injection module as an external ROS Node
-  id:: 6626c020-2327-420e-b629-822e1cb565d4
-  :LOGBOOK:
-  CLOCK: [2024-04-23 Tue 11:55:14]--[2024-04-30 Tue 20:59:57] =>  177:04:43
-  :END:
-	- DONE Research into how the data pipeline is arranged in the flight controller
+		- DONE Research into how the data pipeline is arranged in the flight controller
+		  :LOGBOOK:
+		  CLOCK: [2024-04-23 Tue 11:55:13]--[2024-04-26 Fri 10:17:44] =>  70:22:31
+		  :END:
+		- DONE Research existing strategies to achieve the data interception and injection
+		  collapsed:: true
+		  :LOGBOOK:
+		  CLOCK: [2024-04-26 Fri 10:17:47]--[2024-04-30 Tue 15:17:32] =>  100:59:45
+		  :END:
+			- [[PX4 - Controls]]
+		- DONE Test implementation
+		  collapsed:: true
+		  :LOGBOOK:
+		  CLOCK: [2024-04-30 Tue 15:18:31]--[2024-04-30 Tue 15:18:33] =>  00:00:02
+		  :END:
+			- ((6630d364-3fd7-43f5-9124-1a4b07efaad2))
+	- DONE [Fourth meeting](((66386c1a-c19b-46a9-b6ed-2469fe003da8)))
+	- DONE Verify and validate if the position obtained from the FC's EKF is the same as the actual position of the drone in the simulation environment
+	  id:: 6633c7e4-1bb7-4a2a-87c6-1d85b1034088
 	  :LOGBOOK:
-	  CLOCK: [2024-04-23 Tue 11:55:13]--[2024-04-26 Fri 10:17:44] =>  70:22:31
+	  CLOCK: [2024-05-06 Mon 09:36:05]--[2024-05-06 Mon 14:22:28] =>  04:46:23
 	  :END:
-	- DONE Research existing strategies to achieve the data interception and injection
-	  collapsed:: true
-	  :LOGBOOK:
-	  CLOCK: [2024-04-26 Fri 10:17:47]--[2024-04-30 Tue 15:17:32] =>  100:59:45
-	  :END:
-		- [[PX4 - Controls]]
-	- DONE Test implementation
-	  collapsed:: true
-	  :LOGBOOK:
-	  CLOCK: [2024-04-30 Tue 15:18:31]--[2024-04-30 Tue 15:18:33] =>  00:00:02
-	  :END:
-		- ((6630d364-3fd7-43f5-9124-1a4b07efaad2))
-- DONE [Fourth meeting](((66386c1a-c19b-46a9-b6ed-2469fe003da8)))
-- DONE Verify and validate if the position obtained from the FC's EKF is the same as the actual position of the drone in the simulation environment
-  id:: 6633c7e4-1bb7-4a2a-87c6-1d85b1034088
-  :LOGBOOK:
-  CLOCK: [2024-05-06 Mon 09:36:05]--[2024-05-06 Mon 14:22:28] =>  04:46:23
-  :END:
-- DONE [Fifth meeting](((66392067-cc32-4121-922f-0f072aa546e2)))
-- DONE Look up MATLAB Cell
-  id:: 663923ce-a39f-45de-b997-6c7b0cdc97c9
-	- A flexible data container that can hold different types of data.
-	- It is primarily used for:
-		- storing heterogeneous data,
-		- organising text data, and
-		- creating flexible structures.
-	- Working with:
-		- ```matlab
-		  %% Create
-		  myCellArray = {'Hello', [1 2 3], true};  
-		  myCellArray = cell(3, 2); % Creates a 3x2 cell array  
-		  ```
-		- ```matlab
-		  %% Access
-		  value = myCellArray{1};   % Accesses the content of the first cell
-		  ```
-		- ```matlab
-		  %% Edit
-		  myCellArray(2,1) = 100;   % Changes content within the cell array 
-		  ```
-- TODO Try out state reconstruction method with simple example
-  id:: 6639243a-3acc-4468-a10d-594e60b555ef
-- ___
+	- DONE [Fifth meeting](((66392067-cc32-4121-922f-0f072aa546e2)))
+	- DONE Look up MATLAB Cell
+	  id:: 663923ce-a39f-45de-b997-6c7b0cdc97c9
+		- A flexible data container that can hold different types of data.
+		- It is primarily used for:
+			- storing heterogeneous data,
+			- organising text data, and
+			- creating flexible structures.
+		- Working with:
+			- ```matlab
+			  %% Create
+			  myCellArray = {'Hello', [1 2 3], true};  
+			  myCellArray = cell(3, 2); % Creates a 3x2 cell array  
+			  ```
+			- ```matlab
+			  %% Access
+			  value = myCellArray{1};   % Accesses the content of the first cell
+			  ```
+			- ```matlab
+			  %% Edit
+			  myCellArray(2,1) = 100;   % Changes content within the cell array 
+			  ```
+	- TODO Try out state reconstruction method with simple example
+	  id:: 6639243a-3acc-4468-a10d-594e60b555ef
+- # Notes
 - # Instructional
   id:: 660fab83-c0af-4019-8e61-d168f0f8ff42
   collapsed:: true
