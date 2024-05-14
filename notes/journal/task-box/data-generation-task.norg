@@ -6,113 +6,115 @@ categories: [
     task
 ]
 created: 2024-04-04T23:00:57+0400
-updated: 2024-05-11T23:53:31+0400
+updated: 2024-05-14T21:03:30+0400
 version: 1.1.1
 @end
 
-* (x) {:$/journal/2024/03/20:****  Literature review}[Literature review]
+* Tasks
 
-* (x) Generate plan of action
-** (x) Figure out how to make a {:$/technical/px4/simulation:** Containerised Deployment}[Containerised Deployment]
-** (x) Figure out how to set up ROS in a containerised environment
-*** (x) Launch ROS in containerised environment
-*** (x) Clone and build ROS 2 workspace into containerised environment
-*** (x) Be able to run {:$/technical/px4/px4:* Dockerised ROS 2 CLI}[Dockerised ROS 2 CLI] as well as launch all the built nodes
-*** (x) The `.bag` files need to be obtainable as well
-    We may need to be able to dump the bags `.mcap` format. So this means
-    that a drive needs to be mounted and exposed when launching the
-    container.
+** (x) {:$/journal/2024/03/20:****  Literature review}[Literature review]
 
-** (x) Install and set up mechanism to convert log files.
-   *NOTE* that the rate at which data is being recorded is throttled
+** (x) Generate plan of action
+*** (x) Figure out how to make a {:$/technical/px4/simulation:** Containerised Deployment}[Containerised Deployment]
+*** (x) Figure out how to set up ROS in a containerised environment
+**** (x) Launch ROS in containerised environment
+**** (x) Clone and build ROS 2 workspace into containerised environment
+**** (x) Be able to run {:$/technical/px4/px4:* Dockerised ROS 2 CLI}[Dockerised ROS 2 CLI] as well as launch all the built nodes
+**** (x) The `.bag` files need to be obtainable as well
+     We may need to be able to dump the bags `.mcap` format. So this means
+     that a drive needs to be mounted and exposed when launching the
+     container.
 
-** (x) Formalise a PoA
-   The goal is to generate data sets that are diverse, and sufficiently large
-   to be able to train and test models.
+*** (x) Install and set up mechanism to convert log files.
+    *NOTE* that the rate at which data is being recorded is throttled
 
-   In deployment, the experiment environment must be able to run simulations
-   and record data /ad inifinitum/ given a preset list of parameters.
+*** (x) Formalise a PoA
+    The goal is to generate data sets that are diverse, and sufficiently large
+    to be able to train and test models.
 
-   The simulation may cycle through a preset list of movement tasks, or it
-   may generate a randomised movement task.
+    In deployment, the experiment environment must be able to run simulations
+    and record data /ad inifinitum/ given a preset list of parameters.
 
-   The simulation will start and end with each iteration for thorough safety
-   during deployment.
-   - Parameters will be cleansed to remove all faults before the simulation
-     is killed.
-   - Data will be recorded in bags, and all pertinent topics will be dumped.
-   - ULOG file must also be copied over.
-   - Fault data must also be copied over (time of injection, type, etc.).
+    The simulation may cycle through a preset list of movement tasks, or it
+    may generate a randomised movement task.
 
-   To that end, the following prerequisites are important to get fully set up:
-   ~ ROS bags being recorded as `.mcap` files and being dumped somewhere safe.
-   ~ ROS nodes to initiate rosbag records when trigger is received.
-   ~ Mission controller node to handle generating executing missions.
-   ~ Fault handler to trigger and record faults.
-   ~ Drone state monitor that checks if the drone is functioning. If crash,
-     then crash time needs to be recorded.
+    The simulation will start and end with each iteration for thorough safety
+    during deployment.
+    - Parameters will be cleansed to remove all faults before the simulation
+      is killed.
+    - Data will be recorded in bags, and all pertinent topics will be dumped.
+    - ULOG file must also be copied over.
+    - Fault data must also be copied over (time of injection, type, etc.).
 
-   *How to handle when the mission starts and finishes?*
+    To that end, the following prerequisites are important to get fully set up:
+    ~ ROS bags being recorded as `.mcap` files and being dumped somewhere safe.
+    ~ ROS nodes to initiate rosbag records when trigger is received.
+    ~ Mission controller node to handle generating executing missions.
+    ~ Fault handler to trigger and record faults.
+    ~ Drone state monitor that checks if the drone is functioning. If crash,
+      then crash time needs to be recorded.
 
-   This is necessary for segregating the bag files, and also to manage the
-   sequencing for continuous mission records.
+    *How to handle when the mission starts and finishes?*
 
-   ? We could use the termination of the mission thread to signify a end of
-   mission.
-   ? Should we resort to end of mission in all chases? Even if there is a
-   crash?
+    This is necessary for segregating the bag files, and also to manage the
+    sequencing for continuous mission records.
 
-   Mission finishes normally -->
-   - run through normal cleanup sequence
-   - restart simulation.
+    ? We could use the termination of the mission thread to signify a end of
+    mission.
+    ? Should we resort to end of mission in all chases? Even if there is a
+    crash?
 
-   Drone crashes -->
-   - trigger a preempt on the requesting thread
-   - run cleanup sequence
-   - restart simulation
+    Mission finishes normally -->
+    - run through normal cleanup sequence
+    - restart simulation.
 
-* (x) Setup simulation and data collection system in local machine
-** (x) Complete the data recording node with automatic folder dumping
-** (x) Add auto dumping of whether the mission was completed successfully or failed
-** (x) Create a HTTP server to manage the auto-launch and killing of simulation
-   Since the simulation runs on a separate container this needs to be
-   achieved through a server call
+    Drone crashes -->
+    - trigger a preempt on the requesting thread
+    - run cleanup sequence
+    - restart simulation
 
-** (x) Expose the records/bag folder for autodump of rosbags
-   @code bash
-   docker run -it --rm \
-   --network=host -p 14540:14540/udp \
-   --ipc=host --pid=host \
-   --env UID=$(id -u) \
-   --env GID=$(id -g) \
-   -v $(pwd)/records:/ros_workspace/records \
-   px4-ros ros2
-   @end
+** (x) Setup simulation and data collection system in local machine
+*** (x) Complete the data recording node with automatic folder dumping
+*** (x) Add auto dumping of whether the mission was completed successfully or failed
+*** (x) Create a HTTP server to manage the auto-launch and killing of simulation
+    Since the simulation runs on a separate container this needs to be
+    achieved through a server call
 
-** (x) Test full pipeline for robustness for a simple deployment
+*** (x) Expose the records/bag folder for autodump of rosbags
+    @code bash
+    docker run -it --rm \
+        --network=host -p 14540:14540/udp \
+        --ipc=host --pid=host \
+        --env UID=$(id -u) \
+        --env GID=$(id -g) \
+        -v $(pwd)/records:/ros_workspace/records \
+        px4-ros ros2
+    @end
 
-* (x) Deploy to container registry
-** (x) Test once and observe if it is allowed
-** (_) Set up GitHub Actions to do this automatically
+*** (x) Test full pipeline for robustness for a simple deployment
 
-* (x) Run test batch
-** (x) Obtain a few data sets with short time-frame large fault injection
-** (x) Create a convenient `.mcap` converter script
-   @code python
-   #!/usr/bin python3
+** (x) Deploy to container registry
+*** (x) Test once and observe if it is allowed
+*** (_) Set up GitHub Actions to do this automatically
 
-   import argparse
-   import pandas as pd
-   import os
-   import px4_msgs.msg
-   from mcap_ros2.reader import read_ros2_messages
-   from rosidl_runtime_py import message_to_ordereddict
-   import importlib
-   from glob import glob
-   import yaml
+** (x) Run test batch
+*** (x) Obtain a few data sets with short time-frame large fault injection
+*** (x) Create a convenient `.mcap` converter script
+    @code python
+    #!/usr/bin python3
 
-   def px4_mcap_to_csv(mcap_dir: str) -> None:
-       """
+    import argparse
+    import pandas as pd
+    import os
+    import px4_msgs.msg
+    from mcap_ros2.reader import read_ros2_messages
+    from rosidl_runtime_py import message_to_ordereddict
+    import importlib
+    from glob import glob
+    import yaml
+
+    def px4_mcap_to_csv(mcap_dir: str) -> None:
+        """
         Convert PX4 MCAP files to CSV format.
 
         Args:
@@ -121,100 +123,100 @@ version: 1.1.1
         Raises:
             FileNotFoundError: If no MCAP files are found in the specified directory.
         """
-       df = pd.DataFrame()
+    df = pd.DataFrame()
 
-       try:
-           mcap_filename = glob(os.path.join(mcap_dir, "*.mcap"))[0]
-           metadata = glob(os.path.join(mcap_dir, "*.yaml"))[0]
-       except IndexError:
-           print(f"No MCAP files found in {mcap_dir}")
-           return
+    try:
+        mcap_filename = glob(os.path.join(mcap_dir, "*.mcap"))[0]
+        metadata = glob(os.path.join(mcap_dir, "*.yaml"))[0]
+    except IndexError:
+        print(f"No MCAP files found in {mcap_dir}")
+        return
 
-       with open(metadata, "r") as file:
-           metadata = yaml.safe_load(file)
+    with open(metadata, "r") as file:
+        metadata = yaml.safe_load(file)
 
-       for i in range(len(metadata["rosbag2_bagfile_information"]["topics_with_message_count"])):
-           msg_addr = metadata["rosbag2_bagfile_information"]["topics_with_message_count"][i]["topic_metadata"]["type"]
+    for i in range(len(metadata["rosbag2_bagfile_information"]["topics_with_message_count"])):
+        msg_addr = metadata["rosbag2_bagfile_information"]["topics_with_message_count"][i]["topic_metadata"]["type"]
 
-           msg_addr = msg_addr.split("/")
+        msg_addr = msg_addr.split("/")
 
-           module = importlib.import_module(msg_addr[0])
-           message_package = getattr(module, msg_addr[1])
-           message = getattr(message_package, msg_addr[2])
+        module = importlib.import_module(msg_addr[0])
+        message_package = getattr(module, msg_addr[1])
+        message = getattr(message_package, msg_addr[2])
 
-           empty_msg_dict = message_to_ordereddict(message())
-           header = []
-           for sub_key in list(empty_msg_dict.keys()):
-               if sub_key == 'timestamp':
-                   header.append(sub_key)
-               else:
-                   try:
-                       for j in range(len(empty_msg_dict[sub_key])):
-                           header.append(sub_key + f"_{j}")
-                   except TypeError:
-                       header.append(f"{sub_key}")
-           header = ",".join(header) + "\n"
+        empty_msg_dict = message_to_ordereddict(message())
+        header = []
+        for sub_key in list(empty_msg_dict.keys()):
+            if sub_key == 'timestamp':
+                header.append(sub_key)
+            else:
+                try:
+                    for j in range(len(empty_msg_dict[sub_key])):
+                        header.append(sub_key + f"_{j}")
+                except TypeError:
+                    header.append(f"{sub_key}")
+        header = ",".join(header) + "\n"
 
-           full_csv = ""
+        full_csv = ""
 
-           try:
-               for msg in read_ros2_messages(mcap_filename):
-                   try:
-                       current_line = ",".join([f"{msg.ros_msg.__getattribute__(key)}" for key in list(empty_msg_dict.keys())]) + "\n"
-                       current_line = current_line.replace("[", "")
-                       current_line = current_line.replace("]", "")
-                       current_line = current_line.replace(", ", ",")
-                       full_csv += current_line
-                   except:
-                       continue
+        try:
+            for msg in read_ros2_messages(mcap_filename):
+                try:
+                    current_line = ",".join([f"{msg.ros_msg.__getattribute__(key)}" for key in list(empty_msg_dict.keys())]) + "\n"
+                    current_line = current_line.replace("[", "")
+                    current_line = current_line.replace("]", "")
+                    current_line = current_line.replace(", ", ",")
+                    full_csv += current_line
+                except:
+                    continue
 
-               dat = [x.split(",") for x in (header + full_csv).strip("\n").split("\n")]
-               df = pd.DataFrame(dat)
-               df = df.T.set_index(0, drop=True).T
-           except Exception as e:
-               print(f"Message versions probably aren't matching. Confirm if message fields are matching: {e}")
+            dat = [x.split(",") for x in (header + full_csv).strip("\n").split("\n")]
+            df = pd.DataFrame(dat)
+            df = df.T.set_index(0, drop=True).T
+        except Exception as e:
+            print(f"Message versions probably aren't matching. Confirm if message fields are matching: {e}")
 
-           dumpfile = f"{mcap_dir}{msg_addr[2]}.csv"
-           df.to_csv(dumpfile, index=False)
+        dumpfile = f"{mcap_dir}{msg_addr[2]}.csv"
+        df.to_csv(dumpfile, index=False)
 
-       return
-
-
-   def main():
-       parser = argparse.ArgumentParser(description="Convert PX4 MCAP files to CSV")
-       parser.add_argument("directory", help="Path to the directory containing all MCAP folders")
-
-       args = parser.parse_args()
-
-       mcap_dir = args.directory
-
-       dir = os.listdir(mcap_dir)
-       for entry in dir:
-           is_dir = os.path.isdir(f"{mcap_dir}/{entry}")
-           if is_dir:
-               px4_mcap_to_csv(f"{mcap_dir}/{entry}/")
+    return
 
 
-   if __name__ == "__main__":
-       main()
-   @end
+    def main():
+        parser = argparse.ArgumentParser(description="Convert PX4 MCAP files to CSV")
+    parser.add_argument("directory", help="Path to the directory containing all MCAP folders")
 
-** (x) Actively maintain and improve the rosnodes
+    args = parser.parse_args()
 
-*  (x) Organisation/Packaging of datasets
-**  (x) Write script to merge `.ulog` files into one `.csv` file
-**  (x) Some fixes to the merging process:
-***  (x) Sort headers alphabetically after merging
-***  (x) Change `label` header --> `filename`
+    mcap_dir = args.directory
 
-*  (-) Data collection
-**  (-) Hardware datasets
-*** (x) Set up meeting with F4F to discuss possibility for anomalous test
-*** (x) Discuss data collection with broken propellor with F4F
-*** (-) Collect normal and abnormal flight data from F4F
-**  (-) Simulation datasets
+    dir = os.listdir(mcap_dir)
+    for entry in dir:
+        is_dir = os.path.isdir(f"{mcap_dir}/{entry}")
+        if is_dir:
+            px4_mcap_to_csv(f"{mcap_dir}/{entry}/")
 
-* (x) Append the `resample` function into the `ulog_converter.py`
+
+    if __name__ == "__main__":
+        main()
+    @end
+
+*** (x) Actively maintain and improve the rosnodes
+
+**  (x) Organisation/Packaging of datasets
+***  (x) Write script to merge `.ulog` files into one `.csv` file
+***  (x) Some fixes to the merging process:
+****  (x) Sort headers alphabetically after merging
+****  (x) Change `label` header --> `filename`
+
+**  (-) Data collection
+***  (-) Hardware datasets
+**** (x) Set up meeting with F4F to discuss possibility for anomalous test
+**** (x) Discuss data collection with broken propellor with F4F
+**** (-) Collect normal and abnormal flight data from F4F
+***  (-) Simulation datasets
+
+** (x) Append the `resample` function into the `ulog_converter.py`
 
 
 

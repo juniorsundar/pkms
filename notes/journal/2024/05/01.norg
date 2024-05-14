@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-05-02T19:21:50+0400
+updated: 2024-05-14T21:30:41+0400
 version: 1.1.1
 @end
 
@@ -54,7 +54,7 @@ ___
 *** Action Items
 
     - {** Send the F4F data to Shamsa}[Send the F4F data to Shamsa]
-    - {:$/journal/task-box/q2-june-demo:** Check if video encoding/decoding is happening on the hardware (Siyi A8)}[Check if video encoding/decoding is happening on the hardware (Siyi A8)]
+    - {:$/journal/task-box/q2-june-demo:***  Check first what kind of triggers can be implemented with Solita}[Check if video encoding/decoding is happening on the hardware (Siyi A8)]
     - {:$/journal/task-box/q2-june-demo:** Get on Solita about getting camera segmentation demo ready}[Get on Solita about getting camera segmentation demo ready]
     - {:$/journal/task-box/q2-june-demo:** Triggering the RTA modules}[Triggering the RTA modules]
 
