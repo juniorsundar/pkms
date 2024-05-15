@@ -109,6 +109,17 @@
 		  :LOGBOOK:
 		  CLOCK: [2024-05-13 Mon 21:27:30]
 		  :END:
+	- TODO Obtain some long duration continuous flight missions from F4F
+	  id:: 6644986f-3693-4f9a-a761-d89d522561e0
+	- DOING Freeze code and model
+	  id:: 6644991b-cbe7-4882-9761-382fc01aeb4c
+	  SCHEDULED: <2024-06-30 Sun>
+	  :LOGBOOK:
+	  CLOCK: [2024-05-15 Wed 15:17:19]
+	  :END:
+	- TODO Demo
+	  id:: 664499d6-f73c-49a9-bd7c-6d2ddd36eb87
+	  SCHEDULED: <2024-07-01 Mon>
 - # Notes
 	- Task changes because it was possible to receive a T-Motor M690b assigned for SRTA Team
 		- ((66386c1b-cb4c-4ea2-a161-fd8ffedf4d86))

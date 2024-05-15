@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-05-15T11:16:58+0400
+updated: 2024-05-15T16:19:28+0400
 version: 1.1.1
 @end
 
@@ -31,23 +31,71 @@ ___
 
 * Meetings
 
-** Meeting Name
+** RTA Meeting
 
 *** Attendees
 
-    | Names
+    | SRTA-AD
 
 *** Goals
 
+    Demo update and timelines
 
 *** Agenda
 
-    - ( ) 
+    - (x) Discuss state of system in preparation for the demo
+    - (x) Set demo deadlines
 
 *** Minutes
 
+    People need to go for the International Exhibition of National Security and
+    Resilience conference in ADNEC.
+
+    Sakari: Building new fog-system and writing to a bootable USb to try and
+    install into Saluki V3.
+
+    SRTA will be running inside the App VM.
+
+    Prepare a X500 as backup for far future -- not a priority at the moment.
 
 *** Action Items
+
+    - {:$/journal/task-box/data-generation-task:** Consider numeric suffix for project folder}
+    - {:$/journal/task-box/q2-june-demo:** Obtain some long duration continuous flight missions from F4F}
+    - {:$/journal/task-box/q2-june-demo:** Freeze code and model}
+    - {:$/journal/task-box/q2-june-demo:** Demo}
+
+** Solita - SRTA MLOps Syncup
+
+*** Attendees
+
+    | SRTA-AD
+    | Solita
+
+*** Goals
+
+    Update for demo
+    State of MLOps and SRTA module deployments
+
+*** Agenda
+
+    - (x) Up to speed on the state of development of SRTA modules and such
+    - (x) Synchronise on deliverables for the demo.
+
+*** Minutes
+
+    Template repository has been set up and running on Sam's system
+    - Full training pipeline is unnecessary for demo, we can start straight
+      from upload of model.
+    - Template repository contains sample .bag files for testing purposes.
+
+    What drone is being targetted for demo?
+    - Saluki V3
+    - None in particular as it is regardless of frame
+
+    Segmentation -> Safe Landing is targeted for simulation only at the moment
+    in a simulation world
+
 
     ===
 ___
