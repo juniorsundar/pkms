@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:00:57+0400
-updated: 2024-05-14T21:03:30+0400
+updated: 2024-05-15T16:09:19+0400
 version: 1.1.1
 @end
 
@@ -209,6 +209,8 @@ version: 1.1.1
 ****  (x) Sort headers alphabetically after merging
 ****  (x) Change `label` header --> `filename`
 
+** (x) Append the `resample` function into the `ulog_converter.py`
+
 **  (-) Data collection
 ***  (-) Hardware datasets
 **** (x) Set up meeting with F4F to discuss possibility for anomalous test
@@ -216,8 +218,6 @@ version: 1.1.1
 **** (-) Collect normal and abnormal flight data from F4F
 ***  (-) Simulation datasets
 
-** (x) Append the `resample` function into the `ulog_converter.py`
-
-
+** ( ) Consider numeric suffix for project folder
 
 

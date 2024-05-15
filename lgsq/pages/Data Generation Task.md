@@ -306,4 +306,6 @@
 	  CLOCK: [2024-05-09 Thu 20:14:30]--[2024-05-10 Fri 17:59:12] =>  21:44:42
 	  CLOCK: [2024-05-10 Fri 17:59:13]--[2024-05-10 Fri 17:59:14] =>  00:00:01
 	  :END:
+	- TODO Consider numeric suffix for project folder
+	  id:: 664498b2-da80-418c-ac4b-49c004bc01cb
 - # Notes
