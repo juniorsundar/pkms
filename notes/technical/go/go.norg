@@ -2,9 +2,11 @@
 title: Go - Programming Language
 description: 
 authors: juniorsundar
-categories: 
+categories: [
+    golang
+]
 created: 2024-02-04T17:13:21+0400
-updated: 2024-04-09T23:18:14+0400
+updated: 2024-05-16T14:01:00+0400
 version: 1.1.1
 @end
 

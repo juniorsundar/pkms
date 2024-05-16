@@ -2,9 +2,11 @@
 title: PX4 - Autopilot 
 description: 
 authors: juniorsundar
-categories:
+categories: [
+    PX4
+]
 created: 2024-01-27T21:25:33+0400
-updated: 2024-04-25T21:25:36+0400
+updated: 2024-05-16T12:52:12+0400
 version: 1.1.1
 @end
 

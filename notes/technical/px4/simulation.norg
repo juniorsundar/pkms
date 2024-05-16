@@ -2,9 +2,11 @@
 title: PX4 - Simulation 
 description: 
 authors: juniorsundar
-categories: 
+categories: [
+    PX4
+]
 created: 2024-01-27T23:14:46+0400
-updated: 2024-03-22T16:17:39+0400
+updated: 2024-05-16T12:52:35+0400
 version: 1.1.1
 @end
 

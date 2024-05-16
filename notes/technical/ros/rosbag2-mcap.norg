@@ -2,9 +2,11 @@
 title: MCAP (rosbag2)
 description: 
 authors: juniorsundar-unikie
-categories: 
+categories: [
+    ROS
+]
 created: 2024-03-07T11:42:59+0400
-updated: 2024-03-07T21:00:46+0400
+updated: 2024-05-16T12:51:59+0400
 version: 1.1.1
 @end
 

@@ -2,9 +2,11 @@
 title: Robot Operating System (ROS) 
 description: 
 authors: juniorsundar
-categories: 
+categories: [
+    ROS
+]
 created: 2024-01-28T15:39:32+0400
-updated: 2024-03-08T09:48:05+0400
+updated: 2024-05-16T12:51:40+0400
 version: 1.1.1
 @end
 

@@ -2,9 +2,11 @@
 title: Hardware in the Loop
 description: 
 authors: juniorsundar
-categories: 
+categories: [
+    terminologies
+]
 created: 2024-01-28T18:08:31+0400
-updated: 2024-02-05T20:29:56+0400
+updated: 2024-05-16T12:29:42+0400
 version: 1.1.1
 @end
 

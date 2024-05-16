@@ -1,12 +1,12 @@
 @document.meta
 title: Novelty-based Intrusion Detection of Sensor Attacks on Unmanned Aerial Vehicles
-description: 
-authors: juniorsundar-unikie
+description: #uav-fault-dataset #journal-article
+authors: juniorsundar
 categories: [
-    uav-fault-dataset
+    research
 ] 
 created: 2024-03-19T10:50:28+0400
-updated: 2024-03-20T11:08:39+0400
+updated: 2024-05-16T13:27:56+0400
 version: 1.1.1
 @end
 

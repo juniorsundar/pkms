@@ -2,9 +2,11 @@
 title: Sparse Observability
 description: 
 authors: juniorsundar-unikie
-categories: 
+categories: [
+    terminologies
+]
 created: 2024-04-15T13:31:35+0400
-updated: 2024-04-15T13:34:45+0400
+updated: 2024-05-16T12:30:11+0400
 version: 1.1.1
 @end
 

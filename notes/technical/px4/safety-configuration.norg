@@ -2,9 +2,11 @@
 title: PX4 - Safety Configuration
 description: 
 authors: juniorsundar
-categories: 
+categories: [
+    PX4
+]
 created: 2024-02-21T11:52:28+0400
-updated: 2024-03-25T14:43:14+0400
+updated: 2024-05-16T12:52:24+0400
 version: 1.1.1
 @end
 

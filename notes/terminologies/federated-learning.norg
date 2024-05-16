@@ -2,9 +2,11 @@
 title: Federated Learning
 description: 
 authors: juniorsundar-unikie
-categories: 
+categories: [
+    terminologies
+]
 created: 2024-03-01T15:24:10+0400
-updated: 2024-03-01T15:29:09+0400
+updated: 2024-05-16T12:29:18+0400
 version: 1.1.1
 @end
 

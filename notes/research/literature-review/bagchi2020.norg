@@ -1,10 +1,12 @@
 @document.meta
 title: Vision Paper: Grand Challenges in Resilience: Autonomous System Resilience through Design and Runtime Measures
-description: 
+description: #rta #journal-article
 authors: juniorsundar
-categories: srta
+categories: [
+    research
+]
 created: 2024-02-12T20:18:12+0400
-updated: 2024-03-01T15:33:31+0400
+updated: 2024-05-16T13:06:29+0400
 version: 1.1.1
 @end
 
