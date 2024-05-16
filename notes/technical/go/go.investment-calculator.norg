@@ -1,10 +1,12 @@
 @document.meta
-title: Investment Calculator
+title: Example - Investment Calculator
 description: 
 authors: juniorsundar
-categories: 
+categories: [
+    golang
+]
 created: 2024-02-04T19:31:34+0400
-updated: 2024-02-18T20:00:03+0400
+updated: 2024-05-16T14:01:00+0400
 version: 1.1.1
 @end
 

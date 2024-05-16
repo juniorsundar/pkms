@@ -2,9 +2,11 @@
 title: Example - Structs and .json
 description: 
 authors: juniorsundar
-categories: 
+categories: [
+    golang
+]
 created: 2024-03-03T14:56:37+0400
-updated: 2024-03-03T17:21:46+0400
+updated: 2024-05-16T14:01:00+0400
 version: 1.1.1
 @end
 

@@ -2,9 +2,11 @@
 title: Continual Task Learning
 description: 
 authors: juniorsundar
-categories: 
+categories: [
+    terminologies
+]
 created: 2024-01-29T10:56:46+0400
-updated: 2024-02-05T20:30:13+0400
+updated: 2024-05-16T12:28:32+0400
 version: 1.1.1
 @end
 

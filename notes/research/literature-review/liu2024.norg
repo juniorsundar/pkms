@@ -1,10 +1,12 @@
 @document.meta
 title: Generative AI for Unmanned Vehicle Swarms: Challenges, Applications and Opportunities
-description: 
-authors: juniorsundar-unikie
-categories: srta 
+description: #gen-ai #journal-article
+authors: juniorsundar
+categories: [
+    research
+] 
 created: 2024-03-01T15:18:13+0400
-updated: 2024-04-15T13:38:04+0400
+updated: 2024-05-16T13:07:03+0400
 version: 1.1.1
 @end
 

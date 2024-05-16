@@ -2,9 +2,11 @@
 title: Software in the Loop
 description: 
 authors: juniorsundar
-categories: 
+categories: [
+    terminologies
+]
 created: 2024-01-28T18:06:04+0400
-updated: 2024-02-19T21:22:16+0400
+updated: 2024-05-16T12:30:09+0400
 version: 1.1.1
 @end
 

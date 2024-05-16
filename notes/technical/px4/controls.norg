@@ -2,9 +2,11 @@
 title: PX4 - Controls
 description: 
 authors: juniorsundar-unikie
-categories: 
+categories: [
+    PX4
+]
 created: 2024-04-25T15:22:09+0400
-updated: 2024-04-26T12:38:30+0400
+updated: 2024-05-16T12:52:06+0400
 version: 1.1.1
 @end
 

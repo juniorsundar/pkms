@@ -1,12 +1,12 @@
 @document.meta
 title: ECU-IoFT: A Dataset for Analysing Cyber-Attacks on Internet of Flying Things
-description: 
-authors: juniorsundar-unikie
+description: #uav-fault-dataset #journal-article
+authors: juniorsundar
 categories: [
-    uav-fault-dataset
+    research
 ] 
 created: 2024-03-19T12:25:39+0400
-updated: 2024-03-19T12:29:30+0400
+updated: 2024-05-16T13:00:41+0400
 version: 1.1.1
 @end
 

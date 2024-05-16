@@ -2,9 +2,11 @@
 title: Zero-Order Hold Method
 description: 
 authors: juniorsundar-unikie
-categories: 
+categories: [
+    terminologies
+]
 created: 2024-04-15T13:25:30+0400
-updated: 2024-04-15T13:27:35+0400
+updated: 2024-05-16T12:30:31+0400
 version: 1.1.1
 @end
 
