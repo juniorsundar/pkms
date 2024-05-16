@@ -296,6 +296,10 @@
 			  :LOGBOOK:
 			  CLOCK: [2024-05-10 Fri 17:57:34]
 			  :END:
+				- DOING Update Jorge with the settings for a long run setup
+				  :LOGBOOK:
+				  CLOCK: [2024-05-16 Thu 16:23:03]
+				  :END:
 		- DOING Simulation datasets
 		  :LOGBOOK:
 		  CLOCK: [2024-05-07 Tue 11:02:58]

@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:00:57+0400
-updated: 2024-05-15T16:09:19+0400
+updated: 2024-05-16T16:29:05+0400
 version: 1.1.1
 @end
 
@@ -216,6 +216,7 @@ version: 1.1.1
 **** (x) Set up meeting with F4F to discuss possibility for anomalous test
 **** (x) Discuss data collection with broken propellor with F4F
 **** (-) Collect normal and abnormal flight data from F4F
+***** (-) Update Jorge with the settings for a long run setup 
 ***  (-) Simulation datasets
 
 ** ( ) Consider numeric suffix for project folder
