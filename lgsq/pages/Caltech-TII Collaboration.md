@@ -90,8 +90,11 @@
 			  %% Edit
 			  myCellArray(2,1) = 100;   % Changes content within the cell array 
 			  ```
-	- TODO Try out state reconstruction method with simple example
+	- DOING Try out state reconstruction method with simple example
 	  id:: 6639243a-3acc-4468-a10d-594e60b555ef
+	  :LOGBOOK:
+	  CLOCK: [2024-05-16 Thu 14:23:26]
+	  :END:
 - # Notes
 - # Instructional
   id:: 660fab83-c0af-4019-8e61-d168f0f8ff42
