@@ -6,7 +6,7 @@ categories: [
     PX4
 ]
 created: 2024-02-21T11:52:28+0400
-updated: 2024-05-16T12:52:24+0400
+updated: 2024-05-17T23:40:05+0400
 version: 1.1.1
 @end
 
@@ -100,9 +100,8 @@ version: 1.1.1
 
 *** Offboard Loss
 
-    Triggered if offboard link is lost while under offboard control mode.
-    Refer to {:$/technical/px4/ros2:** Offboard Mode}[this section] to understand what the offboard control signal
-    rate signifies.
+    Triggered if offboard link is lost while under offboard control mode. Refer
+    to {:$/technical/px4/ros2:** Offboard Mode}[this section] to understand what the offboard control signal rate signifies.
 
 *** Traffic Avoidance
 
