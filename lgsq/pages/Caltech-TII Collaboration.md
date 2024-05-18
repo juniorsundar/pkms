@@ -69,8 +69,17 @@
 	  CLOCK: [2024-05-06 Mon 09:36:05]--[2024-05-06 Mon 14:22:28] =>  04:46:23
 	  :END:
 	- DONE [Fifth meeting](((66392067-cc32-4121-922f-0f072aa546e2)))
-	- DONE Look up MATLAB Cell
+	- DONE Look up [MATLAB Cells](((66489254-1a0b-4dc1-8620-ba553a40db75)))
 	  id:: 663923ce-a39f-45de-b997-6c7b0cdc97c9
+	- DOING Try out state reconstruction method with simple example
+	  id:: 6639243a-3acc-4468-a10d-594e60b555ef
+	  :LOGBOOK:
+	  CLOCK: [2024-05-16 Thu 14:23:26]
+	  :END:
+- # Notes
+	- **MATLAB Cells**
+	  id:: 66489254-1a0b-4dc1-8620-ba553a40db75
+	  collapsed:: true
 		- A flexible data container that can hold different types of data.
 		- It is primarily used for:
 			- storing heterogeneous data,
@@ -90,12 +99,6 @@
 			  %% Edit
 			  myCellArray(2,1) = 100;   % Changes content within the cell array 
 			  ```
-	- DOING Try out state reconstruction method with simple example
-	  id:: 6639243a-3acc-4468-a10d-594e60b555ef
-	  :LOGBOOK:
-	  CLOCK: [2024-05-16 Thu 14:23:26]
-	  :END:
-- # Notes
 - # Instructional
   id:: 660fab83-c0af-4019-8e61-d168f0f8ff42
   collapsed:: true

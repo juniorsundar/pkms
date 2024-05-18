@@ -109,6 +109,16 @@
 		  :LOGBOOK:
 		  CLOCK: [2024-05-13 Mon 21:27:30]
 		  :END:
+			- DOING Printing parts
+			  :LOGBOOK:
+			  CLOCK: [2024-05-18 Sat 14:57:44]--[2024-05-18 Sat 14:58:12] =>  00:00:28
+			  CLOCK: [2024-05-18 Sat 14:58:13]
+			  :END:
+			- DOING [Set-up Comms Module v1.5](((66488a15-4e2c-4a74-bc4b-f09e167c608c)))
+			  :LOGBOOK:
+			  CLOCK: [2024-05-18 Sat 14:57:49]--[2024-05-18 Sat 14:58:14] =>  00:00:25
+			  CLOCK: [2024-05-18 Sat 14:58:14]
+			  :END:
 	- TODO Obtain some long duration continuous flight missions from F4F
 	  id:: 6644986f-3693-4f9a-a761-d89d522561e0
 	- DOING Freeze code and model
@@ -128,3 +138,11 @@
 		- Final deployment is with T-Motor drone swarms.
 		- If it is possible for F4F to repeat and replicate non-normal flight test cases, then it can be replicated in Masdar for testing. This will save chances of drone being wrecked here.
 		- If F4F does not have Holybro procured, then lead time to data collection is uncertain.
+	- Important points when setting up Comms Module v1.5:
+	  id:: 66488a15-4e2c-4a74-bc4b-f09e167c608c
+		- To boot the Raspberry Pi device as USB: [raspberrypi/usbboot](https://github.com/raspberrypi/usbboot)
+		- To flash custom image into the Pi, use `sudo rpi-imager`
+			- Install with `sudo apt install rpi-imager`
+			- `sudo` is important because otherwise the `/dev/sdX` cannot be accessible for writing disk image
+		- Check if two communications modules are in the same channel with `iw dev` command. If they are not in the same then there will be a communication issue.
+		-
