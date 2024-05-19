@@ -1,0 +1,130 @@
+@document.meta
+title: 19 May 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-05-19T20:53:11+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+** (-) {:$/journal/task-box/q2-june-demo:}[Q2 June Demo]
+
+** (-) {:$/journal/task-box/data-generation-task:}[Data Generation Task]
+
+** (-) {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration]
+
+** ( ) Swarm simulation
+*** ( ) Obtain Documentation to set up swarm from Wang Haoran
+*** ( ) Research into UAV Decentralised Swarm implementations
+*** ( ) Search around in ARRC for work being done in decentralised control
+
+    ===
+___
+
+* GPU vs. CPU for Matrix Operations
+
+** Moving Matrices CPU --> GPU
+
+   Refers to process of transferring data representing matrix elements from
+   main system memory (where CPU operates) to dedicated memory of GPU.
+
+   Necessary because CPU and GPU have separate memory spaces. To perform
+   computation on GPU, data needs to be accessible to GPU processing cores.
+
+*** Why?
+
+    - GPUs are specialised for parallel processing.
+    - Efficient at handling large-scale numerical computations like in matrix
+      operations.
+    - Leverage parallelism by moving out of CPU to GPU.
+
+*** How?
+
+    - Transfer occurs over a high-speed bus like PCIe.
+    - Allocation of memory on GPU to store matrix data.
+    - Transfer/Copy of matrix data from CPU memory to allocated GPU memory.
+    - Computation of desired matrix operation on GPU.
+    - Retrieval (Optional) of result if its to be used in CPU
+
+*** Considerations
+
+    *Overhead* - Data transfer CPU <-> GPU incurs overhead as it takes time to
+    move data. Small matrices may not be worth transferring as overhead
+    outweighs computation speed.
+
+    *Memory Management* - Efficient management on both sides is needed to avoid
+    unnecessary data transfer.
+
+    *Synchronisation* - Need to handle transfer and receipt effectively to
+    ensure that computations aren't being overwritten.
+
+*** Example
+
+    @code python
+    import torch
+
+    # Create a matrix on the CPU
+    matrix_cpu = torch.rand(1000, 1000)
+
+    # Move the matrix to the GPU
+    matrix_gpu = matrix_cpu.cuda()
+
+    # Perform computations on the GPU (e.g., matrix multiplication)
+    result_gpu = matrix_gpu @ matrix_gpu.T 
+
+    # Move the result back to the CPU (if needed)
+    result_cpu = result_gpu.cpu()
+    @end
+
+** Handling Overhead
+
+*** Factors Influencing Overhead
+
+    *Matrix Size* - Generally preferred when matrix sizes are larger.
+
+    *GPU Architecture and Bandwidth* - Modern GPUs have higher bandwidth
+    connections with optimised memory allocators.
+
+    *Computation Intensity* - Complex tasks like multiplication, division, etc.
+    are outperformed in GPU than in CPU.
+
+    *Data Transfer Frequency* - GPU isn't a frequent access resource. Best to
+    defer as many complex operations in sequence inside the GPU before
+    retrieving it.
+
+*** General Guidelines
+
+    *< 1000 elements* - GPU acceleration may not be required for this.
+    Benchmark and profile before making informed decision.
+
+    *1000 - 100000 elements* - Overhead is generally manageable, but still work
+    optimising data transfers to maximise performance.
+
+    *> 100000 elements* - Overhead becomes less significant, and GPU
+    acceleration is usually highly beneficial.
+
+*** Optimisation Strategies
+
+    *Batching* - Combine multiple smaller matrices into larger batches to
+    reduce number of transfers.
+
+    *Asynchronous Transfers* - Overlap computation and data transfers to hide
+    overhead.
+
+    *Pinned Memory* - Use page-locked memory for faster transfers.
+
+    *Zero-Copy* - If supported, use zero-copy technique to avoid explicit
+    memory copies.
+
+    *Profiling* - Use profiling tools to identify and optimise around
+    bottlenecks.
+
+    ===
+___
+
+{:$/journal/2024/05/18:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/05/20:}[next >]
+
+
