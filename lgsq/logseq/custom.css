@@ -1,9 +1,9 @@
 :root {
-  --ls-font-family: JetBrains Mono;
+  --ls-font-family: FiraCode Nerd Font;
 }
 
 * {
-  font-family: JetBrains Mono, monospace;
+  font-family: FiraCode Nerd Font, monospace;
 }
 
 @import url('https://logseq.catppuccin.com/ctp-frappe.css');
