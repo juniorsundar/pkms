@@ -114,10 +114,10 @@
 			  CLOCK: [2024-05-18 Sat 14:57:44]--[2024-05-18 Sat 14:58:12] =>  00:00:28
 			  CLOCK: [2024-05-18 Sat 14:58:13]
 			  :END:
-			- DOING [Set-up Comms Module v1.5](((66488a15-4e2c-4a74-bc4b-f09e167c608c)))
+			- DONE [Set-up Comms Module v1.5](((66488a15-4e2c-4a74-bc4b-f09e167c608c)))
 			  :LOGBOOK:
 			  CLOCK: [2024-05-18 Sat 14:57:49]--[2024-05-18 Sat 14:58:14] =>  00:00:25
-			  CLOCK: [2024-05-18 Sat 14:58:14]
+			  CLOCK: [2024-05-18 Sat 14:58:14]--[2024-05-21 Tue 21:48:50] =>  78:50:36
 			  :END:
 	- TODO Obtain some long duration continuous flight missions from F4F
 	  id:: 6644986f-3693-4f9a-a761-d89d522561e0
@@ -145,4 +145,3 @@
 			- Install with `sudo apt install rpi-imager`
 			- `sudo` is important because otherwise the `/dev/sdX` cannot be accessible for writing disk image
 		- Check if two communications modules are in the same channel with `iw dev` command. If they are not in the same then there will be a communication issue.
-		-

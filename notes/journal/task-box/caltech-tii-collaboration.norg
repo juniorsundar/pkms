@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-05-14T21:01:46+0400
+updated: 2024-05-21T22:23:27+0400
 version: 1.1.1
 @end
 
@@ -36,11 +36,28 @@ version: 1.1.1
 
 ** (x) {:$/journal/2024/05/02:** Xiao Tan / Junior Sundar -- Feedback on Rough External Controller Implementation}[Fourth meeting]
 
-** (x) Verify and validate if the position obtained from the FC's EKF is the same as the actual position of the drone in the simulation environment
+** (x) Verify and validate: FC's EKF $<=>$ drone in the simulation environment
 
 ** (x) {:$/journal/2024/05/06:** Xiao Tan / Junior Sundar -- State Reconstruction Discussion}[Fifth meeting]
 
-** (x) Look up MATLAB Cell
+** (x) Look up {** MATLAB Cell}
+
+** (x) Try out state reconstruction method with simple example
+
+** (x) {:$/journal/2024/05/20:** Xiao Tan / Junior Sundar -- Nominal Control + Safety Filter}[Sixth meeting]
+
+** (-) Try out simple example with full system
+
+** ( ) Seventh meeting
+   /SCHEDULED:/ {@ Monday 3 June 2024} 
+
+   ===
+___
+
+* Notes
+
+** MATLAB Cell
+
    A flexible data container that can hold different types of data.
 
    It is primarily used for:
@@ -65,10 +82,6 @@ version: 1.1.1
    myCellArray(2,1) = 100;   % Changes content within the cell array 
    @end
 
-** ( ) Try out state reconstruction method with simple example
-
-   ===
-___
 
 * Instructional
 
@@ -104,14 +117,14 @@ ___
    # We forward the X11 server so that the Gazebo simulator GUI runs on local machine
    # We set network=host so that we can alter subscribe to the rostopics through the DDS
    docker run -it --privileged --rm \
-       -v ${FIRMWARE_DIR}:/home/user/Firmware:rw \
-       -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
-       -e DISPLAY=${DISPLAY} \
-       -e LOCAL_USER_ID="$(id -u)" \
-       -w /home/user/Firmware \
-       --network=host  \
-       --name=container_name px4io/px4-dev-simulation-jammy \
-       make px4_sitl gz_x500
+               -v ${FIRMWARE_DIR}:/home/user/Firmware:rw \
+               -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
+               -e DISPLAY=${DISPLAY} \
+               -e LOCAL_USER_ID="$(id -u)" \
+               -w /home/user/Firmware \
+               --network=host  \
+               --name=container_name px4io/px4-dev-simulation-jammy \
+               make px4_sitl gz_x500
    @end
 
 ** Injecting Faults in Accelerometer
@@ -145,9 +158,6 @@ ___
     As the agent will have access to the system's internal dynamics, they will
     also be a node in the ROS 2 network and will subscribe to the necessary
     topics being published from the PX4 flight controller.
-
-    ===
-___
 
 * ROS 2 Modular Control
 
@@ -245,7 +255,4 @@ ___
   the ground truth are shown below:
 
   .image assets/results.png
-
-
-
 

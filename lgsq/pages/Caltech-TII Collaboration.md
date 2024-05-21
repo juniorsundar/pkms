@@ -63,7 +63,7 @@
 		  :END:
 			- ((6630d364-3fd7-43f5-9124-1a4b07efaad2))
 	- DONE [Fourth meeting](((66386c1a-c19b-46a9-b6ed-2469fe003da8)))
-	- DONE Verify and validate if the position obtained from the FC's EKF is the same as the actual position of the drone in the simulation environment
+	- DONE Verify and validate: FC's EKF <=> drone in the simulation environment
 	  id:: 6633c7e4-1bb7-4a2a-87c6-1d85b1034088
 	  :LOGBOOK:
 	  CLOCK: [2024-05-06 Mon 09:36:05]--[2024-05-06 Mon 14:22:28] =>  04:46:23
@@ -71,12 +71,20 @@
 	- DONE [Fifth meeting](((66392067-cc32-4121-922f-0f072aa546e2)))
 	- DONE Look up [MATLAB Cells](((66489254-1a0b-4dc1-8620-ba553a40db75)))
 	  id:: 663923ce-a39f-45de-b997-6c7b0cdc97c9
-	- DOING Try out state reconstruction method with simple example
+	- DONE Try out state reconstruction method with simple example
 	  id:: 6639243a-3acc-4468-a10d-594e60b555ef
 	  :LOGBOOK:
-	  CLOCK: [2024-05-16 Thu 14:23:26]
+	  CLOCK: [2024-05-16 Thu 14:23:26]--[2024-05-21 Tue 21:55:33] =>  127:32:07
 	  :END:
+	- DONE [Sixth meeting](((664ce44b-107f-4873-be22-b9a792bcfc34)))
+	- DOING Try out simple example with full system
+	  :LOGBOOK:
+	  CLOCK: [2024-05-21 Tue 21:58:08]
+	  :END:
+	- TODO Seventh meeting
+	  SCHEDULED: <2024-06-03 Mon 20:00>
 - # Notes
+  collapsed:: true
 	- **MATLAB Cells**
 	  id:: 66489254-1a0b-4dc1-8620-ba553a40db75
 	  collapsed:: true
