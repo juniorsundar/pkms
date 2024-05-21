@@ -1,0 +1,88 @@
+@document.meta
+title: 20 May 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-05-21T22:23:27+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+  /Rolled over/
+
+  ===
+___
+
+* Meetings
+
+** Xiao Tan / Junior Sundar -- Nominal Control + Safety Filter
+
+*** Attendees
+
+    | Xiao Tan
+    | Junior Sundar
+
+*** Goals
+
+    Understand the workings of the nominal controller and the safety filter
+
+*** Agenda
+
+    - Follow up on what was understood from self learning
+    - Go through new powerpoint
+
+*** Minutes
+
+    *Follow up*
+
+    Running matrix operations on GPU is a feasible option.
+
+    Will need to benchmark the point at which this becomes efficient because
+    excess transfer of data between CPU and GPU when operations can be done
+    efficiently in CPU is suboptimal.
+
+    Efficient algorithm is still in development by Xiao.
+
+    *Nominal Control*
+
+    /Inputs:/ Possible states $X^t$ at $t$ on human remote input
+    /Outputs:/ Desired control $u_{nom}$
+
+    $u_{nom}$ is hard to choose since $X^t$ is a matrix of estimates. For now,
+    it is constant and time-dependent.
+
+    *Safety Filter*
+
+    /Inputs:/ Nominal control $u_{nom}$
+    /Outputs:/ Safe control $u_{safe}$ with least deviation from $u_{nom}$
+
+    $Hx + q \leq 0$
+
+    Here, $H$ and $q$ matrices are obtained by defining safety bounds for the
+    different states.
+
+    $H(Ax + Bu) + q \geq (1 - \gamma) Hx + q$
+
+    Basically states that if system starts within safe region, and the above
+    control barrier function rule is held, it will always remain within safe
+    region.
+
+    Here $\gamma$ relates to how aggressive the filter is going to be. With a
+    larger value, it will only trigger as system reaches close to boundary.
+    With smaller value the filter starts affecting from a bit further in.
+
+    No guarantee of feasiblity of optimisation problem to find $u_{safe}$ if
+    the equation of quadratic programming fails, then the system is aborted.
+
+*** Action Items
+
+    No meeting for next week. Set it for the week after.
+
+    ===
+___
+
+{:$/journal/2024/05/19:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/05/21:}[next >]
+
+
