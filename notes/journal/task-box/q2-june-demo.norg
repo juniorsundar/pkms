@@ -91,8 +91,11 @@ version: 1.1.1
 *** (x) Obtain Saluki V3
 *** (x) Set up Saluki V3 for flight mission
 *** (-) Mount Saluki V3 to -Holybro- T-Motor M690b Drone
-**** (-) Printing additional parts
+**** (x) Printing additional parts
 **** (x) Set-up Comms Module 1.5
+**** (-) Additional components
+     - Nvidia power cable
+     - RF transmitter/receiver
 
 ** ( ) Obtain some long duration continuous flight missions from F4F
 

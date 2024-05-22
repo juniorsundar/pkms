@@ -109,16 +109,24 @@
 		  :LOGBOOK:
 		  CLOCK: [2024-05-13 Mon 21:27:30]
 		  :END:
-			- DOING Printing parts
+			- DONE Printing parts
 			  :LOGBOOK:
 			  CLOCK: [2024-05-18 Sat 14:57:44]--[2024-05-18 Sat 14:58:12] =>  00:00:28
-			  CLOCK: [2024-05-18 Sat 14:58:13]
+			  CLOCK: [2024-05-18 Sat 14:58:13]--[2024-05-22 Wed 21:54:14] =>  102:56:01
 			  :END:
 			- DONE [Set-up Comms Module v1.5](((66488a15-4e2c-4a74-bc4b-f09e167c608c)))
 			  :LOGBOOK:
 			  CLOCK: [2024-05-18 Sat 14:57:49]--[2024-05-18 Sat 14:58:14] =>  00:00:25
 			  CLOCK: [2024-05-18 Sat 14:58:14]--[2024-05-21 Tue 21:48:50] =>  78:50:36
 			  :END:
+			- DOING Additional components:
+			  :LOGBOOK:
+			  CLOCK: [2024-05-22 Wed 21:52:38]
+			  CLOCK: [2024-05-22 Wed 21:52:42]--[2024-05-22 Wed 21:54:16] =>  00:01:34
+			  CLOCK: [2024-05-22 Wed 21:54:17]
+			  :END:
+				- Nvidia power cable
+				- RF transmitter/receiver
 	- TODO Obtain some long duration continuous flight missions from F4F
 	  id:: 6644986f-3693-4f9a-a761-d89d522561e0
 	- DOING Freeze code and model
