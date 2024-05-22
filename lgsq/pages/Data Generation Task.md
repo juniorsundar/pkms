@@ -1,6 +1,7 @@
 # Tasks
 	- DONE [[Literature review for Data Generation Task]]
 	- DONE Generate plan of action
+	  collapsed:: true
 	  :LOGBOOK:
 	  CLOCK: [2024-03-20 Wed 16:21:03]--[2024-03-27 Wed 22:27:29] =>  174:06:26
 	  :END:
@@ -89,6 +90,7 @@
 				- restart simulation
 	- DONE Deploy simulation and data collection system in local machine
 	  id:: 65fc53d3-67f7-4f29-891c-c16e8ba9ae0f
+	  collapsed:: true
 	  :LOGBOOK:
 	  CLOCK: [2024-03-27 Wed 22:27:13]--[2024-04-04 Thu 16:27:40] =>  186:00:27
 	  :END:
@@ -123,6 +125,7 @@
 		  CLOCK: [2024-04-02 Tue 16:31:26]--[2024-04-04 Thu 16:27:01] =>  47:55:35
 		  :END:
 	- DONE Deploy to container registry
+	  collapsed:: true
 		- DONE Test once and observe if it is allowed
 		  :LOGBOOK:
 		  CLOCK: [2024-04-04 Thu 10:36:58]
@@ -133,6 +136,7 @@
 		  CLOCK: [2024-04-04 Thu 16:27:27]
 		  :END:
 	- DONE Run test batch
+	  collapsed:: true
 	  :LOGBOOK:
 	  CLOCK: [2024-04-04 Thu 16:27:37]--[2024-05-06 Mon 15:04:45] =>  766:37:08
 	  :END:
@@ -252,6 +256,7 @@
 		  CLOCK: [2024-04-04 Thu 16:27:36]--[2024-05-06 Mon 15:04:44] =>  766:37:08
 		  :END:
 	- DONE Organisation/Packaging of datasets
+	  collapsed:: true
 	  :LOGBOOK:
 	  CLOCK: [2024-05-06 Mon 15:03:19]
 	  CLOCK: [2024-05-06 Mon 15:03:21]
@@ -311,6 +316,7 @@
 	  CLOCK: [2024-05-09 Thu 20:14:30]--[2024-05-10 Fri 17:59:12] =>  21:44:42
 	  CLOCK: [2024-05-10 Fri 17:59:13]--[2024-05-10 Fri 17:59:14] =>  00:00:01
 	  :END:
+	- DONE Refactor `ulog_converter.py` -> `resample` out of merging
 	- TODO Consider numeric suffix for project folder
 	  id:: 664498b2-da80-418c-ac4b-49c004bc01cb
 - # Notes
