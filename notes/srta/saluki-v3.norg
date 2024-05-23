@@ -6,7 +6,7 @@ categories: [
     SRTA
 ]
 created: 2024-02-13T14:43:07+0400
-updated: 2024-05-16T12:57:54+0400
+updated: 2024-05-23T21:04:25+0400
 version: 1.1.1
 @end
 
@@ -71,9 +71,9 @@ version: 1.1.1
     The Jetson Orin NX can now be flashed with the following command:
     @code bash
     sudo ./tools/kernel_flash/l4t_initrd_flash.sh \
-    --external-device nvme0n1p1 \
-    -c tools/kernel_flash/flash_l4t_external.xml -p "-c bootloader/t186ref/cfg/flash_t234_qspi.xml" \
-    --showlogs --network usb0 jetson-orin-nano-devkit internal
+        --external-device nvme0n1p1 \
+        -c tools/kernel_flash/flash_l4t_external.xml -p "-c bootloader/t186ref/cfg/flash_t234_qspi.xml" \
+        --showlogs --network usb0 jetson-orin-nano-devkit internal
     @end
 
 *** Post-flashing
