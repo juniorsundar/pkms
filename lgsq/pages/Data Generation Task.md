@@ -319,4 +319,6 @@
 	- DONE Refactor `ulog_converter.py` -> `resample` out of merging
 	- TODO Consider numeric suffix for project folder
 	  id:: 664498b2-da80-418c-ac4b-49c004bc01cb
+	- TODO Obtain some long duration continuous flight missions from F4F
+	- TODO Move for variable propeller cuts and data collection
 - # Notes

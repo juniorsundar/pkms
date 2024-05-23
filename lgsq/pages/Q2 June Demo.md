@@ -95,19 +95,19 @@
 			- ![mounting_siyia8.JPG](../assets/mounting_siyia8_1714639504791_0.JPG)
 	- CANCELLED Check if video encoding/decoding is happening on the hardware (Siyi A8)
 	  id:: c67ddd53-eec8-405d-bd77-4ec7a07c120d
-	- DOING Mount Saluki V3 to the ~~Holybro-X500~~ T-Motor M690b Drone and get it airborne
+	- DONE Mount Saluki V3 to the ~~Holybro-X500~~ T-Motor M690b Drone and get it airborne
 	  id:: 66386c1b-1e6c-4481-b1f3-08b18d2a9fc6
 	  :LOGBOOK:
-	  CLOCK: [2024-05-09 Thu 20:13:13]
+	  CLOCK: [2024-05-09 Thu 20:13:13]--[2024-05-23 Thu 23:57:18] =>  339:44:05
 	  :END:
 		- DONE Obtain Saluki V3
 		- DONE Set up Saluki V3 for flight mission
 		  :LOGBOOK:
 		  CLOCK: [2024-05-10 Fri 17:58:18]--[2024-05-13 Mon 21:27:34] =>  75:29:16
 		  :END:
-		- DOING Mount Saluki V3 to ~~Holybro~~ T-Motor M690b Drone
+		- DONE Mount Saluki V3 to ~~Holybro~~ T-Motor M690b Drone
 		  :LOGBOOK:
-		  CLOCK: [2024-05-13 Mon 21:27:30]
+		  CLOCK: [2024-05-13 Mon 21:27:30]--[2024-05-23 Thu 23:57:16] =>  242:29:46
 		  :END:
 			- DONE Printing parts
 			  :LOGBOOK:
@@ -119,16 +119,18 @@
 			  CLOCK: [2024-05-18 Sat 14:57:49]--[2024-05-18 Sat 14:58:14] =>  00:00:25
 			  CLOCK: [2024-05-18 Sat 14:58:14]--[2024-05-21 Tue 21:48:50] =>  78:50:36
 			  :END:
-			- DOING Additional components:
+			- DONE Additional components:
+			  collapsed:: true
 			  :LOGBOOK:
 			  CLOCK: [2024-05-22 Wed 21:52:38]
 			  CLOCK: [2024-05-22 Wed 21:52:42]--[2024-05-22 Wed 21:54:16] =>  00:01:34
-			  CLOCK: [2024-05-22 Wed 21:54:17]
+			  CLOCK: [2024-05-22 Wed 21:54:17]--[2024-05-23 Thu 23:57:14] =>  26:02:57
 			  :END:
 				- Nvidia power cable
 				- RF transmitter/receiver
-	- TODO Obtain some long duration continuous flight missions from F4F
-	  id:: 6644986f-3693-4f9a-a761-d89d522561e0
+	- TODO Get drone airborne
+		- TODO Copy over PID tuning parameters
+		- TODO Connect with GCS and fly autonomously
 	- DOING Freeze code and model
 	  id:: 6644991b-cbe7-4882-9761-382fc01aeb4c
 	  SCHEDULED: <2024-06-30 Sun>
