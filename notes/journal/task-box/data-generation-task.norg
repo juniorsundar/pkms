@@ -229,8 +229,8 @@ version: 1.1.1
 *** ( ) Long duration continuous flight missions
 *** ( ) Variable propeller cuts and data collection
 
-** ( ) Refactor and updates
+** (-) Refactor and updates
 *** ( ) Add FC & LMC data to README in folders
-*** ( ) Move `resample_data` to a different module for importing
-*** ( ) Create tests for code
+*** (x) Move `resample_data` to a different module for importing
+*** (-) Create tests for code
 *** ( ) Discuss with Jarmo whether the resample module can be imported into template as submodule
