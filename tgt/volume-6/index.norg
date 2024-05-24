@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: Volume 6
 created: 1701198657781
-updated: 2024-05-23T23:07:03+0400
+updated: 2024-05-24T22:22:04+0400
 version: 1.1.1
 @end
 
@@ -60,6 +60,7 @@ ___
   - {:$/volume-6/chapter-444:}[Chapter 444 - Feel The Music]
   - {:$/volume-6/chapter-445:}[Chapter 445 - Being the Bigger Dwarf]
   - {:$/volume-6/chapter-446:}[Chapter 446 - Sobering]
+  - {:$/volume-6/chapter-447:}[Chapter 447]
 
 
   {:$/index:}[< return] - {:$/index:}[index]
