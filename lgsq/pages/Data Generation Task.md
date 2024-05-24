@@ -325,10 +325,22 @@
 	  id:: 66503288-71ad-481c-bb6d-2300cdffbaba
 		- TODO Long duration continuous flight missions
 		- TODO Variable propeller cuts and data collection
-	- TODO Refactor and updates
+	- DOING Refactor and updates
 	  id:: 665038b5-88dc-4cf8-a496-9feb389f8c85
-		- TODO Add FC & LMC data to README in folders
-		- TODO Move `resample_data` to a different module for importing
-		- TODO Create tests for code
+	  :LOGBOOK:
+	  CLOCK: [2024-05-24 Fri 14:17:39]
+	  :END:
+		- DOING Add FC & LMC data to README in folders
+		  :LOGBOOK:
+		  CLOCK: [2024-05-24 Fri 17:40:49]
+		  :END:
+		- DONE Move `resample_data` to a different module for importing
+		  :LOGBOOK:
+		  CLOCK: [2024-05-24 Fri 14:17:38]--[2024-05-24 Fri 17:40:48] =>  03:23:10
+		  :END:
+		- DOING Create tests for code
+		  :LOGBOOK:
+		  CLOCK: [2024-05-24 Fri 17:40:45]
+		  :END:
 		- TODO Discuss with Jarmo whether the resample module can be imported into template as submodule
 - # Notes
