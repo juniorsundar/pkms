@@ -317,8 +317,18 @@
 	  CLOCK: [2024-05-10 Fri 17:59:13]--[2024-05-10 Fri 17:59:14] =>  00:00:01
 	  :END:
 	- DONE Refactor `ulog_converter.py` -> `resample` out of merging
-	- TODO Consider numeric suffix for project folder
-	  id:: 664498b2-da80-418c-ac4b-49c004bc01cb
-	- TODO Obtain some long duration continuous flight missions from F4F
-	- TODO Move for variable propeller cuts and data collection
+	- LATER Project folder restructuring
+		- LATER Consider numeric suffix for project folder
+		  id:: 664498b2-da80-418c-ac4b-49c004bc01cb
+		- LATER Accommodating different drone types
+	- TODO Additional drone flight types from F4F
+	  id:: 66503288-71ad-481c-bb6d-2300cdffbaba
+		- TODO Long duration continuous flight missions
+		- TODO Variable propeller cuts and data collection
+	- TODO Refactor and updates
+	  id:: 665038b5-88dc-4cf8-a496-9feb389f8c85
+		- TODO Add FC & LMC data to README in folders
+		- TODO Move `resample_data` to a different module for importing
+		- TODO Create tests for code
+		- TODO Discuss with Jarmo whether the resample module can be imported into template as submodule
 - # Notes

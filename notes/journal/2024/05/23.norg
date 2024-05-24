@@ -1,0 +1,98 @@
+@document.meta
+title: 23 May 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-05-24T12:32:49+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+  /Rolled over/
+
+  ===
+___
+
+* Meetings
+
+** Solita - SRTA MLOps Syncup
+
+*** Attendees
+
+    | SRTA-AD
+    | Solita
+
+*** Goals
+
+    - Updates towards demo
+    - State of SRTA module of platform
+
+*** Agenda
+
+    - Discuss MLOps progress
+    - Tasks left for Demo in Q2
+    - Use cases progress
+
+*** Minutes
+
+    Since last Friday, Decision Engine (DE) has been merged into main branch.
+
+    Samridha model has been uploaded to MLFlow, ROS wrapper is currently in the
+    works.
+
+    Safe landing use case:
+    - Simulation use case with grass and stuff.
+    - Challenging because image quality in the sim is crap.
+    - Results look very noisy.
+    - But good progress has been achieved, most likely that this will be the
+      demo goal.
+
+    Demo overall status:
+    - Sensor anomalies (IP)
+    - FMO UI (IP)
+    - Decision enginer (IP)
+    - Segmentation (OH)
+
+*** Action Items
+
+** RTA Meeting
+
+*** Attendees
+
+    | SRTA-AD
+
+*** Goals
+
+    - Demo updates and timelines
+
+*** Agenda
+
+    - Discuss how much work is left for drone flight
+    - Point out blockers and problems
+
+*** Minutes
+
+    Drone nearing flight, but no promises.
+
+    Documentation is sparse and heavily distributed. They make it upon request
+    basically.
+
+    Have not been able to allocate time for work in the collab project due to
+    bandwidth being utilised for the flight preparation.
+
+    Some work needs to be done on the data collection stuff.
+
+*** Action Items
+
+    - {:$/journal/task-box/data-generation-task:** Refactor and updates}[Refactor and updates]
+    - {:$/journal/task-box/data-generation-task:** Additional drone flight types from F4F}[Additional drone flight types from F4F Generation Task]
+
+
+    ===
+___
+
+{:$/journal/2024/05/22:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/05/24:}[next >]
+
+

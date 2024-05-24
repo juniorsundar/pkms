@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-05-21T21:53:09+0400
+updated: 2024-05-24T12:30:17+0400
 version: 1.1.1
 @end
 
@@ -87,17 +87,19 @@ version: 1.1.1
 ** (_) Verify if this method can be used to record data
    For the outdoor arena demo -- talk to Jose Segovia
 
-** (-) Mount Saluki V3 to the -Holybro-X500- T-Motor M690b Drone and get it airborne
+** (x) Mount Saluki V3 to the -Holybro-X500- T-Motor M690b Drone and get it airborne
 *** (x) Obtain Saluki V3
 *** (x) Set up Saluki V3 for flight mission
-*** (-) Mount Saluki V3 to -Holybro- T-Motor M690b Drone
+*** (x) Mount Saluki V3 to -Holybro- T-Motor M690b Drone
 **** (x) Printing additional parts
 **** (x) Set-up Comms Module 1.5
-**** (-) Additional components
+**** (x) Additional components
      - Nvidia power cable
      - RF transmitter/receiver
 
-** ( ) Obtain some long duration continuous flight missions from F4F
+** ( ) Get drone airborne
+*** ( ) Copy over PID tuning parameters
+*** ( ) Connect with GCS and fly autonomously
 
 ** (-) Freeze code and model
    /SCHEDULED:/ {@ Sunday 30 June 2024} 

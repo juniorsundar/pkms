@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:00:57+0400
-updated: 2024-05-22T21:59:10+0400
+updated: 2024-05-24T11:39:12+0400
 version: 1.1.1
 @end
 
@@ -203,13 +203,15 @@ version: 1.1.1
 
 *** (x) Actively maintain and improve the rosnodes
 
-**  (x) Organisation/Packaging of datasets
+** (x) Organisation/Packaging of datasets
 ***  (x) Write script to merge `.ulog` files into one `.csv` file
 ***  (x) Some fixes to the merging process:
 ****  (x) Sort headers alphabetically after merging
 ****  (x) Change `label` header --> `filename`
 
 ** (x) Append the `resample` function into the `ulog_converter.py`
+
+** (x) Refactor `ulog_converter.py` -> `resample` out of merging
 
 **  (-) Data collection
 ***  (-) Hardware datasets
@@ -219,8 +221,16 @@ version: 1.1.1
 **** (x) Update Jorge with the settings for a long run setup 
 ***  (-) Simulation datasets
 
-** (x) Refactor `ulog_converter.py` -> `resample` out of merging
+** (?) Project folder restructuring
+*** (?) Consider numeric suffix for project folder
+*** (?) Accommodating different drone types
 
-** ( ) Consider numeric suffix for project folder
+** ( ) Additional drone flight types from F4F
+*** ( ) Long duration continuous flight missions
+*** ( ) Variable propeller cuts and data collection
 
-
+** ( ) Refactor and updates
+*** ( ) Add FC & LMC data to README in folders
+*** ( ) Move `resample_data` to a different module for importing
+*** ( ) Create tests for code
+*** ( ) Discuss with Jarmo whether the resample module can be imported into template as submodule
