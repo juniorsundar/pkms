@@ -128,8 +128,14 @@
 			  :END:
 				- Nvidia power cable
 				- RF transmitter/receiver
-	- TODO Get drone airborne
-		- TODO Copy over PID tuning parameters
+	- DOING Get drone airborne
+	  :LOGBOOK:
+	  CLOCK: [2024-05-27 Mon 20:17:58]
+	  :END:
+		- DOING Copy over PID tuning parameters
+		  :LOGBOOK:
+		  CLOCK: [2024-05-27 Mon 20:17:59]
+		  :END:
 		- TODO Connect with GCS and fly autonomously
 	- DOING Freeze code and model
 	  id:: 6644991b-cbe7-4882-9761-382fc01aeb4c

@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:00:57+0400
-updated: 2024-05-24T11:39:12+0400
+updated: 2024-05-27T20:20:30+0400
 version: 1.1.1
 @end
 
@@ -214,10 +214,10 @@ version: 1.1.1
 ** (x) Refactor `ulog_converter.py` -> `resample` out of merging
 
 **  (-) Data collection
-***  (-) Hardware datasets
+***  (x) Hardware datasets
 **** (x) Set up meeting with F4F to discuss possibility for anomalous test
 **** (x) Discuss data collection with broken propellor with F4F
-**** (-) Collect normal and abnormal flight data from F4F
+**** (x) Collect normal and abnormal flight data from F4F
 **** (x) Update Jorge with the settings for a long run setup 
 ***  (-) Simulation datasets
 
@@ -225,12 +225,12 @@ version: 1.1.1
 *** (?) Consider numeric suffix for project folder
 *** (?) Accommodating different drone types
 
-** ( ) Additional drone flight types from F4F
-*** ( ) Long duration continuous flight missions
-*** ( ) Variable propeller cuts and data collection
+** (-) Additional drone flight types from F4F
+*** (-) Long duration continuous flight missions
+*** (-) Variable propeller cuts and data collection
 
 ** (-) Refactor and updates
-*** ( ) Add FC & LMC data to README in folders
+*** (-) Add FC & LMC data to README in folders
 *** (x) Move `resample_data` to a different module for importing
 *** (-) Create tests for code
 *** ( ) Discuss with Jarmo whether the resample module can be imported into template as submodule
