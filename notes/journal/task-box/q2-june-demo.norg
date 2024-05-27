@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-05-24T12:30:17+0400
+updated: 2024-05-27T20:20:30+0400
 version: 1.1.1
 @end
 
@@ -97,8 +97,8 @@ version: 1.1.1
      - Nvidia power cable
      - RF transmitter/receiver
 
-** ( ) Get drone airborne
-*** ( ) Copy over PID tuning parameters
+** (-) Get drone airborne
+*** (-) Copy over PID tuning parameters
 *** ( ) Connect with GCS and fly autonomously
 
 ** (-) Freeze code and model

@@ -1,2 +1,2 @@
-- {{renderer :tocgen2, [[go - programming language]], calc(100vh - 135px)}}
-- {{renderer :tocgen2, [[terminology]]}}
+- {{embed [[Go - Programming Language]]}}
+- {{embed [[Terminology]]}}

@@ -2,6 +2,7 @@ link:: https://www.udemy.com/share/109Zo23@44LsCDI3H4cb_JsKRBxWCg5uLP7XPeNIsrCcG
 
 - {{renderer :tocgen2}}
 - # Introduction
+  collapsed:: true
 	- ## About Go
 		- It is an open-source programming language developed and published by Google.
 		- Focus on simplicity, clarity and scalability
@@ -68,10 +69,12 @@ link:: https://www.udemy.com/share/109Zo23@44LsCDI3H4cb_JsKRBxWCg5uLP7XPeNIsrCcG
 		  > Hello World
 		  ```
 - # Packages and Modules
+  collapsed:: true
 	- Go projects are also called modules.
 	- A package is a collection of similarly themed functions and .go files.
 	- A module consists of multiplee packages.
 - # Values and Types
+  collapsed:: true
 	- [[Go - Programming Language/Examples/Investment Calculator]]
 	  [[Go - Programming Language/Examples/Profit Calculator]]
 	- ## Basic Types
@@ -84,6 +87,7 @@ link:: https://www.udemy.com/share/109Zo23@44LsCDI3H4cb_JsKRBxWCg5uLP7XPeNIsrCcG
 		- The `fmt.Scan()` function is a great function for easily fetching & using user input through the command line.
 		- But this function also has an *important limitation*: You can't (easily) fetch *multi-word input values*. Fetching text that consists of more than a single word is tricky with this function.
 - # Conditional and `for` Loops
+  collapsed:: true
 	- [[Go - Programming Language/Examples/Bank]]
 	- The `for` loop in Go comes in a few variations. Some basic ones are:
 	- ```go
@@ -105,6 +109,7 @@ link:: https://www.udemy.com/share/109Zo23@44LsCDI3H4cb_JsKRBxWCg5uLP7XPeNIsrCcG
 	  ```
 	- `someCondition` is an expression that yields a boolean value or variable that contains a boolean value. In that case, the loop will continue to execute the code nested in the loop until the codition/variable yields `false`.
 - # Files and Packages
+  collapsed:: true
 	- [[Go - Programming Language/Examples/Bank Packages]]
 	- ![files-and-packages.png](../assets/files-and-packages_1710670488729_0.png){:height 426, :width 749}
 	- Every package must go into its own subfolder in a project (which you can call the root folder).
@@ -119,6 +124,7 @@ link:: https://www.udemy.com/share/109Zo23@44LsCDI3H4cb_JsKRBxWCg5uLP7XPeNIsrCcG
 	  go get <current-package-source-link>
 	  ```
 - # Pointers
+  collapsed:: true
 	- [[Go - Programming Language/Examples/Pointers]]
 	- ## Introduction
 		- Variables that store value addresses instead of values. Any value initialised in code is stored in memory at a respective address. Pointers target the address instead of the value itself. the `&` operater retrieves the value in the memory address.
@@ -134,6 +140,7 @@ link:: https://www.udemy.com/share/109Zo23@44LsCDI3H4cb_JsKRBxWCg5uLP7XPeNIsrCcG
 		- For a point, it is `nil` - a special value built into Go.
 		- `nil` represents the absence of an address value i.e. a pointer pointing at no address/value in memory.
 - # Structs
+  collapsed:: true
 	- [[Go - Programming Language/Examples/Structs]]
 	  [[Go - Programming Language/Examples/Notes]]
 	- ## Introduction
@@ -157,6 +164,7 @@ link:: https://www.udemy.com/share/109Zo23@44LsCDI3H4cb_JsKRBxWCg5uLP7XPeNIsrCcG
 		- **Value receivers** - The method operates on a copy of the value. This is useful when you don't want to modify the original data.
 		- **Pointer receivers** - The method operates on the original data pointed to by the receiver. This is necessary when you want to make changes to the data itself.
 - # Interfaces
+  collapsed:: true
 	- ## Introduction
 		- Interfaces are a way to define a contract of a behaviour. Interface type declares a set of methods that a concrete type must implement to be considered as adhereing to that interface. It is like a blueprint for what a type should be able to do.
 	- ## Key Points
@@ -234,6 +242,7 @@ link:: https://www.udemy.com/share/109Zo23@44LsCDI3H4cb_JsKRBxWCg5uLP7XPeNIsrCcG
 		- **Polymorphism** - You can write functions and methods that operate on common interfaces, making them reusable with different types.
 		- **Testability** - Interfaces make it easier to substitute real implementations with mock objects for testing.
 - # Arrays and Slices
+  collapsed:: true
 	- Slicing an array is performed with square brackets:
 	- ```go
 	  prices := [4]float64{10.99, 9.99, 45.99, 20.00}
@@ -261,6 +270,7 @@ link:: https://www.udemy.com/share/109Zo23@44LsCDI3H4cb_JsKRBxWCg5uLP7XPeNIsrCcG
 			  newArray = make([]string, length, capacity)
 			  ```
 - # Maps
+  collapsed:: true
 	- Maps are key-value paired data structures like dictionaries or hash tables.
 	- ## Declaring and Initialising
 		- **`make` Method:**

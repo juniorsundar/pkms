@@ -283,9 +283,9 @@
 	  :LOGBOOK:
 	  CLOCK: [2024-05-08 Wed 15:15:19]
 	  :END:
-		- DOING Hardware datasets
+		- DONE Hardware datasets
 		  :LOGBOOK:
-		  CLOCK: [2024-05-08 Wed 15:15:16]
+		  CLOCK: [2024-05-08 Wed 15:15:16]--[2024-05-27 Mon 20:18:23] =>  461:03:07
 		  :END:
 			- DONE Set up meeting with F4F to discuss possibility for anomalous tests
 			  id:: 663b5e94-aac1-4c11-91c3-48f6fdf3a1c0
@@ -297,9 +297,9 @@
 			  :LOGBOOK:
 			  CLOCK: [2024-05-10 Fri 17:56:40]--[2024-05-10 Fri 17:56:42] =>  00:00:02
 			  :END:
-			- DOING Collect normal and abnormal flight data from F4F
+			- DONE Collect normal and abnormal flight data from F4F
 			  :LOGBOOK:
-			  CLOCK: [2024-05-10 Fri 17:57:34]
+			  CLOCK: [2024-05-10 Fri 17:57:34]--[2024-05-27 Mon 20:18:22] =>  410:20:48
 			  :END:
 			- DONE Update Jorge with the settings for a long run setup
 			  :LOGBOOK:
@@ -321,10 +321,19 @@
 		- LATER Consider numeric suffix for project folder
 		  id:: 664498b2-da80-418c-ac4b-49c004bc01cb
 		- LATER Accommodating different drone types
-	- TODO Additional drone flight types from F4F
+	- DOING Additional drone flight types from F4F
 	  id:: 66503288-71ad-481c-bb6d-2300cdffbaba
-		- TODO Long duration continuous flight missions
-		- TODO Variable propeller cuts and data collection
+	  :LOGBOOK:
+	  CLOCK: [2024-05-27 Mon 20:18:10]
+	  :END:
+		- DOING Long duration continuous flight missions
+		  :LOGBOOK:
+		  CLOCK: [2024-05-27 Mon 20:18:08]
+		  :END:
+		- DOING Variable propeller cuts and data collection
+		  :LOGBOOK:
+		  CLOCK: [2024-05-27 Mon 20:18:09]
+		  :END:
 	- DOING Refactor and updates
 	  id:: 665038b5-88dc-4cf8-a496-9feb389f8c85
 	  :LOGBOOK:
