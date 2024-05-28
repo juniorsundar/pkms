@@ -426,4 +426,5 @@
  :graph/forcesettings {:link-dist 170
  :charge-strength -700
  :charge-range 700}
- :publishing/all-pages-public? true}
+ :publishing/all-pages-public? true
+ :ui/show-brackets? true}

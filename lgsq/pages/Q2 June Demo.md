@@ -129,6 +129,7 @@
 				- Nvidia power cable
 				- RF transmitter/receiver
 	- DOING Get drone airborne
+	  id:: 664f9f87-a976-490c-a59c-d068f1698a15
 	  :LOGBOOK:
 	  CLOCK: [2024-05-27 Mon 20:17:58]
 	  :END:
