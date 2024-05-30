@@ -128,16 +128,19 @@
 			  :END:
 				- Nvidia power cable
 				- RF transmitter/receiver
-	- DOING Get drone airborne
+	- DOING Get drone airborne --> [Transferred to Systems Testing Team](((6656d625-f122-480d-9b57-43c5cdc437c9)))
 	  id:: 664f9f87-a976-490c-a59c-d068f1698a15
 	  :LOGBOOK:
 	  CLOCK: [2024-05-27 Mon 20:17:58]
 	  :END:
-		- DOING Copy over PID tuning parameters
+		- DONE Copy over PID tuning parameters
 		  :LOGBOOK:
-		  CLOCK: [2024-05-27 Mon 20:17:59]
+		  CLOCK: [2024-05-27 Mon 20:17:59]--[2024-05-30 Thu 11:29:34] =>  63:11:35
 		  :END:
-		- TODO Connect with GCS and fly autonomously
+		- DOING Connect with GCS and fly autonomously
+		  :LOGBOOK:
+		  CLOCK: [2024-05-30 Thu 11:29:36]
+		  :END:
 	- DOING Freeze code and model
 	  id:: 6644991b-cbe7-4882-9761-382fc01aeb4c
 	  SCHEDULED: <2024-06-30 Sun>

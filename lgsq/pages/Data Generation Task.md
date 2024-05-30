@@ -1,7 +1,6 @@
 # Tasks
 	- DONE [[Literature review for Data Generation Task]]
 	- DONE Generate plan of action
-	  collapsed:: true
 	  :LOGBOOK:
 	  CLOCK: [2024-03-20 Wed 16:21:03]--[2024-03-27 Wed 22:27:29] =>  174:06:26
 	  :END:
@@ -90,7 +89,6 @@
 				- restart simulation
 	- DONE Deploy simulation and data collection system in local machine
 	  id:: 65fc53d3-67f7-4f29-891c-c16e8ba9ae0f
-	  collapsed:: true
 	  :LOGBOOK:
 	  CLOCK: [2024-03-27 Wed 22:27:13]--[2024-04-04 Thu 16:27:40] =>  186:00:27
 	  :END:
@@ -125,7 +123,6 @@
 		  CLOCK: [2024-04-02 Tue 16:31:26]--[2024-04-04 Thu 16:27:01] =>  47:55:35
 		  :END:
 	- DONE Deploy to container registry
-	  collapsed:: true
 		- DONE Test once and observe if it is allowed
 		  :LOGBOOK:
 		  CLOCK: [2024-04-04 Thu 10:36:58]
@@ -136,7 +133,6 @@
 		  CLOCK: [2024-04-04 Thu 16:27:27]
 		  :END:
 	- DONE Run test batch
-	  collapsed:: true
 	  :LOGBOOK:
 	  CLOCK: [2024-04-04 Thu 16:27:37]--[2024-05-06 Mon 15:04:45] =>  766:37:08
 	  :END:
@@ -145,112 +141,11 @@
 		  CLOCK: [2024-04-04 Thu 16:27:35]--[2024-05-06 Mon 15:04:34] =>  766:36:59
 		  CLOCK: [2024-05-06 Mon 15:04:35]--[2024-05-06 Mon 15:04:36] =>  00:00:01
 		  :END:
-		- DONE Create a convenient `.mcap` converter script
-		  collapsed:: true
+		- DONE Create a convenient ((6656d7f7-4ce1-47f5-bf93-a8d1413874a8))
 		  :LOGBOOK:
 		  CLOCK: [2024-04-05 Fri 10:22:55]
 		  CLOCK: [2024-04-05 Fri 10:22:59]--[2024-04-18 Thu 15:52:35] =>  317:29:36
 		  :END:
-			- ```python
-			  #!/usr/bin python3
-			  
-			  import argparse
-			  import pandas as pd
-			  import os
-			  import px4_msgs.msg
-			  from mcap_ros2.reader import read_ros2_messages
-			  from rosidl_runtime_py import message_to_ordereddict
-			  import importlib
-			  from glob import glob
-			  import yaml
-			  
-			  def px4_mcap_to_csv(mcap_dir: str) -> None:
-			      """
-			      Convert PX4 MCAP files to CSV format.
-			  
-			      Args:
-			          mcap_dir (str): Path to the directory containing MCAP directories.
-			  
-			      Raises:
-			          FileNotFoundError: If no MCAP files are found in the specified directory.
-			      """
-			      df = pd.DataFrame()
-			      
-			      try:
-			          mcap_filename = glob(os.path.join(mcap_dir, "*.mcap"))[0]
-			          metadata = glob(os.path.join(mcap_dir, "*.yaml"))[0]
-			      except IndexError:
-			          print(f"No MCAP files found in {mcap_dir}")
-			          return
-			  
-			      with open(metadata, "r") as file:
-			          metadata = yaml.safe_load(file)
-			  
-			      for i in range(len(metadata["rosbag2_bagfile_information"]["topics_with_message_count"])):
-			          msg_addr = metadata["rosbag2_bagfile_information"]["topics_with_message_count"][i]["topic_metadata"]["type"]
-			  
-			          msg_addr = msg_addr.split("/")
-			  
-			          module = importlib.import_module(msg_addr[0])
-			          message_package = getattr(module, msg_addr[1])
-			          message = getattr(message_package, msg_addr[2])
-			  
-			          empty_msg_dict = message_to_ordereddict(message())
-			          header = []
-			          for sub_key in list(empty_msg_dict.keys()):
-			              if sub_key == 'timestamp':
-			                  header.append(sub_key)
-			              else:
-			                  try:
-			                      for j in range(len(empty_msg_dict[sub_key])):
-			                          header.append(sub_key + f"_{j}")
-			                  except TypeError:
-			                      header.append(f"{sub_key}")
-			          header = ",".join(header) + "\n"
-			  
-			          full_csv = ""
-			  
-			          try:
-			              for msg in read_ros2_messages(mcap_filename):
-			                  try:
-			                      current_line = ",".join([f"{msg.ros_msg.__getattribute__(key)}" for key in list(empty_msg_dict.keys())]) + "\n"
-			                      current_line = current_line.replace("[", "")
-			                      current_line = current_line.replace("]", "")
-			                      current_line = current_line.replace(", ", ",")
-			                      full_csv += current_line
-			                  except:
-			                      continue
-			  
-			              dat = [x.split(",") for x in (header + full_csv).strip("\n").split("\n")]
-			              df = pd.DataFrame(dat)
-			              df = df.T.set_index(0, drop=True).T
-			          except Exception as e:
-			              print(f"Message versions probably aren't matching. Confirm if message fields are matching: {e}")
-			  
-			          dumpfile = f"{mcap_dir}{msg_addr[2]}.csv"
-			          df.to_csv(dumpfile, index=False)
-			  
-			      return
-			  
-			  
-			  def main():
-			      parser = argparse.ArgumentParser(description="Convert PX4 MCAP files to CSV")
-			      parser.add_argument("directory", help="Path to the directory containing all MCAP folders")
-			  
-			      args = parser.parse_args()
-			  
-			      mcap_dir = args.directory
-			  
-			      dir = os.listdir(mcap_dir)
-			      for entry in dir:
-			          is_dir = os.path.isdir(f"{mcap_dir}/{entry}")
-			          if is_dir:
-			              px4_mcap_to_csv(f"{mcap_dir}/{entry}/")
-			  
-			  
-			  if __name__ == "__main__":
-			      main()
-			  ```
 		- DONE Actively maintain and improve the rosnodes
 		  :LOGBOOK:
 		  CLOCK: [2024-04-04 Thu 16:27:36]--[2024-05-06 Mon 15:04:44] =>  766:37:08
@@ -347,9 +242,111 @@
 		  :LOGBOOK:
 		  CLOCK: [2024-05-24 Fri 14:17:38]--[2024-05-24 Fri 17:40:48] =>  03:23:10
 		  :END:
-		- DOING Create tests for code
+		- DONE Create tests for code
 		  :LOGBOOK:
-		  CLOCK: [2024-05-24 Fri 17:40:45]
+		  CLOCK: [2024-05-24 Fri 17:40:45]--[2024-05-29 Wed 11:16:06] =>  113:35:21
 		  :END:
 		- TODO Discuss with Jarmo whether the resample module can be imported into template as submodule
 - # Notes
+	- ## `.mcap` converter script
+	  id:: 6656d7f7-4ce1-47f5-bf93-a8d1413874a8
+		- ```python
+		  #!/usr/bin python3
+		  
+		  import argparse
+		  import pandas as pd
+		  import os
+		  import px4_msgs.msg
+		  from mcap_ros2.reader import read_ros2_messages
+		  from rosidl_runtime_py import message_to_ordereddict
+		  import importlib
+		  from glob import glob
+		  import yaml
+		  
+		  def px4_mcap_to_csv(mcap_dir: str) -> None:
+		      """
+		      Convert PX4 MCAP files to CSV format.
+		  
+		      Args:
+		          mcap_dir (str): Path to the directory containing MCAP directories.
+		  
+		      Raises:
+		          FileNotFoundError: If no MCAP files are found in the specified directory.
+		      """
+		      df = pd.DataFrame()
+		      
+		      try:
+		          mcap_filename = glob(os.path.join(mcap_dir, "*.mcap"))[0]
+		          metadata = glob(os.path.join(mcap_dir, "*.yaml"))[0]
+		      except IndexError:
+		          print(f"No MCAP files found in {mcap_dir}")
+		          return
+		  
+		      with open(metadata, "r") as file:
+		          metadata = yaml.safe_load(file)
+		  
+		      for i in range(len(metadata["rosbag2_bagfile_information"]["topics_with_message_count"])):
+		          msg_addr = metadata["rosbag2_bagfile_information"]["topics_with_message_count"][i]["topic_metadata"]["type"]
+		  
+		          msg_addr = msg_addr.split("/")
+		  
+		          module = importlib.import_module(msg_addr[0])
+		          message_package = getattr(module, msg_addr[1])
+		          message = getattr(message_package, msg_addr[2])
+		  
+		          empty_msg_dict = message_to_ordereddict(message())
+		          header = []
+		          for sub_key in list(empty_msg_dict.keys()):
+		              if sub_key == 'timestamp':
+		                  header.append(sub_key)
+		              else:
+		                  try:
+		                      for j in range(len(empty_msg_dict[sub_key])):
+		                          header.append(sub_key + f"_{j}")
+		                  except TypeError:
+		                      header.append(f"{sub_key}")
+		          header = ",".join(header) + "\n"
+		  
+		          full_csv = ""
+		  
+		          try:
+		              for msg in read_ros2_messages(mcap_filename):
+		                  try:
+		                      current_line = ",".join([f"{msg.ros_msg.__getattribute__(key)}" for key in list(empty_msg_dict.keys())]) + "\n"
+		                      current_line = current_line.replace("[", "")
+		                      current_line = current_line.replace("]", "")
+		                      current_line = current_line.replace(", ", ",")
+		                      full_csv += current_line
+		                  except:
+		                      continue
+		  
+		              dat = [x.split(",") for x in (header + full_csv).strip("\n").split("\n")]
+		              df = pd.DataFrame(dat)
+		              df = df.T.set_index(0, drop=True).T
+		          except Exception as e:
+		              print(f"Message versions probably aren't matching. Confirm if message fields are matching: {e}")
+		  
+		          dumpfile = f"{mcap_dir}{msg_addr[2]}.csv"
+		          df.to_csv(dumpfile, index=False)
+		  
+		      return
+		  
+		  
+		  def main():
+		      parser = argparse.ArgumentParser(description="Convert PX4 MCAP files to CSV")
+		      parser.add_argument("directory", help="Path to the directory containing all MCAP folders")
+		  
+		      args = parser.parse_args()
+		  
+		      mcap_dir = args.directory
+		  
+		      dir = os.listdir(mcap_dir)
+		      for entry in dir:
+		          is_dir = os.path.isdir(f"{mcap_dir}/{entry}")
+		          if is_dir:
+		              px4_mcap_to_csv(f"{mcap_dir}/{entry}/")
+		  
+		  
+		  if __name__ == "__main__":
+		      main()
+		  ```
