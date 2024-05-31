@@ -2,6 +2,7 @@
 	- ## Personal
 		- {{query (or (task DOING) (task TODO) (task WAITING) (task NOW) (task LATER))}}
 	- ## JIRA
+	  collapsed:: true
 		- [🔵 In Progress - RTA-409|University collaboration - CalTech](https://ssrc.atlassian.net/browse/RTA-409)
 			- [🔵 In Progress - RTA-509|State reconstruction method with simple example](https://ssrc.atlassian.net/browse/RTA-509)
 		- [🔵 In Progress - RTA-354|Dataset generation](https://ssrc.atlassian.net/browse/RTA-354)
