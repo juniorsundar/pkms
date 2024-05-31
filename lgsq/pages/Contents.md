@@ -22,7 +22,7 @@
 				- [🟢 Done - RTA-518|Install T-Motor M690b drone](https://ssrc.atlassian.net/browse/RTA-518)
 		- [🔵 In Progress - DP-9252|AD testing team will assist SRTA by providing the required data with regular flying - Data for Demo D24Q2-SRTA.](https://ssrc.atlassian.net/browse/DP-9252)
 			- [⚪️ To Do - DP-9266|Test Extracted .ulog file from Saluki V3 post-mission](https://ssrc.atlassian.net/browse/DP-9266)
-			- [⚪️ To Do - DP-9265|Test extracted NATSBag recording of gimbal camera stream](https://ssrc.atlassian.net/browse/DP-9265)
+			- [⚪️ To Do - DP-9265|Test extracted NATSBag recording of gimbal camera stream](https://ssrc.atlassian.net/browse/DP-9265)0
 - # Index
   collapsed:: true
 	- **Projects**
