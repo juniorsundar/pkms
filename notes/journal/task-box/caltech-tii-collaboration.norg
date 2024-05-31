@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-05-21T22:23:27+0400
+updated: 2024-05-31T23:23:58+0400
 version: 1.1.1
 @end
 
@@ -46,7 +46,9 @@ version: 1.1.1
 
 ** (x) {:$/journal/2024/05/20:** Xiao Tan / Junior Sundar -- Nominal Control + Safety Filter}[Sixth meeting]
 
-** (-) Try out simple example with full system
+** (-) (Try out) --> (Implement) -simple- example with (full system) --> (1D Drone Sim)
+*** (x) Design {* 1D Drone System}[the system]
+*** (-) Develop the secure state estimator
 
 ** ( ) Seventh meeting
    /SCHEDULED:/ {@ Monday 3 June 2024} 
@@ -256,3 +258,12 @@ ___
 
   .image assets/results.png
 
+* 1D Drone System
+
+  $A=\begin{bmatrix}0 && 0 \\ 0 && 1\end{bmatrix} \space \textbf{x} = \begin{bmatrix}x \\ \dot{x}\end{bmatrix}$
+
+  $B=\begin{bmatrix}0 \\ 1\end{bmatrix} \space \textbf{u} = \begin{bmatrix}u_x\end{bmatrix}$
+
+  $C=\begin{bmatrix}1 && 0 && 0 && 0 \\ 0 && 1 && 0 && 0 \\ 0 && 0 && 1 && 0 \\ 0 && 0 && 0 && 1 \end{bmatrix} \space \textbf{y} = \begin{bmatrix}x_1 \\ \dot{x}_1 \\ x_2 \\ \dot{x}_2\end{bmatrix}$
+
+  $H=\begin{bmatrix}1 && 0 && 0 && 0\\ 0 && -1 && 0 && 0 \\ 0 && 0 && 1 && 0\\ 0 && 0 && 0 && -1\end{bmatrix} \space \textbf{q} = \begin{bmatrix}4 \\ 4 \\ 4 \\ 4\end{bmatrix}$

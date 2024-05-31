@@ -77,10 +77,16 @@
 	  CLOCK: [2024-05-16 Thu 14:23:26]--[2024-05-21 Tue 21:55:33] =>  127:32:07
 	  :END:
 	- DONE [Sixth meeting](((664ce44b-107f-4873-be22-b9a792bcfc34)))
-	- DOING Try out simple example with full system
+	- DOING (Try out)->(Implement) ~~simple~~ example with (full system)->(1D Drone Sim)
 	  :LOGBOOK:
 	  CLOCK: [2024-05-21 Tue 21:58:08]
 	  :END:
+		- DONE Design [the system](((665a0dc2-ee9a-4ccf-81b9-6e15aeac06c5)))
+		- DOING Develop the secure state reconstructor
+		  :LOGBOOK:
+		  CLOCK: [2024-05-31 Fri 21:47:57]
+		  CLOCK: [2024-05-31 Fri 21:48:12]
+		  :END:
 	- TODO Seventh meeting
 	  SCHEDULED: <2024-06-03 Mon 20:00>
 - # Notes
@@ -237,3 +243,9 @@
 	- The mission is square periodic.
 	- The attack is introduced at a random time point. The results while observing the ground truth are shown below:
 	- ![results.png](../assets/results_1714476410791_0.png)
+- # 1D Drone System
+  id:: 665a0dc2-ee9a-4ccf-81b9-6e15aeac06c5
+	- $$A=\begin{bmatrix}0 && 0 \\ 0 && 1\end{bmatrix} \space \textbf{x} = \begin{bmatrix}x \\ \dot{x}\end{bmatrix}$$
+	- $$B=\begin{bmatrix}0 \\ 1\end{bmatrix} \space \textbf{u} = \begin{bmatrix}u_x\end{bmatrix}$$
+	- $$C=\begin{bmatrix}1 && 0 && 0 && 0 \\ 0 && 1 && 0 && 0 \\ 0 && 0 && 1 && 0 \\ 0 && 0 && 0 && 1 \end{bmatrix} \space \textbf{y} = \begin{bmatrix}x_1 \\ \dot{x}_1 \\ x_2 \\ \dot{x}_2\end{bmatrix}$$
+	- $$H=\begin{bmatrix}1 && 0 && 0 && 0\\ 0 && -1 && 0 && 0 \\ 0 && 0 && 1 && 0\\ 0 && 0 && 0 && -1\end{bmatrix} \space \textbf{q} = \begin{bmatrix}4 \\ 4 \\ 4 \\ 4\end{bmatrix}$$
