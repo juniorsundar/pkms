@@ -260,7 +260,7 @@ ___
 
 * 1D Drone System
 
-  $A=\begin{bmatrix}0 && 0 \\ 0 && 1\end{bmatrix} \space \textbf{x} = \begin{bmatrix}x \\ \dot{x}\end{bmatrix}$
+  $|A=\begin{bmatrix}0 && 0 \\ 0 && 1\end{bmatrix} \space \textbf{x} = \begin{bmatrix}x \\ \dot{x}\end{bmatrix}|$
 
   $B=\begin{bmatrix}0 \\ 1\end{bmatrix} \space \textbf{u} = \begin{bmatrix}u_x\end{bmatrix}$
 
