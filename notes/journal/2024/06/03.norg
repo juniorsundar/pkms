@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-03T19:45:37+0400
+updated: 2024-06-03T22:11:22+0400
 version: 1.1.1
 @end
 
@@ -64,89 +64,108 @@ ___
 
 *** Goals
 
+    Clarity on the work being done
 
 *** Agenda
 
-    - ( ) 
+    - Clarify the matrix dimensions
+    - Follow up on progress
 
 *** Minutes
 
-    /Questions:/
+**** Questions
 
-    - ( ) Is the following 1D sensor case feasible:
-    @code cpp
-    std::vector<double> sensor_vector{static_cast<double>(ekf_1.x),
-        static_cast<double>(ekf_1.vx),
-        static_cast<double>(ekf_2.x),
-        static_cast<double>(ekf_2.vx)};
-    @end
+     - (x) Is the following 1D sensor case feasible:
+     @code cpp
+     std::vector<double> sensor_vector{static_cast<double>(ekf_1.x),
+         static_cast<double>(ekf_1.vx),
+         static_cast<double>(ekf_2.x),
+         static_cast<double>(ekf_2.vx)};
+     @end
 
-    - ( ) Verify {:$/journal/task-box/caltech-tii-collaboration:* 1D Drone System}[1D Drone System]
+     - (x) Verify {:$/journal/task-box/caltech-tii-collaboration:* 1D Drone System}[1D Drone System]
 
-    - ( ) Clarify function of `nchoosek`.
+     - (x) Clarify function of `nchoosek`.
 
-    - ( ) Are we essentially overwriting the `O_Gamma` and `Y_Gamma` in `secure_state_estimator.m`?
-    @code MATLAB
-    for i = 1:size(comb,1)
-        % prepare all matrices
-        Gamma = comb(i,:);
-        O_Gamma = zeros((p-s)*n,n);
-        Y_Gamma = zeros((p-s)*n,1);
+     - (x) Are we essentially overwriting the `O_Gamma` and `Y_Gamma` in `secure_state_estimator.m`?
+     @code MATLAB
+     for i = 1:size(comb,1)
+         % prepare all matrices
+         Gamma = comb(i,:);
+         O_Gamma = zeros((p-s)*n,n);
+         Y_Gamma = zeros((p-s)*n,1);
 
-        for j = 1:size(Gamma,2)
-            sensor_ind = Gamma(j);
-            O = Oi_cell{sensor_ind};
-            Y_tilde = y_vec(sensor_ind,t-n+1:t);
-            O_Gamma(n*(j-1)+1:n*j,:) = O;  %% THIS PART IN PARTICULAR
-            Y = Y_tilde' - Fi_cell{sensor_ind}*reshape(u_vec(:,t-n+1:t),[],1);
-            Y_Gamma(n*(j-1)+1:n*j,1) = Y;
-        end
-        % least square solution
-    % suppress warning
-        warning('off', 'MATLAB:rankDeficientMatrix')
-        x0_gamma = O_Gamma\Y_Gamma;
+         for j = 1:size(Gamma,2)
+             sensor_ind = Gamma(j);
+             O = Oi_cell{sensor_ind};
+             Y_tilde = y_vec(sensor_ind,t-n+1:t);
+             O_Gamma(n*(j-1)+1:n*j,:) = O;  %% THIS PART IN PARTICULAR
+             Y = Y_tilde' - Fi_cell{sensor_ind}*reshape(u_vec(:,t-n+1:t),[],1);
+             Y_Gamma(n*(j-1)+1:n*j,1) = Y;
+         end
+         % least square solution
+         % suppress warning
+         warning('off', 'MATLAB:rankDeficientMatrix')
+         x0_gamma = O_Gamma\Y_Gamma;
 
-        % threshold compare
-        if norm(Y_Gamma - O_Gamma*x0_gamma)>0.001
-            % disp(['No initial state for sensors ' num2str(Gamma) '!']);  
-        % disp(['fitting error->' num2str(norm(Y_Gamma - O_Gamma*x0_gamma)) ', fail to convince'])
-        else
-            % disp(['Found initial state for sensors ' num2str(Gamma) ' at time ' num2str(t) '!']);
-        % disp('The possible x0 is ')
-        % disp(num2str(x0_gamma))
-            Gamma_set_new(end+1,:) = Gamma;
+         % threshold compare
+         if norm(Y_Gamma - O_Gamma*x0_gamma)>0.001
+             % disp(['No initial state for sensors ' num2str(Gamma) '!']);  
+         % disp(['fitting error->' num2str(norm(Y_Gamma - O_Gamma*x0_gamma)) ', fail to convince'])
+         else
+             % disp(['Found initial state for sensors ' num2str(Gamma) ' at time ' num2str(t) '!']);
+         % disp('The possible x0 is ')
+         % disp(num2str(x0_gamma))
+             Gamma_set_new(end+1,:) = Gamma;
 
-            if rank(O_Gamma)<n
-                % null space
-                A_gamma = null(O_Gamma,1e-4);
-            else
-                A_gamma = 0;
-            end
+             if rank(O_Gamma)<n
+                 % null space
+                 A_gamma = null(O_Gamma,1e-4);
+             else
+                 A_gamma = 0;
+             end
 
-            x0_prob.x0 = x0_gamma;
-            x0_prob.A_gamma = A_gamma;
-            x0_prob.Gamma = Gamma;
-            X0_cell{end+1} = x0_prob;
-        end
-    end
-    @end
+             x0_prob.x0 = x0_gamma;
+             x0_prob.A_gamma = A_gamma;
+             x0_prob.Gamma = Gamma;
+             X0_cell{end+1} = x0_prob;
+         end
+     end
+     @end
 
-    - ( ) Clarify this chunk of code in `secure_state_estimator.m`:
-    @code MATLAB
-    % now check if subspac:kernal of O_G must be a subset of kernal of HA^t
-    if norm(A_x0)>0.1
-        for j = 1:size(A_x0,2)
-            M = [H; H*A; H*A^2; H*A^3]*A_x0(:,j);
-            if norm(M)>=0.0001
-                error(['possible subspace ' num2str(A_x0(:,j)') ' is not in safe set']);
-            end
-        end
+     - (x) Clarify this chunk of code in `secure_state_estimator.m`:
+     @code MATLAB
+     % now check if subspac:kernal of O_G must be a subset of kernal of HA^t
+     if norm(A_x0)>0.1
+         for j = 1:size(A_x0,2)
+             M = [H; H*A; H*A^2; H*A^3]*A_x0(:,j);
+             if norm(M)>=0.0001
+                 error(['possible subspace ' num2str(A_x0(:,j)') ' is not in safe set']);
+             end
+         end
 
-        A_xt(:,j) = H*A^3*A_x0(:,j);
-    end
-    @end
+         A_xt(:,j) = H*A^3*A_x0(:,j);
+     end
+     @end
+
+**** Responses
+
+     Assume at most how many sensors are being attacked (this is a prerequisite)!!
+
+     As for input vectors:
+     - First open-loop
+     - Second closed-loop --> Assume that a sensor is "trustworthy" -> In what
+       sense? Doesn't really matter because we can guarantee stability.
+     - Maybe we can use ML to identify attacked sensor to place trustworthy
+       label.
+
+     What could go wrong with this implementation:
+     - measurement from EKF may not be accurate.
+     - model is very simple, may not be the true model, tuning may be required here.
 
 *** Action Items
+
+    - {:$/journal/task-box/caltech-tii-collaboration:** Create GitHub repository and add `xiaotan-git` to it}[Create GitHub repository and add `xiaotan-git` to it]
 
     ===
 ___

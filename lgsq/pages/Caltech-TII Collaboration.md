@@ -87,11 +87,13 @@
 		  CLOCK: [2024-05-31 Fri 21:47:57]
 		  CLOCK: [2024-05-31 Fri 21:48:12]
 		  :END:
-	- DOING [Seventh meeting](((665d555a-1c8d-4666-b709-eb86e9717f6e))) 
+	- DONE [Seventh meeting](((665d555a-1c8d-4666-b709-eb86e9717f6e)))
 	  SCHEDULED: <2024-06-03 Mon 20:00>
 	  :LOGBOOK:
-	  CLOCK: [2024-06-03 Mon 19:49:36]
+	  CLOCK: [2024-06-03 Mon 19:49:36]--[2024-06-03 Mon 22:14:01] =>  02:24:25
 	  :END:
+	- TODO Create GitHub repository and add `xiaotan-git` to it
+	  id:: 665e07f3-91f8-4e6b-a82d-e9b109c9ac74
 - # Notes
   collapsed:: true
 	- **MATLAB Cells**
