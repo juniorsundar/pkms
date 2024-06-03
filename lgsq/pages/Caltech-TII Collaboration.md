@@ -87,7 +87,7 @@
 		  CLOCK: [2024-05-31 Fri 21:47:57]
 		  CLOCK: [2024-05-31 Fri 21:48:12]
 		  :END:
-	- TODO Seventh meeting
+	- TODO [Seventh meeting](((665d555a-1c8d-4666-b709-eb86e9717f6e))) 
 	  SCHEDULED: <2024-06-03 Mon 20:00>
 - # Notes
   collapsed:: true
@@ -245,6 +245,7 @@
 	- ![results.png](../assets/results_1714476410791_0.png)
 - # 1D Drone System
   id:: 665a0dc2-ee9a-4ccf-81b9-6e15aeac06c5
+  collapsed:: true
 	- $$A=\begin{bmatrix}0 && 0 \\ 0 && 1\end{bmatrix} \space \textbf{x} = \begin{bmatrix}x \\ \dot{x}\end{bmatrix}$$
 	- $$B=\begin{bmatrix}0 \\ 1\end{bmatrix} \space \textbf{u} = \begin{bmatrix}u_x\end{bmatrix}$$
 	- $$C=\begin{bmatrix}1 && 0 && 0 && 0 \\ 0 && 1 && 0 && 0 \\ 0 && 0 && 1 && 0 \\ 0 && 0 && 0 && 1 \end{bmatrix} \space \textbf{y} = \begin{bmatrix}x_1 \\ \dot{x}_1 \\ x_2 \\ \dot{x}_2\end{bmatrix}$$

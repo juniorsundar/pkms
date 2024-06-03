@@ -120,9 +120,9 @@ version: 1.1.1
 **** (x) Update Jorge with the settings for a long run setup 
 ***  (-) Simulation datasets
 
-** (?) Project folder restructuring
-*** (?) Consider numeric suffix for project folder
-*** (?) Accommodating different drone types
+** (x) Project folder restructuring
+*** (_) Consider numeric suffix for project folder
+*** (x) Accommodating different drone types
 
 ** (-) Additional drone flight types from F4F
 *** (-) Long duration continuous flight missions
@@ -133,6 +133,8 @@ version: 1.1.1
 *** (x) Move `resample_data` to a different module for importing
 *** (x) Create tests for code
 *** ( ) Discuss with Jarmo whether the resample module can be imported into template as submodule
+
+** ( ) Create a script that converts `.ulog` to rosbag format
 
     ===
 ___

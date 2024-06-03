@@ -2,7 +2,6 @@
 	- ## Personal
 		- {{query (or (task DOING) (task TODO) (task WAITING) (task NOW) (task LATER))}}
 	- ## JIRA
-	  collapsed:: true
 		- [🔵 In Progress - RTA-409|University collaboration - CalTech](https://ssrc.atlassian.net/browse/RTA-409)
 			- [🔵 In Progress - RTA-509|State reconstruction method with simple example](https://ssrc.atlassian.net/browse/RTA-509)
 		- [🔵 In Progress - RTA-354|Dataset generation](https://ssrc.atlassian.net/browse/RTA-354)
@@ -23,7 +22,7 @@
 				- [🟢 Done - RTA-518|Install T-Motor M690b drone](https://ssrc.atlassian.net/browse/RTA-518)
 		- [🔵 In Progress - DP-9252|AD testing team will assist SRTA by providing the required data with regular flying - Data for Demo D24Q2-SRTA.](https://ssrc.atlassian.net/browse/DP-9252)
 			- [⚪️ To Do - DP-9266|Test Extracted .ulog file from Saluki V3 post-mission](https://ssrc.atlassian.net/browse/DP-9266)
-			- [⚪️ To Do - DP-9265|Test extracted NATSBag recording of gimbal camera stream](https://ssrc.atlassian.net/browse/DP-9265)0
+			- [⚪️ To Do - DP-9265|Test extracted NATSBag recording of gimbal camera stream](https://ssrc.atlassian.net/browse/DP-9265)
 - # Index
   collapsed:: true
 	- **Projects**
