@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-06-03T15:16:36+0400
+updated: 2024-06-03T22:09:29+0400
 version: 1.1.1
 @end
 
@@ -50,8 +50,10 @@ version: 1.1.1
 *** (x) Design {* 1D Drone System}[the system]
 *** (-) Develop the secure state estimator
 
-** ( ) {:$/journal/2024/06/03:** Xiao Tan / Junior Sundar -- Q&A}[Seventh meeting]
+** (x) {:$/journal/2024/06/03:** Xiao Tan / Junior Sundar -- Q&A}[Seventh meeting]
    /SCHEDULED:/ {@ Monday 3 June 2024} 
+
+** Create GitHub repository and add `xiaotan-git` to it
 
    ===
 ___
