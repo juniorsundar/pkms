@@ -87,8 +87,11 @@
 		  CLOCK: [2024-05-31 Fri 21:47:57]
 		  CLOCK: [2024-05-31 Fri 21:48:12]
 		  :END:
-	- TODO [Seventh meeting](((665d555a-1c8d-4666-b709-eb86e9717f6e))) 
+	- DOING [Seventh meeting](((665d555a-1c8d-4666-b709-eb86e9717f6e))) 
 	  SCHEDULED: <2024-06-03 Mon 20:00>
+	  :LOGBOOK:
+	  CLOCK: [2024-06-03 Mon 19:49:36]
+	  :END:
 - # Notes
   collapsed:: true
 	- **MATLAB Cells**

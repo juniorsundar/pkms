@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-03T15:39:30+0400
+updated: 2024-06-03T19:45:37+0400
 version: 1.1.1
 @end
 
@@ -25,7 +25,7 @@ version: 1.1.1
    - {https://global.agilex.ai/products/scout-mini}[Scout Mini] -> @F4F
    - {https://global.agilex.ai/products/bunker}[Bunker] and {https://global.agilex.ai/products/bunker-mini}[Bunker mini] -> @AD and @F4F
 
-  ===
+   ===
 ___
 
 * Journal
@@ -47,9 +47,10 @@ ___
   > record anything. In sim_system is by default in data-recording branch but
   > not others. In the emulation I think it is not by default.
 
-- Samridha needed a method to obtain rosbag files from the test flights at F4F.
+  - Samridha needed a method to obtain rosbag files from the test flights at
+    F4F. --> {:$/journal/task-box/data-generation-task:** Create a script that converts `.ulog` to rosbag format}[Task]
 
-  ===
+    ===
 ___
 
 * Meetings
@@ -75,11 +76,11 @@ ___
     - ( ) Is the following 1D sensor case feasible:
     @code cpp
     std::vector<double> sensor_vector{static_cast<double>(ekf_1.x),
-                                  static_cast<double>(ekf_1.vx),
-                                  static_cast<double>(ekf_2.x),
-                                  static_cast<double>(ekf_2.vx)};
+        static_cast<double>(ekf_1.vx),
+        static_cast<double>(ekf_2.x),
+        static_cast<double>(ekf_2.vx)};
     @end
-    
+
     - ( ) Verify {:$/journal/task-box/caltech-tii-collaboration:* 1D Drone System}[1D Drone System]
 
     - ( ) Clarify function of `nchoosek`.
