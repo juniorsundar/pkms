@@ -247,9 +247,11 @@
 		  CLOCK: [2024-05-24 Fri 17:40:45]--[2024-05-29 Wed 11:16:06] =>  113:35:21
 		  :END:
 		- TODO Discuss with Jarmo whether the resample module can be imported into template as submodule
+	- TODO Create a script that converts `.ulog` to rosbag format
 - # Notes
 	- ## `.mcap` converter script
 	  id:: 6656d7f7-4ce1-47f5-bf93-a8d1413874a8
+	  collapsed:: true
 		- ```python
 		  #!/usr/bin python3
 		  

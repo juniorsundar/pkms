@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-05-30T11:57:27+0400
+updated: 2024-06-03T15:35:16+0400
 version: 1.1.1
 @end
 
@@ -24,7 +24,7 @@ ___
 
    - Need to create a demo for GITEX to showcase the work done in SRTA
    - Need to decide on a robotic platform (/Possible UGV/)
-      -- TODO Check out whether F4F has UGV that we can use
+      -- {:$/journal/2024/06/03:** Check out whether F4F has UGV that we can use}[Check out whether F4F has UGV that we can use]
    - Need to find a strategy that is adjacent enough to the current platform
      such that the amount of changes that need to be made in the code/framework
      is limited.
