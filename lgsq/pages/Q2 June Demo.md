@@ -141,11 +141,19 @@
 		  :LOGBOOK:
 		  CLOCK: [2024-05-30 Thu 11:29:36]
 		  :END:
+	- TODO Demo prerequisites
+		- TODO Note down drone configuration and limitations
+		- TODO Understand how to fly drone using FMO
+		- TODO Understand how to extract data from drone
+		- TODO Prepare anomalous flight use-case (appropriate weights and how to add them)
+		- TODO Test single anomalous flight use-case
+	- TODO Figure out what the process is to install and setup the custom release for SRTA
 	- DOING Freeze code and model
-	  id:: 6644991b-cbe7-4882-9761-382fc01aeb4c
 	  SCHEDULED: <2024-06-30 Sun>
+	  id:: 6644991b-cbe7-4882-9761-382fc01aeb4c
 	  :LOGBOOK:
-	  CLOCK: [2024-05-15 Wed 15:17:19]
+	  CLOCK: [2024-05-15 Wed 15:17:19]--[2024-06-04 Tue 21:12:53] =>  485:55:34
+	  CLOCK: [2024-06-04 Tue 21:12:53]
 	  :END:
 	- TODO Demo
 	  id:: 664499d6-f73c-49a9-bd7c-6d2ddd36eb87

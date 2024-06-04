@@ -101,6 +101,15 @@ version: 1.1.1
 *** (x) Copy over PID tuning parameters
 *** (-) Connect with GCS and fly autonomously
 
+** ( ) Demo prerequisites
+*** ( ) Note down drone configuration and limitations
+*** ( ) Understand how to fly drone using FMO
+*** ( ) Understand how to extract data from drone
+*** ( ) Prepare anomalous flight use-case (appropriate weights and how to add them)
+*** ( ) Test single anomalous flight use-case
+
+** Figure out what the process is to install and setup the custom release for SRTA
+
 ** (-) Freeze code and model
    /SCHEDULED:/ {@ Sunday 30 June 2024} 
 

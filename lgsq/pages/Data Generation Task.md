@@ -230,7 +230,12 @@
 		  :LOGBOOK:
 		  CLOCK: [2024-05-27 Mon 20:18:08]
 		  :END:
-		- DOING Variable propeller cuts and data collection
+		- DOING Weights attached flight missions
+		  :LOGBOOK:
+		  CLOCK: [2024-06-04 Tue 21:24:12]
+		  CLOCK: [2024-06-04 Tue 21:24:15]
+		  :END:
+		- LATER Variable propeller cuts and data collection
 		  :LOGBOOK:
 		  CLOCK: [2024-05-27 Mon 20:18:09]
 		  :END:
