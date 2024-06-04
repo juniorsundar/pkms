@@ -1,6 +1,5 @@
 link:: https://www.udemy.com/share/109Zo23@44LsCDI3H4cb_JsKRBxWCg5uLP7XPeNIsrCcG7eaFkf-hyYCWmsURiNlHReeWF17/
 
-- {{renderer :tocgen2}}
 - # Introduction
   collapsed:: true
 	- ## About Go
