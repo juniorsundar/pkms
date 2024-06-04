@@ -1,6 +1,7 @@
 # Tasks
 	- DONE [[Literature review for Data Generation Task]]
 	- DONE Generate plan of action
+	  collapsed:: true
 	  :LOGBOOK:
 	  CLOCK: [2024-03-20 Wed 16:21:03]--[2024-03-27 Wed 22:27:29] =>  174:06:26
 	  :END:
@@ -89,6 +90,7 @@
 				- restart simulation
 	- DONE Deploy simulation and data collection system in local machine
 	  id:: 65fc53d3-67f7-4f29-891c-c16e8ba9ae0f
+	  collapsed:: true
 	  :LOGBOOK:
 	  CLOCK: [2024-03-27 Wed 22:27:13]--[2024-04-04 Thu 16:27:40] =>  186:00:27
 	  :END:
@@ -123,6 +125,7 @@
 		  CLOCK: [2024-04-02 Tue 16:31:26]--[2024-04-04 Thu 16:27:01] =>  47:55:35
 		  :END:
 	- DONE Deploy to container registry
+	  collapsed:: true
 		- DONE Test once and observe if it is allowed
 		  :LOGBOOK:
 		  CLOCK: [2024-04-04 Thu 10:36:58]
@@ -133,6 +136,7 @@
 		  CLOCK: [2024-04-04 Thu 16:27:27]
 		  :END:
 	- DONE Run test batch
+	  collapsed:: true
 	  :LOGBOOK:
 	  CLOCK: [2024-04-04 Thu 16:27:37]--[2024-05-06 Mon 15:04:45] =>  766:37:08
 	  :END:
@@ -142,6 +146,7 @@
 		  CLOCK: [2024-05-06 Mon 15:04:35]--[2024-05-06 Mon 15:04:36] =>  00:00:01
 		  :END:
 		- DONE Create a convenient ((6656d7f7-4ce1-47f5-bf93-a8d1413874a8))
+		  collapsed:: true
 		  :LOGBOOK:
 		  CLOCK: [2024-04-05 Fri 10:22:55]
 		  CLOCK: [2024-04-05 Fri 10:22:59]--[2024-04-18 Thu 15:52:35] =>  317:29:36
@@ -229,14 +234,16 @@
 		  :LOGBOOK:
 		  CLOCK: [2024-05-27 Mon 20:18:09]
 		  :END:
+	- TODO Ask Jorge/Vojtech for the documentation on script run
+		- > Do you run the script from hypervisor or from a specific container?
 	- DOING Refactor and updates
 	  id:: 665038b5-88dc-4cf8-a496-9feb389f8c85
 	  :LOGBOOK:
 	  CLOCK: [2024-05-24 Fri 14:17:39]
 	  :END:
-		- DOING Add FC & LMC data to README in folders
+		- DONE Add FC & LMC data to README in folders
 		  :LOGBOOK:
-		  CLOCK: [2024-05-24 Fri 17:40:49]
+		  CLOCK: [2024-05-24 Fri 17:40:49]--[2024-06-04 Tue 19:48:32] =>  266:07:43
 		  :END:
 		- DONE Move `resample_data` to a different module for importing
 		  :LOGBOOK:
@@ -247,8 +254,13 @@
 		  CLOCK: [2024-05-24 Fri 17:40:45]--[2024-05-29 Wed 11:16:06] =>  113:35:21
 		  :END:
 		- TODO Discuss with Jarmo whether the resample module can be imported into template as submodule
-	- TODO Create a script that converts `.ulog` to rosbag format
+	- DOING Create a script that converts `.ulog` to rosbag format
 	  id:: 665da005-9bef-47aa-85c8-06f126ad0a08
+	  :LOGBOOK:
+	  CLOCK: [2024-06-04 Tue 19:45:26]
+	  :END:
+		- DONE Write the conversion component for `.csv` --> `.db3`
+		- TODO Implement a CLI to seamlessly execute this operation
 - # Notes
 	- ## `.mcap` converter script
 	  id:: 6656d7f7-4ce1-47f5-bf93-a8d1413874a8

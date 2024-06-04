@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-04T09:38:15+0400
+updated: 2024-06-04T21:09:11+0400
 version: 1.1.1
 @end
 
@@ -21,34 +21,87 @@ version: 1.1.1
 *** ( ) Research into UAV Decentralised Swarm implementations
 *** ( ) Search around in ARRC for work being done in decentralised control
 
+** (x) Discuss with Andres about the feasibility of a downgrade
 
   ===
 ___
 
 * Journal
 
+  According to Andres:
+  - Siyi camera not supported in 12.0.1
+  - There were some issues with PX4 firmware version and release version not
+    matching up
+  - It seems that F4F is using BKC (Best Known Configuration) 12.1, which
+    supports Siyi Camera
+     -- This requires a set up of a rugged-laptop which in and of itself is a
+        long-winded setup process
+
+  Since the purpose of the demo is not to run the image segmentation, we can
+  get away with using a downgraded version (approved by Martin)
+
+* Setting up `clangd` for ROS 2
+
+  Need to switch from `g++` -> `clang++`
+
+  @code bash
+  # https://www.reddit.com/r/ROS/comments/15yr1zm/ros_c_coding_setup/
+  export CC=clang
+  export CXX=clang++
+  export CLANG_BASE="--build-base build_clang --install-base install_clang"
+  export BUILD_ARGS="--symlink-install ${CLANG_BASE} --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+  alias cb="colcon build ${BUILD_ARGS}"
+  @end
+
+  The `compile_commands.json` is stored inside `/build_clang`, which can be
+  symlink'd with:
+
+  @code bash
+  ln -s build_clang/compile_commands.json ./compile_commands.json
+  @end
+
   ===
 ___
 
 * Meetings
 
-** Meeting Name
+** SSRC-F4F
 
 *** Attendees
 
-    | Names
+    | Unikie
+    | Solita
+    | F4F
+    | SSRC
 
 *** Goals
 
+    Gain insight into what's happening across the board
 
 *** Agenda
 
-    - ( ) 
+    - Track issue with integration of components with release 12.0.1.
+    - Keep note of anything of relevance.
 
 *** Minutes
 
+    Release 12 in FMO v.4 issue
+    - Device not showing up on FMO (some IP conflicts)
+    - Battery and power not showing up on FMO (also GPS)
+    - Either downgrade or diagnose and resolve
+    - Video feed not showing from camera
+
+    M690b issues popping up with PX4
+    - MicroXRCE Agent not stable --> not all telemetry data visible
+    - If battery status is not active, then none of the telem datas will show
+
+    SRTA
+    - Can work with QGC but not FMO
+    - If a different release works, then why not downgrade to that?
 
 *** Action Items
+
+    - {** Discuss with Andres about the feasibility of a downgrade}
 
     ===
 ___
