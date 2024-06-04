@@ -54,7 +54,6 @@
 - # [Software-in-the-Loop (SITL)]([[Software in the Loop]])
 	- ## Set-Up
 		- To run the simulations, you need to first enter the PX4-Autopilot toolchain directory that was cloned. This is explained in this [section](((65f8249b-a538-46bb-b8eb-8416c2d03f19))).
-		- TODO Update this section
 		- ```bash
 		  cd ./PX4-Autopilot
 		  ```
