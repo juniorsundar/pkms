@@ -128,13 +128,18 @@ version: 1.1.1
 *** (-) Long duration continuous flight missions
 *** (-) Variable propeller cuts and data collection
 
+** ( ) Ask Jorge/Vojtech for the documentation on script run
+   > Do you run the script from hypervisor or from a specific container?  
+
 ** (-) Refactor and updates
-*** (-) Add FC & LMC data to README in folders
+*** (x) Add FC & LMC data to README in folders
 *** (x) Move `resample_data` to a different module for importing
 *** (x) Create tests for code
 *** ( ) Discuss with Jarmo whether the resample module can be imported into template as submodule
 
-** ( ) Create a script that converts `.ulog` to rosbag format
+** (-) Create a script that converts `.ulog` to rosbag format
+*** (x) Write the conversion component for `.csv` --> `.db3`
+*** ( ) Implement a CLI to seamlessly execute this operation
 
     ===
 ___
