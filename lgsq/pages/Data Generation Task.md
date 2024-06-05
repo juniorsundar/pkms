@@ -239,7 +239,10 @@
 		  :LOGBOOK:
 		  CLOCK: [2024-05-27 Mon 20:18:09]
 		  :END:
-	- TODO Ask Jorge/Vojtech for the documentation on script run
+	- DOING Ask Jorge/Vojtech for the documentation on script run
+	  :LOGBOOK:
+	  CLOCK: [2024-06-05 Wed 21:03:31]
+	  :END:
 		- > Do you run the script from hypervisor or from a specific container?
 	- DOING Refactor and updates
 	  id:: 665038b5-88dc-4cf8-a496-9feb389f8c85

@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-06-05T16:31:29+0400
+updated: 2024-06-05T22:42:47+0400
 version: 1.1.1
 @end
 
@@ -105,10 +105,15 @@ version: 1.1.1
 *** (-) Note down drone configuration and limitations
 *** (x) Understand how to fly drone using FMO
 *** (x) Understand how to extract data from drone
+    Can be done through QGC
+
 *** ( ) Prepare anomalous flight use-case (appropriate weights and how to add them)
 *** ( ) Test single anomalous flight use-case
 
 ** (x) Figure out what the process is to install and setup the {* Custom Release for SRTA}
+
+** (-) Soft deadline to get drone working with SRTA module
+   /SCHEDULED:/ {@ Thursday 13 June 2024} 
 
 ** (-) Freeze code and model
    /SCHEDULED:/ {@ Sunday 30 June 2024} 
@@ -157,13 +162,13 @@ ___
      {https://github.com/tiiuae/fog_system/commits/feature/gpu-passthrough/}[feature/gpu-passthrough]
 
 ** Junior's Steps for Deployment: Creating bootable USB and installing fog-system
-   - *Commands*:
    @code bash
    sudo fog update feature/gpu-passthrough
    sudo fog installer create-media --site=uae --profile=nvidia-nx --confirm /dev/sda
    @end
-   - *Process*: Install fog-system on Saluki V3L, connect to internet, and pull
-     required containers.
+
+   *Process*: Install fog-system on Saluki V3L, connect to internet, and pull
+   required containers.
 
 ** Manuel's Confirmation: Steps are correct
    - Affirmed the steps provided by Junior and confirmed they should suffice.

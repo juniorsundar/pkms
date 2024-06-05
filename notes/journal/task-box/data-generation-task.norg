@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:00:57+0400
-updated: 2024-06-04T21:27:46+0400
+updated: 2024-06-05T21:45:37+0400
 version: 1.1.1
 @end
 
@@ -129,7 +129,7 @@ version: 1.1.1
 *** (-) Weights attached flight missions
 *** (=) Variable propeller cuts and data collection
 
-** ( ) Ask Jorge/Vojtech for the documentation on script run
+** (-) Ask Jorge/Vojtech for the documentation on script run
    > Do you run the script from hypervisor or from a specific container?  
 
 ** (-) Refactor and updates
