@@ -265,7 +265,14 @@
 	  CLOCK: [2024-06-04 Tue 19:45:26]
 	  :END:
 		- DONE Write the conversion component for `.csv` --> `.db3`
-		- TODO Implement a CLI to seamlessly execute this operation
+		- DONE Implement a CLI to seamlessly execute this operation
+		  :LOGBOOK:
+		  CLOCK: [2024-06-05 Wed 10:22:07]--[2024-06-05 Wed 16:29:53] =>  06:07:46
+		  :END:
+		- DOING Write tests for the implementation
+		  :LOGBOOK:
+		  CLOCK: [2024-06-05 Wed 16:29:54]
+		  :END:
 - # Notes
 	- ## `.mcap` converter script
 	  id:: 6656d7f7-4ce1-47f5-bf93-a8d1413874a8

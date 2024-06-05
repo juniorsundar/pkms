@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-06-03T15:20:18+0400
+updated: 2024-06-05T16:31:29+0400
 version: 1.1.1
 @end
 
@@ -97,18 +97,18 @@ version: 1.1.1
      - Nvidia power cable
      - RF transmitter/receiver
 
-** (-) Get drone airborne --> Transferred to Systems Testing Team
+** (x) Get drone airborne --> Transferred to Systems Testing Team
 *** (x) Copy over PID tuning parameters
-*** (-) Connect with GCS and fly autonomously
+*** (x) Connect with GCS and fly autonomously
 
-** ( ) Demo prerequisites
-*** ( ) Note down drone configuration and limitations
-*** ( ) Understand how to fly drone using FMO
-*** ( ) Understand how to extract data from drone
+** (-) Demo prerequisites
+*** (-) Note down drone configuration and limitations
+*** (x) Understand how to fly drone using FMO
+*** (x) Understand how to extract data from drone
 *** ( ) Prepare anomalous flight use-case (appropriate weights and how to add them)
 *** ( ) Test single anomalous flight use-case
 
-** Figure out what the process is to install and setup the custom release for SRTA
+** (x) Figure out what the process is to install and setup the {* Custom Release for SRTA}
 
 ** (-) Freeze code and model
    /SCHEDULED:/ {@ Sunday 30 June 2024} 
@@ -144,3 +144,38 @@ ___
     command. If they are not in the same then there will be a communication
     issue.
 
+* Custom Release for SRTA
+
+** Junior from SRTA team: New fog-system deployment on SalukiV3
+   - Deploying GPU-enabled features, currently on release 12.0.1.
+   - Asked about compatibility with existing FPGA, FC versions, etc.
+
+** Manuel's Response: Compatibility confirmed with caveats
+   - Confirmed compatibility but mentioned possible surprises due to the demo
+     branch.
+   - Provided link to the specific branch used for testing:
+     {https://github.com/tiiuae/fog_system/commits/feature/gpu-passthrough/}[feature/gpu-passthrough]
+
+** Junior's Steps for Deployment: Creating bootable USB and installing fog-system
+   - *Commands*:
+   @code bash
+   sudo fog update feature/gpu-passthrough
+   sudo fog installer create-media --site=uae --profile=nvidia-nx --confirm /dev/sda
+   @end
+   - *Process*: Install fog-system on Saluki V3L, connect to internet, and pull
+     required containers.
+
+** Manuel's Confirmation: Steps are correct
+   - Affirmed the steps provided by Junior and confirmed they should suffice.
+
+** FC and LMC Clarification: Use of terms and functionality
+   - Discussed use of FC and clarified LMC as Mission Computer.
+   - The LMC has been used in another context (Salukiv2 with Flight Controller
+     and Lite Mission Computer). Now it is just MC.
+   - Ensured flying capability with the new fog-system installation.
+
+** Junior's Final Query: Support for potential issues
+   - Asked for contact in case of issues during deployment.
+
+** Manuel's Assurance: Setup should work, provided support guidance
+   - Confirmed that the setup should be functional and offered support.

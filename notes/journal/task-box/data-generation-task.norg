@@ -140,7 +140,8 @@ version: 1.1.1
 
 ** (-) Create a script that converts `.ulog` to rosbag format
 *** (x) Write the conversion component for `.csv` --> `.db3`
-*** ( ) Implement a CLI to seamlessly execute this operation
+*** (x) Implement a CLI to seamlessly execute this operation
+*** (-) Write tests for the implementation
 
     ===
 ___
