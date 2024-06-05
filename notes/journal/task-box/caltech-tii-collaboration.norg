@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-06-04T21:28:30+0400
+updated: 2024-06-05T16:31:29+0400
 version: 1.1.1
 @end
 
@@ -53,7 +53,7 @@ version: 1.1.1
 ** (x) {:$/journal/2024/06/03:** Xiao Tan / Junior Sundar -- Q&A}[Seventh meeting]
    /SCHEDULED:/ {@ Monday 3 June 2024} 
 
-** ( ) Create GitHub repository and add `xiaotan-git` to it
+** (x) Create GitHub repository and add `xiaotan-git` to it
 
    ===
 ___
