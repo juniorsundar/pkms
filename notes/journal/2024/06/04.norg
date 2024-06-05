@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-05T16:20:04+0400
+updated: 2024-06-05T22:36:12+0400
 version: 1.1.1
 @end
 
@@ -17,17 +17,18 @@ ___
 
 * Journal
 
-  According to Andres:
-  - Siyi camera not supported in 12.0.1
-  - There were some issues with PX4 firmware version and release version not
-    matching up
-  - It seems that F4F is using BKC (Best Known Configuration) 12.1, which
-    supports Siyi Camera
-     -- This requires a set up of a rugged-laptop which in and of itself is a
-        long-winded setup process
+** Andres' feedback on version and camera compatibility
+   - Siyi camera not supported in 12.0.1
+   - There were some issues with PX4 firmware version and release version not
+     matching up
+   - It seems that F4F is using BKC (Best Known Configuration) 12.1, which
+     supports Siyi Camera
+      -- This requires a set up of a rugged-laptop which in and of itself is a
+         long-winded setup process
 
-  Since the purpose of the demo is not to run the image segmentation, we can
-  get away with using a downgraded version (approved by Martin)
+** Moving to downgraded version of release
+   Since the purpose of the demo is not to run the image segmentation, we can
+   get away with using a downgraded version (approved by Martin)
 
 * Setting up `clangd` for ROS 2
 
