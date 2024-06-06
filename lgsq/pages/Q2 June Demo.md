@@ -141,7 +141,10 @@
 		  :LOGBOOK:
 		  CLOCK: [2024-05-30 Thu 11:29:36]--[2024-06-05 Wed 16:30:56] =>  149:01:20
 		  :END:
-	- TODO Demo prerequisites
+	- DOING Demo prerequisites
+	  :LOGBOOK:
+	  CLOCK: [2024-06-06 Thu 12:46:18]
+	  :END:
 		- DOING Note down drone configuration and limitations
 		  :LOGBOOK:
 		  CLOCK: [2024-06-05 Wed 16:30:43]
@@ -173,6 +176,7 @@
 	  id:: 664499d6-f73c-49a9-bd7c-6d2ddd36eb87
 	  SCHEDULED: <2024-07-01 Mon>
 - # Notes
+  collapsed:: true
 	- Task changes because it was possible to receive a T-Motor M690b assigned for SRTA Team
 	  collapsed:: true
 		- ((66386c1b-cb4c-4ea2-a161-fd8ffedf4d86))

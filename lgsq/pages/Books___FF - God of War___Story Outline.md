@@ -2,7 +2,7 @@
 :LOGBOOK:
 CLOCK: [2024-06-05 Wed 23:31:27]
 :END:
-	- DOING **Kratos and the Axe of Rama**
+	- [-] **Kratos and the Axe of Rama**
 	  :LOGBOOK:
 	  CLOCK: [2024-06-05 Wed 23:27:00]
 	  :END:
@@ -16,7 +16,7 @@ CLOCK: [2024-06-05 Wed 23:31:27]
 			- Rama also brings out a pot of ((6660bda5-ad5c-4d2f-81b8-fb69f0f36a1e))
 		- Although apprehensive, Kratos overlooks the oddity and indulges in the food and drink.
 		- The Soma lulls Kratos to sleep.
-	- TODO **Kratos' dream and Rama's disappearance**
+	- [ ] **Kratos' dream and Rama's disappearance**
 		- Shared dream that belongs to Rama
 		- The dream is in first-person perspective, but it is evident from the very first frame that it isn't something Kratos has experienced before.
 		- It starts with Kratos, or whoever he is in the dream, facing off against a massive army.
@@ -29,5 +29,5 @@ CLOCK: [2024-06-05 Wed 23:31:27]
 			- Kratos releases the Brahmastra, causing a massive explosion that engulfs the army in a searing inferno.
 			- The ground trembles, creating a vast crater and flattening everything in its path, incinerating soldiers and obliterating the crescent formation.
 			- Amidst the devastation, the general miraculously survives, lying dazed but alive with his chariot overturned.
-	- TODO **The root of the cursed axe**
+	- [ ] **The root of the cursed axe**
 - # Arc 2
