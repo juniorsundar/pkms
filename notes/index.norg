@@ -1,10 +1,10 @@
 @document.meta
-title: Notes 
+title: Notes
 description: 
 authors: juniorsundar
 categories: 
 created: 2024-01-28T19:20:38+0400
-updated: 2024-05-16T14:04:28+0400
+updated: 2024-06-09T16:00:36+0400
 version: 1.1.1
 @end
 
@@ -119,6 +119,4 @@ ___
 
   ===
 ___
-
-{:../index:}[index]
 

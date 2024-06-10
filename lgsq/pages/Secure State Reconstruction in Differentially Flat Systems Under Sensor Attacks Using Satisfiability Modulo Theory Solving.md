@@ -3,7 +3,6 @@ file:: [Secure State Reconstruction in Differentially Flat Systems Under Sensor 
 file-path:: ../assets/shoukry2015_1713459757385_0.pdf
 
 - # Introduction
-  collapsed:: true
 	- Stuxnet virus targeting SCADA systems --> Feeds previously recorded measurements back into the controller.
 	- *Secure state reconstruction* is process of reconstructing actual system states by using data collected from attack-free sensors.
 		- No assumptions are made about the attack, such as the stochastic properties, time evolution, or energy bounds.

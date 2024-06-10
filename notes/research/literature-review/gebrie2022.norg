@@ -6,7 +6,7 @@ categories: [
     research
 ] 
 created: 2024-02-12T20:14:04+0400
-updated: 2024-05-16T13:02:09+0400
+updated: 2024-06-09T22:41:41+0400
 version: 1.1.1
 @end
 
@@ -21,7 +21,7 @@ version: 1.1.1
   and anomalous behaviors. The study investigates the use of Inertial
   Measurement Units (IMU) and vibration analysis for monitoring UAV health.
 
-  A {:../technical/terminologies.digital-twin:}[Digital Twin] is employed to simulate physical system
+  A {:$/terminologies/digital-twin:}[Digital Twin] is employed to simulate physical system
   operations, generating data to identify normal UAV
   operation modes. Real-time operational data is compared against this to
   detect anomalies, using TimeGAN, a GAN variant for time series data, and
