@@ -1,0 +1,29 @@
+@document.meta
+title: pynorg
+description: 
+authors: juniorsundar-unikie
+categories: [
+    task
+]
+created: 2024-06-10T15:18:58+0400
+updated: 2024-06-10T15:24:52+0400
+version: 1.1.1
+@end
+
+* ( ) Tasks
+
+** (x) Create basic Python project repository
+
+** (x) Implement CLI base tooling
+
+** (-) *Purpose:* {:$/unfiled/neorg-helper:*** Backlinking}[Backlinking] | Implement re-indexing with caching as `.json`
+*** (x) First iteration
+*** (-) Improve the multi-processing of ripgrep using {https://docs.python.org/3/library/concurrent.futures.html*concurrent.futures.ProcessPoolExecutor}[concurrent.futures] module
+
+** (-) *Purpose:* {:$/unfiled/neorg-helper:*** Backlinking}[Backlinking]  | Implement metadata parsing of `.norg` files
+*** (x) First iteration as a helper function
+*** TODO Improve parsing to be able to consistently extract all fields (including "categories")
+
+* Notes
+** Rationale for using `ripgrep`/`rg`
+   *here*

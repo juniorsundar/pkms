@@ -12,6 +12,7 @@
 		- ### Completed
 		- ### On-Hold/Cancelled
 		- ### Personal
+			- [[Neorg Helper]]
 			- [[Books/The Good Teacher]]
 			- [[Books/FF - God of War]]
 	- ## [[Terminology]]

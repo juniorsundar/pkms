@@ -1,0 +1,68 @@
+@document.meta
+title: Neorg Helper
+description: 
+authors: juniorsundar-unikie
+categories: 
+created: 2024-06-10T15:05:01+0400
+updated: 2024-06-10T15:18:30+0400
+version: 1.1.1
+@end
+
+* Introduction
+
+** Purpose
+
+*** Learning to program
+
+**** Curriculum
+     - Python and Go packaging
+     - CI/CD
+     - Project management and maintenance
+     - (Optional) Open-source
+
+     ---
+
+    - It isn't necessarily an optimal solution, just something to help work the
+      mind.
+    - Python first because I want to learn how to manage packaging for it.
+    - Go second because I want to learn the programming language.
+
+*** Organisation and personal management
+    - Neorg is a very useful tool to track personal stuff.
+    - There are limitations to it as the tools are being developed and deployed
+      incrementally.
+    - In the meantime, I can do what I can to learn.
+
+** Features
+
+*** Backlinking
+
+    Being able to track which nodes is referred to by another node.
+
+    Being able to jump between the nodes in question.
+
+*** Indexing
+
+    Sorting nodes according to
+
+*** Task Tracking/GTD
+
+    Get all the shit you need at once!!
+
+*** Node Management
+
+    Renaming?
+
+    Reorganising?
+
+*** (Optional) Site Deployment
+
+* Implementations
+
+  - Python --> {:$/journal/task-box/pynorg:}[pynorg]
+  - Lua (Neovim side) --> {:$/journal/task-box/neorg_utils.lua:}[neorg_utils.lua]
+
+* Goal/Target
+
+  Completely shifting over to Neorg and leaving Logseq behind
+
