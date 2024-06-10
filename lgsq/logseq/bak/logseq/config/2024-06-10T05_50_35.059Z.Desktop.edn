@@ -427,4 +427,4 @@
  :charge-strength -700
  :charge-range 700}
  :publishing/all-pages-public? true
- :ui/show-brackets? false}
+ :ui/show-brackets? true}

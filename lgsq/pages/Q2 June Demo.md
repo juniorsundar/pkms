@@ -145,14 +145,15 @@
 	  :LOGBOOK:
 	  CLOCK: [2024-06-06 Thu 12:46:18]
 	  :END:
-		- DOING Note down drone configuration and limitations
+		- DONE Note down drone configuration and limitations
 		  :LOGBOOK:
-		  CLOCK: [2024-06-05 Wed 16:30:43]
+		  CLOCK: [2024-06-05 Wed 16:30:43]--[2024-06-10 Mon 09:51:33] =>  113:20:50
 		  :END:
 		- DONE Understand how to fly drone using FMO
 		- DONE Understand how to extract data from drone
 		  collapsed:: true
 			- Can be done through QGC
+		- TODO Try deploying containers into the Saluki V3
 		- TODO Prepare anomalous flight use-case (appropriate weights and how to add them)
 		- TODO Test single anomalous flight use-case
 	- DONE Figure out what the process is to install and setup the ((66605142-3ed1-4364-8797-636648594267))
@@ -176,17 +177,16 @@
 	  id:: 664499d6-f73c-49a9-bd7c-6d2ddd36eb87
 	  SCHEDULED: <2024-07-01 Mon>
 - # Notes
-  collapsed:: true
-	- Task changes because it was possible to receive a T-Motor M690b assigned for SRTA Team
+	- **Task changes because it was possible to receive a T-Motor M690b assigned for SRTA Team**
 	  collapsed:: true
 		- ((66386c1b-cb4c-4ea2-a161-fd8ffedf4d86))
 		- ((66386c1b-1e6c-4481-b1f3-08b18d2a9fc6))
-	- Why go for the T-Motor drone over the Holybro?
+	- **Why go for the T-Motor drone over the Holybro?**
 	  collapsed:: true
 		- Final deployment is with T-Motor drone swarms.
 		- If it is possible for F4F to repeat and replicate non-normal flight test cases, then it can be replicated in Masdar for testing. This will save chances of drone being wrecked here.
 		- If F4F does not have Holybro procured, then lead time to data collection is uncertain.
-	- Important points when setting up Comms Module v1.5:
+	- **Important points when setting up Comms Module v1.5**
 	  id:: 66488a15-4e2c-4a74-bc4b-f09e167c608c
 	  collapsed:: true
 		- To boot the Raspberry Pi device as USB: [raspberrypi/usbboot](https://github.com/raspberrypi/usbboot)
