@@ -1,5 +1,4 @@
 # Tasks
-collapsed:: true
 	- {{query (or (task DOING) (task TODO) (task WAITING) (task NOW) (task LATER))}}
 	  query-properties:: [:page :block]
 	  query-table:: false
@@ -20,6 +19,7 @@ collapsed:: true
 - # Journal
 	- **2024**
 		- *June*
+		  collapsed:: true
 			- [[Jun 30th, 2024]]
 			- [[Jun 29th, 2024]]
 			- [[Jun 28th, 2024]]

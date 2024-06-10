@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-06-05T22:42:47+0400
+updated: 2024-06-10T10:05:55+0400
 version: 1.1.1
 @end
 
@@ -18,7 +18,7 @@ version: 1.1.1
    - Downward: {https://shop.siyi.biz/products/siyi-a8-mini}[SIYI A8 Mini]
      This is the model being used in Masdar and in F4F Prague
 
-*** (x) How is the data being recorded?
+** (x) How is the data being recorded?
 *** (x) It is known that the data is being dumped in ROSbags somewhere, how to extract this?
     It can be recorded using {https://github.com/tiiuae/nats-bag}[`nats-bag`]
 
@@ -107,6 +107,7 @@ version: 1.1.1
 *** (x) Understand how to extract data from drone
     Can be done through QGC
 
+*** ( ) Try deploying containers into the Saluki V3
 *** ( ) Prepare anomalous flight use-case (appropriate weights and how to add them)
 *** ( ) Test single anomalous flight use-case
 
@@ -126,28 +127,27 @@ ___
 
 * Notes
 
-  *Task changes because it was possible to receive a T-Motor M690b assigned for*
-  *SRTA Team*
-  - Cancelled: [Task]{**  Verify if this method can be used to record data}
-  - Updated: [Task]{**  Mount Saluki V3 to the -Holybro-X500- T-Motor M690b Drone and get it airborne}
+** Task changes because it was possible to receive a T-Motor M690b assigned for SRTA Team
+   - Cancelled: [Task]{**  Verify if this method can be used to record data}
+   - Updated: [Task]{**  Mount Saluki V3 to the -Holybro-X500- T-Motor M690b Drone and get it airborne}
 
-  *Why go for the T-Motor drone over the Holybro?*
-  - Final deployment is with T-Motor drone swarms.
-  - If it is possible for F4F to repeat and replicate non-normal flight test
-    cases, then it can be replicated in Masdar for testing. This will save
-    chances of drone being wrecked here.
-  - If F4F does not have Holybro procured, then lead time to data collection is
-    uncertain.
+** Why go for the T-Motor drone over the Holybro?
+   - Final deployment is with T-Motor drone swarms.
+   - If it is possible for F4F to repeat and replicate non-normal flight test
+     cases, then it can be replicated in Masdar for testing. This will save
+     chances of drone being wrecked here.
+   - If F4F does not have Holybro procured, then lead time to data collection is
+     uncertain.
 
-  *Important points when setting up Comms Module v1.5*:
-  - To boot the Raspberry Pi device as USB: {https://github.com/raspberrypi/usbboot}[raspberrypi/usbboot]
-  - To flash custom image into the Pi, use `sudo rpi-imager`
-     -- Install with `sudo apt install rpi-imager`
-     -- `sudo` is important because otherwise the `/dev/sdX` cannot be
-        accessible for writing disk image
-  - Check if two communications modules are in the same channel with `iw dev`
-    command. If they are not in the same then there will be a communication
-    issue.
+** Important points when setting up Comms Module v1.5
+   - To boot the Raspberry Pi device as USB: {https://github.com/raspberrypi/usbboot}[raspberrypi/usbboot]
+   - To flash custom image into the Pi, use `sudo rpi-imager`
+      -- Install with `sudo apt install rpi-imager`
+      -- `sudo` is important because otherwise the `/dev/sdX` cannot be
+         accessible for writing disk image
+   - Check if two communications modules are in the same channel with `iw dev`
+     command. If they are not in the same then there will be a communication
+     issue.
 
 * Custom Release for SRTA
 
