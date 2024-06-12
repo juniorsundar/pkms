@@ -1,6 +1,7 @@
-# 12 June 2024
-id:: 666934e0-39c9-403c-b79a-6e5ef697de5a
-tag:: #MEETING
+- {{renderer :tocgen2}}
+- # 12 June 2024
+  id:: 666934e0-39c9-403c-b79a-6e5ef697de5a
+  tag:: #MEETING
 	- **Attendees**
 		- SRTA-AD
 	- **Goal**
@@ -210,3 +211,101 @@ tag:: #MEETING
 		  CLOCK: [2024-04-26 Fri 11:11:58]--[2024-04-26 Fri 14:05:10] =>  02:53:12
 		  :END:
 		- Send Raw GPS data to Siva
+- # 4 April 2024
+  tag:: #MEETING
+  collapsed:: true
+	- **Attendees**
+		- SRTA-AD
+	- **Goal**
+		- Discuss progress
+	- **Agenda**
+		- Update Jira
+		- Sync-up
+	- **Minutes**
+		- Updates:
+			- [Deployment now generating and collecting data](((65fc53d3-67f7-4f29-891c-c16e8ba9ae0f)))
+			- [Syncing with Willian to hash out labelling](((660d7e6b-f931-4b91-840f-7e1903ade0a5))) and set out experimental procedure
+			- Documentation up to date
+			- Drone license registration needs some follow up
+		- Rayana will be switching teams
+	- **Action Items**
+		- ((660ef536-f32e-487c-b82b-490ec9fbbb63))
+- # 28 March 2024
+  id:: 6666b7a6-d847-42c6-abb7-3f2e85cb03d7
+  tag:: #MEETING
+  collapsed:: true
+	- **Attendees**
+		- SRTA-AD
+	- **Goals**
+		- Q1 wrap up
+		- Q2 demo kickoff
+	- **Agenda**
+		- Update on current progress
+		- Update Jira
+	- **Minutes**
+		- This is the last meeting of Q1
+		- Update Jira separately before these round tables, it will no longer happen during the meetings
+		- 15th May code freeze for Demo
+		- [[Data Generation Task]]
+			- Simulation and rosnodes are containerised
+			- [Restructuring current method for a run-and-forget implementation](((65fc53d3-67f7-4f29-891c-c16e8ba9ae0f)))
+		- [Prague data collection](((66045d50-eebf-4b61-9340-a573f6620d66)))
+			- Limitations -> only rostopics can be captured in SQLite3 (lack of metadata)
+			- Some stop gaps in play
+			- Now way to record mission success or failure
+	- **Action Items**
+		- DONE Update the Q1 objectives spreadsheet by EOD
+		  SCHEDULED: <2024-03-29 Fri 16:00>
+		- ((66045d50-b8c7-4f49-a374-b9be3bde0463))
+- # 20 March 2024
+  id:: 6666b7a6-6d0b-461b-ad3b-26e4e36119ac
+  tag:: #MEETING
+  collapsed:: true
+	- **Attendees**
+		- SRTA-AD
+	- **Goals**
+		- Discuss progress
+	- **Agenda**
+		- Update Jira
+		- Sync-up
+	- **Minutes**
+		- *Rabdan* (previously called Falcon SOC) is going into production.
+		- [[HITL simulation and data collection for system latency]] task is completed.
+		- [[Literature review for Data Generation Task]] nearly complete
+			- Need to discuss scope with Willian.
+			- May need to reorient data collection and processing when moving for publication.
+			- What makes a dataset stable?
+	- **Action Items**
+		- DONE Meet Shamsa to identify the cause of missing datasets in dumped logs
+			- The driver is not able to capture and publish some of the prescribed data that are part of the message data-structure.
+			- This results in empty values in that particular key.
+- # 6 March 2024
+  id:: 6666b7a6-fa07-48c9-878b-662bf36a77bc
+  tag:: #MEETING
+  collapsed:: true
+	- **Attendees**
+		- SRTA-AD
+			- Martin Andreoni
+			- Willian Lunardi
+			- Rayana Boubezari
+			- Junior Sundar
+	- **Goals**
+		- Syncup with rest of team
+	- **Agenda**
+		- [x] Discuss progress
+		- [x] Update Jira
+	- **Minutes**
+		- *Martin Andreoni*
+			- Ticky is looking at a top down approach to objective setting. For the SRTA team, the goal is to have a demo ready (initial) by July (Q2)
+			- Deadlines need to be met, with regards to the weekly reports
+			- Before making submissions, make sure to proofread
+			- Before sending to review, it is best to have some sort of Confluence page that discusses the achievements of the task
+		- *Dania Herzolla*
+			- JamLocator assumes that there is a control channel through which minimal message passing is still in place. So even if there is a disconnection by jammer, some information can still be passed around
+		- *Junior Sundar*
+			- Add Yashrajsinh as a collaborator in Jira tasks with him
+	- **Action Items**
+		- ~~Update Jira and weekly report~~
+		- ~~Implement a basic ROS 2 implementation for swarm controls for Saurabh to test his algorithms~~
+		- ~~Prepare logistics for updating tasks and goal given the meeting with Willian~~
+			- ~~Discuss in meeting with Rayana~~
