@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:00:57+0400
-updated: 2024-06-10T10:21:13+0400
+updated: 2024-06-12T16:51:33+0400
 version: 1.1.1
 @end
 
@@ -79,7 +79,7 @@ version: 1.1.1
 
 ** (x) Refactor `ulog_converter.py` -> `resample` out of merging
 
-**  (-) Data collection
+** (-) Data collection
 ***  (x) Hardware datasets
 **** (x) Set up meeting with F4F to discuss possibility for anomalous test
 **** (x) Discuss data collection with broken propellor with F4F
@@ -98,7 +98,7 @@ version: 1.1.1
 *** (-) Pendulum flight missions
 *** (=) Variable propeller cuts and data collection
 
-** (-) Ask Jorge/Vojtech for the documentation on script run
+** (x) Ask Jorge/Vojtech for the documentation on script run
    {https://ssrc.atlassian.net/wiki/spaces/DRON/pages/1149468698/SRTA+record+data}
 
 ** (x) Refactor and updates
