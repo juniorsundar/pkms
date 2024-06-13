@@ -1,10 +1,10 @@
 @document.meta
-title: template
+title: 13 June 2024
 description: 
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-13T11:46:33+0400
+updated: 2024-06-13T11:50:16+0400
 version: 1.1.1
 @end
 
@@ -43,4 +43,4 @@ ___
     ===
 ___
 
-{:$/journal/2024/:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/:}[next >]
+{:$/journal/2024/06/12:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/06/14:}[next >]

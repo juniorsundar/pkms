@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-04-24T22:12:45+0400
+updated: 2024-06-13T11:58:32+0400
 version: 1.1.1
 @end
 
@@ -30,50 +30,55 @@ version: 1.1.1
   ===
 ___
 
+* Journal
+
+  - {https://ieeexplore.ieee.org/document/9956892/}[An Intelligent System for DDoS Attack Prediction Based on Early Warning Signals]
+  - What is a {:$/terminologies/zero-day-attack:}[Zero-Day Attack]?
+
 * Data Science for Cybersecurity
-  
   #subtitle An overview focused on networking
   #speaker {https://homepages.dcc.ufmg.br/~michele/}[Michele Nogueira]
+** Notes
 
-  The 4th industrial revolution is the age of cyber physical systems.
-  Everything is "smart":
-  - cars
-  - homes
-  - farms
-  - etc...
+   The 4th industrial revolution is the age of cyber physical systems.
+   Everything is "smart":
+   - cars
+   - homes
+   - farms
+   - etc...
 
-  Trends for the internet:
-  - Ubiquity
-  - Diversity
-  - Big data
+   Trends for the internet:
+   - Ubiquity
+   - Diversity
+   - Big data
 
-  Attackers exploit trends of internet for their own advantage.
+   Attackers exploit trends of internet for their own advantage.
 
-  {https://en.wikipedia.org/wiki/Mirai_(malware)}[Mirai DDoS attack] on Dyn Server @2016
-  - Based on IoT devices connected to the internet.
-  - Hacked CCTV cameras to launch DDoS.
+   {https://en.wikipedia.org/wiki/Mirai_(malware)}[Mirai DDoS attack] on Dyn Server @2016
+   - Based on IoT devices connected to the internet.
+   - Hacked CCTV cameras to launch DDoS.
 
-  With more edge devices nowadays, vulnerabilities are amplified.
+   With more edge devices nowadays, vulnerabilities are amplified.
 
-  What is a {:$/terminologies/botnet:}[Botnet]?
+   What is a {:$/terminologies/botnet:}[Botnet]?
 
-  DDoS is one of the top five attacks nowadays.
+   DDoS is one of the top five attacks nowadays.
 
-  Many IoT devices enter market nowadays without sufficient security in place
+   Many IoT devices enter market nowadays without sufficient security in place
 
-  Botnets are conventional attack vector nowadays.
+   Botnets are conventional attack vector nowadays.
 
-  Conventional vs. Mobile botnets:
-  - Diversity | Can exist in manyu forms
-  - Quantity | Are multiple
-  - Mobility | By nature of devices it infects
+   Conventional vs. Mobile botnets:
+   - Diversity | Can exist in manyu forms
+   - Quantity | Are multiple
+   - Mobility | By nature of devices it infects
 
-  Cybersecurity mostly works with unstructured data.
+   Cybersecurity mostly works with unstructured data.
 
-  When attackers want to initiate DDoS, they maximise data use per packet and
-  send more and more packets per second.
+   When attackers want to initiate DDoS, they maximise data use per packet and
+   send more and more packets per second.
 
-  Detecting botnets autonomously using AutoML.
+   Detecting botnets autonomously using AutoML.
 
 ** Security Intelligence
 
@@ -105,12 +110,6 @@ ___
    - Sophistication of attacks
    - DDoS attacks and botnets
    - ...
-
-   ---
-
-  {https://ieeexplore.ieee.org/document/9956892/}[An Intelligent System for DDoS Attack Prediction Based on Early Warning Signals]
-
-  What is a {:$/terminologies/zero-day-attack:}[Zero-Day Attack]?
 
   ===
 ___
@@ -197,4 +196,3 @@ ___
 ___
 
 {:$/journal/2024/04/23:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/04/25:}[next >]
-

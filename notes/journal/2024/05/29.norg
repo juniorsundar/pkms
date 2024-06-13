@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-03T15:35:16+0400
+updated: 2024-06-13T11:55:08+0400
 version: 1.1.1
 @end
 
@@ -20,7 +20,11 @@ ___
 
 * Journal
 
-** w.r.t. October (GITEX 2024) Demo
+  ===
+
+* w.r.t. October (GITEX 2024) Demo
+
+** Discussion
 
    - Need to create a demo for GITEX to showcase the work done in SRTA
    - Need to decide on a robotic platform (/Possible UGV/)
@@ -29,26 +33,26 @@ ___
      such that the amount of changes that need to be made in the code/framework
      is limited.
 
-*** Demonstrable Items
+** Demonstrable Items
 
-    - in Hardware:
-       -- Authentication/Authorisation
-          --- voice recognistion,
-          --- text-2-speech,
-          --- LLM,
-          --- API to convert textual commands to robotics commands.
-    - Parasitic load
-       -- Place load or some opposition on object and warning is produced.
-    - in Virtual/Simulation:
-       -- Drone + Jammer virtual demonstration
-          --- Person designates jam region on screen
-          --- Drone visually deploy the geofence
-          --- Drones avoid this geofence
-    - Mission success forecast
-       -- Place waypoints and forecast is shown.
-       -- Change waypoints and it gets updated.
+   - in Hardware:
+      -- Authentication/Authorisation
+         --- voice recognistion,
+         --- text-2-speech,
+         --- LLM,
+         --- API to convert textual commands to robotics commands.
+   - Parasitic load
+      -- Place load or some opposition on object and warning is produced.
+   - in Virtual/Simulation:
+      -- Drone + Jammer virtual demonstration
+         --- Person designates jam region on screen
+         --- Drone visually deploy the geofence
+         --- Drones avoid this geofence
+   - Mission success forecast
+      -- Place waypoints and forecast is shown.
+      -- Change waypoints and it gets updated.
 
-       ===
+      ===
 ___
 
 * Meetings
@@ -91,7 +95,7 @@ ___
     MAYBE Set up meeting with Willian and Samridha to talk about the nature of
     template structure.
 
-** Solita - SRTA MLOps Syncup
+** RTA Meeting
 
 *** Attendees
 
@@ -109,9 +113,9 @@ ___
 
     Moved as JIRA tasks in the SYSTEST team, so it is now in progress.
     - The main points have been clarified with John.
-    - Get drone airborne --> {:$/journal/2024/05/28:}[w.r.t. Drone Flights]
+    - Get drone airborne --> {:$/journal/2024/05/28:* Journal}[w.r.t. Drone Flights]
 
-    {** w.r.t. October (GITEX 2024) Demo}[Gitex needs to be discussed at a later time]
+    {* w.r.t. October (GITEX 2024) Demo}[Gitex needs to be discussed at a later time]
 
 *** Action Points
 
@@ -121,5 +125,3 @@ ___
 ___
 
 {:$/journal/2024/05/28:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/05/30:}[next >]
-
-

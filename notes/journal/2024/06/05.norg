@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-06T12:45:18+0400
+updated: 2024-06-13T11:45:49+0400
 version: 1.1.1
 @end
 
@@ -20,20 +20,20 @@ ___
 
 * Journal
 
-** Conversation with Manuel Segarra-Abad about the {:$/journal/task-box/q2-june-demo:* Custom Release for SRTA}[Custom Release for SRTA]
+  - *Conversation with Manuel Segarra-Abad about the {:$/journal/task-box/q2-june-demo:* Custom Release for SRTA}[Custom Release for SRTA]*
 
-** Follow-up with Andres about drone flight
-   - Magnetometer is a bit moody sometimes (connection lost infrequently)
-   - You need a GCS and a fog-drone in the mesh network for the "recon" drone
-     to receive commands from FMO.
-   - Battery monitor are doubled because default Pixhawk has two battery I/Os.
-      -- With the new PDB, turn off INA226 and turn on INA228 power monitor
-         driver in the param server.
-      -- Also disable Power Monitor 2 in QGC.
-   - When running long flights with QGC, the drone turns in the direction of
-     trajectory, however, the FMO does not do that.
+  - *Follow-up with Andres about drone flight*
+     -- Magnetometer is a bit moody sometimes (connection lost infrequently)
+     -- You need a GCS and a fog-drone in the mesh network for the "recon" drone
+        to receive commands from FMO.
+     -- Battery monitor are doubled because default Pixhawk has two battery I/Os.
+        --- With the new PDB, turn off INA226 and turn on INA228 power monitor
+            driver in the param server.
+        --- Also disable Power Monitor 2 in QGC.
+     -- When running long flights with QGC, the drone turns in the direction of
+        trajectory, however, the FMO does not do that.
 
-     ===
+        ===
 ___
 
 * Meetings
@@ -71,5 +71,3 @@ ___
 ___
 
 {:$/journal/2024/06/04:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/06/06:}[next >]
-
-

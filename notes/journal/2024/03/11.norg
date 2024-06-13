@@ -4,13 +4,13 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-04-02T14:47:52+0400
+updated: 2024-06-13T12:03:24+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-** (-) Prepare logistics for updating tasks and goal given the meeting with Willian 
+** (x) Prepare logistics for updating tasks and goal given the meeting with Willian 
 *** (x) Discuss in meeting with Rayana
     /Reference {** Junior - Jira Adjustment}[here]/
 
@@ -113,4 +113,3 @@ ___
 ___
 
 {:$/journal/2024/03/10:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/03/12:}[next >]
-

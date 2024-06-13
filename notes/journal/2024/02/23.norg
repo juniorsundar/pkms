@@ -4,94 +4,78 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-25T00:23:32+0400
+updated: 2024-06-13T13:20:07+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-  - (-) Flash custom firmware into Saluki V2
-     -- ( ) Touch base with Yashraj to determine what is needed from the HiTL
-  - ( ) #RESEARCH Is it possible to automate ROS node generation.
-  - ( ) #RESEARCH "Rule-Based Decision Engine"
-  - (-) Try dumping the fault data as {https://github.com/foxglove/mcap}[MCAP]
-  - (-) Update feature tracker for Shamsa battery consumption project
-  - (-) Dronsole groundwork
-     -- (-) Troubleshoot issue with the docker port being occupied
-     -- ( ) Investigate process to reset drone at failure. Check {:$/journal/2024/02/22:* Fault Injection UI and Swarm Controls}[here]
-     -- ( ) Investigate the strategy to send waypoints through the NATS topic
-            for path worker
-     -- ( ) Test the DataHub method for obtaining data
-        --- ( ) Syncup with Moamen as well
-     -- ( ) Syncup with Ilkka for the swarm NATS implementation
-  - ( ) Plan for Fault Injector Interface
+  /Rolled over/
+
+  ===
+___
 
 * Journal
   - Dropped Nissan for Servicing
      -- Registered name transferred from Sundar to Junior
      -- Talk about Servicing Contract when picking up vehicle
-  - Attended meeting including Shamsa for {* Battery Monitoring Meeting}[Battery Monitoring]
+  - Attended meeting including Shamsa for {** Battery Monitoring Meeting}[Battery Monitoring]
   - Wrote {:$/tgt/index:}[The Good Teacher]:
      -- Updated {:$/tgt/volume-6/chapter-423:}[Chapter 423] 
 
-  ===
+     ===
 ___
 
-/scratch/
+* Meetings
 
-===
-___
+** Battery Monitoring Meeting
 
-* Battery Monitoring Meeting
+*** Attendees
 
-** Attendees
+    | Willian Lunardi
+    | Martin Andreoni
+    | Junior Sundar
+    | Shamsa Hamad
+    | Abdulrahman Banabila
 
-   | Willian Lunardi
-   | Martin Andreoni
-   | Junior Sundar
-   | Shamsa Hamad
-   | Abdulrahman Banabila
+*** Goals
 
-** Goals
+    - Determining the next steps for Shamsa with Battery Monitoring
+    - How to implement this battery monitoring and in which context?
 
-   - Determining the next steps for Shamsa with Battery Monitoring
-   - How to implement this battery monitoring and in which context?
+*** Agenda
 
-** Agenda
+    - (x) Discussing current state
+    - (x) Brainstorming next steps
+    - (-) Assigning roles
 
-   - (x) Discussing current state
-   - (x) Brainstorming next steps
-   - (-) Assigning roles
+*** Minutes
 
-** Minutes
+    /Shamsa Hamad/
+    - Possible options:
+       -- Develop simulated model in Gazebo
+       -- Online data
+       -- Real drone data
 
-   /Shamsa Hamad/
-   - Possible options:
-      -- Develop simulated model in Gazebo
-      -- Online data
-      -- Real drone data
+    /Martin Andreoni/
+    - What type of prediction do we work with with battery monitoring?
+    - What are the relevant data features that we need?
 
-   /Martin Andreoni/
-   - What type of prediction do we work with with battery monitoring?
-   - What are the relevant data features that we need?
+    /Willian Lunardi/
+    - Problem definition...?
+       -- Real-time estimation framework capable of predicting successful
+          completion of a drone mission.
+       -- Planned path, energy consumption, environmental variables.
+    - Mission is successful if drone can navigate through predetermined
+      waypoints
 
-   /Willian Lunardi/
-   - Problem definition...?
-      -- Real-time estimation framework capable of predicting successful
-         completion of a drone mission.
-      -- Planned path, energy consumption, environmental variables.
-   - Mission is successful if drone can navigate through predetermined
-     waypoints
+    /Abdulrahman Banabila/
+    - Battery status has a lot of meaningful information. Most papers use this
+      for calculations
 
-   /Abdulrahman Banabila/
-   - Battery status has a lot of meaningful information. Most papers use this
-     for calculations
+*** Action Items
 
-** Action Items
-
-
-   ===
+    ===
 ___
 
 {:$/journal/2024/02/22:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/24:}[next >]
-

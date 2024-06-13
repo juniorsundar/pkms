@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-05-29T09:53:43+0400
+updated: 2024-06-13T11:53:34+0400
 version: 1.1.1
 @end
 
@@ -17,31 +17,29 @@ ___
 
 * Journal
 
-** {:$/journal/task-box/q2-june-demo:** Get drone airborne}[w.r.t. Drone flights]
-   - people have so much ego...
-   - Task is going to be reassigned to the "Testing and Automation Team".
-   - All sub-tasks will also be reassigned.
-   - Is this a good thing or bad thing?
-      -- On one side: I have pushed the drone assembly task as far as I can.
-         There is nothing left to gain.
-      -- On other side: There is less responsibility on me.
+  - *{:$/journal/task-box/q2-june-demo:** Get drone airborne}[w.r.t. Drone flights]*
+     -- people have so much ego...
+     -- Task is going to be reassigned to the "Testing and Automation Team".
+     -- All sub-tasks will also be reassigned.
+     -- Is this a good thing or bad thing?
+        --- On one side: I have pushed the drone assembly task as far as I can.
+            There is nothing left to gain.
+        --- On other side: There is less responsibility on me.
 
-** GPS spoofing
-   - Short meeting with Martin Saska.
-   - GPS spoofing is hard to identify.
-   - Using VIO (Visual SLAM/LiDAR) to generate local estimate of position,
-      -- Less accurate than GPS.
-      -- More susceptible to high errors if there aren't any visual markers
-         (like empty white corridor).
-   - Augmenting VIO and GPS with alternate methods:
-      -- UV based markers in drones.
-      -- Generate position and velocity estimate using special sensors that
-         detect these markers.
-      -- Decentralised approach.
+  - *GPS spoofing*
+  -- Short meeting with Martin Saska.
+     -- GPS spoofing is hard to identify.
+     -- Using VIO (Visual SLAM/LiDAR) to generate local estimate of position,
+        --- Less accurate than GPS.
+        --- More susceptible to high errors if there aren't any visual markers
+            (like empty white corridor).
+     -- Augmenting VIO and GPS with alternate methods:
+        --- UV based markers in drones.
+        --- Generate position and velocity estimate using special sensors that
+            detect these markers.
+        --- Decentralised approach.
 
-    ===
+        ===
 ___
 
 {:$/journal/2024/05/27:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/05/29:}[next >]
-
-

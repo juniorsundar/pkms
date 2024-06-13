@@ -6,13 +6,13 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-06-05T22:43:57+0400
+updated: 2024-06-13T13:08:50+0400
 version: 1.1.1
 @end
 
 * (-) Tasks
 
-** (x) {:$/journal/2024/04/04:** Xiao Tan / Junior Sundar -- X6 Security Collaboration}[First meeting]
+** (x) {** 4 April 2024}[First meeting]
 *** (x) Follow up with {* Instructional}[instructional] response
 *** (x) Read {:$/research/literature-review/tan2024:}[paper]
 
@@ -21,10 +21,10 @@ version: 1.1.1
 *** (x) Create a node spinner that can induce a targeted attack on these axes
 *** (x) Create a visualisation that captures this behaviour
 
-** (x) {:$/journal/2024/04/18:** Xiao Tan / Junior Sundar -- Follow up}[Second meeting]
+** (x) {** 18 April 2024}[Second meeting]
 *** (x) Read {:$/research/literature-review/shoukry2015:}[paper]
 
-** (x) {:$/journal/2024/04/22:** Xiao Tan / Junior Sundar -- Technical Discussion}[Third meeting]
+** (x) {** 22 April 2024}[Third meeting]
 
 ** (x) Implement simple data extraction and injection module as an external ROS Node
 *** (x) Research into how the data pipeline is arranged in the flight controller
@@ -34,29 +34,28 @@ version: 1.1.1
 *** (x) Test implementation 
     {* ROS 2 Modular Control}[ROS 2 Modular Control]
 
-** (x) {:$/journal/2024/05/02:** Xiao Tan / Junior Sundar -- Feedback on Rough External Controller Implementation}[Fourth meeting]
+** (x) {** 2 May 2024}[Fourth meeting]
 
 ** (x) Verify and validate: FC's EKF $<=>$ drone in the simulation environment
 
-** (x) {:$/journal/2024/05/06:** Xiao Tan / Junior Sundar -- State Reconstruction Discussion}[Fifth meeting]
+** (x) {** 6 May 2024}[Fifth meeting]
 
 ** (x) Look up {** MATLAB Cell}
 
 ** (x) Try out state reconstruction method with simple example
 
-** (x) {:$/journal/2024/05/20:** Xiao Tan / Junior Sundar -- Nominal Control + Safety Filter}[Sixth meeting]
+** (x) {** 20 May 2024}[Sixth meeting]
 
 ** (-) (Try out) --> (Implement) -simple- example with (full system) --> (1D Drone Sim)
 *** (x) Design {* 1D Drone System}[the system]
 *** (-) Develop the secure state estimator
 
-** (x) {:$/journal/2024/06/03:** Xiao Tan / Junior Sundar -- Q&A}[Seventh meeting]
+** (x) {** 3 June 2024}[Seventh meeting]
    /SCHEDULED:/ {@ Monday 3 June 2024} 
 
 ** (x) Create GitHub repository and add `xiaotan-git` to it
 
    ===
-___
 
 * Notes
 
@@ -87,71 +86,71 @@ ___
    @end
 
 
-* Instructional
+** Instructional
 
-** Running the SITL Simulation
+*** Running the SITL Simulation
 
-   First pull the repository with the faulty controller implementation.
+    First pull the repository with the faulty controller implementation.
 
-   @code bash
-   git clone --recursive https://www.github.com/tiiuae/px4-firmware.git -b faulty-controller
-   cd px4-firmware
-   # To make life simpler, export the `FIRMWARE_DIR`
-   # variable so that the simulation can then be launched from anywhere
-   echo export FIRMWARE_DIR=$(pwd) > ~/.bashrc
-   @end
+    @code bash
+    git clone --recursive https://www.github.com/tiiuae/px4-firmware.git -b faulty-controller
+    cd px4-firmware
+    # To make life simpler, export the `FIRMWARE_DIR`
+    # variable so that the simulation can then be launched from anywhere
+    echo export FIRMWARE_DIR=$(pwd) > ~/.bashrc
+    @end
 
-   We can run this simulation in a container, but first we need to pull the
-   appropriate docker image:
+    We can run this simulation in a container, but first we need to pull the
+    appropriate docker image:
 
-   @code bash
-   docker pull px4io/px4-dev-simulation-jammy:latest
-   @end
+    @code bash
+    docker pull px4io/px4-dev-simulation-jammy:latest
+    @end
 
-   The simulation can be launched with the following command:
+    The simulation can be launched with the following command:
 
-   @code bash
-   # Run once to ensure that any remote client (like the container)
-   # to connect to the X Server. Essentially allows you to run GUI
-   # apps launched in the container to be forwarded to your local system
-   xhost +
+    @code bash
+    # Run once to ensure that any remote client (like the container)
+    # to connect to the X Server. Essentially allows you to run GUI
+    # apps launched in the container to be forwarded to your local system
+    xhost +
 
-   # This command serves multiple purposes
-   # We mount the firmware root directory into the container to build the SITL environment
-   # We forward the X11 server so that the Gazebo simulator GUI runs on local machine
-   # We set network=host so that we can alter subscribe to the rostopics through the DDS
-   docker run -it --privileged --rm \
-               -v ${FIRMWARE_DIR}:/home/user/Firmware:rw \
-               -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
-               -e DISPLAY=${DISPLAY} \
-               -e LOCAL_USER_ID="$(id -u)" \
-               -w /home/user/Firmware \
-               --network=host  \
-               --name=container_name px4io/px4-dev-simulation-jammy \
-               make px4_sitl gz_x500
-   @end
+    # This command serves multiple purposes
+    # We mount the firmware root directory into the container to build the SITL environment
+    # We forward the X11 server so that the Gazebo simulator GUI runs on local machine
+    # We set network=host so that we can alter subscribe to the rostopics through the DDS
+    docker run -it --privileged --rm \
+            -v ${FIRMWARE_DIR}:/home/user/Firmware:rw \
+            -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
+            -e DISPLAY=${DISPLAY} \
+            -e LOCAL_USER_ID="$(id -u)" \
+            -w /home/user/Firmware \
+            --network=host  \
+            --name=container_name px4io/px4-dev-simulation-jammy \
+            make px4_sitl gz_x500
+    @end
 
-** Injecting Faults in Accelerometer
+*** Injecting Faults in Accelerometer
 
-   The implementation has the fault injection features built in. In order to
-   inject targeted and specific faults to accelerator sensor modules, you can
-   type the following commands in the MAVLink console running within the same
-   terminal where the SITL simulation is active.
+    The implementation has the fault injection features built in. In order to
+    inject targeted and specific faults to accelerator sensor modules, you can
+    type the following commands in the MAVLink console running within the same
+    terminal where the SITL simulation is active.
 
-   @code bash
-   param set SENS_ACCEL_FAULT 1
-   param set SENS_ACCEL_SET <Any Float Value>
-   @end
+    @code bash
+    param set SENS_ACCEL_FAULT 1
+    param set SENS_ACCEL_SET <Any Float Value>
+    @end
 
-   The first command exposes the fault interface within the firmware, and the
-   second command sets the Accelerometer x, y, and z values to the float value
-   provided.
+    The first command exposes the fault interface within the firmware, and the
+    second command sets the Accelerometer x, y, and z values to the float value
+    provided.
 
-   *Note:* Before closing the simulator make sure to revert the values:
-   @code bash
-   param set SENS_ACCEL_SET 0
-   param set SENS_ACCEL_FAULT 0
-   @end
+    *Note:* Before closing the simulator make sure to revert the values:
+    @code bash
+    param set SENS_ACCEL_SET 0
+    param set SENS_ACCEL_FAULT 0
+    @end
 
 *** Imitating an attack
 
@@ -163,109 +162,464 @@ ___
     also be a node in the ROS 2 network and will subscribe to the necessary
     topics being published from the PX4 flight controller.
 
-* ROS 2 Modular Control
+** ROS 2 Modular Control
 
-** EKF
+*** EKF
 
-   .image assets/ekf.png
+    .image assets/ekf.png
 
-   Subscribes to the `vehicle_local_position` topic from the Flight Controller.
+    Subscribes to the `vehicle_local_position` topic from the Flight Controller.
 
-   Publishes ground truth (`gt`) and raw copy (`raw`), separately.
+    Publishes ground truth (`gt`) and raw copy (`raw`), separately.
 
-** Attacker
+*** Attacker
 
-   .image assets/attacker.png
+    .image assets/attacker.png
 
-   Subscribes to the `raw` position and introduces an attack. In this case it
-   can be a simple halving operation.
+    Subscribes to the `raw` position and introduces an attack. In this case it
+    can be a simple halving operation.
 
-   @code cpp
-   void Attacker::attack(VehicleLocalPosition& copy)
-   {
-       if (attack_flag)
-       {
-           copy.x /= 2;
-           copy.y /= 2;
-           copy.z /= 2;
-       } else {
-           copy.x *= 1;
-           copy.y *= 1;
-           copy.z *= 1;
-       }
-   }
-   @end
+    @code cpp
+    void Attacker::attack(VehicleLocalPosition& copy)
+    {
+        if (attack_flag)
+        {
+            copy.x /= 2;
+            copy.y /= 2;
+            copy.z /= 2;
+        } else {
+            copy.x *= 1;
+            copy.y *= 1;
+            copy.z *= 1;
+        }
+    }
+    @end
 
-   It then publishes an `attacked` version of the `gt`.
+    It then publishes an `attacked` version of the `gt`.
 
-** Controller
+*** Controller
 
-   .image assets/controller.png
+    .image assets/controller.png
 
-   Uses the `attacked` and `gt` versions of `vehicle_local_position` to
-   generate a controller input.
+    Uses the `attacked` and `gt` versions of `vehicle_local_position` to
+    generate a controller input.
 
-   In this example, we are using a velocity controller - it can also
-   accommodate acceleration controls.
+    In this example, we are using a velocity controller - it can also
+    accommodate acceleration controls.
 
-   Basic averaging operation is used to merge the `gt` with the `attacked` EKF
-   outputs.
+    Basic averaging operation is used to merge the `gt` with the `attacked` EKF
+    outputs.
 
-   @code cpp
-   VehicleLocalPosition reference;
-   this->state_merger(reference); // <-- Standard averaging
+    @code cpp
+    VehicleLocalPosition reference;
+    this->state_merger(reference); // <-- Standard averaging
 
-   vx = coordinates[target][0] - reference.x;
-   vy = coordinates[target][1] - reference.y;
-   vz = coordinates[target][2] - reference.z;
+    vx = coordinates[target][0] - reference.x;
+    vy = coordinates[target][1] - reference.y;
+    vz = coordinates[target][2] - reference.z;
 
-   if (abs(vx) > 5)
-   {
-       vx = vx / abs(vx) * 5; // Input in x
-   }
-   if (abs(vy) > 5)
-   {
-       vy = vy / abs(vy) * 5; // Input in y
-   }
-   if (abs(vz) > 5)
-   {
-       vz = vz / abs(vz) * 5; // Input in z
-   }
+    if (abs(vx) > 5)
+    {
+        vx = vx / abs(vx) * 5; // Input in x
+    }
+    if (abs(vy) > 5)
+    {
+        vy = vy / abs(vy) * 5; // Input in y
+    }
+    if (abs(vz) > 5)
+    {
+        vz = vz / abs(vz) * 5; // Input in z
+    }
 
-   float vxs = vx * vx;
-   float vys = vy * vy;
-   float vzs = vz * vz;
-   float separation = (float)sqrt(vxs + vys + vzs);
+    float vxs = vx * vx;
+    float vys = vy * vy;
+    float vzs = vz * vz;
+    float separation = (float)sqrt(vxs + vys + vzs);
 
-   if (separation < threshold)
-   {
-       target++;
-       if (target > (int)coordinates.size() - 1)
-       {
-           target = 0;
-       }
-   }
+    if (separation < threshold)
+    {
+        target++;
+        if (target > (int)coordinates.size() - 1)
+        {
+            target = 0;
+        }
+    }
 
-   // offboard_control_mode needs to be paired with trajectory_setpoint
-   publish_offboard_control_mode();
-   publish_trajectory_setpoint();
-   @end
+    // offboard_control_mode needs to be paired with trajectory_setpoint
+    publish_offboard_control_mode();
+    publish_trajectory_setpoint();
+    @end
 
-   ---
 
-  The mission is square periodic.
+    The mission is square periodic.
 
-  The attack is introduced at a random time point. The results while observing
-  the ground truth are shown below:
+    The attack is introduced at a random time point. The results while observing
+    the ground truth are shown below:
 
-  .image assets/results.png
+    .image assets/results.png
 
-* 1D Drone System
 
-  $|A=\begin{bmatrix}0 && 0 \\ 0 && 1\end{bmatrix} \space \textbf{x} = \begin{bmatrix}x \\ \dot{x}\end{bmatrix}|$
+** 1D Drone System
 
-  $|B=\begin{bmatrix}0 \\ 1\end{bmatrix} \space \textbf{u} = \begin{bmatrix}u_x\end{bmatrix}|$
+   $|A=\begin{bmatrix}0 && 0 \\ 0 && 1\end{bmatrix} \space \textbf{x} = \begin{bmatrix}x \\ \dot{x}\end{bmatrix}|$
 
-  $|C=\begin{bmatrix}1 && 0 && 0 && 0 \\ 0 && 1 && 0 && 0 \\ 0 && 0 && 1 && 0 \\ 0 && 0 && 0 && 1 \end{bmatrix} \space \textbf{y} = \begin{bmatrix}x_1 \\ \dot{x}_1 \\ x_2 \\ \dot{x}_2\end{bmatrix}|$
+   $|B=\begin{bmatrix}0 \\ 1\end{bmatrix} \space \textbf{u} = \begin{bmatrix}u_x\end{bmatrix}|$
 
-  $|H=\begin{bmatrix}1 && 0 && 0 && 0\\ 0 && -1 && 0 && 0 \\ 0 && 0 && 1 && 0\\ 0 && 0 && 0 && -1\end{bmatrix} \space \textbf{q} = \begin{bmatrix}4 \\ 4 \\ 4 \\ 4\end{bmatrix}|$
+   $|C=\begin{bmatrix}1 && 0 && 0 && 0 \\ 0 && 1 && 0 && 0 \\ 0 && 0 && 1 && 0 \\ 0 && 0 && 0 && 1 \end{bmatrix} \space \textbf{y} = \begin{bmatrix}x_1 \\ \dot{x}_1 \\ x_2 \\ \dot{x}_2\end{bmatrix}|$
+
+   $|H=\begin{bmatrix}1 && 0 && 0 && 0\\ 0 && -1 && 0 && 0 \\ 0 && 0 && 1 && 0\\ 0 && 0 && 0 && -1\end{bmatrix} \space \textbf{q} = \begin{bmatrix}4 \\ 4 \\ 4 \\ 4\end{bmatrix}|$
+   ===
+
+* Meetings
+
+** 3 June 2024
+   #tag label
+   Xiao Tan / Junior Sundar -- Q&A
+*** Attendees
+
+    | Xiao Tan
+    | Junior Sundar
+
+*** Goals
+
+    Clarity on the work being done
+
+*** Agenda
+
+    - Clarify the matrix dimensions
+    - Follow up on progress
+
+*** Minutes
+
+**** Questions
+
+     - (x) Is the following 1D sensor case feasible:
+     @code cpp
+     std::vector<double> sensor_vector{static_cast<double>(ekf_1.x),
+         static_cast<double>(ekf_1.vx),
+         static_cast<double>(ekf_2.x),
+         static_cast<double>(ekf_2.vx)};
+     @end
+
+     - (x) Verify {:$/journal/task-box/caltech-tii-collaboration:* 1D Drone System}[1D Drone System]
+
+     - (x) Clarify function of `nchoosek`.
+
+     - (x) Are we essentially overwriting the `O_Gamma` and `Y_Gamma` in `secure_state_estimator.m`?
+     @code MATLAB
+     for i = 1:size(comb,1)
+         % prepare all matrices
+         Gamma = comb(i,:);
+         O_Gamma = zeros((p-s)*n,n);
+         Y_Gamma = zeros((p-s)*n,1);
+
+         for j = 1:size(Gamma,2)
+             sensor_ind = Gamma(j);
+             O = Oi_cell{sensor_ind};
+             Y_tilde = y_vec(sensor_ind,t-n+1:t);
+             O_Gamma(n*(j-1)+1:n*j,:) = O;  %% THIS PART IN PARTICULAR
+             Y = Y_tilde' - Fi_cell{sensor_ind}*reshape(u_vec(:,t-n+1:t),[],1);
+             Y_Gamma(n*(j-1)+1:n*j,1) = Y;
+         end
+         % least square solution
+         % suppress warning
+         warning('off', 'MATLAB:rankDeficientMatrix')
+         x0_gamma = O_Gamma\Y_Gamma;
+
+         % threshold compare
+         if norm(Y_Gamma - O_Gamma*x0_gamma)>0.001
+             % disp(['No initial state for sensors ' num2str(Gamma) '!']);  
+         % disp(['fitting error->' num2str(norm(Y_Gamma - O_Gamma*x0_gamma)) ', fail to convince'])
+         else
+             % disp(['Found initial state for sensors ' num2str(Gamma) ' at time ' num2str(t) '!']);
+         % disp('The possible x0 is ')
+         % disp(num2str(x0_gamma))
+             Gamma_set_new(end+1,:) = Gamma;
+
+             if rank(O_Gamma)<n
+                 % null space
+                 A_gamma = null(O_Gamma,1e-4);
+             else
+                 A_gamma = 0;
+             end
+
+             x0_prob.x0 = x0_gamma;
+             x0_prob.A_gamma = A_gamma;
+             x0_prob.Gamma = Gamma;
+             X0_cell{end+1} = x0_prob;
+         end
+     end
+     @end
+
+     - (x) Clarify this chunk of code in `secure_state_estimator.m`:
+     @code MATLAB
+     % now check if subspac:kernal of O_G must be a subset of kernal of HA^t
+     if norm(A_x0)>0.1
+         for j = 1:size(A_x0,2)
+             M = [H; H*A; H*A^2; H*A^3]*A_x0(:,j);
+             if norm(M)>=0.0001
+                 error(['possible subspace ' num2str(A_x0(:,j)') ' is not in safe set']);
+             end
+         end
+
+         A_xt(:,j) = H*A^3*A_x0(:,j);
+     end
+     @end
+
+**** Responses
+
+     Assume at most how many sensors are being attacked (this is a prerequisite)!!
+
+     As for input vectors:
+     - First open-loop
+     - Second closed-loop --> Assume that a sensor is "trustworthy" -> In what
+       sense? Doesn't really matter because we can guarantee stability.
+     - Maybe we can use ML to identify attacked sensor to place trustworthy
+       label.
+
+     What could go wrong with this implementation:
+     - measurement from EKF may not be accurate.
+     - model is very simple, may not be the true model, tuning may be required here.
+
+*** Action Items
+
+    - {** Create GitHub repository and add `xiaotan-git` to it}[Create GitHub repository and add `xiaotan-git` to it]
+
+** 20 May 2024
+   #tag label
+   Xiao Tan / Junior Sundar -- Nominal Control + Safety Filter
+*** Attendees
+
+    | Xiao Tan
+    | Junior Sundar
+
+*** Goals
+
+    Understand the workings of the nominal controller and the safety filter
+
+*** Agenda
+
+    - Follow up on what was understood from self learning
+    - Go through new powerpoint
+
+*** Minutes
+
+    *Follow up*
+
+    Running matrix operations on GPU is a feasible option.
+
+    Will need to benchmark the point at which this becomes efficient because
+    excess transfer of data between CPU and GPU when operations can be done
+    efficiently in CPU is suboptimal.
+
+    Efficient algorithm is still in development by Xiao.
+
+    *Nominal Control*
+
+    /Inputs:/ Possible states $X^t$ at $t$ on human remote input
+    /Outputs:/ Desired control $u_{nom}$
+
+    $u_{nom}$ is hard to choose since $X^t$ is a matrix of estimates. For now,
+    it is constant and time-dependent.
+
+    *Safety Filter*
+
+    /Inputs:/ Nominal control $u_{nom}$
+    /Outputs:/ Safe control $u_{safe}$ with least deviation from $u_{nom}$
+
+    $Hx + q \leq 0$
+
+    Here, $H$ and $q$ matrices are obtained by defining safety bounds for the
+    different states.
+
+    $H(Ax + Bu) + q \geq (1 - \gamma) Hx + q$
+
+    Basically states that if system starts within safe region, and the above
+    control barrier function rule is held, it will always remain within safe
+    region.
+
+    Here $\gamma$ relates to how aggressive the filter is going to be. With a
+    larger value, it will only trigger as system reaches close to boundary.
+    With smaller value the filter starts affecting from a bit further in.
+
+    No guarantee of feasiblity of optimisation problem to find $u_{safe}$ if
+    the equation of quadratic programming fails, then the system is aborted.
+
+*** Action Items
+
+    No meeting for next week. Set it for the week after.
+
+** 6 May 2024
+   #tag label
+   Xiao Tan / Junior Sundar -- State Reconstruction Discussion
+*** Attendees
+    
+    | Xiao Tan
+    | Junior Sundar
+
+*** Goals
+
+    Understand the secure state reconstruction algorithm
+
+*** Agenda
+
+    - (x) Go through the provided powerpoint
+    - (x) Discuss the MATLAB codes
+
+*** Minutes
+
+    Plant is a Discrete Time state-system A, B, C with attack signal 
+    $e(\tau) \in \mathbb{R}^p$ where $s<p$ sensors are attacked.
+
+    Should aim to have something to demonstrate by {:$/journal/2024/05/23:}[23 May 2024].
+
+    No tight deadline for this (as December is expected deadline).
+
+** 2 May 2024
+   #tag label
+   Xiao Tan / Junior Sundar -- Feedback on Rough External Controller Implementation
+*** Attendees
+
+    | Xiao Tan
+    | Junior Sundar
+    | Martin Andreoni
+    | Willian Lunardi
+
+*** Goal
+
+    Receive feedback and opinion on the rough implementation of the external
+    EKF, Attacker and Controller
+
+*** Agenda
+
+    - (x) Feedback
+    - (x) Next steps
+
+*** Minutes
+
+    Xiao wants the controller to only receive the attacked signal, not both the
+    attacked and the ground truth.
+
+    Rather than sending the `px4_msgs/msg/VehicleLocalPosition` values to the
+    controller, we want to send a custom message type that carries a different
+    set of data inside it.
+
+    Possibly, a matrix?
+
+*** Action Items
+
+    - {** Verify and validate: FC's EKF $<=>$ drone in the simulation environment}[Verify and validate: FC's EKF $<=>$ drone in the simulation environment]
+
+** 22 April 2024
+   #tag label
+   Xiao Tan / Junior Sundar -- Technical Discussion
+*** Attendees
+
+    | Xiao Tan
+    | Junior Sundar
+    | Martin Andreoni
+    | Willian Lunardi
+
+*** Goals
+
+    Discuss the technical details of the experimentation (block diagram)
+
+*** Agenda
+
+    - Understand how the system is designed in terms of its block diagram
+    - Brainstorm strategies to implement this in PX4
+
+*** Minutes
+
+    Xiao wants the addition to be an external ROS Node that intercepts the EKF
+    output and draws it out of the FC into a ROS Node.
+
+    I think there are two ways to go about this problem:
+    - Directly bake in the modules into the flight controller firmware
+    - Identify a method to bring out the data from the FC into a ROS Node and
+      then work and feed it back in
+
+    Also drew a block diagram:
+
+    .image $/journal/assets/virtual-sensor.png
+
+*** Action Items
+
+    - {**  Implement simple data extraction and injection module as an external ROS Node}[Implement simple data extraction and injection module as an external ROS Node]
+
+** 18 April 2024
+   #tag label
+   Xiao Tan / Junior Sundar -- Follow up
+*** Attendees
+
+    | Xiao Tan
+    | Junior Sundar
+    | Willian Lunardi
+
+*** Goals
+
+    Follow up on previous discussion to explore scope and range of the project.
+
+*** Agenda
+
+    - Show the demonstration of the attacker to the accelerometer
+    - Discuss whether this is the method required or if something new is in the
+      works?
+
+*** Minutes
+
+    They want to go for a simpler example use case:
+    - EKF is the ground truth
+    - Create a copy of the EKF and the attacker spoofs this value
+    - This is then merged with GT EKF and then sent to the plant which is the
+      drone.
+
+    Easier to only work in the planar case. So drone takes off and moves in
+    the single place in some planar circuit.
+
+    Design of Experiment:
+    - Twin of EKF, so the code can remain within the same module -> Just create
+      a copy of the data output.
+    - Online safe controller also needs to be implemented.
+
+    Future direction:
+    - Some other work undertaken in the lab can use the results from this
+      experiments.
+    - How to fuse state estimation under sensor attacks more efficiently?
+
+*** Action Items
+
+** 4 April 2024
+   #tag label
+   Xiao Tan / Junior Sundar -- X6 Security Collaboration
+*** Attendees
+
+    | Xiao Tan
+    | Junior Sundar
+    | Martin Andreoni
+    | Willian Lunardi
+
+*** Goals
+
+    Sync up on collaboration opportunity
+
+*** Agenda
+
+    - Discuss the research scope
+    - Identify applicability of use case
+    - Identify possible collaboration space
+
+*** Minutes
+
+    The implementation is a "Safety Filter" that identifies when a malicious
+    agent has attacked a sensor module and is directing it towards an unsafe
+    region.
+
+    Attacker knows everything of the system.
+
+    Assume that all internal states can be measured and are observable.
+
+    In practice 's' out of 'p' total sensors can be attacked.
+
+*** Action Items
+

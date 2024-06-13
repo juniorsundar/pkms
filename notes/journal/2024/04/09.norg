@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-04-10T11:33:43+0400
+updated: 2024-06-13T12:00:10+0400
 version: 1.1.1
 @end
 
@@ -12,12 +12,14 @@ version: 1.1.1
 
   /Rolled over/
 
+  ===
+___
+
 * Journal
 
   Did some work on {:$/technical/go/go:}[Go - Programming Language]
 
-    ===
+  ===
 ___
 
 {:$/journal/2024/04/08:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/04/10:}[next >]
-
