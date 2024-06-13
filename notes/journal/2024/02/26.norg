@@ -4,29 +4,17 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-27T10:02:59+0400
+updated: 2024-06-13T13:20:48+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-  - (-) Flash custom firmware into Saluki V2
-     -- (-) Touch base with Yashraj to determine what is needed from the HiTL
-  - ( ) #RESEARCH Is it possible to automate ROS node generation.
-  - ( ) #RESEARCH "Rule-Based Decision Engine"
-  - (-) Try dumping the fault data as {https://github.com/foxglove/mcap}[MCAP]
-  - (x) Update feature tracker for Shamsa battery consumption project
-  - (-) Dronsole groundwork
-     -- (x) Troubleshoot issue with the docker port being occupied
-        --- (x) Try the `alias` solution by Ilkka
-     -- (?) Investigate process to reset drone at failure. Check {:$/journal/2024/02/22:* Fault Injection UI and Swarm Controls}[here]
-     -- ( ) Investigate the strategy to send waypoints through the NATS topic
-            for path worker
-     -- ( ) Test the DataHub method for obtaining data
-        --- ( ) Syncup with Moamen as well
-     -- ( ) Syncup with Ilkka for the swarm NATS implementation
-  - (-) Plan for Fault Injector Interface
-  - (x) Add Confluence documentation on launching HITL
+** (x) Update feature tracker for Shamsa battery consumption project
+** (x) Add Confluence documentation on launching HITL
+
+  ===
+___
 
 * Journal
 
@@ -57,8 +45,7 @@ version: 1.1.1
         This is causing the `fog-navigation` container to crash and relaunch
         repeatedly. The GPS signal is also lost.
 
-  ===
-___
+        ===
 
 * Implementing a Shell Command Forwarding Process in Dronsole
 
@@ -198,34 +185,35 @@ ___
    ===
 ___
 
-* Yashrajsinh / Junior 
+* Meetings
 
-** Attendees
+** Yashrajsinh / Junior 
 
-   | Yashrajsinh Parmar
-   | Junior Sundar
+*** Attendees
 
-** Goals
+    | Yashrajsinh Parmar
+    | Junior Sundar
 
-   - RTA performance analysis
+*** Goals
 
-** Agenda
+    - RTA performance analysis
 
-   - (-) Discuss the HITL needs
-   - (-) Create plan of action
+*** Agenda
 
-** Minutes
+    - (-) Discuss the HITL needs
+    - (-) Create plan of action
 
-   - Analyse end-to-end latency of the PX4 FC stack
-   - Latency: Delay between I/O
-      -- Graph Inputs and Outputs. Inject fault. Qualitatively identify time to reaction.
-   - Run multiple simulations dumping data from all sensor topics.
-   - Inject fault and observe how it changes.
+*** Minutes
 
-** Action Items
+    - Analyse end-to-end latency of the PX4 FC stack
+    - Latency: Delay between I/O
+       -- Graph Inputs and Outputs. Inject fault. Qualitatively identify time to reaction.
+    - Run multiple simulations dumping data from all sensor topics.
+    - Inject fault and observe how it changes.
+
+*** Action Items
 
    ===
 ___
 
 {:$/journal/2024/02/25:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/27:}[next >]
-

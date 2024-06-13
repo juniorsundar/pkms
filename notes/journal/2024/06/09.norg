@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-10T15:14:47+0400
+updated: 2024-06-13T11:46:15+0400
 version: 1.1.1
 @end
 
@@ -19,9 +19,7 @@ ___
 
   - Started project: {:$/unfiled/neorg-helper:}[Neorg Helper]
 
-    ===
+  ===
 ___
 
 {:$/journal/2024/06/08:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/06/10:}[next >]
-
-

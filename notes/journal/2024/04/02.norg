@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-04-03T09:36:53+0400
+updated: 2024-06-13T12:00:14+0400
 version: 1.1.1
 @end
 
@@ -59,25 +59,26 @@ ___
   and say that you stand behind those opinions.
 
 * `xz` Utils backdoor
+  #tag source
+  {https://arstechnica.com/security/2024/04/what-we-know-about-the-xz-utils-backdoor-that-almost-infected-the-world/}[link]
+** Introduciton
 
-  /{https://arstechnica.com/security/2024/04/what-we-know-about-the-xz-utils-backdoor-that-almost-infected-the-world/}[source]/
+   Microsoft developer found the backdoor in the open source data compression
+   utility.
 
-  Microsoft developer found the backdoor in the open source data compression
-  utility.
+   > "This might be the best executed supply chain attack we've seen described
+   > in the open, and it's a nightmare scenario: malicious, competent,
+   > authorized upstream in a widely used library,"
+   > - Filippo Valsorda
 
-  > "This might be the best executed supply chain attack we've seen described
-  > in the open, and it's a nightmare scenario: malicious, competent,
-  > authorized upstream in a widely used library,"
-  > - Filippo Valsorda
+   Andres Freund was troubleshooting performance problems in Debian was
+   experiencing with SSH. SSH logins were consuming too many CPU cycles and were
+   generating errors with valgrind.
 
-  Andres Freund was troubleshooting performance problems in Debian was
-  experiencing with SSH. SSH logins were consuming too many CPU cycles and were
-  generating errors with valgrind.
+   This helped him find out that the problem was a result of updates made to the
+   `xz` Utils library.
 
-  This helped him find out that the problem was a result of updates made to the
-  `xz` Utils library.
-
-  {https://cdn.arstechnica.net/wp-content/uploads/2024/04/xz-backdoor-graphic-thomas-roccia-scaled.jpg}[`xz` Backdoor Graphic -- Thomas Roccia]
+   {https://cdn.arstechnica.net/wp-content/uploads/2024/04/xz-backdoor-graphic-thomas-roccia-scaled.jpg}[`xz` Backdoor Graphic -- Thomas Roccia]
 
 ** What does the backdoor do?
 
@@ -105,4 +106,3 @@ ___
 ___
 
 {:$/journal/2024/04/01:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/04/03:}[next >]
-

@@ -4,48 +4,13 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-12T11:31:13+0400
+updated: 2024-06-13T13:10:37+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-** -(_) #PERSONAL Implement a basic ROS 2 implementation for swarm controls for Saurabh to test his algorithms-
-
-** (-) Update Jira
-
-*** (x) RTA-20: Redefine RTA-70 to reflect new objective
-
-**** (x) Indicate that the previous sub-tasks are carrying over
-
-**** (x) Write comments to explain why changes were made
-
-*** (x) RTA-354: Expound on RTA-67/RTA-68 to reflect new objectives
-
-*** (-) RTA-22: Reorient for swarm
-
-**** (x) Discuss with Saurabh to identify swarm requirements
-
-     *Communication mode*
-     Many-to-many. Basically, each drone should be able to communicate with
-     other nodes in the swarm. An obfuscation layer/mask can be written atop
-     this that can handle the emulation of distance based signal strength, etc.
-
-     *Swarm behaviour*
-     Basic swarm behaviour in play. Given a random spawn of points and a path,
-     drones need to maintain safe distance away from each other and continually
-     move towards a specific goal. Additionally a move towards centroid can
-     also be implemented.
-
-     *Swarm size*
-     five to ten drones.
-
-     *Connectivity*
-     This needs some thought. So one idea was to have a sort of distributed
-     connectivity matrix that can help the drones in swarm understand when they
-     need to enter RTA mode. For instance, in a scenario with drones A, B, C
-     and D. If C connected to B is disconnected, then how does the information
-     of this propagate through the entire swarm? /some thoughts here/
+** (_) #PERSONAL Implement a basic ROS 2 implementation for swarm controls for Saurabh to test his algorithms
 
      ===
 ___
@@ -101,4 +66,3 @@ ___
 ___
 
 {:$/journal/2024/03/12:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/03/14:}[next >]
-

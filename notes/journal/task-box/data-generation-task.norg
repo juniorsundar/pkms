@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:00:57+0400
-updated: 2024-06-12T16:51:33+0400
+updated: 2024-06-13T10:58:50+0400
 version: 1.1.1
 @end
 
@@ -71,7 +71,7 @@ version: 1.1.1
 
 ** (x) Organisation/Packaging of datasets
 ***  (x) Write script to merge `.ulog` files into one `.csv` file
-***  (x) Some fixes to the merging process:
+***  (x) Some fixes to the merging process
 ****  (x) Sort headers alphabetically after merging
 ****  (x) Change `label` header --> `filename`
 

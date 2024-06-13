@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-04-02T14:46:53+0400
+updated: 2024-06-13T13:10:05+0400
 version: 1.1.1
 @end
 
@@ -37,19 +37,18 @@ version: 1.1.1
 *** (_) -Test out method suggested by Ilkka to run `kubectl` commands directly-
 
 
-  ===
+    ===
 ___
 
 * Journal
 
-  - Created an image to describe the fault injection task for Martin:
+  - *Created an image to describe the fault injection task for Martin*
      -- He wanted a way to display the content and extent of the Fault
         Injection Use Case that I did without having to read through large
         chunks of texts.
-     -- .image ../../assets/drawing.png
+  .image ../../assets/drawing.png
 
-    ===
+  ===
 ___
 
 {:$/journal/2024/03/17:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/03/19:}[next >]
-

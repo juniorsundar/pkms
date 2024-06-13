@@ -4,38 +4,28 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-11T10:04:54+0400
+updated: 2024-06-13T12:03:24+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-** (-) #RESEARCH Tasks
+** (x) #RESEARCH Tasks
 *** (_) -Rule-Based Decision Engine-
 *** (x) {:$/unfiled/feature-importance-calculation:}[Feature Importance Calculation]
-
-** (-) Prepare logistics for updating tasks and goal given the meeting with Willian 
-*** (x) Meeting summary with Willian
-    /Reference {:$/journal/2024/03/06:** Technical Syncup / Junior}[here]/
 
     ===
 ___
 
 * Journal
 
-** New Notes
+  - *New Notes*
+     -- {:$/unfiled/understanding-tree-sitter:}[Understanding Tree-sitter]
+     -- {:$/unfiled/lsp-explained:}[LSP Explained]
+     -- {:$/unfiled/feature-importance-calculation:}[Feature Importance Calculation]
+     -- {:$/unfiled/gini-impurity:}[Gini Impurity]
 
-   - {:$/unfiled/understanding-tree-sitter:}[Understanding Tree-sitter]
-   - {:$/unfiled/lsp-explained:}[LSP Explained]
-   - {:$/unfiled/feature-importance-calculation:}[Feature Importance Calculation]
-   - {:$/unfiled/gini-impurity:}[Gini Impurity]
-
-   ===
-___
-
-
-===
+     ===
 ___
 
 {:$/journal/2024/03/09:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/03/11:}[next >]
-

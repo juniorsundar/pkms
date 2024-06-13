@@ -4,30 +4,39 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-04-04T23:23:15+0400
+updated: 2024-06-13T12:00:10+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-** (-) #RESEARCH Is it possible to automate ROS node generation
+** (_) #RESEARCH Is it possible to automate ROS node generation
 
-** (-) Update Jira
-*** (-) RTA-22: Reorient for swarm
-**** (-) Adjust Story title accordingly
+** (_) Update Jira
+*** (_) RTA-22: Reorient for swarm
+**** (_) Adjust Story title accordingly
 
 ** (-) {:$/journal/task-box/data-generation-task:}[Data Generation Task]
 
-** (-) Empty data headers for Willian
+** (x) Empty data headers for Willian
 *** (x) Send the data headers to Willian
 *** (x) Adjust data headers with more description
 
     Provide header metadata in spreadsheet formats
 
-*** (-) Set up a meeting to determine which all data is necessary and which isn't
-*** ( ) Work with Shamsa and others to hash out the names for message fields
+*** (x) Set up a meeting to determine which all data is necessary and which isn't
+*** (x) Work with Shamsa and others to hash out the names for message fields
 
 ** (-) {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration]
+
+   ===
+___
+
+* Journal
+
+  - Started {:$/journal/task-box/data-generation-task:}[Data Generation Task].
+  - Started {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration].
+     -- Attended {:$/journal/task-box/caltech-tii-collaboration:** 4 April 2024}[Xiao Tan / Junior Sundar -- X6 Security Collaboration].
 
    ===
 ___
@@ -62,43 +71,8 @@ ___
 
 *** Action Items
 
-** Xiao Tan / Junior Sundar -- X6 Security Collaboration
-
-*** Attendees
-
-    | Xiao Tan
-    | Junior Sundar
-    | Martin Andreoni
-    | Willian Lunardi
-
-*** Goals
-
-    Sync up on collaboration opportunity
-
-*** Agenda
-
-    - Discuss the research scope
-    - Identify applicability of use case
-    - Identify possible collaboration space
-
-*** Minutes
-
-    The implementation is a "Safety Filter" that identifies when a malicious
-    agent has attacked a sensor module and is directing it towards an unsafe
-    region.
-
-    Attacker knows everything of the system.
-
-    Assume that all internal states can be measured and are observable.
-
-    In practice 's' out of 'p' total sensors can be attacked.
-
-*** Action Items
-
-    {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration]
 
     ===
 ___
 
 {:$/journal/2024/04/03:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/04/05:}[next >]
-

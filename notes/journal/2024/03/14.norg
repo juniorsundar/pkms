@@ -4,13 +4,13 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-04-02T14:47:58+0400
+updated: 2024-06-13T13:10:05+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-** (-) #RESEARCH Tasks
+** (x) #RESEARCH Tasks
 
 *** (x) Foxglove Data-Dashboard
 
@@ -18,9 +18,9 @@ version: 1.1.1
 
 *** (x) {:$/unfiled/tokenisation:}[Tokenising results]
 
-** (-) Prepare logistics for updating tasks and goal given the meeting with Willian 
+** (x) Prepare logistics for updating tasks and goal given the meeting with Willian 
 
-*** (-) #BRAINSTORM Data generation for publication
+*** (x) #BRAINSTORM Data generation for publication
 
 **** (x) What is the purpose of the exploration?
 
@@ -35,4 +35,3 @@ version: 1.1.1
 ___
 
 {:$/journal/2024/03/13:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/03/15:}[next >]
-

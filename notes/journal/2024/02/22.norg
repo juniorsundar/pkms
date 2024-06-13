@@ -4,26 +4,24 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-23T10:05:40+0400
+updated: 2024-06-13T13:18:18+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-  - (-) Flash custom firmware into Saluki V2
-     -- ( ) Touch base with Yashraj to determine what is needed from the HiTL
-  - (x) Discuss how to implement the fault injection functionality in dronsole
-     -- (x) Prepare for meeting with Esko and Ilkka
-  - (x) 22nd February, PPT slides CalTech syncup
-     -- (x) Practise and update for 5 minutes
-  - (x) 23rd February, Share Objectives (meet | exceed | percentage)
-  - ( ) #RESEARCH Is it possible to automate ROS node generation.
-  - ( ) #RESEARCH "Rule-Based Decision Engine"
-  - ( ) Try dumping the fault data as {https://github.com/foxglove/mcap}[MCAP]
-  - ( ) Update feature tracker for Shamsa battery consumption project
-  - (x) Sign the Bank contract from Federal
+** (x) Discuss how to implement the fault injection functionality in dronsole
+*** (x) Prepare for meeting with Esko and Ilkka
+** (x) 22nd February, PPT slides CalTech syncup
+*** (x) Practise and update for 5 minutes
+** (x) 23rd February, Share Objectives (meet | exceed | percentage)
+** (x) Sign the Bank contract from Federal
+
+   ===
+___
 
 * Journal
+
   - Yashraj asked a question about sensor sampling rates
      -- It is possible to affect the rate at which sensor publishes data to topics
      -- Parameters can be found in this {https://docs.px4.io/main/en/advanced_config/parameter_reference.html}[reference]
@@ -34,125 +32,120 @@ version: 1.1.1
   ===
 ___
 
-/scratch/
+* Meetings
 
-===
-___
+** Fault Injection UI and Swarm Controls
 
-* Fault Injection UI and Swarm Controls
+*** Attendees
 
-** Attendees
+    | SRTA-AD
+    | | Junior Sundar
+    | | Martin Andreoni
+    | | Willian Lunardi
+    | Solita
+    | | Esko
+    | | Ilkka
+    | | Phillip
+    | | Moamen
+    | | Jarmo
 
-   | SRTA-AD
-   | | Junior Sundar
-   | | Martin Andreoni
-   | | Willian Lunardi
-   | Solita
-   | | Esko
-   | | Ilkka
-   | | Phillip
-   | | Moamen
-   | | Jarmo
+*** Goals
 
-** Goals
+    - Discuss requirements for Dronsole with Fault Injection
+    - Explore swarm control possibilities
 
-   - Discuss requirements for Dronsole with Fault Injection
-   - Explore swarm control possibilities
+*** Agenda
 
-** Agenda
+    - (x) Present how the fault injection works as of now
+    - (x) Discuss how to add this into UI (list requirements)
+    - (x) Discussing plans for swarm simulation in Dronsole
 
-   - (x) Present how the fault injection works as of now
-   - (x) Discuss how to add this into UI (list requirements)
-   - (x) Discussing plans for swarm simulation in Dronsole
+*** Minutes
 
-** Minutes
+    - Being able to add faults dynamically. Maybe some sort of UI where we can
+      select the fault type and add the values.
+    - Being able to set a mission type with parameters, so that it can run and
+      data can be collected.
+    - Despawning drones if there is failure.
+    - Retrieving data after the runs.
 
-   - Being able to add faults dynamically. Maybe some sort of UI where we can
-     select the fault type and add the values.
-   - Being able to set a mission type with parameters, so that it can run and
-     data can be collected.
-   - Despawning drones if there is failure.
-   - Retrieving data after the runs.
+    - Local scripts for doing all that we want
+       -- Send the waypoints to Path-worker through NATS
+    - Create local package for this. No need to launch through dronsole
+    - Resetting sim?
+       -- Try through gz reset model
+       -- Respawn the px4
+       -- Respawn the simulation
+    - Swarms need to syncup with Ilkka to determine the existing strategy (something about NATS stuff again.)
+    - Data collection is still under works. Need to syncup with Moamen on how the DataHub can be launched/run/queried.
 
-   - Local scripts for doing all that we want
-      -- Send the waypoints to Path-worker through NATS
-   - Create local package for this. No need to launch through dronsole
-   - Resetting sim?
-      -- Try through gz reset model
-      -- Respawn the px4
-      -- Respawn the simulation
-   - Swarms need to syncup with Ilkka to determine the existing strategy (something about NATS stuff again.)
-   - Data collection is still under works. Need to syncup with Moamen on how the DataHub can be launched/run/queried.
+*** Action Items
 
-** Action Items
+    - ( ) Dronsole groundwork
+       -- ( ) Troubleshoot issue with the docker port being occupied
+       -- ( ) Investigate process to reset drone at failure. Check {:$/journal/2024/02/22:* Fault Injection UI and Swarm Controls}[here]
+       -- ( ) Investigate the strategy to send waypoints through the NATS topic for path worker
+       -- ( ) Test the DataHub method for obtaining data
+          --- ( ) Syncup with Moamen as well
+       -- ( ) Syncup with Ilkka for the swarm NATS implementation
+    - ( ) Plan for Fault Injector Interface
 
-   - ( ) Dronsole groundwork
-      -- ( ) Troubleshoot issue with the docker port being occupied
-      -- ( ) Investigate process to reset drone at failure. Check {:$/journal/2024/02/22:* Fault Injection UI and Swarm Controls}[here]
-      -- ( ) Investigate the strategy to send waypoints through the NATS topic for path worker
-      -- ( ) Test the DataHub method for obtaining data
-         --- ( ) Syncup with Moamen as well
-      -- ( ) Syncup with Ilkka for the swarm NATS implementation
-   - ( ) Plan for Fault Injector Interface
+** Dry Run - CalTech Presentation
 
-* Dry Run - CalTech Presentation
+*** Attendees
 
-** Attendees
+    | SRTA-AD
+    | | Junior Sundar
+    | | Martin Andreoni
+    | | Willian Lunardi
 
-   | SRTA-AD
-   | | Junior Sundar
-   | | Martin Andreoni
-   | | Willian Lunardi
+*** Goals
 
-** Goals
+    - Dry-running the PPT for feedback
 
-   - Dry-running the PPT for feedback
+*** Agenda
 
-** Agenda
+    - (x) Present
+    - (x) Feedback
 
-   - (x) Present
-   - (x) Feedback
+*** Minutes
 
-** Minutes
+    - Video
+       -- Reduce length of video some how
+       -- Add comments
+    - Cut time on 1st slide to 1 min
 
-   - Video
-      -- Reduce length of video some how
-      -- Add comments
-   - Cut time on 1st slide to 1 min
+*** Action Items
 
-** Action Items
+    - (x) Update PPT with changes
 
-   - (x) Update PPT with changes
+** CalTech Presentation
 
-* CalTech Presentation
+*** Attendees
 
-** Attendees
+    | SRTA-AD
+    | CalTech
 
-   | SRTA-AD
-   | CalTech
+*** Goals
 
-** Goals
+    - Present
 
-   - Present
+*** Agenda
 
-** Agenda
+    - (x) Present
+    - (x) Feedback + Question
 
-   - (x) Present
-   - (x) Feedback + Question
+*** Minutes
 
-** Minutes
+    - Dr. Ames asked about how many sensors are being affected and where the effect is being injected.
+    - Someone asked if this is one sensor at a time or multiple.
+       -- Currently running with one and adding more.
+    - Also talked about redundancies.
+    - Battery isn't an isolated system, there are many things that effects it.
 
-   - Dr. Ames asked about how many sensors are being affected and where the effect is being injected.
-   - Someone asked if this is one sensor at a time or multiple.
-      -- Currently running with one and adding more.
-   - Also talked about redundancies.
-   - Battery isn't an isolated system, there are many things that effects it.
+*** Action Items
 
-** Action Items
-
-
-   ===
+    ===
 ___
 
 {:$/journal/2024/02/21:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/23:}[next >]
-

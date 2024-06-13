@@ -4,13 +4,13 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-08T21:36:05+0400
+updated: 2024-06-13T13:11:12+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-** (-) HITL simulation and data collection for system latency
+** (x) HITL simulation and data collection for system latency
 
 *** (x) Trigger and be able to observe the faults in HITL
 
@@ -87,7 +87,7 @@ version: 1.1.1
     the time frame between failure occuring is basically just a few time
     frames.
 
-** (-) Dronsole groundwork
+** (_) Dronsole groundwork
 *** (_) -Continue discussion with Miika to properly understand the redeployment procedure-
 *** (_) -Syncup with Ilkka for the swarm NATS implementation-
 
@@ -100,7 +100,6 @@ ___
 
   - Learned some new ways to manage process launch and control:
     {:$/ideas/bash-code-snippets:}[Bash Code Snippets]
-
 
   ===
 ___
@@ -137,4 +136,3 @@ ___
 ___
 
 {:$/journal/2024/03/07:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/03/09:}[next >]
-

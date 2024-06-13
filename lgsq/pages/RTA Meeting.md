@@ -70,7 +70,6 @@ tag:: #MEETING
 	  collapsed:: true
 		- Discuss progress on hold-out on physical demonstration.
 	- **Minutes**
-	  collapsed:: true
 		- Moved as JIRA tasks in the SYSTEST team, so it is now in progress.
 			- The main points have been clarified with John.
 			- ((664f9f87-a976-490c-a59c-d068f1698a15))
