@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-13T11:45:40+0400
+updated: 2024-06-14T10:32:29+0400
 version: 1.1.1
 @end
 
@@ -29,6 +29,8 @@ ___
   - *Moving to downgraded version of release*
      -- Since the purpose of the demo is not to run the image segmentation, we
         can get away with using a downgraded version (approved by Martin)
+
+  - Attended {** SSRC-F4F}[SSRC-F4F].
 
    ===
 

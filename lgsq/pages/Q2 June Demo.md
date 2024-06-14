@@ -153,18 +153,23 @@
 		- DONE Understand how to extract data from drone
 		  collapsed:: true
 			- Can be done through QGC
-		- TODO Try deploying containers into the Saluki V3
-		- TODO Prepare anomalous flight use-case (appropriate weights and how to add them)
+		- DOING Try deploying containers into the Saluki V3
+		  :LOGBOOK:
+		  CLOCK: [2024-06-14 Fri 09:59:36]
+		  :END:
+			- Works in the dev-kit, but only as a testing implementation.
+			- In order to properly deploy on V3, it needs to be added to the `manifest.json`
+		- TODO Prepare anomalous flight use-case (appropriate weights and how to add them).
 		- TODO Test single anomalous flight use-case
 	- DONE Figure out what the process is to install and setup the ((66605142-3ed1-4364-8797-636648594267))
 	  id:: 665ff704-5b0e-455b-b730-49c4c89148f6
 	  :LOGBOOK:
 	  CLOCK: [2024-06-05 Wed 10:02:55]--[2024-06-05 Wed 16:17:59] =>  06:15:04
 	  :END:
-	- DOING Soft deadline to get drone working with SRTA module
+	- DONE Soft deadline to get ~~drone~~-> Saluki V3 dev-kit working with SRTA module
 	  SCHEDULED: <2024-06-13 Thu>
 	  :LOGBOOK:
-	  CLOCK: [2024-06-05 Wed 22:25:01]
+	  CLOCK: [2024-06-05 Wed 22:25:01]--[2024-06-14 Fri 10:01:09] =>  203:36:08
 	  :END:
 	- DOING Freeze code and model
 	  SCHEDULED: <2024-06-30 Sun>
