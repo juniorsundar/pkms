@@ -4,13 +4,21 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-13T11:56:10+0400
+updated: 2024-06-14T12:20:10+0400
 version: 1.1.1
 @end
 
 * To-Do
 
   /Rolled over/
+
+  ===
+___
+
+* Journal
+
+  - Attended {** RTA Meeting}[RTA Meeting].
+  - Attended {** Solita - SRTA MLOps Syncup}[Solita - SRTA MLOps Syncup].
 
   ===
 ___
@@ -83,7 +91,7 @@ ___
     - Remove the user acceptance trigger as it is supposed to be fully
       automated.
 
-    ===
+      ===
 ___
 
 {:$/journal/2024/05/07:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/05/09:}[next >]

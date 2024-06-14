@@ -4,13 +4,20 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-13T11:52:06+0400
+updated: 2024-06-14T10:40:25+0400
 version: 1.1.1
 @end
 
 * To-Do
 
 ** (x) Write and send email with priority list for Jorge
+
+  ===
+___
+
+* Journal
+
+  - Attended {** Drone Control for Autonomous Missions}[Drone Control for Autonomous Missions].
 
   ===
 ___

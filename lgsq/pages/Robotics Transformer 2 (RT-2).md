@@ -49,7 +49,7 @@ published:: [[Jul 28th, 2023]]
 	- Probed RT-2 to combine **robotic control** with **chain-of-thought reasoning** to enable **long-horizon planning**.
 		- Variant of RT-2 tuned to few hundred gradient steps to increase ability to use language and actions jointly.
 		- Augmented data to include additional "Plan" step: (1) Describe purpose of action; (2) "Action" in action tokens.
-		- ![unnamed.webp](https://lh3.googleusercontent.com/b-Rfo69ZIkh3cwd_Flyniskrza5l7P-VI1zknpxd8Z_tqR-GB25b_9eN0tFX3k6wKeyTW5MFOzXC24GCiBWaMvcNZnI_Q0cVGIM-fyEVWOn_Xx6J=w1232-rw)
+		- ![unnamed.webp](https://lh3.googleusercontent.com/b-Rfo69ZIkh3cwd_Flyniskrza5l7P-VI1zknpxd8Z_tqR-GB25b_9eN0tFX3k6wKeyTW5MFOzXC24GCiBWaMvcNZnI_Q0cVGIM-fyEVWOn_Xx6J=w1232-rw){:height 650, :width 718}
 	- RT-2 can use both **image and text commands**.
 - # Summary
 	- VLMs can be transformed into powerful VLA models to directly control robot by combining VLM pre-training with robotic data.
