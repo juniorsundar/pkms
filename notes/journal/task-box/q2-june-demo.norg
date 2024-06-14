@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-06-10T10:05:55+0400
+updated: 2024-06-14T13:04:28+0400
 version: 1.1.1
 @end
 
@@ -87,7 +87,7 @@ version: 1.1.1
 ** (_) Verify if this method can be used to record data
    For the outdoor arena demo -- talk to Jose Segovia
 
-** (x) Mount Saluki V3 to the -Holybro-X500- T-Motor M690b Drone and get it airborne
+** (x) Mount Saluki V3 to the -Holybro-X500- -> T-Motor M690b Drone and get it airborne
 *** (x) Obtain Saluki V3
 *** (x) Set up Saluki V3 for flight mission
 *** (x) Mount Saluki V3 to -Holybro- T-Motor M690b Drone
@@ -107,14 +107,19 @@ version: 1.1.1
 *** (x) Understand how to extract data from drone
     Can be done through QGC
 
-*** ( ) Try deploying containers into the Saluki V3
+*** (-) Try deploying containers into the Saluki V3
+    - Works in the dev-kit, but only as a testing implementation.
+    - In order to properly deploy on V3, it needs to be added to the
+      `manifest.json`
+
 *** ( ) Prepare anomalous flight use-case (appropriate weights and how to add them)
 *** ( ) Test single anomalous flight use-case
 
 ** (x) Figure out what the process is to install and setup the {* Custom Release for SRTA}
 
-** (-) Soft deadline to get drone working with SRTA module
+** (x) Soft deadline to get -drone- -> Saluki V3 dev-kit working with SRTA module
    /SCHEDULED:/ {@ Thursday 13 June 2024} 
+   /DONE:/ {:$/journal/2024/06/13:}[Thursday 13 June 2024]
 
 ** (-) Freeze code and model
    /SCHEDULED:/ {@ Sunday 30 June 2024} 
@@ -148,6 +153,8 @@ ___
    - Check if two communications modules are in the same channel with `iw dev`
      command. If they are not in the same then there will be a communication
      issue.
+
+     ===
 
 * Custom Release for SRTA
 

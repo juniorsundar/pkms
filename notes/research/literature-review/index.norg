@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-02-12T20:19:47+0400
-updated: 2024-04-23T12:02:16+0400
+updated: 2024-06-14T13:21:55+0400
 version: 1.1.1
 @end
 
@@ -35,6 +35,8 @@ version: 1.1.1
    {:$/research/literature-review/ahmed2022:}[ECU-IoFT: A Dataset for Analysing Cyber-Attacks on Internet of Flying Things]
 
 ** 2023
+
+   {:$/research/literature-review/tazir2023:}[From Words to Flight: Integrating OpenAI ChatGPT with PX4--Gazebo for Natural Language-Based Drone Control]
 
    {:$/research/literature-review/hou2023:}[Research on Drone Fault Detection Based on Failure Mode Databases]
 
