@@ -12,3 +12,18 @@
 		- Dora manages to sneak through the small opening in the mansion's garden.
 		- Following the sounds, she finds a group of kids (she assumes) who're loitering around
 - # Gaea Segment
+	- **Arc 1 - Jo Way/Wei Zao Finds the True World**
+	- **Arc 2 - Relationship Blooms**
+		- Due to the imposed punishment against Markus, the heavy load of investigating the disappearance of Dora and Kano falls on Marie.
+		- But Marie, still in mourning, refuses to work with others in a task force.
+			- Leading the charge by herself.
+			- Falling into a self-deprecating spiral as she makes mistakes in her calculation.
+		- Enter Shuri.
+			- Successfully progressing through her transition.
+			- Tinges of masculinity in her appearance, but could be easily glossed over.
+		- Confronts Marie about her behaviour.
+			- Marie is combative.
+			- Shuri reaches out to Marie’s rational side and explains that her behaviour is actually hindering progress.
+		- Takes her along to Shuri’s newest project: ((666d36e1-b758-4344-b054-a0c3a5092887))
+			- Worked on by a large crew (mostly the students in the interest group).
+			- It’s an [Agile](https://asana.com/resources/agile-methodology) project.
