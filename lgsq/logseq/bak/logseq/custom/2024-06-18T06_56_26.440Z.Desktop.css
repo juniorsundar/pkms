@@ -1,0 +1,11 @@
+:root {
+  /* --ls-font-family: FiraCode Nerd Font; */
+  --ls-font-family: Fira Sans;
+}
+
+* {
+  /* font-family: FiraCode Nerd Font, monospace; */
+  font-family: Fira Sans;
+}
+
+@import url('https://logseq.catppuccin.com/ctp-frappe.css');
