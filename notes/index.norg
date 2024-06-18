@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T19:20:38+0400
-updated: 2024-06-09T16:00:36+0400
+updated: 2024-06-17T14:25:30+0400
 version: 1.1.1
 @end
 
@@ -24,99 +24,99 @@ ___
 * Index
 
 ** Golang
-  - {:$/technical/go/go.bank-packages:}[Example - Bank Packages]
-  - {:$/technical/go/go.bank:}[Example - Bank]
-  - {:$/technical/go/go.investment-calculator:}[Example - Investment Calculator]
-  - {:$/technical/go/go:}[Go - Programming Language]
-  - {:$/technical/go/go.notes:}[Example - Structs And .json]
-  - {:$/technical/go/go.pointers:}[Example - Pointers]
-  - {:$/technical/go/go.profit-calculator:}[Example - Profit Calculator]
-  - {:$/technical/go/go.structs:}[Example - Structs]
+   - {:$/technical/go/go.bank-packages:}[Example - Bank Packages]
+   - {:$/technical/go/go.bank:}[Example - Bank]
+   - {:$/technical/go/go.investment-calculator:}[Example - Investment Calculator]
+   - {:$/technical/go/go:}[Go - Programming Language]
+   - {:$/technical/go/go.notes:}[Example - Structs And .json]
+   - {:$/technical/go/go.pointers:}[Example - Pointers]
+   - {:$/technical/go/go.profit-calculator:}[Example - Profit Calculator]
+   - {:$/technical/go/go.structs:}[Example - Structs]
 ** Ideas
-  - {:$/ideas/bash-code-snippets:}[Bash Code Snippets]
-  - {:$/ideas/code-projects:}[Code Projects]
-  - {:$/ideas/useful-links:}[Useful Links]
+   - {:$/ideas/bash-code-snippets:}[Bash Code Snippets]
+   - {:$/ideas/code-projects:}[Code Projects]
+   - {:$/ideas/useful-links:}[Useful Links]
 ** Mavsdk
-  - {:$/technical/mavsdk:}[Mavsdk]
+   - {:$/technical/mavsdk:}[Mavsdk]
 ** Px4
-  - {:$/technical/px4/controls:}[Px4 - Controls]
-  - {:$/technical/px4/px4:}[Px4 - Autopilot]
-  - {:$/technical/px4/ros2:}[Px4 - Ros 2 Integration]
-  - {:$/technical/px4/safety-configuration:}[Px4 - Safety Configuration]
-  - {:$/technical/px4/simulation:}[Px4 - Simulation]
-  - {:$/technical/px4/uorb:}[Px4 - Uorb]
+   - {:$/technical/px4/controls:}[Px4 - Controls]
+   - {:$/technical/px4/px4:}[Px4 - Autopilot]
+   - {:$/technical/px4/ros2:}[Px4 - Ros 2 Integration]
+   - {:$/technical/px4/safety-configuration:}[Px4 - Safety Configuration]
+   - {:$/technical/px4/simulation:}[Px4 - Simulation]
+   - {:$/technical/px4/uorb:}[Px4 - Uorb]
 ** Research
-  - {:$/research/literature-review/ahmad2024:}[Uav Sensor Failures Dataset: Biomisa Arducopter Sensory Critique (basic)] - #uav-fault-dataset #journal-article
-  - {:$/research/literature-review/ahmed2022:}[Ecu-ioft: A Dataset For Analysing Cyber-attacks On Internet Of Flying Things] - #uav-fault-dataset #journal-article
-  - {:$/research/literature-review/ames2019:}[Control Barrier Functions] - #control-barrier-theory #journal-article
-  - {:$/research/literature-review/brat2023:}[Runtime Assurance Of Aeronautical Products: Preliminary Recommendations] - #rta #journal-article
-  - {:$/research/literature-review/coutinho2021:}[Fault Injector For Autonomous Quadrotors] - #uav-fault-injection #journal-article
-  - {:$/research/literature-review/gandhe2022:}[Decentralised Robot Swarm Clustering: Adding Resilience To Malicious Masquerade Attacks] - #rta #journal-article
-  - {:$/research/literature-review/gebrie2022:}[Digital Twin For Uav Anomaly Detection] - #uav-fault-injection #journal-article
-  - {:$/research/literature-review/hou2023:}[Research On Drone Fault Detection Based On Failure Mode Databases] - #uav-fault-dataset #journal-article
-  - {:$/research/literature-review/keipour2020:}[Alfa: A Dataset For Uav Fault And Anomaly Detection] - #uav-fault-dataset #journal-article
-  - {:$/research/literature-review/liu2024:}[Generative Ai For Unmanned Vehicle Swarms: Challenges, Applications And Opportunities] - #gen-ai #journal-article
-  - {:$/research/literature-review/shoukry2015:}[Secure State Reconstruction In Differentially Flat Systems Under Sensor Attacks Using Satisfiability Modulo Theory Solving] - #control-barrier-theory #journal-article
-  - {:$/research/literature-review/tan2024:}[Safety Of Linear Systems Under Severe Sensor Attacks] - #control-barrier-theory #journal-article
-  - {:$/research/literature-review/whelan2020:}[Novelty-based Intrusion Detection Of Sensor Attacks On Unmanned Aerial Vehicles] - #uav-fault-dataset #journal-article
-  - {:$/research/literature-review/yang2023:}[Acquisition And Processing Of Uav Fault Data Based On Time Line Modeling Method] - #uav-fault-dataset #journal-article
-  - {:$/research/videos/lsp-explained:}[Lsp Explained]
-  - {:$/research/videos/understanding-tree-sitter:}[Understanding Tree-sitter]
-  - {:$/research/websites-and-blogs/chatgpt-robotics:}[Chatgpt For Robotics: Design Principles And Model Abilities]
-  - {:$/research/websites-and-blogs/dreureka:}[Dreureka: Language Model Guided Sim-to-real Transfer]
-  - {:$/research/websites-and-blogs/rt-2:}[Robotics Transformer 2 (rt-2)]
-  - {:$/research/literature-review/bagchi2020:}[Vision Paper: Grand Challenges In Resilience: Autonomous System Resilience Through Design And Runtime Measures] - #rta #journal-article
+   - {:$/research/literature-review/ahmad2024:}[Uav Sensor Failures Dataset: Biomisa Arducopter Sensory Critique (basic)] - #uav-fault-dataset #journal-article
+   - {:$/research/literature-review/ahmed2022:}[Ecu-ioft: A Dataset For Analysing Cyber-attacks On Internet Of Flying Things] - #uav-fault-dataset #journal-article
+   - {:$/research/literature-review/ames2019:}[Control Barrier Functions] - #control-barrier-theory #journal-article
+   - {:$/research/literature-review/brat2023:}[Runtime Assurance Of Aeronautical Products: Preliminary Recommendations] - #rta #journal-article
+   - {:$/research/literature-review/coutinho2021:}[Fault Injector For Autonomous Quadrotors] - #uav-fault-injection #journal-article
+   - {:$/research/literature-review/gandhe2022:}[Decentralised Robot Swarm Clustering: Adding Resilience To Malicious Masquerade Attacks] - #rta #journal-article
+   - {:$/research/literature-review/gebrie2022:}[Digital Twin For Uav Anomaly Detection] - #uav-fault-injection #journal-article
+   - {:$/research/literature-review/hou2023:}[Research On Drone Fault Detection Based On Failure Mode Databases] - #uav-fault-dataset #journal-article
+   - {:$/research/literature-review/keipour2020:}[Alfa: A Dataset For Uav Fault And Anomaly Detection] - #uav-fault-dataset #journal-article
+   - {:$/research/literature-review/liu2024:}[Generative Ai For Unmanned Vehicle Swarms: Challenges, Applications And Opportunities] - #gen-ai #journal-article
+   - {:$/research/literature-review/shoukry2015:}[Secure State Reconstruction In Differentially Flat Systems Under Sensor Attacks Using Satisfiability Modulo Theory Solving] - #control-barrier-theory #journal-article
+   - {:$/research/literature-review/tan2024:}[Safety Of Linear Systems Under Severe Sensor Attacks] - #control-barrier-theory #journal-article
+   - {:$/research/literature-review/whelan2020:}[Novelty-based Intrusion Detection Of Sensor Attacks On Unmanned Aerial Vehicles] - #uav-fault-dataset #journal-article
+   - {:$/research/literature-review/yang2023:}[Acquisition And Processing Of Uav Fault Data Based On Time Line Modeling Method] - #uav-fault-dataset #journal-article
+   - {:$/research/videos/lsp-explained:}[Lsp Explained]
+   - {:$/research/videos/understanding-tree-sitter:}[Understanding Tree-sitter]
+   - {:$/research/websites-and-blogs/chatgpt-robotics:}[Chatgpt For Robotics: Design Principles And Model Abilities]
+   - {:$/research/websites-and-blogs/dreureka:}[Dreureka: Language Model Guided Sim-to-real Transfer]
+   - {:$/research/websites-and-blogs/rt-2:}[Robotics Transformer 2 (rt-2)]
+   - {:$/research/literature-review/bagchi2020:}[Vision Paper: Grand Challenges In Resilience: Autonomous System Resilience Through Design And Runtime Measures] - #rta #journal-article
 ** Ros
-  - {:$/technical/ros/ros:}[Robot Operating System (ros)]
-  - {:$/technical/ros/ros1:}[Ros 1]
-  - {:$/technical/ros/ros2:}[Ros 2]
-  - {:$/technical/ros/rosbag2-mcap:}[Mcap (rosbag2)]
+   - {:$/technical/ros/ros:}[Robot Operating System (ros)]
+   - {:$/technical/ros/ros1:}[Ros 1]
+   - {:$/technical/ros/ros2:}[Ros 2]
+   - {:$/technical/ros/rosbag2-mcap:}[Mcap (rosbag2)]
 ** Srta
-  - {:$/srta/dronsole:}[Dronsole]
-  - {:$/srta/raw-thoughts:}[Raw Thoughts]
-  - {:$/srta/saluki-v2:}[Saluki V2]
-  - {:$/srta/saluki-v3:}[Saluki V3]
-  - {:$/srta/sensor-fault-injection:}[Use Case - Sensor Fault Injection Simulation]
+   - {:$/srta/dronsole:}[Dronsole]
+   - {:$/srta/raw-thoughts:}[Raw Thoughts]
+   - {:$/srta/saluki-v2:}[Saluki V2]
+   - {:$/srta/saluki-v3:}[Saluki V3]
+   - {:$/srta/sensor-fault-injection:}[Use Case - Sensor Fault Injection Simulation]
 ** Task
-  - {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-tii Collaboration] - Possible collaboration opportunity with Caltech
-  - {:$/journal/task-box/data-generation-task:}[Data Generation Task] - Data generation for faulty flights in SITL with intention to publish
-  - {:$/journal/task-box/q2-june-demo:}[Q2 June Demo] - Task pipeline for the June 2024 Q2 Demo
+   - {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-tii Collaboration] - Possible collaboration opportunity with Caltech
+   - {:$/journal/task-box/data-generation-task:}[Data Generation Task] - Data generation for faulty flights in SITL with intention to publish
+   - {:$/journal/task-box/q2-june-demo:}[Q2 June Demo] - Task pipeline for the June 2024 Q2 Demo
 ** Terminologies
-  - {:$/terminologies/api:}[Application Programming Interface (api)]
-  - {:$/terminologies/bootloader:}[Bootloader]
-  - {:$/terminologies/botnet:}[Botnet]
-  - {:$/terminologies/continual-task-learning:}[Continual Task Learning]
-  - {:$/terminologies/data-exfiltration:}[Data Exfiltration]
-  - {:$/terminologies/differentially-flat-systems:}[Differentially Flat Systems]
-  - {:$/terminologies/digital-twin:}[Digital Twin]
-  - {:$/terminologies/domain-randomisation:}[Domain Randomisation]
-  - {:$/terminologies/feature-importance-calculation:}[Feature Importance Calculation]
-  - {:$/terminologies/federated-learning:}[Federated Learning]
-  - {:$/terminologies/gini-impurity:}[Gini Impurity]
-  - {:$/terminologies/graph-neural-network:}[Graph Neural Network]
-  - {:$/terminologies/guid-partition-table:}[Guid Partition Table (gpt)]
-  - {:$/terminologies/hardware-in-the-loop:}[Hardware In The Loop]
-  - {:$/terminologies/hids:}[Host-based Intrusion Detection (hids)]
-  - {:$/terminologies/hypervisor:}[Hypervisor]
-  - {:$/terminologies/master-boot-record:}[Master Boot Record (mbr)]
-  - {:$/terminologies/nash-equilibrium:}[Nash Equilibrium]
-  - {:$/terminologies/pca:}[Principal Component Analysis]
-  - {:$/terminologies/risc-v:}[Risc-v]
-  - {:$/terminologies/secure-boot-validation:}[Secure Boot Validation]
-  - {:$/terminologies/sffhi:}[System Firmware For Hardware Initialisation]
-  - {:$/terminologies/smt:}[Satisfiability Modulo Theory]
-  - {:$/terminologies/software-in-the-loop:}[Software In The Loop]
-  - {:$/terminologies/sparse-observability:}[Sparse Observability]
-  - {:$/terminologies/tcp:}[Transmission Control Protocol (tcp)]
-  - {:$/terminologies/tokenisation:}[Tokenisation]
-  - {:$/terminologies/udp:}[User Datagram Protocol (udp)]
-  - {:$/terminologies/virtualisation:}[Virtualisation]
-  - {:$/terminologies/zero-day-attack:}[Zero-day Attack]
-  - {:$/terminologies/zoh:}[Zero-order Hold Method]
+   - {:$/terminologies/api:}[Application Programming Interface (api)]
+   - {:$/terminologies/bootloader:}[Bootloader]
+   - {:$/terminologies/botnet:}[Botnet]
+   - {:$/terminologies/continual-task-learning:}[Continual Task Learning]
+   - {:$/terminologies/data-exfiltration:}[Data Exfiltration]
+   - {:$/terminologies/differentially-flat-systems:}[Differentially Flat Systems]
+   - {:$/terminologies/digital-twin:}[Digital Twin]
+   - {:$/terminologies/domain-randomisation:}[Domain Randomisation]
+   - {:$/terminologies/feature-importance-calculation:}[Feature Importance Calculation]
+   - {:$/terminologies/federated-learning:}[Federated Learning]
+   - {:$/terminologies/gini-impurity:}[Gini Impurity]
+   - {:$/terminologies/graph-neural-network:}[Graph Neural Network]
+   - {:$/terminologies/guid-partition-table:}[Guid Partition Table (gpt)]
+   - {:$/terminologies/hardware-in-the-loop:}[Hardware In The Loop]
+   - {:$/terminologies/hids:}[Host-based Intrusion Detection (hids)]
+   - {:$/terminologies/hypervisor:}[Hypervisor]
+   - {:$/terminologies/master-boot-record:}[Master Boot Record (mbr)]
+   - {:$/terminologies/nash-equilibrium:}[Nash Equilibrium]
+   - {:$/terminologies/pca:}[Principal Component Analysis]
+   - {:$/terminologies/risc-v:}[Risc-v]
+   - {:$/terminologies/secure-boot-validation:}[Secure Boot Validation]
+   - {:$/terminologies/sffhi:}[System Firmware For Hardware Initialisation]
+   - {:$/terminologies/smt:}[Satisfiability Modulo Theory]
+   - {:$/terminologies/software-in-the-loop:}[Software In The Loop]
+   - {:$/terminologies/sparse-observability:}[Sparse Observability]
+   - {:$/terminologies/tcp:}[Transmission Control Protocol (tcp)]
+   - {:$/terminologies/tokenisation:}[Tokenisation]
+   - {:$/terminologies/udp:}[User Datagram Protocol (udp)]
+   - {:$/terminologies/virtualisation:}[Virtualisation]
+   - {:$/terminologies/zero-day-attack:}[Zero-day Attack]
+   - {:$/terminologies/zoh:}[Zero-order Hold Method]
 ** Uncategorised
-  - {:$/journal/task-box/house-hunting-chronicles-2024:}[House Hunting Chronicles: 2024]
-  - {:$/journal/task-box/property-ownership-dubai:}[Property Ownership - Dubai]
+   - {:$/journal/task-box/house-hunting-chronicles-2024:}[House Hunting Chronicles: 2024]
+   - {:$/journal/task-box/property-ownership-dubai:}[Property Ownership - Dubai]
 
-  ===
+   ===
 ___
 

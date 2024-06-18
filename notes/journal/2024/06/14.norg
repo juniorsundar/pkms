@@ -4,23 +4,13 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-14T13:25:25+0400
+updated: 2024-06-16T19:41:32+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-** (-) {:$/journal/task-box/q2-june-demo:}[Q2 June Demo]
-
-** (-) {:$/journal/task-box/data-generation-task:}[Data Generation Task]
-
-** (-) {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration]
-
-** (=) Swarm simulation
-*** (=) Obtain Documentation to set up swarm from Wang Haoran
-*** (=) Research into UAV Decentralised Swarm implementations
-*** (=) Search around in ARRC for work being done in decentralised control
-
+  /Rolled over/
 
     ===
 ___
