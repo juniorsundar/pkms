@@ -19,7 +19,7 @@ collapsed:: true
 		- Due to the imposed punishment against Markus, the heavy load of investigating the disappearance of Dora and Kano falls on Marie.
 		- But Marie, still in mourning, refuses to work with others in a task force.
 			- Leading the charge by herself.
-			- Falling into a self-deprecating spiral as she makes mistakes in her calculation.
+			- ~~Falling into a self-deprecating spiral as she makes mistakes in her calculation.~~ --> Better to look at her hitting a ceiling.
 		- Enter Shuri.
 			- Successfully progressing through her transition.
 			- Tinges of masculinity in her appearance, but could be easily glossed over.
