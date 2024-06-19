@@ -26,6 +26,6 @@ collapsed:: true
 		- Confronts Marie about her behaviour.
 			- Marie is combative.
 			- Shuri reaches out to Marie’s rational side and explains that her behaviour is actually hindering progress.
-		- Takes her along to Shuri’s newest project: ((666d36e1-b758-4344-b054-a0c3a5092887))
+		- Takes her along to Shuri’s newest project: ((6672d32d-23fe-45dc-949a-c06e49b7016e))
 			- Worked on by a large crew (mostly the students in the interest group).
 			- It’s an [Agile](https://asana.com/resources/agile-methodology) project.
