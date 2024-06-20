@@ -1,0 +1,27 @@
+@document.meta
+title: 20 June 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-06-20T12:04:51+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+** (-) {:$/journal/task-box/q2-june-demo:}[Q2 June Demo]
+
+** (-) {:$/journal/task-box/data-generation-task:}[Data Generation Task]
+
+** (-) {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration]
+
+** (_) Swarm simulation
+*** (_) Obtain Documentation to set up swarm from Wang Haoran
+*** (_) Research into UAV Decentralised Swarm implementations
+*** (_) Search around in ARRC for work being done in decentralised control
+
+    ===
+___
+
+{:$/journal/2024/06/19:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/06/21:}[next >]
