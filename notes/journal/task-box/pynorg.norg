@@ -6,11 +6,11 @@ categories: [
     task
 ]
 created: 2024-06-10T15:18:58+0400
-updated: 2024-06-10T15:24:52+0400
+updated: 2024-06-20T21:56:56+0400
 version: 1.1.1
 @end
 
-* ( ) Tasks
+* (-) Tasks
 
 ** (x) Create basic Python project repository
 
@@ -22,7 +22,8 @@ version: 1.1.1
 
 ** (-) *Purpose:* {:$/unfiled/neorg-helper:*** Backlinking}[Backlinking]  | Implement metadata parsing of `.norg` files
 *** (x) First iteration as a helper function
-*** TODO Improve parsing to be able to consistently extract all fields (including "categories")
+*** ( ) Improve parsing to be able to consistently extract all fields
+    (including "categories")
 
 * Notes
 ** Rationale for using `ripgrep`/`rg`

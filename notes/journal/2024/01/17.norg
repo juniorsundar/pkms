@@ -4,26 +4,28 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T22:16:28+0400
-updated: 2024-01-28T22:32:18+0400
+updated: 2024-06-20T20:03:52+0400
 version: 1.1.1
 @end
 
-* Solita Workshop #1 - Emergency Landing
+* Meetings
 
-** Attendees
+** Solita Workshop #1 - Emergency Landing
+
+*** Attendees
 
    | SRTA-AD
    | Solita
 
-** Goals
+*** Goals
 
    - Come up with designs or features that can be integrated into MVP
 
-** Agenda
+*** Agenda
 
    - (x) Brainstorm ideas for what could constitute safe landing
 
-** Minutes
+*** Minutes
 
    - Difference between safe and normal landing?
    - Describe a situation that requires a safe landing? What is the state of the drone (internal, system state, drone-level)?
@@ -32,7 +34,7 @@ version: 1.1.1
    - Safe landing can be defined with certain assumptions...
        -- What is the extent to which safety in landing can be guaranteed with these assumptions.
 
-** Action Items
+*** Action Items
 
    - Miro:
    > https://miro.com/app/board/uXjVN5EhjAY=/ 
