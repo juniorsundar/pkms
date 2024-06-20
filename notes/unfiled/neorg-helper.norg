@@ -36,29 +36,24 @@ version: 1.1.1
 ** Features
 
 *** Backlinking
-
-    Being able to track which nodes is referred to by another node.
-
-    Being able to jump between the nodes in question.
+    - Being able to track which nodes is referred to by another node.
+    - Being able to jump between the nodes in question.
 
 *** Indexing
-
-    Sorting nodes according to
+    - Sorting nodes according to
 
 *** Task Tracking/GTD
-
-    Get all the shit you need at once!!
+    - Get all the shit you need at once!!
 
 *** Node Management
-
-    Renaming?
-
-    Reorganising?
+    - Renaming?
+    - Reorganising?
 
 *** (Optional) Site Deployment
 
-* Implementations
+    ===
 
+* Implementations
   - Python --> {:$/journal/task-box/pynorg:}[pynorg]
   - Lua (Neovim side) --> {:$/journal/task-box/neorg_utils.lua:}[neorg_utils.lua]
 
