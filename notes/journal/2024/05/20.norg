@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-14T12:00:50+0400
+updated: 2024-06-21T19:24:55+0400
 version: 1.1.1
 @end
 
@@ -15,11 +15,11 @@ version: 1.1.1
   ===
 ___
 
- * Journal
+* Journal
 
-   - Attended {:$/journal/task-box/caltech-tii-collaboration:** 20 May 2024}[Xiao Tan / Junior Sundar -- Nominal Control + Safety Filter].
+  - Attended {:$/journal/task-box/caltech-tii-collaboration:** 20 May 2024}[Xiao Tan / Junior Sundar -- Nominal Control + Safety Filter].
 
-    ===
+  ===
 ___
 
 {:$/journal/2024/05/19:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/05/21:}[next >]

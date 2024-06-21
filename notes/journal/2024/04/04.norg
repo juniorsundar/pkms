@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-13T12:00:10+0400
+updated: 2024-06-21T20:26:23+0400
 version: 1.1.1
 @end
 
@@ -16,20 +16,15 @@ version: 1.1.1
 *** (_) RTA-22: Reorient for swarm
 **** (_) Adjust Story title accordingly
 
-** (-) {:$/journal/task-box/data-generation-task:}[Data Generation Task]
-
 ** (x) Empty data headers for Willian
 *** (x) Send the data headers to Willian
 *** (x) Adjust data headers with more description
-
     Provide header metadata in spreadsheet formats
 
 *** (x) Set up a meeting to determine which all data is necessary and which isn't
 *** (x) Work with Shamsa and others to hash out the names for message fields
 
-** (-) {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration]
-
-   ===
+    ===
 ___
 
 * Journal
@@ -38,7 +33,7 @@ ___
   - Started {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration].
      -- Attended {:$/journal/task-box/caltech-tii-collaboration:** 4 April 2024}[Xiao Tan / Junior Sundar -- X6 Security Collaboration].
 
-   ===
+     ===
 ___
 
 * Meetings

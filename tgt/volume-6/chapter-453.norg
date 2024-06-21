@@ -1,10 +1,10 @@
 @document.meta
-title: Chapter 453
+title: Chapter 453 - Agility is Key
 description: 
 authors: juniorsundar
 categories: 
 created: 2024-06-02T01:14:15+0400
-updated: 2024-06-21T15:14:51+0400
+updated: 2024-06-21T23:27:38+0400
 version: 1.1.1
 @end
 
@@ -51,6 +51,72 @@ At that moment, Marie raised her hand, interrupting Shuri's enthusiastic oration
 "Umm... What exactly is this project all about?"
 
 Another awkward silence prevailed, which was broken with Shuri's embarrassed chuckle.
+
+She coughed to clear her throat and directed her explanation towards Marie.
+
+"Going back to your earlier problem about the exorbitant amount of repetitive calculations you need to do. Do you remember the Calculate-Core, one of my earliest Automagic creations?"
+
+Marie nodded as she retrieved the familiar programmed mana core from her bag.
+
+"Well, it is evidence of how Automagy can be used to perform basic calculations: addition, subtraction, multiplication and division. We later expanded this to include a wide range of mathematical operations with the Calculate-Core 2, which could now store data in temporary memory, respect order of operations, and much more. And I later developed the Automagic mechanism to store data to memory. It was a crude invention, but effective."
+
+Shuri snapped her fingers and emphasised her next point, "Compute and store, that is what the human mind does. It takes data, variables, inputs of many sorts, computes outputs from it and either executes actions or stores it to memory to be used at a later point in time. You have memory that is used immediately and disposed off, or memory that is stored for a longer time-frame."
+
+"Well... We've already built methods to perform computation and methods to store. Methods to execute actions are trivial to program, as evidenced by Yohn's magic wand. So what if we brought all of it together into a single instrument - an expansive yet cohesive Automagic mechanism. A mechanism that combines all of these together."
+
+Shuri let her words hang as she retrieved a book next to the large blackboard. The title was written in plain text, without much flourish: "History of the Computer."
+
+"Imagine my surprise when I found a book that talked about an invention that did just that?! The aptly named computer was the mechanism that I had floating in my mind."
+
+She opened the book from the back and pushed it forward, revealing a picture of simple and unassuming, palm-sized black slab.
+
+"This is a 'Smartphone'. Named so, because it can play music, capture images, communicate accross vast distances, access a repository of knowledge that is so vast and evergrowing that a mortal wouldn't even be able to digest a fraction of it within their lifetime, and all of it made possible in the palm of your hands. And this wasn't just owned by the wealthy, it was owned by every single earning individual-"
+
+"That's absurd," Marie scoffed. "Such a marvel wouldn't be so easily disseminated."
+
+"I thought so too!" Shuri agreed immediately. But then she slowly shuffled back the pages, showing how the palm-sized magic device came to be.
+
+"This is the culmination of years of technological advancement. Years of optimsation, reiteration and development to reach this stage, evidently it was economically viable enough to have this in the hand of every person. Look at the Calculate-Core. It is a creation that is extremely powerful in its use and valuable. But now it is owned by almost every business in the Solar Empire."
+
+"So are you trying to make something like the smartphones?" Marie probed.
+
+"Not exactly. The smartphone is the zenith of what a person living in the True World - devoid of magic and mana - can achieve when given the impetus to develop upon the concept of a computer. We, however, have the luxury of being able to use mana. This means that our starting point needs to be far, far back. We must go back to the progenitor of the computer-"
+
+As she pointed at the title on the blackboard, "-the Analytical Engine. A device created by a man called Charles Babbage, who died leaving it incomplete. But the idea persisted, building up to a computer, which then shrunk into the smartphone. This is where I began my research."
+
+"If the Analytical Engine is so well defined here, why not just replicate it?" Marie challenged.
+
+"Because magic offers flexibility," Shuri replied without hesitation. "The biggest downside of the Analytical Engine is that its functionality is limited, and so is its breadth of application. Besides, if we were to place the features of the engine on a table, and compare it with what we've already achieved with the Automagical research within the Sect, you will find that we have blown past the limits of many of said features already. To pigeonhole ourselves with the original engine's schematics and designs would be akin to shooting ourselves in the foot."
+
+Shuri looked towards the others with a challenging gaze and declared, "If it can be made better, why not do so? Right?"
+
+A silent nod was exchanged amongst those present. It was clear that everyone was on board and ready for this challenge. But the hold-out was, in the end, the process.
+
+"So can you take me through the process you have in mind?" Marie said with a wry smile.
+
+"I'm glad you asked," Shuri chimed in with an excited hop. She reached towards the second book on the large blackboard titled: "A Dummy's Guide to the Agile Method."
+
+"I was going through books on project management, because I was really struggling with structuring the Arcane Analytical Engine project, when I came across this book. At first, I thought it was a combat manual mistakenly categorised in the project management section, but upon a cursory read I realised that it wasn't," Shuri revealed a beaming smile.
+
+She opened up the book to its first page and read out loud:
+
+"We are uncovering better ways of developing
+software by doing it and helping others do it.
+Through this work we have come to value:
+
+Individuals and interactions over processes and tools
+Working software over comprehensive documentation
+Customer collaboration over contract negotiation
+Responding to change over following a plan
+
+That is, while there is value in the items on
+the right, we value the items on the left more."
+
+A heavy buzz hung in the air as Shuri finished orating the manifesto.
+
+"So..." Shuri declared as she slammed the book shut. "The project is broken down in to 'Stories'. These make up the main components of the Arcane Analytical Engine - the modules that are necessary to get it working. These 'Stories' are standalone, to a certain degree. I anticipate overlap here and there, which is why we need to brainstorm 'Tasks' that go under these stories. 'Tasks' are stages towards the completion of these stories, that have a deadline. 'Tasks' can have 'Subtasks' if it is particularly vast in its scope."
+
+Marie looked around as everyone exchanged a silent groan. Clearly, this wasn't the first time they were hearing this. And seeing just how animated Shuri was right now, Marie reckoned that she was just getting started.
 
 ===
 ___
