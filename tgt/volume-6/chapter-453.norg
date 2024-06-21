@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-06-02T01:14:15+0400
-updated: 2024-06-20T22:41:44+0400
+updated: 2024-06-21T15:14:51+0400
 version: 1.1.1
 @end
 
@@ -36,7 +36,21 @@ He sat down immediately after, causing the room to stew in an awkward silence. S
 
 Amongst the silent crowd, Tes was the first to raise his hand and said, "We don't understand what this... Agile methodolgy is all about! I mean, it just seems so overly complicated. What about assigning tasks to each of us and seeing how we do?"
 
+Shuri massaged her forehead and responded, "Its all about fluid collaboration between cross-functional teams, such that development is transparent and tasks can be prioritised appropriately."
 
+"That's just a bunch of words," Marie mumbled to the girl seated next to her, who nodded in agreement subconsciously.
+
+"Look," Shuri tried again. "You all are aware just how big this project is. Not just that, it is also heavily interconnected, wherein you can easily develop a backlog that will cause certain teams to wait for upstream tasks to finish, which is not optimal usage of manpower."
+
+Shuri pulled another mobile blackboard towards her and started to draw a diagram on it, "Optimally speaking, there should not be any delay cause by lead times. What task D needs should be available when task D is initiated. So any task A, B and C that precedes it must be finished 'Just-in-Time'!"
+
+At that moment, Marie raised her hand, interrupting Shuri's enthusiastic oration.
+
+"Yes, Marie?"
+
+"Umm... What exactly is this project all about?"
+
+Another awkward silence prevailed, which was broken with Shuri's embarrassed chuckle.
 
 ===
 ___
