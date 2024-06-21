@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-13T12:01:19+0400
+updated: 2024-06-21T20:22:57+0400
 version: 1.1.1
 @end
 
@@ -140,7 +140,7 @@ ___
 
     - *Rabdan* (previously called Falcon SOC) is going into production.
     - {:$/journal/2024/03/18:** (x) HITL simulation and data collection for system latency}[HITL simulation and data collection for system latency] task is completed.
-    -  {**** (-) Literature review}[Literature review for Data Generation task] nearly complete
+    -  {**** Literature review}[Literature review for Data Generation task] nearly complete
        -- Need to discuss scope with Willian.
        -- May need to reorient data collection and processing when moving for
           publication.
