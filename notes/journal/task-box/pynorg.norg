@@ -6,24 +6,30 @@ categories: [
     task
 ]
 created: 2024-06-10T15:18:58+0400
-updated: 2024-06-20T21:56:56+0400
+updated: 2024-06-22T14:27:08+0400
 version: 1.1.1
 @end
 
-* (-) Tasks
+* (=) Tasks
 
 ** (x) Create basic Python project repository
 
 ** (x) Implement CLI base tooling
 
-** (-) *Purpose:* {:$/unfiled/neorg-helper:*** Backlinking}[Backlinking] | Implement re-indexing with caching as `.json`
+** (x) *Purpose:* {:$/unfiled/neorg-helper:*** Backlinking}[Backlinking] | Implement re-indexing with caching as `.json`
 *** (x) First iteration
-*** (-) Improve the multi-processing of ripgrep using {https://docs.python.org/3/library/concurrent.futures.html*concurrent.futures.ProcessPoolExecutor}[concurrent.futures] module
+*** (x) Improve the multi-processing of ripgrep using {https://docs.python.org/3/library/concurrent.futures.html*concurrent.futures.ProcessPoolExecutor}[concurrent.futures] module
+    - `multiprocessing.Process` performs comparably with `concurrent.futures`.
+*** (x) Avoid linking to self
 
-** (-) *Purpose:* {:$/unfiled/neorg-helper:*** Backlinking}[Backlinking]  | Implement metadata parsing of `.norg` files
+** (=) *Purpose:* {:$/unfiled/neorg-helper:*** Backlinking}[Backlinking] | Implement metadata parsing of `.norg` files
 *** (x) First iteration as a helper function
-*** ( ) Improve parsing to be able to consistently extract all fields
+*** (=) Improve parsing to be able to consistently extract all fields
     (including "categories")
+
+** ( ) *Purpose:* {:$/unfiled/neorg-helper:*** Backlinking}[Backlinking] | Fix issue with multiple backlinks to same file
+
+   ===
 
 * Notes
 ** Rationale for using `ripgrep`/`rg`
