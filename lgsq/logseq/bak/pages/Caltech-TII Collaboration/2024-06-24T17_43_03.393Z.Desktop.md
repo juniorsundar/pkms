@@ -92,8 +92,11 @@
 	  :LOGBOOK:
 	  CLOCK: [2024-06-03 Mon 19:49:36]--[2024-06-03 Mon 22:14:01] =>  02:24:25
 	  :END:
-	- TODO Create GitHub repository and add `xiaotan-git` to it
+	- DONE Create GitHub repository and add `xiaotan-git` to it
 	  id:: 665e07f3-91f8-4e6b-a82d-e9b109c9ac74
+	  :LOGBOOK:
+	  CLOCK: [2024-06-05 Wed 10:20:22]--[2024-06-05 Wed 16:31:18] =>  06:10:56
+	  :END:
 - # Notes
   collapsed:: true
 	- **MATLAB Cells**
