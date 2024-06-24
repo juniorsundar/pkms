@@ -1,1 +1,109 @@
--
+# Tasks
+	- {{query (or (task DOING) (task TODO) (task WAITING) (task NOW) (task LATER))}}
+- # Index
+	- ## Projects
+		- Ongoing
+			- [[Data Generation Task]]
+			  
+			  id:: 66561355-e6ac-4b4d-90f6-778e1c21eba4
+			- [[Q2 June Demo]]
+			- [[Caltech-TII Collaboration]]
+			- [[Neorg Helper]]
+		- Completed
+		- On-Hold/Cancelled
+	- ## [[Terminology]]
+	- ## [[Review]]
+- # Journal
+  collapsed:: true
+  
+  collapsed:: true
+	- ****2024****
+		- **May**
+			- [[May 31st, 2024]]
+			- [[May 30th, 2024]]
+			- [[May 29th, 2024]]
+			- [[May 28th, 2024]]
+			- [[May 27th, 2024]]
+			- [[May 26th, 2024]]
+			- [[May 25th, 2024]]
+			- [[May 24th, 2024]]
+			- [[May 23rd, 2024]]
+			- [[May 22nd, 2024]]
+			- [[May 21st, 2024]]
+			- [[May 20th, 2024]]
+			- [[May 19th, 2024]]
+			- [[May 18th, 2024]]
+			- [[May 17th, 2024]]
+			- [[May 15th, 2024]]
+			- [[May 14th, 2024]]
+			- [[May 13th, 2024]]
+			- [[May 12th, 2024]]
+			- [[May 11th, 2024]]
+			- [[May 10th, 2024]]
+			- [[May 9th, 2024]]
+			- [[May 8th, 2024]]
+			- [[May 7th, 2024]]
+			- [[May 6th, 2024]]
+			- [[May 5th, 2024]]
+			- [[May 4th, 2024]]
+			- [[May 3rd, 2024]]
+			- [[May 2nd, 2024]]
+			- [[May 1st, 2024]]
+		- **April**
+		  
+		  collapsed:: true
+			- [[Apr 30th, 2024]]
+			- [[Apr 29th, 2024]]
+			- [[Apr 28th, 2024]]
+			- [[Apr 27th, 2024]]
+			- [[Apr 26th, 2024]]
+			- [[Apr 25th, 2024]]
+			- [[Apr 24th, 2024]]
+			- [[Apr 23rd, 2024]]
+			- [[Apr 22nd, 2024]]
+			- [[Apr 21st, 2024]]
+			- [[Apr 20th, 2024]]
+			- [[Apr 19th, 2024]]
+			- [[Apr 18th, 2024]]
+			- [[Apr 17th, 2024]]
+			- [[Apr 15th, 2024]]
+			- [[Apr 14th, 2024]]
+			- [[Apr 13th, 2024]]
+			- [[Apr 12th, 2024]]
+			- [[Apr 11th, 2024]]
+			- [[Apr 10th, 2024]]
+			- [[Apr 9th, 2024]]
+			- [[Apr 8th, 2024]]
+			- [[Apr 7th, 2024]]
+			- [[Apr 6th, 2024]]
+			- [[Apr 5th, 2024]]
+			- [[Apr 4th, 2024]]
+			- [[Apr 3rd, 2024]]
+			- [[Apr 2nd, 2024]]
+			- [[Apr 1st, 2024]]
+		- **March**
+		  
+		  collapsed:: true
+			- [[Mar 31st, 2024]]
+			- [[Mar 30th, 2024]]
+			- [[Mar 29th, 2024]]
+			- [[Mar 28th, 2024]]
+			- [[Mar 27th, 2024]]
+			- [[Mar 26th, 2024]]
+			- [[Mar 25th, 2024]]
+			- [[Mar 24th, 2024]]
+			- [[Mar 23rd, 2024]]
+			- [[Mar 22nd, 2024]]
+			- [[Mar 21st, 2024]]
+			- [[Mar 20th, 2024]]
+			- [[Mar 19th, 2024]]
+			- [[Mar 18th, 2024]]
+			- [[Mar 17th, 2024]]
+			- [[Mar 15th, 2024]]
+			- [[Mar 14th, 2024]]
+			- [[Mar 7th, 2024]]
+			- [[Mar 6th, 2024]]
+		- **February**
+		  
+		  collapsed:: true
+			- [[Feb 20th, 2023]]
