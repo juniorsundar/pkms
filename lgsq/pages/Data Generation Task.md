@@ -206,9 +206,10 @@
 		  :LOGBOOK:
 		  CLOCK: [2024-06-10 Mon 09:51:01]
 		  :END:
-		- LATER Variable propeller cuts and data collection
+		- DOING Variable propeller cuts and data collection
 		  :LOGBOOK:
 		  CLOCK: [2024-05-27 Mon 20:18:09]
+		  CLOCK: [2024-06-24 Mon 15:17:37]
 		  :END:
 	- DONE Ask Jorge/Vojtech for the documentation on `fognav_action_creator`
 	  collapsed:: true
