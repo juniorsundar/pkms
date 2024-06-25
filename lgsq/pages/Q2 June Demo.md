@@ -153,9 +153,9 @@
 		- DONE Understand how to extract data from drone
 		  collapsed:: true
 			- Can be done through QGC
-		- DOING Set up provisioning server
+		- DONE Set up provisioning server
 		  :LOGBOOK:
-		  CLOCK: [2024-06-24 Mon 15:29:37]
+		  CLOCK: [2024-06-24 Mon 15:29:37]--[2024-06-25 Tue 15:58:27] =>  24:28:50
 		  :END:
 		- DOING Try deploying containers into the Saluki V3
 		  :LOGBOOK:
