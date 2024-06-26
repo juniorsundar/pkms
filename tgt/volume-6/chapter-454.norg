@@ -1,0 +1,34 @@
+@document.meta
+title: Chapter 454
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-06-02T01:14:15+0400
+updated: 2024-06-25T23:30:38+0400
+version: 1.1.1
+@end
+
+At the tenth continuous minute of Shuri's non-stop tirade on the beauty of the Agile Method and its application in project management, Marie had reached her breaking point and finally raised her palm to stop the girl from continuing any further.
+
+"C-Can you just explain what the computational capacity is on this thing?" Marie interjected.
+
+"Good question!" Shuri commended. "Theoretically, it should be able to perform 5000 operations per second, per computational core. Now-"
+
+She turned to the blackboard and expounded, "-the initial goal is to have five computational cores in the structure. Though we haven't completely solidified the programming for the computational cores..."
+
+"Anyways, an operation is simply any basic computational process like adding two numbers, moving data from one place to another, comparing two values and so on."
+
+"What about multiplication or division?" Marie asked.
+
+"Those are simple on paper but complex programmatically. To multiply means to add a number to itself a set number of times, and division is to subtract it from itself a set number of times. There is no easy method to do it in a single move," Shuri clarified. "But in the grand scheme of things, it shouldn't take that much extra time. Its basically adding, storing the data to memory, moving it..."
+
+Marie tuned out Shuri's rambling as she went on and on about the system's operational procedure.
+
+"How do you make the structure perform complex operations?" Marie probed. She pulled out a roll of parchment and presented an equation to the table. "This one, for example. How would you plot it?"
+
+
+
+===
+___
+
+{:$/volume-6/index:}[< return] - {:$/index:}[index] - {:$/volume-6/chapter-455:}[next >]
