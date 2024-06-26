@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:00:57+0400
-updated: 2024-06-24T22:10:51+0400
+updated: 2024-06-26T12:38:33+0400
 version: 1.1.1
 @end
 
@@ -80,12 +80,12 @@ version: 1.1.1
 ** (x) Refactor `ulog_converter.py` -> `resample` out of merging
 
 ** (-) Data collection
-***  (x) Hardware datasets
+*** (x) Hardware datasets
 **** (x) Set up meeting with F4F to discuss possibility for anomalous test
 **** (x) Discuss data collection with broken propellor with F4F
 **** (x) Collect normal and abnormal flight data from F4F
 **** (x) Update Jorge with the settings for a long run setup 
-***  (-) Simulation datasets
+*** (-) Simulation datasets
 
 ** (x) Project folder restructuring
 *** (_) Consider numeric suffix for project folder

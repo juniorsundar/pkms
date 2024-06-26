@@ -1,6 +1,18 @@
 tag:: #MEETING
 
 - {{renderer :tocgen2}}
+- # 26 June 2024
+  id:: 667bae66-08a5-431c-a8d9-630f27205585
+	- **Attendees**
+		- SRTA-AD
+	- **Goal**
+		-
+	- **Agenda**
+		-
+	- **Minutes**
+		-
+	- **Action Points**
+		-
 - # 12 June 2024
   id:: 666934e0-39c9-403c-b79a-6e5ef697de5a
   collapsed:: true
@@ -70,6 +82,7 @@ tag:: #MEETING
 	  collapsed:: true
 		- Discuss progress on hold-out on physical demonstration.
 	- **Minutes**
+	  collapsed:: true
 		- Moved as JIRA tasks in the SYSTEST team, so it is now in progress.
 			- The main points have been clarified with John.
 			- ((664f9f87-a976-490c-a59c-d068f1698a15))
