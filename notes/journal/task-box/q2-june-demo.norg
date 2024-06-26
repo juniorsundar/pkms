@@ -122,6 +122,7 @@ version: 1.1.1
    /SCHEDULED:/ {@ Thursday 13 June 2024} 
    /DONE:/ {:$/journal/2024/06/13:}[Thursday 13 June 2024]
 
+** ( ) Set up GCS/PMC for drone control
 ** (-) Freeze code and model
    /SCHEDULED:/ {@ Sunday 30 June 2024} 
 
