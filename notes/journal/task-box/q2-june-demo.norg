@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-06-24T22:12:42+0400
+updated: 2024-06-26T09:46:03+0400
 version: 1.1.1
 @end
 
@@ -107,7 +107,7 @@ version: 1.1.1
 *** (x) Understand how to extract data from drone
     - Can be done through QGC
 
-*** (-) Set up provisioning server
+*** (x) Set up provisioning server
 *** (-) Try deploying containers into the Saluki V3
     - Works in the dev-kit, but only as a testing implementation.
     - In order to properly deploy on V3, it needs to be added to the
