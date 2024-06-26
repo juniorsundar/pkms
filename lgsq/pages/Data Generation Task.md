@@ -202,9 +202,9 @@
 		  CLOCK: [2024-06-04 Tue 21:24:12]
 		  CLOCK: [2024-06-04 Tue 21:24:15]--[2024-06-10 Mon 09:51:05] =>  132:26:50
 		  :END:
-		- DOING Pendulum flight missions
+		- DONE Pendulum flight missions
 		  :LOGBOOK:
-		  CLOCK: [2024-06-10 Mon 09:51:01]
+		  CLOCK: [2024-06-10 Mon 09:51:01]--[2024-06-26 Wed 16:03:02] =>  390:12:01
 		  :END:
 		- DOING Variable propeller cuts and data collection
 		  :LOGBOOK:

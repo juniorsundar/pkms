@@ -154,6 +154,7 @@
 		  collapsed:: true
 			- Can be done through QGC
 		- DONE Set up provisioning server
+		  id:: 6679589e-cd92-48e7-bdde-6bf6b8051dcc
 		  :LOGBOOK:
 		  CLOCK: [2024-06-24 Mon 15:29:37]--[2024-06-25 Tue 15:58:27] =>  24:28:50
 		  :END:
@@ -175,6 +176,8 @@
 	  :LOGBOOK:
 	  CLOCK: [2024-06-05 Wed 22:25:01]--[2024-06-14 Fri 10:01:09] =>  203:36:08
 	  :END:
+	- TODO [#A] Set up GCS/PMC for drone control
+	  id:: 667c02ba-ca15-453c-a243-7e72e9607b6c
 	- DOING Freeze code and model
 	  SCHEDULED: <2024-06-30 Sun>
 	  id:: 6644991b-cbe7-4882-9761-382fc01aeb4c
