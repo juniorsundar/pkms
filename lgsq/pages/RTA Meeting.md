@@ -3,16 +3,30 @@ tag:: #MEETING
 - {{renderer :tocgen2}}
 - # 26 June 2024
   id:: 667bae66-08a5-431c-a8d9-630f27205585
+  collapsed:: true
 	- **Attendees**
+	  collapsed:: true
 		- SRTA-AD
 	- **Goal**
-		-
+	  collapsed:: true
+		- Progress update
+		- Work left towards Demo
 	- **Agenda**
-		-
+	  collapsed:: true
+		- Update on what was done before and after the vacation
+		- What all is left for getting drone demo ready
+		- Any news?
 	- **Minutes**
-		-
+	  collapsed:: true
+		- *from Martin:*
+			- GPU obtained for local machine.
+			- Lab available can move up all the items from Saeed desk very soon.
+		- ((6679589e-cd92-48e7-bdde-6bf6b8051dcc))
+		- Can now remotely connect to dev-kit over SSH/Tailscale.
 	- **Action Points**
-		-
+	  collapsed:: true
+		- ((667c02ba-ca15-453c-a243-7e72e9607b6c))
+		- TODO Check SDK for NATS to ROS 2 interfacing with Govind
 - # 12 June 2024
   id:: 666934e0-39c9-403c-b79a-6e5ef697de5a
   collapsed:: true
