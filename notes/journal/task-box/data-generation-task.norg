@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:00:57+0400
-updated: 2024-06-26T12:38:33+0400
+updated: 2024-06-26T21:51:54+0400
 version: 1.1.1
 @end
 
@@ -95,7 +95,7 @@ version: 1.1.1
 ** (-) Additional drone flight types from F4F
 *** (x) Long duration continuous flight missions
 *** (x) Weights attached flight missions
-*** (-) Pendulum flight missions
+*** (x) Pendulum flight missions
 *** (-) Variable propeller cuts and data collection
 
 ** (x) Ask Jorge/Vojtech for the documentation on script run
