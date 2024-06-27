@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-06-26T09:46:03+0400
+updated: 2024-06-27T10:28:29+0400
 version: 1.1.1
 @end
 
@@ -20,25 +20,24 @@ version: 1.1.1
 
 ** (x) How is the data being recorded?
 *** (x) It is known that the data is being dumped in ROSbags somewhere, how to extract this?
-    It can be recorded using {https://github.com/tiiuae/nats-bag}[`nats-bag`]
-
-    A laptop or GCS that is in the same NATS network can record the data
-    streamed through NATS.
+    - It can be recorded using {https://github.com/tiiuae/nats-bag}[`nats-bag`]
+    - A laptop or GCS that is in the same NATS network can record the data
+      streamed through NATS.
 
     @code bash
     nats-bag [-s nats://localhost:4222] record [filename]
     @end
 
 *** (x) Is recording happening continuously or is it to be triggered?
-    The gimbal stream needs to be activated by opening the stream through
-    `dronsole` UI or running:
+    - The gimbal stream needs to be activated by opening the stream through
+      `dronsole` UI or running:
 
     @code bash
     nats pub video.cmd.<device-id> '{"subscriber": "id1", "subscribe":true}'
     @end
 
 ** (x) Confirm if Siyi A8 is supported for Release12
-   It is supported as as confirmed by the people at F4F
+   - It is supported as as confirmed by the people at F4F
 
 ** (x) Create Slack channel with all concerned parties
 
@@ -47,35 +46,32 @@ version: 1.1.1
 ** (x) Verify the need for grass patches for the image segmentation demonstration
 
 ** (x) Data collection from testing team follow-up --> Awaiting Tintu's go-ahead 
-   They don't have enough Saluki V3 to go around, so we will have to affix ours
-   on a drone. Furthermore, we will have to use the x500 Holybro.
-
-   There isn't a set method to attach the Siyi A8 camera to the drone, so we
-   will have to think up some strategy, maybe by trying double tape or
-   something.
+   - They don't have enough Saluki V3 to go around, so we will have to affix ours
+     on a drone. Furthermore, we will have to use the x500 Holybro.
+   - There isn't a set method to attach the Siyi A8 camera to the drone, so we
+     will have to think up some strategy, maybe by trying double tape or
+     something.
 
 ** (x) Get on Solita about getting camera segmentation demo ready
 *** (x) How is the video to be retrieved? Is there some code in place for this?
-    Video is going to be retrieved from the NATS channel subscriber.
-
-    There will be implementation in place to do this.
+    - Video is going to be retrieved from the NATS channel subscriber.
+    - There will be implementation in place to do this.
 
 *** (x) Determine how the plugin for camera segmentation is to be implemented
-    This will not be implemented as a plugin, since the image-segmentation does
-    not change the state of SRTA based on outputs.
-
-    The safe-landing container is providing coordinates to the SRTA in order to
-    perform the action if the SRTA plugins so decide or its ordered from the
-    FMO.
+    - This will not be implemented as a plugin, since the image-segmentation does
+      not change the state of SRTA based on outputs.
+    - The safe-landing container is providing coordinates to the SRTA in order to
+      perform the action if the SRTA plugins so decide or its ordered from the
+      FMO.
 
 ** (x) Triggering the RTA modules
 *** (x) Check first what kind of triggers can be implemented with Solita
-    There is a placeholder in place inside SRTA and it is awaiting the UI
-    implementation on the UI/FMO side of the things.
+    - There is a placeholder in place inside SRTA and it is awaiting the UI
+      implementation on the UI/FMO side of the things.
 
 *** (_) Check with Mehmet
-    If something like this needs to be implemented in the software and control
-    scheme for the drone
+    - If something like this needs to be implemented in the software and control
+      scheme for the drone
 
 ** (x) Printing the mounts and attach it to the drone
 *** (x) Saluki V3 to Drone Mount
@@ -85,7 +81,7 @@ version: 1.1.1
 ** (_) Check if video encoding/decoding is happening on the hardware (Siyi A8)
 
 ** (_) Verify if this method can be used to record data
-   For the outdoor arena demo -- talk to Jose Segovia
+   - For the outdoor arena demo -- talk to Jose Segovia
 
 ** (x) Mount Saluki V3 to the -Holybro-X500- -> T-Motor M690b Drone and get it airborne
 *** (x) Obtain Saluki V3
@@ -122,7 +118,14 @@ version: 1.1.1
    /SCHEDULED:/ {@ Thursday 13 June 2024} 
    /DONE:/ {:$/journal/2024/06/13:}[Thursday 13 June 2024]
 
-** ( ) Set up GCS/PMC for drone control
+** (-) Set up GCS/PMC for drone control
+*** (-) GCS and Fog role method
+**** (x) Get documentation to set it up
+**** (-) Source a second upXtreme device for fog/groundstation role
+*** (-) PMC method
+**** (-) Obtain rugged laptop
+     - 18 weeks lead time...
+
 ** (-) Freeze code and model
    /SCHEDULED:/ {@ Sunday 30 June 2024} 
 

@@ -4,13 +4,11 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-26T21:42:21+0400
+updated: 2024-06-27T10:24:22+0400
 version: 1.1.1
 @end
 
 * To-Do
-
-  - ( ) tasks
 
   ===
 ___
@@ -26,17 +24,33 @@ ___
 
 *** Attendees
 
-    | Names
+    | Jose Segovia
+    | Andres Garrido
+    | Junior Sundar
 
 *** Goals
 
+    - Get progress update on the completed tasks.
+    - Smooth handover of any unfinished business.
 
 *** Agenda
 
-    - ( ) 
+    - to Andres
+       -- What is the type of missions being placed in the folders?
+       -- What tasks have been completed?
+       -- Draft document methodology to run flight missions with UI.
+    - to Jose
+       -- What is the type of missions being placed in the folders?
+       -- What tasks need to be handed over?
 
 *** Minutes
 
+    - Clarify this:
+    > 100.69.213.28   srtafog-1            tagged-devices linux   offline
+    > 100.87.142.38   srtafog              tagged-devices linux   offline
+    > 100.82.216.13   srtareconv3          tagged-devices linux   offline
+
+    - When connecting to localhost:3000/missions the system is stuck in connecting
 
 *** Action Items
 
