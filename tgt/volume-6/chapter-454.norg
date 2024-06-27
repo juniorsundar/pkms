@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-06-02T01:14:15+0400
-updated: 2024-06-26T22:33:25+0400
+updated: 2024-06-27T23:56:59+0400
 version: 1.1.1
 @end
 
@@ -32,7 +32,31 @@ Marie tuned out Shuri's rambling as she went on and on about the system's operat
 
 "That's the beauty of this structure," Shuri responded. "You don't have to! See-"
 
-Shuri redirected the attention to the board and pointed at another story.
+Shuri redirected the attention to the board and pointed at another "Story". This one was labeled Fetch-Decode-Execute Cycle.
+
+"I took inspiration from the way I developed Yohn's magic wand. It's all about instructions - the way the logic is activated - that defines the way the system behaves or executes actions. This logic is defined in binary, which is the lowest level 'language' the structure recognises which can be directly translated into actions such as moving items to an from memory, or adding items in memory. The level above binary, which is barely human readable, is something I have dubbed Arcane Assembly. It is a human readable, yet obfuscated keyword based language. A level above that..."
+
+Shuri pointed to another "Story" labelled Compiler.
+
+"ArcaneScript is the planned, completely human readable and structured language, which will be what the user will write instructions in to get the Arcane Analytical Engine to perform its tasks. The compiler is another structure whose purpose is to parse the written ArcaneScript, and generate the Arcane Assembly that can be decoded into binary and executed by the Engine," Shuri elaborated.
+
+She pointed at the ArcaneScript "Story" and paused.
+
+"You don't have to worry about everything that comes after this. The ArcaneScript, the process of writing it, and its logic, that is where you as the layperson will remain- Well, that isn't exactly true. You WILL have to worry a little bit about memory usage, processor usage. Especially if you want to avoid creating unnecessary copies of data in memory and loosing the address to that stored memory which may cause- Tes! Write this down, 'Memory safety?'," Shuri took a scrap parchment and jotted down some notes. "There is also the question of concurrency. By design\, the structure can only support single processes at a time... Tes! Write this down\, 'Concurrency/Multi-processing'."
+
+At this point, Marie jumped in before the discussion could balloon and veer off-course. "It is clear that the project is quite ambitious... How long do you think this will take?"
+
+Shuri pointed at Marie, as though she had just spoken the magic words, and swivelled her head around the room looking at each individual present with a piercing gaze.
+
+"You hear her, what is the anticipated due-date for this?"
+
+"Why're you asking them?" Marie retorted. "It's your project."
+
+"It's OUR project," Shuri corrected. "Ownership is shared amongst all participants. If they cannot take ownership of the work they intend to assume, then what's the point of doing the task anyways."
+
+"You can't just foist ownership of a task on someone like that."
+
+"Do any of you here have any reservations towards rescuing Dora and Kano?" Shuri asked, to which the crowd responded with an awkward shake of their heads. ""
 
 ===
 ___
