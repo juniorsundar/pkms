@@ -26,8 +26,8 @@ ___
 * Journal
 
   - *Created documentation*
-     -- {:$/technical/ros/rosbag2-mcap:}[MCAP (rosbag2)]
-     -- {:$/technical/ros/ros2:* Create Local Workspace}[Create Local Workspace]
+     -- {:$/vault/ros/rosbag2-mcap:}[MCAP (rosbag2)]
+     -- {:$/vault/ros/ros2:* Create Local Workspace}[Create Local Workspace]
 
   ===
 ___

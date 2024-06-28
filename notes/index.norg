@@ -2,9 +2,9 @@
 title: Notes
 description: 
 authors: juniorsundar
-categories: 
+catego-ies: 
 created: 2024-01-28T19:20:38+0400
-updated: 2024-06-17T14:25:30+0400
+updated: 2024-06-29T00:29:03+0400
 version: 1.1.1
 @end
 
@@ -12,39 +12,39 @@ version: 1.1.1
 
   {:$/journal/index:}[Journal]
 
-  ~ {:$/ideas/index:}[Ideas]
+  ~ {:$/vault/ideas:}[Ideas]
   ~ {:$/research/index:}[Research]
-  ~ {:$/srta/index:}[Secure Run-Time Assurance]
-  ~ {:$/technical/index:}[Technical]
-  ~ {:$/terminologies/index:}[Terminologies]
+  ~ {:$/vault/srta:}[Secure Run-Time Assurance]
+  ~ {:$/vault/technical:}[Technical]
+  ~ {:$/vault/terminologies:}[Terminologies]
 
   ===
 ___
 
 * Index
 
-** Golang
-   - {:$/technical/go/go.bank-packages:}[Example - Bank Packages]
-   - {:$/technical/go/go.bank:}[Example - Bank]
-   - {:$/technical/go/go.investment-calculator:}[Example - Investment Calculator]
-   - {:$/technical/go/go:}[Go - Programming Language]
-   - {:$/technical/go/go.notes:}[Example - Structs And .json]
-   - {:$/technical/go/go.pointers:}[Example - Pointers]
-   - {:$/technical/go/go.profit-calculator:}[Example - Profit Calculator]
-   - {:$/technical/go/go.structs:}[Example - Structs]
+** go-ang
+   - {:$/vault/go-go-bank-packages:}[Example - Bank Packages]
+   - {:$/vault/go-go-bank:}[Example - Bank]
+   - {:$/vault/go-go-investment-calculator:}[Example - Investment Calculator]
+   - {:$/vault/go-go-}[go-- Programming Language]
+   - {:$/vault/go-go-notes:}[Example - Structs And .json]
+   - {:$/vault/go-go-pointers:}[Example - Pointers]
+   - {:$/vault/go-go-profit-calculator:}[Example - Profit Calculator]
+   - {:$/vault/go-go-structs:}[Example - Structs]
 ** Ideas
-   - {:$/ideas/bash-code-snippets:}[Bash Code Snippets]
-   - {:$/ideas/code-projects:}[Code Projects]
-   - {:$/ideas/useful-links:}[Useful Links]
+   - {:$/vault/bash-code-snippets:}[Bash Code Snippets]
+   - {:$/vault/code-projects:}[Code Projects]
+   - {:$/vault/useful-links:}[Useful Links]
 ** Mavsdk
-   - {:$/technical/mavsdk:}[Mavsdk]
+   - {:$/vault/mavsdk:}[Mavsdk]
 ** Px4
-   - {:$/technical/px4/controls:}[Px4 - Controls]
-   - {:$/technical/px4/px4:}[Px4 - Autopilot]
-   - {:$/technical/px4/ros2:}[Px4 - Ros 2 Integration]
-   - {:$/technical/px4/safety-configuration:}[Px4 - Safety Configuration]
-   - {:$/technical/px4/simulation:}[Px4 - Simulation]
-   - {:$/technical/px4/uorb:}[Px4 - Uorb]
+   - {:$/vault/px4/controls:}[Px4 - Controls]
+   - {:$/vault/px4/px4:}[Px4 - Autopilot]
+   - {:$/vault/px4/ros2:}[Px4 - Ros 2 Integration]
+   - {:$/vault/px4/safety-configuration:}[Px4 - Safety Configuration]
+   - {:$/vault/px4/simulation:}[Px4 - Simulation]
+   - {:$/vault/px4/uorb:}[Px4 - Uorb]
 ** Research
    - {:$/research/literature-review/ahmad2024:}[Uav Sensor Failures Dataset: Biomisa Arducopter Sensory Critique (basic)] - #uav-fault-dataset #journal-article
    - {:$/research/literature-review/ahmed2022:}[Ecu-ioft: A Dataset For Analysing Cyber-attacks On Internet Of Flying Things] - #uav-fault-dataset #journal-article
@@ -67,16 +67,16 @@ ___
    - {:$/research/websites-and-blogs/rt-2:}[Robotics Transformer 2 (rt-2)]
    - {:$/research/literature-review/bagchi2020:}[Vision Paper: Grand Challenges In Resilience: Autonomous System Resilience Through Design And Runtime Measures] - #rta #journal-article
 ** Ros
-   - {:$/technical/ros/ros:}[Robot Operating System (ros)]
-   - {:$/technical/ros/ros1:}[Ros 1]
-   - {:$/technical/ros/ros2:}[Ros 2]
-   - {:$/technical/ros/rosbag2-mcap:}[Mcap (rosbag2)]
+   - {:$/vault/ros/ros:}[Robot Operating System (ros)]
+   - {:$/vault/ros/ros1:}[Ros 1]
+   - {:$/vault/ros/ros2:}[Ros 2]
+   - {:$/vault/ros/rosbag2-mcap:}[Mcap (rosbag2)]
 ** Srta
-   - {:$/srta/dronsole:}[Dronsole]
-   - {:$/srta/raw-thoughts:}[Raw Thoughts]
-   - {:$/srta/saluki-v2:}[Saluki V2]
-   - {:$/srta/saluki-v3:}[Saluki V3]
-   - {:$/srta/sensor-fault-injection:}[Use Case - Sensor Fault Injection Simulation]
+   - {:$/vault/dronsole:}[Dronsole]
+   - {:$/vault/raw-thoughts:}[Raw Thoughts]
+   - {:$/vault/saluki-v2:}[Saluki V2]
+   - {:$/vault/saluki-v3:}[Saluki V3]
+   - {:$/vault/sensor-fault-injection:}[Use Case - Sensor Fault Injection Simulation]
 ** Task
    - {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-tii Collaboration] - Possible collaboration opportunity with Caltech
    - {:$/journal/task-box/data-generation-task:}[Data Generation Task] - Data generation for faulty flights in SITL with intention to publish
@@ -113,7 +113,7 @@ ___
    - {:$/terminologies/virtualisation:}[Virtualisation]
    - {:$/terminologies/zero-day-attack:}[Zero-day Attack]
    - {:$/terminologies/zoh:}[Zero-order Hold Method]
-** Uncategorised
+** Uncatego-ised
    - {:$/journal/task-box/house-hunting-chronicles-2024:}[House Hunting Chronicles: 2024]
    - {:$/journal/task-box/property-ownership-dubai:}[Property Ownership - Dubai]
 

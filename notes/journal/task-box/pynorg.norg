@@ -16,18 +16,18 @@ version: 1.1.1
 
 ** (x) Implement CLI base tooling
 
-** (x) *Purpose:* {:$/unfiled/neorg-helper:*** Backlinking}[Backlinking] | Implement re-indexing with caching as `.json`
+** (x) *Purpose:* {:$/vault/neorg-helper:*** Backlinking}[Backlinking] | Implement re-indexing with caching as `.json`
 *** (x) First iteration
 *** (x) Improve the multi-processing of ripgrep using {https://docs.python.org/3/library/concurrent.futures.html*concurrent.futures.ProcessPoolExecutor}[concurrent.futures] module
     - `multiprocessing.Process` performs comparably with `concurrent.futures`.
 *** (x) Avoid linking to self
 
-** (=) *Purpose:* {:$/unfiled/neorg-helper:*** Backlinking}[Backlinking] | Implement metadata parsing of `.norg` files
+** (=) *Purpose:* {:$/vault/neorg-helper:*** Backlinking}[Backlinking] | Implement metadata parsing of `.norg` files
 *** (x) First iteration as a helper function
 *** (=) Improve parsing to be able to consistently extract all fields
     (including "categories")
 
-** ( ) *Purpose:* {:$/unfiled/neorg-helper:*** Backlinking}[Backlinking] | Fix issue with multiple backlinks to same file
+** ( ) *Purpose:* {:$/vault/neorg-helper:*** Backlinking}[Backlinking] | Fix issue with multiple backlinks to same file
 
    ===
 

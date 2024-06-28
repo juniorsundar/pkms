@@ -1,0 +1,100 @@
+@document.meta
+title: Terminologies
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-28T17:56:54+0400
+updated: 2024-06-29T00:15:00+0400
+version: 1.1.1
+@end
+
+* Links 
+
+** A
+
+   - {:$/terminologies/api:}[Application Programming Interface (API)]
+
+** B
+
+   - {:$/terminologies/bootloader:}[Bootloader]
+   - {:$/terminologies/botnet:}[Botnet]
+
+** C
+
+   - {:$/terminologies/continual-task-learning:}[Continual Task Learning]
+
+** D
+
+   - {:$/terminologies/data-exfiltration:}[Data Exfiltration]
+   - {:$/terminologies/differentially-flat-systems:}[Differentially Flat Systems]
+   - {:$/terminologies/digital-twin:}[Digital Twin]
+
+** F
+
+   - {:$/terminologies/feature-importance-calculation:}[Feature Importance Calculation]
+   - {:$/terminologies/federated-learning:}[Federated Learning]
+
+** G
+
+   - {:$/terminologies/gini-impurity:}[Gini Impurity]
+   - {:$/terminologies/graph-neural-network:}[Graph Neural Network]
+   - {:$/terminologies/guid-partition-table:}[GUID Partition Table (GPT)]
+
+** H
+
+   - {:$/terminologies/hardware-in-the-loop:}[Hardware in the Loop]
+   - {:$/terminologies/hids:}[Host-Based Intrusion Detection (HIDS)]
+   - {:$/terminologies/hypervisor:}[Hypervisor]
+
+** M
+
+   - {:$/terminologies/master-boot-record:}[Master Boot Record (MBR)]
+
+** N
+
+   - {:$/terminologies/nash-equilibrium:}[Nash Equilibrium]
+
+** P
+
+   - {:$/terminologies/pca:}[Principal Component Analysis]
+
+** R
+
+   - {:$/terminologies/risc-v:}[RISC-V]
+
+** S
+
+   - {:$/terminologies/secure-boot-validation:}[Secure Boot Validation]
+   - {:$/terminologies/software-in-the-loop:}[Software in the Loop]
+   - {:$/terminologies/sparse-observability:}[Sparse Observability]
+   - {:$/terminologies/sffhi:}[System Firmware for Hardware Initialisation]
+      -- {:$/terminologies/sffhi:* Basic Input/Output System (BIOS)}[BIOS]
+      -- {:$/terminologies/sffhi:* Unified Extensible Firmware Interface (UEFI)}[UEFI]
+
+** T
+
+   - {:$/terminologies/tokenisation:}[Tokenisation]
+   - {:$/terminologies/tcp:}[Transmission Control Protocol (TCP)]
+
+** U
+
+   - {:$/terminologies/udp:}[User Datagram Protocol (UDP)]
+
+** V
+
+   - {:$/terminologies/virtualisation:}[Virtualisation]
+
+** Z
+
+   - {:$/terminologies/zero-day-attack:}[Zero-Day Attack]
+   - {:$/terminologies/zoh:}[Zero-Order Hold Method]
+
+   ===
+___
+
+* Summary
+
+  ===
+___
+
+{:$/index:}[index]

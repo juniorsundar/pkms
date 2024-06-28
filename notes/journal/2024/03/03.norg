@@ -2,7 +2,7 @@
 title: 3 March 2024
 description: 
 authors: juniorsundar
-categories: 
+catego-ies: 
 created: 2024-01-29T11:08:22+0400
 updated: 2024-06-13T13:11:45+0400
 version: 1.1.1
@@ -17,9 +17,9 @@ ___
 
 * Journal
 
-  - Worked on {:$/technical/go/go:}[Go - Programming Language]
+  - Worked on {:$/vault/go-go-}[go-- Programming Language]
   - Watched Mrs. Chatterjee vs. Norway
-  - Wrote {:$/../tgt/index:}[The Good Teacher]
+  - Wrote {:$/../tgt/index:}[The go-d Teacher]
      -- Updated {:$/../tgt/volume-6/chapter-425:}[Chapter 425]
 
      ===

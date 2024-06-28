@@ -2,7 +2,7 @@
 title: 25 February 2024
 description: 
 authors: juniorsundar
-categories: 
+catego-ies: 
 created: 2024-01-29T11:08:22+0400
 updated: 2024-06-13T13:15:07+0400
 version: 1.1.1
@@ -17,8 +17,8 @@ ___
 
 * Journal
 
-  - Covered some ground in {https://www.udemy.com/course/go-the-complete-guide/}[Go - The Complete Guide]
-     -- Updates in {:$/technical/go/go:}[Go Notes]
+  - Covered some ground in {https://www.udemy.com/course/go-the-complete-guide/}[go-- The Complete Guide]
+     -- Updates in {:$/vault/go-go-}[go-Notes]
 
      ===
 ___

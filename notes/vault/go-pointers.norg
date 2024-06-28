@@ -1,0 +1,57 @@
+@document.meta
+title: Example - Pointers
+description: 
+authors: juniorsundar
+categories: [
+    golang
+]
+created: 2024-02-25T16:48:01+0400
+updated: 2024-06-29T00:48:39+0400
+version: 1.1.1
+@end
+
+@code gomod
+module example.com/pointers
+
+go 1.22.0
+@end
+
+@code go
+package main
+
+import "fmt"
+
+func main() {
+	age := 32 //! regular variable
+
+	var agePointer *int
+	agePointer = &age //! pointer variable
+
+	fmt.Println("Age:", *agePointer)
+
+	// adultYears := getAdultYears(agePointer)
+	// adultYears := getAdultYears(age)
+	// fmt.Println("Adult years:", adultYears)
+
+	editAgeToAdultYears(agePointer)
+	fmt.Println("Adult years:", age)
+}
+
+func editAgeToAdultYears(age *int) {
+	*age = *age - 18
+}
+
+func getAdultYears(age *int) int {
+    // ====cannot perform pointer arithmetic in Go====
+    return *age - 18
+}
+
+// func getAdultYears(age int) int {
+//     return age - 18
+// }
+@end
+
+===
+___
+
+{:$/vault/go:}[< return] - {:$/index:}[index]

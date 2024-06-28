@@ -12,7 +12,7 @@ version: 1.1.1
 
 ** (x) #RESEARCH Tasks
 *** (_) -Rule-Based Decision Engine-
-*** (x) {:$/unfiled/feature-importance-calculation:}[Feature Importance Calculation]
+*** (x) {:$/vault/feature-importance-calculation:}[Feature Importance Calculation]
 
     ===
 ___
@@ -20,10 +20,10 @@ ___
 * Journal
 
   - *New Notes*
-     -- {:$/unfiled/understanding-tree-sitter:}[Understanding Tree-sitter]
-     -- {:$/unfiled/lsp-explained:}[LSP Explained]
-     -- {:$/unfiled/feature-importance-calculation:}[Feature Importance Calculation]
-     -- {:$/unfiled/gini-impurity:}[Gini Impurity]
+     -- {:$/vault/understanding-tree-sitter:}[Understanding Tree-sitter]
+     -- {:$/vault/lsp-explained:}[LSP Explained]
+     -- {:$/vault/feature-importance-calculation:}[Feature Importance Calculation]
+     -- {:$/vault/gini-impurity:}[Gini Impurity]
 
      ===
 ___

@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-28T16:47:54+0400
+updated: 2024-06-29T00:13:08+0400
 version: 1.1.1
 @end
 
@@ -17,7 +17,7 @@ ___
 
 * Journal
 
-  - Worked with Jose to: {:$/unfiled/nats-bag:* nats-bags from Drone [v12.0.3] (Example)}[nats-bags from Drone [v12.0.3] (Example)].
+  - Worked with Jose to: {:$/vault/nats-bag:* nats-bags from Drone [v12.0.3] (Example)}[nats-bags from Drone [v12.0.3] (Example)].
      -- It works - `.gz` files are being dumped.
      -- {** Need to verify integrity of the nats-bag videos}.
 
