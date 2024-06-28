@@ -45,12 +45,12 @@
 		            --server ws://192.168.248.1:4280
 		  ```
 			- #+BEGIN_NOTE
-			  `mount=type=bind,src=/home,dst=/home`
-			  and
-			  `--storage-dir /home`
-			  Need to be configured as per use case
+			  `mount=type=bind,src=/home,dst=/home` and `--storage-dir /home` need to be configured as per use case
 			  #+END_NOTE
 		- This should dump the nats-bag (`.gz`) in the specified `/home` directory.
+		- #+BEGIN_IMPORTANT
+		  Make sure to delete the `.gz` files after use. If you leave it in, it may break shit up.
+		  #+END_IMPORTANT
 	- ## Additional Info
 		- **`--server ws:/192.168.248.1:4280` instead of `--server nats://192.168.248.1:4222`**
 		  collapsed:: true

@@ -1,0 +1,182 @@
+@document.meta
+title: Dronsole
+description: 
+authors: juniorsundar
+categories: [
+    SRTA
+]
+created: 2024-02-13T20:17:49+0400
+updated: 2024-06-29T00:45:46+0400
+version: 1.1.1
+@end
+
+* Installation with Docker
+
+  Docker needs to be authenticated with personal access token. Follow the
+  following {http://tinyurl.com/426axec2}[instructions].
+
+  Pull container from registry:
+
+  @code bash
+  docker pull ghcr.io/tiiuae/tii-dronsole:latest
+  @end
+
+  Create an alias for `dronsole` to wrap the docker run commands:
+
+  @code bash
+  alias dronsole='docker run --rm -it \
+      -p 3000:3000 -p 8888:8888 -p 4280:4280 -p 4222:4222 \
+      -v $(pwd):/workspace -v $HOME/.dronsole:/root/.dronsole \
+      --entrypoint /bin/dronsole \
+      ghcr.io/tiiuae/tii-dronsole:latest' 
+  @end
+
+  Verify that it works.
+
+  @code bash
+  dronsole --version
+  @end
+
+  Store the alias in `~/.bashrc` or in `~/.zshrc`.
+
+* Configure
+
+  Configuring dronsole to connect to cloud simulations environment:
+
+  @code bash
+  dronsole config sim simulations.sacplatform.com:443
+  @end
+
+  Will need to set up credentials for `sacplatform.com`. This can only be done
+  through allowance from Solita.
+
+* Launch Simulation
+
+** Normal Launch
+
+   Create `.yaml` files as follows:
+
+   @code yaml
+   #gst.yaml
+   kind: virtual-drone
+   version: v2
+   name: gst
+   spec:
+       positionX: 0
+   base: stable offline-gs 
+   config:
+       NATS_SERVER: gst
+   @end
+
+   @code yaml
+   #alpha.yaml
+   kind: virtual-drone
+   version: v2
+   name: alpha
+   spec:
+       positionX: 3
+   base: stable offline-drone
+   config:
+       NATS_SERVER: gst
+   @end
+
+   Create new simulation:
+
+   @code bash
+   dronsole sim create <sim_name>
+   @end
+
+   *NOTE* The `sim_name` is namespace sensitive. So try to keep it unique.
+
+   Add the above devices to the simulation:
+
+   @code bash
+   dronsole sim drones add <sim_name> gst.yaml
+   dronsole sim drones add <sim_name><sim_name> alpha.yaml
+   @end
+
+** Faulty Launch
+
+   Create `.yaml` files as follows:
+
+   @code yaml
+   #gst.yaml
+   kind: virtual-drone
+   version: v2
+   name: gst
+   spec:
+       positionX: 0
+   base: stable offline-gs 
+   config:
+       NATS_SERVER: gst
+   @end
+
+   @code yaml
+   #alpha.yaml
+   kind: virtual-drone
+   version: v2
+   name: alpha
+   spec:
+       positionX: 3
+   base: faulty-controller offline-drone
+   config:
+       NATS_SERVER: gst
+   @end
+
+** Launch with Gazebo
+
+   @code bash
+    dronsole sim create <sim_name> --viewer
+    dronsole sim forward <sim_name> gzweb:8080
+   @end
+
+   Then browse to localhost:8080
+
+* Access the Simulation
+
+** With UI
+
+   Either do this to use port-forwarding to gain access to the offline-UI:
+
+   @code bash
+   dronsole sim forward <sim_name> drone-gst-tii-offline-map-server:8888 3000:drone-gst-tii-mission-control-ui:80 drone-gst-drone-nats-server:4280 drone-gst-drone-nats-server:4222
+   @end
+
+** With Shell
+
+   Alternatively, you can access the dronsole containers with:
+
+   @code bash
+   dronsole sim sh <sim_name>
+   @end
+
+*** Working with Kubernetes Cluster
+
+    Use `k9s` or `kubectl` to access the kubernetes cluster.
+
+*** Manipulating PX4 Parameters
+
+    To show all parameters:
+
+    @code bash
+    kubectl exec -it deploy/drone-<device_name>-core -c tii-px4-sitl \
+    -- px4-param show -a
+    @end
+
+    To set particular parameters:
+
+    @code bash
+    kubectl exec -it deploy/drone-<device_name>-core -c tii-px4-sitl \
+    -- px4-param set <PARAM_NAME> <PARAM_VALUE>
+    @end
+
+* Clean-up
+
+  @code bash
+  dronsole sim delete <sim_name>
+  @end
+
+    ===
+___
+
+{:$/vault/srta:}[< return] -  {:$/index:}[index]

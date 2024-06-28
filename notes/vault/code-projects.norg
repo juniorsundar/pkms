@@ -1,0 +1,48 @@
+@document.meta
+title: Code Projects
+description: 
+authors: juniorsundar
+categories: [
+    ideas
+]
+created: 2024-01-28T20:34:13+0400
+updated: 2024-06-29T00:44:43+0400
+version: 1.1.1
+@end
+
+* Personal Knowledge Management Server in Go
+
+** Concept
+
+   I don't want to have to rely on VSCode of VSCodium to manage my research
+   and notes. Having some sort of Rust implementation that acts as a server,
+   and then integrating it with Neovim would be preferable.
+
+   And rather than using plain Zettel or Obsidian as my baseline, it would be
+   preferable to have something similar to the way Dendron manages
+   information in a hierarchical manner.
+
+** Breakdown
+
+   ~ In Go, develop a server with a list of functionalities similar to Dendron:
+      -- Markdown based
+         --- Additional support for hyperlinking between texts
+      -- Hierarchical structure
+      -- Bi-directional linking
+      -- Tagging and keyword search
+      -- Graph view
+      -- Refactoring
+      -- Publishing
+   ~ Some additional features to consider would be:
+      -- Graph view
+      -- Multi-device support
+      -- Multi-vault support
+   ~ Integration into Neovim in some way
+      -- Traversal between notes
+      -- Some sort of concealer or live-view (WYSIWYG)
+      -- Calling all the features available in the server
+
+      ===
+___
+
+{:$/vault/ideas:}[< return] -  {:$/index:}[index]

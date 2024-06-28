@@ -1,0 +1,83 @@
+@document.meta
+title: Domain Randomisation
+description: 
+authors: juniorsundar
+categories: [
+    terminologies
+]
+created: 2024-01-28T18:13:55+0400
+updated: 2024-06-29T00:45:13+0400
+version: 1.1.1
+@end
+
+* Introduction
+
+  Popular technique for improving domain transfer, often used in zero-shot
+  setting when the target domain is unknown or cannot easily be used for
+  training.
+
+** Zero-Shot Domain Transfer
+
+   Policy is learned in a source domain and is then tested /without finetuning/
+   in a previously unseen target domain.
+
+   Useful when task in target domain is:
+   - inaccessible,
+   - complex, or
+   - expensive
+
+   ---
+
+  An ideal agent learns to generalise across domains.
+
+  DR uniformly randomises environment parameters (i.e. friction, torque) in
+  predefined ranges after every training episode.
+
+  It is hoped that by randomising every current present variable that is shared
+  with target environment, agent will view target domain as just another
+  variation.
+
+  Sample complexity grows exponentially with number of randomisation parameters.
+
+* Methodology
+
+  *Simulators* - Domain randomization uses simulation environments where elements
+  can be modified easily.
+
+  *Randomized Parameters* - Key parameters within the simulation that affect the
+  model's learning are randomized. These could include:
+  - /Visual:/ Lighting, textures, object colors, camera angles, background
+    clutter
+  - /Physics:/ Friction, gravity, object mass, motor strengths
+  - /Task:/ Goal positions, object configurations
+
+  *Model Training* - The machine learning model (like a robotic control system)
+  is trained repeatedly over many iterations of the simulation, each iteration
+  presenting a different randomized combination of parameters.
+
+* Importance
+
+  *The "Reality Gap"* - Machine learning models trained solely on perfect
+  simulation data often fail when placed in the messy, unpredictable real world.
+
+  *Closing the Gap* - Domain randomization forces the model to learn the core
+  features and principles of a task independent of the specifics of a single
+  environment.
+
+  *Safer, Faster Learning* - Training directly in the real world for
+  things like robotics can be expensive, slow, and potentially dangerous.
+
+* Example - Robotics
+
+  Imagine training a robotic arm to grasp objects. Domain randomization might
+  involve:
+  - Changing the textures and colors of the objects
+  - Randomly placing objects within its reach
+  - Altering lighting conditions in the simulation
+  - Slightly modifying the simulated friction of the arm joints or strength of
+    the gripper
+
+    ===
+___
+
+{:$/vault/terminologies:}[< return] - {:$/index:}[index]

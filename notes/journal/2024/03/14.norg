@@ -14,9 +14,9 @@ version: 1.1.1
 
 *** (x) Foxglove Data-Dashboard
 
-*** (x) {:$/unfiled/graph-neural-network:}[Graph Neural Networks]
+*** (x) {:$/vault/graph-neural-network:}[Graph Neural Networks]
 
-*** (x) {:$/unfiled/tokenisation:}[Tokenising results]
+*** (x) {:$/vault/tokenisation:}[Tokenising results]
 
 ** (x) Prepare logistics for updating tasks and goal given the meeting with Willian 
 

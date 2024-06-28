@@ -2,7 +2,7 @@
 title: 9 April 2024
 description: 
 authors: juniorsundar
-categories: 
+catego-ies: 
 created: 2024-01-29T11:08:22+0400
 updated: 2024-06-13T12:00:10+0400
 version: 1.1.1
@@ -17,7 +17,7 @@ ___
 
 * Journal
 
-  Did some work on {:$/technical/go/go:}[Go - Programming Language]
+  Did some work on {:$/vault/go-go-}[go-- Programming Language]
 
   ===
 ___
