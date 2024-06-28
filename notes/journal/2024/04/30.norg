@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-13T11:56:53+0400
+updated: 2024-06-28T16:42:26+0400
 version: 1.1.1
 @end
 
@@ -15,27 +15,9 @@ version: 1.1.1
   ===
 ___
 
-* Extracting Videos from NATS-bag Archives
+* Journal
 
-  @code bash
-  # Launch a NATS server
-  docker run --rm -it \
-          --network host \
-          --env=NATS_TLS=unavailable \
-          ghcr.io/tiiuae/drone-nats-server:main -D
-  @end
-
-  @code bash
-  # Obtain the video channel from the bagfile
-  nats-bag inspect <bag-file>.gz
-  # Then play the bag file to the server
-  nats-bag play <bag-file>.gz
-  @end
-
-  @code bash
-  nats sub <video_channel_name> | ffmpeg -f h264 -i pipe: -c copy output.mp4
-  # nats sub --raw <video_channel_name> | ffmpeg -i - -c copy output.mp4
-  @end
+  - Identified method of {:$/unfiled/nats-bag:}[NATS-bag for Data Dumping]
 
     ===
 ___

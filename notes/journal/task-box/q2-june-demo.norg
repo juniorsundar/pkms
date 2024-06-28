@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-06-27T10:28:29+0400
+updated: 2024-06-28T16:20:09+0400
 version: 1.1.1
 @end
 
@@ -18,7 +18,7 @@ version: 1.1.1
    - Downward: {https://shop.siyi.biz/products/siyi-a8-mini}[SIYI A8 Mini]
      This is the model being used in Masdar and in F4F Prague
 
-** (x) How is the data being recorded?
+** (x) How is the camera data being recorded?
 *** (x) It is known that the data is being dumped in ROSbags somewhere, how to extract this?
     - It can be recorded using {https://github.com/tiiuae/nats-bag}[`nats-bag`]
     - A laptop or GCS that is in the same NATS network can record the data
@@ -119,12 +119,16 @@ version: 1.1.1
    /DONE:/ {:$/journal/2024/06/13:}[Thursday 13 June 2024]
 
 ** (-) Set up GCS/PMC for drone control
-*** (-) GCS and Fog role method
+*** (x) GCS and Fog role method
 **** (x) Get documentation to set it up
-**** (-) Source a second upXtreme device for fog/groundstation role
+**** (x) Source a second upXtreme device for fog/groundstation role
+**** ( ) Set up GS role
+**** ( ) Set up Fog role
 *** (-) PMC method
-**** (-) Obtain rugged laptop
-     - 18 weeks lead time...
+**** (x) Obtain rugged laptop
+     - -18 weeks lead time...- --> 2 days XD
+
+**** ( ) Set up proper provisioning server
 
 ** (-) Freeze code and model
    /SCHEDULED:/ {@ Sunday 30 June 2024} 

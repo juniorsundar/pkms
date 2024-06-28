@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-26T21:49:01+0400
+updated: 2024-06-28T16:10:41+0400
 version: 1.1.1
 @end
 
@@ -12,12 +12,12 @@ version: 1.1.1
 
 ** (x) Enhance the video demo
 
-** (-) Update the `DP-9252` Jira task
+** (x) Update the `DP-9252` Jira task
 *** (x) Update Iraklis of task changes
 *** (x) Set up meeting with Andres (+others?)
     - What all has been done?
     - What all needs to be done?
-*** ( ) {:$/journal/2024/06/27:** `DP-9252` Progress Update and Handover}[`DP-9252` Progress Update and Handover]
+*** (x) {:$/journal/2024/06/27:** `DP-9252` Progress Update and Handover}[`DP-9252` Progress Update and Handover]
 
     ===
 ___

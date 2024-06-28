@@ -7,13 +7,12 @@
 	  :END:
 		- [Luxonis OAK-D S2](https://shop.luxonis.com/products/oak-d-s2?variant=42455432233183) - This has been tested with Release12 and proven to work as front-facing.
 		- [SIYI A8 Mini](https://shop.siyi.biz/products/siyi-a8-mini) - This is the model being used in Masdar and in F4F Prague for downward facing gimbal.
-	- DONE How is the data being recorded?
+	- DONE How is the camera data being recorded?
 	  :LOGBOOK:
 	  CLOCK: [2024-04-25 Thu 13:29:54]--[2024-04-25 Thu 14:04:41] =>  00:34:47
 	  :END:
-		- DONE It is known that the data is being dumped in ROSbags somewhere, how to extract this?
-		  collapsed:: true
-			- It can be recorded using [`nats-bag`](https://github.com/tiiuae/nats-bag)
+		- DONE It is known that the data is being dumped in ~~ROSbags~~ --> nats-bag somewhere, how to extract this?
+			- It can be recorded using [`nats-bag`](https://github.com/tiiuae/nats-bag).
 			- A laptop or GCS that is in the same NATS network can record the data streamed through NATS.
 			- ```bash
 			  nats-bag [-s nats://localhost:4222] record [filename]
@@ -176,8 +175,28 @@
 	  :LOGBOOK:
 	  CLOCK: [2024-06-05 Wed 22:25:01]--[2024-06-14 Fri 10:01:09] =>  203:36:08
 	  :END:
-	- TODO [#A] Set up GCS/PMC for drone control
+	- DOING [#A] Set up GCS/PMC for drone control
 	  id:: 667c02ba-ca15-453c-a243-7e72e9607b6c
+	  :LOGBOOK:
+	  CLOCK: [2024-06-28 Fri 16:12:07]
+	  :END:
+		- DOING GSC and Fog role method
+		  :LOGBOOK:
+		  CLOCK: [2024-06-28 Fri 16:12:12]
+		  CLOCK: [2024-06-28 Fri 16:12:13]
+		  :END:
+			- DONE Get documentation to set it up
+			- DONE Source a second upXtreme device for fog/groundstation role
+			- TODO Set up GS role
+			- TODO Set up Fog role
+		- DOING PMC method
+		  :LOGBOOK:
+		  CLOCK: [2024-06-28 Fri 16:16:12]
+		  :END:
+			- DONE Obtain rugged laptop
+			  collapsed:: true
+				- ~~18 weeks lead time...~~ --> 2 days XD
+			- TODO Set up proper provisioning server
 	- DOING Freeze code and model
 	  SCHEDULED: <2024-06-30 Sun>
 	  id:: 6644991b-cbe7-4882-9761-382fc01aeb4c
