@@ -88,7 +88,7 @@ version: 1.1.1
    - Training two networks (generator and discriminator) simultaneously:
       -- generator produces data to mimic reality.
       -- discriminator classifies.
-   - {:$/terminologies/nash-equilibrium:}[Nash Equilibrium]
+   - {:$/vault/nash-equilibrium:}[Nash Equilibrium]
    - Issues:
       -- achieving local Nash equilibria
       -- mode collapse
@@ -315,7 +315,7 @@ version: 1.1.1
    > communication range.
 
    > {Page 17} ... One potential direction is to design distributed GAI
-   > architectures based on {:$/terminologies/federated-learning:}[federated learning] for collaborations between
+   > architectures based on {:$/vault/federated-learning:}[federated learning] for collaborations between
    > different groups of unmanned swarms, instead of relying on a single
    > server/swarm leader.
 

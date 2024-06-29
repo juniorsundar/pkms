@@ -4,14 +4,14 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T18:21:39+0400
-updated: 2024-03-08T12:40:30+0400
+updated: 2024-06-29T18:04:58+0400
 version: 1.1.1
 @end
 
 * Links
 
-  ~ {:./code-projects:}[Code Projects]
-  ~ {:./useful-links:}[Useful Links]
+  ~ {:$/vault/code-projects:}[Code Projects]
+  ~ {:$/vault/useful-links:}[Useful Links]
   ~ {:$/vault/bash-code-snippets:}[Bash Code Snippets]
 
   ===
@@ -22,5 +22,4 @@ ___
   ===
 ___
 
-{:$/index:}[< return] -  {:$/index:}[index]
-
+{:$/index:}[index]

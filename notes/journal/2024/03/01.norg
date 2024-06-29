@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-13T15:02:55+0400
+updated: 2024-06-29T18:18:35+0400
 version: 1.1.1
 @end
 
@@ -26,8 +26,8 @@ ___
         Masquerade Attacks
         {:$/research/literature-review/gandhe2022:}[here]
   - Fill in:
-     -- {:$/terminologies/nash-equilibrium:}[Nash Equilibrium]
-     -- {:$/terminologies/federated-learning:}[Federated Learning]
+     -- {:$/vault/nash-equilibrium:}[Nash Equilibrium]
+     -- {:$/vault/federated-learning:}[Federated Learning]
 
      ===
 ___

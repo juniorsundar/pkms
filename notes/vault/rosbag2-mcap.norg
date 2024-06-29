@@ -27,7 +27,7 @@ version: 1.1.1
 
    Next we need to install the ROS 2 packages to be able to record the bags in
    `mcap` format as this feature is not available with the standard installation
-   of ROS 2. So, for this, create a local ROS workspace. Refer {:$/vault/ros/ros2:* Create Local Workspace}[here] for
+   of ROS 2. So, for this, create a local ROS workspace. Refer {:$/vault/ros2:* Create Local Workspace}[here] for
    instructions on how to do that.
 
    @code bash
@@ -47,7 +47,7 @@ version: 1.1.1
 ** Compatibility with `px4_msgs`
 
    If you want to record rosbags of topics carrying interfaces from `px4_msgs`,
-   then follow the instructions {:$/vault/px4/ros2:}[here] to create a ROS workspace with all the
+   then follow the instructions {:$/vault/px4-ros2:}[here] to create a ROS workspace with all the
    required packages for compatibility with the PX4 frameworks. 
 
    Then, you can clone the above repositories inside the same workspace, and
@@ -210,5 +210,5 @@ version: 1.1.1
   ===
 ___
 
-{:$/vault/ros/ros:}[< return] - {:$/index:}[index]
+{:$/vault/ros:}[< return] - {:$/index:}[index]
 

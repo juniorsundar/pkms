@@ -6,7 +6,7 @@ categories: [
     PX4
 ]
 created: 2024-02-21T11:52:28+0400
-updated: 2024-05-17T23:40:05+0400
+updated: 2024-06-29T18:34:22+0400
 version: 1.1.1
 @end
 
@@ -101,7 +101,7 @@ version: 1.1.1
 *** Offboard Loss
 
     Triggered if offboard link is lost while under offboard control mode. Refer
-    to {:$/vault/px4/ros2:** Offboard Mode}[this section] to understand what the offboard control signal rate signifies.
+    to {:$/vault/px4-controls:* Offboard Control Mode}[this section] to understand what the offboard control signal rate signifies.
 
 *** Traffic Avoidance
 
@@ -135,5 +135,4 @@ version: 1.1.1
    ===
 ___
 
-{:$/vault/px4/px4:}[< return] - {:$/index:}[index]
-
+{:$/vault/px4:}[< return] - {:$/index:}[index]

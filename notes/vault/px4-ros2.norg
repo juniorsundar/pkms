@@ -6,7 +6,7 @@ categories: [
     PX4
 ]
 created: 2024-01-27T22:38:54+0400
-updated: 2024-05-16T12:52:18+0400
+updated: 2024-06-29T18:28:12+0400
 version: 1.1.1
 @end
 
@@ -114,7 +114,7 @@ version: 1.1.1
    The uORB topics are directly translated into ROS 2 topics once you activate
    the MicroXRCEAgent.
 
-   To see the topics available, open a new terminal and {:$/vault/px4/ros2:** Source}[source] the local installation
+   To see the topics available, open a new terminal and {:$/vault/px4-ros2:** Source}[source] the local installation
    of `px4_msgs`. After that, run:
 
    @code bash
@@ -166,7 +166,7 @@ version: 1.1.1
    The message type '<message_name>' is invalid
    @end
 
-   In that case, simply {:$/vault/px4/ros2:** Source}[source] the local installation for the terminal and try again.
+   In that case, simply {:$/vault/px4-ros2:** Source}[source] the local installation for the terminal and try again.
 
    To get information about the message type being sent through these topics, run:
 
@@ -213,10 +213,10 @@ version: 1.1.1
    Instructions on exposing additional topics through the DDS connection can be
    found {https://docs.px4.io/main/en/middleware/uxrce_dds.html#dds-topics-yaml}[here].
 
-* {:$/vault/px4/controls:* Example: Offboard with MAVLink API}[Example of UAV Control]
+* {:$/vault/px4-controls:* Example: Offboard with MAVLink API}[Example of UAV Control]
 
    ===
 ___
 
-{:$/vault/px4/px4:}[< return] - {:$/index:}[index]
+{:$/vault/px4:}[< return] - {:$/index:}[index]
 
