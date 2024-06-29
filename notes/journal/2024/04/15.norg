@@ -27,7 +27,7 @@ ___
 * Journal
 
   - Completed {:$/research/literature-review/tan2024:}[Safety of Linear Systems under Severe Sensor Attacks]
-     -- Added {:$/terminologies/sparse-observability:}[Sparse Observability], {:$/terminologies/zoh:}[Zero-Order Hold Method]
+     -- Added {:$/vault/sparse-observability:}[Sparse Observability], {:$/vault/zoh:}[Zero-Order Hold Method]
 
     ===
 ___

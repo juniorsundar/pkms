@@ -43,7 +43,7 @@ version: 1.1.1
   - environment source code.
 
   Tests policy under different simulation conditions to build reward-aware
-  physics prior --> LLM generates set of {:$/terminologies/domain-randomisation:}[Domain Randomisation] parameters
+  physics prior --> LLM generates set of {:$/vault/domain-randomisation:}[Domain Randomisation] parameters
   (DR).
 
   Trains policies for real-world deployment using synthesised reward and DR

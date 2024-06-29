@@ -162,7 +162,7 @@ version: 1.1.1
    $u_1, u_2$ ).
 
    The system's dynamics are expressed in continuous-time, which are then
-   discretized using a {:$/terminologies/zoh:}[Zero-Order Hold Method] with a 0.01s sampling time
+   discretized using a {:$/vault/zoh:}[Zero-Order Hold Method] with a 0.01s sampling time
    for digital control implementation.
 
    The output of the system includes a component representing an attacking
@@ -170,7 +170,7 @@ version: 1.1.1
 
 ** Safety Guarantees and Sensor Attacks
 
-   The system's safety verification involves checking for {:$/terminologies/sparse-observability:}[Sparse Observability],
+   The system's safety verification involves checking for {:$/vault/sparse-observability:}[Sparse Observability],
    ensuring that even with a single sensor attack, the system's state can be
    inferred from the remaining sensors.
 

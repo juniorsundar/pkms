@@ -6,7 +6,7 @@ categories: [
     PX4
 ]
 created: 2024-04-25T15:22:09+0400
-updated: 2024-05-16T12:52:06+0400
+updated: 2024-06-29T18:28:12+0400
 version: 1.1.1
 @end
 
@@ -171,7 +171,7 @@ version: 1.1.1
    nodes. Here, we will only focus on the Python implementations.
 
    The nodes that will control the drone will be added to a new ROS 2 package
-   inside the pre-existing workspace made {:$/vault/px4/ros2:** Download}[here]. First, navigate to the workspace root:
+   inside the pre-existing workspace made {:$/vault/px4-ros2:** Download}[here]. First, navigate to the workspace root:
 
    @code bash
    # If the following workspace does not exist, refer to the hyperlinked page to create the workspace.

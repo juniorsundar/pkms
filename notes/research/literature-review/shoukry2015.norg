@@ -36,11 +36,11 @@ version: 1.1.1
   - dynamic feedback linearisation, and
   - a change of coordinates
 
-  The condition for state reconstruction is that the system is {:$/terminologies/sparse-observability:}[s-sparse observable].
+  The condition for state reconstruction is that the system is {:$/vault/sparse-observability:}[s-sparse observable].
 
 * Secure State Reconstruction using SMT Solving
 
-  Assumes knowledge of {:$/terminologies/smt:}[Satisfiability Modulo Theory].
+  Assumes knowledge of {:$/vault/smt:}[Satisfiability Modulo Theory].
 
   Secure state reconstruction problem is combinatorial, since direct solution
   will require constructing the state from all different combinations of

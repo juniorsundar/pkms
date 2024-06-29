@@ -51,7 +51,7 @@ version: 1.1.1
 
    /Interpolate values/ for topics that are being polled at slower rate.
 
-   {:$/terminologies/pca:}[Principal Component Analysis] is performed transform set of features into
+   {:$/vault/pca:}[Principal Component Analysis] is performed transform set of features into
    principal components to better explain variance in original set.
 
 ** Training and Tuning

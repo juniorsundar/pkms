@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-14T12:20:10+0400
+updated: 2024-06-29T18:18:35+0400
 version: 1.1.1
 @end
 
@@ -33,7 +33,7 @@ ___
 * Journal
 
   - {https://ieeexplore.ieee.org/document/9956892/}[An Intelligent System for DDoS Attack Prediction Based on Early Warning Signals]
-  - What is a {:$/terminologies/zero-day-attack:}[Zero-Day Attack]?
+  - What is a {:$/vault/zero-day-attack:}[Zero-Day Attack]?
   - Attended {** SRTA Demo Requirements}[SRTA Demo Requirements].
   - Attended {** Solita - SRTA MLOps Syncup}[Solita - SRTA MLOps Syncup].
 
@@ -65,7 +65,7 @@ ___
 
    With more edge devices nowadays, vulnerabilities are amplified.
 
-   What is a {:$/terminologies/botnet:}[Botnet]?
+   What is a {:$/vault/botnet:}[Botnet]?
 
    DDoS is one of the top five attacks nowadays.
 

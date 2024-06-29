@@ -14,7 +14,7 @@ version: 1.1.1
 
   Simulators allow PX4 flight code to control a computer modeled vehicle in a
   simulated environment, with the same level of software interactability as the
-  real drone. PX4 supports both {:$/terminologies/software-in-the-loop:}[Software in the Loop] (SITL) and {:$/terminologies/hardware-in-the-loop:}[Hardware in the
+  real drone. PX4 supports both {:$/vault/software-in-the-loop:}[Software in the Loop] (SITL) and {:$/vault/hardware-in-the-loop:}[Hardware in the
   Loop] (HITL).
 
 * Simulators
@@ -97,12 +97,12 @@ version: 1.1.1
 
 * Software-in-the-Loop (SITL)
 
-  | /Access {:$/terminologies/software-in-the-loop:}[reference]/
+  | /Access {:$/vault/software-in-the-loop:}[reference]/
 
 ** Set-Up
 
    To run the simulations, you need to first enter the PX4-Autopilot toolchain
-   directory that was cloned. This is explained in this {:$/vault/px4/px4:*** Autopilot Installation}[section].
+   directory that was cloned. This is explained in this {:$/vault/px4:*** Autopilot Installation}[section].
 
    @code bash
    cd ./PX4-Autopilot
@@ -166,7 +166,7 @@ version: 1.1.1
 
 * Hardware-in-the-Loop (HITL)
 
-  | /Access {:$/terminologies/hardware-in-the-loop:}[reference]/
+  | /Access {:$/vault/hardware-in-the-loop:}[reference]/
 
 ** Set-Up with Saluki V2
 
@@ -254,5 +254,5 @@ version: 1.1.1
    ===
 ___
 
-{:$/vault/px4/px4:}[< return] - {:$/index:}[index]
+{:$/vault/px4:}[< return] - {:$/index:}[index]
 

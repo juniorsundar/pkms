@@ -6,7 +6,7 @@ categories: [
     terminologies
 ]
 created: 2024-01-28T18:08:31+0400
-updated: 2024-05-16T12:29:56+0400
+updated: 2024-06-29T18:04:03+0400
 version: 1.1.1
 @end
 
@@ -45,4 +45,3 @@ version: 1.1.1
 ___
 
 {:$/vault/terminologies:}[< return] - {:$/index:}[index]
-

@@ -6,7 +6,7 @@ categories: [
     MAVSDK
 ]
 created: 2024-01-28T16:51:19+0400
-updated: 2024-06-29T00:29:03+0400
+updated: 2024-06-29T18:09:16+0400
 version: 1.1.1
 @end
 
@@ -106,4 +106,4 @@ version: 1.1.1
     ===
 ___
 
-{:$/vault/mavsdk:}[< return] - {:$/index:}[index]
+{:$/index:}[index]

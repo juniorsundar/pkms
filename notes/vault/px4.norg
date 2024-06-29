@@ -12,7 +12,7 @@ version: 1.1.1
 
 * Links 
 
-  ~ {:$/vault/px4/ros2:}[PX4 - ROS 2 Integration]
+  ~ {:$/vault/px4-ros2:}[PX4 - ROS 2 Integration]
   ~ {:$/vault/px4/safety-configuration:}[PX4 - Safety Configuration]
   ~ {:$/vault/px4/simulation:}[PX4 - Simulation]
   ~ {:$/vault/px4/uorb:}[PX4 - uORB]
@@ -82,7 +82,7 @@ ___
    unreliable low-bandwidth radio links.
 
    PX4 uses MAVLink to communicate with ground stations and apps built with
-   {:$/vault/mavsdk:}[MAVSDK] such as {:$/vault/px4/px4:*** QGroundControl}[QGroundControl].
+   {:$/vault/mavsdk:}[MAVSDK] such as {:$/vault/px4:*** QGroundControl}[QGroundControl].
 
 * Development
 
@@ -169,10 +169,10 @@ ___
 
 *** ROS
 
-    | /Access {:$/vault/px4/ros2:}[reference]/
+    | /Access {:$/vault/px4-ros2:}[reference]/
 
     Limited only to ROS 2 since ROS 1 is slowly reaching deprecation. Through
-    the {:$/vault/px4/px4:*** μXRCE-DDS Agent Installation}[μXRCE-DDS] client-agent, it is possible to expose the uORB
+    the {:$/vault/px4:*** μXRCE-DDS Agent Installation}[μXRCE-DDS] client-agent, it is possible to expose the uORB
     messages in the flight controller to the ROS 2 framework. This facilitates
     forward and backwards communication.
 

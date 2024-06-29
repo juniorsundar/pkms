@@ -15,7 +15,7 @@ version: 1.1.1
   Technology that allows you to create multiple simulated environments or
   dedicated resources from single, physical hardware system.
 
-  {:$/terminologies/hypervisor:}[Hypervisor] connects directly to that hardware and allows splitting 1
+  {:$/vault/hypervisor:}[Hypervisor] connects directly to that hardware and allows splitting 1
   system into separate, distinct, and secure environments known as VMs.
 
 * Uses

@@ -81,7 +81,7 @@ version: 1.1.1
 
 ** Sourcing the Environment
 
-   Referring to the previous section on ROS {:$/vault/ros/ros:** Packages}[packages], we can permanently
+   Referring to the previous section on ROS {:$/vault/ros:** Packages}[packages], we can permanently
    source the ROS installation by running:
 
    @code bash
@@ -143,5 +143,5 @@ version: 1.1.1
     ===
 ___
 
-{:$/vault/ros/ros:}[< return] - {:$/index:}[index]
+{:$/vault/ros:}[< return] - {:$/index:}[index]
 
