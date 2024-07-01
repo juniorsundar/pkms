@@ -157,9 +157,9 @@
 		  :LOGBOOK:
 		  CLOCK: [2024-06-24 Mon 15:29:37]--[2024-06-25 Tue 15:58:27] =>  24:28:50
 		  :END:
-		- DOING Try deploying containers into the Saluki V3
+		- DONE Try deploying containers into the Saluki V3
 		  :LOGBOOK:
-		  CLOCK: [2024-06-14 Fri 09:59:36]
+		  CLOCK: [2024-06-14 Fri 09:59:36]--[2024-07-01 Mon 14:09:14] =>  412:09:38
 		  :END:
 			- Works in the dev-kit, but only as a testing implementation.
 			- In order to properly deploy on V3, it needs to be added to the `manifest.json`
@@ -196,7 +196,12 @@
 			- DONE Obtain rugged laptop
 			  collapsed:: true
 				- ~~18 weeks lead time...~~ --> 2 days XD
-			- TODO Set up proper provisioning server
+			- DONE Set up provisioning network/server
+			  id:: 667ea976-f51d-48b8-a787-aaa69a0a1c2b
+			  :LOGBOOK:
+			  CLOCK: [2024-07-01 Mon 14:09:41]--[2024-07-01 Mon 14:09:43] =>  00:00:02
+			  :END:
+			- TODO Set up mesh network
 	- DOING Freeze code and model
 	  SCHEDULED: <2024-06-30 Sun>
 	  id:: 6644991b-cbe7-4882-9761-382fc01aeb4c
