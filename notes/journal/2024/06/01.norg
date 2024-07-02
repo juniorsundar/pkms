@@ -4,15 +4,28 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-13T11:52:06+0400
+updated: 2024-07-02T10:17:35+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-  /Rolled over/
+** (?) Need to learn some Networking
 
-    ===
+   ===
+___
+
+* Journal
+  - {:$/journal/task-box/q2-june-demo:****  Set up provisioning network/server}[Setting up provisioning server/network] for a more permanent set-up.
+  - Attended {:$/journal/task-box/caltech-tii-collaboration:** 1 July 2024}[Xiao Tan / Junior Sundar -- Syncup].
+  - *Purchase List for Setting up the Rugged Laptop*
+     -- 2x Comms Module (Sleeve) v1.5
+        --- BOM: {https://ssrc.atlassian.net/wiki/spaces/SC/pages/635273225/Comms+Module+1.5+-+Final+Assembly}[Comms Module 1.5 - Final Assembly]
+     -- 1x Comms Module v2.0
+        --- BOM: {https://ssrc.atlassian.net/wiki/spaces/SC/pages/687112202/Comms+Module+2.0+-+Final+Assembly}[Comms Module 2.0 - Final Assembly]
+     -- 1x {https://store.gl-inet.com/products/gl-ar300m16-mini-smart-router}[GL-AR300M Series Mini Smart Router]
+
+     ===
 ___
 
 {:$/journal/2024/05/31:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/06/02:}[next >]

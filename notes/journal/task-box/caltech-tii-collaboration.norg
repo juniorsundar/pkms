@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-06-13T13:08:50+0400
+updated: 2024-07-02T10:15:48+0400
 version: 1.1.1
 @end
 
@@ -54,6 +54,14 @@ version: 1.1.1
    /SCHEDULED:/ {@ Monday 3 June 2024} 
 
 ** (x) Create GitHub repository and add `xiaotan-git` to it
+
+** (x) {** 1 July 2024}[Eighth meeting]
+
+** ( ) Provide data as `.csv` files for Xiao Tan
+*** ( ) 1x Velocity controlled with 50Hz Input
+*** ( ) 1x Velocity controlled with 20Hz Input
+*** ( ) 1x Acceleration controlled with 50Hz Input
+*** ( ) 1x Acceleration controlled with 20Hz Input
 
    ===
 
@@ -271,6 +279,38 @@ version: 1.1.1
    ===
 
 * Meetings
+
+** 1 July 2024
+   #tag label
+   Xiao Tan / Junior Sundar -- Syncup
+*** Attendees
+
+    | Xiao Tan
+    | Junior Sundar
+
+*** Goals
+
+    Explaining the code in: {https://github.com/xiaotan-git/safety-under-sensor-attacks/blob/main/ss_problem.py}[xiaotan-git/safety-under-sensor-attacks]
+
+*** Agenda
+
+    - Understand the intention of the code and algorithm.
+    - Identify what all can be copied into the ROS 2 nodes.
+
+*** Minutes
+
+    - Two classes:
+       -- One sets up the problem.
+       -- Other solves the problem.
+    - Can directly copy some of the functions into the implementation.
+    - Verify with Xiao --> Some of the functions are purely for personal
+      testing.
+
+*** Action Items
+
+    - {** Provide data as `.csv` files for Xiao Tan}[Provide data as `.csv` files for Xiao Tan]
+       -- 2D movement -> Like a square.
+       -- Controller Inputs and EKF Outputs
 
 ** 3 June 2024
    #tag label

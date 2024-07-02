@@ -1,5 +1,6 @@
 - {{renderer :tocgen2}}
 - # Tasks
+  collapsed:: true
 	- DONE [First meeting](((660f9803-86fb-4d27-8592-f471e3712eba)))
 	  :LOGBOOK:
 	  CLOCK: [2024-04-04 Thu 23:11:09]--[2024-04-15 Mon 13:16:47] =>  254:05:38
