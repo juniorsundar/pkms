@@ -158,6 +158,7 @@
 		  CLOCK: [2024-06-24 Mon 15:29:37]--[2024-06-25 Tue 15:58:27] =>  24:28:50
 		  :END:
 		- DONE Try deploying containers into the Saluki V3
+		  collapsed:: true
 		  :LOGBOOK:
 		  CLOCK: [2024-06-14 Fri 09:59:36]--[2024-07-01 Mon 14:09:14] =>  412:09:38
 		  :END:
@@ -187,8 +188,14 @@
 		  :END:
 			- DONE Get documentation to set it up
 			- DONE Source a second upXtreme device for fog/groundstation role
-			- TODO Set up GS role
-			- TODO Set up Fog role
+			- DONE Set up GS role
+			  :LOGBOOK:
+			  CLOCK: [2024-07-02 Tue 21:59:22]--[2024-07-02 Tue 21:59:25] =>  00:00:03
+			  :END:
+			- DOING Set up Fog role
+			  :LOGBOOK:
+			  CLOCK: [2024-07-02 Tue 21:59:26]
+			  :END:
 		- DOING PMC method
 		  :LOGBOOK:
 		  CLOCK: [2024-06-28 Fri 16:16:12]
@@ -202,17 +209,21 @@
 			  CLOCK: [2024-07-01 Mon 14:09:41]--[2024-07-01 Mon 14:09:43] =>  00:00:02
 			  :END:
 			- TODO Set up mesh network
-	- DOING Freeze code and model
+				- TODO Assemble Comms Module 1.5
+				- TODO Configure Comms Module to interface with PMC
+			- TODO Register PMC to download containers
+	- LATER Freeze code and model
 	  SCHEDULED: <2024-06-30 Sun>
 	  id:: 6644991b-cbe7-4882-9761-382fc01aeb4c
 	  :LOGBOOK:
 	  CLOCK: [2024-05-15 Wed 15:17:19]--[2024-06-04 Tue 21:12:53] =>  485:55:34
 	  CLOCK: [2024-06-04 Tue 21:12:53]
 	  :END:
-	- TODO Demo
+	- LATER Demo
 	  id:: 664499d6-f73c-49a9-bd7c-6d2ddd36eb87
 	  SCHEDULED: <2024-07-01 Mon>
 - # Notes
+  collapsed:: true
 	- **Task changes because it was possible to receive a T-Motor M690b assigned for SRTA Team**
 	  collapsed:: true
 		- ((66386c1b-cb4c-4ea2-a161-fd8ffedf4d86))
