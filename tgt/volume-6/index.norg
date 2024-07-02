@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: Volume 6
 created: 1701198657781
-updated: 2024-06-25T21:08:33+0400
+updated: 2024-07-02T22:47:17+0400
 version: 1.1.1
 @end
 
@@ -67,7 +67,8 @@ ___
   - {:$/volume-6/chapter-451:}[Chapter 451 - Break it Down]
   - {:$/volume-6/chapter-452:}[Chapter 452 - Limitations of the Natural Analytical Engine]
   - {:$/volume-6/chapter-453:}[Chapter 453 - Agility is Key]
-  - {:$/volume-6/chapter-454:}[Chapter 454]
+  - {:$/volume-6/chapter-454:}[Chapter 454 - Putting the Cart Before the Horse]
+  - {:$/volume-6/chapter-455:}[Chapter 455]
 
 
   {:$/index:}[< return] - {:$/index:}[index]
