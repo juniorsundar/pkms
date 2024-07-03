@@ -208,9 +208,18 @@
 			  :LOGBOOK:
 			  CLOCK: [2024-07-01 Mon 14:09:41]--[2024-07-01 Mon 14:09:43] =>  00:00:02
 			  :END:
-			- TODO Set up mesh network
-				- TODO Assemble Comms Module 1.5
-				- TODO Configure Comms Module to interface with PMC
+			- DOING Set up mesh network
+			  :LOGBOOK:
+			  CLOCK: [2024-07-03 Wed 15:10:20]
+			  :END:
+				- DONE Assemble Comms Module 1.5
+				  :LOGBOOK:
+				  CLOCK: [2024-07-03 Wed 15:10:17]--[2024-07-03 Wed 15:10:17] =>  00:00:00
+				  :END:
+				- DOING Configure Comms Module to interface with PMC
+				  :LOGBOOK:
+				  CLOCK: [2024-07-03 Wed 15:10:19]
+				  :END:
 			- TODO Register PMC to download containers
 	- LATER Freeze code and model
 	  SCHEDULED: <2024-06-30 Sun>

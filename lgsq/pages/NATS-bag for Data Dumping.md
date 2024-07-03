@@ -7,14 +7,14 @@
 	  		ghcr.io/tiiuae/drone-nats-server:main -D
 	  ```
 	- ```bash
+	  nats sub <video_channel_name> | ffmpeg -f h264 -i pipe: -c copy output.mp4
+	  # nats sub --raw <video_channel_name> | ffmpeg -i - -c copy output.mp4
+	  ```
+	- ```bash
 	  # Obtain the video channel from the bagfile
 	  nats-bag inspect <bag-file>.gz
 	  # Then play the bag file to the server
 	  nats-bag play <bag-file>.gz
-	  ```
-	- ```bash
-	  nats sub <video_channel_name> | ffmpeg -f h264 -i pipe: -c copy output.mp4
-	  # nats sub --raw <video_channel_name> | ffmpeg -i - -c copy output.mp4
 	  ```
 - # nats-bags from Drone [v12.0.3] (Example)
   id:: 667eab04-80e7-40e7-be51-2d2afc43fbbe
