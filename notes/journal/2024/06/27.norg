@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-07-02T09:53:09+0400
+updated: 2024-07-04T22:49:19+0400
 version: 1.1.1
 @end
 
@@ -16,6 +16,7 @@ version: 1.1.1
 ___
 
 * Journal
+
   - Attended {** `DP-9252` Progress Update and Handover}.
   - Somehow the data in the drive got deleted.
      -- Found it though the Unikie GDrive -> Should have been deleted due to

@@ -299,7 +299,7 @@
  ;;  :charge-range    600}   ; Default value: 600
 
  ;; Favorites to list on the left sidebar
- :favorites ["review" "books" "contents" "terminology"]
+ :favorites ["contents" "terminology" "review" "books"]
 
  ;; Set flashcards interval.
  ;; Expected value:
@@ -419,7 +419,7 @@
  ;;      ;use triple underscore `___` for slash `/` in page title
  ;;      ;use Percent-encoding for other invalid characters
  :file/name-format :triple-lowbar
- :graph/settings {:journal? false
+ :graph/settings {:journal? true
  :builtin-pages? true
  :excluded-pages? true
  :orphan-pages? false}
@@ -427,4 +427,5 @@
  :charge-strength -700
  :charge-range 700}
  :publishing/all-pages-public? true
- :ui/show-brackets? true}
+ :ui/show-brackets? true
+ :editor/preferred-pasting-file? true}

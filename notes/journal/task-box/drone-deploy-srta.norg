@@ -1,0 +1,26 @@
+@document.meta
+title: Deploying Drone with SRTA
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-07-04T22:31:43+0400
+updated: 2024-07-04T22:37:45+0400
+version: 1.1.1
+@end
+
+* (-) Tasks
+** (x) Set up GCS/PMC for drone control
+*** (x) GCS and Fog role method
+**** (x) Get documentation to set it up
+**** (x) Source a second upXtreme device for fog/groundstation role
+**** (x) Set up GS role
+**** (_) Set up Fog role
+*** (x) {:$/vault/pmc:}[Setting up PMC]
+**** (x) Obtain rugged laptop
+     - -18 weeks lead time...- --> 2 days XD
+**** (x) Set up provisioning network/server
+**** (x) Set up mesh network
+***** (x) Assemble Comms Module 1.5
+***** (x) Configure Comms Module to interface with PMC
+**** (x) Register PMC to download containers
+** ( ) Plan

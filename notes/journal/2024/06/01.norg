@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-07-02T22:17:46+0400
+updated: 2024-07-04T22:38:57+0400
 version: 1.1.1
 @end
 
@@ -16,6 +16,7 @@ version: 1.1.1
 ___
 
 * Journal
+
   - {:$/journal/task-box/q2-june-demo:****  Set up provisioning network/server}[Setting up provisioning server/network] for a more permanent set-up.
   - Attended {:$/journal/task-box/caltech-tii-collaboration:** 1 July 2024}[Xiao Tan / Junior Sundar -- Syncup].
   - *Purchase List for Setting up the Rugged Laptop*

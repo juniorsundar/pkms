@@ -1,6 +1,32 @@
 tag:: #MEETING
 
 - {{renderer :tocgen2}}
+- # 3 July 2024
+  id:: 6686d6ac-00cb-49fb-bdcc-001944f4d013
+  collapsed:: true
+	- **Attendees**
+		- SRTA-AD
+	- **Goal**
+		- Progress update.
+	- **Agenda**
+		- Provide update.
+		- Any news?
+	- **Minutes**
+		- ((66807b04-9602-446a-8263-d03791bd6807))
+		- ((6686d2f2-6a19-44ae-907a-6b8cec282251))
+		- ((667ea976-f51d-48b8-a787-aaa69a0a1c2b))
+		- fog-hyper is broken - cannot go to older versions.
+		- Video is recording from Siyi in 12.0.3 but its quality is crap.
+		- Lab will be ready in 2 weeks.
+		- Jira meeting will be handled in separate sessions.
+		- TODO Drone Licensing Training
+			- Fixed Wing: [[Aug 5th, 2024]], [[Aug 6th, 2024]], [[Aug 7th, 2024]]
+			- Multi-Rotor: [[Aug 8th, 2024]], [[Aug 9th, 2024]]
+	- **Action Points**
+		- DONE [Decide on one release and fix it as goal](((6686da5c-6b4d-4428-8ec5-fb30d0ace2d7)))
+		  :LOGBOOK:
+		  CLOCK: [2024-07-04 Thu 21:23:52]--[2024-07-04 Thu 21:23:53] =>  00:00:01
+		  :END:
 - # 26 June 2024
   id:: 667bae66-08a5-431c-a8d9-630f27205585
   collapsed:: true

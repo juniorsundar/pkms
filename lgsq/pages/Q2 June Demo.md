@@ -12,6 +12,7 @@
 	  CLOCK: [2024-04-25 Thu 13:29:54]--[2024-04-25 Thu 14:04:41] =>  00:34:47
 	  :END:
 		- DONE It is known that the data is being dumped in ~~ROSbags~~ --> nats-bag somewhere, how to extract this?
+		  collapsed:: true
 			- It can be recorded using [`nats-bag`](https://github.com/tiiuae/nats-bag).
 			- A laptop or GCS that is in the same NATS network can record the data streamed through NATS.
 			- ```bash
@@ -140,9 +141,9 @@
 		  :LOGBOOK:
 		  CLOCK: [2024-05-30 Thu 11:29:36]--[2024-06-05 Wed 16:30:56] =>  149:01:20
 		  :END:
-	- DOING Demo prerequisites
+	- DONE Demo prerequisites
 	  :LOGBOOK:
-	  CLOCK: [2024-06-06 Thu 12:46:18]
+	  CLOCK: [2024-06-06 Thu 12:46:18]--[2024-07-04 Thu 21:56:19] =>  681:10:01
 	  :END:
 		- DONE Note down drone configuration and limitations
 		  :LOGBOOK:
@@ -164,8 +165,8 @@
 		  :END:
 			- Works in the dev-kit, but only as a testing implementation.
 			- In order to properly deploy on V3, it needs to be added to the `manifest.json`
-		- TODO Prepare anomalous flight use-case (appropriate weights and how to add them).
-		- TODO Test single anomalous flight use-case
+		- CANCELLED Prepare anomalous flight use-case (appropriate weights and how to add them).
+		- CANCELLED Test single anomalous flight use-case
 	- DONE Figure out what the process is to install and setup the ((66605142-3ed1-4364-8797-636648594267))
 	  id:: 665ff704-5b0e-455b-b730-49c4c89148f6
 	  :LOGBOOK:
@@ -176,63 +177,17 @@
 	  :LOGBOOK:
 	  CLOCK: [2024-06-05 Wed 22:25:01]--[2024-06-14 Fri 10:01:09] =>  203:36:08
 	  :END:
-	- DOING [#A] Set up GCS/PMC for drone control
-	  id:: 667c02ba-ca15-453c-a243-7e72e9607b6c
-	  :LOGBOOK:
-	  CLOCK: [2024-06-28 Fri 16:12:07]
-	  :END:
-		- DOING GSC and Fog role method
-		  :LOGBOOK:
-		  CLOCK: [2024-06-28 Fri 16:12:12]
-		  CLOCK: [2024-06-28 Fri 16:12:13]
-		  :END:
-			- DONE Get documentation to set it up
-			- DONE Source a second upXtreme device for fog/groundstation role
-			- DONE Set up GS role
-			  :LOGBOOK:
-			  CLOCK: [2024-07-02 Tue 21:59:22]--[2024-07-02 Tue 21:59:25] =>  00:00:03
-			  :END:
-			- DOING Set up Fog role
-			  :LOGBOOK:
-			  CLOCK: [2024-07-02 Tue 21:59:26]
-			  :END:
-		- DOING PMC method
-		  :LOGBOOK:
-		  CLOCK: [2024-06-28 Fri 16:16:12]
-		  :END:
-			- DONE Obtain rugged laptop
-			  collapsed:: true
-				- ~~18 weeks lead time...~~ --> 2 days XD
-			- DONE Set up provisioning network/server
-			  id:: 667ea976-f51d-48b8-a787-aaa69a0a1c2b
-			  :LOGBOOK:
-			  CLOCK: [2024-07-01 Mon 14:09:41]--[2024-07-01 Mon 14:09:43] =>  00:00:02
-			  :END:
-			- DOING Set up mesh network
-			  :LOGBOOK:
-			  CLOCK: [2024-07-03 Wed 15:10:20]
-			  :END:
-				- DONE Assemble Comms Module 1.5
-				  :LOGBOOK:
-				  CLOCK: [2024-07-03 Wed 15:10:17]--[2024-07-03 Wed 15:10:17] =>  00:00:00
-				  :END:
-				- DOING Configure Comms Module to interface with PMC
-				  :LOGBOOK:
-				  CLOCK: [2024-07-03 Wed 15:10:19]
-				  :END:
-			- TODO Register PMC to download containers
-	- LATER Freeze code and model
+	- CANCELLED Freeze code and model
 	  SCHEDULED: <2024-06-30 Sun>
 	  id:: 6644991b-cbe7-4882-9761-382fc01aeb4c
 	  :LOGBOOK:
 	  CLOCK: [2024-05-15 Wed 15:17:19]--[2024-06-04 Tue 21:12:53] =>  485:55:34
 	  CLOCK: [2024-06-04 Tue 21:12:53]
 	  :END:
-	- LATER Demo
+	- CANCELLED Demo
 	  id:: 664499d6-f73c-49a9-bd7c-6d2ddd36eb87
 	  SCHEDULED: <2024-07-01 Mon>
 - # Notes
-  collapsed:: true
 	- **Task changes because it was possible to receive a T-Motor M690b assigned for SRTA Team**
 	  collapsed:: true
 		- ((66386c1b-cb4c-4ea2-a161-fd8ffedf4d86))

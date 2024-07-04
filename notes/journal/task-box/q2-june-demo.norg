@@ -6,11 +6,11 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-07-04T09:20:47+0400
+updated: 2024-07-04T22:20:08+0400
 version: 1.1.1
 @end
 
-* (-) Tasks
+* (x) Tasks
 
 ** (x) Which camera is being used for this
    - Forward: {https://shop.luxonis.com/products/oak-d-s2?variant=42455432233183}[Luxonis OAK-D S2]
@@ -93,7 +93,7 @@ version: 1.1.1
 *** (x) Copy over PID tuning parameters
 *** (x) Connect with GCS and fly autonomously
 
-** (-) Demo prerequisites
+** (x) Demo prerequisites
 *** (x) Note down drone configuration and limitations
 *** (x) Understand how to fly drone using FMO
 *** (x) Understand how to extract data from drone
@@ -103,8 +103,8 @@ version: 1.1.1
     - Works in the dev-kit, but only as a testing implementation.
     - In order to properly deploy on V3, it needs to be added to the
       `manifest.json`
-*** ( ) Prepare anomalous flight use-case (appropriate weights and how to add them)
-*** ( ) Test single anomalous flight use-case
+*** (_) Prepare anomalous flight use-case (appropriate weights and how to add them)
+*** (_) Test single anomalous flight use-case
 
 ** (x) Figure out what the process is to install and setup the {* Custom Release for SRTA}
 
@@ -112,25 +112,10 @@ version: 1.1.1
    /SCHEDULED:/ {@ Thursday 13 June 2024} 
    /DONE:/ {:$/journal/2024/06/13:}[Thursday 13 June 2024]
 
-** (-) Set up GCS/PMC for drone control
-*** (-) GCS and Fog role method
-**** (x) Get documentation to set it up
-**** (x) Source a second upXtreme device for fog/groundstation role
-**** (x) Set up GS role
-**** (-) Set up Fog role
-*** (-) PMC method
-**** (x) Obtain rugged laptop
-     - -18 weeks lead time...- --> 2 days XD
-**** (x) Set up provisioning network/server
-**** (-) Set up mesh network
-***** (x) Assemble Comms Module 1.5
-***** (-) Configure Comms Module to interface with PMC
-**** ( ) Register PMC to download containers
-
-** (=) Freeze code and model
+** (_) Freeze code and model
    /SCHEDULED:/ {@ Sunday 30 June 2024} 
 
-** (=) Demo
+** (_) Demo
    /SCHEDULED:/ {@ Monday 1 July 2024}
 
    ===

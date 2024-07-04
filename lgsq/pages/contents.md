@@ -6,11 +6,12 @@
 			- [[Data Generation Task]]
 			  
 			  id:: 66561355-e6ac-4b4d-90f6-778e1c21eba4
-			- [[Q2 June Demo]]
 			- [[Caltech-TII Collaboration]]
+			- [[Deploying Drone with SRTA]]
 			- [[Neorg Helper]]
 		- Completed
 		- On-Hold/Cancelled
+			- ~~[[Q2 June Demo]]~~
 	- ## [[Terminology]]
 	- ## [[Review]]
 - # Journal

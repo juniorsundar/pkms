@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-14T12:26:04+0400
+updated: 2024-07-04T22:45:39+0400
 version: 1.1.1
 @end
 
@@ -45,52 +45,46 @@ ___
 
 *** Minutes
 
-    Since last Friday, Decision Engine (DE) has been merged into main branch.
-
-    Samridha model has been uploaded to MLFlow, ROS wrapper is currently in the
-    works.
-
-    Safe landing use case:
-    - Simulation use case with grass and stuff.
-    - Challenging because image quality in the sim is crap.
-    - Results look very noisy.
-    - But good progress has been achieved, most likely that this will be the
-      demo goal.
-
-    Demo overall status:
-    - Sensor anomalies (IP)
-    - FMO UI (IP)
-    - Decision enginer (IP)
-    - Segmentation (OH)
+    - Since last Friday, Decision Engine (DE) has been merged into main branch.
+    - Samridha model has been uploaded to MLFlow, ROS wrapper is currently in
+      the works.
+    - Safe landing use case:
+       -- Simulation use case with grass and stuff.
+       -- Challenging because image quality in the sim is crap.
+       -- Results look very noisy.
+       -- But good progress has been achieved, most likely that this will be
+          the demo goal.
+    - Demo overall status:
+       -- Sensor anomalies (IP)
+       -- FMO UI (IP)
+       -- Decision enginer (IP)
+       -- Segmentation (OH)
 
 *** Action Items
 
 ** RTA Meeting
 
 *** Attendees
-
+    
     | SRTA-AD
 
 *** Goals
-
+    
     - Demo updates and timelines
 
 *** Agenda
-
+    
     - Discuss how much work is left for drone flight
     - Point out blockers and problems
 
 *** Minutes
 
-    Drone nearing flight, but no promises.
-
-    Documentation is sparse and heavily distributed. They make it upon request
-    basically.
-
-    Have not been able to allocate time for work in the collab project due to
-    bandwidth being utilised for the flight preparation.
-
-    Some work needs to be done on the data collection stuff.
+    - Drone nearing flight, but no promises.
+    - Documentation is sparse and heavily distributed. They make it upon
+      request basically.
+    - Have not been able to allocate time for work in the collab project due to
+      bandwidth being utilised for the flight preparation.
+    - Some work needs to be done on the data collection stuff.
 
 *** Action Items
 

@@ -4,16 +4,14 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-24T21:44:58+0400
+updated: 2024-07-04T22:25:11+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-** (-) {:$/journal/task-box/q2-june-demo:}[Q2 June Demo]
-
+** (_) {:$/journal/task-box/q2-june-demo:}[Q2 June Demo]
 ** (-) {:$/journal/task-box/data-generation-task:}[Data Generation Task]
-
 ** (-) {:$/journal/task-box/caltech-tii-collaboration:}[Caltech-TII Collaboration]
 
   ===

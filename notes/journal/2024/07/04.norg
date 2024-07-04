@@ -4,39 +4,68 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-07-04T09:17:19+0400
+updated: 2024-07-04T22:49:19+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-  - ( ) tasks
+** (-) Convert nats-bags to video
+*** (-) Share with Jose
+*** ( ) Upload to the Jira ticket
+** (-) {:$/journal/task-box/drone-deploy-srta:}[Deploying Drone with SRTA]
 
   ===
 ___
 
 * Journal
 
+  - *Completed set-up of PMC*
+     -- It is a bit workaround, but works.
+     -- Documented this in {:$/vault/pmc:}[Setting up PMC].
+  - Attended {** Define Release + Readiness of Tech Stack} meeting.
+  - Closing {:$/journal/task-box/q2-june-demo:}[Q2 June Demo].
+
   ===
 ___
 
 * Meetings
 
-** Meeting Name
+** Define Release + Readiness of Tech Stack
 
 *** Attendees
 
-    | Names
+    | Martin Andreoni
+    | Willian Lunardi
+    | Iraklis Nikolakakos
+    | Junior Sundar
 
 *** Goals
 
+	- Defining the release.
+	- Determining readiness of tech stack.
+	- GITEX discussion.
 
 *** Agenda
 
-    - ( ) 
+	- Which release? 12.0.X or 12.1?
+	- Identifying what is needed to work towards that.
+	- GITEX setup
 
 *** Minutes
 
+	- Deciding release:
+       -- 12.0.X has infrastructure in place in UAE.
+       -- 12.1 is core for RTA modules.
+       -- *Hence going with 12.1*
+    - {:$/journal/task-box/drone-deploy-srta:}[Setting up 12.1 kickoff]
+       -- What is needed? --> Possibly talk to F4F.
+       -- Possible problems in the process?
+       -- Infrastructure needed?
+       -- Need a better point of contact except for Abu Dhabi...
+	- ORAS backward incompatibility.
+	- SSRC-F4F needs to include SRTA as well.
+	- GITEX... big changes - tough to follow.
 
 *** Action Items
 
