@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-07-02T10:15:48+0400
+updated: 2024-07-04T09:21:35+0400
 version: 1.1.1
 @end
 
@@ -57,11 +57,11 @@ version: 1.1.1
 
 ** (x) {** 1 July 2024}[Eighth meeting]
 
-** ( ) Provide data as `.csv` files for Xiao Tan
-*** ( ) 1x Velocity controlled with 50Hz Input
-*** ( ) 1x Velocity controlled with 20Hz Input
-*** ( ) 1x Acceleration controlled with 50Hz Input
-*** ( ) 1x Acceleration controlled with 20Hz Input
+** (-) Provide data as `.csv` files for Xiao Tan
+*** (-) 1x Velocity controlled with 50Hz Input
+*** (-) 1x Velocity controlled with 20Hz Input
+*** (-) 1x Acceleration controlled with 50Hz Input
+*** (-) 1x Acceleration controlled with 20Hz Input
 
    ===
 

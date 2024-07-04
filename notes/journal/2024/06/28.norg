@@ -4,13 +4,13 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-07-01T14:11:34+0400
+updated: 2024-07-04T09:19:15+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-** (-) Need to verify integrity of the nats-bag videos
+** (x) Need to verify integrity of the nats-bag videos
 
   ===
 ___

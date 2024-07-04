@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-07-02T22:17:36+0400
+updated: 2024-07-04T09:20:47+0400
 version: 1.1.1
 @end
 
@@ -123,7 +123,7 @@ version: 1.1.1
      - -18 weeks lead time...- --> 2 days XD
 **** (x) Set up provisioning network/server
 **** (-) Set up mesh network
-***** (-) Assemble Comms Module 1.5
+***** (x) Assemble Comms Module 1.5
 ***** (-) Configure Comms Module to interface with PMC
 **** ( ) Register PMC to download containers
 
