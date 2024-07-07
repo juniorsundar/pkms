@@ -2,7 +2,6 @@
 id:: 6660bda5-ad5c-4d2f-81b8-fb69f0f36a1e
 	- ## Summary
 		- Soma, an ancient ritual drink mentioned in Vedic texts, has a somewhat mysterious preparation process because the exact ingredients and methods have been lost over time.
-		- However, based on historical and botanical research, here's a general idea of how it might have been made:
 	- ## Ingredients
 		- The primary ingredient was the soma plant.
 		- The exact identity of the soma plant is debated, but some theories suggest it could be Ephedra, a plant known for its stimulant properties.
