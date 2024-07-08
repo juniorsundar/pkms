@@ -20,8 +20,8 @@ tag:: #MEETING
 		- Lab will be ready in 2 weeks.
 		- Jira meeting will be handled in separate sessions.
 		- TODO Drone Licensing Training
-			- Fixed Wing: [[Aug 5th, 2024]], [[Aug 6th, 2024]], [[Aug 7th, 2024]]
-			- Multi-Rotor: [[Aug 8th, 2024]], [[Aug 9th, 2024]]
+			- Multi-Rotor: [[Aug 5th, 2024]], [[Aug 6th, 2024]]
+			- Fixed Wing: [[Aug 7th, 2024]], [[Aug 8th, 2024]], [[Aug 9th, 2024]]
 	- **Action Points**
 		- DONE [Decide on one release and fix it as goal](((6686da5c-6b4d-4428-8ec5-fb30d0ace2d7)))
 		  :LOGBOOK:
