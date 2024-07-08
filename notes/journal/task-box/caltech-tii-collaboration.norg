@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-07-05T18:32:48+0400
+updated: 2024-07-08T22:40:38+0400
 version: 1.1.1
 @end
 
@@ -46,10 +46,6 @@ version: 1.1.1
 
 ** (x) {** 20 May 2024}[Sixth meeting]
 
-** (-) (Try out) --> (Implement) -simple- example with (full system) --> (1D Drone Sim)
-*** (x) Design {* 1D Drone System}[the system]
-*** (-) Develop the secure state estimator
-
 ** (x) {** 3 June 2024}[Seventh meeting]
    /SCHEDULED:/ {@ Monday 3 June 2024} 
 
@@ -57,11 +53,26 @@ version: 1.1.1
 
 ** (x) {** 1 July 2024}[Eighth meeting]
 
-** (-) Provide data as `.csv` files for Xiao Tan
+** (x) {** 8 July 2024}[Ninth meeting]
+
+** (x) Provide data as `.csv` files for Xiao Tan
 *** (x) 1x Velocity controlled with 50Hz Input
 *** (x) 1x Velocity controlled with 20Hz Input
+
+** (-) (Try out) --> (Implement) -simple- example with (full system) --> (1D Drone Sim)
+*** (x) Design {* 1D Drone System}[the system]
+*** (-) Develop the secure state estimator
+**** (-) Set EKF (125Hz) to 20Hz (Downsample the EKF output stream for more info)
+**** (-) Copy over the code from Xiao Tan's GitHub
+*** (-) Get a minimum viable demo of SSR
+    /SCHEDULED:/ {@ Wednesday 31 July 2024}
+
+** (-) Utilise a continuous function for acceleration input
 *** (-) 1x Acceleration controlled with 50Hz Input
 *** (-) 1x Acceleration controlled with 20Hz Input
+
+** ( ) Tenth meeting
+   /SCHEDULED:/ {@ Thursday 18 July 2024}
 
    ===
 
@@ -279,6 +290,32 @@ version: 1.1.1
    ===
 
 * Meetings
+
+** 8 July 2024
+   #tag label
+   Xiao Tan / Junior Sundar -- Syncup
+*** Attendees
+
+    | Xiao Tan
+    | Junior Sundar
+
+*** Goals
+
+    - Catching up.
+
+*** Agenda
+
+    - Figure out a better way to perform acceleration based control.
+
+*** Minutes
+
+    - Implement acceleration as a sinusoid or continuous function.
+
+*** Action Items
+
+**** Downsample the EKF output stream
+     - Set the last value as the output at the end of 20Hz mark.
+     - Try running average?
 
 ** 1 July 2024
    #tag label
