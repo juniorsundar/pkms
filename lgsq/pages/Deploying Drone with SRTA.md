@@ -48,4 +48,29 @@
 				  CLOCK: [2024-07-04 Thu 21:07:50]--[2024-07-04 Thu 21:07:51] =>  00:00:01
 				  :END:
 			- DONE Register PMC to download containers for a more permanent set-up.
-	- TODO Verify that the PMC is able to communicate in Mesh
+	- DONE Setting up Mesh Network
+	  :LOGBOOK:
+	  CLOCK: [2024-07-09 Tue 21:12:49]--[2024-07-09 Tue 21:12:50] =>  00:00:01
+	  :END:
+		- DONE Connect Comms Module 1.5 to Internet Router
+		  :LOGBOOK:
+		  CLOCK: [2024-07-09 Tue 21:12:44]--[2024-07-09 Tue 21:12:45] =>  00:00:01
+		  :END:
+		- DONE Verify that the PMC connects to the Mesh Network
+		  :LOGBOOK:
+		  CLOCK: [2024-07-09 Tue 21:12:47]--[2024-07-09 Tue 21:12:48] =>  00:00:01
+		  :END:
+	- DOING Setup drone with BKC 12.1
+	  :LOGBOOK:
+	  CLOCK: [2024-07-09 Tue 21:12:52]
+	  :END:
+		- DONE Flash BKC 12.1 to SRTA drone
+		  :LOGBOOK:
+		  CLOCK: [2024-07-09 Tue 21:12:53]--[2024-07-09 Tue 21:12:53] =>  00:00:00
+		  :END:
+		- DOING Provision drone and install containers
+		  :LOGBOOK:
+		  CLOCK: [2024-07-09 Tue 21:12:54]
+		  :END:
+		- TODO Verify that drone connects to Mesh Network
+	- TODO Verify that the PMC, Drone and Mesh Network are functional
