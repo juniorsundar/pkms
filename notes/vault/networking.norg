@@ -1,0 +1,156 @@
+@document.meta
+title: Networking
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-07-08T22:52:20+0400
+updated: 2024-07-08T23:01:37+0400
+version: 1.1.1
+@end
+
+* Steps
+
+** Understanding Basic Concepts
+
+*** What is Networking?
+    Learn what computer networking is and why it’s important.
+
+*** Types of Networks
+    Understand different types of networks (e.g., LAN, WAN, MAN, PAN).
+
+*** Network Topologies
+    Familiarize yourself with basic network topologies (e.g., star, mesh, bus).
+
+** Learn Basic Networking Terms
+
+*** IP Addressing
+    Understand what an IP address is and the difference between IPv4 and IPv6.
+
+*** Subnetting
+    Basic understanding of subnet masks and how subnetting works.
+
+*** Protocols and Layers
+    Learn about key protocols such as, OSI, TCP/IP, HTTP/HTTPS, FTP, and DNS.
+
+** Study Networking Devices
+
+*** Routers and Switches
+    Learn what routers and switches are and their roles in networking.
+
+*** Modems and Access Points
+    Understand how modems and access points work.
+
+*** Firewalls
+    Basic understanding of firewalls and network security.
+
+** Hands-On Practice
+
+*** Set Up a Home Network
+    Experiment with your home network, configure routers, and manage your
+    Wi-Fi.
+
+*** Networking Simulators
+    Tools like Cisco Packet Tracer and GNS3 allow you to simulate networking
+    environments.
+
+*** Online Labs
+    Websites like NetSimK and LabSim offer virtual labs for practice.
+
+** Get Certified
+
+*** Entry-Level Certifications
+    Start with certifications like CompTIA Network+, Cisco CCNA, or Juniper
+    JNCIA-Junos.
+
+    ===
+
+* What is Networking?
+
+** Definition
+
+   - Practice of connecting computers and other devices together to:
+      -- share resources,
+      -- exchange data, and
+      -- communicate with each other.
+   - Foundation of modern communication and data exchange.
+
+** Key Concepts
+
+   - *Node* - Any device connected to a network.
+   - *Links* - Physical or logical connections between notes (wired or
+     wireless).
+   - *Data Transfer* - Sending and receiving data between nodes over a network.
+
+** Importance
+
+   - Resource sharing
+   - Communication
+   - Data exchange
+   - Scalability
+   - Efficiency
+
+   ===
+
+* Types of Networks
+
+** Local Area Networks (LAN)
+
+   - Networks that cover a small geographic area.
+   - Eg: Single building, campus, etc.
+   - Typically used for connecting PCs and workstations to share resources like
+     printers and file servers
+
+** Wide Area Networks (WAN)
+
+   - Networks that cover a large geographic area.
+   - Eg: City, country, globally, etc.
+   - Internet is largest example of a WAN
+
+** Metropolitan Area Network (MAN)
+
+   - Network somewhere between LAN and WAN.
+   - Eg: City-wide or large campus.
+
+** Personal Area Network (PAN)
+
+   - Small networks used for connecting device around individual person.
+   - Eg: ranging few meters, single room, etc.
+   - Bluetooth connections and old-school infrared.
+
+   ===
+
+* Network Topologies
+
+** Star Topology
+
+   - All nodes connected to a central hub or switch.
+   - Easy to manage, but vulnerable if central hub fails.
+
+** Mesh Topology
+
+   - Every node connected to every other node.
+   - Provides high redundancy and reliability but is complex and expensive to implement.
+
+** Bus Topology
+
+   - All nodes connected to a single central cable or bus.
+   - Simple and cost-effective but inefficient and prone to collisions.
+
+** Ring Topology
+
+   - Nodes connected in a circular fashion, with each node having exactly two neighbours.
+   - Data travels in one direction.
+   - Efficient but suffers if single connection fails.
+
+   ===
+
+* {:$/vault/ip:}[IP Address]
+
+* Subnetting
+
+** Definition
+
+   - Network inside a network.
+   - Subnets make networks more efficient since network traffic can travel a
+     shorter distance without passing through unnecessary {:$/vault/routers:}[Routers] to reach
+     its destination.

@@ -1,0 +1,73 @@
+@document.meta
+title: 8 July 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-07-08T23:03:33+0400
+version: 1.1.1
+@end
+
+* Journal
+
+  - Attended {** Discussion about BKC 12.1}[Discussion about BKC 12.1].
+  - Attended {:$/journal/task-box/caltech-tii-collaboration:** 8 July 2024}[Xiao Tan / Junior Sundar -- Syncup].
+  - Worked on {:$/vault/networking:}[Networking]
+     -- {:$/vault/internet-protocol:}[Internet Protocol]
+     -- {:$/vault/dhcp:}[Dynamic Host Configuration Protocol]
+     -- {:$/vault/slaac:}[Stateless Address Autoconfiguration]
+     -- {:$/vault/routers:}[Routers]
+
+  ===
+___
+
+* Meetings
+
+** Discussion about BKC 12.1
+
+*** Attendees
+
+    | Jorge Henriques
+    | Junior Sundar
+
+*** Goal
+
+    - Demystify BKC 12.1
+
+*** Agenda
+
+    - {**** Hardware}[Hardware]
+    - {**** Software}[Software]
+
+*** Minutes
+
+**** Hardware
+     - What changes need to be made in the drone?
+        -- Anticipated: Power distribution board -> *Same with splitter*
+        -- Necessary: Cabling -> *for Siyi you need the ethernet*
+     - Do we need any additional devices to set up the ecosystem?
+        -- Mesh network requirements? -> *Comms Module on Router*
+        -- Verify if the network configurations are correct! -> *Same as instructions*
+**** Software
+     - Comms Module:
+        -- Image on drone and PMC -> *Same*
+        -- Is there any additional configuration that needs to be done inside? -> *Just in PMC and Router*
+     - BKC 12.1 Release:
+        -- Access to release tag? -> *Available `feature/swarm-support-12.1`*
+        -- Changes in installation procedure? -> *No*
+     - Authentication:
+        -- Is provisioning the same? -> *Server*
+        -- What is NATS TLS "enforced" vs. "unavailable"? -> *Use UAE Setup*
+           --- {https://ssrc.atlassian.net/wiki/spaces/DRON/pages/949026896/BKC+12.1#Repository-Branches-(Temporary)%2F}[Check here]
+
+**** Rest
+     - You do need a CM connected to the Router providing internet.
+     - Only the PMC and router Bridge IP needs to be edited.
+     - NATS TLS -> follow the UAE installation instructions.
+     - For Weights-Attached -> Rocks in a Bag with Duct Tape and Zipties.
+
+
+     ===
+___
+
+{:$/journal/2024/07/07:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/07/09:}[next >]

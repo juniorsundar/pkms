@@ -1,5 +1,6 @@
 # Tasks
 	- DONE [#A] Set up GCS/PMC for drone control
+	  id:: 667c02ba-ca15-453c-a243-7e72e9607b6c
 	  :LOGBOOK:
 	  CLOCK: [2024-06-28 Fri 16:12:07]--[2024-07-04 Thu 21:55:27] =>  149:43:20
 	  :END:
@@ -27,6 +28,7 @@
 			  collapsed:: true
 				- ~~18 weeks lead time...~~ --> 2 days XD
 			- DONE Set up provisioning network/server
+			  id:: 667ea976-f51d-48b8-a787-aaa69a0a1c2b
 			  :LOGBOOK:
 			  CLOCK: [2024-07-01 Mon 14:09:41]--[2024-07-01 Mon 14:09:43] =>  00:00:02
 			  :END:
