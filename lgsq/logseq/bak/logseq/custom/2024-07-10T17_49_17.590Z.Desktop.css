@@ -1,4 +1,7 @@
 :root {
+  --ct-text-size: 32px;
+  
+  --ct-line-height: 1.6;
   --ls-font-family: CaskaydiaCove NFM;
 }
 
