@@ -60,17 +60,23 @@
 		  :LOGBOOK:
 		  CLOCK: [2024-07-09 Tue 21:12:47]--[2024-07-09 Tue 21:12:48] =>  00:00:01
 		  :END:
-	- DOING Setup drone with BKC 12.1
+	- DONE Setup drone with BKC 12.1
 	  :LOGBOOK:
-	  CLOCK: [2024-07-09 Tue 21:12:52]
+	  CLOCK: [2024-07-09 Tue 21:12:52]--[2024-07-10 Wed 23:05:06] =>  25:52:14
 	  :END:
 		- DONE Flash BKC 12.1 to SRTA drone
 		  :LOGBOOK:
 		  CLOCK: [2024-07-09 Tue 21:12:53]--[2024-07-09 Tue 21:12:53] =>  00:00:00
 		  :END:
-		- DOING Provision drone and install containers
+		- DONE Provision drone and install containers
 		  :LOGBOOK:
-		  CLOCK: [2024-07-09 Tue 21:12:54]
+		  CLOCK: [2024-07-09 Tue 21:12:54]--[2024-07-10 Wed 23:04:44] =>  25:51:50
 		  :END:
-		- TODO Verify that drone connects to Mesh Network
-	- TODO Verify that the PMC, Drone and Mesh Network are functional
+		- DONE Verify that drone connects to Mesh Network
+		  :LOGBOOK:
+		  CLOCK: [2024-07-10 Wed 23:04:45]--[2024-07-10 Wed 23:05:05] =>  00:00:20
+		  :END:
+	- DOING Verify that the PMC, Drone and Mesh Network are functional in tandem
+	  :LOGBOOK:
+	  CLOCK: [2024-07-10 Wed 23:05:13]
+	  :END:

@@ -1,6 +1,31 @@
 tag:: #MEETING
 
 - {{renderer :tocgen2}}
+- # 10 July 2024
+  collapsed:: true
+	- **Attendees**
+	  id:: 7575db9c-e78c-48c0-8942-ce69668675bc
+	  collapsed:: true
+		- SRTA-AD
+	- **Goal**
+	  collapsed:: true
+		- Progress update.
+	- **Agenda**
+	  collapsed:: true
+		- Provide update.
+		- GITEX demo needs.
+		- July demo needs.
+	- **Minutes**
+	  collapsed:: true
+		- PMC connectivity with drones is still WIP because the drone doesn't show up in the FMO.
+		- With artifactory removal, builds are broken.
+			- Containers must be linked in GitHub.
+			- Replace linkages to artifactory.
+			- Can be accomplished within the week.
+		- GITEX demo:
+			- Voice commands -> LLM -> Drone commands
+		- Command to drone?
+	- **Action Points**
 - # 3 July 2024
   id:: 6686d6ac-00cb-49fb-bdcc-001944f4d013
   collapsed:: true
