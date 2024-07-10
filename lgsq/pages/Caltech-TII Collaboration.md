@@ -1,5 +1,6 @@
 - {{renderer :tocgen2}}
 - # Tasks
+  collapsed:: true
 	- DONE [First meeting](((660f9803-86fb-4d27-8592-f471e3712eba)))
 	  :LOGBOOK:
 	  CLOCK: [2024-04-04 Thu 23:11:09]--[2024-04-15 Mon 13:16:47] =>  254:05:38
@@ -496,6 +497,7 @@
 		  collapsed:: true
 			- No meeting for next week. Set it for the week after.
 	- ## 6 May 2024
+	  id:: 66392067-cc32-4121-922f-0f072aa546e2
 	  collapsed:: true
 		- **Attendees**
 			- Xiao Tan
@@ -513,6 +515,7 @@
 			- ((663923ce-a39f-45de-b997-6c7b0cdc97c9))
 			- ((6639243a-3acc-4468-a10d-594e60b555ef))
 	- ## 2 May 2024
+	  id:: 66386c1a-c19b-46a9-b6ed-2469fe003da8
 	  collapsed:: true
 		- **Attendees**
 		  collapsed:: true
@@ -535,6 +538,7 @@
 			  CLOCK: [2024-04-04 Thu 23:04:14]
 			  :END:
 	- ## 22 April 2024
+	  id:: 66260755-1d06-44fc-a270-ca1cbec2c0e2
 	  collapsed:: true
 		- **Attendees**
 		  collapsed:: true
@@ -560,6 +564,7 @@
 			  CLOCK: [2024-04-04 Thu 23:04:14]
 			  :END:
 	- ## 18 April 2024
+	  id:: 66214ed0-8de1-4d80-aa69-b65f4e3be402
 	  collapsed:: true
 		- **Attendees**
 		  collapsed:: true
