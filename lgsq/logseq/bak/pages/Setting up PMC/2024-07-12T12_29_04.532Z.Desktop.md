@@ -1,6 +1,6 @@
 # Requirements
 	- Rugged Laptop - Dell Latitude 7330 Rugged Extreme with correct BIOS setting.
-	- Comms Module 1.5
+	- 2x Comms Module 1.5 (or Comms Sleeve 1.5)
 	- USB for etching Ghaf installation media
 	- IX-Industrial Ethernet Cable (Comms Module -> Rugged Laptop)
 	- XT30-Power Male Cable (Powering Comms Module)
@@ -9,59 +9,6 @@
 	- Laptop with TPM2.0 Security Chip (for Provisioning Server)
 	- Ethernet Switch (optional, unless the Provisioning Laptop has Wireless Hotspot Capability)
 	- 2x Ethernet Cables (optional, unless Provisioning Laptop has Wireless Hotspot Capability)
-- # Setting Up Provisioning Network/Server
-	- Refer to [Provisioning server setup](https://ssrc.atlassian.net/wiki/x/IQBFOQ).
-	- ## Generating Keys and Certificates
-		- ```bash
-		  dronsole certificates request-provisioning-ca -o certs --rsa <name>
-		  ```
-		- This should generate a `certs/` directory with:
-			- `<name>-root.cert.pem`
-			- `<name>.cert.pem`
-			- `<name>.key.pem`
-	- ## Configuring Provisioning Network/Server
-		- ```bash
-		  mkdir provisioning-server
-		  mv certs provisioning-server
-		  cd provisioning-server
-		  ```
-		- Download the right executable from: [tiiuae/provisioning-server](https://github.com/tiiuae/provisioning-server/releases/tag/v1.2.5).
-		- Rename the executable `provisioning-server-<os>-<arch>` -> `provisioning-server`. And then run `chmod +x provisioning-server`.
-		- Move `provisioning-server` executable into the `provisioning-server/` directory.
-		- Create a `.env` file in `provisioning-server/` directory:
-			- ```.env
-			  PROVISIONING_SERVER_ENABLE_MDNS=true
-			  PROVISIONING_SERVER_PORT=8080
-			  PROVISIONING_SERVER_NETWORK_INTERFACE=<the interface where the server is connected to>
-			  PROVISIONING_SERVER_PROVISIONING_OPTIONS_FLEET_MANAGEMENT_NATS_URL=nats://nats.airoplatform.com:4222
-			  PROVISIONING_SERVER_PROVISIONING_OPTIONS_TENANT_ID=UAE~Masdar
-			  PROVISIONING_SERVER_PROVISIONING_KEY_PATH=./certs/<name>.key.pem
-			  PROVISIONING_SERVER_PROVISIONING_ROOT_CERTIFICATE_PATH=./certs/<name>-root.cert.pem
-			  PROVISIONING_SERVER_PROVISIONING_CERTIFICATE_PATH=./certs/<name>.cert.pem
-			  PROVISIONING_SERVER_PROVISIONING_KEY_SOURCE=filesystem
-			  ```
-		- To run provisioning server, execute:
-			- ```bash
-			  sudo ./provisioning-server
-			  ```
-		- Additionally, connect the Provisioning Server to an Ethernet Switch without Internet connection.
-		- Set a static IP for the device in the Network Settings:
-			- IPv4 Method -> Manual
-			- IP: `169.254.156.7` <- Can be anything
-			- Netmask: `255.255.255.0`
-			- Gateway: `169.254.156.1`
-- # Setting up Wireless Mesh Network
-  id:: 66879ca1-0e9a-43dd-8b0c-df4fed084332
-	- A wireless network with internet connection is mandatory for setting up the PMC.
-	- All drones and PMC will be in this network, which will be the Mesh Network.
-	- #+BEGIN_IMPORTANT
-	  It is mandatory that the wireless network have the following IP format:
-	  `192.168.<MESH-SUBNET>.X`
-	  
-	  Optimally, it will not have any other devices apart from just the swarm components and PMC connected to it to avoid IP clashes.
-	  
-	  If this cannot be facilitated (possibly because of local networking issues), it is best to obtain a router with sim and manually set up the gateway.
-	  #+END_IMPORTANT
 - # Setting up Comms Module 1.5
 	- ## Flashing `.img`
 		- The image can be downloaded by running:
@@ -108,7 +55,7 @@
 				  MAC=00:11:22:33:44:55
 				  KEY=1234567890
 				  ESSID=operation_mesh // MAKE SURE THIS IS HERE
-				  FREQ=5200 // SET THIS TO A RANDOM FREQUENCY
+				  FREQ=5200 // SET THIS TO A RANDOM FREQUENCY (We use 5305)
 				  TXPOWER=30
 				  COUNTRY=US
 				  MESH_VIF=wlp1s0
@@ -134,7 +81,7 @@
 				    fi
 				    local ip_random
 				    ip_random="$(echo "$mesh_if_mac" | cut -b 16-17)"
-				    bridge_ip="192.168.<BRIDGE-SUBNET>.X"
+				    bridge_ip="192.168.<MESH-SUBNET>.X"
 				    # <BRIDGE-SUBNET> Must not be the same as <MESH-SUBNET> of
 				    # Internet gateway.
 				    # Example, if internet gateway is 192.168.80.1
@@ -144,6 +91,84 @@
 				    # legacy support
 				    br_lan_ip=$bridge_ip
 				  }
+				  ```
+				- #+BEGIN_IMPORTANT
+				  One Comms Module will be connected to the Internet gateway router and the other will be connected to the PMC.
+				  
+				  Both need to have unique IPv4 addresses.
+				  
+				  For this example, let us assume that the Internet gateway is `192.168.80.1`.
+				  
+				  In that case:
+				  Router Comms Bridge IP: `192.168.80.101`
+				  PMC Comms Bridge IP: `192.168.80.111`
+				  #+END_IMPORTANT
+			- Reboot!
+- # Setting Up Provisioning Network/Server
+	- Refer to [Provisioning server setup](https://ssrc.atlassian.net/wiki/x/IQBFOQ).
+	- ## Generating Keys and Certificates
+		- ```bash
+		  dronsole certificates request-provisioning-ca -o certs --rsa <name>
+		  ```
+		- This should generate a `certs/` directory with:
+			- `<name>-root.cert.pem`
+			- `<name>.cert.pem`
+			- `<name>.key.pem`
+	- ## Configuring Provisioning Network/Server
+		- ```bash
+		  mkdir provisioning-server
+		  mv certs provisioning-server
+		  cd provisioning-server
+		  ```
+		- Download the right executable from: [tiiuae/provisioning-server](https://github.com/tiiuae/provisioning-server/releases/tag/v1.2.5).
+		- Rename the executable `provisioning-server-<os>-<arch>` -> `provisioning-server`. And then run `chmod +x provisioning-server`.
+		- Move `provisioning-server` executable into the `provisioning-server/` directory.
+		- Create a `.env` file in `provisioning-server/` directory:
+			- ```.env
+			  PROVISIONING_SERVER_ENABLE_MDNS=true
+			  PROVISIONING_SERVER_PORT=8080
+			  PROVISIONING_SERVER_NETWORK_INTERFACE=<the interface where the server is connected to>
+			  PROVISIONING_SERVER_PROVISIONING_OPTIONS_FLEET_MANAGEMENT_NATS_URL=nats://nats.airoplatform.com:4222
+			  PROVISIONING_SERVER_PROVISIONING_OPTIONS_TENANT_ID=UAE~Masdar
+			  PROVISIONING_SERVER_PROVISIONING_KEY_PATH=./certs/<name>.key.pem
+			  PROVISIONING_SERVER_PROVISIONING_ROOT_CERTIFICATE_PATH=./certs/<name>-root.cert.pem
+			  PROVISIONING_SERVER_PROVISIONING_CERTIFICATE_PATH=./certs/<name>.cert.pem
+			  PROVISIONING_SERVER_PROVISIONING_KEY_SOURCE=filesystem
+			  ```
+		- To run provisioning server, execute:
+			- ```bash
+			  sudo ./provisioning-server
+			  ```
+		- Additionally, connect the Provisioning Server to an Ethernet Switch without Internet connection.
+		- Set a static IP for the device in the Network Settings:
+			- IPv4 Method -> Manual
+			- IP: `169.254.156.7` <- Can be anything
+			- Netmask: `255.255.255.0`
+			- Gateway: `169.254.156.1`
+- # Setting up Wireless Mesh Network
+  id:: 66879ca1-0e9a-43dd-8b0c-df4fed084332
+	- ## Hardware Setup
+		- A wireless network with internet connection is mandatory for setting up the PMC.
+		- All drones and PMC will be in this network, which will be the Mesh Network.
+		- #+BEGIN_IMPORTANT
+		  It is mandatory that the Internet gateway have the following IP format:
+		  `192.168.<MESH-SUBNET>.1`
+		  
+		  Optimally, it will not have any other devices apart from just the swarm components and PMC connected to it to avoid IP clashes.
+		  
+		  If this cannot be facilitated (possibly because of local networking issues), it is best to obtain a router with sim and manually set up the gateway.
+		  #+END_IMPORTANT
+		- Obtain the IP of the Internet gateway. The example for this documentation will be: `192.168.80.1`.
+		- Connect a Comms Module to the Internet Router and turn it on.
+	- ## Verify Internet Connection
+		- Connect to the Comms debug port and attach a shell into it.
+		- After login, run `ping 8.8.8.8` to verify that there is Internet connection.
+		- **Case 1:** Works? Move on.
+		- **Case 2:** Doesn't work?
+			- First, check that `ping 192.168.80.1` (Internet Gateway) works. If this doesn't work, that means the connection to the Router isn't proper.
+			- If it works, then that means we need to create a default gateway for the `br-lan` interface:
+				- ```bash
+				  route add default gw 192.168.80.1 br-lan # REPLACE IP WITH GATEYWAY IP
 				  ```
 - # Installing Ghaf
 	- ## Create Installation Media
@@ -219,9 +244,6 @@
 			  ```
 	- ## What if There Isn't Automatic Internet Connection?
 	  id:: 66879d7f-5ecc-46c4-95d8-c2840950c717
-		- #+BEGIN_WARNING
-		  This is a crude solution.
-		  #+END_WARNING
 		- ### Diagnosing Issue
 			- `ssh` into the `netvm` of the PMC:
 				- ```bash
@@ -239,12 +261,17 @@
 				- Run `ping <br-lan ip>` from Comms Module.
 				- If successful, then they are connected.
 				- If not, then there is probably an issue with the physical connection -> Change cable or ensure it is plugged in fully.
-			- **Diagnosis 2:** Check if there is internet connection in Comms Module
+			- **Diagnosis 2:** Check if there Comms Module is connected to the Mesh Network.
 				- This is most common issue.
-				- Run `ping 8.8.8.8` from Comms Module.
-				- If successful, then there is internet on Comms Module, but it is not being bridged into the `br-lan` port. Skip to ((66878af8-5348-4a99-bbac-2530feebedcc)).
-				- If unsuccessful, then there isn't a Wi-Fi internet connection. Continue onwards.
-		- ### Steps to connect to WIFI (from Comms Module)
+				- Run `batctl n`. You should be able to see the Comms module connected to the Router here. If not:
+					- Reconfirm that all the Comms module are in the same frequency and subnet.
+					- Restart the Comms module and try again (don't forget that you will have to add default gateway to the Router Comms).
+				- ~~If successful, then there is internet on Comms Module, but it is not being bridged into the `br-lan` port. Skip to ((66878af8-5348-4a99-bbac-2530feebedcc)).~~
+				- ~~If unsuccessful, then there isn't a Wi-Fi internet connection. Continue onwards.~~
+			- With this, you should be able to `ping 8.8.8.8` from PMC and receive internet connection.
+			- Run `journalctl -f -u fmo-dci.service` from docker vm to reinitialise container downloads.
+		- ### Steps to connect to WIFI (from Comms Module) [Crude Process]
+			- If you want an internet connection come hell-or-high-water, there is a work around.
 			- We need to instantiate a wireless connection.
 			- For this, obtain the ESSID and Password for the Wireless Mesh network with internet connection.
 			- In the Comms Module run:
@@ -268,7 +295,7 @@
 				  # obtained from Router IP/Gateway
 				  ```
 			- Run `ping 8.8.8.8` from Comms Module. It should now be working
-		- ### Forwarding Connection -> `give_internet.sh`
+		- ### Forwarding Connection -> `give_internet.sh` [Crude Process]
 		  id:: 66878af8-5348-4a99-bbac-2530feebedcc
 			- The gist of the connection is that the Internet connection from the `wlan0` port is brided to the `br-lan` port, which makes it available in the PMC.
 			- But, for whatever reason, this isn't happening. We created a crude solution that can recreate this.
@@ -289,3 +316,12 @@
 				- This can be automated with a `give_internet.sh`.
 			- With this, you should be able to `ping 8.8.8.8` from PMC and receive internet connection.
 			- Run `journalctl -f -u fmo-dci.service` from docker vm to reinitialise container downloads.
+- # IP Allocation
+	- In order to avoid IP conflicts. It is best to plan it out beforehand.
+	- The strategy we are going with is as follows:
+		- Internet Gateway: `192.168.80.1`
+			- Internet Gateway Mesh Comm: `192.168.80.101`
+		- PMC: `192.168.80.121`
+			- Internet Gateway Mesh Comm: `192.168.80.111`
+		- Drone: `192.168.80.21`
+			- Internet Gateway Mesh Comm: `192.168.80.11`

@@ -107,13 +107,13 @@
 	  :LOGBOOK:
 	  CLOCK: [2024-07-04 Thu 09:18:24]
 	  :END:
-		- DOING 1x Velocity controlled with 50Hz Input
+		- DONE 1x Velocity controlled with 50Hz Input
 		  :LOGBOOK:
-		  CLOCK: [2024-07-04 Thu 09:18:25]
+		  CLOCK: [2024-07-04 Thu 09:18:25]--[2024-07-05 Fri 18:28:15] =>  33:09:50
 		  :END:
-		- DOING 1x Velocity controlled with 20Hz Input
+		- DONE 1x Velocity controlled with 20Hz Input
 		  :LOGBOOK:
-		  CLOCK: [2024-07-04 Thu 09:18:25]
+		  CLOCK: [2024-07-04 Thu 09:18:25]--[2024-07-05 Fri 18:28:15] =>  33:09:50
 		  :END:
 		- DOING 1x Acceleration controlled with 50Hz Input
 		  :LOGBOOK:

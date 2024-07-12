@@ -88,7 +88,43 @@
 		- Efficient but suffers if single connection fails.
 - # [IP Address]([[Internet Protocol]])
 - # Subnetting
+  id:: 668cee9b-b74f-413f-9b42-9c702722c972
 	- ## Definition
 		- Network inside a network.
 		- Subnets make networks more efficient since network traffic can travel a shorter distance without passing through unnecessary [[Routers]] to reach its destination.
-		-
+	- ## Classless Inter-Domain Routing (CIDR)
+	  id:: 668cee9b-9774-4eea-98f0-98c8adfab309
+		- ### Definition
+			- Method of allocating IP addresses and IP routing that improves efficiency of IP address distribution.
+		- ### Key Concepts and Features
+			- **Variable-Length Subnet Masking (VLSM):** Allows for subnet masks of various length, meaning IP addresses can be assigned according needs of networks.
+			- **CIDR Notation:** `A.B.C.D/E` --> `A.B.C.D` is IP Address and `E` is number of bits in network prefix.
+			- **Aggregation:** Multiple IP addresses can be combined into a single routing entry. Reduces size of routing tables in routers.
+		- ### Example
+			- Start with network block: `192.168.1.0/24`.
+			- Lets say we need *4 subnets*.
+			- New Subnet Mask = Original Subnet Mask + $\log_{2}$(Number of Subnets)
+				- New Subnet Mask = 24 + $\log_{2}$(4)
+				- New Subnet Mask = 26
+			- Dividing network block:
+				- For a `26` subnet mask, first `26` bits are for network, remaining are for host addresses.
+				- In IPv4 recollect that there are [32-bits](((668cee9b-ff62-495a-80d3-4755a484102a))) per network address, that means for a `/26` subnet there are 2$^{(32-26)}$ = 64 IP addresses per subnet.
+				- Each subnet with have 64 addresses of which 1 is for network and other is for broadcast (meaning 62 usable addresses).
+			- Subnets:
+				- Subnet 1: `192.168.1.0/26`
+					- Network address: `192.168.1.0`
+					- Usable IP range: `192.168.1.1` to `192.168.1.62`
+					- Broadcast address: `192.168.1.63`
+				- Subnet 2: `192.168.1.64/26`
+					- Network address: `192.168.1.64`
+					- Usable IP range: `192.168.1.65` to `192.168.1.126`
+					- Broadcast address: `192.168.1.127`
+				- Subnet 3: `192.168.1.128/26`
+					- Network address: `192.168.1.128`
+					- Usable IP range: `192.168.1.129` to `192.168.1.190`
+					- Broadcast address: `192.168.1.191`
+				- Subnet 4: `192.168.1.192/26`
+					- Network address: `192.168.1.192`
+					- Usable IP range: `192.168.1.193` to `192.168.1.254`
+					- Broadcast address: `192.168.1.255`
+-

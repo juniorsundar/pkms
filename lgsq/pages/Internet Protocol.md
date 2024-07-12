@@ -5,6 +5,7 @@
 		- Allows devices to locate and communicate with each other over Internet or a local network.
 	- ## Types of IP Addresses
 		- ### IPv4
+		  id:: 668cee9b-ff62-495a-80d3-4755a484102a
 			- **Format** - 32-bit numbers, usually written in decimal format as four octets separated by periods.
 			- **Range** - Can provide approximately 4.3 billion unique addresses.
 			- **Configuration** - Can be configured manually (static IP) or automatically (dynamic IP) using [[Dynamic Host Configuration Protocol]] (DHCP)
@@ -93,8 +94,7 @@
 			- **Network Portion**: 192.168.1
 			- **Host Portion**: .1
 	- ## What Does the /24 Mean?
-		- Is a form of *Classless Inter-Domain Routing (CIDR)* notation, which indicates the length of the subnet mask.
+		- Is a form of *[](((668cee9b-9774-4eea-98f0-98c8adfab309)))* notation, which indicates the length of the subnet mask.
 		- Specifies how many bits of the IP address are used for the network portion.
-		- In this case, /24 means that the first 24 bits of the subnet mask are 1s (i.e. 255.255.255.0).
-	- ## Network Class
-		-
+		- In this case, /24 means that the first 24 bits of the subnet mask are 1s (i.e. 255.255.255.0 or 11111111.11111111.11111111.00000000).
+		- Carried over to ((668cee9b-b74f-413f-9b42-9c702722c972)).
