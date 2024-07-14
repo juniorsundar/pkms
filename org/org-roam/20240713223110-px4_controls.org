@@ -5,100 +5,100 @@
 
 * Flight Stack
 
-  [[https://docs.px4.io/main/assets/PX4_High-Level_Flight-Stack.CZXi0y2Q.svg]]
+[[https://docs.px4.io/main/assets/PX4_High-Level_Flight-Stack.CZXi0y2Q.svg]]
 
-  Guidance + Navigation + Control Algorithms for autonomous drones.
+Guidance + Navigation + Control Algorithms for autonomous drones.
 
-  *Estimator* - Takes one or more sensor inputs, combines them, and computes
-  vehicle state.
+*Estimator* - Takes one or more sensor inputs, combines them, and computes
+vehicle state.
 
-  *Controller* - Takes setpoint and measurement/estimated state as input.
-  - It then adjusts value of process variable such that it matches setpoint.
-  - Output is a correction to eventually reach that setpoint.
-  - Position controller takes position setpoints, process variable is current estimated position, output is an attitude and thrust setpoint.
+*Controller* - Takes setpoint and measurement/estimated state as input.
+- It then adjusts value of process variable such that it matches setpoint.
+- Output is a correction to eventually reach that setpoint.
+- Position controller takes position setpoints, process variable is current estimated position, output is an attitude and thrust setpoint.
 
   *Mixer* - Takes force commands and translates them into individual motor commands (specific to vehicle type).
 
 * Offboard Control Mode
 
-  It may be possible to directly control the drone with [[https://docs.px4.io/main/en/flight_modes/offboard.html][Offboard Control]].
+It may be possible to directly control the drone with [[https://docs.px4.io/main/en/flight_modes/offboard.html][Offboard Control]].
 
-  Offboard mode is used for controlling vehicle movement and attitude, by setting:
+Offboard mode is used for controlling vehicle movement and attitude, by setting:
   - position,
   - velocity,
   - acceleration,
   - attitude,
   - attitude rates, or
   - thrust/torque setpoints.
-  
-  Requires 2 Hz "proof of life" signal or it will switch out of offboard mode after `COM_OF_LOSS_T` timeout.
 
-  In ROS 2, POL signal is through `OffboardControlMode` messages. Actual setpoint publish to uORB topics, like `TrajectorySetpoint`.
+    Requires 2 Hz "proof of life" signal or it will switch out of offboard mode after `COM_OF_LOSS_T` timeout.
+
+    In ROS 2, POL signal is through `OffboardControlMode` messages. Actual setpoint publish to uORB topics, like `TrajectorySetpoint`.
 
 ** [[https://github.com/PX4/PX4-Autopilot/blob/main/msg/OffboardControlMode.msg][OffboardControlMode]]
    
-   The fields are ordered in terms of priority => `position` takes precedence over `velocity` and later fields, `velocity` takes precedence over `acceleration`, and so on.
+The fields are ordered in terms of priority => `position` takes precedence over `velocity` and later fields, `velocity` takes precedence over `acceleration`, and so on.
 
-   | desired control quantity | required estimate | required message                                |
-   | ------------------------ | ----------------- | ----------------------------------------------- |
-   | position (NED)           | position          | TrajectorySetpoint                              |
-   | velocity (NED)           | velocity          | TrajectorySetpoint                              |
-   | acceleration (NED)       | velocity          | TrajectorySetpoint                              |
-   | attitude (FRD)           | None              | VehicleAttitudeSetpoint                         |
-   | body_rate (FRD)          | None              | VehicleRatesSetpoint                            |
-   | thrust and torque (FRD)  | None              | VehicleAttitudeSetpoint & VehicleTorqueSetpoint |
-   | direct motors and servos | None              | ActuatorMotors & ActuatorServos                 |
+| desired control quantity | required estimate | required message                                |
+| ------------------------ | ----------------- | ----------------------------------------------- |
+| position (NED)           | position          | TrajectorySetpoint                              |
+| velocity (NED)           | velocity          | TrajectorySetpoint                              |
+| acceleration (NED)       | velocity          | TrajectorySetpoint                              |
+| attitude (FRD)           | None              | VehicleAttitudeSetpoint                         |
+| body_rate (FRD)          | None              | VehicleRatesSetpoint                            |
+| thrust and torque (FRD)  | None              | VehicleAttitudeSetpoint & VehicleTorqueSetpoint |
+| direct motors and servos | None              | ActuatorMotors & ActuatorServos                 |
 
-** {https://github.com/PX4/PX4-Autopilot/blob/main/msg/TrajectorySetpoint.msg}[TrajectorySetpoint]
+** [[https://github.com/PX4/PX4-Autopilot/blob/main/msg/TrajectorySetpoint.msg][TrajectorySetpoint]]
 
-   Position setpoint (`position` different from `NaN`). Non-`NaN` values of
-   velocity and acceleration are used as feedforward terms for the inner loop
-   controllers.
+Position setpoint (`position` different from `NaN`). Non-`NaN` values of
+velocity and acceleration are used as feedforward terms for the inner loop
+controllers.
 
-   Velocity setpoint (`velocity` different from `NaN` and `position` set to
-   `NaN`). Non-`NaN` values acceleration are used as feedforward terms for the
-   inner loop controllers.
+Velocity setpoint (`velocity` different from `NaN` and `position` set to
+`NaN`). Non-`NaN` values acceleration are used as feedforward terms for the
+inner loop controllers.
 
-   Acceleration setpoint (`acceleration` different from `NaN` and `position`
-   and `velocity` set to `NaN`)
+Acceleration setpoint (`acceleration` different from `NaN` and `position`
+and `velocity` set to `NaN`)
 
-   All values in NED system at [m], [m/s] and [m/s^2] respectively.
+All values in NED system at [m], [m/s] and [m/s^2] respectively.
 
-** {https://github.com/PX4/PX4-Autopilot/blob/main/msg/VehicleAttitudeSetpoint.msg}[VehicleAttitudeSetpoint]
+** [[https://github.com/PX4/PX4-Autopilot/blob/main/msg/VehicleAttitudeSetpoint.msg][VehicleAttitudeSetpoint]]
 
-   quaternion `q_d` + thrust setpoint `thrust_body`. Non-`NaN` values of
-   `yaw_sp_move_rate` are used as feedforward terms expressed in Earth frame
-   and in [rad/s].
+quaternion `q_d` + thrust setpoint `thrust_body`. Non-`NaN` values of
+`yaw_sp_move_rate` are used as feedforward terms expressed in Earth frame
+and in [rad/s].
 
-   Quaternion represents rotation between body FRD (front, right, down) and NED
-   (north, east, down).
+Quaternion represents rotation between body FRD (front, right, down) and NED
+(north, east, down).
 
-   Thrust is in FRD and expressed as normalised [-1, 1] values.
+Thrust is in FRD and expressed as normalised [-1, 1] values.
 
-** {https://github.com/PX4/PX4-Autopilot/blob/main/msg/VehicleThrustSetpoint.msg}[VehicleThrustSetpoint] + {https://github.com/PX4/PX4-Autopilot/blob/main/msg/VehicleTorqueSetpoint.msg}[VehicleTorqueSetpoint]
+** [[https://github.com/PX4/PX4-Autopilot/blob/main/msg/VehicleThrustSetpoint.msg][VehicleThrustSetpoint]] + [[https://github.com/PX4/PX4-Autopilot/blob/main/msg/VehicleTorqueSetpoint.msg][VehicleTorqueSetpoint]]
 
-   `xyz` for thrust and `xyz` for torque.
+`xyz` for thrust and `xyz` for torque.
 
-   All the values are in the drone body FRD frame and normalized in [-1, 1].
+All the values are in the drone body FRD frame and normalized in [-1, 1].
 
-** {https://github.com/PX4/PX4-Autopilot/blob/main/msg/ActuatorMotors.msg}[ActuatorMotors] + {https://github.com/PX4/PX4-Autopilot/blob/main/msg/ActuatorServos.msg}[ActuatorServos]
+** [[https://github.com/PX4/PX4-Autopilot/blob/main/msg/ActuatorMotors.msg][ActuatorMotors]] + [[https://github.com/PX4/PX4-Autopilot/blob/main/msg/ActuatorServos.msg][ActuatorServos]]
 
-   All the values normalized in [-1, 1]. For outputs that do not support
-   negative values, negative entries map to `NaN`.
+All the values normalized in [-1, 1]. For outputs that do not support
+negative values, negative entries map to `NaN`.
 
-   `NaN` maps to disarmed.
+`NaN` maps to disarmed.
 
 * MAVLink vs ROS 2 Offboard Control
 
-  {https://youtu.be/3zRCIsq_MCE?feature=shared}[A ROS 2 Library and Interface for External PX4 Flight Modes]
+[[https://youtu.be/3zRCIsq_MCE?feature=shared][A ROS 2 Library and Interface for External PX4 Flight Modes]]
 
 ** Limitations of MAVLink method
 
-   - Only a single app can control vehicle.
-   - Requires MAVLink: hard to extend or access other data through this.
-   - Limited integration with failsafe state machine & prearm checks.
-   - Limited set of setpoint types.
-   - Cannot specify displayed mode name in the GCS.
+- Only a single app can control vehicle.
+- Requires MAVLink: hard to extend or access other data through this.
+- Limited integration with failsafe state machine & prearm checks.
+- Limited set of setpoint types.
+- Cannot specify displayed mode name in the GCS.
 
 ** Modes
 
