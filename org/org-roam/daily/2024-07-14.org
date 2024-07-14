@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID: e9f9b56c-66f6-4894-ba77-1fc85f3b24d1
+:END:
+#+TITLE: 2024-07-14
+
+[[id:74f7e9e9-1ab4-4a13-b7cb-01a96e9235b4][PX4]]

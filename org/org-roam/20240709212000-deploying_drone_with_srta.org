@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       6df40f95-a1ac-4ae9-9fac-7610c9c1c3f5
+:END:
+#+title: Deploying Drone with SRTA
+
+* Tasks
+** DONE [#A] Set up GCS/PMC for drone control [100%]
+*** DONE Setting up GS and Fog
+**** DONE Get documentation to set it up
+**** DONE Source a second upXtreme device for fog/groundstation role
+**** DONE Set up GS role
+**** CANCELLED Set up Fog role
+*** DONE [[id:578650c0-143a-4cce-8082-a7d5a025cf2a][Setting up PMC]] 
+**** DONE Obtain rugged laptop
+18 weeks lead time... --> 2 days XD
+**** DONE Set up provisioning network/server
+**** DONE Set up mesh network
+***** DONE Assemble Comms Module 1.5
+***** DONE Configure Comms Module to interface with PMC
+**** DONE Register PMC to download containers for a more permanent set-up.
+** DONE Setting up Mesh Network
+*** DONE Connect Comms Module 1.5 to Internet Router
+*** DONE Verify that the PMC connects to the Mesh Network
+** DONE Setup drone with BKC 12.1
+DEADLINE: <2024-07-10 Wed>
+*** DONE Flash BKC 12.1 to SRTA drone
+*** DONE Provision drone and install containers
+*** DONE Verify that drone connects to Mesh Network
+** DONE Verify that the PMC, Drone and Mesh Network are functional
+DEADLINE: <2024-07-12 Fri>
