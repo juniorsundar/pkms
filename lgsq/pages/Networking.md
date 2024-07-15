@@ -127,4 +127,3 @@
 					- Network address: `192.168.1.192`
 					- Usable IP range: `192.168.1.193` to `192.168.1.254`
 					- Broadcast address: `192.168.1.255`
--

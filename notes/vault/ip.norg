@@ -1,0 +1,148 @@
+@document.meta
+title: Internet Protocol
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-07-15T21:01:55+0400
+updated: 2024-07-15T21:35:10+0400
+version: 1.1.1
+@end
+
+* Introduction
+** Definition
+   - Internet Protocol (IP) address is a unique identifier assigned to each
+     device connected to a network.
+   - Allows devices to locate and communicate with each other over Internet or
+     a local network.
+
+** Types of IP Addresses
+*** IPv4
+    - *Format* - 32-bit numbers, usually written in decimal format as four
+      octets separated by periods.
+    - *Range* - Can provide approximately 4.3 billion unique addresses.
+    - *Configuration* - Can be configured manually (static IP) or automatically
+      (dynamic IP) using {:$/vault/dhcp:}[Dynamic Host Configuration Protocol] (DHCP)
+    - *{* Headers}[Header] complexity* - Simpler header with 12 fields.
+    - *Security* - Security features optional and implemented through IPsec.
+    - *Eg* - `192.168.1.1`, `172.16.0.1`, `10.0.0.1`
+
+*** IPv6
+    - *Format* - 128-bit numbers, usually written in hexadecimal format as
+      eight groups of four hexadecimal digits separated by colons.
+    - *Range* - Can provide virtually unlimited number of unique addresses
+      (~340 undecillion).
+    - *Configuration* - Designed to support auto-configuration. Uses 
+      {:$/vault/slaac:}[Stateless Address Autoconfiguration] (SLAAC) and can also use DHCPv6.
+    - *{* Headers}[Header] complexity* - Complex with 8 fields, but includes additional
+      features like flow labeling and improved routing efficiency.
+    - *Security* - IPSec is mandatory. Provided built-in security features.
+    - *Eg* - `2001:0db8:85a3:0000:0000:8a2e:0370:7334`
+
+    ===
+
+* Headers
+** Definition
+   - Segment that precedes actual data (payload) being transmitted.
+   - Contains vital information needed for packet to be properly routed and
+     delivered to destination.
+
+*** Components
+    - *IP Header* - Contains information for routing the packet across the
+      network.
+    - *{:$/vault/tcp:}[TCP]/{:$/vault/udp:}[UDP] Header* - If packet uses TCP or UDP, additional headers are
+      included after IP header to manage data transmission.
+
+** Fields
+*** IPv4
+    - *Length*: 20-60 bytes (depending on options)
+    - *Fields*: 12 mandatory fields
+    - *Structure*:
+       -- /Version/: (4 bits) Indicates the IP version.
+       -- /IHL (Internet Header Length)/: (4 bits) Specifies the header length.
+       -- /Type of Service (ToS)/: (8 bits) Defines service quality parameters.
+       -- /Total Length/: (16 bits) Total length of the packet (header + data).
+       -- /Identification/: (16 bits) Used for packet fragmentation.
+       -- /Flags/: (3 bits) Control or identify fragments.
+       -- /Fragment Offset/: (13 bits) Position of a fragment in the original
+          packet.
+       -- /Time to Live (TTL)/: (8 bits) Limits the packet’s lifespan.
+       -- /Protocol/: (8 bits) Identifies the next level protocol (e.g., TCP,
+          UDP).
+       -- /Header Checksum/: (16 bits) Error-checking of the header.
+       -- /Source Address/: (32 bits) IP address of the sender.
+       -- /Destination Address/: (32 bits) IP address of the receiver.
+       -- /Options/: Variable length, used for additional functionality.
+
+*** IPv6
+    - *Length*: Fixed at 40 bytes (excluding extension headers)
+    - *Fields*: 8 mandatory fields
+    - *Structure*:
+       -- /Version/: (4 bits) Indicates the IP version.
+       -- /Traffic Class/: (8 bits) Similar to IPv4’s ToS, for QoS handling.
+       -- /Flow Label/: (20 bits) Used for identifying packet flows for QoS.
+       -- /Payload Length/: (16 bits) Length of the payload (data).
+       -- /Next Header/: (8 bits) Identifies the type of the next header (can
+          be another protocol or an extension header).
+       -- /Hop Limit/: (8 bits) Equivalent to IPv4’s TTL, limits packet
+          lifespan.
+       -- /Source Address/: (128 bits) IP address of the sender.
+       -- /Destination Address/: (128 bits) IP address of the receiver.
+    - *Structure (non-mandatory)*:
+       -- /Hop-by-Hop Options Header/: Carries information to be examined by
+          every router along the packet's path.
+       -- /Destination Options Header/: Carries information to be processed
+          only by the destination node(s).
+       -- /Routing Header/: Supports source routing, allowing specification of
+          intermediate nodes.
+       -- /Fragment Header/: Manages packet fragmentation, with fragmentation
+          done only by the source node.
+       -- /Authentication Header (AH)/: Ensures connectionless integrity and
+          data origin authentication; part of IPsec.
+       -- /Encapsulating Security Payload (ESP) Header/: Provides
+          confidentiality, integrity, authentication, and anti-replay; part of
+          IPsec.
+       -- /Mobility Header/: Supports mobile nodes in mobile IPv6, handling
+          binding updates and acknowledgments.
+       -- /No Next Header/: Indicates the end of the header chain, with payload
+          starting immediately after.
+
+** Importance
+   - *Routing* - Ensures packets reach correct destination.
+   - *Error Checking* - Detects and corrects errors in transmission.
+   - *Fragmentation* - Manages the division and reassembly of large packets.
+   - *Quality of Service* - Handles priority and quality control.
+   - *Connection Management* - Manages the establishment, maintenance and
+     termination of connections.
+
+   ===
+
+* Parts of an IP(v4) Address
+** Breakdown of an IP Address
+   - *Network Portion*: Identifies the network.
+      -- Determined by the subnet mask.
+      -- In `192.168.1.1/24`, the network portion is `192.168.1`.
+   - *Host Portion*: Identifies the specific device within the network.
+      -- In `192.168.1.1/24`, the host portion is `.1`.
+
+** Example: `192.168.1.1/24`
+   - *First Octet (192)*: Part of the network portion.
+   - *Second Octet (168)*: Part of the network portion.
+   - *Third Octet (1)*: Part of the network portion.
+   - *Fourth Octet (1)*: Part of the host portion.
+
+** Subnet Mask
+   - Subnet mask: `255.255.255.0`
+      -- Binary: `11111111.11111111.11111111.00000000`
+   - Defines the division between the network and host portions.
+   - In `192.168.1.1/24`:
+      -- *Network Portion*: `192.168.1`
+      -- *Host Portion*: `.1`
+
+** What Does the `/24` Mean?
+   - Is a form of *{:$/vault/networking:** Classless Inter-Domain Routing (CIDR)}[Classless Inter-Domain Routing (CIDR)]* notation, which
+     indicates the length of the subnet mask.
+   - Specifies how many bits of the IP address are used for the network
+     portion.
+   - In this case, /24 means that the first 24 bits of the subnet mask are 1s
+     (i.e. `255.255.255.0` or `11111111.11111111.11111111.00000000`).
+   - Carried over to {:$/vault/networking:* Subnetting}[Subnetting].

@@ -6,11 +6,11 @@ categories: [
     task
 ]
 created: 2024-06-10T15:18:58+0400
-updated: 2024-07-15T20:51:53+0400
+updated: 2024-07-15T20:52:29+0400
 version: 1.1.1
 @end
 
-* (=) Tasks
+* (_) Tasks
 
 ** (x) Create basic Python project repository
 

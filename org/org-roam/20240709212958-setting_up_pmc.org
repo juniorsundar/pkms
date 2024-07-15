@@ -4,430 +4,482 @@
 #+title: Setting up PMC
 
 * Table of Contents :toc:
-  - [[#requirements][Requirements]]
-  - [[#setting-up-comms-module-15][Setting up Comms Module 1.5]]
-    - [[#flashing-img][Flashing ~.img~]]
-    - [[#configuring-network][Configuring Network]]
-  - [[#setting-up-provisioning-networkserver][Setting Up Provisioning Network/Server]]
-    - [[#generating-keys-and-certificates][Generating Keys and Certificates]]
-    - [[#configuring-provisioning-networkserver][Configuring Provisioning Network/Server]]
-  - [[#setting-up-wireless-mesh-network][Setting up Wireless Mesh Network]]
-    - [[#hardware-setup][Hardware Setup]]
-    - [[#verify-internet-connection][Verify Internet Connection]]
-  - [[#installing-ghaf][Installing Ghaf]]
-    - [[#create-installation-media][Create Installation Media]]
-    - [[#flash-ghaf-to-pmc][Flash Ghaf to PMC]]
-    - [[#installation-process][Installation Process]]
-    - [[#provisioning][Provisioning]]
-  - [[#registration-and-pulling-containers][Registration and Pulling Containers]]
-    - [[#expected-result][Expected Result]]
-    - [[#what-if-there-isnt-automatic-internet-connection][What if There Isn't Automatic Internet Connection?]]
-  - [[#ip-allocation][IP Allocation]]
+- [[#requirements][Requirements]]
+- [[#setting-up-comms-module-15][Setting up Comms Module 1.5]]
+  - [[#flashing-img][Flashing ~.img~]]
+  - [[#configuring-network][Configuring Network]]
+- [[#setting-up-provisioning-networkserver][Setting Up Provisioning Network/Server]]
+  - [[#generating-keys-and-certificates][Generating Keys and Certificates]]
+  - [[#configuring-provisioning-networkserver][Configuring Provisioning Network/Server]]
+- [[#setting-up-wireless-mesh-network][Setting up Wireless Mesh Network]]
+  - [[#hardware-setup][Hardware Setup]]
+  - [[#verify-internet-connection][Verify Internet Connection]]
+- [[#installing-ghaf][Installing Ghaf]]
+  - [[#create-installation-media][Create Installation Media]]
+  - [[#flash-ghaf-to-pmc][Flash Ghaf to PMC]]
+  - [[#installation-process][Installation Process]]
+  - [[#provisioning][Provisioning]]
+- [[#registration-and-pulling-containers][Registration and Pulling Containers]]
+  - [[#expected-result][Expected Result]]
+  - [[#what-if-there-isnt-automatic-internet-connection][What if There Isn't Automatic Internet Connection?]]
+- [[#ip-allocation][IP Allocation]]
 
 * Requirements
-  - Rugged Laptop - Dell Latitude 7330 Rugged Extreme with correct BIOS setting.
-  - 2x Comms Module 1.5 (or Comms Sleeve 1.5) (A third for the drone)
-  - USB for etching Ghaf installation media
-  - IX-Industrial Ethernet Cable (Comms Module -> Rugged Laptop)
-  - XT30-Power Male Cable (Powering Comms Module)
-  - Micro USB -> USB A/C Cable (for Raspberry Pi)
-  - Router with Connection to the Internet (Read [[*Setting up Wireless Mesh Network][Setting up Wireless Mesh Network]] first!)
-  - Laptop with TPM2.0 Security Chip (for Provisioning Server)
-  - Ethernet Switch (optional, unless the Provisioning Laptop has Wireless Hotspot Capability)
-  - 2x Ethernet Cables (optional, unless Provisioning Laptop has Wireless Hotspot Capability)
+- Rugged Laptop - Dell Latitude 7330 Rugged Extreme with correct BIOS
+  setting.
+- 2x Comms Module 1.5 (or Comms Sleeve 1.5) (A third for the drone)
+- USB for etching Ghaf installation media
+- IX-Industrial Ethernet Cable (Comms Module -> Rugged Laptop)
+- XT30-Power Male Cable (Powering Comms Module)
+- Micro USB -> USB A/C Cable (for Raspberry Pi)
+- Router with Connection to the Internet (Read [[*Setting up Wireless Mesh Network][Setting up Wireless Mesh Network]] first!)
+- Laptop with TPM2.0 Security Chip (for Provisioning Server)
+- Ethernet Switch (optional, unless the Provisioning Laptop has
+  Wireless Hotspot Capability)
+- 2x Ethernet Cables (optional, unless Provisioning Laptop has
+  Wireless Hotspot Capability)
 
 * Setting up Comms Module 1.5
 ** Flashing ~.img~
-   - The image can be downloaded by running:
+- The image can be downloaded by running:
 
-   #+BEGIN_SRC bash
-   oras pull ghcr.io/tiiuae/drone-mesh_com:sha-588d0b9
-   #+END_SRC
+  #+BEGIN_SRC bash
+      oras pull ghcr.io/tiiuae/drone-mesh_com:sha-588d0b9
+  #+END_SRC
 
-   - Set the Comms Module to Flashing Mode (it is a switch).
-   - Connect the Micro USB to the Comms Sleeve in the Flashing Port (which is the port below the I/O for the Industrial Ethernet Cable).
-   - Build and run [[https://github.com/raspberrypi/usbboot][raspberrypi/usbboot]] to mount the Raspberry Pi as a filesystem:
+- Set the Comms Module to Flashing Mode (it is a switch).
+- Connect the Micro USB to the Comms Sleeve in the Flashing Port
+  (which is the port below the I/O for the Industrial Ethernet Cable).
+- Build and run [[https://github.com/raspberrypi/usbboot][raspberrypi/usbboot]] to mount the Raspberry Pi as a
+  filesystem:
 
-     #+BEGIN_SRC bash
-     git clone --recurse-submodules --shallow-submodules --depth=1 https://github.com/raspberrypi/usbboot
-     cd usbboot
-     make
-     sudo ./rpiboot
-     #+END_SRC
+  #+BEGIN_SRC bash
+      git clone --recurse-submodules --shallow-submodules --depth=1 https://github.com/raspberrypi/usbboot
+      cd usbboot
+      make
+      sudo ./rpiboot
+  #+END_SRC
 
-     - Install and run ~rpi-imager~:
+  - Install and run ~rpi-imager~:
 
-     #+BEGIN_SRC bash
-     sudo apt install rpi-imager
-     sudo rpi-imager  # Need to run as sudo
-     #+END_SRC
+  #+BEGIN_SRC bash
+      sudo apt install rpi-imager
+      sudo rpi-imager  # Need to run as sudo
+  #+END_SRC
 
-   - In "Choose OS" select the ~.img~ file downloaded above.
-   - In "Choose Storage" select the mounted Raspberry Pi.
-   - Click "Write" to flash the device.
-   - Once finished, de-power the Comms Module 1.5 and flip switch back to Normal Mode.
+- In "Choose OS" select the ~.img~ file downloaded above.
+- In "Choose Storage" select the mounted Raspberry Pi.
+- Click "Write" to flash the device.
+- Once finished, de-power the Comms Module 1.5 and flip switch back to Normal Mode.
 
 ** Configuring Network
-   - Some configuration needs to be done inside the Comms Module to ensure that it connects to the write Mesh Network, and so on.
-   - Connect the powered Comms Module to a computer through Micro USB and its debug port.
-   - Attach a ~tty~ shell to the device by running the following on the computer:
+- Some configuration needs to be done inside the Comms Module to ensure that it connects to the write Mesh Network, and so on.
+- Connect the powered Comms Module to a computer through Micro USB and its debug port.
+- Attach a ~tty~ shell to the device by running the following on the computer:
 
-     #+BEGIN_SRC bash
-     picocom /dev/ttyUSB0 -b 115200
-     # username: root
-     # password: root
-     #+END_SRC
-
-   - According to instructions for [[https://ssrc.atlassian.net/wiki/spaces/DRON/pages/949026896/BKC+12.1#CM-and-CSL-Configuration][CM and CSL Configuration]]:
-     - Set up the Mesh Network and frequency:
-
-     #+BEGIN_SRC bash
-     nano /opt/mesh_default.conf
-     #+END_SRC
-
-     #+BEGIN_SRC conf
-     # common
-     MSVERSION=nats  # 1.5, 1.0 or nats
-
-     # mesh shield 1.0/1.5 ( NOT FOR NATS )
-     MODE=mesh
-     IP=10.20.15.3
-     MASK=255.255.255.0
-     MAC=00:11:22:33:44:55
-     KEY=1234567890
-     ESSID=operation_mesh
-     FREQ=5200
-     TXPOWER=30
-     COUNTRY=US
-     MESH_VIF=wlp1s0
-     PHY=phy0
-     #CONCURRENCY configuration
-     #CONCURRENCY=ap+mesh
-     #MCC_CHANNEL=2412
-
-     # NATS communication setup (default is id0)
-     # Modes: mesh, ap+mesh_scc, ap+mesh_mcc, halow
-     id0_MODE=mesh
-     id0_IP=10.20.15.3
-     id0_MASK=255.255.255.0
-     id0_MAC=00:11:22:33:44:55
-     id0_KEY=1234567890
-     id0_ESSID=operation_mesh // MAKE SURE THIS IS HERE
-     id0_FREQ=5200 // MAKE SUER THIS IS HERE
-     id0_TXPOWER=30
-     id0_COUNTRY=US
-     id0_MESH_VIF=wlp1s0
-     id0_BATMAN_IFACE=bat0
-     id0_FREQ_MCC=2412
-     id0_ROUTING=batman-adv
-     id0_PRIORITY=high_throughput
-     id0_MPTCP=disable
-     id0_BRIDGE="br-lan bat0 eth1 eth0 lan1 usb0"
-     id0_SLAAC=""
-     #id1_  for 2nd radio
-     #id2_  for 3rd radio
-     ROLE=drone
-     #+END_SRC
-
-     - Configure bridge IP:
-
-     #+BEGIN_SRC bash
-     nano /opt/mesh-helper.sh
-     #+END_SRC
-
-     #+BEGIN_SRC sh
-     generate_lan_bridge_ip() {
-         local mesh_if_mac
-
-         bridge_name=$(echo "$bridge" | cut -d' ' -f1)
-
-         mesh_if_mac=$(cat /sys/class/net/"$id0_MESH_VIF"/address)
-         if [ -z "$mesh_if_mac" ]; then
-             echo "generate_lan_bridge_ip: MAC not found for id0_MESH_VIF! Configuration error?" > /dev/kmsg
-             mesh_if_mac="$(cat /sys/class/net/eth0/address)"
-         fi
-         local ip_random
-         ip_random="$(echo "$mesh_if_mac" | cut -b 16-17)"
-         bridge_ip="192.168.<MESH-SUBNET>.X"
-
-         # legacy support
-         br_lan_ip=$bridge_ip
-     }
-     #+END_SRC
-
-   #+begin_note
-   One Comms Module will be connected to the Internet gateway router and
-   the other will be connected to the PMC.
-
-   Both need to have unique IPv4 addresses.
-
-   For this example, let us assume that the Internet gateway is
-   ~192.168.80.1~.
-
-   In that case: Router Comms Bridge IP: ~192.168.80.101~ PMC Comms
-   Bridge IP: ~192.168.80.111~
-
-   Make sure that the Drone's Comms modules are also configured to be in
-   this mesh network. Repeat the above steps for the drone and assign it
-   a unique Bridge IP: ~192.168.80.211~
-   #+end_note
-
-   Reboot!
-
-* Setting Up Provisioning Network/Server
-  Refer to [[https://ssrc.atlassian.net/wiki/x/IQBFOQ][Provisioning server setup]].
-
-** Generating Keys and Certificates
-   #+BEGIN_SRC bash
-   dronsole certificates request-provisioning-ca -o certs --rsa <name>
-   #+END_SRC
-
-   - This should generate a ~certs/~ directory with:
-     - ~<name>-root.cert.pem~
-     - ~<name>.cert.pem~
-     - ~<name>.key.pem~
-
-** Configuring Provisioning Network/Server
-   #+BEGIN_SRC bash
-   mkdir provisioning-server
-   mv certs provisioning-server
-   cd provisioning-server
-   #+END_SRC
-
-   - Download the v1.2.8 release from [[https://github.com/tiiuae/provisioning-server/releases/tag/v1.2.8][tiiuae/provisioning-server]] and build and install it.
-   - Create a ~.env~ file in ~provisioning-server/~ directory:
-
-   #+BEGIN_SRC env
-   PROVISIONING_SERVER_ENABLE_MDNS=true
-   PROVISIONING_SERVER_PORT=8080
-   PROVISIONING_SERVER_NETWORK_INTERFACE=<the interface where the server is connected to>
-   PROVISIONING_SERVER_PROVISIONING_OPTIONS_FLEET_MANAGEMENT_NATS_URL=nats://nats.airoplatform.com:4222
-   PROVISIONING_SERVER_PROVISIONING_OPTIONS_TENANT_ID=UAE~Masdar
-   PROVISIONING_SERVER_PROVISIONING_KEY_PATH=./certs/<name>.key.pem
-   PROVISIONING_SERVER_PROVISIONING_ROOT_CERTIFICATE_PATH=./certs/<name>-root.cert.pem
-   PROVISIONING_SERVER_PROVISIONING_CERTIFICATE_PATH=./certs/<name>.cert.pem
-   PROVISIONING_SERVER_PROVISIONING_KEY_SOURCE=filesystem
-   #+END_SRC
-
-   - To run provisioning server, execute:
-
-   #+BEGIN_SRC bash
-   sudo ./provisioning-server
-   #+END_SRC
-
-   - Additionally, connect the Provisioning Server to an Ethernet Switch *without* Internet connection.
-   - Set a static IP for the device in the Network Settings:
-     - IPv4 Method -> Manual
-     - IP: ~169.254.156.7~ <- Can be anything
-     - Netmask: ~255.255.255.0~
-     - Gateway: ~169.254.156.1~
-   - If the device is a laptop that supports wireless hotspot, turn that on.
-
-* Setting up Wireless Mesh Network
-** Hardware Setup
-   - A wireless network with internet connection is mandatory for setting up the PMC.
-   - All drones and PMC will be in this network, which will be the Mesh Network.
-
-   #+BEGIN_QUOTE
-   It is mandatory that the Internet gateway have the following IP format: ~192.168.<MESH-SUBNET>.1~
-
-   Optimally, it will not have any other devices apart from just the swarm components and PMC connected to it to avoid IP clashes.
-
-   If this cannot be facilitated (possibly because of local networking issues), it is best to obtain a router with sim and manually set up the gateway.
-   #+END_QUOTE
-
-   - Obtain the IP of the Internet gateway. The example for this documentation will be: ~192.168.80.1~.
-   - Connect a Comms Module to the Internet Router and turn it on.
-
-** Verify Internet Connection
-   - Connect to the Comms debug port and attach a shell into it.
-   - After login, run ~ping 8.8.8.8~ to verify that there is Internet
-   connection.
-   - *Case 1:* Works? Move on.
-   - *Case 2:* Doesn't work?
-     - First, check that ~ping 192.168.80.1~ (Internet Gateway) works. If this doesn't work, that means the connection to the Router isn't proper.
-     - If it works, then that means we need to create a default gateway for the ~br-lan~ interface:
-
-   #+BEGIN_SRC bash
-   route add default gw 192.168.80.1 br-lan # REPLACE IP WITH GATEYWAY IP
-   #+END_SRC
-
-* Installing Ghaf
-** Create Installation Media
-   - You can download the Ghaf image from this [[https://artifactory.ssrcdevops.tii.ae/ui/native/ssrcdevops-demo/FR/FMO-OS_inst_0.1.5b%2BRA_v0.8.4.iso][link]].
-   - There are many ways to create installation media with this ~.iso~:
-     - Software like balenaEtcher
-     #+BEGIN_SRC bash
-     sudo dd if=./<filename>.iso of=/dev/sdd bs=4M conv=fsync status=progress
-     #+END_SRC
-     - etc.
-
-** Flash Ghaf to PMC
-   - A pre-requisite step is to set up BIOS of the Rugged Laptop. Since I don't have access to that Confluence page, I cannot link it.
-   - But if you have access to Secure Comms Confluence you can search: "Rugged Laptop as GCS BIOS" and find the right page.
-   - Plug the USB device with the boot image into the switched-off Rugged Laptop.
-   - When turning on the Rugged Laptop, at BIOS splash screen (when you see the DELL logo) spam press ~F12~ so that it opens the ~One-Time Boot Settings~ page. Select the USB device to boot into.
-
-** Installation Process
-   - Click the first entry on the NixOS selection screen.
-   - At this point, it will ask to connect to provisioning network:
-     - If the provisioning laptop has Wi-Fi Hotspot capabilities, turn it on (while switching off Internet access). Connect to that.
-     - Alternatively, open a temporary Wi-Fi Hotspot on your phone and use that to connect.
-     - Optimally, you will want to use this: [[https://github.com/tiiuae/provisioning-server/tree/main/deployment/GL-AR300M][GL-AR300M]].
-   - So if you have the Provisioning Router set-up then just go with that.
-   - Select ~dell-latitude-7330-laptop-debug~ (or ~7230-tablet~ if you're using a Rugged Tablet).
-   - Select ~nvme0n1~ to install Ghaf.
-   - For destination system IP address and gateway:
-     -- IP: ~192.168.<MESH-SUBNET>.Y/24~ -> ~<MESH-SUBNET>~ same as in the Comms Module, and the ~Y~ value must not be the same as the Comms Module's (unique).
-     -- Gateway: ~192.168.<MESH-SUBNET>.1~
-     -- In this example, it is ~192.168.80.121/24~ and ~192.168.80.1~ respectively.
-
-** Provisioning
-*** via Wireless
-    - If you are connected to the Provisioning Laptop through Hotspot or to the Provisioning Router, select ~y~ for this step.
-    - Since we enabled ~mDNS~ in the Provisioning Server ~.env~, it will automatically detect the server, and things should progress without issue.
-    - Note that an error will be thrown after: ~INFO: Starting device registration~.
-    - This is expected because we don't have Internet connection for the device to receive its ~docker-compose.yaml~ and ~PAT.pat~ after registration.
-    - Select ~reboot~ and remove the USB device.
-
-*** via Switch
-    - More often than not, the Wireless method won't work. Do not fret.
-    - Connect the Rugged Laptop via Ethernet to the switch that you previously connected the Provisioning Laptop.
-    - Select ~N~ for the ~mDNS discovery?~.
-    - It will now ask you to fill in the IP and the port for the Provisioning Server:
-      - IP: ~169.254.156.7~ <- Look back at the server's static IP
-      - Port: ~8080~ <- This is defined in the ~.env~
-      - The rest should process as above: The provisioning will stop at device registration, after which remove the USB and reboot device.
-
-*** Nothing Works?
-    - The problem is at the Provisioning Server setup.
-    - Ensure that the keys are working. Are they up to date? Maybe regenerate new ones?
-    - Is the IP set up correctly?
-    - Does the Laptop support setting up a server like this?
-    - Sometimes, turning it off and on again works...
-
-* Registration and Pulling Containers
-** Expected Result
-   - Upon reboot and connecting the Comms Module 1.5, the Rugged Laptop should automatically connect to the internet.
-   - This can be verified with ~ping 8.8.8.8~ (if this doesn't work, then skip directly to [[What if There Isn't Automatic Internet Connection?]]).
-   - Further verification can be done by:
-
-     #+BEGIN_SRC bash
-     ssh 192.168.101.11 # docker vm
-     # username: ghaf
-     # password: ghaf
-     #+END_SRC
-
-     #+BEGIN_SRC bash
-     # from within docker vm
-     ls /var/lib/fogdata
-     # output should contain:
-     # certs/
-     # hostname
-     # ip-address
-     # docker-compose.yml (FROM REGISTRATION)
-     # PAT.pat (FROM REGISTRATION)
-     #+END_SRC
-
-     - If all the files and folders are present, then restart the container downloading process:
-
-     #+BEGIN_SRC bash
-     # from within docker vm
-     journalctl -f -u fmo-dci.service
-     #+END_SRC
-
-** What if There Isn't Automatic Internet Connection?
-*** Diagnosing Issue
-    - ~ssh~ into the ~netvm~ of the PMC:
-
-      #+BEGIN_SRC bash
-      ssh 192.168.101.1
-      #+END_SRC
-
-      - Connect the Micro USB cable to the Debug port of the Comms Module and attach a shell to it from the connected computer:
-
-    #+BEGIN_SRC bash
+#+BEGIN_SRC bash
     picocom /dev/ttyUSB0 -b 115200
     # username: root
     # password: root
+#+END_SRC
+
+- According to instructions for [[https://ssrc.atlassian.net/wiki/spaces/DRON/pages/949026896/BKC+12.1#CM-and-CSL-Configuration][CM and CSL Configuration]]:
+  - Set up the Mesh Network and frequency:
+
+#+BEGIN_SRC bash
+    nano /opt/mesh_default.conf
+#+END_SRC
+
+#+BEGIN_SRC conf
+    # common
+    MSVERSION=nats  # 1.5, 1.0 or nats
+
+    # mesh shield 1.0/1.5 ( NOT FOR NATS )
+    MODE=mesh
+    IP=10.20.15.3
+    MASK=255.255.255.0
+    MAC=00:11:22:33:44:55
+    KEY=1234567890
+    ESSID=operation_mesh
+    FREQ=5200
+    TXPOWER=30
+    COUNTRY=US
+    MESH_VIF=wlp1s0
+    PHY=phy0
+    #CONCURRENCY configuration
+    #CONCURRENCY=ap+mesh
+    #MCC_CHANNEL=2412
+
+    # NATS communication setup (default is id0)
+    # Modes: mesh, ap+mesh_scc, ap+mesh_mcc, halow
+    id0_MODE=mesh
+    id0_IP=10.20.15.3
+    id0_MASK=255.255.255.0
+    id0_MAC=00:11:22:33:44:55
+    id0_KEY=1234567890
+    id0_ESSID=operation_mesh // MAKE SURE THIS IS HERE
+    id0_FREQ=5200 // MAKE SUER THIS IS HERE
+    id0_TXPOWER=30
+    id0_COUNTRY=US
+    id0_MESH_VIF=wlp1s0
+    id0_BATMAN_IFACE=bat0
+    id0_FREQ_MCC=2412
+    id0_ROUTING=batman-adv
+    id0_PRIORITY=high_throughput
+    id0_MPTCP=disable
+    id0_BRIDGE="br-lan bat0 eth1 eth0 lan1 usb0"
+    id0_SLAAC=""
+    #id1_  for 2nd radio
+    #id2_  for 3rd radio
+    ROLE=drone
+#+END_SRC
+
+  - Configure bridge IP:
+
+    #+BEGIN_SRC bash
+        nano /opt/mesh-helper.sh
     #+END_SRC
 
-        - Run ~ifconfig~ in the Comms Module and in the ~netvm~ of PMC.
-        - As of now, I have observed two possible instances for this problem.
+    #+BEGIN_SRC sh
+        generate_lan_bridge_ip() {
+            local mesh_if_mac
+
+            bridge_name=$(echo "$bridge" | cut -d' ' -f1)
+
+            mesh_if_mac=$(cat /sys/class/net/"$id0_MESH_VIF"/address)
+            if [ -z "$mesh_if_mac" ]; then
+                echo "generate_lan_bridge_ip: MAC not found for id0_MESH_VIF! Configuration error?" > /dev/kmsg
+                mesh_if_mac="$(cat /sys/class/net/eth0/address)"
+            fi
+            local ip_random
+            ip_random="$(echo "$mesh_if_mac" | cut -b 16-17)"
+            bridge_ip="192.168.<MESH-SUBNET>.X"
+
+            # legacy support
+            br_lan_ip=$bridge_ip
+        }
+    #+END_SRC
+
+  #+begin_note
+  One Comms Module will be connected to the Internet gateway router and
+  the other will be connected to the PMC.
+
+  Both need to have unique IPv4 addresses.
+
+  For this example, let us assume that the Internet gateway is
+  ~192.168.80.1~.
+
+  In that case: Router Comms Bridge IP: ~192.168.80.101~ PMC Comms
+  Bridge IP: ~192.168.80.111~
+
+  Make sure that the Drone's Comms modules are also configured to be in
+  this mesh network. Repeat the above steps for the drone and assign it
+  a unique Bridge IP: ~192.168.80.211~
+  #+end_note
+
+  Reboot!
+
+* Setting Up Provisioning Network/Server
+Refer to [[https://ssrc.atlassian.net/wiki/x/IQBFOQ][Provisioning server setup]].
+
+** Generating Keys and Certificates
+#+BEGIN_SRC bash
+    dronsole certificates request-provisioning-ca -o certs --rsa <name>
+#+END_SRC
+
+- This should generate a ~certs/~ directory with:
+  - ~<name>-root.cert.pem~
+  - ~<name>.cert.pem~
+  - ~<name>.key.pem~
+
+** Configuring Provisioning Network/Server
+#+BEGIN_SRC bash
+    mkdir provisioning-server
+    mv certs provisioning-server
+    cd provisioning-server
+#+END_SRC
+
+- Download the v1.2.8 release from [[https://github.com/tiiuae/provisioning-server/releases/tag/v1.2.8][tiiuae/provisioning-server]] and build and install it.
+- Create a ~.env~ file in ~provisioning-server/~ directory:
+
+#+BEGIN_SRC env
+PROVISIONING_SERVER_ENABLE_MDNS=true
+PROVISIONING_SERVER_PORT=8080
+PROVISIONING_SERVER_NETWORK_INTERFACE=<the interface where the server is connected to>
+PROVISIONING_SERVER_PROVISIONING_OPTIONS_FLEET_MANAGEMENT_NATS_URL=nats://nats.airoplatform.com:4222
+PROVISIONING_SERVER_PROVISIONING_OPTIONS_TENANT_ID=UAE~Masdar
+PROVISIONING_SERVER_PROVISIONING_KEY_PATH=./certs/<name>.key.pem
+PROVISIONING_SERVER_PROVISIONING_ROOT_CERTIFICATE_PATH=./certs/<name>-root.cert.pem
+PROVISIONING_SERVER_PROVISIONING_CERTIFICATE_PATH=./certs/<name>.cert.pem
+PROVISIONING_SERVER_PROVISIONING_KEY_SOURCE=filesystem
+#+END_SRC
+
+    - To run provisioning server, execute:
+
+      #+BEGIN_SRC bash
+          sudo ./provisioning-server
+      #+END_SRC
+
+      - Additionally, connect the Provisioning Server to an Ethernet Switch
+        *without* Internet connection.
+      - Set a static IP for the device in the Network Settings:
+        - IPv4 Method -> Manual
+          - IP: ~169.254.156.7~ <- Can be anything
+        - Netmask: ~255.255.255.0~
+        - Gateway: ~169.254.156.1~
+      - If the device is a laptop that supports wireless hotspot, turn that on.
+
+* Setting up Wireless Mesh Network
+** Hardware Setup
+- A wireless network with internet connection is mandatory for setting up
+  the PMC.
+- All drones and PMC will be in this network, which will be the Mesh
+  Network.
+
+#+begin_note
+It is mandatory that the Internet gateway have the following IP format:
+~192.168.<MESH-SUBNET>.1~
+
+Optimally, it will not have any other devices apart from just the swarm
+components and PMC connected to it to avoid IP clashes.
+
+If this cannot be facilitated (possibly because of local networking issues),
+it is best to obtain a router with sim and manually set up the gateway.
+#+end_note
+
+- Obtain the IP of the Internet gateway. The example for this documentation
+  will be: ~192.168.80.1~.
+- Connect a Comms Module to the Internet Router and turn it on.
+
+** Verify Internet Connection
+- Connect to the Comms debug port and attach a shell into it.
+- After login, run ~ping 8.8.8.8~ to verify that there is Internet
+  connection.
+- *Case 1:* Works? Move on.
+- *Case 2:* Doesn't work?
+  - First, check that ~ping 192.168.80.1~ (Internet Gateway) works. If this
+    doesn't work, that means the connection to the Router isn't proper.
+  - If it works, then that means we need to create a default gateway for the
+    ~br-lan~ interface:
+
+#+BEGIN_SRC bash
+    route add default gw 192.168.80.1 br-lan # REPLACE IP WITH GATEYWAY IP
+#+END_SRC
+
+* Installing Ghaf
+** Create Installation Media
+- You can download the Ghaf image from this [[https://artifactory.ssrcdevops.tii.ae/ui/native/ssrcdevops-demo/FR/FMO-OS_inst_0.1.5b%2BRA_v0.8.4.iso][link]].
+- There are many ways to create installation media with this ~.iso~:
+  - Software like balenaEtcher
+#+BEGIN_SRC bash
+    sudo dd if=./<filename>.iso of=/dev/sdd bs=4M conv=fsync status=progress
+#+END_SRC
+- etc.
+
+** Flash Ghaf to PMC
+- A pre-requisite step is to set up BIOS of the Rugged Laptop. Since I
+  don't have access to that Confluence page, I cannot link it.
+- But if you have access to Secure Comms Confluence you can search:
+  "Rugged Laptop as GCS BIOS" and find the right page.
+- Plug the USB device with the boot image into the switched-off Rugged
+  Laptop.
+- When turning on the Rugged Laptop, at BIOS splash screen (when you
+  see the DELL logo) spam press ~F12~ so that it opens the ~One-Time Boot
+  Settings~ page. Select the USB device to boot into.
+
+** Installation Process
+- Click the first entry on the NixOS selection screen.
+- At this point, it will ask to connect to provisioning network:
+  - If the provisioning laptop has Wi-Fi Hotspot capabilities, turn it
+    on (while switching off Internet access). Connect to that.
+  - Alternatively, open a temporary Wi-Fi Hotspot on your phone and
+    use that to connect.
+  - Optimally, you will want to use this: [[https://github.com/tiiuae/provisioning-server/tree/main/deployment/GL-AR300M][GL-AR300M]].
+- So if you have the Provisioning Router set-up then just go with
+  that.
+- Select ~dell-latitude-7330-laptop-debug~ (or ~7230-tablet~ if you're
+  using a Rugged Tablet).
+- Select ~nvme0n1~ to install Ghaf.
+- For destination system IP address and gateway:
+  - IP: ~192.168.<MESH-SUBNET>.Y/24~ -> ~<MESH-SUBNET>~ same as in the
+    Comms Module, and the ~Y~ value must not be the same as the Comms
+    Module's (unique).
+  - Gateway: ~192.168.<MESH-SUBNET>.1~
+  - In this example, it is ~192.168.80.121/24~ and ~192.168.80.1~
+    respectively.
+
+** Provisioning
+*** via Wireless
+- If you are connected to the Provisioning Laptop through Hotspot or
+  to the Provisioning Router, select ~y~ for this step.
+- Since we enabled ~mDNS~ in the Provisioning Server ~.env~, it will
+  automatically detect the server, and things should progress without
+  issue.
+- Note that an error will be thrown after: ~INFO: Starting device
+  registration~.
+- This is expected because we don't have Internet connection for the
+  device to receive its ~docker-compose.yaml~ and ~PAT.pat~ after
+  registration.
+- Select ~reboot~ and remove the USB device.
+
+*** via Switch
+- More often than not, the Wireless method won't work. Do not fret.
+- Connect the Rugged Laptop via Ethernet to the switch that you
+  previously connected the Provisioning Laptop.
+- Select ~N~ for the ~mDNS discovery?~.
+- It will now ask you to fill in the IP and the port for the
+  Provisioning Server:
+  - IP: ~169.254.156.7~ <- Look back at the server's static IP
+  - Port: ~8080~ <- This is defined in the ~.env~
+  - The rest should process as above: The provisioning will stop at
+    device registration, after which remove the USB and reboot device.
+
+*** Nothing Works?
+- The problem is at the Provisioning Server setup.
+- Ensure that the keys are working. Are they up to date? Maybe
+  regenerate new ones?
+- Is the IP set up correctly?
+- Does the Laptop support setting up a server like this?
+- Sometimes, turning it off and on again works...
+
+* Registration and Pulling Containers
+** Expected Result
+- Upon reboot and connecting the Comms Module 1.5, the Rugged Laptop
+  should automatically connect to the internet.
+- This can be verified with ~ping 8.8.8.8~ (if this doesn't work, then
+  skip directly to [[What if There Isn't Automatic Internet Connection?]]).
+- Further verification can be done by:
+
+#+BEGIN_SRC bash
+    ssh 192.168.101.11 # docker vm
+    # username: ghaf
+    # password: ghaf
+#+END_SRC
+
+#+BEGIN_SRC bash
+    # from within docker vm
+    ls /var/lib/fogdata
+    # output should contain:
+    # certs/
+    # hostname
+    # ip-address
+    # docker-compose.yml (FROM REGISTRATION)
+    # PAT.pat (FROM REGISTRATION)
+#+END_SRC
+
+- If all the files and folders are present, then restart the
+  container downloading process:
+
+#+BEGIN_SRC bash
+    # from within docker vm
+    journalctl -f -u fmo-dci.service
+#+END_SRC
+
+** What if There Isn't Automatic Internet Connection?
+*** Diagnosing Issue
+- ~ssh~ into the ~netvm~ of the PMC:
+
+#+BEGIN_SRC bash
+    ssh 192.168.101.1
+#+END_SRC
+
+- Connect the Micro USB cable to the Debug port of the Comms Module
+  and attach a shell to it from the connected computer:
+
+#+BEGIN_SRC bash
+    picocom /dev/ttyUSB0 -b 115200
+    # username: root
+    # password: root
+#+END_SRC
+
+- Run ~ifconfig~ in the Comms Module and in the ~netvm~ of PMC.
+- As of now, I have observed two possible instances for this problem.
 
 **** Diagnosis 1: Check if the Comms Module is connected to PMC
-     - Run ~ping <br-lan ip>~ from Comms Module.
-     - If successful, then they are connected.
-     - If not, then there is probably an issue with the physical connection -> Change cable or ensure it is plugged in fully.
+- Run ~ping <br-lan ip>~ from Comms Module.
+- If successful, then they are connected.
+- If not, then there is probably an issue with the physical connection
+  -> Change cable or ensure it is plugged in fully.
 
 **** Diagnosis 2: Check if there is internet connection in Comms Module
-     - This is most common issue.
-     - Run ~batctl n~. You should be able to see the Comms module connected to the Router here. If not:
-       - Reconfirm that all the Comms module are in the same frequency and subnet.
-       - Restart the Comms module and try again (don't forget that you will have to add default gateway to the Router Comms).
+- This is most common issue.
+- Run ~batctl n~. You should be able to see the Comms module connected
+  to the Router here. If not:
+  - Reconfirm that all the Comms module are in the same frequency and
+    subnet.
+  - Restart the Comms module and try again (don't forget that you will
+    have to add default gateway to the Router Comms).
 
-     - With this, you should be able to ~ping 8.8.8.8~ from PMC and receive internet connection.
-     - Run ~journalctl -f -u fmo-dci.service~ from docker vm to reinitialise container downloads.
+- With this, you should be able to ~ping 8.8.8.8~ from PMC and receive
+  internet connection.
+- Run ~journalctl -f -u fmo-dci.service~ from docker vm to reinitialise
+  container downloads.
 
 *** Steps to connect to WIFI (from Comms Module) [Crude Process]
-    - If you want an internet connection come hell-or-high-water, there is a work around.
-    - For this, obtain the ESSID and Password for the Wireless Mesh network with internet connection.
-    - In the Comms Module run:
+- If you want an internet connection come hell-or-high-water, there is
+  a work around.
+- For this, obtain the ESSID and Password for the Wireless Mesh
+  network with internet connection.
+- In the Comms Module run:
 
-      #+BEGIN_SRC bash
-      nano /etc/wpa_supplicant.conf
-      # Edit or add the following lines:
-      # network {
-      #   ssid="<ESSID>"
-      #   psk="<password>"
-      # }
-      #+END_SRC
+#+BEGIN_SRC bash
+    nano /etc/wpa_supplicant.conf
+    # Edit or add the following lines:
+    # network {
+    #   ssid="<ESSID>"
+    #   psk="<password>"
+    # }
+#+END_SRC
 
-      #+BEGIN_SRC bash
-      wpa_supplicant -i wlan0 -c /etc/wpa_supplicant.conf -B
-      #+END_SRC
+#+BEGIN_SRC bash
+    wpa_supplicant -i wlan0 -c /etc/wpa_supplicant.conf -B
+#+END_SRC
 
-      #+BEGIN_SRC bash
-      udhcpc -i wlan0
-      #+END_SRC
+#+BEGIN_SRC bash
+    udhcpc -i wlan0
+#+END_SRC
 
-      #+BEGIN_SRC bash
-      route add default gw 192.168.<MESH-SUBNET>.1 wlan0
-      # This is the internet gateway. Replace X with appropriate 
-      # obtained from Router IP/Gateway
-      #+END_SRC
+#+BEGIN_SRC bash
+    route add default gw 192.168.<MESH-SUBNET>.1 wlan0
+    # This is the internet gateway. Replace X with appropriate 
+    # obtained from Router IP/Gateway
+#+END_SRC
 
-      - Run ~ping 8.8.8.8~ from Comms Module. It should now be working
+- Run ~ping 8.8.8.8~ from Comms Module. It should now be working
 
 *** Forwarding Connection -> ~give_internet.sh~ [Crude Process]
-    - The gist of the connection is that the Internet connection from the ~wlan0~ port is brided to the ~br-lan~ port, which makes it available in the PMC.
-    - But, for whatever reason, this isn't happening. We created a crude solution that can recreate this.
-    - Run the following in the Comms Module:
+- The gist of the connection is that the Internet connection from the
+  ~wlan0~ port is brided to the ~br-lan~ port, which makes it available in
+  the PMC.
+- But, for whatever reason, this isn't happening. We created a crude
+  solution that can recreate this.
+- Run the following in the Comms Module:
 
-      #+BEGIN_SRC bash
-      # Enable IP masquerading for traffic from br-lan to wlan0
-      iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE
+#+BEGIN_SRC bash
+    # Enable IP masquerading for traffic from br-lan to wlan0
+    iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE
 
-      # Allow forwarding of established and related connections
-      iptables -A FORWARD -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+    # Allow forwarding of established and related connections
+    iptables -A FORWARD -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
 
-      # Allow forwarding from br-lan to wlan0
-      iptables -A FORWARD -i br-lan -o wlan0 -j ACCEPT
+    # Allow forwarding from br-lan to wlan0
+    iptables -A FORWARD -i br-lan -o wlan0 -j ACCEPT
 
-      # Allow forwarding from wlan0 to br-lan
-      iptables -A FORWARD -i wlan0 -o br-lan -j ACCEPT
-      #+END_SRC
+    # Allow forwarding from wlan0 to br-lan
+    iptables -A FORWARD -i wlan0 -o br-lan -j ACCEPT
+#+END_SRC
 
-    - This can be automated with a ~give_internet.sh~.
-    - With this, you should be able to ~ping 8.8.8.8~ from PMC and receive internet connection.
-    - Run ~journalctl -f -u fmo-dci.service~ from docker vm to reinitialise container downloads.
+- This can be automated with a ~give_internet.sh~.
+- With this, you should be able to ~ping 8.8.8.8~ from PMC and receive
+  internet connection.
+- Run ~journalctl -f -u fmo-dci.service~ from docker vm to reinitialise
+  container downloads.
 
 * IP Allocation
-  - In order to avoid IP conflicts. It is best to plan it out beforehand.
-  - The strategy we are going with is as follows:
-    - Internet Gateway: ~192.168.80.1~
-      - Internet Gateway Mesh Comm: ~192.168.80.101~
-    - PMC: ~192.168.80.121~
-      - PMC Mesh Comm: ~192.168.80.111~
-    - Drone: ~192.168.80.211~
-
+- In order to avoid IP conflicts. It is best to plan it out beforehand.
+- The strategy we are going with is as follows:
+  - Internet Gateway: ~192.168.80.1~
+    - Internet Gateway Mesh Comm: ~192.168.80.101~
+  - PMC: ~192.168.80.121~
+    - PMC Mesh Comm: ~192.168.80.111~
+  - Drone: ~192.168.80.211~
