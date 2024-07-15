@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-07-04T22:31:43+0400
-updated: 2024-07-09T21:17:19+0400
+updated: 2024-07-15T20:47:06+0400
 version: 1.1.1
 @end
 
@@ -30,7 +30,10 @@ version: 1.1.1
 
 ** (-) Setup drone with BKC 12.1
 *** (x) Flash BKC 12.1 to SRTA drone
-*** (-) Provision drone and install containers
-*** ( ) Verify that drone connects to Mesh Network
+*** ( ) Provision drone and install containers
+*** (x) Verify that drone connects to Mesh Network
 
-** ( ) Verify that the PMC, Drone and Mesh Network are functional
+** (x) Verify that the PMC, Drone and Mesh Network are functional
+** (x) Determine if it is possible to have the PMC and Drone functioning without WiFi in Mesh Network
+** (-) Flash SRTA-module inclusive release into the drone Saluki v3
+** ( ) Run some test flights with the drone

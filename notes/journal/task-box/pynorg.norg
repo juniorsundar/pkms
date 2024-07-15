@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-06-10T15:18:58+0400
-updated: 2024-06-22T14:27:08+0400
+updated: 2024-07-15T20:51:53+0400
 version: 1.1.1
 @end
 
@@ -22,15 +22,9 @@ version: 1.1.1
     - `multiprocessing.Process` performs comparably with `concurrent.futures`.
 *** (x) Avoid linking to self
 
-** (=) *Purpose:* {:$/vault/neorg-helper:*** Backlinking}[Backlinking] | Implement metadata parsing of `.norg` files
+** (_) *Purpose:* {:$/vault/neorg-helper:*** Backlinking}[Backlinking] | Implement metadata parsing of `.norg` files
 *** (x) First iteration as a helper function
-*** (=) Improve parsing to be able to consistently extract all fields
+*** (_) Improve parsing to be able to consistently extract all fields
     (including "categories")
 
-** ( ) *Purpose:* {:$/vault/neorg-helper:*** Backlinking}[Backlinking] | Fix issue with multiple backlinks to same file
-
-   ===
-
-* Notes
-** Rationale for using `ripgrep`/`rg`
-   *here*
+** (_) *Purpose:* {:$/vault/neorg-helper:*** Backlinking}[Backlinking] | Fix issue with multiple backlinks to same file

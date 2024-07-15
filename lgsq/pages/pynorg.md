@@ -16,6 +16,7 @@ link:: https://www.github.com/juniorsundar/pynorg
 	  :END:
 		- DONE First iteration
 		- CANCELLED Improve the multi-processing of ripgrep using [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.ProcessPoolExecutor) module
+		  collapsed:: true
 		  :LOGBOOK:
 		  CLOCK: [2024-06-10 Mon 13:55:52]
 		  :END:
@@ -24,13 +25,10 @@ link:: https://www.github.com/juniorsundar/pynorg
 		  :LOGBOOK:
 		  CLOCK: [2024-06-21 Fri 18:29:32]--[2024-06-21 Fri 19:30:45] =>  01:01:13
 		  :END:
-	- LATER *Purpose:* ((6666cdbd-301d-4ba5-b069-e43a105145e7)) | Implement metadata parsing of `.norg` files
+	- CANCELLED *Purpose:* ((6666cdbd-301d-4ba5-b069-e43a105145e7)) | Implement metadata parsing of `.norg` files
 	  :LOGBOOK:
 	  CLOCK: [2024-06-10 Mon 13:51:50]
 	  :END:
 		- DONE First iteration as a helper function
-		- LATER Improve parsing to be able to consistently extract all fields (including "categories")
-	- TODO [#A] *Purpose:* ((6666cdbd-301d-4ba5-b069-e43a105145e7)) | Fix issue with multiple backlinks to same file
-- # Notes
-	- **Rationale for using `ripgrep`/`rg`**
-		- *here*
+		- CANCELLED Improve parsing to be able to consistently extract all fields (including "categories")
+	- CANCELLED [#A] *Purpose:* ((6666cdbd-301d-4ba5-b069-e43a105145e7)) | Fix issue with multiple backlinks to same file

@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-07-08T22:40:38+0400
+updated: 2024-07-15T20:49:32+0400
 version: 1.1.1
 @end
 
@@ -63,13 +63,14 @@ version: 1.1.1
 *** (x) Design {* 1D Drone System}[the system]
 *** (-) Develop the secure state estimator
 **** (-) Set EKF (125Hz) to 20Hz (Downsample the EKF output stream for more info)
-**** (-) Copy over the code from Xiao Tan's GitHub
+**** (x) Copy over the code from Xiao Tan's GitHub
+**** (-)Test and reiterate until the state-reconstruction is working as expected
 *** (-) Get a minimum viable demo of SSR
     /SCHEDULED:/ {@ Wednesday 31 July 2024}
 
-** (-) Utilise a continuous function for acceleration input
-*** (-) 1x Acceleration controlled with 50Hz Input
-*** (-) 1x Acceleration controlled with 20Hz Input
+** (x) Utilise a continuous function for acceleration input
+*** (x) 1x Acceleration controlled with 50Hz Input
+*** (x) 1x Acceleration controlled with 20Hz Input
 
 ** ( ) Tenth meeting
    /SCHEDULED:/ {@ Thursday 18 July 2024}

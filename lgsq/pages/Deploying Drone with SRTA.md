@@ -80,4 +80,13 @@
 	  :LOGBOOK:
 	  CLOCK: [2024-07-10 Wed 23:05:13]--[2024-07-11 Thu 20:35:03] =>  21:29:50
 	  :END:
-	- TODO Determine if it is possible to have the PMC and Drone functioning without WiFi in Mesh Network
+	- DONE Determine if it is possible to have the PMC and Drone functioning without WiFi in Mesh Network
+	  :LOGBOOK:
+	  CLOCK: [2024-07-15 Mon 20:30:54]--[2024-07-15 Mon 20:30:55] =>  00:00:01
+	  CLOCK: [2024-07-15 Mon 20:30:55]--[2024-07-15 Mon 20:30:56] =>  00:00:01
+	  :END:
+	- DOING Flash SRTA-module inclusive release into the drone Saluki v3
+	  :LOGBOOK:
+	  CLOCK: [2024-07-15 Mon 20:32:02]
+	  :END:
+	- TODO Run some test flights with the drone
