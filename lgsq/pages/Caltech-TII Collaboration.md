@@ -108,7 +108,8 @@
 	- DONE [Ninth meeting](((668c213d-e504-4e39-8e03-5f872deadaeb)))
 	- DOING (Try out)->(Implement) ~~simple~~ example with (full system)->(1D Drone Sim)
 	  :LOGBOOK:
-	  CLOCK: [2024-05-21 Tue 21:58:08]
+	  CLOCK: [2024-05-21 Tue 21:58:08]--[2024-07-16 Tue 16:23:38] =>  1338:25:30
+	  CLOCK: [2024-07-16 Tue 16:23:44]
 	  :END:
 		- DONE Design [the system](((665a0dc2-ee9a-4ccf-81b9-6e15aeac06c5)))
 		- DOING Develop the secure state reconstructor
@@ -501,6 +502,7 @@
 		  collapsed:: true
 			- No meeting for next week. Set it for the week after.
 	- ## 6 May 2024
+	  id:: 66392067-cc32-4121-922f-0f072aa546e2
 	  collapsed:: true
 		- **Attendees**
 			- Xiao Tan
@@ -518,6 +520,7 @@
 			- ((663923ce-a39f-45de-b997-6c7b0cdc97c9))
 			- ((6639243a-3acc-4468-a10d-594e60b555ef))
 	- ## 2 May 2024
+	  id:: 66386c1a-c19b-46a9-b6ed-2469fe003da8
 	  collapsed:: true
 		- **Attendees**
 		  collapsed:: true
@@ -540,6 +543,7 @@
 			  CLOCK: [2024-04-04 Thu 23:04:14]
 			  :END:
 	- ## 22 April 2024
+	  id:: 66260755-1d06-44fc-a270-ca1cbec2c0e2
 	  collapsed:: true
 		- **Attendees**
 		  collapsed:: true
@@ -565,6 +569,7 @@
 			  CLOCK: [2024-04-04 Thu 23:04:14]
 			  :END:
 	- ## 18 April 2024
+	  id:: 66214ed0-8de1-4d80-aa69-b65f4e3be402
 	  collapsed:: true
 		- **Attendees**
 		  collapsed:: true
