@@ -7,8 +7,8 @@
 ** DONE [#A] Set up GCS/PMC for drone control [100%]
 *** DONE Setting up GS and Fog
 **** DONE Get documentation to set it up
-**** DONE Source a second upXtreme device for fog/groundstation role
 **** DONE Set up GS role
+**** DONE Source a second upXtreme device for fog/groundstation role
 **** CANCELLED Set up Fog role
 *** DONE [[id:578650c0-143a-4cce-8082-a7d5a025cf2a][Setting up PMC]] 
 **** DONE Obtain rugged laptop
