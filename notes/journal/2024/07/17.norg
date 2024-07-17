@@ -4,13 +4,18 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-07-17T00:15:13+0400
+updated: 2024-07-17T20:39:02+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-  - ( ) tasks
+** (x) Verify that the topics have either Capitalised or Snake Case
+   /SCHEDULED: {@ 17 July 2024}/
+** (x) Send stuff for procurement
+*** (x) 4G Sim Router for Flights
+*** (x) Standard Router for Lab
+*** (x) Move the stuff in table to Jira
 
   ===
 ___
@@ -22,7 +27,7 @@ ___
 
 * Meetings
 
-** Meeting Name
+** RTA Meeting
 
 *** Attendees
 
@@ -39,6 +44,25 @@ ___
 
 
 *** Action Items
+
+** Solita - SRTA MLOps Syncup
+
+*** Attendees
+
+    | Names
+
+*** Goals
+
+
+*** Agenda
+
+    - ( ) 
+
+*** Minutes
+
+
+*** Action Items
+
 
     ===
 ___

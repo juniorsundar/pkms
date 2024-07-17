@@ -85,6 +85,7 @@
 	  CLOCK: [2024-07-15 Mon 20:30:54]--[2024-07-15 Mon 20:30:55] =>  00:00:01
 	  CLOCK: [2024-07-15 Mon 20:30:55]--[2024-07-15 Mon 20:30:56] =>  00:00:01
 	  :END:
+	- DONE Talk to Daniel Smrcka about running PMC + Drone offline
 	- DOING Flash SRTA-module inclusive release into the drone Saluki v3
 	  :LOGBOOK:
 	  CLOCK: [2024-07-15 Mon 20:32:02]
