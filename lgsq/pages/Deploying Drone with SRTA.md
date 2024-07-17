@@ -86,6 +86,7 @@
 	  CLOCK: [2024-07-15 Mon 20:30:55]--[2024-07-15 Mon 20:30:56] =>  00:00:01
 	  :END:
 	- DONE Talk to Daniel Smrcka about running PMC + Drone offline
+	  id:: 6697f269-3e4a-46f4-9032-15a30ce36e85
 	- DOING Flash SRTA-module inclusive release into the drone Saluki v3
 	  :LOGBOOK:
 	  CLOCK: [2024-07-15 Mon 20:32:02]
