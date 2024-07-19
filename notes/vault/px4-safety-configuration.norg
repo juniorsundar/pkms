@@ -6,7 +6,7 @@ categories: [
     PX4
 ]
 created: 2024-02-21T11:52:28+0400
-updated: 2024-06-29T18:34:22+0400
+updated: 2024-07-20T00:29:33+0400
 version: 1.1.1
 @end
 
@@ -29,17 +29,11 @@ version: 1.1.1
   | Action       | Description                                               |
   |--------------|-----------------------------------------------------------|
   | None/Disabled| No action. Failsafe will be ignored.                      |
-  |              |                                                           |
   | Warning      | Warning message will be sent.                             |
-  |              |                                                           |
   | Hold         | Will enter hold mode, and hover or circle.                |
-  |              |                                                           |
   | Return       | Enters return mode. Behavior is configurable.             |
-  |              |                                                           |
   | Land         | Will enter land mode.                                     |
-  |              |                                                           |
   | Disarm       | Stops motors immediately.                                 |
-  |              |                                                           |
   | Termination  | Turns off all controllers and sets PWM to failsafe values.|
   |              | Can be used to deploy a parachute, landing gear, etc.     |
   @end

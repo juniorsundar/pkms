@@ -151,10 +151,13 @@
 		  :END:
 	- DONE [Tenth meeting](((66995bd6-be17-4090-9304-a83949253807)))
 	  SCHEDULED: <2024-07-18 Thu>
-	- TODO Create README for the [px4-secure-state-reconstruction](https://www.github.com/juniorsundar-tii/px4-secure-state-reconstruction) repository
+	- DOING Create README for the [px4-secure-state-reconstruction](https://www.github.com/juniorsundar-tii/px4-secure-state-reconstruction) repository
 	  id:: 66995c32-3ba7-4707-ac81-91a03ef9e4a6
-		- TODO Instructions for a local installation
-		- TODO Instructions for a containerised installation
+	  :LOGBOOK:
+	  CLOCK: [2024-07-20 Sat 00:31:11]
+	  :END:
+		- LATER Instructions for a local installation
+		- DONE Instructions for a containerised installation
 	- TODO Eleventh meeting
 	  SCHEDULED: <2024-07-25 Thu>
 - # Notes
