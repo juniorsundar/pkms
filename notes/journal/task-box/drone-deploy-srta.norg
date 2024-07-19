@@ -4,11 +4,11 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-07-04T22:31:43+0400
-updated: 2024-07-17T20:39:02+0400
+updated: 2024-07-18T22:27:25+0400
 version: 1.1.1
 @end
 
-* (-) Tasks
+* Tasks
 ** (x) Set up GCS/PMC for drone control
 *** (x) GCS and Fog role method
 **** (x) Get documentation to set it up

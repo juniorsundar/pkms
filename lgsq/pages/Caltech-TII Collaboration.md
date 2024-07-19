@@ -117,10 +117,10 @@
 		  CLOCK: [2024-05-31 Fri 21:47:57]
 		  CLOCK: [2024-05-31 Fri 21:48:12]
 		  :END:
-			- DOING Set EKF (125Hz) to 20Hz ([here](((668c24d5-a73b-4590-9373-c3ea2bc86412))) for more info)
+			- DONE Set EKF (125Hz) to 20Hz ([here](((668c24d5-a73b-4590-9373-c3ea2bc86412))) for more info)
 			  id:: 668c24bb-5334-4be1-b9af-6471205a9cc0
 			  :LOGBOOK:
-			  CLOCK: [2024-07-08 Mon 21:41:20]
+			  CLOCK: [2024-07-08 Mon 21:41:20]--[2024-07-18 Thu 22:15:15] =>  240:33:55
 			  :END:
 			- DONE Copy over the code from Xiao Tan's GitHub
 			  :LOGBOOK:
@@ -149,8 +149,14 @@
 		  :LOGBOOK:
 		  CLOCK: [2024-07-04 Thu 09:18:26]--[2024-07-15 Mon 14:46:51] =>  269:28:25
 		  :END:
-	- TODO Tenth meeting
+	- DONE [Tenth meeting](((66995bd6-be17-4090-9304-a83949253807)))
 	  SCHEDULED: <2024-07-18 Thu>
+	- TODO Create README for the [px4-secure-state-reconstruction](https://www.github.com/juniorsundar-tii/px4-secure-state-reconstruction) repository
+	  id:: 66995c32-3ba7-4707-ac81-91a03ef9e4a6
+		- TODO Instructions for a local installation
+		- TODO Instructions for a containerised installation
+	- TODO Eleventh meeting
+	  SCHEDULED: <2024-07-25 Thu>
 - # Notes
   collapsed:: true
 	- ## MATLAB Cells
@@ -314,6 +320,26 @@
 		- $$H=\begin{bmatrix}1 && 0 && 0 && 0\\ 0 && -1 && 0 && 0 \\ 0 && 0 && 1 && 0\\ 0 && 0 && 0 && -1\end{bmatrix} \space \textbf{q} = \begin{bmatrix}4 \\ 4 \\ 4 \\ 4\end{bmatrix}$$
 - # Meetings
   tag:: #MEETING
+	- ## 18 July 2024
+	  id:: 66995bd6-be17-4090-9304-a83949253807
+	  collapsed:: true
+		- **Attendees**
+		  collapsed:: true
+			- Xiao Tan
+			- Junior Sundar
+		- **Goal**
+		  collapsed:: true
+			- Confirming whether current implementation is moving in one direction.
+		- **Agenda**
+		  collapsed:: true
+			- Update on the functionality of the current implementation.
+			- Ascertain next step and why the node is behaving the way it is.
+		- **Minutes**
+		  collapsed:: true
+			- Went through the simulation and implementation
+		- **Action Points**
+		  collapsed:: true
+			- ((66995c32-3ba7-4707-ac81-91a03ef9e4a6))
 	- ## 8 July 2024
 	  id:: 668c213d-e504-4e39-8e03-5f872deadaeb
 	  collapsed:: true
@@ -471,6 +497,7 @@
 			- Xiao Tan
 			- Junior Sundar
 		- **Goals**
+		  collapsed:: true
 			- Understand the workings of the nominal controller and the safety filter
 		- **Agenda**
 		  collapsed:: true
@@ -502,7 +529,6 @@
 		  collapsed:: true
 			- No meeting for next week. Set it for the week after.
 	- ## 6 May 2024
-	  id:: 66392067-cc32-4121-922f-0f072aa546e2
 	  collapsed:: true
 		- **Attendees**
 			- Xiao Tan
@@ -520,7 +546,6 @@
 			- ((663923ce-a39f-45de-b997-6c7b0cdc97c9))
 			- ((6639243a-3acc-4468-a10d-594e60b555ef))
 	- ## 2 May 2024
-	  id:: 66386c1a-c19b-46a9-b6ed-2469fe003da8
 	  collapsed:: true
 		- **Attendees**
 		  collapsed:: true
@@ -543,7 +568,6 @@
 			  CLOCK: [2024-04-04 Thu 23:04:14]
 			  :END:
 	- ## 22 April 2024
-	  id:: 66260755-1d06-44fc-a270-ca1cbec2c0e2
 	  collapsed:: true
 		- **Attendees**
 		  collapsed:: true
@@ -569,7 +593,6 @@
 			  CLOCK: [2024-04-04 Thu 23:04:14]
 			  :END:
 	- ## 18 April 2024
-	  id:: 66214ed0-8de1-4d80-aa69-b65f4e3be402
 	  collapsed:: true
 		- **Attendees**
 		  collapsed:: true

@@ -6,11 +6,11 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-07-18T16:33:59+0400
+updated: 2024-07-18T22:27:37+0400
 version: 1.1.1
 @end
 
-* (-) Tasks
+* Tasks
 
 ** (x) {** 4 April 2024}[First meeting]
 *** (x) Follow up with {* Instructional}[instructional] response
@@ -72,8 +72,13 @@ version: 1.1.1
 *** (x) 1x Acceleration controlled with 50Hz Input
 *** (x) 1x Acceleration controlled with 20Hz Input
 
-** ( ) Tenth meeting
+** (x) {** 18 July 2024}[Tenth meeting]
    /SCHEDULED:/ {@ Thursday 18 July 2024}
+** ( ) Create README for the {https://www.github.com/juniorsundar-tii/px4-secure-state-reconstruction}[px4-secure-state-reconstruction] repository
+*** ( ) Instructions for a local installation
+*** ( ) Instructions for a containerised installation
+** ( ) Eleventh meeting
+   /SCHEDULED:/ {@ Thursday 25 July 2024}
 
    ===
 
@@ -291,6 +296,33 @@ version: 1.1.1
    ===
 
 * Meetings
+
+** 18 July 2024
+   #tag label
+   Xiao Tan / Junior Sundar -- Syncup
+*** Attendees
+
+    | Xiao Tan
+    | Junior Sundar
+
+*** Goals
+
+    - Confirming whether current implementation is moving in one direction.
+
+*** Agenda
+
+    - Update on the functionality of the current implementation.
+    - Ascertain next step and why the node is behaving the way it is.
+
+*** Minutes
+
+    - Went through the simulation and implementation
+
+*** Action Items
+
+    - {** Create README for the {https://www.github.com/juniorsundar-tii/px4-secure-state-reconstruction}[px4-secure-state-reconstruction] repository}[Create README for the px4-secure-state-reconstruction repository]
+       -- {*** Instructions for a local installation}[Instructions for a local installation]
+       -- {*** Instructions for a containerised installation}[Instructions for a containerised installation]
 
 ** 8 July 2024
    #tag label

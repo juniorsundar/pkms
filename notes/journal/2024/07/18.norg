@@ -4,41 +4,13 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-07-18T16:33:34+0400
+updated: 2024-07-18T22:05:43+0400
 version: 1.1.1
 @end
 
-* To-Do
-
-  - ( ) tasks
-
-  ===
-___
-
 * Journal
 
-  ===
-___
-
-* Meetings
-
-** Meeting Name
-
-*** Attendees
-
-    | Names
-
-*** Goals
-
-
-*** Agenda
-
-    - ( ) 
-
-*** Minutes
-
-
-*** Action Items
+  - Attended {:$/journal/task-box/caltech-tii-collaboration:** 18 July 2024}[Xiao Tan / Junior Sundar -- Syncup].
 
     ===
 ___
