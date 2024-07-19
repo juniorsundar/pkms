@@ -74,9 +74,9 @@ version: 1.1.1
 
 ** (x) {** 18 July 2024}[Tenth meeting]
    /SCHEDULED:/ {@ Thursday 18 July 2024}
-** ( ) Create README for the {https://www.github.com/juniorsundar-tii/px4-secure-state-reconstruction}[px4-secure-state-reconstruction] repository
-*** ( ) Instructions for a local installation
-*** ( ) Instructions for a containerised installation
+** (-) Create README for the {https://www.github.com/juniorsundar-tii/px4-secure-state-reconstruction}[px4-secure-state-reconstruction] repository
+*** (?) Instructions for a local installation
+*** (x) Instructions for a containerised installation
 ** ( ) Eleventh meeting
    /SCHEDULED:/ {@ Thursday 25 July 2024}
 
@@ -293,6 +293,7 @@ version: 1.1.1
    $|C=\begin{bmatrix}1 && 0 && 0 && 0 \\ 0 && 1 && 0 && 0 \\ 0 && 0 && 1 && 0 \\ 0 && 0 && 0 && 1 \end{bmatrix} \space \textbf{y} = \begin{bmatrix}x_1 \\ \dot{x}_1 \\ x_2 \\ \dot{x}_2\end{bmatrix}|$
 
    $|H=\begin{bmatrix}1 && 0 && 0 && 0\\ 0 && -1 && 0 && 0 \\ 0 && 0 && 1 && 0\\ 0 && 0 && 0 && -1\end{bmatrix} \space \textbf{q} = \begin{bmatrix}4 \\ 4 \\ 4 \\ 4\end{bmatrix}|$
+
    ===
 
 * Meetings
