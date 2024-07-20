@@ -1,0 +1,47 @@
+@document.meta
+title: chapter-457
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-07-20T12:17:34+0400
+updated: 2024-07-21T00:16:44+0400
+version: 1.1.1
+@end
+
+It didn't take long for the group to get ejected out of the collective illusion. No one was prepared, as suddenly the very furniture they were sitting on dispersed into dust and mist. They shot a betrayed look at Guy who returned an innocent shrug while saying, "That wasn't me. One of you messed around and triggered an event I hadn't accounted for."
+
+Then, they collectively jerked their attention to Shuri who had collapsed onto her buttocks with a manic expression in her eyes. She looked at her compatriot's accusotary gazes and proceeded to eke out an apology but was immediately halted by Marie who said, "Don't say it if you don't mean it. We all know that if given the opportunity, you would do the same thing again."
+
+"You could have taken it slower," Tes complained. "We were just getting up to speed with the device. Not everyone's mind functions at the same cycle-speed as yours."
+
+"You just used cycle-speed in a sentence unironically," Shuri said with a grin while standing up. "I think you have familiarised yourself enough. There is such a thing as being overfamiliar; it tends to introduce bias."
+
+The group collectively sucked the inside of their teeth in annoyance.
+
+"Come on, now," Shuri redirected. "No point wasting time. We have work to do."
+
+___
+
+Work resumed at a fever pace after the illusory revelation, or glimpse into an alternate future for some.
+
+They stumbled often while trying to assume the pace prescribed by their Agile board. There were frequent clashes and tasks that were placed on hold while others upstream were still awaiting completion. But within two weeks, the team moved in lockstep, where the lead time between subsequent tasks was completely minimised.
+
+"Since everyone's here, I think we can begin sprint planning for the next two weeks," Shuri declared while knocking on the table with her knuckles.
+
+Almost immediately, Tes raised his hand and expressed, "I'd like to move the borrow-checker from the Icebox into scope-"
+
+"For the last time," Shuri interjected. "Implementing a borrow-checker is an exercise in excess. It isn't necessary for a basic working concept."
+
+"I strongly, disagree. The ArcaneScript syntax that is used to handle dynamic memory allocation is extremely unwieldy and prone to leaving memory addresses blocked off. If the programmer forgets to de-allocate the memory from heap, it will remain there, and will eventually cause the system to slow down significantly," Tes argued. "I think implementing mechanisms to track dynamic memory allocation during compile time and switching from ownership of dynamic memory addresses to a 'borrowing' paradigm will alleviate this potential risk."
+
+"While true, the overhead that will be potentially required to perform the borrow check during compile time will be far too complex for the current system to handle," Shuri reasoned. "And it will scale as the code itself grows more complex. They are better off just turning the system off and then on again to clear off the temporal memory."
+
+"I did some initial calculations," Tes responded while moving a roll of parchement to Shuri. "The relationship is not directly proportional between algorithm complexity of the code and the borrow-checker. Regardless of whether it is Big-O of n, n-squared, n-log-n, and so on."
+
+Shuri shook her head and rebutted, "Complexity doesn't refer to the algorithm, but the code itself. What do you think will happen if you have a function calling a function calling another function, each transferring a parameter through them? You will have to traceback the scope of this variable ensuring that it isn't being moved out of scope somewhere in between and the ownership of the the heap-allocated variable is being transferred properly through its journey."
+
+Tes went silent and contemplated on Shuri's reasoning.
+
+"Look, there will be time to add this feature to the compiler at a later date when our hardware can handle it," Shuri compromised. "The borrow-checker will remain in the Icebox until such a time comes- BUT, you can move onwards while keeping the potential of a future integration in mind."
+
+Tes grumbled under his breath while acquiescing to the decision. But Shuri ignored it and moved on, "Speaking of the compiler, the last time I"
