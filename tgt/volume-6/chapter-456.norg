@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-06-02T01:14:15+0400
-updated: 2024-07-14T15:52:05+0400
+updated: 2024-07-14T22:10:46+0400
 version: 1.1.1
 @end
 
@@ -20,15 +20,143 @@ With her input, the screen lit up and a bright 'Welcome to the Macintosh' window
 
 "This is the computer!" Shuri declared with surprise and certainty.
 
-"This is A computer," Guy corrected. "There are others, more advanced that this."
+"This is 'A' computer," Guy corrected. "There are others, more advanced that this."
 
 "This is already quite advanced," Shuri responded with a scoff as her fingers moved towards the blocky mouse and moved it around. The pointer on the screen mimicked her motion and danced accross the whitespace.
 
 "The keyboard and mouse are input devices, and the screen and speaker are output devices," Shuri recited from memory. "The basic-input-output-system or BIOS verifies these input-output devices at startup."
 
-"More or less," Guy verified. "Now that's all a bit beyond your scope, right now. My purpose is to show you how human input can be converted to a computer process and subsequent output."
+"More or less," Guy confirmed. "Now that's all a bit beyond your scope, right now. My purpose is to show you how human input can be converted to a computer process and subsequent output."
 
+"The process we will be tracking is how written (human-readable) code is translated into machine instructions in the form of binary," Guy explained. "A simple method to do this would be to take an arbitrary programming language."
 
+He scooted Shuri aside and sat down in front of the computer. As the crowd started to gather around him, they noticed that whatever Guy was typing into one computer was being repeated across all others.
+
+Guy started by typing a simple function.
+
+void function main() {
+    integer x = 1;
+    integer y = 2;
+    print(x + y);
+}
+
+"What can you deduce from this excerpt?" He asked the crowd.
+
+"You have a-"
+
+"Let others give it a shot," Guy interjected before Shuri could machine gun out the right answers.
+
+The crowd looked hesitant, almost apprehensive to answer.
+
+"You guys do realise that there are no wrong answers when it comes to learning," Guy reminded in a gentle tone. The crowd's tenseness slowly dissipated and one person stepped forward with an answer.
+
+"Umm, there is a function called main that takes no inputs. In it, you define two integers 'x' and 'y'. The function then prints the output of the summation," the girl answered. She then hummed in thought and asked, "So you can get this device to print just the number three? Isn't that a waste of paper?"
+
+Guy chuckled and said, "You are partly right. Printing implies that the input be exported for the programmer or user to see through the primary method of getting output from a computer. Luckily for us, it isn't necessary as this computer comes with a screen!"
+
+He then pressed the 'Compile & Run' command and on the black terminal below, the number "3" was displayed plainly.
+
+"If there isn't a screen, we would, in fact, require printing this on a line on paper," Guy continued.
+
+"Now since this program is human readable, it becomes trivial for us to infer its procedure AND to determine what the computer will do if it is made to run this program," Guy explained. "But you all should know by now that the computer doesn't think the same way we do. Because of that, it doesn't recognise language and instructions the same way we do."
+
+"For instance, if I ask you to go to the store and fetch me a dozen eggs, I don't have to define for you the exact number of steps you will need to take, or even what to do if the store doesn't have enough eggs," Guy posited. "In these cases, there is the implicit and the explicit instruction set. In most instances, sentient creatures only need the explicit. However, computers are literal in every sense of the word. There is no implicit instruction. You have to be so explicit that you must also indicate how and where you want to store data and even clear the data after use, otherwise it will cause problems during execution."
+
+"Let us start by deconstructing this program further," Guy said while drawing everyone's attention to the screen. "You can identify, from a cursory glance, that there are certain keywords here that may be repeated. For instance, the keyword 'function' can find multiple uses in a single program if we intend to write multiple functions. Similarly, the keyword 'integer' and 'void' will also find similar usage, especially when defining the type of data that variables or function outputs can assume."
+
+"When you send this program into a compiler, it first deconstructs the code and performs a lexical analysis."
+
+As Guy said this, the keywords assumed brighter colours and the text started to rearrange itself. "The keywords are grouped as tokens."
+
+"The next step is a syntax analysis that checks to see if the way it is written adheres with the grammatical rules of the programming language. If, for instance, we forget to wrap the contents of a function inside curly braces, the syntactical analysis will throw an error as the tokens aren't sequenced properly. The analysis then generates a syntax tree that represents the hierarchical structure of the code."
+
+The text started to move again and this time it started to grow and become more descriptive.
+
+- FunctionDeclaration
+   -- ReturnType: void
+   -- FunctionName: main
+   -- Parameters: ()
+   -- Body:
+      --- VariableDeclaration
+         ---- Type: integer
+         ---- VariableName: x
+         ---- Value: 1
+      --- VariableDeclaration
+         ---- Type: integer
+         ---- VariableName: y
+         ---- Value: 2
+      --- FunctionCall
+         ---- FunctionName: print
+         ---- Arguments:
+            ----- Expression: x + y
+
+"The next step is to verify that the code does what it is supposed to as declared. This is achieved by performing a semantic analysis," Guy explained. "This involves checking to see that the declared types for the variables and function outputs are valid and math the values assigned to them. It checks to see the scope of variables."
+
+"What does variable scope mean?" Tes inquired.
+
+"It is about determining for how long certain variables need to be remembered for and whether they can be accessed when necessary. Lets take an example. You are walking down a path that splits into two. Later on, the paths merge back into one. What you carry with you from the beginning can be carried with you at the end of the path. However, what you pick up during the split cannot be available at all times. So if, let's say, there is a ravine after the merge and on one of the split paths, there is a large enough plank that can help you cross the ravine. If you happened to take the other path, you wouldn't be able to cross the ravine, making the total trip a failure. For a successful program, we cannot have such scope errors."
+
+The syntax tree on screen grew slightly with additional annotations.
+
+- FunctionDeclaration
+   -- ReturnType: void
+   -- FunctionName: main
+   -- Parameters: ()
+   -- Body:
+      --- VariableDeclaration
+         ---- Type: integer
+         ---- VariableName: x
+         ---- Value: 1
+         ---- Scope: main
+      --- VariableDeclaration
+         ---- Type: integer
+         ---- VariableName: y
+         ---- Value: 2
+         ---- Scope: main
+      --- FunctionCall
+         ---- FunctionName: print
+         ---- Arguments:
+            ----- Expression: x + y
+            ----- Type: integer
+            ----- Scope: main
+
+"This then gets broken down further into an intermediate code form called three address code. Let's say that each location in memory is assigned an address. the three-address-code notation makes it such that in each line, only three memory addresses are being accessed at ones."
+
+x = 1
+y = 2
+t1 = x + y
+print t1
+
+"Here, 'print' will have its own internal functionality which is then recursively expanded upon. So what you have here is just a simplification. In truth, the intermediate code is much longer. Finally, this intermediate code can be quickly translated into machine code."
+
+MOV R1, #1
+MOV R2, #2
+ADD R3, R1, R2
+CALL print, R3   
+
+"This says to move the first value to memory location R1, the second value to memory location R2. Declare an intermediate memory location R3 in which R1 and R2 values are added. Then you call the function 'print' which accesses R3," Guy explained.
+
+"This is as close as you can get to machine language while still maintaining some semblance of human readability."
+
+At that moment, the room started to expand. Or to be more precise, the computer started to grow, pulling everyone within. "The assembled decodes the machine language into binary code which the processor can understand and execute. Since machine code is so straightforward, it can be directly translated word by word."
+
+The students noticed rows of the previously seen machine code being bombarded against the processor, which was a flat bed of flickering lights and sparks with a hodge-podge of piping going all over the place.
+
+"The more interfaces you start adding and more systems you wish to control, the more modules you will need to tack on to this code and the more complex the machine code becomes. But ultimately, by the time it reaches the processes, its all just a bunch of zeroes and ones."
+
+"Will we have to compile and run the program every time?" Marie asked.
+
+"You can compile once and store the machine code," Guy suggested. "Then you just have to run the machine code whenever you want. Of course, in that case you will have to re-compile everytime you change the variable values."
+
+"What if you store the memory location in machine code and take user input to edit the value stored there?" Shuri suggested. "This way you won't have to hardcode the values into the code itself."
+
+"That is the principle of static and dynamic memory," Guy validated. "Of course that's a whole other rabbit-hole that I think you guys should be able to explore on your own, now that you have the knowledge to get started."
+
+With that said, Guy clapped his hands and they were ejected from within the computer back to the library.
+
+"I'll let you folks play around with these devices for a few more minutes. But please, don't do something crazy and break it. Because if you do, then this entire illusion will fall apart," Guy reminded before dispersing from the scene.
+
+After a second of pause, all the Sect Members dispersed like a horde of ants and descended on the computers with abject glee.
 
 ===
 ___
