@@ -6,11 +6,11 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-07-08T22:40:38+0400
+updated: 2024-07-18T22:27:37+0400
 version: 1.1.1
 @end
 
-* (-) Tasks
+* Tasks
 
 ** (x) {** 4 April 2024}[First meeting]
 *** (x) Follow up with {* Instructional}[instructional] response
@@ -62,17 +62,23 @@ version: 1.1.1
 ** (-) (Try out) --> (Implement) -simple- example with (full system) --> (1D Drone Sim)
 *** (x) Design {* 1D Drone System}[the system]
 *** (-) Develop the secure state estimator
-**** (-) Set EKF (125Hz) to 20Hz (Downsample the EKF output stream for more info)
-**** (-) Copy over the code from Xiao Tan's GitHub
+**** (x) Set EKF (125Hz) to 20Hz (Downsample the EKF output stream for more info)
+**** (x) Copy over the code from Xiao Tan's GitHub
+**** (-)Test and reiterate until the state-reconstruction is working as expected
 *** (-) Get a minimum viable demo of SSR
     /SCHEDULED:/ {@ Wednesday 31 July 2024}
 
-** (-) Utilise a continuous function for acceleration input
-*** (-) 1x Acceleration controlled with 50Hz Input
-*** (-) 1x Acceleration controlled with 20Hz Input
+** (x) Utilise a continuous function for acceleration input
+*** (x) 1x Acceleration controlled with 50Hz Input
+*** (x) 1x Acceleration controlled with 20Hz Input
 
-** ( ) Tenth meeting
+** (x) {** 18 July 2024}[Tenth meeting]
    /SCHEDULED:/ {@ Thursday 18 July 2024}
+** (-) Create README for the {https://www.github.com/juniorsundar-tii/px4-secure-state-reconstruction}[px4-secure-state-reconstruction] repository
+*** (?) Instructions for a local installation
+*** (x) Instructions for a containerised installation
+** ( ) Eleventh meeting
+   /SCHEDULED:/ {@ Thursday 25 July 2024}
 
    ===
 
@@ -287,9 +293,37 @@ version: 1.1.1
    $|C=\begin{bmatrix}1 && 0 && 0 && 0 \\ 0 && 1 && 0 && 0 \\ 0 && 0 && 1 && 0 \\ 0 && 0 && 0 && 1 \end{bmatrix} \space \textbf{y} = \begin{bmatrix}x_1 \\ \dot{x}_1 \\ x_2 \\ \dot{x}_2\end{bmatrix}|$
 
    $|H=\begin{bmatrix}1 && 0 && 0 && 0\\ 0 && -1 && 0 && 0 \\ 0 && 0 && 1 && 0\\ 0 && 0 && 0 && -1\end{bmatrix} \space \textbf{q} = \begin{bmatrix}4 \\ 4 \\ 4 \\ 4\end{bmatrix}|$
+
    ===
 
 * Meetings
+
+** 18 July 2024
+   #tag label
+   Xiao Tan / Junior Sundar -- Syncup
+*** Attendees
+
+    | Xiao Tan
+    | Junior Sundar
+
+*** Goals
+
+    - Confirming whether current implementation is moving in one direction.
+
+*** Agenda
+
+    - Update on the functionality of the current implementation.
+    - Ascertain next step and why the node is behaving the way it is.
+
+*** Minutes
+
+    - Went through the simulation and implementation
+
+*** Action Items
+
+    - {** Create README for the {https://www.github.com/juniorsundar-tii/px4-secure-state-reconstruction}[px4-secure-state-reconstruction] repository}[Create README for the px4-secure-state-reconstruction repository]
+       -- {*** Instructions for a local installation}[Instructions for a local installation]
+       -- {*** Instructions for a containerised installation}[Instructions for a containerised installation]
 
 ** 8 July 2024
    #tag label

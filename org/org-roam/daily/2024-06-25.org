@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       b5f087a3-1094-4fe6-b4a0-4aea0de16f74
+:END:
+#+title: 2024-06-25
+
+This is it

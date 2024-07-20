@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       c8a9655c-62e4-402f-8c39-f0c8b72b0489
+:END:
+#+title: 2024-07-13
+
+* Title
+
+#+begin_note
+Test
+~This~
+#+end_note
+
+#+begin_note
+#+end_note
+
+#+begin_note
+sdasd
+#+end_note
+
+#+begin_warn
+This is it
+#+end_warn
+
+#+begin_important
+dasdas
+Test
+#+end_important
+
+#+begin_important
+asdasdasd
+das
+#+end_important
+
+
+[[file:~/org/assets/logo.png]]

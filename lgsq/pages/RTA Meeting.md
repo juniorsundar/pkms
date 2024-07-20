@@ -1,6 +1,35 @@
 tag:: #MEETING
 
 - {{renderer :tocgen2}}
+- # 17 July 2024
+  id:: 6697ff1d-85d9-482e-a507-52d91ba16b66
+	- **Attendees**
+	  collapsed:: true
+		- SRTA-AD
+	- **Goal**
+	  collapsed:: true
+		- Progress update.
+	- **Agenda**
+	  collapsed:: true
+		- Follow up on talk with [Daniel Smrcka @ F4F](((6697f269-3e4a-46f4-9032-15a30ce36e85))).
+		- Discuss current task.
+		- What is needed for demo? What is the scenario?
+	- **Minutes**
+	  collapsed:: true
+		- *Follow up on talk with [Daniel Smrcka @ F4F](((6697f269-3e4a-46f4-9032-15a30ce36e85))).*
+			- Basically, the system is supposed to work offline.
+			- This was how it was demo'd in Prague (@ April/May).
+			- It is being investigated at the moment.
+		- *Discuss current task.*
+			- Flashing new release with anomaly detection in manifest w/ Sakari.
+			- Taking a lot of time because the ML models are all downloading Torch.
+				- Maybe fix this?
+		- *What is needed for demo? What is the scenario?*
+			- Showcasing scenario for demonstration.
+			- Justifying how the demonstration carries over to real life.
+			- "Adding weights to change dynamics of the drone..."
+			- Installing UI on PMC?
+	- **Action Points**
 - # 10 July 2024
   collapsed:: true
 	- **Attendees**

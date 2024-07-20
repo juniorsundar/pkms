@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       e9f9b56c-66f6-4894-ba77-1fc85f3b24d1
+:END:
+#+TITLE: 2024-07-14
+
+* TODO Ask whether to use ~solve_initial_state~ or ~solve~
+[2024-07-15 Mon]
+* TODO This is a blank todo
+
+* This is it
+** This is another
+*** This is other
+
+asdasd
+asdasd
+asd
+    
+[[file:/home/juniorsundar/Dropbox/neorg/org/org-roam/daily/2024-07-14.org::*This is another][This is another]]

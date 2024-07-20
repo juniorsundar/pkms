@@ -1,9 +1,0 @@
-:root {
-  --ls-font-family: CaskaydiaCove NFM;
-}
-
-* {
-   font-family: CaskaydiaCove NF, monospace;
-}
-
-@import url('https://logseq.catppuccin.com/ctp-frappe.css');

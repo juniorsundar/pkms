@@ -108,7 +108,8 @@
 	- DONE [Ninth meeting](((668c213d-e504-4e39-8e03-5f872deadaeb)))
 	- DOING (Try out)->(Implement) ~~simple~~ example with (full system)->(1D Drone Sim)
 	  :LOGBOOK:
-	  CLOCK: [2024-05-21 Tue 21:58:08]
+	  CLOCK: [2024-05-21 Tue 21:58:08]--[2024-07-16 Tue 16:23:38] =>  1338:25:30
+	  CLOCK: [2024-07-16 Tue 16:23:44]
 	  :END:
 		- DONE Design [the system](((665a0dc2-ee9a-4ccf-81b9-6e15aeac06c5)))
 		- DOING Develop the secure state reconstructor
@@ -116,35 +117,49 @@
 		  CLOCK: [2024-05-31 Fri 21:47:57]
 		  CLOCK: [2024-05-31 Fri 21:48:12]
 		  :END:
-			- DOING Set EKF (125Hz) to 20Hz ([here](((668c24d5-a73b-4590-9373-c3ea2bc86412))) for more info)
+			- DONE Set EKF (125Hz) to 20Hz ([here](((668c24d5-a73b-4590-9373-c3ea2bc86412))) for more info)
 			  id:: 668c24bb-5334-4be1-b9af-6471205a9cc0
 			  :LOGBOOK:
-			  CLOCK: [2024-07-08 Mon 21:41:20]
+			  CLOCK: [2024-07-08 Mon 21:41:20]--[2024-07-18 Thu 22:15:15] =>  240:33:55
 			  :END:
-			- DOING Copy over the code from Xiao Tan's GitHub
+			- DONE Copy over the code from Xiao Tan's GitHub
 			  :LOGBOOK:
-			  CLOCK: [2024-07-08 Mon 21:43:30]
+			  CLOCK: [2024-07-08 Mon 21:43:30]--[2024-07-15 Mon 15:06:05] =>  161:22:35
+			  :END:
+			- DOING Test and reiterate until the state-reconstruction is working as expected
+			  :LOGBOOK:
+			  CLOCK: [2024-07-15 Mon 15:05:46]
+			  CLOCK: [2024-07-15 Mon 15:05:51]
 			  :END:
 		- DOING Get a minimum viable demo for SSR
 		  SCHEDULED: <2024-07-31 Wed>
 		  :LOGBOOK:
 		  CLOCK: [2024-07-08 Mon 21:48:41]
 		  :END:
-	- DOING Utilise a continuous function for acceleration input
+	- DONE Utilise a continuous function for acceleration input
 	  :LOGBOOK:
 	  CLOCK: [2024-07-08 Mon 21:24:50]
-	  CLOCK: [2024-07-08 Mon 21:25:01]
+	  CLOCK: [2024-07-08 Mon 21:25:01]--[2024-07-15 Mon 14:46:53] =>  161:21:52
 	  :END:
-		- DOING 1x Acceleration controlled with 50Hz Input
+		- DONE 1x Acceleration controlled with 50Hz Input
 		  :LOGBOOK:
-		  CLOCK: [2024-07-04 Thu 09:18:26]
+		  CLOCK: [2024-07-04 Thu 09:18:26]--[2024-07-15 Mon 13:40:05] =>  268:21:39
 		  :END:
-		- DOING 1x Acceleration controlled with 20Hz Input
+		- DONE 1x Acceleration controlled with 20Hz Input
 		  :LOGBOOK:
-		  CLOCK: [2024-07-04 Thu 09:18:26]
+		  CLOCK: [2024-07-04 Thu 09:18:26]--[2024-07-15 Mon 14:46:51] =>  269:28:25
 		  :END:
-	- TODO Tenth meeting
+	- DONE [Tenth meeting](((66995bd6-be17-4090-9304-a83949253807)))
 	  SCHEDULED: <2024-07-18 Thu>
+	- DOING Create README for the [px4-secure-state-reconstruction](https://www.github.com/juniorsundar-tii/px4-secure-state-reconstruction) repository
+	  id:: 66995c32-3ba7-4707-ac81-91a03ef9e4a6
+	  :LOGBOOK:
+	  CLOCK: [2024-07-20 Sat 00:31:11]
+	  :END:
+		- LATER Instructions for a local installation
+		- DONE Instructions for a containerised installation
+	- TODO Eleventh meeting
+	  SCHEDULED: <2024-07-25 Thu>
 - # Notes
   collapsed:: true
 	- ## MATLAB Cells
@@ -308,6 +323,26 @@
 		- $$H=\begin{bmatrix}1 && 0 && 0 && 0\\ 0 && -1 && 0 && 0 \\ 0 && 0 && 1 && 0\\ 0 && 0 && 0 && -1\end{bmatrix} \space \textbf{q} = \begin{bmatrix}4 \\ 4 \\ 4 \\ 4\end{bmatrix}$$
 - # Meetings
   tag:: #MEETING
+	- ## 18 July 2024
+	  id:: 66995bd6-be17-4090-9304-a83949253807
+	  collapsed:: true
+		- **Attendees**
+		  collapsed:: true
+			- Xiao Tan
+			- Junior Sundar
+		- **Goal**
+		  collapsed:: true
+			- Confirming whether current implementation is moving in one direction.
+		- **Agenda**
+		  collapsed:: true
+			- Update on the functionality of the current implementation.
+			- Ascertain next step and why the node is behaving the way it is.
+		- **Minutes**
+		  collapsed:: true
+			- Went through the simulation and implementation
+		- **Action Points**
+		  collapsed:: true
+			- ((66995c32-3ba7-4707-ac81-91a03ef9e4a6))
 	- ## 8 July 2024
 	  id:: 668c213d-e504-4e39-8e03-5f872deadaeb
 	  collapsed:: true
@@ -465,6 +500,7 @@
 			- Xiao Tan
 			- Junior Sundar
 		- **Goals**
+		  collapsed:: true
 			- Understand the workings of the nominal controller and the safety filter
 		- **Agenda**
 		  collapsed:: true

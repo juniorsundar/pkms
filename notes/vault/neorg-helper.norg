@@ -4,7 +4,7 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-06-10T15:05:01+0400
-updated: 2024-06-10T15:18:30+0400
+updated: 2024-07-15T20:51:53+0400
 version: 1.1.1
 @end
 
@@ -54,7 +54,7 @@ version: 1.1.1
     ===
 
 * Implementations
-  - Python --> {:$/journal/task-box/pynorg:}[pynorg]
+  - -Python --> {:$/journal/task-box/pynorg:}[pynorg]-
   - Lua (Neovim side) --> {:$/journal/task-box/neorg_utils.lua:}[neorg_utils.lua]
 
 * Goal/Target

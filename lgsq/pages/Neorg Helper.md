@@ -27,7 +27,7 @@
 			- Reorganising?
 		- **(Optional) Site Deployment**
 - # Implementations
-	- Python --> [[pynorg]]
+	- ~~Python --> [[pynorg]]~~
 	- Lua (Neovim side) --> [[neorg_utils.lua]]
 - # Goal/Target
 	- #+BEGIN_IMPORTANT

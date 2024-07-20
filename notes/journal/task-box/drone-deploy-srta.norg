@@ -4,11 +4,11 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-07-04T22:31:43+0400
-updated: 2024-07-09T21:17:19+0400
+updated: 2024-07-18T22:27:25+0400
 version: 1.1.1
 @end
 
-* (-) Tasks
+* Tasks
 ** (x) Set up GCS/PMC for drone control
 *** (x) GCS and Fog role method
 **** (x) Get documentation to set it up
@@ -28,9 +28,14 @@ version: 1.1.1
 *** (x) Connect Comms Module 1.5 to Internet Router
 *** (x) Verify that the PMC connects to the Mesh Network
 
-** (-) Setup drone with BKC 12.1
+** (x) Setup drone with BKC 12.1
 *** (x) Flash BKC 12.1 to SRTA drone
-*** (-) Provision drone and install containers
-*** ( ) Verify that drone connects to Mesh Network
+*** (x) Provision drone and install containers
+*** (x) Verify that drone connects to Mesh Network
 
-** ( ) Verify that the PMC, Drone and Mesh Network are functional
+** (x) Verify that the PMC, Drone and Mesh Network are functional
+** (x) Determine if it is possible to have the PMC and Drone functioning without WiFi in Mesh Network
+** (x) Talk to Daniel Smrcka about running PMC + Drone offline
+** (-) Flash SRTA-module inclusive release into the drone Saluki v3
+   /SCHEDULED: {@ 17 July 2024}/
+** ( ) Run some test flights with the drone

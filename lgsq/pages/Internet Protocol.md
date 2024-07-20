@@ -11,14 +11,14 @@
 			- **Configuration** - Can be configured manually (static IP) or automatically (dynamic IP) using [[Dynamic Host Configuration Protocol]] (DHCP)
 			- **[Header](((668b9d1a-ea59-4903-9c34-4068c40d797d))) complexity** - Simpler header with 12 fields.
 			- **Security** - Security features optional and implemented through IPsec.
-			- **Eg** - 192.168.1.1, 172.16.0.1, 10.0.0.1
+			- **Eg** - `192.168.1.1`, `172.16.0.1`, `10.0.0.1`
 		- ### IPv6
 			- **Format** - 128-bit numbers, usually written in hexadecimal format as eight groups of four hexadecimal digits separated by colons.
 			- **Range** - Can provide virtually unlimited number of unique addresses (~340 undecillion).
 			- **Configuration** - Designed to support auto-configuration. Uses [[Stateless Address Autoconfiguration]] (SLAAC) and can also use DHCPv6.
 			- **[Header](((668b9d1a-ea59-4903-9c34-4068c40d797d))) complexity** - Complex with 8 fields, but includes additional features like flow labeling and improved routing efficiency.
 			- **Security** - IPSec is mandatory. Provided built-in security features.
-			- **Eg** - 2001:0db8:85a3:0000:0000:8a2e:0370:7334
+			- **Eg** - `2001:0db8:85a3:0000:0000:8a2e:0370:7334`
 - # Headers
   id:: 668b9d1a-ea59-4903-9c34-4068c40d797d
 	- ## Definition
@@ -78,23 +78,23 @@
 	- ## Breakdown of an IP Address
 		- **Network Portion**: Identifies the network.
 			- Determined by the subnet mask.
-			- In 192.168.1.1/24, the network portion is 192.168.1.
+			- In `192.168.1.1/24`, the network portion is `192.168.1`.
 		- **Host Portion**: Identifies the specific device within the network.
-			- In 192.168.1.1/24, the host portion is .1.
-	- ## Example: 192.168.1.1/24
+			- In `192.168.1.1/24`, the host portion is `.1`.
+	- ## Example: `192.168.1.1/24`
 		- **First Octet (192)**: Part of the network portion.
 		- **Second Octet (168)**: Part of the network portion.
 		- **Third Octet (1)**: Part of the network portion.
 		- **Fourth Octet (1)**: Part of the host portion.
 	- ## Subnet Mask
-		- Subnet mask: 255.255.255.0
-			- Binary: 11111111.11111111.11111111.00000000
+		- Subnet mask: `255.255.255.0`
+			- Binary: `11111111.11111111.11111111.00000000`
 		- Defines the division between the network and host portions.
-		- In 192.168.1.1/24:
-			- **Network Portion**: 192.168.1
-			- **Host Portion**: .1
+		- In `192.168.1.1/24`:
+			- **Network Portion**: `192.168.1`
+			- **Host Portion**: `.1`
 	- ## What Does the /24 Mean?
 		- Is a form of *[](((668cee9b-9774-4eea-98f0-98c8adfab309)))* notation, which indicates the length of the subnet mask.
 		- Specifies how many bits of the IP address are used for the network portion.
-		- In this case, /24 means that the first 24 bits of the subnet mask are 1s (i.e. 255.255.255.0 or 11111111.11111111.11111111.00000000).
+		- In this case, `/24` means that the first 24 bits of the subnet mask are 1s (i.e. `255.255.255.0` or `11111111.11111111.11111111.00000000`).
 		- Carried over to ((668cee9b-b74f-413f-9b42-9c702722c972)).
