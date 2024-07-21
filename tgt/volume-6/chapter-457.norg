@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-07-20T12:17:34+0400
-updated: 2024-07-21T00:16:44+0400
+updated: 2024-07-21T22:47:10+0400
 version: 1.1.1
 @end
 
@@ -44,4 +44,54 @@ Tes went silent and contemplated on Shuri's reasoning.
 
 "Look, there will be time to add this feature to the compiler at a later date when our hardware can handle it," Shuri compromised. "The borrow-checker will remain in the Icebox until such a time comes- BUT, you can move onwards while keeping the potential of a future integration in mind."
 
-Tes grumbled under his breath while acquiescing to the decision. But Shuri ignored it and moved on, "Speaking of the compiler, the last time I"
+Tes grumbled under his breath while acquiescing to the decision. But Shuri ignored it and moved on, "Speaking of the compiler, how's the optimsation faring? The test code I provided generated a convoluted mess the last time I tried compiling it."
+
+"The result was effective though," Morise, the girl who was the team lead for the Compiler, expressed exasperatedly.
+
+"Just because it is effective doesn't mean that it is optimal," Shuri rebutted.
+
+"Why does it matter if its optimal or not," Morise argued. "You shot down Tes' idea even though he was pursuing optimality."
+
+"Tes' optimisation is on the user-side leading up to the compiler. If the user doesn't know how to use the tool properly, its the user's problem. But if the tool fails to perform the task it is expressly created to do, then its a failed tool. Suboptimal compilation leads to excessive resources being allocated on the lower-level to execute the task," Shuri explained sternly.
+
+"I get that," Morise said with an acquiescing nod, "but its quite... difficult. We are struggling to generalise the process. Tes managed to rework the compiler to optimally compile the test code you provided, but in doing so it breaks our other tests."
+
+Shuri tapped the desk in thought for a while before turning to her other side and asking another boy seated on the roud table, "How is the Core Programming going?"
+
+The boy slid forward a parchment and said, "They're getting the hang of it, now. The rate of mistakes or failures has dropped considerably to at most one in two days."
+
+"That's good," Shuri murmured. "Okay, then I will me allocating myself to the Compiler team for the time being. It is evident that we need to restart from scratch..."
+
+She then reluctantly moved towards the agile board and moved the ticket labelled "Borrow-Checker" from the "Icebox" section to the "In-Progress" section.
+
+"Wait!" Tes exclaimed. "We're going to do it?"
+
+"Might as well," Shuri conceded with a tired shoulder-shrug. "While we're optimising the code, we can figure out a way to squeeze it in. With an additional brain, we can afford the deviation."
+
+The meeting continued for two entire hours as the group cemented their plan for the sprint that would last for two weeks. Once done, the group stormed out of the room with haste.
+
+"They run as though they are being chased by ravenous beasts," Marie commented.
+
+"I can understand their frustration," Shuri said with a groan. "I am not a fan of these sprint-planning meetings."
+
+"And yet you hold them."
+
+"Because they are necessary," Shuri reminded. "It is part of the process."
+
+"You could alter it to your requirement," Marie suggested.
+
+"One needs to be familiar with how a loaf of bread is baked before asserting their own twists into it," Shuri responded. "Depending on how this project is finalised, I will have a better understanding on how to approach the next one. The agile process will evolve based on that. In fact, it is just these horrendously long sprint-planning meetings that grate on my nerves. Overall, I am quite pleased with its outcome."
+
+She pointed at a rather large binder at the centre of the table and said, "The documentation is thorough. Do you know the benefit of this?"
+
+Marie nodded and said, "Not everyone is born with a brain such as yours. With a written train of the teams challenges, failures and successes, any future project where such similar challenges are faced will be resolved more seamlessly;."
+
+"Exactly!" Shuri expressed with a snap of her fingers. Then, after a few minutes of silence, she said, "This will all go towards my Magnum Opus."
+
+She extended her arms out and declared, "The Artificial Brain."
+
+"Didn't you already create that?" Marie probed with a confused tilt of her head.
+
+"A brain does more than just store information," Shuri dismissed with a wave of her hand. "It need to reason. Create logical connections. Innovate!"
+
+"And you think its achievable... something like that? From my research, there haven't been any instances of "
