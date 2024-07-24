@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-07-04T22:31:43+0400
-updated: 2024-07-18T22:27:25+0400
+updated: 2024-07-24T14:17:59+0400
 version: 1.1.1
 @end
 
@@ -38,4 +38,4 @@ version: 1.1.1
 ** (x) Talk to Daniel Smrcka about running PMC + Drone offline
 ** (-) Flash SRTA-module inclusive release into the drone Saluki v3
    /SCHEDULED: {@ 17 July 2024}/
-** ( ) Run some test flights with the drone
+** (x) Run some test flights with the drone

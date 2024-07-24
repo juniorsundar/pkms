@@ -1,0 +1,95 @@
+@document.meta
+title: 24 July 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-07-24T16:37:19+0400
+version: 1.1.1
+@end
+
+* To-Do
+
+** ( ) Update JIRA task for the "Demo" timeline
+
+  ===
+___
+
+* Journal
+
+  - Attended {:$/journal/2024/07/24:** Solita - SRTA MLOps Syncup}[Solita - SRTA MLOps Syncup].
+  - {:$/journal/2024/07/24:** Got the drone flying with v12.1.0}[Got the drone flying with v12.1.0].
+
+* Got the drone flying with v12.1.0
+   - There was an error with connection to the RTK server.
+   - RTK (real-time kinematic) server provides corrections for the GPS
+     measurements and is positioned locally in TII rooftop.
+   - The drone can still perform basic missions, but it will suffer when it
+     comes time to do more elaborate missions as it is now purely relying on
+     GPS to provide its positioning.
+  - *According to Pedro Silva:*
+  > I think the problem is that you are looking for the RTK Server on the TII
+  > IP range, instead of using the Tailscale IP. If you setup the PMC and drone
+  > on the 192.168.xx.xx, it won't find the 172.31.107.xx
+
+  ===
+___
+
+* Meetings
+
+** Solita - SRTA MLOps Syncup
+
+*** Attendees
+
+    | Solita
+    | SRTA-AD
+
+*** Goals
+
+    - Synchronising on the state of emergency landing demo.
+    - Discussing current issue with the v12.1 release with GPU support and
+      safelanding modules.
+
+*** Agenda
+
+    - Bring up the error in running the SRTA containers in the safelanding
+      release with GPU enabled.
+    - Ask what hardware set-up they are working with in Finland.
+
+*** Minutes
+
+    - Testing on hardware is not possible now on Solita until Esko returns.
+    - Moamen will try to follow up in the issues posted earlier
+
+*** Action Items
+
+** Test BKC with SRTA Modules w/ F4F
+
+*** Attendees
+
+    | Martin Andreoni
+    | Martin AndreoniWillian Lunardi
+    | Iraklis Nikolakakos
+    | Junior Sundar
+    | Jorge Henriques
+
+*** Goals
+
+    - Discuss feasibility of F4F being involved in testing.
+    - Identifying state of data colleciton.
+      
+*** Agenda
+
+    - Sensor anomaly testing to get to demo phase: video + analytics working.
+    - Testing on 
+
+*** Minutes
+
+    - Testing on hardware is not possible now on Solita until Esko returns.
+    - Moamen will try to follow up in the issues posted earlier
+
+*** Action Items
+    ===
+___
+
+{:$/journal/2024/07/23:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/07/25:}[next >]
