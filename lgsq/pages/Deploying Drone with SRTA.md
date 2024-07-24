@@ -91,4 +91,7 @@
 	  :LOGBOOK:
 	  CLOCK: [2024-07-15 Mon 20:32:02]
 	  :END:
-	- TODO Run some test flights with the drone
+	- DONE Run some test flights with the drone
+	  :LOGBOOK:
+	  CLOCK: [2024-07-24 Wed 14:16:54]--[2024-07-24 Wed 14:16:56] =>  00:00:02
+	  :END:
