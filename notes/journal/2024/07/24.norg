@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-07-25T11:44:44+0400
+updated: 2024-07-26T16:06:48+0400
 version: 1.1.1
 @end
 
@@ -18,15 +18,15 @@ ___
 * Journal
 
   - Attended {:$/journal/2024/07/24:** Solita - SRTA MLOps Syncup}[Solita - SRTA MLOps Syncup].
-  - {:$/journal/2024/07/24:** Got the drone flying with v12.1.0}[Got the drone flying with v12.1.0].
+  - {:$/journal/2024/07/24:* RTK Server Disconnection/`ntrip-client` Death}[RTK Server Disconnection/`ntrip-client` Death].
 
-* Got the drone flying with v12.1.0
-   - There was an error with connection to the RTK server.
-   - RTK (real-time kinematic) server provides corrections for the GPS
-     measurements and is positioned locally in TII rooftop.
-   - The drone can still perform basic missions, but it will suffer when it
-     comes time to do more elaborate missions as it is now purely relying on
-     GPS to provide its positioning.
+* RTK Server Disconnection/`ntrip-client` Death
+  - There was an error with connection to the RTK server.
+  - RTK (real-time kinematic) server provides corrections for the GPS
+    measurements and is positioned locally in TII rooftop.
+  - The drone can still perform basic missions, but it will suffer when it
+    comes time to do more elaborate missions as it is now purely relying on
+    GPS to provide its positioning.
   - *According to Pedro Silva:*
   > I think the problem is that you are looking for the RTK Server on the TII
   > IP range, instead of using the Tailscale IP. If you setup the PMC and drone
@@ -59,7 +59,7 @@ ___
 *** Minutes
 
     - Testing on hardware is not possible now on Solita until Esko returns.
-    - Moamen will try to follow up in the issues posted earlier
+    - Moamen will try to follow up in the issues posted earlier.
 
 *** Action Items
 
@@ -68,7 +68,7 @@ ___
 *** Attendees
 
     | Martin Andreoni
-    | Martin AndreoniWillian Lunardi
+    | Willian Lunardi
     | Iraklis Nikolakakos
     | Junior Sundar
     | Jorge Henriques
@@ -76,19 +76,16 @@ ___
 *** Goals
 
     - Discuss feasibility of F4F being involved in testing.
-    - Identifying state of data colleciton.
+    - Identifying state of data collection.
       
 *** Agenda
 
-    - Sensor anomaly testing to get to demo phase: video + analytics working.
-    - Testing on 
 
 *** Minutes
 
-    - Testing on hardware is not possible now on Solita until Esko returns.
-    - Moamen will try to follow up in the issues posted earlier
 
 *** Action Items
+
     ===
 ___
 

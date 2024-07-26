@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-07-25T11:44:33+0400
+updated: 2024-07-26T12:08:47+0400
 version: 1.1.1
 @end
 
@@ -22,24 +22,40 @@ ___
 
 * Meetings
 
-** Meeting Name
+** RTA Meeting
 
 *** Attendees
 
-    | Names
+    | SRTA-AD
 
 *** Goals
 
+    - Update on progress.
+    - Establish conditions of blockers.
 
 *** Agenda
 
-    - ( ) 
+    - Update on the
+    - Discuss current task.
+    - What is needed for demo? What is the scenario?
 
 *** Minutes
 
+    - *Follow up on talk with {:$/journal/task-box/drone-deploy-srta:** Talk to Daniel Smrcka about running PMC + Drone offline}[Daniel Smrcka @ F4F]*
+       -- Basically, the system is supposed to work offline.
+       -- This was how it was demo'd in Prague (@ April/May).
+       -- It is being investigated at the moment.
+    - *Discuss current task.*
+       -- Flashing new release with anomaly detection in manifest w/ Sakari.
+       -- Taking a lot of time because the ML models are all downloading Torch.
+          --- Maybe fix this?
+    - *What is needed for demo? What is the scenario?*
+       -- Showcasing scenario for demonstration.
+       -- Justifying how the demonstration carries over to real life.
+       -- "Adding weights to change dynamics of the drone..."
+       -- Installing UI on PMC?
 
 *** Action Items
-
     ===
 ___
 

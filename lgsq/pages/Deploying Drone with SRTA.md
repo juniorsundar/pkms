@@ -87,11 +87,38 @@
 	  :END:
 	- DONE Talk to Daniel Smrcka about running PMC + Drone offline
 	  id:: 6697f269-3e4a-46f4-9032-15a30ce36e85
-	- DOING Flash SRTA-module inclusive release into the drone Saluki v3
+	- DONE Flash SRTA-module inclusive release into the drone Saluki v3
 	  :LOGBOOK:
-	  CLOCK: [2024-07-15 Mon 20:32:02]
+	  CLOCK: [2024-07-15 Mon 20:32:02]--[2024-07-26 Fri 13:41:42] =>  257:09:40
 	  :END:
 	- DONE Run some test flights with the drone
 	  :LOGBOOK:
 	  CLOCK: [2024-07-24 Wed 14:16:54]--[2024-07-24 Wed 14:16:56] =>  00:00:02
 	  :END:
+	- DOING Things to Change in [SRTA Release](https://github.com/tiiuae/fog_system/tree/12.1-gpu-srta)
+	  :LOGBOOK:
+	  CLOCK: [2024-07-26 Fri 13:42:11]
+	  :END:
+		- DONE Change `path-worker` reference
+		  collapsed:: true
+		  :LOGBOOK:
+		  CLOCK: [2024-07-26 Fri 13:43:20]--[2024-07-26 Fri 13:43:29] =>  00:00:09
+		  :END:
+			- ```bash
+			  fog manifest update-component path-worker --image ghcr.io/tiiuae/tii-path-worker:sha-8bf623b --things-will-break
+			  ```
+		- DOING Install with `sros=true` but change it to `false` after setup
+		  :LOGBOOK:
+		  CLOCK: [2024-07-26 Fri 13:43:21]
+		  :END:
+		- DONE Change `tii-ml-rta-anomaly-detection` container reference --> `sha-c5d75d2`
+		  :LOGBOOK:
+		  CLOCK: [2024-07-26 Fri 13:43:22]--[2024-07-26 Fri 13:43:28] =>  00:00:06
+		  :END:
+		- DONE Remove `gpu=all`
+		  :LOGBOOK:
+		  CLOCK: [2024-07-26 Fri 13:43:23]--[2024-07-26 Fri 13:43:23] =>  00:00:00
+		  CLOCK: [2024-07-26 Fri 13:43:24]--[2024-07-26 Fri 13:43:25] =>  00:00:01
+		  :END:
+	- TODO Test fly drone with the non-GPU anomaly detection release
+	- TODO Conduct experiments with weights-attached
