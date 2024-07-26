@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-07-04T22:31:43+0400
-updated: 2024-07-26T13:44:18+0400
+updated: 2024-07-26T21:49:22+0400
 version: 1.1.1
 @end
 
@@ -43,6 +43,7 @@ version: 1.1.1
    /STARTED: {@ 26 July 2024}/
 *** (x) Change `path-worker` reference
     /STARTED: {@ 26 July 2024}/
+    /COMPLETED: {@ 26 July 2024}/
     @code bash
     fog manifest update-component path-worker --image ghcr.io/tiiuae/tii-path-worker:sha-8bf623b --things-will-break
     @end
@@ -50,8 +51,9 @@ version: 1.1.1
     /STARTED: {@ 26 July 2024}/
 *** (x) Change `tii-ml-rta-anomaly-detection` container reference --> `sha-c5d75d2`
     /STARTED: {@ 26 July 2024}/
+    /COMPLETED: {@ 26 July 2024}/
 *** (x) Remove `gpu=all`
     /STARTED: {@ 26 July 2024}/
-
+    /COMPLETED: {@ 26 July 2024}/
 ** ( ) Test fly drone with the non-GPU anomaly detection release
 ** ( ) Conduct experiments with weights-attached

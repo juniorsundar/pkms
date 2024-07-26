@@ -4,21 +4,22 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-07-26T16:06:48+0400
+updated: 2024-07-26T23:52:08+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-** (-) Update JIRA task for the "Demo" timeline
+** (x) Update JIRA task for the "Demo" timeline
 
-  ===
+   ===
 ___
 
 * Journal
 
   - Attended {:$/journal/2024/07/24:** Solita - SRTA MLOps Syncup}[Solita - SRTA MLOps Syncup].
   - {:$/journal/2024/07/24:* RTK Server Disconnection/`ntrip-client` Death}[RTK Server Disconnection/`ntrip-client` Death].
+  - Attended {:$/journal/2024/07/24:** Test BKC with SRTA Modules w/ F4F}[Test BKC with SRTA Modules w/ F4F].
 
 * RTK Server Disconnection/`ntrip-client` Death
   - There was an error with connection to the RTK server.
@@ -77,12 +78,18 @@ ___
 
     - Discuss feasibility of F4F being involved in testing.
     - Identifying state of data collection.
-      
+
 *** Agenda
 
+    - Determine if it is possible to transfer attention from data collection to
+      setting up the SRTA-enabled drone.
+    - Discuss plan of attack to resolve this issue.
 
 *** Minutes
 
+    - Jorge is available and can help out in fast-tracking and testing the RTA
+      module inclusive release.
+    - Some strategies to resolve some issues.
 
 *** Action Items
 
