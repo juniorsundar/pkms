@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-07-04T22:31:43+0400
-updated: 2024-07-26T21:49:22+0400
+updated: 2024-07-29T22:25:34+0400
 version: 1.1.1
 @end
 
@@ -37,23 +37,35 @@ version: 1.1.1
 ** (x) Determine if it is possible to have the PMC and Drone functioning without WiFi in Mesh Network
 ** (x) Talk to Daniel Smrcka about running PMC + Drone offline
 ** (x) Flash SRTA-module inclusive release into the drone Saluki v3
-   /SCHEDULED: {@ 17 July 2024}/
 ** (x) Run some test flights with the drone
-** (-) Things to Change in {https://github.com/tiiuae/fog_system/tree/12.1-gpu-srta}[SRTA Release]
-   /STARTED: {@ 26 July 2024}/
+** (x) Things to Change in {https://github.com/tiiuae/fog_system/tree/12.1-gpu-srta}[SRTA Release]
+   | STARTED: {@ 26 July 2024}
+   | COMPLETED: {@ 29 July 2024}
 *** (x) Change `path-worker` reference
-    /STARTED: {@ 26 July 2024}/
-    /COMPLETED: {@ 26 July 2024}/
+    | STARTED: {@ 26 July 2024}
+    | COMPLETED: {@ 26 July 2024}
     @code bash
     fog manifest update-component path-worker --image ghcr.io/tiiuae/tii-path-worker:sha-8bf623b --things-will-break
     @end
-*** (-) Install with `sros=true` but change it to `false` after setup
-    /STARTED: {@ 26 July 2024}/
+*** (x) Install with `sros=true` but change it to `false` after setup
+    | STARTED: {@ 26 July 2024}
+    | COMPLETED: {@ 29 July 2024}
 *** (x) Change `tii-ml-rta-anomaly-detection` container reference --> `sha-c5d75d2`
-    /STARTED: {@ 26 July 2024}/
-    /COMPLETED: {@ 26 July 2024}/
+    | STARTED: {@ 26 July 2024}
+    | COMPLETED: {@ 26 July 2024}
 *** (x) Remove `gpu=all`
-    /STARTED: {@ 26 July 2024}/
-    /COMPLETED: {@ 26 July 2024}/
-** ( ) Test fly drone with the non-GPU anomaly detection release
+    | STARTED: {@ 26 July 2024}
+    | COMPLETED: {@ 26 July 2024}
+*** (x) Add `--network=host` to the `runtime-assurance` container
+    | STARTED: {@ 29 July 2024}
+    | COMPLETED: {@ 29 July 2024}
+*** (x) Move all ML containers to `app` VM
+    | STARTED: {@ 29 July 2024}
+    | COMPLETED: {@ 29 July 2024}
+*** (x) Set the NATS URLs to environment variables
+    | STARTED: {@ 29 July 2024}
+    | COMPLETED: {@ 29 July 2024}
+
+** (-) Test fly drone with the non-GPU anomaly detection release
+   | STARTED: {@ 29 July 2024}
 ** ( ) Conduct experiments with weights-attached

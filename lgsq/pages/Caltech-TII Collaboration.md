@@ -1,6 +1,5 @@
 - {{renderer :tocgen2}}
 - # Tasks
-  collapsed:: true
 	- DONE [First meeting](((660f9803-86fb-4d27-8592-f471e3712eba)))
 	  :LOGBOOK:
 	  CLOCK: [2024-04-04 Thu 23:11:09]--[2024-04-15 Mon 13:16:47] =>  254:05:38
@@ -113,10 +112,10 @@
 	  CLOCK: [2024-07-16 Tue 16:23:44]
 	  :END:
 		- DONE Design [the system](((665a0dc2-ee9a-4ccf-81b9-6e15aeac06c5)))
-		- DOING Develop the secure state reconstructor
+		- DONE Develop the secure state reconstructor
 		  :LOGBOOK:
 		  CLOCK: [2024-05-31 Fri 21:47:57]
-		  CLOCK: [2024-05-31 Fri 21:48:12]
+		  CLOCK: [2024-05-31 Fri 21:48:12]--[2024-07-29 Mon 23:25:13] =>  1417:37:01
 		  :END:
 			- DONE Set EKF (125Hz) to 20Hz ([here](((668c24d5-a73b-4590-9373-c3ea2bc86412))) for more info)
 			  id:: 668c24bb-5334-4be1-b9af-6471205a9cc0
@@ -127,10 +126,11 @@
 			  :LOGBOOK:
 			  CLOCK: [2024-07-08 Mon 21:43:30]--[2024-07-15 Mon 15:06:05] =>  161:22:35
 			  :END:
-			- DOING Test and reiterate until the state-reconstruction is working as expected
+			- DONE Test and reiterate until the state-reconstruction is working as expected
 			  :LOGBOOK:
 			  CLOCK: [2024-07-15 Mon 15:05:46]
-			  CLOCK: [2024-07-15 Mon 15:05:51]
+			  CLOCK: [2024-07-15 Mon 15:05:51]--[2024-07-29 Mon 23:25:09] =>  344:19:18
+			  CLOCK: [2024-07-29 Mon 23:25:09]--[2024-07-29 Mon 23:25:12] =>  00:00:03
 			  :END:
 		- DOING Get a minimum viable demo for SSR
 		  SCHEDULED: <2024-07-31 Wed>
@@ -152,15 +152,23 @@
 		  :END:
 	- DONE [Tenth meeting](((66995bd6-be17-4090-9304-a83949253807)))
 	  SCHEDULED: <2024-07-18 Thu>
-	- DOING Create README for the [px4-secure-state-reconstruction](https://www.github.com/juniorsundar-tii/px4-secure-state-reconstruction) repository
+	- DONE Create README for the [px4-secure-state-reconstruction](https://www.github.com/juniorsundar-tii/px4-secure-state-reconstruction) repository
 	  id:: 66995c32-3ba7-4707-ac81-91a03ef9e4a6
 	  :LOGBOOK:
-	  CLOCK: [2024-07-20 Sat 00:31:11]
+	  CLOCK: [2024-07-20 Sat 00:31:11]--[2024-07-29 Mon 23:25:27] =>  238:54:16
 	  :END:
-		- LATER Instructions for a local installation
+		- CANCELLED Instructions for a local installation
 		- DONE Instructions for a containerised installation
-	- TODO Eleventh meeting
+	- DONE [Eleventh meeting](((66a7f4d1-a079-4d86-beb0-5a24d73a3e6b)))
 	  SCHEDULED: <2024-07-25 Thu>
+	- TODO Twelfth meeting
+	- TODO Evaluate the SSR implmentation in ROS
+		- TODO Set attacked states to varying types
+			- Constant
+			- Noisy
+			- Targeted attacks
+		- TODO Generate plots of estimated state vs. actual state
+		- TODO Try with $x$ and $y$ for both position and velocity
 - # Notes
   collapsed:: true
 	- ## MATLAB Cells
@@ -324,6 +332,26 @@
 		- $$H=\begin{bmatrix}1 && 0 && 0 && 0\\ 0 && -1 && 0 && 0 \\ 0 && 0 && 1 && 0\\ 0 && 0 && 0 && -1\end{bmatrix} \space \textbf{q} = \begin{bmatrix}4 \\ 4 \\ 4 \\ 4\end{bmatrix}$$
 - # Meetings
   tag:: #MEETING
+	- ## 29 July 2024
+	  id:: 66a7f4d1-a079-4d86-beb0-5a24d73a3e6b
+		- **Attendees**
+			- Xiao Tan
+			- Junior Sundar
+		- **Goal**
+			- Follow up on the state of SSR.
+		- **Agenda**
+			- Update from Xiao about his additions.
+		- **Minutes**
+			- Went through the simulation and implementation
+			- Went through the corrections implemented by Xiao Tan to his code.
+			- Checked through behaviour.
+			- **Important Points** For 4 sensors where two are for position and two are for velocity:
+				- Don't attack the two position sensors together if $s = 2$.
+				- Don't attack all position sensors if $s = 3$.
+				- In both those cases, going against the recommendations causes the system to lose [[Sparse Observability]].
+					- Imagine that both systems start at different positions but are experiencing the same velocity. The estimator could provide the correct estimate but still give wrong position.
+		- **Action Points**
+			- ((66995c32-3ba7-4707-ac81-91a03ef9e4a6))
 	- ## 18 July 2024
 	  id:: 66995bd6-be17-4090-9304-a83949253807
 	  collapsed:: true
@@ -533,7 +561,6 @@
 		  collapsed:: true
 			- No meeting for next week. Set it for the week after.
 	- ## 6 May 2024
-	  id:: 66392067-cc32-4121-922f-0f072aa546e2
 	  collapsed:: true
 		- **Attendees**
 			- Xiao Tan
@@ -551,7 +578,6 @@
 			- ((663923ce-a39f-45de-b997-6c7b0cdc97c9))
 			- ((6639243a-3acc-4468-a10d-594e60b555ef))
 	- ## 2 May 2024
-	  id:: 66386c1a-c19b-46a9-b6ed-2469fe003da8
 	  collapsed:: true
 		- **Attendees**
 		  collapsed:: true
@@ -574,7 +600,6 @@
 			  CLOCK: [2024-04-04 Thu 23:04:14]
 			  :END:
 	- ## 22 April 2024
-	  id:: 66260755-1d06-44fc-a270-ca1cbec2c0e2
 	  collapsed:: true
 		- **Attendees**
 		  collapsed:: true
@@ -600,7 +625,6 @@
 			  CLOCK: [2024-04-04 Thu 23:04:14]
 			  :END:
 	- ## 18 April 2024
-	  id:: 66214ed0-8de1-4d80-aa69-b65f4e3be402
 	  collapsed:: true
 		- **Attendees**
 		  collapsed:: true

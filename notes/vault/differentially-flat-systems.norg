@@ -6,7 +6,7 @@ categories: [
     terminologies
 ]
 created: 2024-04-23T11:39:22+0400
-updated: 2024-06-29T00:44:58+0400
+updated: 2024-07-29T23:42:37+0400
 version: 1.1.1
 @end
 
@@ -17,7 +17,7 @@ version: 1.1.1
 
 * Formal Definition
 
-  System is differentially flat if there exists an integer $k\in \mathbb{N}$ ,
+  System is differentially flat if there exists an integer $k \in \mathbb{N}$ ,
   and functions $\alpha$ and $\beta$ , such that the state and the input can be
   reconstructed from the outputs $y^{(t)}$ as follows:
 
@@ -37,7 +37,8 @@ version: 1.1.1
 
   $\Sigma_{\bar{\Gamma}} \{ \frac{ x^{(t+1)} = f(x^{(t)}, u^{(t)})}{ y^{(t)} = h_{\bar{\Gamma}}(x^{(t)})}\}$ is differentially flat.
 
-  In other words, the system is s-sparse flat if any choice of $p-s$ sensors is a flat output.
+  In other words, the system is s-sparse flat if any choice of $p-s$ sensors is
+  a flat output.
 
   ===
 ___

@@ -1,8 +1,27 @@
 tag:: #MEETING
 
 - {{renderer :tocgen2}}
+- # 25 July 2024
+  id:: 66a7d8e3-528b-4172-b3d8-a20bfc1bcc08
+  collapsed:: true
+	- **Attendees**
+	  collapsed:: true
+		- SRTA-AD
+	- **Goal**
+	  collapsed:: true
+		- Update towards demo.
+	- **Agenda**
+	  collapsed:: true
+		- Current progress.
+		- Work that is left.
+	- **Minutes**
+	  collapsed:: true
+		- `path-worker` needs to be fast-forwarded to accomodate the PKCS updates.
+		- Try removing the GPU build tag and verify that it works with `srta-anomaly-detection`.
+	- **Action Points**
 - # 17 July 2024
   id:: 6697ff1d-85d9-482e-a507-52d91ba16b66
+  collapsed:: true
 	- **Attendees**
 	  collapsed:: true
 		- SRTA-AD

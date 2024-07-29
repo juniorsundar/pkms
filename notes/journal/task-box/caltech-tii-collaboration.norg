@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-07-18T22:27:37+0400
+updated: 2024-07-29T23:59:39+0400
 version: 1.1.1
 @end
 
@@ -30,7 +30,6 @@ version: 1.1.1
 *** (x) Research into how the data pipeline is arranged in the flight controller
 *** (x) Research existing strategies to achieve the data interception and injection
     {:$/vault/px4-controls:}[PX4 - Controls]
-
 *** (x) Test implementation 
     {* ROS 2 Modular Control}[ROS 2 Modular Control]
 
@@ -61,24 +60,38 @@ version: 1.1.1
 
 ** (-) (Try out) --> (Implement) -simple- example with (full system) --> (1D Drone Sim)
 *** (x) Design {* 1D Drone System}[the system]
-*** (-) Develop the secure state estimator
+*** (x) Develop the secure state estimator
 **** (x) Set EKF (125Hz) to 20Hz (Downsample the EKF output stream for more info)
 **** (x) Copy over the code from Xiao Tan's GitHub
-**** (-)Test and reiterate until the state-reconstruction is working as expected
+**** (x)Test and reiterate until the state-reconstruction is working as expected
 *** (-) Get a minimum viable demo of SSR
-    /SCHEDULED:/ {@ Wednesday 31 July 2024}
+    | SCHEDULED: {@ Wednesday 31 July 2024}
 
 ** (x) Utilise a continuous function for acceleration input
 *** (x) 1x Acceleration controlled with 50Hz Input
 *** (x) 1x Acceleration controlled with 20Hz Input
 
 ** (x) {** 18 July 2024}[Tenth meeting]
-   /SCHEDULED:/ {@ Thursday 18 July 2024}
-** (-) Create README for the {https://www.github.com/juniorsundar-tii/px4-secure-state-reconstruction}[px4-secure-state-reconstruction] repository
-*** (?) Instructions for a local installation
+   | SCHEDULED: {@ Thursday 18 July 2024}
+
+** (x) Create README for the {https://www.github.com/juniorsundar-tii/px4-secure-state-reconstruction}[px4-secure-state-reconstruction] repository
+*** (_) Instructions for a local installation
 *** (x) Instructions for a containerised installation
-** ( ) Eleventh meeting
-   /SCHEDULED:/ {@ Thursday 25 July 2024}
+
+** (x) {** 29 July 2024}[Eleventh meeting]
+   | SCHEDULED: {@ Thursday 25 July 2024}
+   | COMPLETED: {@ Monday 29 July 2024}
+
+** ( ) Twelfth meeting
+   | SCHEDULED: {@ Monday 5 August 2024}
+
+** ( ) Evaluate the SSR implmentation in ROS
+*** ( ) Set attacked states to varying types
+    - Constant
+    - Noisy
+    - Targeted attacks
+*** ( ) Generate plots of estimated state vs. actual state
+*** ( ) Try with $x$ and $y$ for both position and velocity
 
    ===
 
@@ -297,6 +310,41 @@ version: 1.1.1
    ===
 
 * Meetings
+
+** 29 July 2024
+   #tag label
+   Xiao Tan / Junior Sundar -- Syncup
+*** Attendees
+
+    | Xiao Tan
+    | Junior Sundar
+
+*** Goals
+
+    - Follow up on the state of SSR.
+
+*** Agenda
+
+    - Update from Xiao about his additions.
+
+*** Minutes
+
+    - Went through the corrections implemented by Xiao Tan to his code.
+    - Checked through behaviour.
+    - *Important Points* For 4 sensors where two are for position and two are
+      for velocity:
+       -- Don't attack the two position sensors together if $s = 2$.
+       -- Don't attack all position sensors if $s = 3$.
+       -- In both those cases, going against the recommendations causes the
+          system to lose {:$/vault/sparse-observability:}[sparse observability].
+          --- Imagine that both systems start at different positions but are
+              experiencing the same velocity. The estimator could provide the
+              correct estimate but still give wrong position.
+
+*** Action Items
+
+    - {:$/journal/task-box/caltech-tii-collaboration:** Evaluate the SSR implmentation in ROS}[Evaluate the SSR implmentation in ROS]
+
 
 ** 18 July 2024
    #tag label
