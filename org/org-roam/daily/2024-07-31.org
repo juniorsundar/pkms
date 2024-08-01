@@ -1,0 +1,47 @@
+:PROPERTIES:
+:ID:       a1f99fbb-9968-4d9e-be7f-ea06224e7163
+:END:
+#+title: 2024-07-31
+
+* To-Do
+** TODO Update SRTA deliverables
+   DEADLINE: <2024-08-07 Wed>
+*** TODO [[https://tiiuae-my.sharepoint.com/:p:/g/personal/martin_andreoni_tii_ae/ER8BKg5-b7dFsErO1Vvx0pIBUJZVzW0Hz0UlycHIi-Tf8Q?e=3KVqdA&wdOrigin=TEAMS-WEB.p2p_ns.rwc&wdExp=TEAMS-TREATMENT&wdhostclicktime=1722492957723&web=1][Slide deck]]
+    DEADLINE: <2024-08-07 Wed>
+*** TODO [[https://tiiuae-my.sharepoint.com/:p:/g/personal/martin_andreoni_tii_ae/ERs7djHKZjdNtW1FaLOzJIMBIxXmrJptpqt23sBHwBITYg?e=ouRC3e][Q2 Deliverables]]
+    DEADLINE: <2024-08-09 Wed>
+* Journal
+  - Attended [[RTA Meeting]].
+  - Attended [[Solita - SRTA MLOps Syncup]].
+* Meetings
+** RTA Meeting
+*** Attendees
+    - SRTA-AD
+*** Goals
+    - Syncup on state of work.
+*** Agenda
+    - Update on road to demo.
+    - Side updates on CalTech projects.
+*** Minutes
+    - Runtime assurance working on CPU + components interacting with each other.
+    - Safelanding also the same.
+    - /think about/ Using submodules instead of containers.
+*** Action Items
+    - [[*Update SRTA deliverables][Update SRTA deliverables]] 
+** Solita - SRTA MLOps Syncup
+*** Attendees
+    - Solita
+    - SRTA-AD
+*** Goals
+    - Syncup across Finnish SRTA work.
+*** Agenda
+    - State of emergency landing demo.
+    - Update on the testing progress being done locally.
+*** Minutes
+    - CPU enabled ML anomaly detection container working in hardware.
+      - Can see notifs on PMC.
+      - Flight test still TODO.
+    - Issue with [[file:~/Dropbox/neorg/org/org-roam/daily/2024-07-30.org::*Check with Eyad and Andres about the flat testing][topic permissions]], this can be discussed with Lassi.
+*** Action Items
+    - Refer back to [[file:~/Dropbox/neorg/org/org-roam/daily/2024-07-30.org::*Check with Eyad and Andres about the flat testing][this]].
+

@@ -4,42 +4,58 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-07-30T00:06:34+0400
+updated: 2024-08-01T10:31:32+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-  - ( ) tasks
+** (-) Check with Eyad and Andres about the {https://ssrc.atlassian.net/wiki/spaces/DRON/pages/1234141185/Fly4Future+-+SSRC+Status+Meeting+-+2024-07-30}[flat testing data]
+   | STARTED: {@ 1 August 2024}
+   - They are using a Saluki V2 for this
+** ( ) Bring up the ROS2 topics issue with -Mehmet Killioglu- Lassi Laiho on #drone-test-flight-enablement channel
 
-  ===
+   ===
 ___
 
 * Journal
 
+  - Attended {** SSRC-F4F}[SSRC-F4F].
 
   ===
 ___
 
 * Meetings
 
-** Meeting Name
+** SSRC-F4F
 
 *** Attendees
 
-    | Names
+    | Unikie
+    | Solita
+    | F4F
+    | SSRC
 
 *** Goals
 
+    - Gain insight into what's happening across the board.
 
 *** Agenda
 
-    - ( ) 
+    - Discuss about the topic permissions issue.
+    - Keep note of anything of relevance.
 
 *** Minutes
 
+    - It is possible to `fog update ...` directly from the drone itself.
+    - `sros` is very strict with topic allowances. Can bring this up with
+      Mehmet at the #drone-test-flight-enablement channe is very strict with
+      topic allowances.
 
 *** Action Items
+
+    - {** Check with Eyad and Andres about the {https://ssrc.atlassian.net/wiki/spaces/DRON/pages/1234141185/Fly4Future+-+SSRC+Status+Meeting+-+2024-07-30}[flat testing data]}[Check with Eyad and Andres about the flat testing data]
+
 
     ===
 ___

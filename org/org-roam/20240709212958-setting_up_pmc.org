@@ -44,7 +44,7 @@
 - The image can be downloaded by running:
 
 #+BEGIN_SRC bash
-oras pull ghcr.io/tiiuae/drone-mesh_com:sha-588d0b9
+  oras pull ghcr.io/tiiuae/drone-mesh_com:sha-588d0b9
 #+END_SRC
 
 - Set the Comms Module to Flashing Mode (it is a switch).
@@ -54,17 +54,17 @@ oras pull ghcr.io/tiiuae/drone-mesh_com:sha-588d0b9
   filesystem:
 
 #+BEGIN_SRC bash
-git clone --recurse-submodules --shallow-submodules --depth=1 https://github.com/raspberrypi/usbboot
-cd usbboot
-make
-sudo ./rpiboot
+  git clone --recurse-submodules --shallow-submodules --depth=1 https://github.com/raspberrypi/usbboot
+  cd usbboot
+  make
+  sudo ./rpiboot
 #+END_SRC
 
-  - Install and run ~rpi-imager~:
+- Install and run ~rpi-imager~:
 
 #+BEGIN_SRC bash
-sudo apt install rpi-imager
-sudo rpi-imager  # Need to run as sudo
+  sudo apt install rpi-imager
+  sudo rpi-imager  # Need to run as sudo
 #+END_SRC
 
 - In "Choose OS" select the ~.img~ file downloaded above.
@@ -73,91 +73,92 @@ sudo rpi-imager  # Need to run as sudo
 - Once finished, de-power the Comms Module 1.5 and flip switch back to Normal Mode.
 
 ** Configuring Network
-- Some configuration needs to be done inside the Comms Module to ensure that it connects to the write Mesh Network, and so on.
+- Some configuration needs to be done inside the Comms Module to
+  ensure that it connects to the write Mesh Network, and so on.
 - Connect the powered Comms Module to a computer through Micro USB and its debug port.
 - Attach a ~tty~ shell to the device by running the following on the computer:
 
 #+BEGIN_SRC bash
-picocom /dev/ttyUSB0 -b 115200
-# username: root
-# password: root
+  picocom /dev/ttyUSB0 -b 115200
+  # username: root
+  # password: root
 #+END_SRC
 
 - According to instructions for [[https://ssrc.atlassian.net/wiki/spaces/DRON/pages/949026896/BKC+12.1#CM-and-CSL-Configuration][CM and CSL Configuration]]:
   - Set up the Mesh Network and frequency:
 
 #+BEGIN_SRC bash
-nano /opt/mesh_default.conf
+  nano /opt/mesh_default.conf
 #+END_SRC
 
 #+BEGIN_SRC conf
-# common
-MSVERSION=nats  # 1.5, 1.0 or nats
+  # common
+  MSVERSION=nats  # 1.5, 1.0 or nats
 
-# mesh shield 1.0/1.5 ( NOT FOR NATS )
-MODE=mesh
-IP=10.20.15.3
-MASK=255.255.255.0
-MAC=00:11:22:33:44:55
-KEY=1234567890
-ESSID=operation_mesh
-FREQ=5200
-TXPOWER=30
-COUNTRY=US
-MESH_VIF=wlp1s0
-PHY=phy0
-#CONCURRENCY configuration
-#CONCURRENCY=ap+mesh
-#MCC_CHANNEL=2412
+  # mesh shield 1.0/1.5 ( NOT FOR NATS )
+  MODE=mesh
+  IP=10.20.15.3
+  MASK=255.255.255.0
+  MAC=00:11:22:33:44:55
+  KEY=1234567890
+  ESSID=operation_mesh
+  FREQ=5200
+  TXPOWER=30
+  COUNTRY=US
+  MESH_VIF=wlp1s0
+  PHY=phy0
+  #CONCURRENCY configuration
+  #CONCURRENCY=ap+mesh
+  #MCC_CHANNEL=2412
 
-# NATS communication setup (default is id0)
-# Modes: mesh, ap+mesh_scc, ap+mesh_mcc, halow
-id0_MODE=mesh
-id0_IP=10.20.15.3
-id0_MASK=255.255.255.0
-id0_MAC=00:11:22:33:44:55
-id0_KEY=1234567890
-id0_ESSID=operation_mesh // MAKE SURE THIS IS HERE
-id0_FREQ=5200 // MAKE SUER THIS IS HERE
-id0_TXPOWER=30
-id0_COUNTRY=US
-id0_MESH_VIF=wlp1s0
-id0_BATMAN_IFACE=bat0
-id0_FREQ_MCC=2412
-id0_ROUTING=batman-adv
-id0_PRIORITY=high_throughput
-id0_MPTCP=disable
-id0_BRIDGE="br-lan bat0 eth1 eth0 lan1 usb0"
-id0_SLAAC=""
-#id1_  for 2nd radio
-#id2_  for 3rd radio
-ROLE=drone
+  # NATS communication setup (default is id0)
+  # Modes: mesh, ap+mesh_scc, ap+mesh_mcc, halow
+  id0_MODE=mesh
+  id0_IP=10.20.15.3
+  id0_MASK=255.255.255.0
+  id0_MAC=00:11:22:33:44:55
+  id0_KEY=1234567890
+  id0_ESSID=operation_mesh // MAKE SURE THIS IS HERE
+  id0_FREQ=5200 // MAKE SUER THIS IS HERE
+  id0_TXPOWER=30
+  id0_COUNTRY=US
+  id0_MESH_VIF=wlp1s0
+  id0_BATMAN_IFACE=bat0
+  id0_FREQ_MCC=2412
+  id0_ROUTING=batman-adv
+  id0_PRIORITY=high_throughput
+  id0_MPTCP=disable
+  id0_BRIDGE="br-lan bat0 eth1 eth0 lan1 usb0"
+  id0_SLAAC=""
+  #id1_  for 2nd radio
+  #id2_  for 3rd radio
+  ROLE=drone
 #+END_SRC
 
-  - Configure bridge IP:
+- Configure bridge IP:
 
 #+BEGIN_SRC bash
-nano /opt/mesh-helper.sh
+  nano /opt/mesh-helper.sh
 #+END_SRC
 
 #+BEGIN_SRC sh
-generate_lan_bridge_ip() {
-    local mesh_if_mac
+  generate_lan_bridge_ip() {
+	  local mesh_if_mac
 
-    bridge_name=$(echo "$bridge" | cut -d' ' -f1)
+	  bridge_name=$(echo "$bridge" | cut -d' ' -f1)
 
-    mesh_if_mac=$(cat /sys/class/net/"$id0_MESH_VIF"/address)
-    if [ -z "$mesh_if_mac" ]; then
-        echo "generate_lan_bridge_ip: MAC not found for id0_MESH_VIF! Configuration error?" > /dev/kmsg
-        mesh_if_mac="$(cat /sys/class/net/eth0/address)"
-    fi
-    local ip_random
-    ip_random="$(echo "$mesh_if_mac" | cut -b 16-17)"
-    bridge_ip="192.168.<MESH-SUBNET>.X"
+	  mesh_if_mac=$(cat /sys/class/net/"$id0_MESH_VIF"/address)
+	  if [ -z "$mesh_if_mac" ]; then
+		  echo "generate_lan_bridge_ip: MAC not found for id0_MESH_VIF! Configuration error?" > /dev/kmsg
+		  mesh_if_mac="$(cat /sys/class/net/eth0/address)"
+	  fi
+	  local ip_random
+	  ip_random="$(echo "$mesh_if_mac" | cut -b 16-17)"
+	  bridge_ip="192.168.<MESH-SUBNET>.X"
 
-    # legacy support
-    br_lan_ip=$bridge_ip
-}
+	  # legacy support
+	  br_lan_ip=$bridge_ip
+  }
 #+END_SRC
 
 #+begin_note
@@ -184,7 +185,7 @@ Refer to [[https://ssrc.atlassian.net/wiki/x/IQBFOQ][Provisioning server setup]]
 
 ** Generating Keys and Certificates
 #+BEGIN_SRC bash
-dronsole certificates request-provisioning-ca -o certs --rsa <name>
+  dronsole certificates request-provisioning-ca -o certs --rsa <name>
 #+END_SRC
 
 - This should generate a ~certs/~ directory with:
@@ -194,9 +195,9 @@ dronsole certificates request-provisioning-ca -o certs --rsa <name>
 
 ** Configuring Provisioning Network/Server
 #+BEGIN_SRC bash
-mkdir provisioning-server
-mv certs provisioning-server
-cd provisioning-server
+  mkdir provisioning-server
+  mv certs provisioning-server
+  cd provisioning-server
 #+END_SRC
 
 - Download the v1.2.8 release from [[https://github.com/tiiuae/provisioning-server/releases/tag/v1.2.8][tiiuae/provisioning-server]] and build and install it.
@@ -217,17 +218,17 @@ PROVISIONING_SERVER_PROVISIONING_KEY_SOURCE=filesystem
 - To run provisioning server, execute:
 
 #+BEGIN_SRC bash
-sudo ./provisioning-server
+  sudo ./provisioning-server
 #+END_SRC
 
-  - Additionally, connect the Provisioning Server to an Ethernet Switch
-    *without* Internet connection.
-  - Set a static IP for the device in the Network Settings:
-    - IPv4 Method -> Manual
-      - IP: ~169.254.156.7~ <- Can be anything
-    - Netmask: ~255.255.255.0~
-    - Gateway: ~169.254.156.1~
-  - If the device is a laptop that supports wireless hotspot, turn that on.
+- Additionally, connect the Provisioning Server to an Ethernet Switch
+  *without* Internet connection.
+- Set a static IP for the device in the Network Settings:
+  - IPv4 Method -> Manual
+	- IP: ~169.254.156.7~ <- Can be anything
+  - Netmask: ~255.255.255.0~
+  - Gateway: ~169.254.156.1~
+- If the device is a laptop that supports wireless hotspot, turn that on.
 
 * Setting up Wireless Mesh Network
 ** Hardware Setup
@@ -263,7 +264,7 @@ it is best to obtain a router with sim and manually set up the gateway.
     ~br-lan~ interface:
 
 #+BEGIN_SRC bash
-route add default gw 192.168.80.1 br-lan # REPLACE IP WITH GATEYWAY IP
+  route add default gw 192.168.80.1 br-lan # REPLACE IP WITH GATEYWAY IP
 #+END_SRC
 
 * Installing Ghaf
@@ -272,7 +273,7 @@ route add default gw 192.168.80.1 br-lan # REPLACE IP WITH GATEYWAY IP
 - There are many ways to create installation media with this ~.iso~:
   - Software like balenaEtcher
 #+BEGIN_SRC bash
-sudo dd if=./<filename>.iso of=/dev/sdd bs=4M conv=fsync status=progress
+  sudo dd if=./<filename>.iso of=/dev/sdd bs=4M conv=fsync status=progress
 #+END_SRC
 - etc.
 
@@ -351,28 +352,28 @@ sudo dd if=./<filename>.iso of=/dev/sdd bs=4M conv=fsync status=progress
 - Further verification can be done by:
 
 #+BEGIN_SRC bash
-ssh 192.168.101.11 # docker vm
-# username: ghaf
-# password: ghaf
+  ssh 192.168.101.11 # docker vm
+  # username: ghaf
+  # password: ghaf
 #+END_SRC
 
 #+BEGIN_SRC bash
-# from within docker vm
-ls /var/lib/fogdata
-# output should contain:
-# certs/
-# hostname
-# ip-address
-# docker-compose.yml (FROM REGISTRATION)
-# PAT.pat (FROM REGISTRATION)
+  # from within docker vm
+  ls /var/lib/fogdata
+  # output should contain:
+  # certs/
+  # hostname
+  # ip-address
+  # docker-compose.yml (FROM REGISTRATION)
+  # PAT.pat (FROM REGISTRATION)
 #+END_SRC
 
 - If all the files and folders are present, then restart the
   container downloading process:
 
 #+BEGIN_SRC bash
-# from within docker vm
-journalctl -f -u fmo-dci.service
+  # from within docker vm
+  journalctl -f -u fmo-dci.service
 #+END_SRC
 
 ** What if There Isn't Automatic Internet Connection?
@@ -380,16 +381,16 @@ journalctl -f -u fmo-dci.service
 - ~ssh~ into the ~netvm~ of the PMC:
 
 #+BEGIN_SRC bash
-ssh 192.168.101.1
+  ssh 192.168.101.1
 #+END_SRC
 
 - Connect the Micro USB cable to the Debug port of the Comms Module
   and attach a shell to it from the connected computer:
 
 #+BEGIN_SRC bash
-picocom /dev/ttyUSB0 -b 115200
-# username: root
-# password: root
+  picocom /dev/ttyUSB0 -b 115200
+  # username: root
+  # password: root
 #+END_SRC
 
 - Run ~ifconfig~ in the Comms Module and in the ~netvm~ of PMC.
@@ -423,26 +424,26 @@ picocom /dev/ttyUSB0 -b 115200
 - In the Comms Module run:
 
 #+BEGIN_SRC bash
-nano /etc/wpa_supplicant.conf
-# Edit or add the following lines:
-# network {
-#   ssid="<ESSID>"
-#   psk="<password>"
-# }
+  nano /etc/wpa_supplicant.conf
+  # Edit or add the following lines:
+  # network {
+  #   ssid="<ESSID>"
+  #   psk="<password>"
+  # }
 #+END_SRC
 
 #+BEGIN_SRC bash
-wpa_supplicant -i wlan0 -c /etc/wpa_supplicant.conf -B
+  wpa_supplicant -i wlan0 -c /etc/wpa_supplicant.conf -B
 #+END_SRC
 
 #+BEGIN_SRC bash
-udhcpc -i wlan0
+  udhcpc -i wlan0
 #+END_SRC
 
 #+BEGIN_SRC bash
-route add default gw 192.168.<MESH-SUBNET>.1 wlan0
-# This is the internet gateway. Replace X with appropriate
-# obtained from Router IP/Gateway
+  route add default gw 192.168.<MESH-SUBNET>.1 wlan0
+  # This is the internet gateway. Replace X with appropriate
+  # obtained from Router IP/Gateway
 #+END_SRC
 
 - Run ~ping 8.8.8.8~ from Comms Module. It should now be working
@@ -456,17 +457,17 @@ route add default gw 192.168.<MESH-SUBNET>.1 wlan0
 - Run the following in the Comms Module:
 
 #+BEGIN_SRC bash
-# Enable IP masquerading for traffic from br-lan to wlan0
-iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE
+  # Enable IP masquerading for traffic from br-lan to wlan0
+  iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE
 
-# Allow forwarding of established and related connections
-iptables -A FORWARD -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+  # Allow forwarding of established and related connections
+  iptables -A FORWARD -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
 
-# Allow forwarding from br-lan to wlan0
-iptables -A FORWARD -i br-lan -o wlan0 -j ACCEPT
+  # Allow forwarding from br-lan to wlan0
+  iptables -A FORWARD -i br-lan -o wlan0 -j ACCEPT
 
-# Allow forwarding from wlan0 to br-lan
-iptables -A FORWARD -i wlan0 -o br-lan -j ACCEPT
+  # Allow forwarding from wlan0 to br-lan
+  iptables -A FORWARD -i wlan0 -o br-lan -j ACCEPT
 #+END_SRC
 
 - This can be automated with a ~give_internet.sh~.

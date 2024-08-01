@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-07T15:47:24+0400
+updated: 2024-08-01T09:36:31+0400
 version: 1.1.1
 @end
 
@@ -26,80 +26,82 @@ version: 1.1.1
 ** Personal
 
 
-===
-  ___
+   ===
+___
 
 * Scratch
 
   /scratch/
 
-===
-  ___
+  ===
+___
 
-* HiTL Simulation for PX4
+* Meetings
 
-** Attendees
+** HiTL Simulation for PX4
 
-   | Yashrajsinh Parmar
-   | Aravindaraja Puthiyavinayagam
-   | Junior Sundar
+*** Attendees
 
-** Goals
+    | Yashrajsinh Parmar
+    | Aravindaraja Puthiyavinayagam
+    | Junior Sundar
 
-   - Touch base on HiTL implementation
+*** Goals
 
-** Agenda
+    - Touch base on HiTL implementation
 
-   - ( ) Discuss HiTL performance vs SITL 
+*** Agenda
 
-** Minutes
+    - ( ) Discuss HiTL performance vs SITL 
 
-   /Aravindaraja Puthiyavinayagam/
-   - HiTL will be slower than SiTL since processor of computer is much better
-   - Getting simulation stack working with HiTL possible with Saluki
-      -- You need to use the ethernet connection to get ROS 2 topics to be published.
-      -- Can get this setup with Aravindaraja's help (2 weeks at least)
-   - Check with Sreejith if a Saluki Pi or Saluki V2 is available for flashing
-   - New Gazebo wants to decouple from ROS and any other frameworks.
-      -- This is why there are separate simulation modules for certain sensors
-      -- MAVLink and Gazebo and PX4 are being decoupled
+*** Minutes
 
-   /Yashrajsinh Parmar/
-   - 
+    /Aravindaraja Puthiyavinayagam/
+    - HiTL will be slower than SiTL since processor of computer is much better
+    - Getting simulation stack working with HiTL possible with Saluki
+       -- You need to use the ethernet connection to get ROS 2 topics to be published.
+       -- Can get this setup with Aravindaraja's help (2 weeks at least)
+    - Check with Sreejith if a Saluki Pi or Saluki V2 is available for flashing
+    - New Gazebo wants to decouple from ROS and any other frameworks.
+       -- This is why there are separate simulation modules for certain sensors
+       -- MAVLink and Gazebo and PX4 are being decoupled
 
-** Action Items
-   - ( ) Check availability of Saluki Pi or Saluki V2 with Sreejith
-   - ( ) Move the fault code into v0.14.0 tag at tiiuae/px4-firmware
-   - ( ) Research: Look into bootloaders (whatever they are)
+    /Yashrajsinh Parmar/
+    - 
 
-* SSRC - Georgia Tech ML Syncup
+*** Action Items
+    - ( ) Check availability of Saluki Pi or Saluki V2 with Sreejith
+    - ( ) Move the fault code into v0.14.0 tag at tiiuae/px4-firmware
+    - ( ) Research: Look into bootloaders (whatever they are)
 
-** Attendees
+** SSRC - Georgia Tech ML Syncup
 
-   | SRTA-AD
-   | GATech
-   | | Wang Haoren
+*** Attendees
 
-** Goals
+    | SRTA-AD
+    | GATech
+    | | Wang Haoren
 
-   - Establish new project
-   - Establish next steps + question
+*** Goals
 
-** Agenda
+    - Establish new project
+    - Establish next steps + question
 
-   - (x) Current state of project discussion
+*** Agenda
 
-** Minutes
+    - (x) Current state of project discussion
 
-   - Exploring causal discovery in detecting anomaly drone in swarm setting
-      -- Approach: Root Cause Discovery: Root Cause Analysis of Failures in Microservices through Causal Discovery (github.com/azimkram/rcd)
+*** Minutes
 
-** Action Items
+    - Exploring causal discovery in detecting anomaly drone in swarm setting
+       -- Approach: Root Cause Discovery: Root Cause Analysis of Failures in Microservices through Causal Discovery (github.com/azimkram/rcd)
 
-   - ( ) Swarm algorithms in Simulation with PX4?
-      -- ( ) Discuss with Martin later
+*** Action Items
 
-===
+    - ( ) Swarm algorithms in Simulation with PX4?
+       -- ( ) Discuss with Martin later
+
+       ===
 ___
 
 {:$/journal/2024/02/05:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/07:}[next >]

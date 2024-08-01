@@ -4,22 +4,34 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-07-27T18:41:14+0400
+updated: 2024-08-01T12:01:51+0400
 version: 1.1.1
 @end
 
 * To-Do
 
-** ( ) Figure out what is `sros` (Secure Ros?)
+** (-) Figure out what is `sros` (Secure Ros?)
+   | STARTED: {@ 1 August 2024}
+   > It is the implementation to use the DDS-Security in ROS2. We use the
+   > Fast-DDS as our DDS middleware. 
+   > 
+   > So, the SROS actually enables using the Fast-DDS's security implementation
+   > for our case.
+   > 
+   > You can find more details about the DDS-Security in detail over the web.
+   > It makes sure that the messages exchanged between the nodes are encrypted,
+   > peer-to-peer. 
+   > 
+   > {https://fast-dds.docs.eprosima.com/en/latest/fastdds/security/security.html}
 
-  ===
+     ===
 ___
 
 * Journal
 
   - Worked alongside Jorge to get the Saluki V3 running with SRTA containers.
 
-    ===
+  ===
 ___
 
 {:$/journal/2024/07/25:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/07/27:}[next >]
