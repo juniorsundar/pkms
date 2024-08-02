@@ -3,6 +3,24 @@
 :END:
 #+title: PX4 - Controls
 
+* Table of Contents :toc:
+- [[#flight-stack][Flight Stack]]
+- [[#offboard-control-mode][Offboard Control Mode]]
+  - [[#offboardcontrolmode][OffboardControlMode]]
+  - [[#trajectorysetpoint][TrajectorySetpoint]]
+  - [[#vehicleattitudesetpoint][VehicleAttitudeSetpoint]]
+  - [[#vehiclethrustsetpoint--vehicletorquesetpoint][VehicleThrustSetpoint + VehicleTorqueSetpoint]]
+  - [[#actuatormotors--actuatorservos][ActuatorMotors + ActuatorServos]]
+- [[#mavlink-vs-ros-2-offboard-control][MAVLink vs ROS 2 Offboard Control]]
+  - [[#limitations-of-mavlink-method][Limitations of MAVLink method]]
+  - [[#modes][Modes]]
+  - [[#failsafe-and-arming-checks][Failsafe and Arming Checks]]
+  - [[#mode-executors][Mode Executors]]
+  - [[#control-interfaces][Control Interfaces]]
+- [[#example-offboard-with-mavlink-api][Example: Offboard with MAVLink API]]
+  - [[#create-package][Create Package]]
+  - [[#writing-a-control-node][Writing a Control Node]]
+
 * Flight Stack
   [[https://docs.px4.io/main/assets/PX4_High-Level_Flight-Stack.CZXi0y2Q.svg]]
 
@@ -14,9 +32,12 @@
   *Controller* - Takes setpoint and measurement/estimated state as input.
   - It then adjusts value of process variable such that it matches setpoint.
   - Output is a correction to eventually reach that setpoint.
-  - Position controller takes position setpoints, process variable is current estimated position, output is an attitude and thrust setpoint.
+  - Position controller takes position setpoints, process variable is
+    current estimated position, output is an attitude and thrust
+    setpoint.
 
-    *Mixer* - Takes force commands and translates them into individual motor commands (specific to vehicle type).
+  *Mixer* - Takes force commands and translates them into individual
+   motor commands (specific to vehicle type).
 * Offboard Control Mode
   It may be possible to directly control the drone with [[https://docs.px4.io/main/en/flight_modes/offboard.html][Offboard Control]].
 
@@ -28,11 +49,16 @@
   - attitude rates, or
   - thrust/torque setpoints.
 
-    Requires 2 Hz "proof of life" signal or it will switch out of offboard mode after `COM_OF_LOSS_T` timeout.
+  Requires 2 Hz "proof of life" signal or it will switch out of
+  offboard mode after `COM_OF_LOSS_T` timeout.
 
-    In ROS 2, POL signal is through `OffboardControlMode` messages. Actual setpoint publish to uORB topics, like `TrajectorySetpoint`.
+  In ROS 2, POL signal is through `OffboardControlMode`
+  messages. Actual setpoint publish to uORB topics, like
+  `TrajectorySetpoint`.
 ** [[https://github.com/PX4/PX4-Autopilot/blob/main/msg/OffboardControlMode.msg][OffboardControlMode]]
-   The fields are ordered in terms of priority => `position` takes precedence over `velocity` and later fields, `velocity` takes precedence over `acceleration`, and so on.
+   The fields are ordered in terms of priority => `position` takes
+   precedence over `velocity` and later fields, `velocity` takes
+   precedence over `acceleration`, and so on.
 
    | desired control quantity | required estimate | required message                                |
    | ------------------------ | ----------------- | ----------------------------------------------- |
@@ -125,7 +151,7 @@
    nodes. Here, we will only focus on the Python implementations.
 
    The nodes that will control the drone will be added to a new ROS 2 package
-   inside the pre-existing workspace made {:$/vault/px4-ros2:** Download}[here]. First, navigate to the workspace root:
+   inside the pre-existing workspace made [[file:~/Dropbox/neorg/org/org-roam/20240802232335-px4_ros_2_integration.org::*Download][here]]. First, navigate to the workspace root:
 
    #+BEGIN_SRC bash
    # If the following workspace does not exist, refer to the hyperlinked page to create the workspace.
@@ -151,25 +177,24 @@
 
    #+BEGIN_SRC bash
    L px4_ws/
-   L build/
-   L ...
-   L install/
-   L ...
-   L log/
-   L ...
-   L src/
-   L px4_msgs
-   L px4_ros_coms
-   L px4_control_py
-   L px4_control_py
-   L __init__.py
-   L resource
-   L test
-   L package.xml
-   L setup.cfg
-   L setup.py
+	L build/
+		L ...
+	L install/
+		L ...
+	L log/
+		L ...
+	L src/
+		L px4_msgs
+		L px4_ros_coms
+		L px4_control_py
+			L px4_control_py
+			L __init__.py
+			L resource
+			L test
+			L package.xml
+			L setup.cfg
+			L setup.py
    #+END_SRC
-
 ** Writing a Control Node
    The node will be a Python script, and will be located inside
    ~px4_control_py~ package.
@@ -414,3 +439,4 @@
    source ~/px4_ws/install/local_setup.bash
    ros2 run px4_control_py px4_control_node
    #+END_SRC
+   

@@ -6,12 +6,11 @@ categories: [
     PX4
 ]
 created: 2024-04-25T15:22:09+0400
-updated: 2024-06-29T18:28:12+0400
+updated: 2024-08-02T23:43:51+0400
 version: 1.1.1
 @end
 
 * Flight Stack
-
   .image https://docs.px4.io/main/assets/PX4_High-Level_Flight-Stack.CZXi0y2Q.svg
 
   [PX4 High-Level Flight Stack]
@@ -29,9 +28,7 @@ version: 1.1.1
 
   *Mixer* - Takes force commands and translates them into individual motor
   commands (specific to vehicle type).
-
 * Offboard Control Mode
-
   It may be possible to directly control the drone with {https://docs.px4.io/main/en/flight_modes/offboard.html}[Offboard Control].
 
   Offboard mode is used for controlling vehicle movement and attitude, by
@@ -48,7 +45,6 @@ version: 1.1.1
 
   In ROS 2, POL signal is through `OffboardControlMode` messages. Actual
   setpoint publish to uORB topics, like `TrajectorySetpoint`.
-
 ** {https://github.com/PX4/PX4-Autopilot/blob/main/msg/OffboardControlMode.msg}[OffboardControlMode]
    
    The fields are ordered in terms of priority => `position` takes precedence
@@ -66,9 +62,7 @@ version: 1.1.1
    | thrust and torque (FRD)  | None              | VehicleAttitudeSetpoint & VehicleTorqueSetpoint |
    | direct motors and servos | None              | ActuatorMotors & ActuatorServos                 |
    @end
-
 ** {https://github.com/PX4/PX4-Autopilot/blob/main/msg/TrajectorySetpoint.msg}[TrajectorySetpoint]
-
    Position setpoint (`position` different from `NaN`). Non-`NaN` values of
    velocity and acceleration are used as feedforward terms for the inner loop
    controllers.
@@ -81,9 +75,7 @@ version: 1.1.1
    and `velocity` set to `NaN`)
 
    All values in NED system at [m], [m/s] and [m/s^2] respectively.
-
 ** {https://github.com/PX4/PX4-Autopilot/blob/main/msg/VehicleAttitudeSetpoint.msg}[VehicleAttitudeSetpoint]
-
    quaternion `q_d` + thrust setpoint `thrust_body`. Non-`NaN` values of
    `yaw_sp_move_rate` are used as feedforward terms expressed in Earth frame
    and in [rad/s].
@@ -92,34 +84,24 @@ version: 1.1.1
    (north, east, down).
 
    Thrust is in FRD and expressed as normalised [-1, 1] values.
-
 ** {https://github.com/PX4/PX4-Autopilot/blob/main/msg/VehicleThrustSetpoint.msg}[VehicleThrustSetpoint] + {https://github.com/PX4/PX4-Autopilot/blob/main/msg/VehicleTorqueSetpoint.msg}[VehicleTorqueSetpoint]
-
    `xyz` for thrust and `xyz` for torque.
 
    All the values are in the drone body FRD frame and normalized in [-1, 1].
-
 ** {https://github.com/PX4/PX4-Autopilot/blob/main/msg/ActuatorMotors.msg}[ActuatorMotors] + {https://github.com/PX4/PX4-Autopilot/blob/main/msg/ActuatorServos.msg}[ActuatorServos]
-
    All the values normalized in [-1, 1]. For outputs that do not support
    negative values, negative entries map to `NaN`.
 
    `NaN` maps to disarmed.
-
 * MAVLink vs ROS 2 Offboard Control
-
   {https://youtu.be/3zRCIsq_MCE?feature=shared}[A ROS 2 Library and Interface for External PX4 Flight Modes]
-
 ** Limitations of MAVLink method
-
    - Only a single app can control vehicle.
    - Requires MAVLink: hard to extend or access other data through this.
    - Limited integration with failsafe state machine & prearm checks.
    - Limited set of setpoint types.
    - Cannot specify displayed mode name in the GCS.
-
 ** Modes
-
    Component that can send one or more setpoints to control vehicle motion.
 
    It is a passive component so it cannot activate other modes.
@@ -129,17 +111,13 @@ version: 1.1.1
    A mode can also replace internal PX4 mode.
 
    It will also register with PX4 on startup.
-
 ** Failsafe and Arming Checks
-
    A mode has a set of requirement flags.
 
    Non-essential falisafes can be temporarily deferred.
 
    Unresponsive or crashed modes can trigger a failsafe.
-
 ** Mode Executors
-
    Can be used to change modes.
 
    State machines that run through different modes, waiting for them to
@@ -151,9 +129,7 @@ version: 1.1.1
    - Allows multiple executors to coexist.
 
    Is transparent for the user.
-
 ** Control Interfaces
-
    The mode:
    - decides what to control, how and when,
    - /streams/ setpoints for controllers to track.
@@ -162,11 +138,8 @@ version: 1.1.1
    options?
 
    *ROS 2* mode streams set point for *FMU* controllers to track.
-
 * Example: Offboard with MAVLink API
-
 ** Create Package
-
    Control scripts for PX4 can be written in C++ or Python and launch as ROS 2
    nodes. Here, we will only focus on the Python implementations.
 
@@ -215,9 +188,7 @@ version: 1.1.1
                L setup.cfg
                L setup.py
    @end
-
 ** Writing a Control Node
-
    The node will be a Python script, and will be located inside
    `px4_control_py` package.
 
