@@ -4,19 +4,13 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-16T19:41:32+0400
+updated: 2024-08-02T14:02:06+0400
 version: 1.1.1
 @end
 
 * To-Do
-
   /Rolled over/
-
-    ===
-___
-
 * Journal
-
   - *Read {:$/research/literature-review/tazir2023:}[From Words to Flight: Integrating OpenAI ChatGPT with PX4--Gazebo for Natural Language-Based Drone Control].*
      -- Very similar to {:$/research/websites-and-blogs/chatgpt-robotics:}[ChatGPT for Robotics: Design Principles and Model Abilities].
      -- Novelty is {:$/research/literature-review/tazir2023:* Checksum for Validation and System Reliability}[Checksum for Validation and System Reliability].

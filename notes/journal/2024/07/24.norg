@@ -4,23 +4,16 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-07-26T23:52:08+0400
+updated: 2024-08-02T10:36:26+0400
 version: 1.1.1
 @end
 
 * To-Do
-
 ** (x) Update JIRA task for the "Demo" timeline
-
-   ===
-___
-
 * Journal
-
   - Attended {:$/journal/2024/07/24:** Solita - SRTA MLOps Syncup}[Solita - SRTA MLOps Syncup].
   - {:$/journal/2024/07/24:* RTK Server Disconnection/`ntrip-client` Death}[RTK Server Disconnection/`ntrip-client` Death].
   - Attended {:$/journal/2024/07/24:** Test BKC with SRTA Modules w/ F4F}[Test BKC with SRTA Modules w/ F4F].
-
 * RTK Server Disconnection/`ntrip-client` Death
   - There was an error with connection to the RTK server.
   - RTK (real-time kinematic) server provides corrections for the GPS
@@ -32,65 +25,41 @@ ___
   > I think the problem is that you are looking for the RTK Server on the TII
   > IP range, instead of using the Tailscale IP. If you setup the PMC and drone
   > on the 192.168.xx.xx, it won't find the 172.31.107.xx
-
-  ===
-___
-
 * Meetings
-
 ** Solita - SRTA MLOps Syncup
-
 *** Attendees
-
     | Solita
     | SRTA-AD
-
 *** Goals
-
     - Synchronising on the state of emergency landing demo.
     - Discussing current issue with the v12.1 release with GPU support and
       safelanding modules.
-
 *** Agenda
-
     - Bring up the error in running the SRTA containers in the safelanding
       release with GPU enabled.
     - Ask what hardware set-up they are working with in Finland.
-
 *** Minutes
-
     - Testing on hardware is not possible now on Solita until Esko returns.
     - Moamen will try to follow up in the issues posted earlier.
-
 *** Action Items
-
 ** Test BKC with SRTA Modules w/ F4F
-
 *** Attendees
-
     | Martin Andreoni
     | Willian Lunardi
     | Iraklis Nikolakakos
     | Junior Sundar
     | Jorge Henriques
-
 *** Goals
-
     - Discuss feasibility of F4F being involved in testing.
     - Identifying state of data collection.
-
 *** Agenda
-
     - Determine if it is possible to transfer attention from data collection to
       setting up the SRTA-enabled drone.
     - Discuss plan of attack to resolve this issue.
-
 *** Minutes
-
     - Jorge is available and can help out in fast-tracking and testing the RTA
       module inclusive release.
     - Some strategies to resolve some issues.
-
 *** Action Items
 
     ===

@@ -4,22 +4,16 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-13T17:25:32+0400
+updated: 2024-08-02T21:55:15+0400
 version: 1.1.1
 @end
 
 * To-Do
-
 ** (_) -Meeting with Siva-
 *** (_) -Hold meeting-
 ** (x) Collect data for Samridha
 *** (x) Produce some data that causes crashing of drone
-
-    ===
-___
-
 * Journal
-
   - Collected failing runs with gyro shifting for Samridha
   - Trimmed PPT and wrote a script
   - Fault injection is possible through QGroundControl GUI.
@@ -28,36 +22,23 @@ ___
   - New Gazebo not possible with HITL
   - Meeting with Siva placed on tentative cancel until Siva finalises the tasks
     for himself.
-
-    ===
-___
-
 * Meetings
-
 ** Meeting: MLOps and Safe Landing
-
 *** Attendees
-
     | SRTA-AD
     | | Willian Lunardi
     | Solita
     | | Moamen Ibrahim
     | | Jarmo Hakala
     | | Philip Schmalen
-
 *** Goals
-
     - MLOps
     - Safe Landing
-
 *** Agenda
-
-    - (x) MLOps expectations from Solita and TII
-    - (x) Data recording Format
-    - (x) Safe landing
-
+    - MLOps expectations from Solita and TII
+    - Data recording Format
+    - Safe landing
 *** Minutes
-
     /Willian Lunardi/
     - Roles discussion
        -- R&D - TII
@@ -95,12 +76,10 @@ ___
        -- Clear, unblurred view, static position
        -- Landing spot is within field of vision
        -- Single drone
-
 *** Action Items
-
-    - ( ) Research into "Rule-Based Decision Engine"
-    - ( ) Try dumping the fault data as MCAP
-    - ( ) Explore emergency landing trigger with GPS issues
+    - Research into "Rule-Based Decision Engine"
+    - Try dumping the fault data as MCAP
+    - Explore emergency landing trigger with GPS issues
 
     ===
 ___

@@ -4,14 +4,14 @@
 #+title: PX4 - Safety Configuration
 
 * Table of Contents :toc:
-  - [[#introduction][Introduction]]
-  - [[#failsafe-actions][Failsafe Actions]]
-  - [[#safety-setup][Safety Setup]]
-    - [[#through-qgroundcontrol][through QGroundControl]]
-    - [[#through-parameters-or-other-means][through Parameters or Other Means]]
-  - [[#failure-detector][Failure Detector]]
-    - [[#attitude-trigger][Attitude Trigger]]
-    - [[#external-automatic-trigger-system-ats][External Automatic Trigger System (ATS)]]
+- [[#introduction][Introduction]]
+- [[#failsafe-actions][Failsafe Actions]]
+- [[#safety-setup][Safety Setup]]
+  - [[#through-qgroundcontrol][through QGroundControl]]
+  - [[#through-parameters-or-other-means][through Parameters or Other Means]]
+- [[#failure-detector][Failure Detector]]
+  - [[#attitude-trigger][Attitude Trigger]]
+  - [[#external-automatic-trigger-system-ats][External Automatic Trigger System (ATS)]]
 
 * Introduction
   Access [[https://docs.px4.io/main/en/config/safety.html][documentation]]

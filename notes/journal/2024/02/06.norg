@@ -4,58 +4,26 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-08-01T09:36:31+0400
+updated: 2024-08-02T21:07:09+0400
 version: 1.1.1
 @end
 
 * To-Do
-
-** Work
-
-   - (x) See if it is possible to run simulation stack with HITL
-   - ( ) Determine how to add the faulty flight controller to dronsole launch
-   - (x) Add the fault sources to the HITL build
-   - (-) Look into how the Saluki can be set up
-
-   - (-) 22nd Feb, get a few PPT slides ready for the university syncup
-   - (-) Data recording for Samridha
-      -- (-) Simulate a fault-less simulation as well
-   - (x) There is a mismatch between uORB topics and px4_msgs in latest commit
-      -- (x) Implement a way so that this doesn't cause problems to the other users
-
-** Personal
-
-
-   ===
-___
-
-* Scratch
-
-  /scratch/
-
-  ===
-___
-
+** (x) See if it is possible to run simulation stack with HITL
+** (x) Add the fault sources to the HITL build
+** (x) There is a mismatch between uORB topics and px4_msgs in latest commit
+*** (x) Implement a way so that this doesn't cause problems to the other users
 * Meetings
-
 ** HiTL Simulation for PX4
-
 *** Attendees
-
     | Yashrajsinh Parmar
     | Aravindaraja Puthiyavinayagam
     | Junior Sundar
-
 *** Goals
-
     - Touch base on HiTL implementation
-
 *** Agenda
-
-    - ( ) Discuss HiTL performance vs SITL 
-
+    - Discuss HiTL performance vs SITL 
 *** Minutes
-
     /Aravindaraja Puthiyavinayagam/
     - HiTL will be slower than SiTL since processor of computer is much better
     - Getting simulation stack working with HiTL possible with Saluki
@@ -65,44 +33,28 @@ ___
     - New Gazebo wants to decouple from ROS and any other frameworks.
        -- This is why there are separate simulation modules for certain sensors
        -- MAVLink and Gazebo and PX4 are being decoupled
-
-    /Yashrajsinh Parmar/
-    - 
-
 *** Action Items
-    - ( ) Check availability of Saluki Pi or Saluki V2 with Sreejith
-    - ( ) Move the fault code into v0.14.0 tag at tiiuae/px4-firmware
-    - ( ) Research: Look into bootloaders (whatever they are)
-
+    - Check availability of Saluki Pi or Saluki V2 with Sreejith
+    - Move the fault code into v0.14.0 tag at tiiuae/px4-firmware
+    - Research: Look into bootloaders (whatever they are)
 ** SSRC - Georgia Tech ML Syncup
-
 *** Attendees
-
     | SRTA-AD
     | GATech
     | | Wang Haoren
-
 *** Goals
-
     - Establish new project
     - Establish next steps + question
-
 *** Agenda
-
-    - (x) Current state of project discussion
-
+    - Current state of project discussion
 *** Minutes
-
     - Exploring causal discovery in detecting anomaly drone in swarm setting
        -- Approach: Root Cause Discovery: Root Cause Analysis of Failures in Microservices through Causal Discovery (github.com/azimkram/rcd)
-
 *** Action Items
-
-    - ( ) Swarm algorithms in Simulation with PX4?
-       -- ( ) Discuss with Martin later
+    - Swarm algorithms in Simulation with PX4?
+       -- Discuss with Martin later
 
        ===
 ___
 
 {:$/journal/2024/02/05:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/07:}[next >]
-

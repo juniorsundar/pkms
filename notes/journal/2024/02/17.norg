@@ -4,38 +4,14 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-18T14:12:13+0400
+updated: 2024-08-02T21:49:34+0400
 version: 1.1.1
 @end
 
 * To-Do
-
-** Work
-
-   - (-) Flash custom firmware into Saluki V2
-      -- (-) Flash faulty-firmware and set up HiTL
-      -- ( ) Test
-   - ( ) Discuss how to implement the fault injection functionality in dronsole
-   - (-) Meeting with Siva
-      -- ( ) Hold meeting
-   - (-) 22nd February, PPT slides CalTech syncup
-      -- (x) Get few PPT slides ready
-      -- (-) Trim PPT
-      -- ( ) Prepare script
-   - ( ) 23rd February, Share Objectives (meet | exceed | percentage)
-
-** Personal
-
-
-   ===
-___
-
-* Thoughts
-
-** Explaining Rust, C++ and Go
-
-*** Concurrency (C++ and Go)
-
+  /Rolled over/
+* Explaining Rust, C++ and Go
+** Concurrency (C++ and Go)
     Consider a fantasy kitchen where multiple chefs are to work in tandem. You
     have two chefs, one who has years of experience working as a line cook, and
     another who only does personal cooking. Piles of orders are coming in, and
@@ -48,9 +24,7 @@ ___
     This is the difference between C++ and Go. The line cook is Go, who comes
     with features of concurrency out of the box. But in C++, there are a lot of
     boiler plate stuff you need to keep in mind.
-
-*** Borrow Checker (C++ and Rust)
-
+** Borrow Checker (C++ and Rust)
     In a kitchen, the equipment is owned by the owner of the kitchen.
 
     Let's say that a chef is using the spatula in the kitchen. They say that
@@ -67,12 +41,7 @@ ___
     to the owner once the spatula's use is over. This way, if the kitchen owner
     comes one day asks for the spatula, the chef will know where it will be.
 
-    ===
-___
-
-
 ===
 ___
 
 {:$/journal/2024/02/16:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/18:}[next >]
-

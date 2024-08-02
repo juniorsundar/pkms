@@ -4,85 +4,49 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-02T13:35:19+0400
+updated: 2024-08-02T14:24:48+0400
 version: 1.1.1
 @end
 
 * To-Do
+  /Rolled over/
+* Meetings
+** RTA Meeting 
+*** Attendees
+    | SRTA-AD
+    | | Martin Andreoni
+    | | Rayana Boubezari
+    | | Junior Sundar
+*** Goals
+    - Discuss progress
+*** Agenda
+    - Update Jira 
+    - Sync-Up 
+*** Minutes
+    /Martin Andreoni/
+    - Present initial requirements Excel
+    - Kickoff updates
+    - New Saluki V3
 
-** Work
+    /Rayana Boubezari/
+    - Keep a PPT ready with Documentation incase you have to present
 
-   - ( ) See if it is possible to run simulation stack with HITL
-   - ( ) Determine how to add the faulty flight controller to dronsole launch
-   - ( ) Add the fault sources to the HITL build
-   - ( ) Look into how the Saluki can be set up
-
-   - (!) Update the Initial Requirements Excel as needed
-      -- (!) Add limitations
-   - ( ) 22nd Feb, get a few PPT slides ready for the university syncup
-   - ( ) Look up what is RISC-V
-   - ( ) Check up on how the Saluki V3 works
-
-** Personal
-
-
-===
-  ___
-
-* Scratch
-
-  /scratch/
-
-===
-  ___
-
-* RTA Meeting 
-
-** Attendees
-
-   | SRTA-AD
-   | | Martin Andreoni
-   | | Rayana Boubezari
-   | | Junior Sundar
-
-** Goals
-
-   - (x) Discuss progress
-
-** Agenda
-
-   - (x) Update Jira 
-   - (x) Sync-Up 
-
-** Minutes
-
-   /Martin Andreoni/
-   - Present initial requirements Excel
-   - Kickoff updates
-   - New Saluki V3
-
-   /Rayana Boubezari/
-   - Keep a PPT ready with Documentation incase you have to present
-
-   /Junior Sundar/
-   - Updated ML Feature Tracker
-   - Uploaded Faulty Flight Controller to tiiuae
-      -- Updated simulation to reflect this
-      -- Tested everything in simulation, it works
-   - Talking with Solita about integrating flight controller to dronsole
-   - Identified method to flash flight controller to Pixhawk
-      -- How will it work with Saluki V3 
-
+    /Junior Sundar/
+    - Updated ML Feature Tracker
+    - Uploaded Faulty Flight Controller to tiiuae
+       -- Updated simulation to reflect this
+       -- Tested everything in simulation, it works
+    - Talking with Solita about integrating flight controller to dronsole
+    - Identified method to flash flight controller to Pixhawk
+       -- How will it work with Saluki V3 
 ** Action Items
+   - Update the Initial Requirements Excel as needed
+      -- Add limitations
+   - 22nd Feb, get a few PPT slides ready for the university syncup
+   - Look up what is RISC-V
+   - Check up on how the Saluki V3 works
 
-   - (!) Update the Initial Requirements Excel as needed
-      -- ( ) Add limitations
-   - ( ) 22nd Feb, get a few PPT slides ready for the university syncup
-   - ( ) Look up what is RISC-V
-   - ( ) Check up on how the Saluki V3 works
-
-===
+   ===
 ___
 
 {:$/journal/2024/01/31:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/02:}[next >]
-

@@ -4,94 +4,59 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-14T10:28:58+0400
+updated: 2024-08-02T14:03:40+0400
 version: 1.1.1
 @end
 
 * To-Do
-
 ** (x) Find out how long the flights are with weights attached
-   > 1.36 Hours
-
-** (x) Write up full update for Week 23 and 24 on Confluence.
-
-   ===
-___
-
+   - 1.36 Hours
+** (x) Write up full update for Week 23 and 24 on Confluence
 * Journal
-
   - Attended {** RTA Meeting}[RTA Meeting].
   - Attended {** Solita - SRTA MLOps Syncup}[Solita - SRTA MLOps Syncup].
-
-  ===
-___
-
 * Meetings
-
 ** RTA Meeting
-
 *** Attendees
-
     | SRTA-AD
-
 *** Goals
-
     - Discuss current project statuses and address any blockers.
     - Align on next steps and action points for ongoing projects.
-
 *** Agenda
-
     - Update on Drone project
     - Jira follow-up
     - Nvidia DGX replacement status
     - Solita vs SRTA AD Demo target discussion
-
 *** Minutes
-
     - Drone: Waiting on RJ45 adaptor
-
     - Jira followup:
        -- predef JIRA template structure
        -- same method of adding content to Jira
        -- too early to conduct sprints
        -- Can use Jira label for filtering if needed
-
     - Nvidia DGX replacement is stuck because of some geopolitical issues
-
     - Solita vs SRTA AD Demo target:
        -- Solita is going for a Proof of concept with hybrid sim/hardware
           approach.
        -- SRTA AD is going for a hardware proof of concept.
        -- Seems to me that both parties are still not in proper sync
-
 *** Action Items
-
-    - {** Write up full update for Week 23 and 24 on Confluence.}
-
+    - {** Write up full update for Week 23 and 24 on Confluence}[Write up full update for Week 23 and 24 on Confluence]
 ** Solita - SRTA MLOps Syncup
-
 *** Attendees
-
     | Solita
     | SRTA-AD
-
 *** Goals
-
     - Discuss progress towards Demo for Q2
-
 *** Agenda
-
     - Battery monitoring and safelanding use case update.
     - Q2 hardware demo progress.
-
 *** Minutes
-
     - Demo in two weeks -> battery monitoring + safelanding use case is near
       release state for a hybrid sim/hardware demo.
     - Can move towards hardware after this is done.
     - Sensor anomaly model template is working and is being tested.
     - New guy will be joining the Solita team soon.
-
 *** Action Items
 
     ===

@@ -4,20 +4,13 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T22:29:57+0400
-updated: 2024-06-20T20:08:06+0400
+updated: 2024-08-02T14:18:31+0400
 version: 1.1.1
 @end
 
 * To-Do
-
   /Rolled over/
-
-  ===
-___
-
-
 * Continual Task Learning
-
   Continual task learning is referred to in the context of artificial
   intelligence and machine learning. It is where the model continuously learns
   or adapts to new tasks while retaining its performance on previously learned
@@ -50,4 +43,6 @@ ___
   the evolving preferences and needs of individual users.
 
   ===
-  ___
+___
+
+{:$/journal/2024/01/28:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/01/30:}[next >]

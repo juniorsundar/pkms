@@ -4,21 +4,14 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-07-24T13:47:37+0400
+updated: 2024-08-02T13:49:21+0400
 version: 1.1.1
 @end
 
 * To-Do
-
   /Rolled over/
-
-  ===
-___
-
 * Journal
-
 ** Requirements for BLS Passport Name Change
-
    - *Nandini*
       -- Original Passport
       -- Original Emirates ID
@@ -29,9 +22,7 @@ ___
    - *Both*
       -- Book appointment (AED 450 for Regular/AED 650 for Premium)
       -- Marriage Certificate in English
-
 ** Checklist for Flight
-
    - Ensure that the drone is flight ready (Manual Takeoff, Move, Land)
    - Ensure the drone connects with the PMC and mission can be created
    - Execute single mission

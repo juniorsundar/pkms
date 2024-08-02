@@ -4,38 +4,24 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-07-10T23:18:01+0400
+updated: 2024-08-02T13:50:54+0400
 version: 1.1.1
 @end
 
 * Journal
-
   - Attended {** RTA Meeting}[RTA Meeting].
   - Trying to get the drone to show up in the FMO UI
-
-  ===
-___
-
 * Meetings
-
 ** RTA Meeting
-
 *** Attendees
-
     | SRTA-AD
-
 *** Goal
-
     - Progress update.
-
 *** Agenda
-
     - Provide update.
     - GITEX demo needs.
     - July demo needs.
-
 *** Minutes
-
     - PMC connectivity with drones is still WIP because the drone doesn't show up in the FMO.
     - With artifactory removal, builds are broken.
        -- Containers must be linked in GitHub.
@@ -44,9 +30,7 @@ ___
     - GITEX demo:
        -- Voice commands -> LLM -> Drone commands
     - Command to drone?
-
 *** Action Points
-
 
     ===
 ___

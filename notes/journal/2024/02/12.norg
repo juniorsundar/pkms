@@ -4,68 +4,39 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-13T10:27:42+0400
+updated: 2024-08-02T21:38:02+0400
 version: 1.1.1
 @end
 
 * To-Do
+  /Rolled over/
+* Meetings
+** RTA/ML/Data Solita/Abu Dhabi Syncup 
+*** Attendees
+    | SRTA-AD
+    | Solita
+    | | Philipp Schmalen
+    | | Matti Holtta
+    | | Jarmo Hakala
+*** Goals
+    - Sync-up
+*** Agenda
+    - Discussion on group work
+*** Minutes
+    /Philipp Schmalen and Matti Holtta/
+    - Safe landing datasets some updates
 
-** Work
+    /Jarmo Hakala/
+    - MLOps
 
-   - ( ) Determine how to add the faulty flight controller to dronsole launch
-   - ( ) Set up a meeting with Ilkka to get the sim working
-   - (-) Look into how the Saluki can be set up
-      -- (x) Meet Aravindaraja to get access to private repository
-      -- ( ) Meet with Steve to build and flash the firmware
-   - (-) 22nd Feb, get a few PPT slides ready for the university syncup
+    /Junior Sundar/
+    - Roadblocks in running dronsole
+       -- Issues accessing the Mav
+       -- Launching faulty-controller
+*** Action Items
+    - Set up a meeting with Ilkka to get the sim working
 
-** Personal
-
-
-===
-  ___
-
-
-===
-  ___
-
-* RTA/ML/Data Solita/Abu Dhabi Syncup 
-
-** Attendees
-
-   | SRTA-AD
-   | Solita
-   | | Philipp Schmalen
-   | | Matti Holtta
-   | | Jarmo Hakala
-
-** Goals
-
-   - Sync-up
-
-** Agenda
-
-   - ( ) 
-
-** Minutes
-
-   /Philipp Schmalen and Matti Holtta/
-   - Safe landing datasets some updates
-
-   /Jarmo Hakala/
-   - MLOps
-
-   /Junior Sundar/
-   - Roadblocks in running dronsole
-      -- Issues accessing the Mav
-      -- Launching faulty-controller
-
-** Action Items
-
-   - ( ) Set up a meeting with Ilkka to get the sim working
-
-===
+    ===
 ___
 
-{:$/journal/2024/02/09:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/:}[next >]
-
+{:$/journal/2024/02/08:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/10:}[next >]

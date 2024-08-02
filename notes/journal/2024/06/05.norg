@@ -4,24 +4,15 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-14T10:30:06+0400
+updated: 2024-08-02T14:05:30+0400
 version: 1.1.1
 @end
 
 * To-Do
-
 ** (x) Find out if PX4 has battery lifecycle estimation
-
 ** (x) Confirm methodology from Sakari to launch SRTA Modules
-
-
-   ===
-___
-
 * Journal
-
   - *Conversation with Manuel Segarra-Abad about the {:$/journal/task-box/q2-june-demo:* Custom Release for SRTA}[Custom Release for SRTA]*
-
   - *Follow-up with Andres about drone flight*
      -- Magnetometer is a bit moody sometimes (connection lost infrequently)
      -- You need a GCS and a fog-drone in the mesh network for the "recon" drone
@@ -32,39 +23,22 @@ ___
         --- Also disable Power Monitor 2 in QGC.
      -- When running long flights with QGC, the drone turns in the direction of
         trajectory, however, the FMO does not do that.
-
   - Attended {** RTA Meeting}[RTA Meeting].
-
-        ===
-___
-
 * Meetings
-
 ** RTA Meeting
-
 *** Attendees
-
     | SRTA-AD
-
 *** Goal
-
     Update from the week towards demo
-
 *** Agenda
-
     - Discuss progress and hold ups on my side
     - Understand the progress form everyone else
-
 *** Minutes
-
     GITEX demo
     - OpenSet speaker identification (VAuth)? It seems it isn't needed
     - Transcribing text -> language understanding
-
     RTA issues on Saluki V3 as they haven't tested the SRTA modules in the V3.
-
 *** Action Points
-
     - {:$/journal/task-box/q2-june-demo:** Figure out what the process is to install and setup the {* Custom Release for SRTA}}[Figure out what the process is to install and setup the Custom Release for SRTA]
     - {** Find out if PX4 has battery lifecycle estimation}[Find out if PX4 has battery lifecycle estimation]
     - {**  Confirm methodology from Sakari to launch SRTA Modules}[Confirm methodology from Sakari to launch SRTA Modules]

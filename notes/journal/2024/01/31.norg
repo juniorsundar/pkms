@@ -4,122 +4,96 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-01-30T14:27:01+0400
+updated: 2024-08-02T14:24:00+0400
 version: 1.1.1
 @end
 
 * To-Do
+  /Rolled over/
+* Meetings
+** X6 TII + Caltech Joint Kickoff Meeting 
+*** Attendees
+    | SSRC
+    | Caltech
+    | | Aaron Ames
+    | | Xiao Tan
+    | | Jaemin Lee
+    | | preston Culbertson
+    | UCLA
+    | | Paulo Tabuada
+*** Goals
+    - Kickoff of project ideas
+       -- Security through safety
+*** Agenda
+    - Security in Safety: Zero-trust sensor fusion for resilient autonomy
+*** Minutes
+    /Aaron Ames/
+    - Safe autonomy
+    - Fuse sensors with CBFs for safety (it is all part of CBFs)
+       -- Sensors subject to attak --> CBFs for each sensor --> Composite CBF --> Resilient system
 
-** Work
+    /Paulo Tabuada/
+    - In CPS, we can use physics to protect against sensor attacks
+      $|x(t+1) = Ax(t) + Bu(t)|$ 
+      $|y(t) = Cx(t) + {e(t)}|$
+       -- Here the attack vector is assigned $e(t)$
+    - Resiliant state reconstruction:
+       -- q-sparse observable
+    > The state can be reconstructed despite an attack on (at most) /q/
+    > sensors 
+    - Do you need to reconstruct the state in order for the system to remain
+      safe?
+       -- The attacker wants to enlarge the set of safe inputs: intersection of
+          these sets remains safe as long as there are enough attack-free sensors.
 
-   - ( ) See if it is possible to run simulation stack with HITL
-   - ( ) Determine how to add the faulty flight controller to dronsole launch
+    /Xiao Tan/
+    - Scenario:
+       -- Multiple sensors corrupted by an attacker
+       -- State CANNOt be uniquely determined after secure state estimation
+       -- Safety controller need takes all plausible states into account
+    - Key question:
+       -- how does $X^t$ look like? (where it is the states of the system)
+       -- how to guarantee feasibility of safety filter?
+    - Planned research: Malicious agent for multi-robot safety
+       -- "Distributed control barrier function"
+       -- human is moving obstacle
+       -- multiple collision avoidance constraints
+       -- neighbouring robots also need to stay close
+    - Planned research: Experimental acoustic attack on IMU sensors and test
+      designed safety filter on off-the-shelf robotic platforms
 
- ** Personal
+    /Jaemin Lee/
+    - Q: How can we mitigate contradiction between multiple safety conditions
+    - A: Establish hierarchy among the CBFs in terms of their importance
+    - Hierarchical safety-critical controller
+       -- Mathematically cascaded structure
+    - Key questions:
+       ~~ How can we intelligently establish a hierarchy between CBFs associated
+          with different sensors?
+       ~~ What if sensors are attacked?
 
+    /Preston Culbertson/
+    - Safe sensor fusion via Bayesian Filtering
+    - Key Question: How can we provide formal safety guarantees even when we
+      have (unbounded) uncertainty about our state?
+    - Stochastic CBFs
+    - Generative model to generate noisy dynamics of a drone with a bottle tied
+      to it
 
-   ===
-___
+    /Summary/
+    - CBFs guarantee safe behavior
+    - Fuse sensors through CBFs:
+       -- Stochastic CBFs
+       -- Prioritisation of CBFs
+       -- CBFs under sensor attack
+    - Safe autonomy even under attack
+*** Action Items
+    - What are Control Barrier Functions?
+       -- Minimal corrective action
+    - Satisfiability Modulo Convex Optimisation
+    - Bayesian Filtering
 
-* Scratch
-
-      ===
-___
-
-* X6 TII + Caltech Joint Kickoff Meeting 
-
-** Attendees
-
-   | SSRC
-   | Caltech
-   | | Aaron Ames
-   | | Xiao Tan
-   | | Jaemin Lee
-   | | preston Culbertson
-   | UCLA
-   | | Paulo Tabuada
-
-** Goals
-
-   - Kickoff of project ideas
-      -- Security through safety
-
-** Agenda
-
-   - Security in Safety: Zero-trust sensor fusion for resilient autonomy
-
-** Minutes
-
-   /Aaron Ames/
-   - Safe autonomy
-   - Fuse sensors with CBFs for safety (it is all part of CBFs)
-      -- Sensors subject to attak --> CBFs for each sensor --> Composite CBF --> Resilient system
-
-   /Paulo Tabuada/
-   - In CPS, we can use physics to protect against sensor attacks
-     $|x(t+1) = Ax(t) + Bu(t)|$ 
-     $|y(t) = Cx(t) + {e(t)}|$
-      -- Here the attack vector is assigned $e(t)$
-   - Resiliant state reconstruction:
-      -- q-sparse observable
-   > The state can be reconstructed despite an attack on (at most) /q/
-   > sensors 
-   - Do you need to reconstruct the state in order for the system to remain
-     safe?
-      -- The attacker wants to enlarge the set of safe inputs: intersection of
-         these sets remains safe as long as there are enough attack-free sensors.
-
-   /Xiao Tan/
-   - Scenario:
-      -- Multiple sensors corrupted by an attacker
-      -- State CANNOt be uniquely determined after secure state estimation
-      -- Safety controller need takes all plausible states into account
-   - Key question:
-      -- how does $X^t$ look like? (where it is the states of the system)
-      -- how to guarantee feasibility of safety filter?
-   - Planned research: Malicious agent for multi-robot safety
-      -- "Distributed control barrier function"
-      -- human is moving obstacle
-      -- multiple collision avoidance constraints
-      -- neighbouring robots also need to stay close
-   - Planned research: Experimental acoustic attack on IMU sensors and test
-     designed safety filter on off-the-shelf robotic platforms
-
-   /Jaemin Lee/
-   - Q: How can we mitigate contradiction between multiple safety conditions
-   - A: Establish hierarchy among the CBFs in terms of their importance
-   - Hierarchical safety-critical controller
-      -- Mathematically cascaded structure
-   - Key questions:
-      ~~ How can we intelligently establish a hierarchy between CBFs associated
-         with different sensors?
-      ~~ What if sensors are attacked?
-
-   /Preston Culbertson/
-   - Safe sensor fusion via Bayesian Filtering
-   - Key Question: How can we provide formal safety guarantees even when we
-     have (unbounded) uncertainty about our state?
-   - Stochastic CBFs
-   - Generative model to generate noisy dynamics of a drone with a bottle tied
-     to it
-
-   /Summary/
-   - CBFs guarantee safe behavior
-   - Fuse sensors through CBFs:
-      -- Stochastic CBFs
-      -- Prioritisation of CBFs
-      -- CBFs under sensor attack
-   - Safe autonomy even under attack
-
-** Action Items
-
-   - ( ) What are Control Barrier Functions?
-      -- Minimal corrective action
-   - ( ) Satisfiability Modulo Convex Optimisation
-   - ( ) Bayesian Filtering
-
-===
+    ===
 ___
 
 {:$/journal/2024/01/30:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/01:}[next >]
-

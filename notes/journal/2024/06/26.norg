@@ -4,82 +4,51 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-26T21:39:17+0400
+updated: 2024-08-02T13:58:38+0400
 version: 1.1.1
 @end
 
 * To-Do
-
 ** ( ) Check SDK for NATS to ROS 2 interfacing with Govind
-
-   ===
-___
-
 * Journal
-
   - Attended {** RTA Meeting}[RTA Meeting].
   - Attended {** Solita - SRTA MLOps Syncup}.
   - *Cool Quote:*
   > Demo that is effective needs to tell a story.
   > -- Ticky
-
-  ===
-___
-
 * Meetings
-
 ** RTA Meeting
-
 *** Attendees
-
     | SRTA-AD
-
 *** Goals
-
     - Progress update
     - Work left towards Demo
-
 *** Agenda
-
     - Update on what was done before and after the vacation
     - What all is left for getting drone demo ready
     - Any news?
-
 *** Minutes
-
     - /from Martin:/
        -- GPU obtained for local machine.
        -- Lab available can move up all the items ffrom Saeed desk very soon.
     - {:$/journal/task-box/q2-june-demo:*** Set up provisioning server}[Set up provisioning server].
     - Can now remotely connect to dev-kit from SSH/Tailscale.
-
 *** Action Items
-
     - {:$/journal/task-box/q2-june-demo:** Set up GCS/PMC for drone control}[Set up GCS/PMC for drone control]
     - {** Check SDK for NATS to ROS 2 interfacing with Govind}[Check SDK for NATS to ROS 2 interfacing with Govind]
-
 ** Solita - SRTA MLOps Syncup
-
 *** Attendees
-
     | SRTA-AD
     | Solita
-
 *** Goals
-
     - Progress update
     - State of emergency landing demo
-
 *** Agenda
-
     - Is the PMC being used at Solita?
-
 *** Minutes
-
     - Matti Holtta will share a video with current version of demo in sim.
     - Iraklis will write up new requirement for demo video.
     - PMC is being used at Solita ... But how TF is it working with Release 12.0.1?
-
 *** Action Items
 
     ===

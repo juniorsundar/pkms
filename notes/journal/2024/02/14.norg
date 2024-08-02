@@ -4,78 +4,38 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-14T16:27:04+0400
+updated: 2024-08-02T21:45:47+0400
 version: 1.1.1
 @end
 
 * To-Do
-
-** Work
-
-   - (_) -Determine how to interface with the launched flight controller-
-      -- (_) -Attaching to MAVLink session-
-         --- (_) -Can directly affect params without having to attach to session-
-      -- (_) -Initialising Faults-
-      -- (_) -Observing ROS 2 Topics-
-   - (x) Look into how the Saluki can be set up
-      -- (x) Meet with Steve to build and flash the firmware
-      -- (x) Meet with Srikar to understand how to flash custom firmware
-   - ( ) Flash custom firmware into Saluki V2
-   - ( ) Discuss how to implement the fault injection functionality
-   - (-) 22nd Feb, get a few PPT slides ready for the university syncup
-   - (x) Meet With Martin to get some Perspective!!
-   - ( ) Look into: Secure Boot Validation
-   - ( ) Read into HIDS (Siva)
-
-** Personal
-
-
-   ===
-___
-
+** (x) Look into how the Saluki can be set up
+*** (x) Meet with Steve to build and flash the firmware
+*** (x) Meet with Srikar to understand how to flash custom firmware
+** (x) Meet With Martin to get some Perspective!!
+* Meetings
+** RTA Meeting 
+*** Attendees
+    | SRTA-AD
+    | | Martin Andreoni
+    | | Rayana Boubezari
+    | | Junior Sundar
+*** Goals
+    - Discuss progress
+*** Agenda
+    - Update Jira 
+    - Sync-Up 
+*** Minutes
+    /Junior Sundar/
+    - Saluki V2 set up waiting to flash custom firmware
+    - Dronsole confirmed to launch with faulty controllers
+       -- Testing
+       -- Discussion to implement a feature for others to be able to use as well
+*** Action Items
+    - 23 February, Share Objectives (meet | exceed | percentage)
+    - Send self-pic for PPT
 
     ===
 ___
 
-* RTA Meeting 
-
-** Attendees
-
-   | SRTA-AD
-   | | Martin Andreoni
-   | | Rayana Boubezari
-   | | Junior Sundar
-
-** Goals
-
-   - ( ) Discuss progress
-
-** Agenda
-
-   - ( ) Update Jira 
-   - ( ) Sync-Up 
-
-** Minutes
-
-   /Martin Andreoni/
-   - 
-
-   /Rayana Boubezari/
-   - 
-
-   /Junior Sundar/
-   - Saluki V2 set up waiting to flash custom firmware
-   - Dronsole confirmed to launch with faulty controllers
-      -- Testing
-      -- Discussion to implement a feature for others to be able to use as well
-
-** Action Items
-
-   - ( ) 23 February, Share Objectives (meet | exceed | percentage)
-   - ( ) Send self-pic for PPT
-
-   ===
-___
-
 {:$/journal/2024/02/13:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/15:}[next >]
-

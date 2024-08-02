@@ -4,47 +4,28 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-07-05T00:15:20+0400
+updated: 2024-08-02T13:53:04+0400
 version: 1.1.1
 @end
 
 * To-Do
-
 ** ( ) Drone Licensing Training
 *** ( ) Fixed Wing: {@ Monday 5 August 2024}, {@ Tuesday 6 August 2024}, {@ Wednesday 7 August 2024}
 *** ( ) Multi-Rotor: {@ Thursday 8 August 2024}, {@ Friday 9 August 2024}
 ** (x) {:$/journal/2024/07/04:** Define Release + Readiness of Tech Stack}[Decide on one release and fix it as goal]
-
-    ===
-___
-
 * Journal
-
   - Attended {** RTA Meeting}.
   - Attended {** Solita - SRTA MLOps Syncup}.
-
-  ===
-___
-
 * Meetings
-
 ** RTA Meeting
-
 *** Attendees
-
     | SRTA-AD
-
 *** Goal
-
     - Progress update.
-
 *** Agenda
-
     - Provide update.
     - Any news?
-
 *** Minutes
-
     - {:$/journal/task-box/drone-deploy-srta:**** Set up GS role}[Set up GS role]
     - {:$/journal/task-box/drone-deploy-srta:**** Assemble Comms Module 1.5}[Assemble Comms Module 1.5]
     - {:$/journal/task-box/drone-deploy-srta:**** Set up provisioning network/server}[Set up provisioning network/server]
@@ -52,30 +33,19 @@ ___
     - Video is recording from Siyi in 12.0.3 but its quality is crap.
     - Lab will be ready in 2 weeks.
     - Jira meeting will be handled in separate sessions.
-
 *** Action Points
-
-    - {**  Drone Licensing Training}
-
+    - {**  Drone Licensing Training}[Drone Licensing Training]
 ** Solita - SRTA MLOps Syncup
-
 *** Attendees
-
     | SRTA-AD
     | Solita
-
 *** Goals
-
     - Update for demo
     - State of MLOps and SRTA module deployments
-
 *** Agenda
-
     - Up to speed on the state of development of SRTA modules and such.
     - Synchronise on deliverables for the demo.
-
 *** Minutes
-
     - Hardware testing is not feasible in Solita side during holiday season.
 
     ===

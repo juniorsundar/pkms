@@ -4,93 +4,52 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-08T16:36:01+0400
+updated: 2024-08-02T21:26:46+0400
 version: 1.1.1
 @end
 
 * To-Do
+  /Rolled over/
+* Journal
+  - *Proofreading notes*
+     -- Unmanned Traffic Management (UTM)
+     -- Air Traffic Management (ATM)
+     -- Comments:
+        --- Page 1:
+           ---- GUTMA and IETF called before defined (it is done in Page 5)
+        --- Page 2:
+           ---- ATM Definition
+           ---- UTMSP called before defined
+        --- Page 8:
+           ---- yellow highlighted text is repeated from Page 2
+        --- Page 9:
+           ---- Fig 7 is labelled as Fig 6
+        --- Page 10:
+           ---- in text there is a reference to Fig 6 but I think it should be Fig 8
+* Meetings
+** RTA Meeting 
+*** Attendees
+    | SRTA-AD
+    | | Martin Andreoni
+    | | Rayana Boubezari
+    | | Junior Sundar
+*** Goals
+    - Discuss progress
+*** Agenda
+    - Update Jira 
+    - Sync-Up 
+*** Minutes
+    /Martin Andreoni/
+    - Deliverables for Q1
+    - *Ask for help if stuck*
+    - Presentation is only 5 mins
+      /Rayana Boubezari/
+    - Keep a PPT ready with Documentation incase you have to present
+      /Junior Sundar/
+*** Action Items
+    - ( ) Share the dataset for simulation with Sakari Nousiainen
 
-** Work
-
-   - ( ) Determine how to add the faulty flight controller to dronsole launch
-      -- ( ) Continue conversation with Ilkka Siiki, Jarmo Hakala, and Lassi Laiho from Solita
-   - ( ) Research: Look into bootloaders (whatever they are)
-   - (-) Look into how the Saluki can be set up
-      -- FPGA Binaries
-      -- Bootloader
-      -- Saluki Firmware
-      -- Preparation before meeting Steve:
-         --- Install dependencies
-         --- Get the Flashpro, Debugging tool and Cable from Johanna
-   - (-) 22nd Feb, get a few PPT slides ready for the university syncup
-   - (-) Data recording for Samridha
-
-** Personal
-
-
-   ===
-  ___
-
-* Scratch
-
-  Unmanned Traffic Management (UTM)
-
-  Air Traffic Management (ATM)
-
-  Comments:
-
-  - Page 1:
-     -- GUTMA and IETF called before defined (it is done in Page 5)
-  - Page 2:
-     -- ATM Definition
-     -- UTMSP called before defined
-  - Page 8:
-     -- yellow highlighted text is repeated from Page 2
-  - Page 9:
-     -- Fig 7 is labelled as Fig 6
-  - Page 10:
-  -- in text there is a reference to Fig 6 but I think it should be Fig 8
-
-
-===
-  ___
-
-* RTA Meeting 
-
-** Attendees
-
-   | SRTA-AD
-   | | Martin Andreoni
-   | | Rayana Boubezari
-   | | Junior Sundar
-
-** Goals
-
-   - (x) Discuss progress
-
-** Agenda
-
-   - (x) Update Jira 
-   - (x) Sync-Up 
-
-** Minutes
-
-   /Martin Andreoni/
-   - Deliverables for Q1
-   - *Ask for help if stuck*
-   - Presentation is only 5 mins
-    
-   /Rayana Boubezari/
-   - Keep a PPT ready with Documentation incase you have to present
-
-   /Junior Sundar/
-
-** Action Items
-   - ( ) Share the dataset for simulation with Sakari Nousiainen
-
-
-===
+    ===
 ___
 
 {:$/journal/2024/02/07:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/09:}[next >]
-

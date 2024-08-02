@@ -4,43 +4,20 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-01-30T14:26:32+0400
+updated: 2024-08-02T14:17:49+0400
 version: 1.1.1
 @end
 
 * To-Do
-
-** Work
-
-   - (x) Test if the pushed tiiuae code works as expected. If not then run
-         diagnostics
-   - (x) Solita - Contact point for the person who knows most about how the ROS
-         2 sub/pub is taking place in existing architecture.
-   - (x) Push the PX4-Autopilot code to the tiiuae GitHub repo
-   - (x) Make changes to the tiiuae repo:
-      -- (x) Add the dds topics
-      -- (x) Update the documentation and scripts in the simulation to reflect
-             this move
-   - ( ) See if it is possible to run simulation stack with HITL
-   - ( ) Determine how to add the faulty flight controller to dronsole launch
-   - (x) Update {https://ssrc.atlassian.net/wiki/spaces/ML/pages/928120863/Drone+ML+Feature+Tracker}[ML Feature Tracker] so that we know where to obtain data
-
-** Personal
-
-   - ( ) Write something
+** (x) Test if the pushed tiiuae code works as expected. If not then run diagnostics
+** (x) Solita - Contact point for the person who knows most about how the ROS 2 sub/pub is taking place in existing architecture.
+** (x) Push the PX4-Autopilot code to the tiiuae GitHub repo
+** (x) Make changes to the tiiuae repo:
+*** (x) Add the dds topics
+*** (x) Update the documentation and scripts in the simulation to reflect this move
+** (x) Update {https://ssrc.atlassian.net/wiki/spaces/ML/pages/928120863/Drone+ML+Feature+Tracker}[ML Feature Tracker] so that we know where to obtain data
 
    ===
 ___
 
-* Scratch
-
-  /scratch/
-
-  ===
-___
-
-===
-___
-
 {:$/journal/2024/01/29:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/01/31:}[next >]
-

@@ -4,43 +4,19 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-03-02T23:09:37+0400
+updated: 2024-08-02T21:53:40+0400
 version: 1.1.1
 @end
 
 * To-Do
-
-  - (-) Flash custom firmware into Saluki V2
-     -- (x) Flash faulty-firmware and set up HITL
-     -- (-) Test Fault Injection
-     -- ( ) Test control of flight through MAVSDK
-     -- ( ) Touch base with Yashraj to determine what is needed from the HiTL
-  - ( ) Discuss how to implement the fault injection functionality in dronsole
-     -- ( ) Check if Esko and Ilkka need to be invited to Meeting
-  - (-) Meeting with Siva
-     -- ( ) Hold meeting
-  - (-) Collect data for Samridha
-     -- (x) Fix bug with the fault-state being active even when no faults are present
-     -- ( ) Produce some data that causes crashing of drone
-  - (-) 22nd February, PPT slides CalTech syncup
-     -- (-) Trim PPT
-     -- ( ) Prepare script
-  - ( ) 23rd February, Share Objectives (meet | exceed | percentage)
-
+  /Rolled over/
 * Journal
-
   - {:$/vault/px4/simulation:* Hardware-in-the-Loop (HITL)}[HITL set up] with Saluki V2
   - {* Bug Fix in SITL Pipeline}[Fixed bug] in SITL pipeline
   - Updated {:$/tgt/index:}[The Good Teacher]
      -- Completed {:$/tgt/volume-6/chapter-422:}[Chapter 422 - Fear, Uncertainty, Doubt]
      -- Uploaded {:$/tgt/volume-6/chapter-410:}[Chapter 410 - Regrouping]
-
-
-  ===
-___
-
 * Bug Fix in SITL Pipeline
-
   The fault was being recorded as activated since the trigger did not check to
   see if there were any active faults to begin with. The issue was identified
   in {:$/vault/sensor-fault-injection:**** fault_manager.py}[fault_manager.py].
@@ -73,37 +49,26 @@ ___
                   self.out_string += f"{random_value},"
       self.out_string = self.out_string[:-1] + "\n"
   @end
-
-  ===
-___
-
-* Meeting: Datahub and MLOps
-
-** Attendees
-
+* Meeting
+** Meeting: Datahub and MLOps
+*** Attendees
    | SRTA-AD
    | Solita
    | | Moamen Ibrahim
    | | Rodolfo Pedraza
    | | Jarmo Hakala
-
-** Goals
-
+*** Goals
    - Datahub
    - MLOps
-
-** Agenda
-
-   - (x) What is Datahub
-   - (x) Datahub building blocks
-   - (x) Datahub overall architecture
-   - (x) Query data
-   - (x) Datahub metadata and use cases
-   - (x) NATSAPI usage
-   - (x) SRTA and MLOps
-
-** Minutes
-
+*** Agenda
+   - What is Datahub
+   - Datahub building blocks
+   - Datahub overall architecture
+   - Query data
+   - Datahub metadata and use cases
+   - NATSAPI usage
+   - SRTA and MLOps
+*** Minutes
    /Moamen Ibrahim/
    - Datahub aggregates metadata from missions and devices. Provides
      centralised system for data.
@@ -133,13 +98,11 @@ ___
    - {https://github.com/tiiuae/platform-ml-rta-sample-model}[Model Development]
    - mlflow model registry?
    - Data preprocessing from NATS and ROS interface
-
-** Action Items
-   - (x) Check how the data is being received and recorded so that it can be used by ML models. The format, processing, etc.
-   - ( ) Check if it is possible to automate ROS node generation.
+*** Action Items
+   - Check how the data is being received and recorded so that it can be used by ML models. The format, processing, etc.
+   - Check if it is possible to automate ROS node generation.
 
    ===
 ___
 
 {:$/journal/2024/02/18:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/20:}[next >]
-

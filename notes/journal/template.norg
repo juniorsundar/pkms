@@ -4,41 +4,26 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-06-13T11:46:33+0400
+updated: 2024-08-02T10:32:05+0400
 version: 1.1.1
 @end
 
 * To-Do
-
   - ( ) tasks
-
-  ===
-___
-
 * Journal
-
-  ===
-___
-
+  - Point
 * Meetings
-
 ** Meeting Name
-
 *** Attendees
-
     | Names
-
 *** Goals
-
-
+    - goal
 *** Agenda
-
     - ( ) 
-
 *** Minutes
-
-
+    - minute
 *** Action Items
+    - action-point
 
     ===
 ___

@@ -4,67 +4,32 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-07T15:47:39+0400
+updated: 2024-08-02T14:26:01+0400
 version: 1.1.1
 @end
 
 * To-Do
-
-** Work
-
-   - (?) See if it is possible to run simulation stack with HITL
-   - ( ) Determine how to add the faulty flight controller to dronsole launch
-   - ( ) Add the fault sources to the HITL build
-   - ( ) Look into how the Saluki can be set up
-
-   - ( ) 22nd Feb, get a few PPT slides ready for the university syncup
-   - ( ) Data recording for Samridha
-   - (!) There is a mismatch between uORB topics and px4_msgs in latest commit
-      -- Implement a way so that this doesn't cause problems to the other users
-
-** Personal
-
-
-===
-  ___
-
-* Scratch
-
-  /scratch/
-
-===
-  ___
-
-* Luana / Junior
-
-** Attendees
-
+  /Rolled over/
+* Meetings
+** Luana / Junior
+*** Attendees
    | Junior Sundar
    | Luana Rocha
-
-** Goals
-
+*** Goals
    - Discuss logistics and details regarding travel approval
-
-** Agenda
-
-   - (x) Go through procedure
-   - (x) Get questions answered
-
-** Minutes
-
+*** Agenda
+   - Go through procedure
+   - Get questions answered
+*** Minutes
    - Need to get confirmation email from Martin with Luana CC'd with start date
      and duration of trip
    - Need to confirm what all will be managed from TII side regarding travel
       -- Martin has to do this possibly through Oksana
    - Visa details
-
-** Action Items
-   
-   - (x) Update Martin
+*** Action Items
+   - Update Martin
 
 ===
 ___
 
 {:$/journal/2024/02/02:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/06:}[next >]
-

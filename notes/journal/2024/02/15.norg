@@ -4,65 +4,14 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-18T14:12:28+0400
+updated: 2024-08-02T21:46:25+0400
 version: 1.1.1
 @end
 
 * To-Do
-
-** Work
-
-   - (-) Flash custom firmware into Saluki V2
-      -- (x) Obtain industrial ethernet cable from Sreejith
-      -- (x) Set up HiTL with unedited firmware
-      -- (x) Build firmware with faults
-      -- (-) Flash faulty-firmware and set up HiTL
-      -- ( ) Test
-   - ( ) Discuss how to implement the fault injection functionality in dronsole
-   - (-) Meeting with Siva
-      -- (x) Background study
-      -- ( ) Hold meeting
-   - ( ) 23rd February, Share Objectives (meet | exceed | percentage)
-   - (x) Send self-pic for PPT
-   - (-) 22nd Feb, get a few PPT slides ready for the university syncup
-
-** Personal
-
-
-   ===
-___
-
-
-   ===
-___
-
-* SivaPrasad / Junior 
-
-** Attendees
-
-   | SivaPrasad
-   | Junior
-
-** Goals
-
-   - Discuss plausibility of a simulation environment for data exfiltration project.
-
-** Agenda
-
-   - ( ) Understand the scope of the feature
-   - ( ) Brainstorm the possibilities
-
-** Minutes
-
-   /Junior Sundar/
-   - What are we trying to monitor?
-   - Is it online or offline? Nature of data collection: Logs vs Topic subscriptions?
-
-
-** Action Items
+** (x) Send self-pic for PPT
 
    ===
 ___
 
 {:$/journal/2024/02/14:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/16:}[next >]
-

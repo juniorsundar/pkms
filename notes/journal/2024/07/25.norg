@@ -4,47 +4,27 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-08-01T12:01:39+0400
+updated: 2024-08-02T10:35:43+0400
 version: 1.1.1
 @end
 
 * To-Do
-
   /Rolled over/
-
-  ===
-___
-
 * Journal
-
   - Attended {** RTA Meeting}[RTA Meeting].
-
-  ===
-___
-
 * Meetings
-
 ** RTA Meeting
-
 *** Attendees
-
     | SRTA-AD
-
 *** Goals
-
     - Update towards demo.
-
 *** Agenda
-
     - Current progress.
     - Work that is left.
-
 *** Minutes
-
     - `path-worker` needs to be fast-forwarded to accomodate the PKCS updates.
     - Try removing the GPU build tag and verify that it works with
       `srta-anomaly-detection`.
-
 *** Action Items
 
     ===

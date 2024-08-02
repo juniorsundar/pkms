@@ -4,20 +4,14 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-07-04T22:49:19+0400
+updated: 2024-08-02T13:57:11+0400
 version: 1.1.1
 @end
 
 * To-Do
-
 ** (x) Reprint the Saluki-Frame fixture standoff
-
-  ===
-___
-
 * Journal
-
-  - Attended {** `DP-9252` Progress Update and Handover}.
+  - Attended {** `DP-9252` Progress Update and Handover}[`DP-9252` Progress Update and Handover].
   - Somehow the data in the drive got deleted.
      -- Found it though the Unikie GDrive -> Should have been deleted due to
         transition.
@@ -25,14 +19,8 @@ ___
      -- Created hard backup and shared it with Martin.
      -- Now it is all back up.
      -- Access restriction in place.
-
-  ===
-___
-
 * Meetings
-
 ** `DP-9252` Progress Update and Handover
-
 *** Attendees
 
     | Jose Segovia

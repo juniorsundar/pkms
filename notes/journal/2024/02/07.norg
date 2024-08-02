@@ -4,86 +4,41 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-02-08T16:36:07+0400
+updated: 2024-08-02T21:08:53+0400
 version: 1.1.1
 @end
 
 * To-Do
-
-** Work
-
-   - (x) Check availability of Saluki Pi or Saluki V2
-      -- (x) with Sreejith
-         ---  There aren't any spare in the hardware labs
-      -- (x) with Johanna
-         --- We have *S61* Saluki V2
-      -- (x) with Govind
-   - (x) Move the fault code into v0.14.0 tag at tiiuae/px4-firmware
-
-   - ( ) Determine how to add the faulty flight controller to dronsole launch
-      -- ( ) Continue conversation with Ilkka Siiki, Jarmo Hakala, and Lassi Laiho from Solita
-   - ( ) Research: Look into bootloaders (whatever they are)
-   - (-) Look into how the Saluki can be set up
-      -- FPGA Binaries
-      -- Bootloader
-      -- Saluki Firmware
-         --- Actually branch from main of tiiuae/px4-firmware and add changes to that
-      -- Preparation before meeting Steve:
-         --- Install dependencies
-         --- Get the Flashpro, Debugging tool and Cable from Johanna
-   - (-) 22nd Feb, get a few PPT slides ready for the university syncup
-   - (-) Data recording for Samridha
-      -- (-) Simulate a fault-less simulation as well
-
-** Personal
-
-
-
-===
-___
-
-* Scratch
-
+** (x) Check availability of Saluki Pi or Saluki V2
+*** (x) with Sreejith
+    -  There aren't any spare in the hardware labs
+*** (x) with Johanna
+    - We have *S61* Saluki V2
+*** (x) with Govind
+** (x) Move the fault code into v0.14.0 tag at tiiuae/px4-firmware
+* Journal
   -  Make changes to the launch sequence for Dronsole {https://github.com/tiiuae/sim_system/tree/main}[Here]
   -  Dronsole repo is {https://github.com/tiiuae/dronsole}[Here]
+* Meetings
+** Interview: Amruta Sekhar Panda
+*** Attendees
+    | Amruta Sekhar Panda
+    | Martin Andreoni
+    | Samridha Shrestha
+    | Junior Sundar
+*** Goals
+    - Interview
+*** Agenda
+    - Listen to candidate
+    - Ask questions
+*** Minutes
+    - Master in Robotics from IIT Kanpur
+    - PhD in IIT Kanpur
+    - Drones and swarms
+*** Action Items
+    - Submit review
 
-===
-  ___
-
-* Interview: Amruta Sekhar Panda
-
-** Attendees
-
-   | Amruta Sekhar Panda
-   | Martin Andreoni
-   | Samridha Shrestha
-   | Junior Sundar
-
-** Goals
-
-   - Interview
-
-** Agenda
-
-   - (x) Listen to candidate
-   - (x) Ask questions
-
-** Minutes
-
-   /Amruta Sekhar Panda/
-   - 
-
-   /Comments/
-   - Master in Robotics from IIT Kanpur
-   - PhD in IIT Kanpur
-   - Drones and swarms
-
-** Action Items
-
-   - (x) Submit review
-
-===
+    ===
 ___
 
 {:$/journal/2024/02/06:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/02/08:}[next >]
-

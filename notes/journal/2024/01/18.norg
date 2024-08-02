@@ -4,33 +4,26 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-28T22:27:01+0400
-updated: 2024-06-20T20:03:52+0400
+updated: 2024-08-02T14:21:25+0400
 version: 1.1.1
 @end
 
 * Meetings
-
 ** RTA Meeting
-
 *** Attendees
-
     | SRTA-AD
-
 *** Goals
-
-    - (x) Discuss progress
-
+    -  Discuss progress
 *** Agenda
-
-    - Opinion on {:./17:}[First Workshop]
+    - Opinion on {:$/journal/2024/01/17:}[First Workshop]
     - Update JIRA
-
 *** Minutes
-
     - In future, not everyone will participate in workshops, only relevant folk.
     - Select subjects for following workshops.
-
 *** Action Items
-
     - Edit timelines and tasks in JIRA
 
+    ===
+___
+
+{:$/journal/2024/01/17:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/01/19:}[next >]
