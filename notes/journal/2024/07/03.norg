@@ -4,14 +4,14 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-08-02T13:53:04+0400
+updated: 2024-08-03T15:04:32+0400
 version: 1.1.1
 @end
 
 * To-Do
-** ( ) Drone Licensing Training
-*** ( ) Fixed Wing: {@ Monday 5 August 2024}, {@ Tuesday 6 August 2024}, {@ Wednesday 7 August 2024}
-*** ( ) Multi-Rotor: {@ Thursday 8 August 2024}, {@ Friday 9 August 2024}
+** (_) Drone Licensing Training
+*** (_) Fixed Wing: {@ Monday 5 August 2024}, {@ Tuesday 6 August 2024}, {@ Wednesday 7 August 2024}
+*** (_) Multi-Rotor: {@ Thursday 8 August 2024}, {@ Friday 9 August 2024}
 ** (x) {:$/journal/2024/07/04:** Define Release + Readiness of Tech Stack}[Decide on one release and fix it as goal]
 * Journal
   - Attended {** RTA Meeting}.

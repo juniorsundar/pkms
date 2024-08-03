@@ -1,20 +1,35 @@
 @document.meta
 title: 31 July 2024
 description: 
-authors: juniorsundar
+authors: juniorsundar-unikie
 categories: 
-created: 2024-01-29T11:08:22+0400
-updated: 2024-08-02T10:25:34+0400
+created: 2024-08-03T14:58:27+0400
+updated: 2024-08-03T18:11:26+0400
 version: 1.1.1
 @end
 
 * To-Do
 ** ( ) Update SRTA deliverables
-   | SCHEDULED: {@ 7 August 2024}
+   @data agenda
+   started:
+   completed:
+   deadline: 2024-08-07|12:30
+   priority:
+   @end
 *** ( ) {https://tiiuae-my.sharepoint.com/:p:/g/personal/martin_andreoni_tii_ae/ER8BKg5-b7dFsErO1Vvx0pIBUJZVzW0Hz0UlycHIi-Tf8Q?e=3KVqdA&wdOrigin=TEAMS-WEB.p2p_ns.rwc&wdExp=TEAMS-TREATMENT&wdhostclicktime=1722492957723&web=1}[Slide deck]
-    | SCHEDULED: {@ 7 August 2024}
+    @data agenda
+    started:
+    completed:
+    deadline: 2024-08-07|12:30
+    priority:
+    @end
 *** ( ) {https://tiiuae-my.sharepoint.com/:p:/g/personal/martin_andreoni_tii_ae/ERs7djHKZjdNtW1FaLOzJIMBIxXmrJptpqt23sBHwBITYg?e=ouRC3e}[Q2 Deliverables]
-    | SCHEDULED: {@ 9 August 2024}
+    @data agenda
+    started:
+    completed:
+    deadline: 2024-08-09|12:30
+    priority:
+    @end
 * Journal
   - Attended {** RTA Meeting}[RTA Meeting].
   - Attended {** Solita - SRTA MLOps Syncup}[Solita - SRTA MLOps Syncup].

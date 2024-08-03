@@ -37,7 +37,7 @@
     setpoint.
 
   *Mixer* - Takes force commands and translates them into individual
-   motor commands (specific to vehicle type).
+  motor commands (specific to vehicle type).
 * Offboard Control Mode
   It may be possible to directly control the drone with [[https://docs.px4.io/main/en/flight_modes/offboard.html][Offboard Control]].
 
@@ -150,8 +150,9 @@
    Control scripts for PX4 can be written in C++ or Python and launch as ROS 2
    nodes. Here, we will only focus on the Python implementations.
 
-   The nodes that will control the drone will be added to a new ROS 2 package
-   inside the pre-existing workspace made [[file:~/Dropbox/neorg/org/org-roam/20240802232335-px4_ros_2_integration.org::*Download][here]]. First, navigate to the workspace root:
+   The nodes that will control the drone will be added to a new ROS 2
+   package inside the pre-existing workspace made [[id:018d3746-06e3-4b33-8b92-ba42b4d0b27f][here]]. First,
+   navigate to the workspace root:
 
    #+BEGIN_SRC bash
    # If the following workspace does not exist, refer to the hyperlinked page to create the workspace.
@@ -177,23 +178,23 @@
 
    #+BEGIN_SRC bash
    L px4_ws/
-	L build/
-		L ...
-	L install/
-		L ...
-	L log/
-		L ...
-	L src/
-		L px4_msgs
-		L px4_ros_coms
-		L px4_control_py
-			L px4_control_py
-			L __init__.py
-			L resource
-			L test
-			L package.xml
-			L setup.cfg
-			L setup.py
+    L build/
+        L ...
+    L install/
+        L ...
+    L log/
+        L ...
+    L src/
+        L px4_msgs
+        L px4_ros_coms
+        L px4_control_py
+            L px4_control_py
+            L __init__.py
+            L resource
+            L test
+            L package.xml
+            L setup.cfg
+            L setup.py
    #+END_SRC
 ** Writing a Control Node
    The node will be a Python script, and will be located inside
@@ -439,4 +440,4 @@
    source ~/px4_ws/install/local_setup.bash
    ros2 run px4_control_py px4_control_node
    #+END_SRC
-   
+
