@@ -6,7 +6,7 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-07-29T23:59:39+0400
+updated: 2024-08-04T20:10:47+0400
 version: 1.1.1
 @end
 
@@ -15,49 +15,33 @@ version: 1.1.1
 ** (x) {** 4 April 2024}[First meeting]
 *** (x) Follow up with {* Instructional}[instructional] response
 *** (x) Read {:$/research/literature-review/tan2024:}[paper]
-
 ** (x) Prepare a small demonstration for second meeting
 *** (x) Split the directed attacks to the accelerometer for x, y and z-axis
 *** (x) Create a node spinner that can induce a targeted attack on these axes
 *** (x) Create a visualisation that captures this behaviour
-
 ** (x) {** 18 April 2024}[Second meeting]
 *** (x) Read {:$/research/literature-review/shoukry2015:}[paper]
-
 ** (x) {** 22 April 2024}[Third meeting]
-
 ** (x) Implement simple data extraction and injection module as an external ROS Node
 *** (x) Research into how the data pipeline is arranged in the flight controller
 *** (x) Research existing strategies to achieve the data interception and injection
     {:$/vault/px4-controls:}[PX4 - Controls]
 *** (x) Test implementation 
     {* ROS 2 Modular Control}[ROS 2 Modular Control]
-
 ** (x) {** 2 May 2024}[Fourth meeting]
-
 ** (x) Verify and validate: FC's EKF $<=>$ drone in the simulation environment
-
 ** (x) {** 6 May 2024}[Fifth meeting]
-
 ** (x) Look up {** MATLAB Cell}
-
 ** (x) Try out state reconstruction method with simple example
-
 ** (x) {** 20 May 2024}[Sixth meeting]
-
 ** (x) {** 3 June 2024}[Seventh meeting]
    /SCHEDULED:/ {@ Monday 3 June 2024} 
-
 ** (x) Create GitHub repository and add `xiaotan-git` to it
-
 ** (x) {** 1 July 2024}[Eighth meeting]
-
 ** (x) {** 8 July 2024}[Ninth meeting]
-
 ** (x) Provide data as `.csv` files for Xiao Tan
 *** (x) 1x Velocity controlled with 50Hz Input
 *** (x) 1x Velocity controlled with 20Hz Input
-
 ** (-) (Try out) --> (Implement) -simple- example with (full system) --> (1D Drone Sim)
 *** (x) Design {* 1D Drone System}[the system]
 *** (x) Develop the secure state estimator
@@ -66,34 +50,33 @@ version: 1.1.1
 **** (x)Test and reiterate until the state-reconstruction is working as expected
 *** (-) Get a minimum viable demo of SSR
     | SCHEDULED: {@ Wednesday 31 July 2024}
-
 ** (x) Utilise a continuous function for acceleration input
 *** (x) 1x Acceleration controlled with 50Hz Input
 *** (x) 1x Acceleration controlled with 20Hz Input
-
 ** (x) {** 18 July 2024}[Tenth meeting]
    | SCHEDULED: {@ Thursday 18 July 2024}
-
 ** (x) Create README for the {https://www.github.com/juniorsundar-tii/px4-secure-state-reconstruction}[px4-secure-state-reconstruction] repository
 *** (_) Instructions for a local installation
 *** (x) Instructions for a containerised installation
-
 ** (x) {** 29 July 2024}[Eleventh meeting]
    | SCHEDULED: {@ Thursday 25 July 2024}
    | COMPLETED: {@ Monday 29 July 2024}
-
 ** ( ) Twelfth meeting
    | SCHEDULED: {@ Monday 5 August 2024}
-
-** ( ) Evaluate the SSR implmentation in ROS
-*** ( ) Set attacked states to varying types
-    - Constant
-    - Noisy
-    - Targeted attacks
-*** ( ) Generate plots of estimated state vs. actual state
+** (-) Evaluate the SSR implmentation in ROS
+*** (x) Set attacked states to varying types
+    - (x) Constant
+       -- (x) Set one position to a constant value.
+       -- (x) Set one velocity to a constant value.
+    - (x) Noisy
+       -- (x) Add Gaussian noise to a position reading.
+       -- (x) Add Gaussian noise to a velocity reading.
+    - (x) Targeted attacks
+       -- (x) Set one position to be negative of its actual value.
+       -- (x) Set one velovity to be negative of its actual value.
+*** (-) Generate plots of estimated state vs. actual state
 *** ( ) Try with $x$ and $y$ for both position and velocity
-
-   ===
+    ===
 
 * Notes
 
@@ -612,7 +595,7 @@ version: 1.1.1
    #tag label
    Xiao Tan / Junior Sundar -- State Reconstruction Discussion
 *** Attendees
-    
+
     | Xiao Tan
     | Junior Sundar
 
