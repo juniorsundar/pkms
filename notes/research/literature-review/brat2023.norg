@@ -6,23 +6,20 @@ categories: [
     research
 ] 
 created: 2024-02-12T20:12:14+0400
-updated: 2024-05-16T13:06:18+0400
+updated: 2024-08-06T14:21:26+0400
 version: 1.1.1
 @end
 
 | /Access {https://ntrs.nasa.gov/api/citations/20220015734/downloads/tm-rta-guidance.pdf}[reference]/
 
 * Introduction
-
   Runtime assurance (RTA) affords an operational layer of protection against
   safety hazards to systems that may include less trusted or untrusted
   functions. To that end, the RTA scheme must itself be trusted before it can
   be deployed into use:
   ~ It must fit the intended purpose.
   ~ It must not itself introduce safety hazards.
-
 * Definitions
-
   - Runtime Monitoring (RTM) - observation of an executing system of interest,
     its functions, or its environment.
   - Runtime Verification (RV) - specialisation of RTM, where response of
@@ -32,9 +29,7 @@ version: 1.1.1
     triggered by RTM, such as recovery, failover, warning, or shutdown.
   - System Under Observation (SUO) - system of interest for RTA.
   - Integrated System - SUO that includes RTA.
-
 * Overview
-
   {/ assets/images/literature-review1.png}[Figure: Architecture of RTA]
 
   RTA functions an be decomposed into the following implicitly runtime
@@ -55,9 +50,7 @@ version: 1.1.1
   ~ *Backup function* - RTA includes one or more that serve to replace or
     failover from the primary complex function. Is generally a copy of primary
     with reduced service and capability but robust safety.
-
 * Design
-
   Trusted RTA is:
 
   ~ Simple

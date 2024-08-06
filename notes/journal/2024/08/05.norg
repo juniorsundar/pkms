@@ -4,39 +4,28 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-08-05T15:42:05+0400
+updated: 2024-08-06T21:21:44+0400
 version: 1.1.1
 @end
 
 * To-Do
-  - ( ) tasks
+  /Rolled over/
 * Journal
-** For the `neorg_utils` plugin
-*** Agenda
-    - Auto capture start/deadline/completed datetimes.
-    - "Agenda View".
-*** Refiling
-    - Move heading and its contents to a file or under another heading.
-*** Capture anywhere
-    - Maybe use Markdown and then convert from Markdown -> Neorg format?
-*** Blocks as first-class citizens
-    - Some sort of link and database like org-roam?
-    - There has to be a better way. Something like an in-document hyperlinker
-      that won't require a database.
-* Meetings
-** Meeting Name
-*** Attendees
-    | Names
-*** Goals
-    - goal
-*** Agenda
-    - ( ) 
-*** Minutes
-    - minute
-*** Action Items
-    - action-point
+  - Attended {:$/journal/task-box/caltech-tii-collaboration:** 5 August 2024}[Xiao Tan / Junior Sundar -- Syncup].
+* For the `neorg_utils` plugin
+** Agenda
+   - Auto capture start/deadline/completed datetimes.
+   - "Agenda View".
+** Refiling
+   - Move heading and its contents to a file or under another heading.
+** Capture anywhere
+   - Maybe use Markdown and then convert from Markdown -> Neorg format?
+** Blocks as first-class citizens
+   - Some sort of link and database like org-roam?
+   - There has to be a better way. Something like an in-document hyperlinker
+     that won't require a database.
 
     ===
 ___
 
-{:$/journal/2024/:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/:}[next >]
+{:$/journal/2024/08/04:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/08/06:}[next >]

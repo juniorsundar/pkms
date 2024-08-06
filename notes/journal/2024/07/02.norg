@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-08-02T13:56:37+0400
+updated: 2024-08-06T21:41:29+0400
 version: 1.1.1
 @end
 
@@ -26,7 +26,6 @@ version: 1.1.1
         --- His answers were succinct and direct, and confident.
         --- His experience in ML and deploying models into embedded devices was a welcome surprise.
         --- He would make a good addition to the team.
-
 * Meetings
 ** SSRC-F4F
 *** Attendees
@@ -40,8 +39,10 @@ version: 1.1.1
     - Track updates on the problem with Siyi recording.
     - Keep note of anything of relevance.
 *** Minutes
-    - Gimbal camera does not work in release 12.0.1 with ethernet -> Carried over to 12.0.3 in some ways.
-    - The HDMI streaming is a workaround, there is no way to control the Siyi camera.
+    - Gimbal camera does not work in release 12.0.1 with ethernet -> Carried
+      over to 12.0.3 in some ways.
+    - The HDMI streaming is a workaround, there is no way to control the Siyi
+      camera.
 *** Action Items
 
     ===

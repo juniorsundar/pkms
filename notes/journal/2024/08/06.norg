@@ -1,0 +1,44 @@
+@document.meta
+title: 6 August 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-08-06T21:40:08+0400
+version: 1.1.1
+@end
+
+* To-Do
+  /Rolled over/
+* Journal
+  - Attended {** SSRC-F4F}[SSRC-F4F] meeting.
+* Meetings
+** SSRC-F4F
+*** Attendees
+    | Unikie
+    | Solita
+    | F4F
+    | SSRC
+*** Goals
+    - Gain insight into what's happening across the board.
+*** Agenda
+    - Report on the status of gpu-passthrough feature.
+    - Highlight blockers.
+*** Minutes
+    - gpu-passthrough is now feasible, so it is no longer a hardware issue. However, now the buck falls onto the hands of Solita who are managing the software.
+    - Ville suggested that the solution:
+    > The problem here is most likely the base image. AFAIK the safelanding
+    > container is based on `nvidia-deepstream` (see Dockerfile here:
+    > https://github.com/tiiuae/platform-ml-rta-safelanding-model/blob/main/deployment/Dockerfile.deepstream_nats_arm64)
+    > which has all the necessary nvidia libs. The possible solutions here are
+    > to build a new base image with Nvidia + ROS (might quite tricky) or
+    > forward the required ROS topics to NATS on a separate container
+    > https://github.com/tiiuae/telem-nats and build an image with Nvidia +
+    > NATS.
+    - Discuss with Rodolfo on how to address this issue.
+*** Action Items
+
+    ===
+___
+
+{:$/journal/2024/08/05:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/08/07:}[next >]

@@ -4,22 +4,22 @@ description:
 authors: juniorsundar-unikie
 categories: 
 created: 2024-08-03T14:58:27+0400
-updated: 2024-08-03T18:11:26+0400
+updated: 2024-08-06T12:32:09+0400
 version: 1.1.1
 @end
 
 * To-Do
-** ( ) Update SRTA deliverables
+** (-) Update SRTA deliverables
    @data agenda
-   started:
+   started: 2024-08-06|10:00
    completed:
    deadline: 2024-08-07|12:30
    priority:
    @end
-*** ( ) {https://tiiuae-my.sharepoint.com/:p:/g/personal/martin_andreoni_tii_ae/ER8BKg5-b7dFsErO1Vvx0pIBUJZVzW0Hz0UlycHIi-Tf8Q?e=3KVqdA&wdOrigin=TEAMS-WEB.p2p_ns.rwc&wdExp=TEAMS-TREATMENT&wdhostclicktime=1722492957723&web=1}[Slide deck]
+*** (x) {https://tiiuae-my.sharepoint.com/:p:/g/personal/martin_andreoni_tii_ae/ER8BKg5-b7dFsErO1Vvx0pIBUJZVzW0Hz0UlycHIi-Tf8Q?e=3KVqdA&wdOrigin=TEAMS-WEB.p2p_ns.rwc&wdExp=TEAMS-TREATMENT&wdhostclicktime=1722492957723&web=1}[Slide deck]
     @data agenda
-    started:
-    completed:
+    started: 2024-08-06|10:00
+    completed: 2024-08-06|12:30
     deadline: 2024-08-07|12:30
     priority:
     @end

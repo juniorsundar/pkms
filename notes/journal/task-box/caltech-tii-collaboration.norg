@@ -6,12 +6,11 @@ categories: [
     task
 ]
 created: 2024-04-04T23:08:32+0400
-updated: 2024-08-04T20:10:47+0400
+updated: 2024-08-06T21:21:44+0400
 version: 1.1.1
 @end
 
 * Tasks
-
 ** (x) {** 4 April 2024}[First meeting]
 *** (x) Follow up with {* Instructional}[instructional] response
 *** (x) Read {:$/research/literature-review/tan2024:}[paper]
@@ -42,13 +41,13 @@ version: 1.1.1
 ** (x) Provide data as `.csv` files for Xiao Tan
 *** (x) 1x Velocity controlled with 50Hz Input
 *** (x) 1x Velocity controlled with 20Hz Input
-** (-) (Try out) --> (Implement) -simple- example with (full system) --> (1D Drone Sim)
+** (x) (Try out) --> (Implement) -simple- example with (full system) --> (1D Drone Sim)
 *** (x) Design {* 1D Drone System}[the system]
 *** (x) Develop the secure state estimator
 **** (x) Set EKF (125Hz) to 20Hz (Downsample the EKF output stream for more info)
 **** (x) Copy over the code from Xiao Tan's GitHub
 **** (x)Test and reiterate until the state-reconstruction is working as expected
-*** (-) Get a minimum viable demo of SSR
+*** (x) Get a minimum viable demo of SSR
     | SCHEDULED: {@ Wednesday 31 July 2024}
 ** (x) Utilise a continuous function for acceleration input
 *** (x) 1x Acceleration controlled with 50Hz Input
@@ -59,27 +58,46 @@ version: 1.1.1
 *** (_) Instructions for a local installation
 *** (x) Instructions for a containerised installation
 ** (x) {** 29 July 2024}[Eleventh meeting]
-   | SCHEDULED: {@ Thursday 25 July 2024}
-   | COMPLETED: {@ Monday 29 July 2024}
-** ( ) Twelfth meeting
-   | SCHEDULED: {@ Monday 5 August 2024}
+   @data agenda
+   started: 2024-07-29|21:00
+   completed: 2024-07-29|20:00
+   deadline: 2024-07-25|20:00
+   priority: 
+   @end
+** (x) {** 5 August 2024}[Twelfth meeting]
+   @data agenda
+   started: 2024-08-05|21:00
+   completed: 2024-08-05|20:00
+   deadline: 2024-08-05|20:00
+   priority: 
+   @end
 ** (-) Evaluate the SSR implmentation in ROS
 *** (x) Set attacked states to varying types
     - (x) Constant
-       -- (x) Set one position to a constant value.
-       -- (x) Set one velocity to a constant value.
+    -- (x) Set one position to a constant value.
+    -- (x) Set one velocity to a constant value.
     - (x) Noisy
-       -- (x) Add Gaussian noise to a position reading.
-       -- (x) Add Gaussian noise to a velocity reading.
+    -- (x) Add Gaussian noise to a position reading.
+    -- (x) Add Gaussian noise to a velocity reading.
     - (x) Targeted attacks
-       -- (x) Set one position to be negative of its actual value.
-       -- (x) Set one velovity to be negative of its actual value.
-*** (-) Generate plots of estimated state vs. actual state
+    -- (x) Set one position to be negative of its actual value.
+    -- (x) Set one velovity to be negative of its actual value.
+*** (x) Generate plots of estimated state vs. actual state
 *** ( ) Try with $x$ and $y$ for both position and velocity
-    ===
-
+    @data agenda
+    started: 
+    completed: 
+    deadline: 2024-08-12|20:00
+    priority: 
+    @end
+** ( ) Thirteenth meeting
+    @data agenda
+    started: 
+    completed: 
+    deadline: 2024-08-12|20:00
+    priority: 
+    @end
 * Notes
-
 ** MATLAB Cell
 
    A flexible data container that can hold different types of data.
@@ -108,9 +126,7 @@ version: 1.1.1
 
 
 ** Instructional
-
 *** Running the SITL Simulation
-
     First pull the repository with the faulty controller implementation.
 
     @code bash
@@ -172,9 +188,7 @@ version: 1.1.1
     param set SENS_ACCEL_SET 0
     param set SENS_ACCEL_FAULT 0
     @end
-
 *** Imitating an attack
-
     The plan of action will be to design a program (either a ROS 2 node or a
     standalone script) that changes the `SENS_ACCEL_SET` parameter according to a
     predefined behaviour of the malicious agent.
@@ -182,19 +196,14 @@ version: 1.1.1
     As the agent will have access to the system's internal dynamics, they will
     also be a node in the ROS 2 network and will subscribe to the necessary
     topics being published from the PX4 flight controller.
-
 ** ROS 2 Modular Control
-
 *** EKF
-
     .image assets/ekf.png
 
     Subscribes to the `vehicle_local_position` topic from the Flight Controller.
 
     Publishes ground truth (`gt`) and raw copy (`raw`), separately.
-
 *** Attacker
-
     .image assets/attacker.png
 
     Subscribes to the `raw` position and introduces an attack. In this case it
@@ -217,9 +226,7 @@ version: 1.1.1
     @end
 
     It then publishes an `attacked` version of the `gt`.
-
 *** Controller
-
     .image assets/controller.png
 
     Uses the `attacked` and `gt` versions of `vehicle_local_position` to
@@ -278,10 +285,7 @@ version: 1.1.1
     the ground truth are shown below:
 
     .image assets/results.png
-
-
 ** 1D Drone System
-
    $|A=\begin{bmatrix}0 && 0 \\ 0 && 1\end{bmatrix} \space \textbf{x} = \begin{bmatrix}x \\ \dot{x}\end{bmatrix}|$
 
    $|B=\begin{bmatrix}0 \\ 1\end{bmatrix} \space \textbf{u} = \begin{bmatrix}u_x\end{bmatrix}|$
@@ -289,152 +293,117 @@ version: 1.1.1
    $|C=\begin{bmatrix}1 && 0 && 0 && 0 \\ 0 && 1 && 0 && 0 \\ 0 && 0 && 1 && 0 \\ 0 && 0 && 0 && 1 \end{bmatrix} \space \textbf{y} = \begin{bmatrix}x_1 \\ \dot{x}_1 \\ x_2 \\ \dot{x}_2\end{bmatrix}|$
 
    $|H=\begin{bmatrix}1 && 0 && 0 && 0\\ 0 && -1 && 0 && 0 \\ 0 && 0 && 1 && 0\\ 0 && 0 && 0 && -1\end{bmatrix} \space \textbf{q} = \begin{bmatrix}4 \\ 4 \\ 4 \\ 4\end{bmatrix}|$
-
-   ===
-
 * Meetings
-
+** 5 August 2024
+   #tag label
+   Xiao Tan / Junior Sundar -- Syncup
+*** Attendees
+    | Xiao Tan
+    | Junior Sundar
+*** Goals
+    - Follow up on the state of SSR.
+*** Agenda
+    - Update on the data collected.
+    - Discuss the additional task assigned by the student intern.
+*** Minutes
+    - Look at the state estimates with the lowest residuals, it is usually the
+      correct one.
+    - Rather than keep working on the 1D scenario, it is better to jump into
+      the 2D case for state reconstruction.
+*** Action Items
+    - Prioritise this {:$/journal/task-box/caltech-tii-collaboration:*** Try with $x$ and $y$ for both position and velocity}[task].
 ** 29 July 2024
    #tag label
    Xiao Tan / Junior Sundar -- Syncup
 *** Attendees
-
     | Xiao Tan
     | Junior Sundar
-
 *** Goals
-
     - Follow up on the state of SSR.
-
 *** Agenda
-
     - Update from Xiao about his additions.
-
 *** Minutes
-
     - Went through the corrections implemented by Xiao Tan to his code.
     - Checked through behaviour.
     - *Important Points* For 4 sensors where two are for position and two are
       for velocity:
-       -- Don't attack the two position sensors together if $s = 2$.
-       -- Don't attack all position sensors if $s = 3$.
-       -- In both those cases, going against the recommendations causes the
-          system to lose {:$/vault/sparse-observability:}[sparse observability].
-          --- Imagine that both systems start at different positions but are
-              experiencing the same velocity. The estimator could provide the
-              correct estimate but still give wrong position.
-
+    -- Don't attack the two position sensors together if $s = 2$.
+    -- Don't attack all position sensors if $s = 3$.
+    -- In both those cases, going against the recommendations causes the
+       system to lose {:$/vault/sparse-observability:}[sparse observability].
+    --- Imagine that both systems start at different positions but are
+        experiencing the same velocity. The estimator could provide the
+        correct estimate but still give wrong position.
 *** Action Items
-
     - {:$/journal/task-box/caltech-tii-collaboration:** Evaluate the SSR implmentation in ROS}[Evaluate the SSR implmentation in ROS]
-
-
 ** 18 July 2024
    #tag label
    Xiao Tan / Junior Sundar -- Syncup
 *** Attendees
-
     | Xiao Tan
     | Junior Sundar
-
 *** Goals
-
     - Confirming whether current implementation is moving in one direction.
-
 *** Agenda
-
     - Update on the functionality of the current implementation.
     - Ascertain next step and why the node is behaving the way it is.
-
 *** Minutes
-
     - Went through the simulation and implementation
-
 *** Action Items
-
     - {** Create README for the {https://www.github.com/juniorsundar-tii/px4-secure-state-reconstruction}[px4-secure-state-reconstruction] repository}[Create README for the px4-secure-state-reconstruction repository]
-       -- {*** Instructions for a local installation}[Instructions for a local installation]
-       -- {*** Instructions for a containerised installation}[Instructions for a containerised installation]
-
+    -- {*** Instructions for a local installation}[Instructions for a local installation]
+    -- {*** Instructions for a containerised installation}[Instructions for a containerised installation]
 ** 8 July 2024
    #tag label
    Xiao Tan / Junior Sundar -- Syncup
 *** Attendees
-
     | Xiao Tan
     | Junior Sundar
-
 *** Goals
-
     - Catching up.
-
 *** Agenda
-
     - Figure out a better way to perform acceleration based control.
-
 *** Minutes
-
     - Implement acceleration as a sinusoid or continuous function.
-
 *** Action Items
-
 **** Downsample the EKF output stream
      - Set the last value as the output at the end of 20Hz mark.
      - Try running average?
-
 ** 1 July 2024
    #tag label
    Xiao Tan / Junior Sundar -- Syncup
 *** Attendees
-
     | Xiao Tan
     | Junior Sundar
-
 *** Goals
-
     Explaining the code in: {https://github.com/xiaotan-git/safety-under-sensor-attacks/blob/main/ss_problem.py}[xiaotan-git/safety-under-sensor-attacks]
-
 *** Agenda
-
     - Understand the intention of the code and algorithm.
     - Identify what all can be copied into the ROS 2 nodes.
-
 *** Minutes
-
     - Two classes:
-       -- One sets up the problem.
-       -- Other solves the problem.
+    -- One sets up the problem.
+    -- Other solves the problem.
     - Can directly copy some of the functions into the implementation.
     - Verify with Xiao --> Some of the functions are purely for personal
       testing.
-
 *** Action Items
-
     - {** Provide data as `.csv` files for Xiao Tan}[Provide data as `.csv` files for Xiao Tan]
-       -- 2D movement -> Like a square.
-       -- Controller Inputs and EKF Outputs
-
+    -- 2D movement -> Like a square.
+    -- Controller Inputs and EKF Outputs
 ** 3 June 2024
    #tag label
    Xiao Tan / Junior Sundar -- Q&A
 *** Attendees
-
     | Xiao Tan
     | Junior Sundar
-
 *** Goals
-
     Clarity on the work being done
-
 *** Agenda
-
     - Clarify the matrix dimensions
     - Follow up on progress
-
 *** Minutes
-
 **** Questions
-
      - (x) Is the following 1D sensor case feasible:
      @code cpp
      std::vector<double> sensor_vector{static_cast<double>(ekf_1.x),
@@ -522,30 +491,20 @@ version: 1.1.1
      What could go wrong with this implementation:
      - measurement from EKF may not be accurate.
      - model is very simple, may not be the true model, tuning may be required here.
-
 *** Action Items
-
     - {** Create GitHub repository and add `xiaotan-git` to it}[Create GitHub repository and add `xiaotan-git` to it]
-
 ** 20 May 2024
    #tag label
    Xiao Tan / Junior Sundar -- Nominal Control + Safety Filter
 *** Attendees
-
     | Xiao Tan
     | Junior Sundar
-
 *** Goals
-
     Understand the workings of the nominal controller and the safety filter
-
 *** Agenda
-
     - Follow up on what was understood from self learning
     - Go through new powerpoint
-
 *** Minutes
-
     *Follow up*
 
     Running matrix operations on GPU is a feasible option.
@@ -586,59 +545,41 @@ version: 1.1.1
 
     No guarantee of feasiblity of optimisation problem to find $u_{safe}$ if
     the equation of quadratic programming fails, then the system is aborted.
-
 *** Action Items
-
     No meeting for next week. Set it for the week after.
-
 ** 6 May 2024
    #tag label
    Xiao Tan / Junior Sundar -- State Reconstruction Discussion
 *** Attendees
-
     | Xiao Tan
     | Junior Sundar
-
 *** Goals
-
     Understand the secure state reconstruction algorithm
-
 *** Agenda
-
     - (x) Go through the provided powerpoint
     - (x) Discuss the MATLAB codes
-
 *** Minutes
-
     Plant is a Discrete Time state-system A, B, C with attack signal 
     $e(\tau) \in \mathbb{R}^p$ where $s<p$ sensors are attacked.
 
     Should aim to have something to demonstrate by {:$/journal/2024/05/23:}[23 May 2024].
 
     No tight deadline for this (as December is expected deadline).
-
 ** 2 May 2024
    #tag label
    Xiao Tan / Junior Sundar -- Feedback on Rough External Controller Implementation
 *** Attendees
-
     | Xiao Tan
     | Junior Sundar
     | Martin Andreoni
     | Willian Lunardi
-
 *** Goal
-
     Receive feedback and opinion on the rough implementation of the external
     EKF, Attacker and Controller
-
 *** Agenda
-
     - (x) Feedback
     - (x) Next steps
-
 *** Minutes
-
     Xiao wants the controller to only receive the attacked signal, not both the
     attacked and the ground truth.
 
@@ -647,35 +588,24 @@ version: 1.1.1
     set of data inside it.
 
     Possibly, a matrix?
-
 *** Action Items
-
     - {** Verify and validate: FC's EKF $<=>$ drone in the simulation environment}[Verify and validate: FC's EKF $<=>$ drone in the simulation environment]
-
 ** 22 April 2024
    #tag label
    Xiao Tan / Junior Sundar -- Technical Discussion
 *** Attendees
-
     | Xiao Tan
     | Junior Sundar
     | Martin Andreoni
     | Willian Lunardi
-
 *** Goals
-
     Discuss the technical details of the experimentation (block diagram)
-
 *** Agenda
-
     - Understand how the system is designed in terms of its block diagram
     - Brainstorm strategies to implement this in PX4
-
 *** Minutes
-
     Xiao wants the addition to be an external ROS Node that intercepts the EKF
     output and draws it out of the FC into a ROS Node.
-
     I think there are two ways to go about this problem:
     - Directly bake in the modules into the flight controller firmware
     - Identify a method to bring out the data from the FC into a ROS Node and
@@ -684,32 +614,22 @@ version: 1.1.1
     Also drew a block diagram:
 
     .image $/journal/assets/virtual-sensor.png
-
 *** Action Items
-
     - {**  Implement simple data extraction and injection module as an external ROS Node}[Implement simple data extraction and injection module as an external ROS Node]
-
 ** 18 April 2024
    #tag label
    Xiao Tan / Junior Sundar -- Follow up
 *** Attendees
-
     | Xiao Tan
     | Junior Sundar
     | Willian Lunardi
-
 *** Goals
-
     Follow up on previous discussion to explore scope and range of the project.
-
 *** Agenda
-
     - Show the demonstration of the attacker to the accelerometer
     - Discuss whether this is the method required or if something new is in the
       works?
-
 *** Minutes
-
     They want to go for a simpler example use case:
     - EKF is the ground truth
     - Create a copy of the EKF and the attacker spoofs this value
@@ -728,31 +648,22 @@ version: 1.1.1
     - Some other work undertaken in the lab can use the results from this
       experiments.
     - How to fuse state estimation under sensor attacks more efficiently?
-
 *** Action Items
-
 ** 4 April 2024
    #tag label
    Xiao Tan / Junior Sundar -- X6 Security Collaboration
 *** Attendees
-
     | Xiao Tan
     | Junior Sundar
     | Martin Andreoni
     | Willian Lunardi
-
 *** Goals
-
     Sync up on collaboration opportunity
-
 *** Agenda
-
     - Discuss the research scope
     - Identify applicability of use case
     - Identify possible collaboration space
-
 *** Minutes
-
     The implementation is a "Safety Filter" that identifies when a malicious
     agent has attacked a sensor module and is directing it towards an unsafe
     region.
@@ -762,6 +673,4 @@ version: 1.1.1
     Assume that all internal states can be measured and are observable.
 
     In practice 's' out of 'p' total sensors can be attacked.
-
 *** Action Items
-
