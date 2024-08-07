@@ -1,0 +1,69 @@
+@document.meta
+title: 7 August 2024
+description: 
+authors: juniorsundar
+categories: 
+created: 2024-01-29T11:08:22+0400
+updated: 2024-08-08T00:45:41+0400
+version: 1.1.1
+@end
+
+* To-Do
+** (-) Create Jira issue reporting the custom ethernet connector for Siyi
+   @data agenda
+   started: 2024-08-07|15:30
+   completed: 
+   deadline: 2024-08-08|12:30
+   priority: 
+   @end
+*** Issue
+    The {https://ssrc.atlassian.net/wiki/spaces/DRON/pages/1118797924/SIYI+A8+Mini+to+Saluki+V3+Ethernet+Cable#Custom-cable-solution}[custom ethernet connection] defined by Johanned Pirhonen does not
+    seem to be working on the Siyi A8 Mini. The bundled cable, however, works.
+*** Firmware versions
+    - Camera - v0.2.3
+    - Gimbal - v0.3.4/v0.3.7
+*** Test
+**** Verify Function
+     - Update firmware of the Siyi camera.
+     - Connect to the Saluki V3 LAN Port 1 with Bundled Cable+RJ45 Adaptor.
+     - Unplug and replug the Siyi camera from power.
+     - Restart the `siyi-gimbal` container with:
+       `sudo fog manifest container-restart siyi-gimbal`
+     - /observation/: Camera stream is functioning.
+**** Change Connector
+     - Change Bundled Cable+RJ45 Adaptor with custom cable.
+     - Unplug and replug the Siyi camera from power.
+     - Restart the `siyi-gimbal` container with:
+       `sudo fog manifest container-restart siyi-gimbal`
+     - /observation/: Camera stream is not functioning.
+**** Revert Connector
+     - Change custom cable with Bundled Cable+RJ45 Adaptor.
+     - Unplug and replug the Siyi camera from power.
+     - Restart the `siyi-gimbal` container with:
+       `sudo fog manifest container-restart siyi-gimbal`
+     - /observation/: Camera stream is not functioning.
+**** Fix
+     - Reflash firmware of the Gimbal (either v0.3.4 or v0.3.7)
+     - Unplug and replug the Siyi camera from power.
+     - Restart the `siyi-gimbal` container with:
+       `sudo fog manifest container-restart siyi-gimbal`
+     - /observation/: Camera stream is functioning.
+* Journal
+  - Attended {** RTA Meeting}[RTA Meeting].
+* Meetings
+** RTA Meeting
+*** Attendees
+    | Names
+*** Goals
+    - goal
+*** Agenda
+    - ( ) 
+*** Minutes
+    - minute
+*** Action Items
+    - action-point
+
+    ===
+___
+
+{:$/journal/2024/08/06:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/08/08:}[next >]
