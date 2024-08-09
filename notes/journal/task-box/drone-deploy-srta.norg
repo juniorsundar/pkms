@@ -4,7 +4,7 @@ description:
 authors: juniorsundar
 categories: 
 created: 2024-07-04T22:31:43+0400
-updated: 2024-08-07T23:37:34+0400
+updated: 2024-08-09T11:48:33+0400
 version: 1.1.1
 @end
 
@@ -108,17 +108,25 @@ version: 1.1.1
    deadline: 2024-08-06|12:30
    priority:
    @end
-** (-) Conduct experiments with weights-attached
+** (x) Conduct experiments with weights-attached
    @data agenda
    started: 2024-08-07|14:00
-   completed: 
+   completed: 2024-08-07|16:00
    deadline: 2024-08-09|12:30
    priority:
    @end
-** ( ) Update `manifest.json` with SROS ACL rules from Hai To's branch
+** (-) Update `manifest.json` with SROS ACL rules from Hai To's branch
    @data agenda
-   started: 
+   started: 2024-08-08|10:00
    completed: 
    deadline: 2024-08-08|12:30
    priority:
    @end
+** ( ) Validate new `manifest.json` for stability and functionality
+   @data agenda
+   started: 
+   completed: 
+   deadline: 2024-08-12|15:000
+   priority:
+   @end
+

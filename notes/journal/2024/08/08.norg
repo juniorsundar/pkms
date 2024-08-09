@@ -1,15 +1,53 @@
 @document.meta
-title: template
+title: 8 August 2024
 description: 
 authors: juniorsundar
 categories: 
 created: 2024-01-29T11:08:22+0400
-updated: 2024-08-08T10:13:53+0400
+updated: 2024-08-09T11:06:31+0400
 version: 1.1.1
 @end
 
 * To-Do
-  - ( ) tasks
+** (-) Follow up on {https://ssrc.atlassian.net/browse/RTA-606}[Jira ticket] for Siyi custom connector
+   @data agenda
+   started: 2024-08-08|16:00
+   completed: 
+   deadline: 2024-08-13|12:30
+   priority: 
+   @end
+*** (x) Verify length of cabling
+    Approximately 20cm.
+*** (-) Verify if pairs are twisted
+    Not enough, could use some more twisting.
+
+    .image ../../assets/siyi-cable-twisting.jpeg
+*** (x) Verify output
+    @code bash
+    gst-launch-1.0 rtspsrc location=rtsp://10.10.30.3:8554/main.264 \
+    protocols=udp ! rtph264depay ! avdec_h264 ! videoconvert ! autovideosink
+    @end
+    @code bash
+    Setting pipeline to PAUSED ...
+    Pipeline is live and does not need PREROLL ...
+    Progress: (open) Opening Stream
+    Pipeline is PREROLLED ...
+    Prerolled, waiting for progress to finish...
+    Progress: (connect) Connecting to rtsp://10.10.30.3:8554/main.264
+    ERROR: from element /GstPipeline:pipeline0/GstRTSPSrc:rtspsrc0: Could not open resource for reading and writing.
+    Additional debug info:
+    ../gst/rtsp/gstrtspsrc.c(8130): gst_rtspsrc_retrieve_sdp (): /GstPipeline:pipeline0/GstRTSPSrc:rtspsrc0:
+    Failed to connect. (Generic error)
+    ERROR: pipeline doesn't want to preroll.
+    Setting pipeline to NULL ...
+    Freeing pipeline ...
+    @end
+*** (x) Verify the type of bundled cable adaptor
+    If is a female RJ45 adaptor. This indicates that the camera might be of old
+    manufacturing date (which is apparently a good thing?).
+
+    .image ../../assets/siyi-bundled-adaptor.jpeg
+*** ( ) Verify if camera can be pinged, if not then check continuity
 * Journal
   - Point
 * Meetings
@@ -28,4 +66,4 @@ version: 1.1.1
     ===
 ___
 
-{:$/journal/2024/:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/:}[next >]
+{:$/journal/2024/08/07:}[< previous] - {:$/journal/index:}[index] - {:$/journal/2024/08/09:}[next >]

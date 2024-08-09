@@ -9,7 +9,7 @@ version: 1.1.1
 @end
 
 * To-Do
-** ( ) Check SDK for NATS to ROS 2 interfacing with Govind
+** (_) Check SDK for NATS to ROS 2 interfacing with Govind
 * Journal
   - Attended {** RTA Meeting}[RTA Meeting].
   - Attended {** Solita - SRTA MLOps Syncup}.
